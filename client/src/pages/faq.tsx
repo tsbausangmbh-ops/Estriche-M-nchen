@@ -196,33 +196,35 @@ export default function FAQ() {
       </section>
 
       <section className="py-6">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {faqCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="mb-10" data-testid={`faq-category-${categoryIndex}`}>
-              <div className="flex items-center gap-3 mb-4">
-                <HelpCircle className="w-5 h-5 text-primary" />
-                <h2 className="text-xl font-bold tracking-tight">{category.title}</h2>
-                <Badge variant="secondary" className="text-xs">{category.questions.length} Fragen</Badge>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-6">
+            {faqCategories.map((category, categoryIndex) => (
+              <div key={categoryIndex} data-testid={`faq-category-${categoryIndex}`}>
+                <div className="flex items-center gap-3 mb-4">
+                  <HelpCircle className="w-5 h-5 text-primary" />
+                  <h2 className="text-xl font-bold tracking-tight">{category.title}</h2>
+                  <Badge variant="secondary" className="text-xs">{category.questions.length} Fragen</Badge>
+                </div>
+                <Accordion type="single" collapsible className="space-y-2">
+                  {category.questions.map((item, index) => (
+                    <AccordionItem 
+                      key={index} 
+                      value={`cat-${categoryIndex}-item-${index}`}
+                      className="bg-card rounded-md border px-4"
+                      data-testid={`faq-item-${categoryIndex}-${index}`}
+                    >
+                      <AccordionTrigger className="text-left font-medium py-4 hover:no-underline text-sm">
+                        {item.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground pb-4 text-sm leading-relaxed">
+                        {item.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
               </div>
-              <Accordion type="single" collapsible className="space-y-2">
-                {category.questions.map((item, index) => (
-                  <AccordionItem 
-                    key={index} 
-                    value={`cat-${categoryIndex}-item-${index}`}
-                    className="bg-card rounded-md border px-4"
-                    data-testid={`faq-item-${categoryIndex}-${index}`}
-                  >
-                    <AccordionTrigger className="text-left font-medium py-4 hover:no-underline text-sm">
-                      {item.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground pb-4 text-sm leading-relaxed">
-                      {item.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
