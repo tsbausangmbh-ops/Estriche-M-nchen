@@ -50,6 +50,12 @@ import { useToast } from "@/hooks/use-toast";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { apiRequest } from "@/lib/queryClient";
 import heroImage from "@assets/stock_images/professional_constru_6db39a97.jpg";
+import serviceImage1 from "@assets/stock_images/professional_cement__c46ecbd9.jpg";
+import serviceImage2 from "@assets/stock_images/industrial_concrete__a49b9a59.jpg";
+import serviceImage3 from "@assets/stock_images/underfloor_heating_i_495aad7f.jpg";
+import serviceImage4 from "@assets/stock_images/floor_insulation_ins_89c91c1a.jpg";
+import serviceImage5 from "@assets/stock_images/floor_repair_renovat_fe7caae2.jpg";
+import serviceImage6 from "@assets/stock_images/fast_drying_screed_q_fe615262.jpg";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name muss mindestens 2 Zeichen lang sein"),
@@ -68,6 +74,7 @@ const services = [
     problem: "Ihr Problem: Unebene Böden, die jeden Belag ruinieren?",
     description: "Wir liefern perfekt plane Flächen – die ideale Basis für Parkett, Fliesen oder Vinyl. Kein Nacharbeiten, kein Ärger.",
     features: ["Perfekte Ebenheit garantiert", "Für jeden Bodenbelag geeignet", "Schneller als Sie denken"],
+    image: serviceImage1,
   },
   {
     icon: Building2,
@@ -75,6 +82,7 @@ const services = [
     problem: "Ihr Problem: Böden, die der Belastung nicht standhalten?",
     description: "Unsere Industrieböden sind für härteste Beanspruchung gemacht. Sichtestrich vereint dabei Funktion mit modernem Design.",
     features: ["Extreme Belastbarkeit", "Optisch ein Hingucker", "Langlebig und wartungsarm"],
+    image: serviceImage2,
   },
   {
     icon: Thermometer,
@@ -82,6 +90,7 @@ const services = [
     problem: "Ihr Problem: Kalte Füße, aber Angst vor dem Renovierungschaos?",
     description: "Wir fräsen Ihre Fußbodenheizung nachträglich ein – ohne den ganzen Estrich rauszureißen. Sauber, schnell, stressfrei.",
     features: ["Kein kompletter Abriss nötig", "In wenigen Tagen erledigt", "Ab 45€/m² möglich"],
+    image: serviceImage3,
   },
   {
     icon: Shield,
@@ -89,6 +98,7 @@ const services = [
     problem: "Ihr Problem: Hohe Heizkosten durch schlechte Dämmung?",
     description: "Mit professioneller Wärmedämmung senken Sie Ihre Energiekosten dauerhaft. Wir machen Ihren Boden energieeffizient.",
     features: ["Heizkosten sparen", "Trittschall reduzieren", "Normgerechter Aufbau"],
+    image: serviceImage4,
   },
   {
     icon: Wrench,
@@ -96,6 +106,7 @@ const services = [
     problem: "Ihr Problem: Risse, Hohlstellen oder unebene alte Böden?",
     description: "Wir retten Ihren bestehenden Estrich – oft ohne kompletten Austausch. Gezielt, schnell und kosteneffizient.",
     features: ["Diagnose vor Ort", "Oft günstiger als Neubau", "Schnelle Lösung"],
+    image: serviceImage5,
   },
   {
     icon: Zap,
@@ -103,6 +114,7 @@ const services = [
     problem: "Ihr Problem: Termindrückt, aber der Estrich braucht ewig zum Trocknen?",
     description: "Unser Schnellestrich ist in Rekordzeit belegreif. Perfekt, wenn jeder Tag zählt.",
     features: ["Bis zu 50% schneller", "Gleiche Qualität", "Ideal bei Zeitdruck"],
+    image: serviceImage6,
   },
 ];
 
@@ -627,15 +639,25 @@ export default function Home() {
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="overflow-visible"
+                className="overflow-hidden"
                 data-testid={`card-service-${index}`}
               >
-                <CardHeader className="pb-4">
-                  <div className="w-12 h-12 rounded-md bg-primary/10 flex items-center justify-center mb-4">
-                    <service.icon className="w-6 h-6 text-primary" />
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                  <div className="absolute bottom-4 left-4">
+                    <div className="w-10 h-10 rounded-md bg-primary flex items-center justify-center">
+                      <service.icon className="w-5 h-5 text-primary-foreground" />
+                    </div>
                   </div>
+                </div>
+                <CardHeader className="pb-4">
                   <CardTitle className="text-xl" data-testid={`text-service-title-${index}`}>{service.title}</CardTitle>
-                  <p className="text-sm text-muted-foreground italic mt-2">{service.problem}</p>
+                  <p className="text-sm text-muted-foreground italic">{service.problem}</p>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-foreground font-medium text-sm leading-relaxed">
