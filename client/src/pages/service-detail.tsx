@@ -3,7 +3,13 @@ import { getServiceById, services } from "@/lib/services-data";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, ChevronRight, ArrowLeft, Phone, Quote, Shield, Clock, Award, AlertTriangle } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { CheckCircle2, ChevronRight, ArrowLeft, Phone, Quote, Shield, Clock, Award, AlertTriangle, Info, Wrench, FileText, HelpCircle } from "lucide-react";
 
 export default function ServiceDetail() {
   const params = useParams();
@@ -97,6 +103,21 @@ export default function ServiceDetail() {
         </div>
       </section>
 
+      <section className="py-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+              <Info className="w-5 h-5 text-primary" />
+            </div>
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest">Was ist das eigentlich?</p>
+          </div>
+          <h2 className="text-3xl font-bold mb-6">{service.title} – einfach erklärt</h2>
+          <p className="text-lg leading-relaxed text-muted-foreground">
+            {service.whatIsIt}
+          </p>
+        </div>
+      </section>
+
       <section className="py-24 bg-accent">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -137,6 +158,66 @@ export default function ServiceDetail() {
               <div key={index} className="flex items-start gap-3 p-4 rounded-lg bg-muted">
                 <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="font-medium">{diff}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-accent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Wrench className="w-5 h-5 text-primary" />
+              </div>
+            </div>
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Varianten & Arten</p>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Welche Arten gibt es?</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Je nach Anforderung setzen wir unterschiedliche Materialien und Techniken ein. Hier die wichtigsten Varianten:
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {service.serviceTypes.map((type, index) => (
+              <Card key={index} className="h-full">
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-lg">{type.name}</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-muted-foreground">{type.description}</p>
+                  <div className="pt-2 border-t">
+                    <p className="text-sm">
+                      <span className="font-semibold text-primary">Ideal für: </span>
+                      {type.bestFor}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Leistungsumfang</p>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Was ist alles inklusive?</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Bei uns bekommen Sie alles aus einer Hand – keine versteckten Zusatzkosten, keine bösen Überraschungen.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {service.included.map((item, index) => (
+              <div key={index} className="p-6 rounded-xl bg-muted">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary-foreground font-bold text-sm">{index + 1}</span>
+                  </div>
+                  <h3 className="font-semibold">{item.title}</h3>
+                </div>
+                <p className="text-sm text-muted-foreground">{item.description}</p>
               </div>
             ))}
           </div>
@@ -218,6 +299,50 @@ export default function ServiceDetail() {
         </div>
       </section>
 
+      <section className="py-24 bg-muted">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+              <FileText className="w-5 h-5 text-primary" />
+            </div>
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest">Für Profis</p>
+          </div>
+          <h2 className="text-3xl font-bold mb-8">Technische Details</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {service.technicalDetails.map((detail, index) => (
+              <div key={index} className="flex items-start gap-3 p-4 bg-card rounded-lg border">
+                <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-sm">{detail}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+              <HelpCircle className="w-5 h-5 text-primary" />
+            </div>
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest">Häufige Fragen</p>
+          </div>
+          <h2 className="text-3xl font-bold mb-8">Das fragen unsere Kunden oft</h2>
+          <Accordion type="single" collapsible className="space-y-4">
+            {service.faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`faq-${index}`} className="bg-card border rounded-lg px-6">
+                <AccordionTrigger className="text-left font-semibold hover:no-underline">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+
       <section className="py-24 bg-primary/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -244,7 +369,7 @@ export default function ServiceDetail() {
 
       <section className="py-16 bg-destructive/5 border-y border-destructive/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-xs font-semibold text-destructive uppercase tracking-widest mb-3">Wichtig</p>
+          <p className="text-xs font-semibold text-destructive uppercase tracking-widest mb-3">Jetzt handeln</p>
           <p className="text-lg font-medium text-destructive/90 mb-6">
             {service.urgency}
           </p>
