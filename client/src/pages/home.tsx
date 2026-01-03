@@ -599,29 +599,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Statistics Section - Social Proof */}
-      <section className="py-16 border-y bg-muted/30">
+      {/* Statistics Banner - Social Proof */}
+      <div className="bg-primary py-4 border-y">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-2">Warum so viele Kunden uns vertrauen</h2>
-            <p className="text-muted-foreground">Während andere noch reden, liefern wir bereits Ergebnisse. Jeden Tag. Seit Jahren.</p>
-          </div>
-          <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <div className="text-center" data-testid="stat-laufende">
-              <div className="text-4xl sm:text-5xl font-bold text-primary mb-2">48</div>
-              <div className="text-sm text-muted-foreground">Aktuelle Projekte</div>
-            </div>
-            <div className="text-center" data-testid="stat-abgeschlossen">
-              <div className="text-4xl sm:text-5xl font-bold text-primary mb-2">282+</div>
-              <div className="text-sm text-muted-foreground">Zufriedene Kunden</div>
-            </div>
-            <div className="text-center" data-testid="stat-partner">
-              <div className="text-4xl sm:text-5xl font-bold text-primary mb-2">100%</div>
-              <div className="text-sm text-muted-foreground">Terminzuverlässigkeit</div>
-            </div>
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
+            <Badge variant="secondary" className="bg-primary-foreground/20 text-primary-foreground border-0 text-sm py-1.5 px-4" data-testid="stat-laufende">
+              <span className="font-bold mr-1.5">48</span> Aktuelle Projekte
+            </Badge>
+            <Badge variant="secondary" className="bg-primary-foreground/20 text-primary-foreground border-0 text-sm py-1.5 px-4" data-testid="stat-abgeschlossen">
+              <span className="font-bold mr-1.5">282+</span> Zufriedene Kunden
+            </Badge>
+            <Badge variant="secondary" className="bg-primary-foreground/20 text-primary-foreground border-0 text-sm py-1.5 px-4" data-testid="stat-partner">
+              <span className="font-bold mr-1.5">100%</span> Terminzuverlässigkeit
+            </Badge>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Services Section */}
       <section id="leistungen" className="py-20">
