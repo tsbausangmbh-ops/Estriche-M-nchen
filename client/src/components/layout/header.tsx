@@ -3,7 +3,14 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { MapPin, Clock, Menu, X } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { MapPin, Clock, Menu, X, ChevronDown } from "lucide-react";
+import { services } from "@/lib/services-data";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -63,13 +70,24 @@ export function Header() {
             </Link>
 
             <nav className="hidden md:flex items-center gap-1">
-              <Button 
-                variant="ghost" 
-                onClick={() => scrollToSection("leistungen")}
-                data-testid="nav-leistungen"
-              >
-                Leistungen
-              </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" data-testid="nav-leistungen">
+                    Leistungen
+                    <ChevronDown className="ml-1 h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-56">
+                  {services.map((service) => (
+                    <Link key={service.id} href={`/leistungen/${service.id}`}>
+                      <DropdownMenuItem className="cursor-pointer" data-testid={`dropdown-service-${service.id}`}>
+                        <service.icon className="mr-2 h-4 w-4 text-primary" />
+                        {service.title}
+                      </DropdownMenuItem>
+                    </Link>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
               <Link href="/ablauf">
                 <Button 
                   variant="ghost" 
@@ -128,14 +146,22 @@ export function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden border-t bg-background">
             <div className="px-4 py-4 space-y-2">
-              <Button 
-                variant="ghost" 
-                className="w-full justify-start"
-                onClick={() => scrollToSection("leistungen")}
-                data-testid="mobile-nav-leistungen"
-              >
-                Leistungen
-              </Button>
+              <div className="text-sm font-medium text-muted-foreground px-3 py-2">Leistungen</div>
+              <div className="pl-2 space-y-1 mb-2">
+                {services.map((service) => (
+                  <Link key={service.id} href={`/leistungen/${service.id}`} onClick={() => setMobileMenuOpen(false)}>
+                    <Button 
+                      variant="ghost" 
+                      size="sm"
+                      className="w-full justify-start"
+                      data-testid={`mobile-nav-service-${service.id}`}
+                    >
+                      <service.icon className="mr-2 h-4 w-4 text-primary" />
+                      {service.title}
+                    </Button>
+                  </Link>
+                ))}
+              </div>
               <Link href="/ablauf" onClick={() => setMobileMenuOpen(false)}>
                 <Button 
                   variant="ghost" 
