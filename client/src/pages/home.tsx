@@ -51,7 +51,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { apiRequest } from "@/lib/queryClient";
 import heroImage from "@assets/generated_images/worker_grinding_screed_floor.png";
 import serviceImage1 from "@assets/generated_images/three_workers_laying_screed.png";
-import serviceImage2 from "@assets/generated_images/polished_industrial_concrete_floor.png";
+import serviceImage2 from "@assets/generated_images/polished_industrial_floor_warehouse.png";
 import serviceImage3 from "@assets/generated_images/two_workers_milling_and_pipes.png";
 import serviceImage4 from "@assets/generated_images/three_workers_installing_insulation.png";
 import serviceImage5 from "@assets/generated_images/repairing_floor_cracks.png";
