@@ -582,29 +582,29 @@ export default function Home() {
       </section>
 
       {/* Statistics Banner - Social Proof */}
-      <div className="bg-muted/50 py-6 border-y">
+      <div className="bg-foreground py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-16">
             <div className="text-center" data-testid="stat-laufende">
               <div className="text-3xl font-bold text-primary">48</div>
-              <div className="text-xs text-muted-foreground uppercase tracking-wide mt-1">Aktuelle Projekte</div>
+              <div className="text-xs text-background/70 uppercase tracking-wide mt-1">Aktuelle Projekte</div>
             </div>
-            <div className="w-px h-10 bg-border hidden sm:block" />
+            <div className="w-px h-10 bg-background/20 hidden sm:block" />
             <div className="text-center" data-testid="stat-abgeschlossen">
               <div className="text-3xl font-bold text-primary">282+</div>
-              <div className="text-xs text-muted-foreground uppercase tracking-wide mt-1">Zufriedene Kunden</div>
+              <div className="text-xs text-background/70 uppercase tracking-wide mt-1">Zufriedene Kunden</div>
             </div>
-            <div className="w-px h-10 bg-border hidden sm:block" />
+            <div className="w-px h-10 bg-background/20 hidden sm:block" />
             <div className="text-center" data-testid="stat-partner">
               <div className="text-3xl font-bold text-primary">100%</div>
-              <div className="text-xs text-muted-foreground uppercase tracking-wide mt-1">Terminzuverlässigkeit</div>
+              <div className="text-xs text-background/70 uppercase tracking-wide mt-1">Terminzuverlässigkeit</div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Services Section */}
-      <section id="leistungen" className="py-24">
+      <section id="leistungen" className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unsere Leistungen</p>
@@ -667,7 +667,7 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section id="ablauf" className="py-24 bg-muted/30">
+      <section id="ablauf" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unser Ablauf</p>
@@ -701,7 +701,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="preise" className="py-24">
+      <section id="preise" className="py-24 bg-muted/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Transparente Preise</p>
@@ -738,7 +738,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-24 bg-muted/30">
+      <section id="faq" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Häufige Fragen</p>
@@ -782,7 +782,7 @@ export default function Home() {
       </section>
 
       {/* Service Areas */}
-      <section className="py-24">
+      <section className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unser Einsatzgebiet</p>
