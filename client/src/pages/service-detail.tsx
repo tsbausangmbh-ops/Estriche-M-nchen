@@ -3,7 +3,9 @@ import { getServiceById, services } from "@/lib/services-data";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, ChevronRight, ArrowLeft, Phone, Quote, Shield, Clock, Award, AlertTriangle, Users, Star, MapPin, Ruler, Calendar, Building2, ThumbsUp } from "lucide-react";
+import { CheckCircle2, ChevronRight, Phone, Quote, Shield, Clock, Award, AlertTriangle, Users, Star, MapPin, Ruler, Calendar, Building2, ThumbsUp } from "lucide-react";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 
 export default function ServiceDetail() {
   const params = useParams();
@@ -29,24 +31,7 @@ export default function ServiceDetail() {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b">
-        <div className="px-4 sm:px-8 lg:px-12">
-          <div className="flex items-center justify-between gap-4 h-16">
-            <Link href="/">
-              <Button variant="ghost" size="sm" className="gap-2" data-testid="button-back-home">
-                <ArrowLeft className="w-4 h-4" />
-                Zurück
-              </Button>
-            </Link>
-            <div className="flex items-center gap-3">
-              <span className="hidden sm:block text-sm text-muted-foreground">Fragen?</span>
-              <Button size="sm" onClick={scrollToContact} data-testid="button-header-contact">
-                Kostenlos beraten lassen
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <section className="relative min-h-[70vh] flex items-center">
         <div 
@@ -548,6 +533,8 @@ export default function ServiceDetail() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

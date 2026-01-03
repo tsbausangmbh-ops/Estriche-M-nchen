@@ -1,24 +1,15 @@
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useMutation } from "@tanstack/react-query";
 import { 
-  Menu, 
-  X, 
   Phone, 
   Mail, 
   MapPin, 
-  Clock, 
+  Clock,
   CheckCircle2, 
   ChevronRight,
-  Layers,
-  Thermometer,
-  Shield,
-  Wrench,
-  Zap,
-  Building2,
-  Users
+  Building2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -47,11 +38,12 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { apiRequest } from "@/lib/queryClient";
 import { services } from "@/lib/services-data";
 import { Link } from "wouter";
 import heroImage from "@assets/generated_images/worker_grinding_screed_floor.png";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name muss mindestens 2 Zeichen lang sein"),
@@ -142,7 +134,6 @@ const surroundingAreas = [
 ];
 
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { toast } = useToast();
 
   const form = useForm<ContactFormData>({
@@ -181,158 +172,12 @@ export default function Home() {
   };
 
   const scrollToSection = (id: string) => {
-    setMobileMenuOpen(false);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Topbar */}
-      <div className="bg-foreground text-background py-2 text-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-4 flex-wrap">
-            <Badge variant="secondary" className="bg-background/10 text-background border-0">
-              <MapPin className="w-3 h-3 mr-1" />
-              München & 25 km
-            </Badge>
-            <Badge variant="secondary" className="bg-background/10 text-background border-0 hidden sm:flex">
-              <Clock className="w-3 h-3 mr-1" />
-              Antwort i.d.R. innerhalb 24h
-            </Badge>
-          </div>
-          <a 
-            href="#kontakt" 
-            onClick={(e) => { e.preventDefault(); scrollToSection("kontakt"); }}
-            className="text-background/90 hover:text-background transition-colors font-medium"
-            data-testid="link-topbar-contact"
-          >
-            Angebot anfragen
-          </a>
-        </div>
-      </div>
-
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <a 
-              href="#" 
-              onClick={(e) => { e.preventDefault(); scrollToSection("hero"); }}
-              className="flex items-center gap-3"
-              data-testid="link-logo"
-            >
-              <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">E</span>
-              </div>
-              <div className="hidden sm:block">
-                <div className="font-bold text-lg leading-tight">Estrich München</div>
-                <div className="text-xs text-muted-foreground">Estrich • Bodenaufbau • Sanierung</div>
-              </div>
-            </a>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-1">
-              <Button 
-                variant="ghost" 
-                onClick={() => scrollToSection("leistungen")}
-                data-testid="nav-leistungen"
-              >
-                Leistungen
-              </Button>
-              <Button 
-                variant="ghost" 
-                onClick={() => scrollToSection("ablauf")}
-                data-testid="nav-ablauf"
-              >
-                Ablauf
-              </Button>
-              <Button 
-                variant="ghost" 
-                onClick={() => scrollToSection("preise")}
-                data-testid="nav-preise"
-              >
-                Preise
-              </Button>
-              <Button 
-                variant="ghost" 
-                onClick={() => scrollToSection("faq")}
-                data-testid="nav-faq"
-              >
-                FAQ
-              </Button>
-              <Button 
-                onClick={() => scrollToSection("kontakt")}
-                data-testid="nav-kontakt"
-              >
-                Kontakt
-              </Button>
-              <ThemeToggle />
-            </nav>
-
-            {/* Mobile Menu Button */}
-            <div className="flex items-center gap-2 md:hidden">
-              <ThemeToggle />
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                data-testid="button-mobile-menu"
-                aria-label="Menü öffnen"
-              >
-                {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-              </Button>
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden border-t bg-background">
-            <div className="px-4 py-4 space-y-2">
-              <Button 
-                variant="ghost" 
-                className="w-full justify-start"
-                onClick={() => scrollToSection("leistungen")}
-                data-testid="mobile-nav-leistungen"
-              >
-                Leistungen
-              </Button>
-              <Button 
-                variant="ghost" 
-                className="w-full justify-start"
-                onClick={() => scrollToSection("ablauf")}
-                data-testid="mobile-nav-ablauf"
-              >
-                Ablauf
-              </Button>
-              <Button 
-                variant="ghost" 
-                className="w-full justify-start"
-                onClick={() => scrollToSection("preise")}
-                data-testid="mobile-nav-preise"
-              >
-                Preise
-              </Button>
-              <Button 
-                variant="ghost" 
-                className="w-full justify-start"
-                onClick={() => scrollToSection("faq")}
-                data-testid="mobile-nav-faq"
-              >
-                FAQ
-              </Button>
-              <Button 
-                className="w-full"
-                onClick={() => scrollToSection("kontakt")}
-                data-testid="mobile-nav-kontakt"
-              >
-                Jetzt Angebot anfragen
-              </Button>
-            </div>
-          </div>
-        )}
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section id="hero" className="relative py-20 lg:py-32 overflow-hidden">
@@ -974,63 +819,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-foreground text-background py-12" data-testid="footer">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="md:col-span-2" data-testid="footer-brand">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-xl">E</span>
-                </div>
-                <div>
-                  <div className="font-bold text-lg">Estrich München</div>
-                  <div className="text-xs text-background/70">Estrich • Bodenaufbau • Sanierung</div>
-                </div>
-              </div>
-              <p className="text-background/70 text-sm max-w-md" data-testid="text-footer-description">
-                Ihr zuverlässiger Partner für professionelle Estricharbeiten in München und Umgebung. 
-                Termintreu, sauber und fachgerecht.
-              </p>
-            </div>
-
-            <div data-testid="footer-services">
-              <h4 className="font-semibold mb-4">Leistungen</h4>
-              <ul className="space-y-2 text-sm text-background/70">
-                <li>Zementestrich & Fließestrich</li>
-                <li>Industrieböden & Sichtestrich</li>
-                <li>Fußbodenheizung einfräsen</li>
-                <li>Wärmedämmung & Abdichtung</li>
-                <li>Sanierung & Reparatur</li>
-              </ul>
-            </div>
-
-            <div data-testid="footer-contact">
-              <h4 className="font-semibold mb-4">Kontakt</h4>
-              <ul className="space-y-2 text-sm text-background/70">
-                <li data-testid="text-footer-phone">+49 89 123 456 789</li>
-                <li data-testid="text-footer-email">info@estrich-muenchen.de</li>
-                <li>München & Umgebung</li>
-                <li>Mo–Fr: 7:00–18:00</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-background/20 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-background/60">
-              © {new Date().getFullYear()} Estrich München. Alle Rechte vorbehalten.
-            </p>
-            <div className="flex gap-6 text-sm text-background/60">
-              <a href="#" className="hover:text-background transition-colors" data-testid="link-impressum">
-                Impressum
-              </a>
-              <a href="#" className="hover:text-background transition-colors" data-testid="link-datenschutz">
-                Datenschutz
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
