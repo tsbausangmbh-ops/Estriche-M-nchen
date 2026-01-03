@@ -120,6 +120,14 @@ export function Header() {
                   Ratgeber
                 </Button>
               </Link>
+              <Link href="/ueber-uns">
+                <Button 
+                  variant="ghost" 
+                  data-testid="nav-ueber-uns"
+                >
+                  Über uns
+                </Button>
+              </Link>
               <Link href="/kontakt">
                 <Button data-testid="nav-kontakt">
                   Kontakt
@@ -196,6 +204,15 @@ export function Header() {
                   data-testid="mobile-nav-ratgeber"
                 >
                   Ratgeber
+                </Button>
+              </Link>
+              <Link href="/ueber-uns" onClick={() => setMobileMenuOpen(false)}>
+                <Button 
+                  variant="ghost" 
+                  className="w-full justify-start"
+                  data-testid="mobile-nav-ueber-uns"
+                >
+                  Über uns
                 </Button>
               </Link>
               <Link href="/kontakt" onClick={() => setMobileMenuOpen(false)}>
