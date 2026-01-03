@@ -12,6 +12,9 @@ import Preise from "@/pages/preise";
 import Blog from "@/pages/blog";
 import BlogArticle from "@/pages/blog-article";
 import Kontakt from "@/pages/kontakt";
+import Impressum from "@/pages/impressum";
+import Datenschutz from "@/pages/datenschutz";
+import AGB from "@/pages/agb";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -25,6 +28,9 @@ function Router() {
       <Route path="/ratgeber" component={Blog} />
       <Route path="/ratgeber/:slug" component={BlogArticle} />
       <Route path="/kontakt" component={Kontakt} />
+      <Route path="/impressum" component={Impressum} />
+      <Route path="/datenschutz" component={Datenschutz} />
+      <Route path="/agb" component={AGB} />
       <Route component={NotFound} />
     </Switch>
   );

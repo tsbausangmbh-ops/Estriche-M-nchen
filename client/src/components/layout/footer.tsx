@@ -54,13 +54,22 @@ export function Footer() {
           <p className="text-sm text-background/60">
             © {new Date().getFullYear()} Estrich München. Alle Rechte vorbehalten.
           </p>
-          <div className="flex gap-6 text-sm text-background/60">
-            <a href="#" className="hover:text-background transition-colors" data-testid="link-impressum">
-              Impressum
-            </a>
-            <a href="#" className="hover:text-background transition-colors" data-testid="link-datenschutz">
-              Datenschutz
-            </a>
+          <div className="flex flex-wrap gap-6 text-sm text-background/60">
+            <Link href="/impressum">
+              <a className="hover:text-background transition-colors" data-testid="link-impressum">
+                Impressum
+              </a>
+            </Link>
+            <Link href="/datenschutz">
+              <a className="hover:text-background transition-colors" data-testid="link-datenschutz">
+                Datenschutz
+              </a>
+            </Link>
+            <Link href="/agb">
+              <a className="hover:text-background transition-colors" data-testid="link-agb">
+                AGB
+              </a>
+            </Link>
           </div>
         </div>
       </div>
