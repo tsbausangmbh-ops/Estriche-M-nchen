@@ -604,7 +604,7 @@ export default function Home() {
       </div>
 
       {/* Services Section */}
-      <section id="leistungen" className="py-24 bg-muted/60">
+      <section id="leistungen" className="py-24 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unsere Leistungen</p>
@@ -701,7 +701,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="preise" className="py-24 bg-muted/80">
+      <section id="preise" className="py-24 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Transparente Preise</p>
@@ -782,7 +782,7 @@ export default function Home() {
       </section>
 
       {/* Service Areas */}
-      <section className="py-24 bg-muted/60">
+      <section className="py-24 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unser Einsatzgebiet</p>
