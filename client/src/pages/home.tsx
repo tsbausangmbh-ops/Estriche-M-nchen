@@ -553,7 +553,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unsere Leistungen</p>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">So lösen wir Ihr Boden-Problem</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">So lösen wir Ihr Boden-Problem</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               Egal welche Herausforderung – wir haben die passende Lösung. Profitieren Sie von unserer 
               Erfahrung aus über 282 erfolgreich abgeschlossenen Projekten.
@@ -617,7 +617,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unser Ablauf</p>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">In 4 Schritten zum perfekten Boden</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">In 4 Schritten zum perfekten Boden</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               Kein Rätselraten, keine Überraschungen. So einfach ist der Weg zu Ihrem fertigen Estrich.
             </p>
@@ -638,7 +638,7 @@ export default function Home() {
                     <div className="hidden lg:block flex-1 h-px bg-border" />
                   )}
                 </div>
-                <h3 className="font-semibold text-lg mb-3" data-testid={`text-step-title-${index}`}>{step.title}</h3>
+                <h3 className="font-bold text-lg mb-3 tracking-tight" data-testid={`text-step-title-${index}`}>{step.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed" data-testid={`text-step-description-${index}`}>{step.description}</p>
               </div>
             ))}
@@ -651,7 +651,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Transparente Preise</p>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Faire Preise, keine versteckten Kosten</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Faire Preise, keine versteckten Kosten</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               Bei uns wissen Sie vorher, was es kostet. Keine bösen Überraschungen – versprochen.
             </p>
@@ -688,7 +688,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Häufige Fragen</p>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Haben Sie noch Fragen?</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Haben Sie noch Fragen?</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               Hier beantworten wir die häufigsten Fragen unserer Kunden. Falls Ihre Frage nicht dabei ist – fragen Sie uns einfach!
             </p>
@@ -732,7 +732,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unser Einsatzgebiet</p>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Wir kommen zu Ihnen – schnell und zuverlässig</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Wir kommen zu Ihnen – schnell und zuverlässig</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               Egal ob München-Zentrum oder Umland – wir sind in kürzester Zeit vor Ort.
             </p>
@@ -783,7 +783,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Bereit, Ihr Estrich-Problem zu lösen?</h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Bereit, Ihr Estrich-Problem zu lösen?</h2>
               <p className="text-muted-foreground mb-8">
                 Machen Sie jetzt den ersten Schritt. In nur 60 Sekunden erfahren Sie, 
                 was Ihr Projekt kostet – <strong className="text-foreground">garantiert ohne Verpflichtung</strong>.

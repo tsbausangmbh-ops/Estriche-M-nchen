@@ -66,7 +66,7 @@ export default function ServiceDetail() {
               </Badge>
             </div>
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight mb-4 text-white">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
               {service.title}
             </h1>
             
@@ -116,11 +116,11 @@ export default function ServiceDetail() {
         <div className="px-4 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-2xl font-bold mb-6">Was ist {service.title}?</h2>
+              <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 tracking-tight">Was ist {service.title}?</h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 {service.whatIsIt}
               </p>
-              <h3 className="text-lg font-semibold mb-4 text-destructive">{service.problem}</h3>
+              <h3 className="text-lg sm:text-xl font-bold mb-4 text-destructive tracking-tight">{service.problem}</h3>
               <div className="space-y-3">
                 {service.painAgitation.map((pain, index) => (
                   <div key={index} className="flex gap-3 items-start">
@@ -207,7 +207,7 @@ export default function ServiceDetail() {
 
       <section className="py-16">
         <div className="px-4 sm:px-8 lg:px-12">
-          <h2 className="text-2xl font-bold mb-3">Welche Arten gibt es?</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold mb-3 tracking-tight">Welche Arten gibt es?</h2>
           <p className="text-muted-foreground mb-8">
             Je nach Projekt setzen wir unterschiedliche Varianten ein.
           </p>
@@ -232,7 +232,7 @@ export default function ServiceDetail() {
 
       <section className="py-16 bg-accent">
         <div className="px-4 sm:px-8 lg:px-12">
-          <h2 className="text-2xl font-bold mb-3">Was ist inklusive?</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold mb-3 tracking-tight">Was ist inklusive?</h2>
           <p className="text-muted-foreground mb-8">
             Alles aus einer Hand – keine versteckten Kosten.
           </p>
@@ -254,10 +254,10 @@ export default function ServiceDetail() {
 
       <section className="py-16">
         <div className="px-4 sm:px-8 lg:px-12">
-          <h2 className="text-2xl font-bold mb-8">Unser Ablauf</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold mb-8 tracking-tight">Unser Ablauf</h2>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
             <div className="bg-card rounded-lg border p-6 flex flex-col">
-              <h3 className="font-semibold mb-6">Arbeitsschritte</h3>
+              <h3 className="text-lg font-bold mb-6 tracking-tight">Arbeitsschritte</h3>
               <div className="space-y-0 flex-1">
                 {service.process.map((step, index) => (
                   <div key={index} className="flex gap-4">
@@ -277,7 +277,7 @@ export default function ServiceDetail() {
               </div>
             </div>
             <div className="bg-muted rounded-lg p-6 flex flex-col">
-              <h3 className="font-semibold mb-4">Detaillierter Ablauf</h3>
+              <h3 className="text-lg font-bold mb-4 tracking-tight">Detaillierter Ablauf</h3>
               <div className="space-y-4 flex-1">
                 {service.detailedProcess.split('\n\n').map((paragraph, index) => (
                   <p key={index} className="text-muted-foreground leading-relaxed text-sm">{paragraph}</p>
@@ -292,7 +292,7 @@ export default function ServiceDetail() {
         <div className="px-4 sm:px-8 lg:px-12">
           <div className="flex items-center gap-3 mb-3">
             <ThumbsUp className="w-6 h-6 text-primary" />
-            <h2 className="text-2xl font-bold">Warum Estrich München?</h2>
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Warum Estrich München?</h2>
           </div>
           <p className="text-muted-foreground mb-8 max-w-2xl">
             Was uns von anderen Estrichlegern unterscheidet
@@ -314,7 +314,7 @@ export default function ServiceDetail() {
         <div className="px-4 sm:px-8 lg:px-12">
           <div className="flex items-center gap-3 mb-3">
             <Building2 className="w-6 h-6 text-primary" />
-            <h2 className="text-2xl font-bold">Unsere Arbeit</h2>
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Unsere Arbeit</h2>
           </div>
           <p className="text-muted-foreground mb-8">
             Referenzprojekte und Einblicke in unsere Arbeitsweise
@@ -340,7 +340,7 @@ export default function ServiceDetail() {
             {service.projectExamples.map((project, index) => (
               <Card key={index} className="overflow-hidden">
                 <CardContent className="p-5">
-                  <h4 className="font-semibold mb-3">{project.title}</h4>
+                  <h4 className="font-bold mb-3 tracking-tight">{project.title}</h4>
                   <div className="flex flex-wrap gap-3 mb-4 text-xs">
                     <div className="flex items-center gap-1 text-muted-foreground">
                       <MapPin className="w-3 h-3" />
@@ -369,7 +369,7 @@ export default function ServiceDetail() {
             <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 mb-4">
               <Shield className="w-7 h-7 text-primary" />
             </div>
-            <h2 className="text-2xl font-bold mb-2">Technik & Qualitätsstandards</h2>
+            <h2 className="text-2xl sm:text-3xl font-extrabold mb-2 tracking-tight">Technik & Qualitätsstandards</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Höchste Qualität durch modernste Technik und strikte Einhaltung deutscher Industrienormen
             </p>
@@ -472,7 +472,7 @@ export default function ServiceDetail() {
 
       <section className="py-16 bg-accent">
         <div className="px-4 sm:px-8 lg:px-12">
-          <h2 className="text-2xl font-bold mb-6">Häufig gestellte Fragen</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 tracking-tight">Häufig gestellte Fragen</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {service.faqs.slice(0, 6).map((faq, index) => (
               <div key={index} className="bg-card border rounded-lg p-5">
@@ -498,7 +498,7 @@ export default function ServiceDetail() {
 
       <section className="py-16 bg-muted">
         <div className="px-4 sm:px-8 lg:px-12">
-          <h2 className="text-2xl font-bold mb-6">Weitere Leistungen</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 tracking-tight">Weitere Leistungen</h2>
           <div className="grid md:grid-cols-3 gap-4">
             {services.filter(s => s.id !== serviceId).slice(0, 3).map((otherService) => (
               <Link key={otherService.id} href={`/leistungen/${otherService.id}`}>
