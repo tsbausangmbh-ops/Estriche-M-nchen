@@ -160,7 +160,9 @@ export const services: Service[] = [
       { question: "Wie lange muss Estrich trocknen, bevor ich den Boden verlegen kann?", answer: "Die Trocknungszeit hängt von der Estrichart und -stärke ab. Als Faustregel gilt: 1 Tag pro Millimeter Estrichstärke. Ein 50 mm starker Zementestrich braucht also etwa 50 Tage bis zur Belegreife. Mit Schnellestrich können wir diese Zeit auf 1-3 Tage verkürzen." },
       { question: "Welcher Estrich ist für Fußbodenheizung geeignet?", answer: "Grundsätzlich eignen sich sowohl Zementestrich als auch Calciumsulfat-Fließestrich für Fußbodenheizungen. Fließestrich hat den Vorteil einer besseren Wärmeleitfähigkeit und umschließt die Heizungsrohre optimal. Wir beraten Sie gerne, welche Variante für Ihr Projekt ideal ist." },
       { question: "Kann ich den Estrich selbst verlegen?", answer: "Estrichverlegung erfordert Fachwissen, spezielle Ausrüstung und viel Erfahrung. Fehler bei der Mischung, Verlegung oder Nachbehandlung führen zu Rissen, Hohlstellen oder unebenen Flächen. Das Geld, das Sie beim Selbermachen sparen, geben Sie später für Reparaturen aus. Vertrauen Sie lieber auf Profis." },
-      { question: "Was kostet ein neuer Estrich?", answer: "Die Kosten liegen je nach Estrichart zwischen 25-50 €/m². Faktoren wie Untergrundvorbereitung, Estrichstärke, Dämmung und Zugänglichkeit beeinflussen den Preis. Wir erstellen Ihnen ein verbindliches Festpreisangebot nach einer kostenlosen Vor-Ort-Besichtigung." }
+      { question: "Was kostet ein neuer Estrich?", answer: "Die Kosten liegen je nach Estrichart zwischen 25-50 €/m². Faktoren wie Untergrundvorbereitung, Estrichstärke, Dämmung und Zugänglichkeit beeinflussen den Preis. Wir erstellen Ihnen ein verbindliches Festpreisangebot nach einer kostenlosen Vor-Ort-Besichtigung." },
+      { question: "Wie bereite ich den Raum vor der Estrichverlegung vor?", answer: "Der Raum sollte geschlossen sein, alle Fenster und Türen eingebaut. Der Untergrund muss sauber und tragfähig sein. Elektro- und Sanitärinstallationen sollten abgeschlossen sein. Wir prüfen alles bei der Vor-Ort-Besichtigung und informieren Sie, was noch zu tun ist." },
+      { question: "Wann kann ich nach der Estrichverlegung einziehen?", answer: "Nach der vollständigen Trocknung und Verlegung des Bodenbelags können Sie einziehen. Bei Zementestrich dauert das etwa 6-8 Wochen, bei Schnellestrich nur 1-2 Wochen. Wir geben Ihnen einen verbindlichen Zeitplan für Ihr Projekt." }
     ],
     testimonial: {
       name: "Familie Huber",
@@ -253,7 +255,9 @@ export const services: Service[] = [
       { question: "Wie lange hält ein Industrieboden?", answer: "Bei fachgerechter Ausführung und Nutzung halten Industrieböden 15-25 Jahre oder länger. Regelmäßige Reinigung und gelegentliche Auffrischung der Versiegelung verlängern die Lebensdauer erheblich." },
       { question: "Kann ein bestehender Boden saniert werden?", answer: "In vielen Fällen ja. Beschädigte Beschichtungen können abgetragen und erneuert werden. Bei strukturellen Schäden im Untergrund ist manchmal ein Neuaufbau sinnvoller. Wir beraten Sie ehrlich, welche Lösung wirtschaftlicher ist." },
       { question: "Wie pflege ich Sichtestrich richtig?", answer: "Sichtestrich ist pflegeleicht. Regelmäßiges Kehren und gelegentliches Wischen mit pH-neutralem Reiniger genügt. Einmal jährlich sollte die Versiegelung überprüft und bei Bedarf aufgefrischt werden." },
-      { question: "Kann Sichtestrich auch mit Fußbodenheizung kombiniert werden?", answer: "Absolut. Sichtestrich eignet sich hervorragend für Fußbodenheizungen, da er die Wärme gut leitet und speichert. Die Oberfläche ist angenehm fußwarm." }
+      { question: "Kann Sichtestrich auch mit Fußbodenheizung kombiniert werden?", answer: "Absolut. Sichtestrich eignet sich hervorragend für Fußbodenheizungen, da er die Wärme gut leitet und speichert. Die Oberfläche ist angenehm fußwarm." },
+      { question: "Welche Farben sind bei Industrieböden möglich?", answer: "Bei Beschichtungen ist fast jede RAL-Farbe möglich. Sichtestrich zeigt die natürliche Grau-Tönung des Materials, kann aber auch eingefärbt oder mit farbigen Zuschlagstoffen gestaltet werden. Wir zeigen Ihnen Muster." },
+      { question: "Kann der Betrieb während der Arbeiten weiterlaufen?", answer: "Teilweise ja. Wir können Hallen und Gewerbeflächen abschnittsweise bearbeiten, sodass der Betrieb in anderen Bereichen weiterlaufen kann. Auch Nacht- und Wochenendarbeit ist möglich." }
     ],
     testimonial: {
       name: "Thomas Meier, Geschäftsführer",
@@ -346,7 +350,9 @@ export const services: Service[] = [
       { question: "Kann jeder Estrich gefräst werden?", answer: "Fast jeder. Zementestrich, Anhydritestrich und Gussasphalt eignen sich hervorragend. Wir prüfen vor Ort die Estrichstärke und den Zustand. Bei zu dünnem oder beschädigtem Estrich beraten wir Sie zu Alternativen." },
       { question: "Wie lange dauert die Installation?", answer: "Für eine durchschnittliche Wohnung (80-100 m²) benötigen wir 2-4 Arbeitstage. Sie können während der Arbeiten in der Wohnung bleiben – wir arbeiten Raum für Raum." },
       { question: "Was passiert mit meinem bestehenden Bodenbelag?", answer: "Der muss vorher entfernt werden. Nach unseren Arbeiten kann der Boden sofort neu belegt werden – mit Fliesen, Parkett, Vinyl oder jedem anderen Belag. Die Vergussmasse ist nach 24 Stunden begehbar." },
-      { question: "Ist eine nachgerüstete Fußbodenheizung genauso effizient wie eine neue?", answer: "Ja, bei fachgerechter Ausführung erreichen gefräste Systeme die gleiche Effizienz wie Neubauten. Durch die direkte Integration in den Estrich ist die Wärmeübertragung sogar besonders gut." }
+      { question: "Ist eine nachgerüstete Fußbodenheizung genauso effizient wie eine neue?", answer: "Ja, bei fachgerechter Ausführung erreichen gefräste Systeme die gleiche Effizienz wie Neubauten. Durch die direkte Integration in den Estrich ist die Wärmeübertragung sogar besonders gut." },
+      { question: "Wie hoch sind die Betriebskosten einer Fußbodenheizung?", answer: "Fußbodenheizungen arbeiten mit niedrigen Vorlauftemperaturen (30-40°C) und sind daher sehr effizient. In Kombination mit einer Wärmepumpe können Sie bis zu 30% Heizkosten sparen im Vergleich zu Heizkörpern." },
+      { question: "Kann ich die Fußbodenheizung selbst regulieren?", answer: "Ja, jeder Raum erhält einen eigenen Heizkreis mit Raumthermostat. Sie können die Temperatur individuell einstellen. Moderne Systeme lassen sich auch per Smart-Home-App steuern." }
     ],
     testimonial: {
       name: "Martina & Klaus Schmidt",
@@ -440,7 +446,9 @@ export const services: Service[] = [
       { question: "Welche Dämmstärke brauche ich?", answer: "Das hängt vom Gebäude und den Anforderungen ab. Für Neubauten nach GEG sind meist 80-120 mm nötig, bei Sanierungen oft weniger. Wir berechnen die optimale Stärke für Ihr Projekt." },
       { question: "Kann ich die Dämmung auch ohne neuen Estrich machen?", answer: "Nein, die Dämmung muss unter dem Estrich liegen. Bei einer Sanierung muss der alte Estrich entfernt werden. Alternativ gibt es dünne Aufdopplungssysteme, die auf den bestehenden Boden kommen." },
       { question: "Gibt es Förderungen für Bodendämmung?", answer: "Ja! Bei energetischen Sanierungen gibt es Zuschüsse von KfW und BAFA. Wir beraten Sie gerne zu den aktuellen Förderprogrammen und helfen bei der Antragstellung." },
-      { question: "Ist Trittschalldämmung Pflicht?", answer: "In Mehrfamilienhäusern ja – die DIN 4109 schreibt Mindestanforderungen vor. Auch in Einfamilienhäusern ist Trittschalldämmung sinnvoll für mehr Wohnkomfort, besonders über bewohnten Räumen." }
+      { question: "Ist Trittschalldämmung Pflicht?", answer: "In Mehrfamilienhäusern ja – die DIN 4109 schreibt Mindestanforderungen vor. Auch in Einfamilienhäusern ist Trittschalldämmung sinnvoll für mehr Wohnkomfort, besonders über bewohnten Räumen." },
+      { question: "Welches Dämmmaterial ist das beste?", answer: "Das hängt von Ihren Anforderungen ab. EPS ist kostengünstig und vielseitig, XPS ist feuchtebeständiger, Mineralwolle bietet besten Brandschutz, Holzfaser ist ökologisch. Wir empfehlen das passende Material für Ihr Projekt." },
+      { question: "Wie viel Energie kann ich durch Bodendämmung sparen?", answer: "Je nach Ausgangssituation sind 15-30% Energieeinsparung möglich. Besonders bei ungedämmten Kellerdecken oder Bodenplatten ist das Einsparpotenzial enorm. Die Investition amortisiert sich oft in 5-10 Jahren." }
     ],
     testimonial: {
       name: "Dr. Andrea Bauer",
@@ -534,7 +542,9 @@ export const services: Service[] = [
       { question: "Wann lohnt sich Reparatur statt Neuaufbau?", answer: "Bei lokalen Schäden (einzelne Risse, begrenzte Hohlstellen) ist eine Reparatur fast immer günstiger. Bei flächendeckenden Problemen oder strukturellen Mängeln kann ein Neuaufbau sinnvoller sein. Wir beraten Sie ehrlich." },
       { question: "Wie lange hält eine Estrichreparatur?", answer: "Bei fachgerechter Ausführung genauso lang wie der ursprüngliche Estrich – viele Jahre oder Jahrzehnte. Wichtig ist, dass die Ursache behoben wird, nicht nur das Symptom." },
       { question: "Kann ich nach einem Wasserschaden den Estrich retten?", answer: "Oft ja. Mit professioneller Bautrocknung kann durchfeuchteter Estrich gerettet werden, wenn schnell gehandelt wird. Je länger das Wasser steht, desto größer der Schaden. Rufen Sie uns sofort an!" },
-      { question: "Übernimmt die Versicherung die Kosten?", answer: "Bei Wasserschäden durch einen versicherten Schaden (Rohrbruch, Hochwasser) übernimmt die Gebäudeversicherung in der Regel die Kosten. Wir erstellen Ihnen eine dokumentierte Schadensaufnahme für Ihre Versicherung." }
+      { question: "Übernimmt die Versicherung die Kosten?", answer: "Bei Wasserschäden durch einen versicherten Schaden (Rohrbruch, Hochwasser) übernimmt die Gebäudeversicherung in der Regel die Kosten. Wir erstellen Ihnen eine dokumentierte Schadensaufnahme für Ihre Versicherung." },
+      { question: "Wie erkenne ich Hohlstellen im Estrich?", answer: "Hohlstellen erkennen Sie am dumpfen, trommelnden Klang beim Draufklopfen. Auch wenn der Boden an manchen Stellen leicht federt oder Risse sternförmig von einem Punkt ausgehen, sind Hohlstellen wahrscheinlich." },
+      { question: "Können Risse im Estrich wiederkommen?", answer: "Wenn nur der Riss gefüllt wird, ohne die Ursache zu beheben, ja. Deshalb analysieren wir immer zuerst, warum der Riss entstanden ist, und behandeln beides – Symptom und Ursache." }
     ],
     testimonial: {
       name: "Hausverwaltung Immobilien GmbH",
@@ -627,7 +637,9 @@ export const services: Service[] = [
       { question: "Ist Schnellestrich teurer als normaler Estrich?", answer: "Ja, die Materialkosten sind etwa 20-40% höher. Aber: Die eingesparte Zeit kann viel wertvoller sein – keine verlängerte Miete, pünktlicher Einzug, keine Handwerker-Umplanung. Oft rechnet sich der Aufpreis mehrfach." },
       { question: "Ist die Qualität wirklich gleich gut?", answer: "Ja. Schnellestrich erreicht die gleiche Endfestigkeit wie konventioneller Estrich. Der einzige Unterschied ist die Trocknungszeit – die Materialeigenschaften sind identisch oder sogar besser." },
       { question: "Kann Schnellestrich mit Fußbodenheizung verwendet werden?", answer: "Selbstverständlich. Schnellestrich eignet sich hervorragend für Fußbodenheizungen. Das Aufheizen kann sogar früher beginnen, was die Gesamtbauzeit weiter verkürzt." },
-      { question: "Wann brauche ich wirklich Schnellestrich?", answer: "Immer wenn Zeit kritisch ist: Feste Einzugstermine, knappe Bauzeit, Renovierung bewohnter Objekte, Ladenbau mit minimaler Schließzeit. Wenn jeder Tag zählt, ist Schnellestrich die Lösung." }
+      { question: "Wann brauche ich wirklich Schnellestrich?", answer: "Immer wenn Zeit kritisch ist: Feste Einzugstermine, knappe Bauzeit, Renovierung bewohnter Objekte, Ladenbau mit minimaler Schließzeit. Wenn jeder Tag zählt, ist Schnellestrich die Lösung." },
+      { question: "Wie schnell ist Schnellestrich wirklich belegreif?", answer: "Je nach System zwischen 1 und 5 Tagen. 1-Tages-Estrich ist nach 24 Stunden belegreif, Schnellzementestrich nach 3-5 Tagen. Zum Vergleich: Normaler Zementestrich braucht 4-8 Wochen." },
+      { question: "Gibt es Einschränkungen bei Schnellestrich?", answer: "Kaum. Schnellestrich kann überall eingesetzt werden, wo normaler Estrich möglich ist. Wichtig sind die richtigen Umgebungsbedingungen: Temperatur über 5°C und geschlossene Räume für optimale Trocknung." }
     ],
     testimonial: {
       name: "Bauträger Alpenhäuser GmbH",
