@@ -49,13 +49,9 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { apiRequest } from "@/lib/queryClient";
+import { services } from "@/lib/services-data";
+import { Link } from "wouter";
 import heroImage from "@assets/generated_images/worker_grinding_screed_floor.png";
-import serviceImage1 from "@assets/generated_images/three_workers_laying_screed.png";
-import serviceImage2 from "@assets/generated_images/polished_industrial_floor_warehouse.png";
-import serviceImage3 from "@assets/generated_images/two_workers_milling_and_pipes.png";
-import serviceImage4 from "@assets/generated_images/three_workers_installing_insulation.png";
-import serviceImage5 from "@assets/generated_images/repairing_floor_cracks.png";
-import serviceImage6 from "@assets/generated_images/two_workers_pouring_screed.png";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name muss mindestens 2 Zeichen lang sein"),
@@ -66,57 +62,6 @@ const contactFormSchema = z.object({
 });
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
-
-const services = [
-  {
-    icon: Layers,
-    title: "Zementestrich und Fließestrich",
-    problem: "Ihr Problem: Unebene Böden, die jeden Belag ruinieren?",
-    description: "Wir liefern perfekt plane Flächen – die ideale Basis für Parkett, Fliesen oder Vinyl. Kein Nacharbeiten, kein Ärger.",
-    features: ["Perfekte Ebenheit garantiert", "Für jeden Bodenbelag geeignet", "Schneller als Sie denken"],
-    image: serviceImage1,
-  },
-  {
-    icon: Building2,
-    title: "Industrieböden und Sichtestrich",
-    problem: "Ihr Problem: Böden, die der Belastung nicht standhalten?",
-    description: "Unsere Industrieböden sind für härteste Beanspruchung gemacht. Sichtestrich vereint dabei Funktion mit modernem Design.",
-    features: ["Extreme Belastbarkeit", "Optisch ein Hingucker", "Langlebig und wartungsarm"],
-    image: serviceImage2,
-  },
-  {
-    icon: Thermometer,
-    title: "Fußbodenheizung einfräsen",
-    problem: "Ihr Problem: Kalte Füße, aber Angst vor dem Renovierungschaos?",
-    description: "Wir fräsen Ihre Fußbodenheizung nachträglich ein – ohne den ganzen Estrich rauszureißen. Sauber, schnell, stressfrei.",
-    features: ["Kein kompletter Abriss nötig", "In wenigen Tagen erledigt", "Ab 45€/m² möglich"],
-    image: serviceImage3,
-  },
-  {
-    icon: Shield,
-    title: "Wärmedämmung & Abdichtung",
-    problem: "Ihr Problem: Hohe Heizkosten durch schlechte Dämmung?",
-    description: "Mit professioneller Wärmedämmung senken Sie Ihre Energiekosten dauerhaft. Wir machen Ihren Boden energieeffizient.",
-    features: ["Heizkosten sparen", "Trittschall reduzieren", "Normgerechter Aufbau"],
-    image: serviceImage4,
-  },
-  {
-    icon: Wrench,
-    title: "Sanierung & Reparatur",
-    problem: "Ihr Problem: Risse, Hohlstellen oder unebene alte Böden?",
-    description: "Wir retten Ihren bestehenden Estrich – oft ohne kompletten Austausch. Gezielt, schnell und kosteneffizient.",
-    features: ["Diagnose vor Ort", "Oft günstiger als Neubau", "Schnelle Lösung"],
-    image: serviceImage5,
-  },
-  {
-    icon: Zap,
-    title: "Schnellestrich",
-    problem: "Ihr Problem: Termindrückt, aber der Estrich braucht ewig zum Trocknen?",
-    description: "Unser Schnellestrich ist in Rekordzeit belegreif. Perfekt, wenn jeder Tag zählt.",
-    features: ["Bis zu 50% schneller", "Gleiche Qualität", "Ideal bei Zeitdruck"],
-    image: serviceImage6,
-  },
-];
 
 const processSteps = [
   {
@@ -617,42 +562,43 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card 
-                key={index} 
-                className="overflow-visible group"
-                data-testid={`card-service-${index}`}
-              >
-                <div className="relative h-52 overflow-hidden rounded-t-lg">
-                  <img 
-                    src={service.image} 
-                    alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/20 to-transparent" />
-                  <div className="absolute bottom-4 left-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary/90 backdrop-blur-sm flex items-center justify-center shadow-lg">
-                      <service.icon className="w-6 h-6 text-primary-foreground" />
+              <Link key={service.id} href={`/leistungen/${service.id}`}>
+                <Card 
+                  className="overflow-visible group cursor-pointer hover-elevate h-full"
+                  data-testid={`card-service-${index}`}
+                >
+                  <div className="relative h-52 overflow-hidden rounded-t-lg">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/20 to-transparent" />
+                    <div className="absolute bottom-4 left-4">
+                      <div className="w-12 h-12 rounded-lg bg-primary/90 backdrop-blur-sm flex items-center justify-center shadow-lg">
+                        <service.icon className="w-6 h-6 text-primary-foreground" />
+                      </div>
                     </div>
                   </div>
-                </div>
-                <CardHeader className="pb-3 pt-5">
-                  <CardTitle className="text-lg" data-testid={`text-service-title-${index}`}>{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4 pt-0">
-                  <p className="text-sm text-muted-foreground italic">{service.problem}</p>
-                  <p className="text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2 pt-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-2 text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                  <CardHeader className="pb-3 pt-5">
+                    <CardTitle className="text-lg" data-testid={`text-service-title-${index}`}>{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4 pt-0">
+                    <p className="text-sm text-muted-foreground italic">{service.problem}</p>
+                    <p className="text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                    <ul className="space-y-2 pt-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center gap-2 text-sm">
+                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
                     ))}
-                  </ul>
-                </CardContent>
-              </Card>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
 
