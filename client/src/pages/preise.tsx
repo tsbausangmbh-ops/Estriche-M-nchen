@@ -145,12 +145,16 @@ const priceCategories = [
 const additionalServices = [
   { name: "Kostenlose Vor-Ort-Besichtigung", price: "0 €" },
   { name: "Festpreis-Angebot innerhalb 48h", price: "0 €" },
-  { name: "Anfahrt im Stadtgebiet München", price: "inklusive" },
-  { name: "Anfahrt Umland (bis 30km)", price: "inklusive" },
-  { name: "Anfahrt Umland (30-50km)", price: "58 € pauschal" },
-  { name: "Baustelleneinrichtung", price: "inklusive" },
-  { name: "Baustellenendreinigung", price: "inklusive" },
-  { name: "Entsorgung Altmaterial", price: "nach Aufwand" }
+  { name: "Anfahrt im Stadtgebiet München", price: "0 €" },
+  { name: "Anfahrt Umland (bis 30km)", price: "0 €" },
+  { name: "Anfahrt Umland (30-50km)", price: "58 €" },
+  { name: "Baustelleneinrichtung", price: "0 €" },
+  { name: "Baustellenendreinigung", price: "0 €" },
+  { name: "Entsorgung Altmaterial (Container)", price: "230-460 €" },
+  { name: "Altestrich-Abbruch", price: "17-29 €/m²" },
+  { name: "Höhenausgleich bis 20mm", price: "6-12 €/m²" },
+  { name: "Grundierung Untergrund", price: "3-6 €/m²" },
+  { name: "Randdämmstreifen", price: "2-4 €/lfm" }
 ];
 
 export default function Preise() {
