@@ -55,7 +55,7 @@ import serviceImage2 from "@assets/generated_images/polished_industrial_concrete
 import serviceImage3 from "@assets/generated_images/installing_underfloor_heating.png";
 import serviceImage4 from "@assets/generated_images/installing_floor_insulation.png";
 import serviceImage5 from "@assets/generated_images/repairing_floor_cracks.png";
-import serviceImage6 from "@assets/generated_images/pouring_quick-dry_screed.png";
+import serviceImage6 from "@assets/generated_images/two_workers_pouring_screed.png";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name muss mindestens 2 Zeichen lang sein"),
