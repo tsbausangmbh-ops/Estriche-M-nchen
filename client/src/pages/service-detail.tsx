@@ -274,8 +274,12 @@ export default function ServiceDetail() {
               ))}
             </div>
             <div className="bg-muted rounded-lg p-6 h-fit lg:sticky lg:top-24">
-              <h3 className="font-semibold mb-3">Detaillierter Ablauf</h3>
-              <p className="text-muted-foreground leading-relaxed">{service.detailedProcess}</p>
+              <h3 className="font-semibold mb-4">Detaillierter Ablauf</h3>
+              <div className="space-y-4">
+                {service.detailedProcess.split('\n\n').map((paragraph, index) => (
+                  <p key={index} className="text-muted-foreground leading-relaxed text-sm">{paragraph}</p>
+                ))}
+              </div>
             </div>
           </div>
         </div>
