@@ -358,55 +358,86 @@ export default function ServiceDetail() {
 
       <section className="py-16 bg-muted">
         <div className="px-4 sm:px-8 lg:px-12">
-          <div className="flex items-center gap-3 mb-6">
-            <Shield className="w-6 h-6 text-primary" />
-            <h2 className="text-2xl font-bold">Technik & Qualitätsstandards</h2>
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 mb-4">
+              <Shield className="w-7 h-7 text-primary" />
+            </div>
+            <h2 className="text-2xl font-bold mb-2">Technik & Qualitätsstandards</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Höchste Qualität durch modernste Technik und strikte Einhaltung deutscher Industrienormen
+            </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-semibold mb-4">Ihre Vorteile</h3>
-              <ul className="space-y-2 mb-6">
-                {service.benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
-                    <span className="text-sm">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              <h3 className="font-semibold mb-4">Technische Details</h3>
-              <div className="grid gap-2">
-                {service.technicalDetails.map((detail, index) => (
-                  <div key={index} className="flex items-start gap-3 p-3 bg-card rounded-lg border">
-                    <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">{detail}</span>
+          <div className="grid lg:grid-cols-3 gap-6">
+            <Card className="border-0 shadow-sm">
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <CheckCircle2 className="w-5 h-5 text-primary" />
                   </div>
-                ))}
-              </div>
-            </div>
+                  <CardTitle className="text-lg">Ihre Vorteile</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  {service.benefits.map((benefit, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle2 className="w-3 h-3 text-primary" />
+                      </div>
+                      <span className="text-sm">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
             
-            <div>
-              <h3 className="font-semibold mb-4">Normgerechte Ausführung</h3>
-              <p className="text-sm text-muted-foreground mb-4">
-                Wir arbeiten nach den aktuellen deutschen Industrienormen für höchste Qualität.
-              </p>
-              <div className="grid gap-2">
-                {service.dinNorms.map((norm, index) => (
-                  <div key={index} className="p-3 bg-card rounded-lg border">
-                    <div className="flex items-start gap-3">
-                      <Badge variant="outline" className="shrink-0 font-mono text-xs">
+            <Card className="border-0 shadow-sm">
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Ruler className="w-5 h-5 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">Technische Details</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  {service.technicalDetails.map((detail, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle2 className="w-3 h-3 text-primary" />
+                      </div>
+                      <span className="text-sm">{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+            
+            <Card className="border-0 shadow-sm">
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Award className="w-5 h-5 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">DIN-Normen</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  {service.dinNorms.map((norm, index) => (
+                    <div key={index} className="p-3 bg-muted rounded-lg">
+                      <Badge variant="secondary" className="font-mono text-xs mb-2">
                         {norm.number}
                       </Badge>
-                      <div>
-                        <h4 className="font-medium text-sm">{norm.title}</h4>
-                        <p className="text-xs text-muted-foreground">{norm.description}</p>
-                      </div>
+                      <h4 className="font-medium text-sm mb-1">{norm.title}</h4>
+                      <p className="text-xs text-muted-foreground">{norm.description}</p>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
