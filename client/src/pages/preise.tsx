@@ -5,6 +5,7 @@ import { CheckCircle2, ChevronRight, Info, Layers, Building2, Thermometer, Shiel
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Link } from "wouter";
+import heroImage from "@assets/generated_images/worker_grinding_screed_floor.png";
 
 const priceCategories = [
   {
@@ -12,7 +13,7 @@ const priceCategories = [
     icon: Layers,
     title: "Zementestrich & Fließestrich",
     subtitle: "Der Klassiker für Wohnbau und Renovierung",
-    priceRange: "33 - 59",
+    priceRange: "29 - 52",
     unit: "€/m²",
     includes: [
       "Untergrundvorbereitung und Reinigung",
@@ -22,19 +23,19 @@ const priceCategories = [
       "Feuchtemessung und Belegreifprotokoll"
     ],
     extras: [
-      { name: "Trittschalldämmung 20-40mm", price: "10-20 €/m²" },
-      { name: "Wärmedämmung 60-120mm", price: "16-33 €/m²" },
-      { name: "Fußbodenheizung-Vorbereitung", price: "7-13 €/m²" },
-      { name: "Höhenausgleich über 20mm", price: "4-10 €/m²" }
+      { name: "Trittschalldämmung 20-40mm", price: "9-17 €/m²" },
+      { name: "Wärmedämmung 60-120mm", price: "14-29 €/m²" },
+      { name: "Fußbodenheizung-Vorbereitung", price: "6-12 €/m²" },
+      { name: "Höhenausgleich über 20mm", price: "3-9 €/m²" }
     ],
-    note: "Mindestauftragswert 1.040€. Preise inkl. Material und Anfahrt München."
+    note: "Mindestauftragswert 920€. Preise inkl. Material und Anfahrt München."
   },
   {
     id: "industrieboeden",
     icon: Building2,
     title: "Industrieböden & Sichtestrich",
     subtitle: "Für Gewerbe, Industrie und modernes Wohnen",
-    priceRange: "59 - 124",
+    priceRange: "52 - 109",
     unit: "€/m²",
     includes: [
       "Untergrundanalyse und -vorbereitung",
@@ -44,10 +45,10 @@ const priceCategories = [
       "Prüfprotokoll mit Belastungswerten"
     ],
     extras: [
-      { name: "Epoxid-Beschichtung", price: "33-59 €/m²" },
-      { name: "Polyurethan-Versiegelung", price: "26-46 €/m²" },
-      { name: "Sichtestrich geschliffen", price: "46-72 €/m²" },
-      { name: "Farbige Einstreuung", price: "10-20 €/m²" }
+      { name: "Epoxid-Beschichtung", price: "29-52 €/m²" },
+      { name: "Polyurethan-Versiegelung", price: "23-40 €/m²" },
+      { name: "Sichtestrich geschliffen", price: "40-63 €/m²" },
+      { name: "Farbige Einstreuung", price: "9-17 €/m²" }
     ],
     note: "Preis abhängig von Belastungsanforderung. Wochenend-/Nachtarbeit gegen Aufpreis."
   },
@@ -56,7 +57,7 @@ const priceCategories = [
     icon: Thermometer,
     title: "Fußbodenheizung einfräsen",
     subtitle: "Nachrüstung ohne großen Umbau",
-    priceRange: "59 - 98",
+    priceRange: "52 - 86",
     unit: "€/m²",
     includes: [
       "Aufmaß und Heizlastberechnung",
@@ -66,10 +67,10 @@ const priceCategories = [
       "Druckprüfung und Dokumentation"
     ],
     extras: [
-      { name: "Einzelraumregelung", price: "104-195 €/Raum" },
-      { name: "Heizkreisverteiler", price: "325-585 €" },
-      { name: "Anschluss an Bestandsheizung", price: "195-390 €" },
-      { name: "Altbelag-Entfernung", price: "10-20 €/m²" }
+      { name: "Einzelraumregelung", price: "92-173 €/Raum" },
+      { name: "Heizkreisverteiler", price: "288-518 €" },
+      { name: "Anschluss an Bestandsheizung", price: "173-345 €" },
+      { name: "Altbelag-Entfernung", price: "9-17 €/m²" }
     ],
     note: "Preis inkl. Rohre und Vergussmasse. Komplettservice mit Partner-Installateur möglich."
   },
@@ -78,7 +79,7 @@ const priceCategories = [
     icon: Shield,
     title: "Wärme- & Trittschalldämmung",
     subtitle: "Energiesparen und Ruhe genießen",
-    priceRange: "23 - 59",
+    priceRange: "21 - 52",
     unit: "€/m²",
     includes: [
       "U-Wert-Berechnung nach GEG",
@@ -88,10 +89,10 @@ const priceCategories = [
       "Dokumentation für Förderanträge"
     ],
     extras: [
-      { name: "Vakuumdämmung (minimal)", price: "104-156 €/m²" },
-      { name: "Schallschutz-Kombidämmung", price: "33-52 €/m²" },
-      { name: "Kellerdeckendämmung", price: "46-72 €/m²" },
-      { name: "Energieberatung für Förderung", price: "195 € pauschal" }
+      { name: "Vakuumdämmung (minimal)", price: "92-138 €/m²" },
+      { name: "Schallschutz-Kombidämmung", price: "29-46 €/m²" },
+      { name: "Kellerdeckendämmung", price: "40-63 €/m²" },
+      { name: "Energieberatung für Förderung", price: "173 € pauschal" }
     ],
     note: "Förderfähig über KfW/BAFA. Wir unterstützen bei der Antragstellung."
   },
@@ -100,7 +101,7 @@ const priceCategories = [
     icon: Wrench,
     title: "Estrichsanierung & Reparatur",
     subtitle: "Rettung statt Abriss – wirtschaftlich und schnell",
-    priceRange: "46 - 111",
+    priceRange: "40 - 98",
     unit: "€/m²",
     includes: [
       "Kostenlose Schadensdiagnose vor Ort",
@@ -110,9 +111,9 @@ const priceCategories = [
       "Protokoll für Versicherung"
     ],
     extras: [
-      { name: "Wasserschaden-Trocknung", price: "20-33 €/m²/Tag" },
-      { name: "Teilsanierung Estrich", price: "59-85 €/m²" },
-      { name: "Komplett-Neuaufbau", price: "72-111 €/m²" },
+      { name: "Wasserschaden-Trocknung", price: "17-29 €/m²/Tag" },
+      { name: "Teilsanierung Estrich", price: "52-75 €/m²" },
+      { name: "Komplett-Neuaufbau", price: "63-98 €/m²" },
       { name: "Notfall-Einsatz (24h)", price: "+50% Aufschlag" }
     ],
     note: "Direkte Versicherungsabwicklung bei Regulierungsschäden möglich."
@@ -122,7 +123,7 @@ const priceCategories = [
     icon: Zap,
     title: "Schnellestrich",
     subtitle: "Wenn die Zeit drängt",
-    priceRange: "46 - 72",
+    priceRange: "40 - 63",
     unit: "€/m²",
     includes: [
       "Schnelltrocknende Spezialmischung",
@@ -132,9 +133,9 @@ const priceCategories = [
       "Garantierte Terminfreigabe"
     ],
     extras: [
-      { name: "1-Tages-Estrich (24h begehbar)", price: "+20 €/m²" },
+      { name: "1-Tages-Estrich (24h begehbar)", price: "+17 €/m²" },
       { name: "Wochenend-Verlegung", price: "+20% Aufschlag" },
-      { name: "Express-Trocknung (Geräte)", price: "7-13 €/m²/Tag" },
+      { name: "Express-Trocknung (Geräte)", price: "6-12 €/m²/Tag" },
       { name: "Termin-Garantie schriftlich", price: "inklusive" }
     ],
     note: "Ideal bei Renovierung, Ladenbau oder zeitkritischen Projekten."
@@ -146,7 +147,7 @@ const additionalServices = [
   { name: "Festpreis-Angebot innerhalb 48h", price: "0 €" },
   { name: "Anfahrt im Stadtgebiet München", price: "inklusive" },
   { name: "Anfahrt Umland (bis 30km)", price: "inklusive" },
-  { name: "Anfahrt Umland (30-50km)", price: "65 € pauschal" },
+  { name: "Anfahrt Umland (30-50km)", price: "58 € pauschal" },
   { name: "Baustelleneinrichtung", price: "inklusive" },
   { name: "Baustellenendreinigung", price: "inklusive" },
   { name: "Entsorgung Altmaterial", price: "nach Aufwand" }
@@ -161,14 +162,19 @@ export default function Preise() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <section className="relative py-16 lg:py-24 bg-accent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 lg:py-24 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/40" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <Badge variant="outline" className="mb-4">Transparente Preise</Badge>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
+            <Badge variant="outline" className="mb-4 border-white/30 text-white">Transparente Preise</Badge>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-white">
               Faire Preise für München
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            <p className="text-lg text-white/80 leading-relaxed mb-8">
               Bei uns wissen Sie vorher, was es kostet. Alle Preise sind Richtwerte für München und Umgebung. 
               Nach der kostenlosen Besichtigung erhalten Sie ein verbindliches Festpreis-Angebot.
             </p>

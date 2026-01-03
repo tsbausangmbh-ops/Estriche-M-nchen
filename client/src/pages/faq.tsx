@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/accordion";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import heroImage from "@assets/generated_images/worker_grinding_screed_floor.png";
 
 const faqCategories = [
   {
@@ -170,14 +171,19 @@ export default function FAQ() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <section className="relative py-16 lg:py-24 bg-accent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 lg:py-24 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/40" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <Badge variant="outline" className="mb-4">Häufige Fragen</Badge>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
+            <Badge variant="outline" className="mb-4 border-white/30 text-white">Häufige Fragen</Badge>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-white">
               {totalQuestions} Antworten auf Ihre Fragen
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            <p className="text-lg text-white/80 leading-relaxed mb-8">
               Hier finden Sie ausführliche Antworten auf die häufigsten Fragen rund um Estrich, 
               Fußbodenheizung, Kosten und unseren Ablauf. Falls Ihre Frage nicht dabei ist – fragen Sie uns!
             </p>

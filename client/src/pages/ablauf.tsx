@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, ChevronRight, Phone, Clock, Calendar, FileText, Truck, Users, Ruler, Shield, ThumbsUp } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import heroImage from "@assets/generated_images/worker_grinding_screed_floor.png";
 
 const processSteps = [
   {
@@ -147,14 +148,19 @@ export default function Ablauf() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <section className="relative py-16 lg:py-24 bg-accent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 lg:py-24 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/40" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <Badge variant="outline" className="mb-4">Unser Ablauf</Badge>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
+            <Badge variant="outline" className="mb-4 border-white/30 text-white">Unser Ablauf</Badge>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-white">
               In 7 Schritten zum perfekten Estrich
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            <p className="text-lg text-white/80 leading-relaxed mb-8">
               Kein Rätselraten, keine Überraschungen. Wir zeigen Ihnen genau, wie der Weg 
               zu Ihrem neuen Boden aussieht – transparent und nachvollziehbar.
             </p>
