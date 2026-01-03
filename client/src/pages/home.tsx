@@ -122,22 +122,22 @@ const processSteps = [
   {
     number: "01",
     title: "Sie schildern Ihr Problem",
-    description: "60 Sekunden Formular ausfüllen – fertig. Kein langes Telefonieren, kein Warten. Wir melden uns bei Ihnen.",
+    description: "Füllen Sie unser einfaches Formular in nur 60 Sekunden aus – kein langes Telefonieren, kein Warten in Warteschleifen. Beschreiben Sie kurz Ihr Projekt und Ihre Wünsche. Wir melden uns garantiert innerhalb von 24 Stunden bei Ihnen zurück. So sparen Sie Zeit und Nerven von Anfang an.",
   },
   {
     number: "02",
     title: "Wir finden die Lösung",
-    description: "Kostenlose Vor-Ort-Beratung. Wir analysieren, planen und geben Ihnen einen verbindlichen Festpreis. Keine versteckten Kosten.",
+    description: "Unser Experte kommt kostenlos zu Ihnen vor Ort und analysiert die Situation. Wir besprechen alle Optionen, klären Ihre Fragen und erstellen ein maßgeschneidertes Konzept. Sie erhalten einen verbindlichen Festpreis – schwarz auf weiß, ohne versteckte Kosten oder böse Überraschungen.",
   },
   {
     number: "03",
     title: "Wir setzen um – stressfrei",
-    description: "Saubere Baustelle, pünktlicher Start, professionelle Ausführung. Sie lehnen sich zurück, wir arbeiten.",
+    description: "Pünktlicher Start zum vereinbarten Termin, professionelle Ausführung durch unser erfahrenes Team. Wir halten die Baustelle sauber, arbeiten effizient und kommunizieren transparent. Sie können sich entspannen – wir kümmern uns um alles und halten Sie auf dem Laufenden.",
   },
   {
     number: "04",
     title: "Sie genießen das Ergebnis",
-    description: "Perfekt ebener Boden, termingerecht fertig. Endlich können Sie mit dem nächsten Schritt beginnen – ohne Verzögerung.",
+    description: "Perfekt ebener Estrich, termingerecht fertiggestellt und qualitätsgeprüft. Endlich können Sie mit dem nächsten Schritt Ihres Projekts beginnen – Bodenbelag verlegen, einziehen, weiterbauen. Keine Verzögerungen, keine Nachbesserungen nötig. Einfach ein Boden, der hält, was wir versprechen.",
   },
 ];
 
@@ -688,24 +688,24 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
-              {processSteps.map((step, index) => (
-                <div 
-                  key={index} 
-                  className="flex gap-6 items-start"
-                  data-testid={`step-${index}`}
-                >
-                  <div className="w-14 h-14 rounded-md bg-primary flex items-center justify-center flex-shrink-0">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {processSteps.map((step, index) => (
+              <Card 
+                key={index} 
+                className="relative"
+                data-testid={`step-${index}`}
+              >
+                <CardHeader className="pb-3">
+                  <div className="w-12 h-12 rounded-md bg-primary flex items-center justify-center mb-3">
                     <span className="text-primary-foreground font-bold text-lg" data-testid={`text-step-number-${index}`}>{step.number}</span>
                   </div>
-                  <div className="pt-2">
-                    <h3 className="font-semibold text-lg mb-2" data-testid={`text-step-title-${index}`}>{step.title}</h3>
-                    <p className="text-muted-foreground" data-testid={`text-step-description-${index}`}>{step.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+                  <CardTitle className="text-lg" data-testid={`text-step-title-${index}`}>{step.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground leading-relaxed" data-testid={`text-step-description-${index}`}>{step.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
