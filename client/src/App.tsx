@@ -11,6 +11,7 @@ import FAQ from "@/pages/faq";
 import Preise from "@/pages/preise";
 import Blog from "@/pages/blog";
 import BlogArticle from "@/pages/blog-article";
+import Kontakt from "@/pages/kontakt";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -23,6 +24,7 @@ function Router() {
       <Route path="/preise" component={Preise} />
       <Route path="/ratgeber" component={Blog} />
       <Route path="/ratgeber/:slug" component={BlogArticle} />
+      <Route path="/kontakt" component={Kontakt} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -102,12 +102,11 @@ export function Header() {
                   Ratgeber
                 </Button>
               </Link>
-              <Button 
-                onClick={() => scrollToSection("kontakt")}
-                data-testid="nav-kontakt"
-              >
-                Kontakt
-              </Button>
+              <Link href="/kontakt">
+                <Button data-testid="nav-kontakt">
+                  Kontakt
+                </Button>
+              </Link>
               <ThemeToggle />
             </nav>
 
@@ -173,13 +172,14 @@ export function Header() {
                   Ratgeber
                 </Button>
               </Link>
-              <Button 
-                className="w-full"
-                onClick={() => scrollToSection("kontakt")}
-                data-testid="mobile-nav-kontakt"
-              >
-                Jetzt Angebot anfragen
-              </Button>
+              <Link href="/kontakt" onClick={() => setMobileMenuOpen(false)}>
+                <Button 
+                  className="w-full"
+                  data-testid="mobile-nav-kontakt"
+                >
+                  Jetzt Angebot anfragen
+                </Button>
+              </Link>
             </div>
           </div>
         )}
