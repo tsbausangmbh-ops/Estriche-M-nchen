@@ -94,6 +94,14 @@ export function Header() {
                   FAQ
                 </Button>
               </Link>
+              <Link href="/ratgeber">
+                <Button 
+                  variant="ghost" 
+                  data-testid="nav-ratgeber"
+                >
+                  Ratgeber
+                </Button>
+              </Link>
               <Button 
                 onClick={() => scrollToSection("kontakt")}
                 data-testid="nav-kontakt"
@@ -154,6 +162,15 @@ export function Header() {
                   data-testid="mobile-nav-faq"
                 >
                   FAQ
+                </Button>
+              </Link>
+              <Link href="/ratgeber" onClick={() => setMobileMenuOpen(false)}>
+                <Button 
+                  variant="ghost" 
+                  className="w-full justify-start"
+                  data-testid="mobile-nav-ratgeber"
+                >
+                  Ratgeber
                 </Button>
               </Link>
               <Button 

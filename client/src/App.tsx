@@ -9,6 +9,8 @@ import ServiceDetail from "@/pages/service-detail";
 import Ablauf from "@/pages/ablauf";
 import FAQ from "@/pages/faq";
 import Preise from "@/pages/preise";
+import Blog from "@/pages/blog";
+import BlogArticle from "@/pages/blog-article";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -19,6 +21,8 @@ function Router() {
       <Route path="/ablauf" component={Ablauf} />
       <Route path="/faq" component={FAQ} />
       <Route path="/preise" component={Preise} />
+      <Route path="/ratgeber" component={Blog} />
+      <Route path="/ratgeber/:slug" component={BlogArticle} />
       <Route component={NotFound} />
     </Switch>
   );
