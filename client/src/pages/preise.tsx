@@ -148,7 +148,7 @@ const additionalServices = [
   { name: "Anfahrt im Stadtgebiet München", price: "42,50 €" },
   { name: "Anfahrt Umland (bis 30km)", price: "68,50 €" },
   { name: "Anfahrt Umland (ab 30km)", price: "98,50 €" },
-  { name: "Baustelleneinrichtung", price: "500 €" },
+  { name: "Baustelleneinrichtung", price: "600 €" },
   { name: "Baustellenendreinigung", price: "280 €" },
   { name: "Entsorgung Altmaterial (Container)", price: "ab 800 €" },
   { name: "Altestrich-Abbruch", price: "15-25 €/m²" },
