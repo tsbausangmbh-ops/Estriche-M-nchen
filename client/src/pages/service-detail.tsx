@@ -54,160 +54,160 @@ export default function ServiceDetail() {
         </div>
       </header>
 
-      <section className="py-16 lg:py-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
-            <div className="lg:col-span-3">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <service.icon className="w-6 h-6 text-primary" />
+      <section className="relative min-h-[70vh] flex items-center">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${service.image})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/50" />
+        
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center">
+                <service.icon className="w-6 h-6 text-white" />
+              </div>
+              <Badge className="bg-white/20 text-white border-white/30 text-xs font-medium">
+                Leistung
+              </Badge>
+            </div>
+            
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight mb-4 text-white">
+              {service.title}
+            </h1>
+            
+            <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">
+              {service.heroTagline}
+            </p>
+
+            <div className="flex flex-wrap gap-3 mb-8">
+              {service.features.map((feature, index) => (
+                <div key={index} className="flex items-center gap-2 text-sm text-white/90">
+                  <CheckCircle2 className="w-4 h-4 text-primary" />
+                  <span>{feature}</span>
                 </div>
-                <Badge variant="secondary" className="text-xs font-medium">
-                  Leistung
-                </Badge>
-              </div>
-              
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight mb-4">
-                {service.title}
-              </h1>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                {service.longDescription}
-              </p>
-
-              <div className="flex flex-wrap gap-3 mb-8">
-                {service.features.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-2 text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                    <span>{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex flex-wrap gap-3">
-                <Button size="lg" onClick={scrollToContact} data-testid="button-hero-cta">
-                  Kostenloses Angebot
-                  <ChevronRight className="ml-1 h-4 w-4" />
-                </Button>
-                <Button size="lg" variant="outline" data-testid="button-hero-call">
-                  <Phone className="mr-2 h-4 w-4" />
-                  089 / 123 456 78
-                </Button>
-              </div>
+              ))}
             </div>
 
-            <div className="lg:col-span-2">
-              <div className="relative rounded-xl overflow-hidden mb-6">
-                <img 
-                  src={service.image} 
-                  alt={service.title}
-                  className="w-full aspect-[4/3] object-cover"
-                />
+            <div className="flex flex-wrap gap-3 mb-8">
+              <Button size="lg" onClick={scrollToContact} data-testid="button-hero-cta">
+                Kostenloses Angebot
+                <ChevronRight className="ml-1 h-4 w-4" />
+              </Button>
+              <Button size="lg" variant="outline" className="border-white/30 text-white bg-white/10 backdrop-blur-sm" data-testid="button-hero-call">
+                <Phone className="mr-2 h-4 w-4" />
+                089 / 123 456 78
+              </Button>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-6 text-white/70 text-sm">
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4" />
+                <span>280+ zufriedene Kunden</span>
               </div>
-              
-              <Card>
-                <CardContent className="p-5">
-                  <div className="grid grid-cols-3 gap-4 text-center">
-                    <div>
-                      <div className="flex items-center justify-center gap-1 text-primary mb-1">
-                        <Users className="w-4 h-4" />
-                        <span className="font-bold">280+</span>
-                      </div>
-                      <p className="text-xs text-muted-foreground">Kunden</p>
-                    </div>
-                    <div>
-                      <div className="flex items-center justify-center gap-1 text-primary mb-1">
-                        <Star className="w-4 h-4" />
-                        <span className="font-bold">4.9</span>
-                      </div>
-                      <p className="text-xs text-muted-foreground">Bewertung</p>
-                    </div>
-                    <div>
-                      <div className="flex items-center justify-center gap-1 text-primary mb-1">
-                        <MapPin className="w-4 h-4" />
-                        <span className="font-bold">München</span>
-                      </div>
-                      <p className="text-xs text-muted-foreground">Region</p>
-                    </div>
-                  </div>
-                  <div className="border-t mt-4 pt-4">
-                    <p className="text-sm text-center text-muted-foreground">
-                      Antwort innerhalb von 24 Stunden
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="flex items-center gap-2">
+                <Star className="w-4 h-4 text-yellow-400" />
+                <span>4.9 Sterne Bewertung</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                <span>München & Umgebung</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <section className="py-16 border-t">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold mb-6">Was ist {service.title}?</h2>
-          <p className="text-muted-foreground leading-relaxed">
-            {service.whatIsIt}
-          </p>
-        </div>
-      </section>
-
-      <section className="py-16 bg-accent">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold mb-8">{service.problem}</h2>
-          <div className="space-y-4">
-            {service.painAgitation.map((pain, index) => (
-              <div key={index} className="flex gap-4 items-start p-4 bg-card rounded-lg border">
-                <AlertTriangle className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
-                <p className="text-muted-foreground leading-relaxed">{pain}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold mb-6">Die Lösung</h2>
-          <div className="bg-primary/5 border-l-4 border-primary rounded-r-lg p-6 mb-8">
-            <p className="text-lg italic leading-relaxed">
-              {service.futureVision}
-            </p>
-          </div>
-          <p className="text-muted-foreground leading-relaxed mb-8">
-            {service.solution}
-          </p>
-          <div className="grid sm:grid-cols-2 gap-3">
-            {service.differentiators.map((diff, index) => (
-              <div key={index} className="flex items-start gap-3 p-4 bg-muted rounded-lg">
-                <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-sm">{diff}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-accent">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="overflow-hidden">
-            <CardContent className="p-6 sm:p-8">
-              <Quote className="w-8 h-8 text-primary mb-4" />
-              <p className="text-lg leading-relaxed mb-6">
-                "{service.testimonial.text}"
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-2xl font-bold mb-6">Was ist {service.title}?</h2>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                {service.whatIsIt}
               </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="font-bold text-primary">
-                    {service.testimonial.name.charAt(0)}
-                  </span>
-                </div>
-                <div>
-                  <p className="font-semibold">{service.testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{service.testimonial.location}</p>
-                </div>
+              <h3 className="text-lg font-semibold mb-4 text-destructive">{service.problem}</h3>
+              <div className="space-y-3">
+                {service.painAgitation.map((pain, index) => (
+                  <div key={index} className="flex gap-3 items-start">
+                    <AlertTriangle className="w-4 h-4 text-destructive flex-shrink-0 mt-1" />
+                    <p className="text-sm text-muted-foreground leading-relaxed">{pain}</p>
+                  </div>
+                ))}
               </div>
-            </CardContent>
-          </Card>
+            </div>
+            <div>
+              <div className="bg-primary/5 border border-primary/20 rounded-lg p-6 mb-6">
+                <h3 className="text-lg font-semibold mb-3">Die Lösung</h3>
+                <p className="text-muted-foreground italic leading-relaxed mb-4">
+                  {service.futureVision}
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {service.solution}
+                </p>
+              </div>
+              <div className="grid gap-2">
+                {service.differentiators.map((diff, index) => (
+                  <div key={index} className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+                    <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">{diff}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-accent">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2">
+              <Card className="overflow-hidden h-full">
+                <CardContent className="p-6 sm:p-8">
+                  <Quote className="w-8 h-8 text-primary mb-4" />
+                  <p className="text-lg leading-relaxed mb-6">
+                    "{service.testimonial.text}"
+                  </p>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                      <span className="font-bold text-primary">
+                        {service.testimonial.name.charAt(0)}
+                      </span>
+                    </div>
+                    <div>
+                      <p className="font-semibold">{service.testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground">{service.testimonial.location}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+            <div>
+              <Card className="h-full">
+                <CardContent className="p-6">
+                  <p className="text-sm text-muted-foreground mb-2">Richtpreis</p>
+                  <p className="text-3xl font-bold text-primary mb-1">
+                    ab {service.price} €/m²
+                  </p>
+                  <p className="text-sm text-muted-foreground mb-6">
+                    Endpreis nach Vor-Ort-Besichtigung
+                  </p>
+                  <div className="space-y-2 mb-6">
+                    {service.guarantees.map((guarantee, index) => (
+                      <div key={index} className="flex items-center gap-2 text-sm">
+                        <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                        <span>{guarantee}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Button className="w-full" onClick={scrollToContact}>
+                    Angebot anfordern
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -311,17 +311,34 @@ export default function ServiceDetail() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-3">
             <Building2 className="w-6 h-6 text-primary" />
-            <h2 className="text-2xl font-bold">Referenzprojekte</h2>
+            <h2 className="text-2xl font-bold">Unsere Arbeit</h2>
           </div>
           <p className="text-muted-foreground mb-8">
-            Ausgewählte Projekte, die unsere Expertise zeigen
+            Referenzprojekte und Einblicke in unsere Arbeitsweise
           </p>
+          
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {service.galleryImages.map((image, index) => (
+              <div key={index} className="group">
+                <div className="relative rounded-xl overflow-hidden mb-3">
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground text-center">{image.caption}</p>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="text-lg font-semibold mb-6">Ausgewählte Projekte</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {service.projectExamples.map((project, index) => (
               <Card key={index} className="overflow-hidden">
                 <CardContent className="p-5">
-                  <h3 className="font-semibold mb-3">{project.title}</h3>
-                  <div className="grid grid-cols-3 gap-2 mb-4 text-xs">
+                  <h4 className="font-semibold mb-3">{project.title}</h4>
+                  <div className="flex flex-wrap gap-3 mb-4 text-xs">
                     <div className="flex items-center gap-1 text-muted-foreground">
                       <MapPin className="w-3 h-3" />
                       <span>{project.location}</span>
@@ -345,98 +362,55 @@ export default function ServiceDetail() {
 
       <section className="py-16 bg-muted">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold mb-3">Bildergalerie</h2>
-          <p className="text-muted-foreground mb-8">
-            Einblicke in unsere Arbeit
-          </p>
-          <div className="grid md:grid-cols-3 gap-6">
-            {service.galleryImages.map((image, index) => (
-              <div key={index} className="group">
-                <div className="relative rounded-xl overflow-hidden mb-3">
-                  <img 
-                    src={image.src} 
-                    alt={image.alt}
-                    className="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <p className="text-sm text-muted-foreground text-center">{image.caption}</p>
-              </div>
-            ))}
+          <div className="flex items-center gap-3 mb-6">
+            <Shield className="w-6 h-6 text-primary" />
+            <h2 className="text-2xl font-bold">Technik & Qualitätsstandards</h2>
           </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-muted">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          
+          <div className="grid lg:grid-cols-2 gap-8">
             <div>
-              <h2 className="text-2xl font-bold mb-6">Ihre Vorteile</h2>
-              <ul className="space-y-3">
+              <h3 className="font-semibold mb-4">Ihre Vorteile</h3>
+              <ul className="space-y-2 mb-6">
                 {service.benefits.map((benefit, index) => (
                   <li key={index} className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span>{benefit}</span>
+                    <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                    <span className="text-sm">{benefit}</span>
                   </li>
                 ))}
               </ul>
-            </div>
-            <div>
-              <Card>
-                <CardContent className="p-6">
-                  <p className="text-sm text-muted-foreground mb-2">Richtpreis</p>
-                  <p className="text-3xl font-bold text-primary mb-1">
-                    ab {service.price} €/m²
-                  </p>
-                  <p className="text-sm text-muted-foreground mb-6">
-                    Endpreis nach Vor-Ort-Besichtigung
-                  </p>
-                  <Button className="w-full" onClick={scrollToContact}>
-                    Angebot anfordern
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold mb-6">Technische Details</h2>
-          <div className="grid sm:grid-cols-2 gap-3">
-            {service.technicalDetails.map((detail, index) => (
-              <div key={index} className="flex items-start gap-3 p-3 bg-muted rounded-lg">
-                <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-sm">{detail}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-muted">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3 mb-6">
-            <Shield className="w-6 h-6 text-primary" />
-            <h2 className="text-2xl font-bold">Normgerechte Ausführung</h2>
-          </div>
-          <p className="text-muted-foreground mb-6">
-            Wir arbeiten nach den aktuellen deutschen Industrienormen. Das garantiert Ihnen höchste Qualität und rechtssichere Ausführung.
-          </p>
-          <div className="grid gap-3">
-            {service.dinNorms.map((norm, index) => (
-              <div key={index} className="p-4 bg-card rounded-lg border">
-                <div className="flex items-start gap-4">
-                  <Badge variant="outline" className="shrink-0 font-mono text-xs">
-                    {norm.number}
-                  </Badge>
-                  <div>
-                    <h3 className="font-medium text-sm mb-1">{norm.title}</h3>
-                    <p className="text-sm text-muted-foreground">{norm.description}</p>
+              
+              <h3 className="font-semibold mb-4">Technische Details</h3>
+              <div className="grid gap-2">
+                {service.technicalDetails.map((detail, index) => (
+                  <div key={index} className="flex items-start gap-3 p-3 bg-card rounded-lg border">
+                    <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">{detail}</span>
                   </div>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
+            
+            <div>
+              <h3 className="font-semibold mb-4">Normgerechte Ausführung</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                Wir arbeiten nach den aktuellen deutschen Industrienormen für höchste Qualität.
+              </p>
+              <div className="grid gap-2">
+                {service.dinNorms.map((norm, index) => (
+                  <div key={index} className="p-3 bg-card rounded-lg border">
+                    <div className="flex items-start gap-3">
+                      <Badge variant="outline" className="shrink-0 font-mono text-xs">
+                        {norm.number}
+                      </Badge>
+                      <div>
+                        <h4 className="font-medium text-sm">{norm.title}</h4>
+                        <p className="text-xs text-muted-foreground">{norm.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -456,24 +430,6 @@ export default function ServiceDetail() {
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold mb-6">Unsere Garantien</h2>
-          <div className="grid sm:grid-cols-3 gap-4">
-            {service.guarantees.map((guarantee, index) => (
-              <div key={index} className="text-center p-5 bg-muted rounded-lg">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                  {index === 0 && <Award className="w-5 h-5 text-primary" />}
-                  {index === 1 && <Shield className="w-5 h-5 text-primary" />}
-                  {index === 2 && <Clock className="w-5 h-5 text-primary" />}
-                </div>
-                <p className="text-sm font-medium">{guarantee}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

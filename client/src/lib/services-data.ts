@@ -19,6 +19,12 @@ import galleryHeating from "@assets/generated_images/underfloor_heating_installa
 import galleryLiving from "@assets/generated_images/modern_living_room_polished_floor.png";
 import galleryIndustrial from "@assets/generated_images/industrial_floor_coating_work.png";
 import galleryInsulation from "@assets/generated_images/floor_insulation_installation.png";
+import galleryCementPour from "@assets/generated_images/cement_screed_pouring_work.png";
+import galleryIndustrialCoating from "@assets/generated_images/industrial_floor_coating_application.png";
+import galleryHeatingPipes from "@assets/generated_images/underfloor_heating_pipe_installation.png";
+import galleryInsulationWork from "@assets/generated_images/installing_floor_insulation.png";
+import galleryRenovation from "@assets/generated_images/floor_renovation_before_after.png";
+import galleryQuickScreed from "@assets/generated_images/quick_screed_rapid_application.png";
 
 export interface Testimonial {
   name: string;
@@ -171,8 +177,8 @@ export const services: Service[] = [
     image: serviceImage1,
     price: "25-35",
     galleryImages: [
+      { src: galleryCementPour, alt: "Estrich wird eingebracht", caption: "Unsere Facharbeiter beim fachgerechten Einbringen des Zementestrichs" },
       { src: galleryQuality, alt: "Qualitätskontrolle mit Lasernivellierung", caption: "Präzise Ebenheitsmessung mit modernster Laser-Technik" },
-      { src: galleryBeforeAfter, alt: "Vorher-Nachher Vergleich", caption: "Transformation: Von beschädigtem Altboden zum perfekten Estrich" },
       { src: galleryLiving, alt: "Fertiges Wohnzimmer mit Estrich", caption: "Das Ergebnis: Ein Boden, der jeden Belag perfekt trägt" }
     ],
     projectExamples: [
@@ -264,9 +270,9 @@ export const services: Service[] = [
     image: serviceImage2,
     price: "45-80",
     galleryImages: [
-      { src: galleryIndustrial, alt: "Industrieboden Beschichtung", caption: "Nahtlose Epoxid-Beschichtung in einer Produktionshalle" },
-      { src: galleryLiving, alt: "Sichtestrich Wohnbereich", caption: "Geschliffener Sichtestrich im modernen Loft-Design" },
-      { src: galleryQuality, alt: "Qualitätsprüfung", caption: "Ebenheitskontrolle mit Laser-Messtechnik" }
+      { src: galleryIndustrialCoating, alt: "Industrieboden Beschichtung", caption: "Facharbeiter bei der Epoxid-Beschichtung" },
+      { src: galleryIndustrial, alt: "Fertiger Industrieboden", caption: "Nahtlose Beschichtung in einer Produktionshalle" },
+      { src: galleryLiving, alt: "Sichtestrich Wohnbereich", caption: "Geschliffener Sichtestrich im modernen Loft-Design" }
     ],
     projectExamples: [
       { title: "Autohaus Showroom", location: "Unterschleißheim", area: "1.200 m²", duration: "2 Wochen", description: "Hochglanz-Sichtestrich mit Anti-Rutsch-Versiegelung. Befahrbar mit Fahrzeugen bis 3,5t, repräsentativ genug für Premium-Marken." },
@@ -357,8 +363,8 @@ export const services: Service[] = [
     image: serviceImage3,
     price: "45-65",
     galleryImages: [
+      { src: galleryHeatingPipes, alt: "Heizungsrohre werden verlegt", caption: "Präzise Verlegung der Heizungsrohre im Schlangenverband" },
       { src: galleryHeating, alt: "Heizungsrohre in Dämmung", caption: "Fachgerechte Rohrverlegung in der Dämmschicht" },
-      { src: galleryQuality, alt: "Präzise Fräsarbeiten", caption: "Computergesteuerte Fräsung für optimale Kanaltiefe" },
       { src: galleryLiving, alt: "Wohnzimmer mit Fußbodenheizung", caption: "Das Ergebnis: Angenehme Wärme von unten" }
     ],
     projectExamples: [
@@ -451,8 +457,8 @@ export const services: Service[] = [
     image: serviceImage4,
     price: "15-25",
     galleryImages: [
+      { src: galleryInsulationWork, alt: "Dämmarbeiten in Ausführung", caption: "Unsere Facharbeiter bei der fachgerechten Dämmung" },
       { src: galleryInsulation, alt: "Dämmplatten werden verlegt", caption: "Professionelle Verlegung hochwertiger Dämmplatten" },
-      { src: galleryQuality, alt: "U-Wert-Messung", caption: "Dokumentierte Messung der Dämmwirkung" },
       { src: galleryBeforeAfter, alt: "Vorher-Nachher Dämmung", caption: "Deutliche Verbesserung der Energieeffizienz" }
     ],
     projectExamples: [
@@ -545,9 +551,9 @@ export const services: Service[] = [
     image: serviceImage5,
     price: "20-40",
     galleryImages: [
-      { src: galleryBeforeAfter, alt: "Vorher-Nachher Sanierung", caption: "Dramatische Transformation: Von gerissen zu makellos" },
-      { src: galleryQuality, alt: "Rissdiagnose", caption: "Professionelle Schadensanalyse vor der Reparatur" },
-      { src: galleryLiving, alt: "Sanierter Boden", caption: "Fertig sanierter Estrich – bereit für den neuen Belag" }
+      { src: galleryRenovation, alt: "Vorher-Nachher Sanierung", caption: "Dramatische Transformation: Von gerissen zu makellos" },
+      { src: galleryBeforeAfter, alt: "Sanierungsarbeiten", caption: "Professionelle Schadensanalyse und Reparatur" },
+      { src: galleryQuality, alt: "Qualitätskontrolle", caption: "Prüfung des sanierten Estrichs" }
     ],
     projectExamples: [
       { title: "Wasserschaden-Sanierung", location: "Bogenhausen", area: "45 m²", duration: "1 Woche", description: "Technische Trocknung nach Rohrbruch, anschließend Hohlstellen-Verpressung. Versicherungsschaden dokumentiert und reguliert." },
@@ -638,9 +644,9 @@ export const services: Service[] = [
     image: serviceImage6,
     price: "35-50",
     galleryImages: [
-      { src: galleryQuality, alt: "Feuchtemessung", caption: "Dokumentierte CM-Messung für garantierte Belegreife" },
-      { src: galleryBeforeAfter, alt: "Schnelle Transformation", caption: "Von Rohbau zu belegreif in nur 3 Tagen" },
-      { src: galleryLiving, alt: "Fertiger Schnellestrich", caption: "Bereit für den Bodenbelag – früher als geplant" }
+      { src: galleryQuickScreed, alt: "Schnellestrich Einbau", caption: "Rapid-Estrich wird professionell eingebracht" },
+      { src: galleryCementPour, alt: "Estrich wird gegossen", caption: "Präzises Einbringen des Schnellestrichs" },
+      { src: galleryQuality, alt: "Feuchtemessung", caption: "Dokumentierte CM-Messung für garantierte Belegreife" }
     ],
     projectExamples: [
       { title: "Ladenbau Neueröffnung", location: "Maximilianstraße", area: "180 m²", duration: "1 Tag", description: "1-Tages-Estrich für Boutique-Neueröffnung. Begehbar nach 6 Stunden, Bodenbelag am nächsten Tag." },
