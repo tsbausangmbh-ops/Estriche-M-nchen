@@ -81,18 +81,21 @@ const processSteps = [
 const pricingItems = [
   {
     title: "Zementestrich",
-    price: "25–35",
+    price: "25–45",
     note: "Je nach Stärke, Aufbau und Baustellenlogistik.",
+    slug: "zementestrich",
   },
   {
-    title: "Anhydrit / Fließestrich",
-    price: "28–40",
-    note: "Ideal innen, sehr gute Ebenheit.",
+    title: "Industrieböden",
+    price: "45–95",
+    note: "Hochbelastbar für Gewerbe und Industrie.",
+    slug: "industrieboeden",
   },
   {
-    title: "Heizestrich",
-    price: "32–45",
+    title: "Fußbodenheizung",
+    price: "45–75",
     note: "Inkl. Abstimmung und Aufheizprotokoll.",
+    slug: "fussbodenheizung",
   },
 ];
 
@@ -504,18 +507,20 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {pricingItems.map((item, index) => (
-              <Card key={index} className="text-center relative overflow-visible" data-testid={`card-pricing-${index}`}>
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-lg" data-testid={`text-pricing-title-${index}`}>{item.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3 pt-2">
-                  <div className="text-4xl font-bold text-primary" data-testid={`text-pricing-value-${index}`}>
-                    ab {item.price}
-                  </div>
-                  <div className="text-sm text-muted-foreground">Euro pro m²</div>
-                  <p className="text-xs text-muted-foreground pt-2 border-t">{item.note}</p>
-                </CardContent>
-              </Card>
+              <Link key={index} href={`/leistungen/${item.slug}`}>
+                <Card className="text-center relative overflow-visible hover-elevate cursor-pointer h-full" data-testid={`card-pricing-${index}`}>
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-lg" data-testid={`text-pricing-title-${index}`}>{item.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-3 pt-2">
+                    <div className="text-4xl font-bold text-primary" data-testid={`text-pricing-value-${index}`}>
+                      ab {item.price}
+                    </div>
+                    <div className="text-sm text-muted-foreground">Euro pro m²</div>
+                    <p className="text-xs text-muted-foreground pt-2 border-t">{item.note}</p>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
 
