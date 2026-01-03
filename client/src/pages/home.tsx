@@ -378,17 +378,25 @@ export default function Home() {
             {/* Hero Content */}
             <div className="lg:col-span-3 space-y-6">
               <Badge variant="secondary" className="text-sm">
-                Ihr Experte für hochwertige Estricharbeiten
+                Schluss mit Baustress und Terminproblemen
               </Badge>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]">
-                Estrich München
-                <span className="block text-primary mt-2">Professionell. Termingerecht. Zuverlässig.</span>
+                Ihr Estrich-Problem?
+                <span className="block text-primary mt-2">Wir lösen es. Garantiert.</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                Sie suchen einen zuverlässigen Partner für professionelle Estricharbeiten in München? 
-                Mit langjähriger Erfahrung, höchster Qualität und modernster Technik bieten wir Ihnen 
-                maßgeschneiderte Lösungen rund um Estrich und Fußbodenheizung.
+                <strong className="text-foreground">Kennen Sie das?</strong> Handwerker, die nicht erscheinen. 
+                Termine, die platzen. Böden, die nicht eben sind. <strong className="text-foreground">Das muss nicht sein.</strong> 
+                Stellen Sie sich vor: Ein perfekt ebener Estrich, termingerecht geliefert, ohne Stress – 
+                so dass Sie endlich mit dem Verlegen beginnen können.
               </p>
+
+              <div className="bg-primary/5 border border-primary/20 rounded-md p-4 my-4">
+                <p className="text-sm font-medium flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span><strong>282+ zufriedene Kunden</strong> in München vertrauen uns bereits – wann dürfen wir auch Ihnen helfen?</span>
+                </p>
+              </div>
 
               <div className="flex flex-wrap gap-4 pt-2">
                 <Button 
@@ -396,7 +404,7 @@ export default function Home() {
                   onClick={() => scrollToSection("kontakt")}
                   data-testid="button-hero-cta"
                 >
-                  Kostenlos anfragen
+                  Ja, ich will stressfreien Estrich
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
                 <Button 
@@ -405,48 +413,51 @@ export default function Home() {
                   onClick={() => scrollToSection("leistungen")}
                   data-testid="button-hero-services"
                 >
-                  Leistungen ansehen
+                  Wie wir helfen
                 </Button>
               </div>
 
-              {/* Trust Row */}
+              {/* Trust Row - Pain Points Solved */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t mt-8" data-testid="hero-trust-row">
                 <div className="flex items-start gap-3" data-testid="trust-item-0">
-                  <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 rounded-md bg-green-500/10 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="w-5 h-5 text-green-600" />
                   </div>
                   <div>
-                    <div className="font-semibold text-sm" data-testid="text-trust-title-0">Regionale Präsenz</div>
-                    <div className="text-xs text-muted-foreground">München & Umgebung</div>
+                    <div className="font-semibold text-sm" data-testid="text-trust-title-0">Nie wieder Terminärger</div>
+                    <div className="text-xs text-muted-foreground">Wir halten, was wir versprechen</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3" data-testid="trust-item-1">
-                  <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Users className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 rounded-md bg-green-500/10 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="w-5 h-5 text-green-600" />
                   </div>
                   <div>
-                    <div className="font-semibold text-sm" data-testid="text-trust-title-1">Fachkompetenz</div>
-                    <div className="text-xs text-muted-foreground">Qualifizierte Fachleute</div>
+                    <div className="font-semibold text-sm" data-testid="text-trust-title-1">Keine bösen Überraschungen</div>
+                    <div className="text-xs text-muted-foreground">Festpreis-Garantie vorab</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3" data-testid="trust-item-2">
-                  <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Zap className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 rounded-md bg-green-500/10 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="w-5 h-5 text-green-600" />
                   </div>
                   <div>
-                    <div className="font-semibold text-sm" data-testid="text-trust-title-2">Innovative Technik</div>
-                    <div className="text-xs text-muted-foreground">Modernste Verfahren</div>
+                    <div className="font-semibold text-sm" data-testid="text-trust-title-2">Endlich perfekte Böden</div>
+                    <div className="text-xs text-muted-foreground">Plan, eben, belegreif</div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Hero Form */}
-            <Card className="lg:col-span-2 shadow-lg" data-testid="card-hero-form">
+            <Card className="lg:col-span-2 shadow-lg border-primary/20" data-testid="card-hero-form">
               <CardHeader className="pb-4">
-                <CardTitle className="text-xl">Schnell-Angebot</CardTitle>
+                <div className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-md w-fit mb-2">
+                  Kostenlos & Unverbindlich
+                </div>
+                <CardTitle className="text-xl">Ihr persönliches Angebot in 24h</CardTitle>
                 <p className="text-sm text-muted-foreground">
-                  In 60 Sekunden – wir melden uns zügig zurück.
+                  Nur 60 Sekunden – und Sie wissen, was Ihr Projekt kostet. Ohne Risiko.
                 </p>
               </CardHeader>
               <CardContent>
@@ -549,13 +560,14 @@ export default function Home() {
                     <Button 
                       type="submit" 
                       className="w-full" 
+                      size="lg"
                       disabled={contactMutation.isPending}
                       data-testid="button-submit-form"
                     >
-                      {contactMutation.isPending ? "Wird gesendet..." : "Anfrage senden"}
+                      {contactMutation.isPending ? "Wird gesendet..." : "Jetzt kostenloses Angebot sichern"}
                     </Button>
                     <p className="text-xs text-muted-foreground text-center">
-                      Mit Absenden akzeptieren Sie die Verarbeitung Ihrer Daten zur Angebotsbearbeitung.
+                      Kein Risiko, keine Verpflichtung – nur Klarheit über Ihre Kosten.
                     </p>
                   </form>
                 </Form>
@@ -565,25 +577,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Statistics Section */}
+      {/* Statistics Section - Social Proof */}
       <section className="py-16 border-y bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-2">Estrich und Fußbodenheizung aus einer Hand</h2>
-            <p className="text-muted-foreground">Wir bieten Ihnen die komplette Bandbreite der Estricharbeiten – von klassischem Zementestrich bis hin zu speziellen Lösungen wie Sichtestrich und Industrieestrich.</p>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2">Warum so viele Kunden uns vertrauen</h2>
+            <p className="text-muted-foreground">Während andere noch reden, liefern wir bereits Ergebnisse. Jeden Tag. Seit Jahren.</p>
           </div>
           <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto">
             <div className="text-center" data-testid="stat-laufende">
               <div className="text-4xl sm:text-5xl font-bold text-primary mb-2">48</div>
-              <div className="text-sm text-muted-foreground">Laufende Projekte</div>
+              <div className="text-sm text-muted-foreground">Aktuelle Projekte</div>
             </div>
             <div className="text-center" data-testid="stat-abgeschlossen">
-              <div className="text-4xl sm:text-5xl font-bold text-primary mb-2">282</div>
-              <div className="text-sm text-muted-foreground">Abgeschlossene Projekte</div>
+              <div className="text-4xl sm:text-5xl font-bold text-primary mb-2">282+</div>
+              <div className="text-sm text-muted-foreground">Zufriedene Kunden</div>
             </div>
             <div className="text-center" data-testid="stat-partner">
-              <div className="text-4xl sm:text-5xl font-bold text-primary mb-2">35</div>
-              <div className="text-sm text-muted-foreground">Business-Partner</div>
+              <div className="text-4xl sm:text-5xl font-bold text-primary mb-2">100%</div>
+              <div className="text-sm text-muted-foreground">Terminzuverlässigkeit</div>
             </div>
           </div>
         </div>
@@ -593,10 +605,10 @@ export default function Home() {
       <section id="leistungen" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Unsere Leistungen</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">So lösen wir Ihr Boden-Problem</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Unsere Leistungspalette ist breit gefächert – von klassischem Zementestrich bis hin 
-              zu speziellen Lösungen wie Sichtestrich und nachträglichem Fräsen von Fußbodenheizungen.
+              Egal welche Herausforderung – wir haben die passende Lösung. Profitieren Sie von unserer 
+              Erfahrung aus über 282 erfolgreich abgeschlossenen Projekten.
             </p>
           </div>
 
@@ -636,9 +648,9 @@ export default function Home() {
       <section id="ablauf" className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">So läuft's ab</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">In 4 Schritten zum perfekten Boden</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Klarer Prozess, klare Zuständigkeiten – damit Sie Planungssicherheit haben.
+              Kein Rätselraten, keine Überraschungen. So einfach ist der Weg zu Ihrem fertigen Estrich.
             </p>
           </div>
 
@@ -668,10 +680,9 @@ export default function Home() {
       <section id="preise" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Preis-Orientierung</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Faire Preise, keine versteckten Kosten</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Jedes Objekt ist anders (Aufbauhöhe, Dämmung, Zugang, Pumpweg, Termin). 
-              Diese Werte helfen zur ersten Einordnung.
+              Bei uns wissen Sie vorher, was es kostet. Keine bösen Überraschungen – versprochen.
             </p>
           </div>
 
@@ -692,8 +703,9 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-8">
-            <Button onClick={() => scrollToSection("kontakt")} data-testid="button-pricing-cta">
-              Individuelles Angebot anfragen
+            <Button size="lg" onClick={() => scrollToSection("kontakt")} data-testid="button-pricing-cta">
+              Mein persönliches Angebot anfordern
+              <ChevronRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
         </div>
@@ -703,9 +715,9 @@ export default function Home() {
       <section id="faq" className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Häufige Fragen</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Haben Sie noch Fragen?</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Hier finden Sie Antworten auf die wichtigsten Fragen rund um Estricharbeiten.
+              Hier beantworten wir die häufigsten Fragen unserer Kunden. Falls Ihre Frage nicht dabei ist – fragen Sie uns einfach!
             </p>
           </div>
 
@@ -789,10 +801,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Kontakt aufnehmen</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Bereit, Ihr Estrich-Problem zu lösen?</h2>
               <p className="text-muted-foreground mb-8">
-                Haben Sie Fragen oder möchten ein unverbindliches Angebot? 
-                Wir freuen uns auf Ihre Anfrage und melden uns schnellstmöglich.
+                Machen Sie jetzt den ersten Schritt. In nur 60 Sekunden erfahren Sie, 
+                was Ihr Projekt kostet – <strong className="text-foreground">garantiert ohne Verpflichtung</strong>.
               </p>
 
               <div className="space-y-6">
@@ -851,11 +863,14 @@ export default function Home() {
             </div>
 
             {/* Contact Form */}
-            <Card className="shadow-lg" data-testid="card-contact-form">
+            <Card className="shadow-lg border-primary/20" data-testid="card-contact-form">
               <CardHeader>
-                <CardTitle>Anfrage senden</CardTitle>
+                <div className="bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-md w-fit mb-2">
+                  Antwort innerhalb von 24 Stunden
+                </div>
+                <CardTitle>Jetzt starten – kostenlos & unverbindlich</CardTitle>
                 <p className="text-sm text-muted-foreground">
-                  Beschreiben Sie Ihr Projekt – wir melden uns schnellstmöglich.
+                  Beschreiben Sie Ihr Projekt – und wir zeigen Ihnen, wie wir helfen können.
                 </p>
               </CardHeader>
               <CardContent>
@@ -964,10 +979,10 @@ export default function Home() {
                       disabled={contactMutation.isPending}
                       data-testid="button-contact-submit"
                     >
-                      {contactMutation.isPending ? "Wird gesendet..." : "Anfrage senden"}
+                      {contactMutation.isPending ? "Wird gesendet..." : "Ja, ich möchte mein kostenloses Angebot"}
                     </Button>
                     <p className="text-xs text-muted-foreground text-center">
-                      Mit Absenden akzeptieren Sie die Verarbeitung Ihrer Daten zur Angebotsbearbeitung.
+                      Kein Risiko. Keine versteckten Kosten. Nur Klarheit.
                     </p>
                   </form>
                 </Form>
