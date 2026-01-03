@@ -38,9 +38,18 @@ The frontend follows a component-based architecture with:
 - **API Pattern:** RESTful endpoints under `/api/` prefix
 - **Build:** esbuild for production bundling
 
-The backend serves two purposes:
+The backend serves three purposes:
 1. API endpoints for contact form submissions
 2. Static file serving for the built frontend
+3. SEO bot detection with static content serving
+
+### SEO Bot Detection
+The server includes a middleware (`server/seo-bot-middleware.ts`) that detects search engine crawlers (Google, Bing, etc.) and serves static, SEO-optimized HTML instead of the SPA. This ensures proper indexing without requiring external prerender services.
+
+- **Bot Detection:** User-agent based detection for major search engines
+- **Static Content:** Pre-generated HTML with full meta tags, Open Graph, and JSON-LD structured data
+- **Service Pages:** Each service has dedicated SEO content in `server/seo-static-content.ts`
+- **No External Dependencies:** Works without Prerender.io or similar services
 
 ### Data Storage
 - **Schema Definition:** Drizzle ORM with PostgreSQL dialect
