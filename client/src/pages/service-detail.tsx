@@ -369,69 +369,90 @@ export default function ServiceDetail() {
           </div>
           
           <div className="grid lg:grid-cols-3 gap-6">
-            <Card className="border-0 shadow-sm">
+            <Card className="border-0 shadow-sm h-full flex flex-col">
               <CardHeader className="pb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <CheckCircle2 className="w-5 h-5 text-primary" />
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 rounded-lg bg-primary text-primary-foreground flex items-center justify-center">
+                    <CheckCircle2 className="w-6 h-6" />
                   </div>
-                  <CardTitle className="text-lg">Ihre Vorteile</CardTitle>
+                  <div>
+                    <CardTitle className="text-lg">Ihre Vorteile</CardTitle>
+                    <p className="text-xs text-muted-foreground">Was Sie von uns erwarten können</p>
+                  </div>
                 </div>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex-1">
+                <p className="text-sm text-muted-foreground mb-4">
+                  Profitieren Sie von unserer langjährigen Erfahrung und dem Einsatz modernster Materialien für ein optimales Ergebnis.
+                </p>
                 <ul className="space-y-3">
-                  {service.benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <CheckCircle2 className="w-3 h-3 text-primary" />
+                  {service.benefits.slice(0, 4).map((benefit, index) => (
+                    <li key={index} className={`flex items-start gap-3 p-2 rounded-lg ${index === 0 ? 'bg-primary/5 border border-primary/20' : ''}`}>
+                      <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${index === 0 ? 'bg-primary text-primary-foreground' : 'bg-primary/10'}`}>
+                        <CheckCircle2 className="w-3 h-3" />
                       </div>
-                      <span className="text-sm">{benefit}</span>
+                      <span className={`text-sm ${index === 0 ? 'font-medium' : ''}`}>{benefit}</span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
             </Card>
             
-            <Card className="border-0 shadow-sm">
+            <Card className="border-0 shadow-sm h-full flex flex-col">
               <CardHeader className="pb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Ruler className="w-5 h-5 text-primary" />
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 rounded-lg bg-primary text-primary-foreground flex items-center justify-center">
+                    <Ruler className="w-6 h-6" />
                   </div>
-                  <CardTitle className="text-lg">Technische Details</CardTitle>
+                  <div>
+                    <CardTitle className="text-lg">Technische Details</CardTitle>
+                    <p className="text-xs text-muted-foreground">Präzise Spezifikationen</p>
+                  </div>
                 </div>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex-1">
+                <p className="text-sm text-muted-foreground mb-4">
+                  Unsere Arbeit basiert auf präzisen technischen Vorgaben für ein langlebiges und qualitativ hochwertiges Ergebnis.
+                </p>
                 <ul className="space-y-3">
-                  {service.technicalDetails.map((detail, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <CheckCircle2 className="w-3 h-3 text-primary" />
+                  {service.technicalDetails.slice(0, 4).map((detail, index) => (
+                    <li key={index} className={`flex items-start gap-3 p-2 rounded-lg ${index === 0 ? 'bg-primary/5 border border-primary/20' : ''}`}>
+                      <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${index === 0 ? 'bg-primary text-primary-foreground' : 'bg-primary/10'}`}>
+                        <CheckCircle2 className="w-3 h-3" />
                       </div>
-                      <span className="text-sm">{detail}</span>
+                      <span className={`text-sm ${index === 0 ? 'font-medium' : ''}`}>{detail}</span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
             </Card>
             
-            <Card className="border-0 shadow-sm">
+            <Card className="border-0 shadow-sm h-full flex flex-col">
               <CardHeader className="pb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Award className="w-5 h-5 text-primary" />
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 rounded-lg bg-primary text-primary-foreground flex items-center justify-center">
+                    <Award className="w-6 h-6" />
                   </div>
-                  <CardTitle className="text-lg">DIN-Normen</CardTitle>
+                  <div>
+                    <CardTitle className="text-lg">DIN-Normen</CardTitle>
+                    <p className="text-xs text-muted-foreground">Zertifizierte Qualität</p>
+                  </div>
                 </div>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  {service.dinNorms.map((norm, index) => (
-                    <div key={index} className="p-3 bg-muted rounded-lg">
-                      <Badge variant="secondary" className="font-mono text-xs mb-2">
-                        {norm.number}
-                      </Badge>
-                      <h4 className="font-medium text-sm mb-1">{norm.title}</h4>
+              <CardContent className="flex-1">
+                <p className="text-sm text-muted-foreground mb-4">
+                  Wir arbeiten strikt nach deutschen Industrienormen – für dokumentierte Qualität und rechtliche Sicherheit.
+                </p>
+                <div className="space-y-2">
+                  {service.dinNorms.slice(0, 3).map((norm, index) => (
+                    <div key={index} className={`p-3 rounded-lg ${index === 0 ? 'bg-primary/5 border border-primary/20' : 'bg-accent'}`}>
+                      <div className="flex items-center gap-2 mb-1">
+                        <Badge variant={index === 0 ? "default" : "secondary"} className="font-mono text-xs">
+                          {norm.number}
+                        </Badge>
+                        {index === 0 && <Badge variant="outline" className="text-xs">Wichtigste Norm</Badge>}
+                      </div>
+                      <h4 className={`text-sm mb-1 ${index === 0 ? 'font-semibold' : 'font-medium'}`}>{norm.title}</h4>
                       <p className="text-xs text-muted-foreground">{norm.description}</p>
                     </div>
                   ))}
