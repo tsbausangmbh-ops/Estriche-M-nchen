@@ -549,9 +549,9 @@ export default function Home() {
       </div>
 
       {/* Services Section */}
-      <section id="leistungen" className="py-24 bg-accent">
+      <section id="leistungen" className="py-6 bg-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unsere Leistungen</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">So lösen wir Ihr Boden-Problem</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
@@ -602,7 +602,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-6">
             <p className="text-muted-foreground mb-4">Nicht sicher, welche Lösung die richtige ist?</p>
             <Button size="lg" onClick={() => scrollToSection("kontakt")} data-testid="button-services-cta">
               Kostenlose Beratung anfordern
@@ -613,9 +613,9 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section id="ablauf" className="py-24">
+      <section id="ablauf" className="py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unser Ablauf</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">In 4 Schritten zum perfekten Boden</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
@@ -647,9 +647,9 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="preise" className="py-24 bg-accent">
+      <section id="preise" className="py-6 bg-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Transparente Preise</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Faire Preise, keine versteckten Kosten</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
@@ -674,7 +674,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-6">
             <Button size="lg" onClick={() => scrollToSection("kontakt")} data-testid="button-pricing-cta">
               Mein persönliches Angebot anfordern
               <ChevronRight className="ml-2 h-4 w-4" />
@@ -684,9 +684,9 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-24">
+      <section id="faq" className="py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Häufige Fragen</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Haben Sie noch Fragen?</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
@@ -717,7 +717,7 @@ export default function Home() {
             </Accordion>
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-6">
             <p className="text-muted-foreground mb-4">Haben Sie eine andere Frage? Wir beantworten sie gerne persönlich.</p>
             <Button size="lg" onClick={() => scrollToSection("kontakt")} data-testid="button-faq-cta">
               Jetzt Kontakt aufnehmen
@@ -728,9 +728,9 @@ export default function Home() {
       </section>
 
       {/* Service Areas */}
-      <section className="py-24 bg-accent">
+      <section className="py-6 bg-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unser Einsatzgebiet</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Wir kommen zu Ihnen – schnell und zuverlässig</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
@@ -779,7 +779,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="kontakt" className="py-20 bg-muted/30">
+      <section id="kontakt" className="py-6 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
