@@ -3,12 +3,6 @@ import { getServiceById, services } from "@/lib/services-data";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { CheckCircle2, ChevronRight, ArrowLeft, Phone, Quote, Shield, Clock, Award, AlertTriangle, Users, Star, MapPin, Ruler, Calendar, Building2, ThumbsUp } from "lucide-react";
 
 export default function ServiceDetail() {
@@ -418,20 +412,16 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-16 bg-accent">
-        <div className="px-4 sm:px-8 lg:px-12 max-w-4xl">
-          <h2 className="text-2xl font-bold mb-6">Häufige Fragen</h2>
-          <Accordion type="single" collapsible className="space-y-2">
-            {service.faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`faq-${index}`} className="bg-card border rounded-lg px-4">
-                <AccordionTrigger className="text-left text-sm font-medium hover:no-underline py-4">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-sm text-muted-foreground pb-4">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
+        <div className="px-4 sm:px-8 lg:px-12">
+          <h2 className="text-2xl font-bold mb-6">Häufig gestellte Fragen</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {service.faqs.slice(0, 6).map((faq, index) => (
+              <div key={index} className="bg-card border rounded-lg p-5">
+                <h3 className="font-medium text-sm mb-2">{faq.question}</h3>
+                <p className="text-sm text-muted-foreground">{faq.answer}</p>
+              </div>
             ))}
-          </Accordion>
+          </div>
         </div>
       </section>
 
