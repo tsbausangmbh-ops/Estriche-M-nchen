@@ -129,7 +129,7 @@ export default function Blog() {
       </section>
 
       <section className="py-6 bg-accent">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-extrabold tracking-tight mb-4">
             Haben Sie eine Frage zu Ihrem Projekt?
           </h2>

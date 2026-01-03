@@ -255,7 +255,7 @@ export default function Preise() {
       </section>
 
       <section className="py-6 bg-accent">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-extrabold tracking-tight mb-6 text-center">
             Zusätzliche Leistungen & Service
           </h2>
@@ -277,7 +277,7 @@ export default function Preise() {
       </section>
 
       <section className="py-6">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-extrabold tracking-tight mb-6 text-center">
             So funktioniert unser Festpreis
           </h2>

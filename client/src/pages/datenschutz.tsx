@@ -8,7 +8,7 @@ export default function Datenschutz() {
       <Header />
       
       <section className="py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">Datenschutzerklärung</h1>
           <p className="text-muted-foreground mb-8">
             Gemäß der Datenschutz-Grundverordnung (DSGVO) und dem EU AI Act

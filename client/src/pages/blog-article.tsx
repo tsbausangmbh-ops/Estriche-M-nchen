@@ -20,7 +20,7 @@ export default function BlogArticle() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <div className="max-w-4xl mx-auto px-4 py-16 text-center">
+        <div className="max-w-6xl mx-auto px-4 py-16 text-center">
           <h1 className="text-2xl font-bold mb-4">Artikel nicht gefunden</h1>
           <p className="text-muted-foreground mb-6">Der gesuchte Artikel existiert nicht.</p>
           <Link href="/ratgeber">
@@ -49,7 +49,7 @@ export default function BlogArticle() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/60" />
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link href="/ratgeber">
             <Button variant="ghost" className="mb-4 text-white/80 hover:text-white hover:bg-white/10">
               <ChevronLeft className="mr-1 h-4 w-4" />
@@ -80,7 +80,7 @@ export default function BlogArticle() {
       </section>
 
       <section className="py-6">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <article className="prose prose-lg max-w-none">
             {article.content.map((paragraph, index) => {
               if (paragraph.startsWith("## ")) {
@@ -154,7 +154,7 @@ export default function BlogArticle() {
       </section>
 
       <section className="py-6 bg-accent">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-extrabold tracking-tight mb-4">
             Bereit für Ihr Estrich-Projekt?
           </h2>
