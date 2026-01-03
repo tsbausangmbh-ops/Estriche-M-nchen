@@ -16,6 +16,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Select,
   SelectContent,
@@ -51,6 +52,9 @@ const contactFormSchema = z.object({
   email: z.string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein"),
   project: z.string().min(1, "Bitte wählen Sie ein Projekt aus"),
   message: z.string().min(10, "Bitte beschreiben Sie Ihr Projekt kurz"),
+  privacyConsent: z.boolean().refine(val => val === true, {
+    message: "Bitte stimmen Sie der Datenschutzerklärung zu",
+  }),
 });
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
@@ -147,6 +151,7 @@ export default function Home() {
       email: "",
       project: "",
       message: "",
+      privacyConsent: false,
     },
   });
 
@@ -354,6 +359,31 @@ export default function Home() {
                         </FormItem>
                       )}
                     />
+                    <FormField
+                      control={form.control}
+                      name="privacyConsent"
+                      render={({ field }) => (
+                        <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                          <FormControl>
+                            <Checkbox
+                              checked={field.value}
+                              onCheckedChange={field.onChange}
+                              data-testid="checkbox-hero-privacy"
+                            />
+                          </FormControl>
+                          <div className="space-y-1 leading-none">
+                            <FormLabel className="text-sm font-normal cursor-pointer">
+                              Ich habe die{" "}
+                              <Link href="/datenschutz" className="text-primary underline hover:no-underline">
+                                Datenschutzerklärung
+                              </Link>{" "}
+                              gelesen und stimme zu.*
+                            </FormLabel>
+                            <FormMessage />
+                          </div>
+                        </FormItem>
+                      )}
+                    />
                     <Button 
                       type="submit" 
                       className="w-full" 
@@ -363,9 +393,6 @@ export default function Home() {
                     >
                       {contactMutation.isPending ? "Wird gesendet..." : "Jetzt kostenloses Angebot sichern"}
                     </Button>
-                    <p className="text-xs text-muted-foreground text-center">
-                      Kein Risiko, keine Verpflichtung – nur Klarheit über Ihre Kosten.
-                    </p>
                   </form>
                 </Form>
               </CardContent>
@@ -804,6 +831,31 @@ export default function Home() {
                         </FormItem>
                       )}
                     />
+                    <FormField
+                      control={form.control}
+                      name="privacyConsent"
+                      render={({ field }) => (
+                        <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                          <FormControl>
+                            <Checkbox
+                              checked={field.value}
+                              onCheckedChange={field.onChange}
+                              data-testid="checkbox-contact-privacy"
+                            />
+                          </FormControl>
+                          <div className="space-y-1 leading-none">
+                            <FormLabel className="text-sm font-normal cursor-pointer">
+                              Ich habe die{" "}
+                              <Link href="/datenschutz" className="text-primary underline hover:no-underline">
+                                Datenschutzerklärung
+                              </Link>{" "}
+                              gelesen und stimme zu.*
+                            </FormLabel>
+                            <FormMessage />
+                          </div>
+                        </FormItem>
+                      )}
+                    />
                     <Button 
                       type="submit" 
                       className="w-full" 
@@ -813,9 +865,6 @@ export default function Home() {
                     >
                       {contactMutation.isPending ? "Wird gesendet..." : "Ja, ich möchte mein kostenloses Angebot"}
                     </Button>
-                    <p className="text-xs text-muted-foreground text-center">
-                      Kein Risiko. Keine versteckten Kosten. Nur Klarheit.
-                    </p>
                   </form>
                 </Form>
               </CardContent>

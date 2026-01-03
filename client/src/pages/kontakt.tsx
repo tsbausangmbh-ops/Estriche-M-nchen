@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Form,
   FormControl,
@@ -27,6 +28,7 @@ import { Footer } from "@/components/layout/footer";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { Phone, Mail, MapPin, Clock, ChevronRight, CheckCircle2, MessageSquare } from "lucide-react";
+import { Link } from "wouter";
 import heroImage from "@assets/generated_images/workers_milling_and_pipes_blue.png";
 
 const contactFormSchema = z.object({
@@ -39,6 +41,9 @@ const contactFormSchema = z.object({
   squareMeters: z.string().optional(),
   floor: z.string().optional(),
   message: z.string().min(10, "Bitte beschreiben Sie Ihr Projekt kurz"),
+  privacyConsent: z.boolean().refine(val => val === true, {
+    message: "Bitte stimmen Sie der Datenschutzerklärung zu",
+  }),
 });
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
@@ -101,6 +106,7 @@ export default function Kontakt() {
       squareMeters: "",
       floor: "",
       message: "",
+      privacyConsent: false,
     },
   });
 
@@ -459,6 +465,31 @@ export default function Kontakt() {
                         </FormItem>
                       )}
                     />
+                    <FormField
+                      control={form.control}
+                      name="privacyConsent"
+                      render={({ field }) => (
+                        <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                          <FormControl>
+                            <Checkbox
+                              checked={field.value}
+                              onCheckedChange={field.onChange}
+                              data-testid="checkbox-privacy-consent"
+                            />
+                          </FormControl>
+                          <div className="space-y-1 leading-none">
+                            <FormLabel className="text-sm font-normal cursor-pointer">
+                              Ich habe die{" "}
+                              <Link href="/datenschutz" className="text-primary underline hover:no-underline">
+                                Datenschutzerklärung
+                              </Link>{" "}
+                              gelesen und stimme der Verarbeitung meiner Daten zu.*
+                            </FormLabel>
+                            <FormMessage />
+                          </div>
+                        </FormItem>
+                      )}
+                    />
                     <Button 
                       type="submit" 
                       size="lg" 
@@ -469,9 +500,6 @@ export default function Kontakt() {
                       {contactMutation.isPending ? "Wird gesendet..." : "Kostenlos anfragen"}
                       <ChevronRight className="ml-2 h-4 w-4" />
                     </Button>
-                    <p className="text-xs text-muted-foreground text-center">
-                      Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.
-                    </p>
                   </form>
                 </Form>
               </CardContent>
