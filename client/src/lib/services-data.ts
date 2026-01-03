@@ -193,7 +193,8 @@ export const services: Service[] = [
       "Eigener Fuhrpark mit Mischfahrzeugen für gleichbleibende Materialqualität direkt auf Ihrer Baustelle",
       "Meisterbetrieb mit regelmäßigen Schulungen zu den neuesten Verlegetechniken und Materialien",
       "Transparente Festpreise nach kostenloser Vor-Ort-Besichtigung – keine versteckten Kosten",
-      "Koordination mit anderen Gewerken: Wir stimmen uns mit Ihrem Architekt, Bauleiter und den Folgegewerken ab"
+      "Koordination mit anderen Gewerken: Wir stimmen uns mit Ihrem Architekt, Bauleiter und den Folgegewerken ab",
+      "Saubere Baustelle garantiert: Wir hinterlassen Ihren Raum so, wie wir ihn vorgefunden haben"
     ],
     detailedProcess: "Der Ablauf Ihres Estrichprojekts beginnt mit einer kostenlosen Vor-Ort-Besichtigung, bei der wir den Untergrund prüfen, Höhen messen und Ihre Anforderungen besprechen. Wir nehmen uns Zeit, um Ihre Wünsche zu verstehen und alle technischen Details zu klären. Innerhalb von 48 Stunden erhalten Sie ein detailliertes Festpreisangebot ohne versteckte Kosten.\n\nNach Auftragserteilung koordinieren wir den Termin mit Ihrem Bauzeitplan und stimmen uns mit anderen Gewerken ab. Wir sorgen dafür, dass alle Vorarbeiten abgeschlossen sind und der Untergrund bereit ist für die Estrichverlegung.\n\nAm Verlegetag bereiten unsere Facharbeiter zunächst den Untergrund sorgfältig vor: Reinigung von Staub und losen Teilen, Ausbesserung von Rissen und Hohlstellen, Anbringung der umlaufenden Randdämmstreifen als Dehnungsfuge. Diese Vorarbeit ist entscheidend für die Qualität des fertigen Estrichs.\n\nDann wird der Estrich mit unseren eigenen Mischfahrzeugen angeliefert und fachgerecht eingebracht. Die gleichbleibende Materialqualität garantiert optimale Ergebnisse. Die Oberfläche wird mit Präzision geglättet und abgerieben, bis die gewünschte Ebenheit erreicht ist.\n\nNach der Verlegung kontrollieren wir regelmäßig die Trocknung und dokumentieren die Restfeuchte mit kalibrierten Messgeräten. Erst wenn der Estrich nachweislich belegreif ist – mit Messwerten unter den Grenzwerten – geben wir ihn für den Bodenbelag frei und übergeben Ihnen das Prüfprotokoll.",
   },
@@ -288,7 +289,8 @@ export const services: Service[] = [
       "Eigenes Labor für Materialprüfungen und Rezepturanpassungen",
       "Ausführung auch nachts und am Wochenende, um Produktionsausfälle zu minimieren",
       "Referenzen von DAX-Unternehmen und mittelständischen Betrieben in ganz Bayern",
-      "Garantierte Einhaltung aller BGR/ASR-Vorschriften für Arbeitssicherheit"
+      "Garantierte Einhaltung aller BGR/ASR-Vorschriften für Arbeitssicherheit",
+      "10 Jahre Gewährleistung auf alle Industrieboden-Projekte mit dokumentierten Prüfwerten"
     ],
     detailedProcess: "Bei Industrieboden-Projekten beginnen wir mit einer umfassenden Belastungsanalyse. Wir erfassen systematisch alle Anforderungen: Welche Fahrzeuge fahren über den Boden und mit welchen Radlasten? Welche Chemikalien werden verwendet und müssen abgewehrt werden? Gibt es besondere Hygieneanforderungen wie HACCP oder Reinraumstandards? Diese Analyse bildet die Grundlage für unser maßgeschneidertes Konzept.\n\nBasierend auf dieser Analyse erstellen wir ein detailliertes Angebot mit genauer Spezifikation der Materialien, Schichtaufbauten und Oberflächenbehandlungen. Sie wissen genau, was Sie bekommen – keine Überraschungen.\n\nDie Untergrundvorbereitung ist entscheidend für die Langlebigkeit des Bodens. Wir kugelstrahlen, fräsen oder schleifen den Altbeton, um eine optimal vorbereitete Oberfläche zu schaffen. Lose Teile, Verunreinigungen und schwache Schichten werden restlos entfernt. Nur so kann die neue Beschichtung dauerhaft haften.\n\nDer Spezialestrich wird dann in einer oder mehreren Schichten aufgebracht – je nach Belastungsanforderung. Bei Industrieböden folgt die Beschichtung mit Epoxid- oder Polyurethan-Systemen. Bei Sichtestrich schleifen und polieren wir die Oberfläche, bis die gewünschte Optik erreicht ist.\n\nZum Abschluss erstellen wir ein vollständiges Prüfprotokoll mit allen relevanten Werten: Druckfestigkeit, Abriebbeständigkeit, Ebenheitstoleranz und Schichtdicken. Dieses Dokument dient als Qualitätsnachweis und Grundlage für die Gewährleistung.",
   },
@@ -383,7 +385,8 @@ export const services: Service[] = [
       "Eigene, staubarme Fräsmaschinen mit integrierter Absaugung",
       "Zusammenarbeit mit lokalen Heizungsinstallateuren für Komplettservice",
       "Über 500 erfolgreiche Nachrüstungen in Münchner Altbauten",
-      "Installation auch in bewohnten Objekten – Raum für Raum"
+      "Installation auch in bewohnten Objekten – Raum für Raum",
+      "Energieberatung inklusive: Wir zeigen Ihnen, wie Sie mit der Fußbodenheizung Heizkosten sparen"
     ],
     detailedProcess: "Ihr Weg zur Fußbodenheizung beginnt mit einer gründlichen Bestandsaufnahme. Wir prüfen den vorhandenen Estrich auf Eignung: Ist er stark genug für die Fräsung? Gibt es Hohlstellen oder Risse, die vorher behandelt werden müssen? Wir messen die exakte Stärke und analysieren den Zustand an mehreren Stellen.\n\nAuf Basis dieser Analyse erstellen wir einen detaillierten Heizkreisplan mit computergestützter Wärmebedarfsberechnung. Jeder Raum bekommt die optimale Rohrverlegung für gleichmäßige Wärmeverteilung. Sie sehen genau, wo welche Rohre verlaufen werden.\n\nAm ersten Arbeitstag entfernen wir den alten Bodenbelag und beginnen mit den Fräsarbeiten. Unsere Fräsmaschine ist mit einer leistungsstarken Absaugung ausgestattet, sodass kaum Staub entsteht. Die Kanäle werden präzise nach dem Verlegeplan gefräst – millimetergenau für perfekten Rohrsitz.\n\nAm zweiten Tag legen wir die Heizungsrohre in die gefrästen Kanäle ein und sichern sie mit Spezialklammern. Die Rohrenden werden fachgerecht an Ihren Heizkreisverteiler angeschlossen. Dann verfüllen wir die Kanäle mit Spezialmörtel, der optimale Wärmeleitfähigkeit garantiert.\n\nNach dem Aushärten des Mörtels (ca. 24 Stunden) führen wir eine Druckprüfung durch, um die Dichtigkeit des Systems zu bestätigen. Dann können Sie den neuen Bodenbelag verlegen lassen. Das vollständige Aufheizprotokoll und alle Dokumentationen erhalten Sie für Ihre Unterlagen.",
   },
@@ -479,7 +482,8 @@ export const services: Service[] = [
       "Berechnung der optimalen Dämmstärke nach aktuellem GEG",
       "Partnerschaft mit führenden Dämmstoff-Herstellern für beste Materialqualität",
       "Dokumentation aller U-Werte für Ihre Unterlagen und Fördermittelanträge",
-      "Kombination aus Wärme-, Schall- und Feuchtigkeitsschutz aus einer Hand"
+      "Kombination aus Wärme-, Schall- und Feuchtigkeitsschutz aus einer Hand",
+      "Bis zu 20% Energieeinsparung durch professionelle Dämmung nach aktuellen Standards"
     ],
     detailedProcess: "Energetische Dämmung beginnt bei uns mit einer professionellen Wärmebedarfsanalyse. Wir berechnen den aktuellen U-Wert Ihres Bodens und ermitteln die erforderliche Dämmstärke nach dem aktuellen Gebäudeenergiegesetz (GEG). Diese Berechnung ist die Grundlage für eine effektive und normgerechte Dämmung.\n\nBei Förderfähigkeit unterstützen wir Sie aktiv beim Antrag für KfW- oder BAFA-Zuschüsse. Oft können bis zu 20% der Kosten gefördert werden. Wir erstellen die erforderlichen Nachweise und Dokumentationen für Ihren Antrag.\n\nDie Ausführung startet mit der sorgfältigen Untergrundvorbereitung. Unebenheiten werden ausgeglichen, lose Teile entfernt. Dann verlegen wir die Dampfsperre gegen aufsteigende Feuchtigkeit – lückenlos und mit überlappenden Stößen.\n\nIm nächsten Schritt bringen wir die Dämmplatten in der berechneten Stärke ein. Jede Platte wird präzise zugeschnitten und fugenlos verlegt. Wärmebrücken werden konsequent vermieden. Die Randdämmstreifen an allen Wänden sorgen für Schallschutz und dienen als Dehnungsfuge.\n\nNach dem Verlegen der Trennlage (PE-Folie) folgt der Estricheinbau durch unser Team. Zum Abschluss dokumentieren wir alle erreichten Dämmwerte und stellen Ihnen die Unterlagen für Ihre Akten, den Energieausweis und eventuelle Förderanträge zusammen.",
   },
@@ -575,7 +579,8 @@ export const services: Service[] = [
       "Spezialisiert auf Rettung statt Abriss – wirtschaftlichste Lösung",
       "24h-Notfall-Service bei Wasserschäden",
       "Direkte Abwicklung mit Versicherungen bei regulierbaren Schäden",
-      "5 Jahre Gewährleistung auch auf Reparaturen"
+      "5 Jahre Gewährleistung auch auf Reparaturen",
+      "Über 800 erfolgreich sanierte Böden allein in den letzten 3 Jahren"
     ],
     detailedProcess: "Bei Estrichschäden zählt schnelles Handeln – je früher die Reparatur, desto geringer der Gesamtschaden. Unser Notfall-Team ist innerhalb von 24 Stunden bei Ihnen vor Ort. Bei Wasserschäden koordinieren wir auch die technische Trocknung.\n\nWir beginnen mit einer systematischen Schadensanalyse: Klopfprobe für Hohlstellen über die gesamte Fläche, Rissmusteranalyse zur Ursachenermittlung und Feuchtemessung mit kalibrierten CM-Geräten. Diese Diagnose ist kostenlos und unverbindlich.\n\nDann ermitteln wir die Ursache des Schadens. Nur wenn die Ursache behoben wird, hält die Reparatur dauerhaft. Risse durch Bewegung erfordern andere Maßnahmen als Risse durch Schwund oder Feuchtigkeit. Wir erklären Ihnen genau, was passiert ist und wie wir vorgehen.\n\nBei Hohlstellen bohren wir gezielt Injektionslöcher im optimalen Raster und pressen Kunstharz unter kontrolliertem Druck ein. Das Harz füllt den Hohlraum und verbindet den Estrich wieder fest mit dem Untergrund. Risse werden mit einer Diamantfräse aufgeweitet, gründlich gereinigt und mit Spezialharz verfüllt.\n\nNach der Aushärtung (24-48 Stunden je nach System) schleifen wir die Oberfläche plan und bereiten sie für den Bodenbelag vor. Sie erhalten ein vollständiges Protokoll mit Fotos, Messwerten und Materialangaben – wichtig für Ihre Unterlagen, die Versicherung oder spätere Gewährleistungsfragen.",
   },
@@ -670,7 +675,8 @@ export const services: Service[] = [
       "Eigene Schnellestrich-Rezepturen für optimale Ergebnisse",
       "Flexible Terminierung – auch kurzfristig und am Wochenende",
       "Garantierte Belegreife zum vereinbarten Termin",
-      "Dokumentierte CM-Messung für Ihre Planungssicherheit"
+      "Dokumentierte CM-Messung für Ihre Planungssicherheit",
+      "Vertragsstrafe bei Terminüberschreitung – so sicher sind wir uns"
     ],
     detailedProcess: "Bei zeitkritischen Projekten ist Koordination alles. Wir stimmen zunächst den exakten Zeitplan mit allen beteiligten Gewerken ab – Bodenleger, Maler, Elektriker. Jeder weiß genau, wann er starten kann. So vermeiden wir Leerlauf und Verzögerungen.\n\nVor dem Verlegetag prüfen wir alle Voraussetzungen: Ist der Raum geschlossen? Sind Fenster und Türen eingebaut? Kann die Temperatur gehalten werden? Diese Faktoren sind entscheidend für die schnelle Trocknung.\n\nAm Verlegetag bringen wir den Schnellestrich mit unseren speziellen Bindemitteln ein. Die Mischung ist genau auf Ihr Projekt abgestimmt – je nach Schichtdicke, Raumtemperatur und gewünschter Trocknungszeit. Die Oberfläche wird sorgfältig geglättet und abgerieben.\n\nEntscheidend für schnelle Trocknung ist die Klimasteuerung. Wir optimieren Temperatur (idealerweise 20-25°C) und Luftfeuchtigkeit im Raum. Bei Bedarf stellen wir Trocknungsgeräte auf, um den Prozess zu beschleunigen.\n\nTäglich messen wir die Restfeuchte mit kalibriertem CM-Gerät und dokumentieren den Fortschritt. Sie werden laufend informiert, wie die Trocknung voranschreitet. Sobald der Estrich belegreif ist (je nach System 1-5 Tage), erhalten Sie eine schriftliche Freigabe mit allen Messwerten. Das nächste Gewerk kann sofort starten – garantiert zum vereinbarten Termin.",
   },
