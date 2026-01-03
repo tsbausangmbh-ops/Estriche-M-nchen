@@ -12,7 +12,7 @@ const priceCategories = [
     icon: Layers,
     title: "Zementestrich & Fließestrich",
     subtitle: "Der Klassiker für Wohnbau und Renovierung",
-    priceRange: "25 - 45",
+    priceRange: "33 - 59",
     unit: "€/m²",
     includes: [
       "Untergrundvorbereitung und Reinigung",
@@ -22,19 +22,19 @@ const priceCategories = [
       "Feuchtemessung und Belegreifprotokoll"
     ],
     extras: [
-      { name: "Trittschalldämmung 20-40mm", price: "8-15 €/m²" },
-      { name: "Wärmedämmung 60-120mm", price: "12-25 €/m²" },
-      { name: "Fußbodenheizung-Vorbereitung", price: "5-10 €/m²" },
-      { name: "Höhenausgleich über 20mm", price: "3-8 €/m²" }
+      { name: "Trittschalldämmung 20-40mm", price: "10-20 €/m²" },
+      { name: "Wärmedämmung 60-120mm", price: "16-33 €/m²" },
+      { name: "Fußbodenheizung-Vorbereitung", price: "7-13 €/m²" },
+      { name: "Höhenausgleich über 20mm", price: "4-10 €/m²" }
     ],
-    note: "Mindestauftragswert 800€. Preise inkl. Material und Anfahrt München."
+    note: "Mindestauftragswert 1.040€. Preise inkl. Material und Anfahrt München."
   },
   {
     id: "industrieboeden",
     icon: Building2,
     title: "Industrieböden & Sichtestrich",
     subtitle: "Für Gewerbe, Industrie und modernes Wohnen",
-    priceRange: "45 - 95",
+    priceRange: "59 - 124",
     unit: "€/m²",
     includes: [
       "Untergrundanalyse und -vorbereitung",
@@ -44,10 +44,10 @@ const priceCategories = [
       "Prüfprotokoll mit Belastungswerten"
     ],
     extras: [
-      { name: "Epoxid-Beschichtung", price: "25-45 €/m²" },
-      { name: "Polyurethan-Versiegelung", price: "20-35 €/m²" },
-      { name: "Sichtestrich geschliffen", price: "35-55 €/m²" },
-      { name: "Farbige Einstreuung", price: "8-15 €/m²" }
+      { name: "Epoxid-Beschichtung", price: "33-59 €/m²" },
+      { name: "Polyurethan-Versiegelung", price: "26-46 €/m²" },
+      { name: "Sichtestrich geschliffen", price: "46-72 €/m²" },
+      { name: "Farbige Einstreuung", price: "10-20 €/m²" }
     ],
     note: "Preis abhängig von Belastungsanforderung. Wochenend-/Nachtarbeit gegen Aufpreis."
   },
@@ -56,7 +56,7 @@ const priceCategories = [
     icon: Thermometer,
     title: "Fußbodenheizung einfräsen",
     subtitle: "Nachrüstung ohne großen Umbau",
-    priceRange: "45 - 75",
+    priceRange: "59 - 98",
     unit: "€/m²",
     includes: [
       "Aufmaß und Heizlastberechnung",
@@ -66,10 +66,10 @@ const priceCategories = [
       "Druckprüfung und Dokumentation"
     ],
     extras: [
-      { name: "Einzelraumregelung", price: "80-150 €/Raum" },
-      { name: "Heizkreisverteiler", price: "250-450 €" },
-      { name: "Anschluss an Bestandsheizung", price: "150-300 €" },
-      { name: "Altbelag-Entfernung", price: "8-15 €/m²" }
+      { name: "Einzelraumregelung", price: "104-195 €/Raum" },
+      { name: "Heizkreisverteiler", price: "325-585 €" },
+      { name: "Anschluss an Bestandsheizung", price: "195-390 €" },
+      { name: "Altbelag-Entfernung", price: "10-20 €/m²" }
     ],
     note: "Preis inkl. Rohre und Vergussmasse. Komplettservice mit Partner-Installateur möglich."
   },
@@ -78,7 +78,7 @@ const priceCategories = [
     icon: Shield,
     title: "Wärme- & Trittschalldämmung",
     subtitle: "Energiesparen und Ruhe genießen",
-    priceRange: "18 - 45",
+    priceRange: "23 - 59",
     unit: "€/m²",
     includes: [
       "U-Wert-Berechnung nach GEG",
@@ -88,10 +88,10 @@ const priceCategories = [
       "Dokumentation für Förderanträge"
     ],
     extras: [
-      { name: "Vakuumdämmung (minimal)", price: "80-120 €/m²" },
-      { name: "Schallschutz-Kombidämmung", price: "25-40 €/m²" },
-      { name: "Kellerdeckendämmung", price: "35-55 €/m²" },
-      { name: "Energieberatung für Förderung", price: "150 € pauschal" }
+      { name: "Vakuumdämmung (minimal)", price: "104-156 €/m²" },
+      { name: "Schallschutz-Kombidämmung", price: "33-52 €/m²" },
+      { name: "Kellerdeckendämmung", price: "46-72 €/m²" },
+      { name: "Energieberatung für Förderung", price: "195 € pauschal" }
     ],
     note: "Förderfähig über KfW/BAFA. Wir unterstützen bei der Antragstellung."
   },
@@ -100,7 +100,7 @@ const priceCategories = [
     icon: Wrench,
     title: "Estrichsanierung & Reparatur",
     subtitle: "Rettung statt Abriss – wirtschaftlich und schnell",
-    priceRange: "35 - 85",
+    priceRange: "46 - 111",
     unit: "€/m²",
     includes: [
       "Kostenlose Schadensdiagnose vor Ort",
@@ -110,9 +110,9 @@ const priceCategories = [
       "Protokoll für Versicherung"
     ],
     extras: [
-      { name: "Wasserschaden-Trocknung", price: "15-25 €/m²/Tag" },
-      { name: "Teilsanierung Estrich", price: "45-65 €/m²" },
-      { name: "Komplett-Neuaufbau", price: "55-85 €/m²" },
+      { name: "Wasserschaden-Trocknung", price: "20-33 €/m²/Tag" },
+      { name: "Teilsanierung Estrich", price: "59-85 €/m²" },
+      { name: "Komplett-Neuaufbau", price: "72-111 €/m²" },
       { name: "Notfall-Einsatz (24h)", price: "+50% Aufschlag" }
     ],
     note: "Direkte Versicherungsabwicklung bei Regulierungsschäden möglich."
@@ -122,7 +122,7 @@ const priceCategories = [
     icon: Zap,
     title: "Schnellestrich",
     subtitle: "Wenn die Zeit drängt",
-    priceRange: "35 - 55",
+    priceRange: "46 - 72",
     unit: "€/m²",
     includes: [
       "Schnelltrocknende Spezialmischung",
@@ -132,9 +132,9 @@ const priceCategories = [
       "Garantierte Terminfreigabe"
     ],
     extras: [
-      { name: "1-Tages-Estrich (24h begehbar)", price: "+15 €/m²" },
+      { name: "1-Tages-Estrich (24h begehbar)", price: "+20 €/m²" },
       { name: "Wochenend-Verlegung", price: "+20% Aufschlag" },
-      { name: "Express-Trocknung (Geräte)", price: "5-10 €/m²/Tag" },
+      { name: "Express-Trocknung (Geräte)", price: "7-13 €/m²/Tag" },
       { name: "Termin-Garantie schriftlich", price: "inklusive" }
     ],
     note: "Ideal bei Renovierung, Ladenbau oder zeitkritischen Projekten."
@@ -146,7 +146,7 @@ const additionalServices = [
   { name: "Festpreis-Angebot innerhalb 48h", price: "0 €" },
   { name: "Anfahrt im Stadtgebiet München", price: "inklusive" },
   { name: "Anfahrt Umland (bis 30km)", price: "inklusive" },
-  { name: "Anfahrt Umland (30-50km)", price: "50 € pauschal" },
+  { name: "Anfahrt Umland (30-50km)", price: "65 € pauschal" },
   { name: "Baustelleneinrichtung", price: "inklusive" },
   { name: "Baustellenendreinigung", price: "inklusive" },
   { name: "Entsorgung Altmaterial", price: "nach Aufwand" }
