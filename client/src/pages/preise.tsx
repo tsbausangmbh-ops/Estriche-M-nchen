@@ -149,7 +149,7 @@ const additionalServices = [
   { name: "Anfahrt Umland (bis 30km)", price: "90 €" },
   { name: "Anfahrt Umland (ab 30km)", price: "120 €" },
   { name: "Baustelleneinrichtung", price: "500 €" },
-  { name: "Baustellenendreinigung", price: "285 €" },
+  { name: "Baustellenendreinigung", price: "280 €" },
   { name: "Entsorgung Altmaterial (Container)", price: "200-400 €" },
   { name: "Altestrich-Abbruch", price: "15-25 €/m²" },
   { name: "Höhenausgleich bis 20mm", price: "5-10 €/m²" },
