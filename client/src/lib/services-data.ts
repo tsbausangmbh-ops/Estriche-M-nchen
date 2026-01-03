@@ -20,7 +20,7 @@ import galleryLiving from "@assets/generated_images/modern_living_room_polished_
 import galleryIndustrial from "@assets/generated_images/industrial_floor_coating_work.png";
 import galleryInsulation from "@assets/generated_images/floor_insulation_installation.png";
 import galleryCementPour from "@assets/generated_images/workers_pouring_cement_screed.png";
-import galleryIndustrialCoating from "@assets/generated_images/industrial_floor_coating_application.png";
+import galleryIndustrialCoating from "@assets/generated_images/industrial_floor_coating_blue_polos.png";
 import galleryHeatingPipes from "@assets/generated_images/underfloor_heating_pipe_installation.png";
 import galleryInsulationWork from "@assets/generated_images/floor_insulation_installation_work.png";
 import galleryRenovation from "@assets/generated_images/floor_renovation_repair_work.png";
