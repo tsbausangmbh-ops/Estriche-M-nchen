@@ -73,7 +73,7 @@ export default function ServiceDetail() {
                 Kostenloses Angebot
                 <ChevronRight className="ml-1 h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white/30 text-white bg-white/10 backdrop-blur-sm" data-testid="button-hero-call">
+              <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" data-testid="button-hero-call">
                 <Phone className="mr-2 h-4 w-4" />
                 089 / 123 456 78
               </Button>
@@ -524,8 +524,7 @@ export default function ServiceDetail() {
             </Button>
             <Button 
               size="lg" 
-              variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground"
+              className="bg-zinc-900 text-white hover:bg-zinc-800"
             >
               <Phone className="mr-2 h-4 w-4" />
               Anrufen

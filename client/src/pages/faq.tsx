@@ -242,7 +242,7 @@ export default function FAQ() {
               Jetzt Frage stellen
               <ChevronRight className="ml-1 h-4 w-4" />
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" asChild>
               <a href="tel:+4989123456789">
                 Direkt anrufen: +49 89 123 456 789
               </a>
