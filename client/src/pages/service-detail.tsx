@@ -329,6 +329,33 @@ export default function ServiceDetail() {
         </div>
       </section>
 
+      <section className="py-16 bg-muted">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-6">
+            <Shield className="w-6 h-6 text-primary" />
+            <h2 className="text-2xl font-bold">Normgerechte Ausführung</h2>
+          </div>
+          <p className="text-muted-foreground mb-6">
+            Wir arbeiten nach den aktuellen deutschen Industrienormen. Das garantiert Ihnen höchste Qualität und rechtssichere Ausführung.
+          </p>
+          <div className="grid gap-3">
+            {service.dinNorms.map((norm, index) => (
+              <div key={index} className="p-4 bg-card rounded-lg border">
+                <div className="flex items-start gap-4">
+                  <Badge variant="outline" className="shrink-0 font-mono text-xs">
+                    {norm.number}
+                  </Badge>
+                  <div>
+                    <h3 className="font-medium text-sm mb-1">{norm.title}</h3>
+                    <p className="text-sm text-muted-foreground">{norm.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-accent">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold mb-6">Häufige Fragen</h2>

@@ -37,6 +37,12 @@ export interface FAQ {
   answer: string;
 }
 
+export interface DINNorm {
+  number: string;
+  title: string;
+  description: string;
+}
+
 export interface Service {
   id: string;
   icon: LucideIcon;
@@ -56,6 +62,7 @@ export interface Service {
   serviceTypes: ServiceType[];
   process: string[];
   technicalDetails: string[];
+  dinNorms: DINNorm[];
   faqs: FAQ[];
   testimonial: Testimonial;
   guarantees: string[];
@@ -111,6 +118,13 @@ export const services: Service[] = [
       "Druckfestigkeit: C20 bis C35 je nach Nutzungsklasse",
       "Ebenheitstoleranz: gemäß DIN 18202, Tabelle 3, Zeile 3 oder besser",
       "Wärmeleitfähigkeit: Lambda 1,0-1,4 W/mK für Heizestrich"
+    ],
+    dinNorms: [
+      { number: "DIN 18560", title: "Estriche im Bauwesen", description: "Regelt die Anforderungen an Estrichkonstruktionen, Ausführung, Prüfung und Dicken für verschiedene Nutzungsarten." },
+      { number: "DIN 18202", title: "Toleranzen im Hochbau", description: "Definiert die zulässigen Ebenheitsabweichungen für Estrichoberflächen. Tabelle 3 ist maßgebend für die Belegreife." },
+      { number: "DIN EN 13813", title: "Estrichmörtel und Estrichmassen", description: "Europäische Norm für Eigenschaften und Anforderungen an Estrichmörtel und Estriche." },
+      { number: "DIN 18353", title: "VOB Teil C: Estricharbeiten", description: "Allgemeine Technische Vertragsbedingungen für Estricharbeiten nach der Vergabe- und Vertragsordnung für Bauleistungen." },
+      { number: "DIN 4109", title: "Schallschutz im Hochbau", description: "Mindestanforderungen an den Schallschutz, relevant für schwimmenden Estrich und Trittschalldämmung." }
     ],
     faqs: [
       { question: "Wie lange muss Estrich trocknen, bevor ich den Boden verlegen kann?", answer: "Die Trocknungszeit hängt von der Estrichart und -stärke ab. Als Faustregel gilt: 1 Tag pro Millimeter Estrichstärke. Ein 50 mm starker Zementestrich braucht also etwa 50 Tage bis zur Belegreife. Mit Schnellestrich können wir diese Zeit auf 1-3 Tage verkürzen." },
@@ -180,6 +194,13 @@ export const services: Service[] = [
       "Chemikalienbeständigkeit: Prüfung nach DIN EN ISO 2812",
       "Fugenabstand: 4-6 m im Raster bei großen Flächen"
     ],
+    dinNorms: [
+      { number: "DIN EN 13892", title: "Prüfverfahren für Estrichmörtel", description: "Teil 1-8 regelt alle Prüfverfahren für Druckfestigkeit, Biegezugfestigkeit, Verschleißwiderstand und Oberflächenhärte von Industrieböden." },
+      { number: "DIN 18560-7", title: "Hochbeanspruchbare Estriche", description: "Spezielle Anforderungen an Estriche mit erhöhter Beanspruchung durch Fahrzeuge, Maschinen oder Chemikalien." },
+      { number: "BGR 181 / ASR A1.5", title: "Rutschfestigkeit", description: "Berufsgenossenschaftliche Regeln für Fußböden in Arbeitsbereichen mit Rutschgefahr. Klassifizierung R9-R13." },
+      { number: "DIN EN 1504", title: "Oberflächenschutzsysteme", description: "Anforderungen an Produkte und Systeme zum Schutz und zur Instandsetzung von Betonoberflächen." },
+      { number: "DIN 18202", title: "Toleranzen im Hochbau", description: "Ebenheitsanforderungen für Industrieböden, besonders relevant für Hochregallager und Fahrbahnen." }
+    ],
     faqs: [
       { question: "Wie lange hält ein Industrieboden?", answer: "Bei fachgerechter Ausführung und Nutzung halten Industrieböden 15-25 Jahre oder länger. Regelmäßige Reinigung und gelegentliche Auffrischung der Versiegelung verlängern die Lebensdauer erheblich." },
       { question: "Kann ein bestehender Boden saniert werden?", answer: "In vielen Fällen ja. Beschädigte Beschichtungen können abgetragen und erneuert werden. Bei strukturellen Schäden im Untergrund ist manchmal ein Neuaufbau sinnvoller. Wir beraten Sie ehrlich, welche Lösung wirtschaftlicher ist." },
@@ -247,6 +268,13 @@ export const services: Service[] = [
       "Vorlauftemperatur: 30-40°C (ideal für Wärmepumpen)",
       "Aufheizprotokoll: Nach DIN EN 1264 vorgeschrieben",
       "Systemleistung: 40-100 W/m² je nach Auslegung"
+    ],
+    dinNorms: [
+      { number: "DIN EN 1264", title: "Fußbodenheizung", description: "Teile 1-5 regeln Planung, Dimensionierung, Einbau und Betrieb von Warmwasser-Fußbodenheizungen. Enthält das vorgeschriebene Aufheizprotokoll." },
+      { number: "DIN 18560-2", title: "Heizestriche", description: "Spezifische Anforderungen an Estriche auf Heizungsanlagen, Mindestüberdeckung der Rohre und Aufheizvorschriften." },
+      { number: "DIN 4725", title: "Warmwasser-Fußbodenheizungen", description: "Berechnung der Heizleistung und Dimensionierung der Heizkreise für unterschiedliche Raumarten." },
+      { number: "DIN EN 12831", title: "Heizlastberechnung", description: "Verfahren zur Berechnung der Norm-Heizlast für die korrekte Auslegung der Fußbodenheizung." },
+      { number: "DIN 18380", title: "VOB Teil C: Heizanlagen", description: "Allgemeine Technische Vertragsbedingungen für Heizungsarbeiten nach der Vergabe- und Vertragsordnung für Bauleistungen." }
     ],
     faqs: [
       { question: "Kann jeder Estrich gefräst werden?", answer: "Fast jeder. Zementestrich, Anhydritestrich und Gussasphalt eignen sich hervorragend. Wir prüfen vor Ort die Estrichstärke und den Zustand. Bei zu dünnem oder beschädigtem Estrich beraten wir Sie zu Alternativen." },
@@ -317,6 +345,13 @@ export const services: Service[] = [
       "EnEV/GEG-Anforderung: U-Wert mind. 0,50 W/m²K (Bodenplatte)",
       "Dampfsperre: sd-Wert mind. 100 m"
     ],
+    dinNorms: [
+      { number: "DIN 4108", title: "Wärmeschutz im Hochbau", description: "Grundlegende Anforderungen an den Wärmeschutz von Gebäuden, U-Wert-Berechnung und Mindestanforderungen." },
+      { number: "DIN 4109", title: "Schallschutz im Hochbau", description: "Mindestanforderungen an den Trittschallschutz bei schwimmendem Estrich und zwischen Wohnungen." },
+      { number: "DIN 18560-2", title: "Estriche auf Dämmschichten", description: "Schwimmender Estrich – Anforderungen an Dämmschichten, Randdämmstreifen und Aufbau." },
+      { number: "GEG 2024", title: "Gebäudeenergiegesetz", description: "Aktuelle gesetzliche Anforderungen an die energetische Qualität von Gebäuden, ersetzt EnEV." },
+      { number: "DIN 18195", title: "Bauwerksabdichtung", description: "Anforderungen an Abdichtungen gegen Bodenfeuchte und nichtdrückendes Wasser." }
+    ],
     faqs: [
       { question: "Welche Dämmstärke brauche ich?", answer: "Das hängt vom Gebäude und den Anforderungen ab. Für Neubauten nach GEG sind meist 80-120 mm nötig, bei Sanierungen oft weniger. Wir berechnen die optimale Stärke für Ihr Projekt." },
       { question: "Kann ich die Dämmung auch ohne neuen Estrich machen?", answer: "Nein, die Dämmung muss unter dem Estrich liegen. Bei einer Sanierung muss der alte Estrich entfernt werden. Alternativ gibt es dünne Aufdopplungssysteme, die auf den bestehenden Boden kommen." },
@@ -386,6 +421,13 @@ export const services: Service[] = [
       "Trocknungszeit Reparaturmörtel: 24-48 Stunden",
       "Restfeuchte vor Belagsarbeiten: unter 2,0 CM%"
     ],
+    dinNorms: [
+      { number: "DIN 18560", title: "Estriche im Bauwesen", description: "Grundlegende Norm für Estricharbeiten, auch relevant für Sanierung und Reparatur bestehender Estriche." },
+      { number: "DIN EN 1504", title: "Instandsetzung von Betonbauwerken", description: "Teile 1-10 regeln Produkte und Systeme zur Reparatur und Verstärkung von Beton und Estrich." },
+      { number: "ZTV-ING", title: "Zusätzliche Technische Vertragsbedingungen", description: "Richtlinien für Instandsetzungsarbeiten an Betonbauwerken, anwendbar auf Estrichsanierung." },
+      { number: "WTA-Merkblatt", title: "Sanierung von Feuchteschäden", description: "Wissenschaftlich-Technische Arbeitsgemeinschaft für Bauwerkserhaltung – Richtlinien für Trocknungsmaßnahmen." },
+      { number: "DIN 18202", title: "Toleranzen im Hochbau", description: "Ebenheitsanforderungen, die auch bei der Sanierung einzuhalten sind." }
+    ],
     faqs: [
       { question: "Wann lohnt sich Reparatur statt Neuaufbau?", answer: "Bei lokalen Schäden (einzelne Risse, begrenzte Hohlstellen) ist eine Reparatur fast immer günstiger. Bei flächendeckenden Problemen oder strukturellen Mängeln kann ein Neuaufbau sinnvoller sein. Wir beraten Sie ehrlich." },
       { question: "Wie lange hält eine Estrichreparatur?", answer: "Bei fachgerechter Ausführung genauso lang wie der ursprüngliche Estrich – viele Jahre oder Jahrzehnte. Wichtig ist, dass die Ursache behoben wird, nicht nur das Symptom." },
@@ -453,6 +495,13 @@ export const services: Service[] = [
       "Restfeuchte bei Belegreife: unter 2,0 CM% (Zement) / 0,5 CM% (Anhydrit)",
       "Schichtdicke: 40-65 mm je nach System und Belastung",
       "Temperaturbereich: Einbau ab +5°C, optimal bei 15-20°C"
+    ],
+    dinNorms: [
+      { number: "DIN 18560", title: "Estriche im Bauwesen", description: "Gilt auch für Schnellestriche – Anforderungen an Festigkeit, Dicke und Ausführung bleiben identisch." },
+      { number: "DIN EN 13813", title: "Estrichmörtel und Estrichmassen", description: "Eigenschaften und Konformitätsbewertung für alle Estricharten inklusive Schnellestriche." },
+      { number: "DIN 18353", title: "VOB Teil C: Estricharbeiten", description: "Vertragsbedingungen und Qualitätsanforderungen für alle Estricharbeiten." },
+      { number: "DIN 18365", title: "VOB Teil C: Bodenbelagsarbeiten", description: "Regelt die Anforderungen an die Belegreife und Restfeuchtemessung vor Verlegung von Bodenbelägen." },
+      { number: "CM-Messung", title: "Calciumcarbid-Methode", description: "Standardverfahren zur Bestimmung der Restfeuchte im Estrich vor der Belegung." }
     ],
     faqs: [
       { question: "Ist Schnellestrich teurer als normaler Estrich?", answer: "Ja, die Materialkosten sind etwa 20-40% höher. Aber: Die eingesparte Zeit kann viel wertvoller sein – keine verlängerte Miete, pünktlicher Einzug, keine Handwerker-Umplanung. Oft rechnet sich der Aufpreis mehrfach." },
