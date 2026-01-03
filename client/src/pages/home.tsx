@@ -639,7 +639,7 @@ export default function Home() {
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center gap-2 text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -888,7 +888,7 @@ export default function Home() {
             {/* Contact Form */}
             <Card className="shadow-lg border-primary/20" data-testid="card-contact-form">
               <CardHeader>
-                <div className="bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-md w-fit mb-2">
+                <div className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-md w-fit mb-2">
                   Antwort innerhalb von 24 Stunden
                 </div>
                 <CardTitle>Jetzt starten – kostenlos & unverbindlich</CardTitle>
