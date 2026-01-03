@@ -395,23 +395,23 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-foreground/30" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid lg:grid-cols-5 gap-12 items-start">
             {/* Hero Content */}
             <div className="lg:col-span-3 space-y-8">
-              <Badge variant="outline" className="text-sm border-primary/30 bg-primary/5 text-primary font-medium tracking-wide">
+              <Badge variant="outline" className="text-sm border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide">
                 Estrich-Experten seit 2008
               </Badge>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05]">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] text-primary-foreground">
                 Ihr Estrich-Problem?
                 <span className="block text-primary mt-3">Wir lösen es. Garantiert.</span>
               </h1>
-              <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-                <strong className="text-foreground">Kennen Sie das?</strong> Handwerker, die nicht erscheinen. 
-                Termine, die platzen. Böden, die nicht eben sind. <strong className="text-foreground">Das muss nicht sein.</strong>
+              <p className="text-lg text-primary-foreground/80 max-w-xl leading-relaxed">
+                <strong className="text-primary-foreground">Kennen Sie das?</strong> Handwerker, die nicht erscheinen. 
+                Termine, die platzen. Böden, die nicht eben sind. <strong className="text-primary-foreground">Das muss nicht sein.</strong>
               </p>
-              <p className="text-lg text-foreground max-w-xl leading-relaxed">
+              <p className="text-lg text-primary-foreground max-w-xl leading-relaxed">
                 Stellen Sie sich vor: Ein perfekt ebener Estrich, termingerecht geliefert, ohne Stress – 
                 so dass Sie endlich mit dem Verlegen beginnen können.
               </p>
@@ -428,6 +428,7 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   variant="outline"
+                  className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
                   onClick={() => scrollToSection("leistungen")}
                   data-testid="button-hero-services"
                 >
@@ -439,15 +440,15 @@ export default function Home() {
               <div className="flex flex-wrap gap-6 pt-8" data-testid="hero-trust-row">
                 <div className="flex items-center gap-2" data-testid="trust-item-0">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-sm font-medium" data-testid="text-trust-title-0">Termingarantie</span>
+                  <span className="text-sm font-medium text-primary-foreground" data-testid="text-trust-title-0">Termingarantie</span>
                 </div>
                 <div className="flex items-center gap-2" data-testid="trust-item-1">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-sm font-medium" data-testid="text-trust-title-1">Festpreis vorab</span>
+                  <span className="text-sm font-medium text-primary-foreground" data-testid="text-trust-title-1">Festpreis vorab</span>
                 </div>
                 <div className="flex items-center gap-2" data-testid="trust-item-2">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-sm font-medium" data-testid="text-trust-title-2">282+ Kunden</span>
+                  <span className="text-sm font-medium text-primary-foreground" data-testid="text-trust-title-2">282+ Kunden</span>
                 </div>
               </div>
             </div>
