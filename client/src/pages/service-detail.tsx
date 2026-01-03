@@ -45,24 +45,32 @@ export default function ServiceDetail() {
         </div>
       </header>
 
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${service.image})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/40" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/80 to-foreground/50" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative py-20 lg:py-32">
           <div className="max-w-2xl">
-            <Badge variant="outline" className="text-sm border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide mb-6">
-              Unsere Leistungen
-            </Badge>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center shadow-lg">
+                <service.icon className="w-7 h-7 text-primary-foreground" />
+              </div>
+              <Badge variant="outline" className="text-sm border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide">
+                Unsere Leistungen
+              </Badge>
+            </div>
+            <p className="text-lg text-primary/90 font-semibold uppercase tracking-wider mb-3">
+              {service.heroTagline}
+            </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] text-primary-foreground mb-6">
               {service.title}
             </h1>
-            <p className="text-xl text-primary-foreground/90 leading-relaxed mb-8">
+            <p className="text-xl text-primary-foreground/85 leading-relaxed mb-8 max-w-xl">
               {service.longDescription}
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 mb-8">
               <Button size="lg" onClick={scrollToContact} data-testid="button-hero-cta">
                 Jetzt Angebot anfragen
                 <ChevronRight className="ml-2 h-4 w-4" />
@@ -70,12 +78,20 @@ export default function ServiceDetail() {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+                className="border-primary-foreground/30 text-primary-foreground bg-primary-foreground/5 backdrop-blur-sm"
                 data-testid="button-hero-call"
               >
                 <Phone className="mr-2 h-4 w-4" />
-                Anrufen
+                089 / 123 456 78
               </Button>
+            </div>
+            <div className="flex flex-wrap gap-6 text-primary-foreground/80">
+              {service.features.slice(0, 3).map((feature, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                  <span className="text-sm font-medium">{feature}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>

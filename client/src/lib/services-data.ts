@@ -18,6 +18,7 @@ export interface Service {
   id: string;
   icon: LucideIcon;
   title: string;
+  heroTagline: string;
   problem: string;
   description: string;
   longDescription: string;
@@ -33,6 +34,7 @@ export const services: Service[] = [
     id: "zementestrich",
     icon: Layers,
     title: "Zementestrich und Fließestrich",
+    heroTagline: "Die perfekte Grundlage für Ihren Traumboden",
     problem: "Ihr Problem: Unebene Böden, die jeden Belag ruinieren?",
     description: "Wir liefern perfekt plane Flächen – die ideale Basis für Parkett, Fliesen oder Vinyl. Kein Nacharbeiten, kein Ärger.",
     longDescription: "Zementestrich ist der Klassiker unter den Estricharten und bietet eine robuste, langlebige Grundlage für nahezu jeden Bodenbelag. Unser Team sorgt für eine präzise Verlegung mit perfekter Ebenheit, die höchsten Ansprüchen gerecht wird. Fließestrich ermöglicht dabei besonders glatte Oberflächen und eignet sich ideal für große Flächen.",
@@ -46,6 +48,7 @@ export const services: Service[] = [
     id: "industrieboeden",
     icon: Building2,
     title: "Industrieböden und Sichtestrich",
+    heroTagline: "Böden für härteste Ansprüche mit edlem Design",
     problem: "Ihr Problem: Böden, die der Belastung nicht standhalten?",
     description: "Unsere Industrieböden sind für härteste Beanspruchung gemacht. Sichtestrich vereint dabei Funktion mit modernem Design.",
     longDescription: "Industrieböden müssen extremen Belastungen standhalten – von schweren Maschinen bis hin zu chemischen Einflüssen. Wir liefern Böden, die diesen Anforderungen gewachsen sind. Sichtestrich ist dabei nicht nur funktional, sondern auch ein optisches Highlight für moderne Architektur in Lofts, Büros und Showrooms.",
@@ -59,6 +62,7 @@ export const services: Service[] = [
     id: "fussbodenheizung",
     icon: Thermometer,
     title: "Fußbodenheizung einfräsen",
+    heroTagline: "Warme Füße ohne großen Umbau",
     problem: "Ihr Problem: Kalte Füße, aber Angst vor dem Renovierungschaos?",
     description: "Wir fräsen Ihre Fußbodenheizung nachträglich ein – ohne den ganzen Estrich rauszureißen. Sauber, schnell, stressfrei.",
     longDescription: "Eine Fußbodenheizung nachträglich einzubauen muss kein Albtraum sein. Mit unserer Fräsmethode schneiden wir präzise Kanäle in Ihren bestehenden Estrich und verlegen die Heizungsrohre darin. So sparen Sie sich den kompletten Abriss und können trotzdem die Vorteile einer modernen Fußbodenheizung genießen.",
@@ -72,6 +76,7 @@ export const services: Service[] = [
     id: "waermedaemmung",
     icon: Shield,
     title: "Wärmedämmung & Abdichtung",
+    heroTagline: "Energie sparen ab dem ersten Tag",
     problem: "Ihr Problem: Hohe Heizkosten durch schlechte Dämmung?",
     description: "Mit professioneller Wärmedämmung senken Sie Ihre Energiekosten dauerhaft. Wir machen Ihren Boden energieeffizient.",
     longDescription: "Eine gute Wärmedämmung unter dem Estrich ist die Grundlage für ein energieeffizientes Gebäude. Wir verbauen hochwertige Dämmmaterialien, die nicht nur Wärme, sondern auch Schall isolieren. Dazu gehört die fachgerechte Abdichtung gegen Feuchtigkeit – besonders wichtig bei Kellern und Erdgeschossen.",
@@ -85,6 +90,7 @@ export const services: Service[] = [
     id: "sanierung",
     icon: Wrench,
     title: "Sanierung & Reparatur",
+    heroTagline: "Wir retten Ihren Estrich",
     problem: "Ihr Problem: Risse, Hohlstellen oder unebene alte Böden?",
     description: "Wir retten Ihren bestehenden Estrich – oft ohne kompletten Austausch. Gezielt, schnell und kosteneffizient.",
     longDescription: "Nicht jeder beschädigte Estrich muss komplett raus. Mit modernen Sanierungsmethoden können wir Risse reparieren, Hohlstellen verfüllen und unebene Stellen ausgleichen. Das spart Zeit, Geld und Nerven. Unsere Experten analysieren den Schaden vor Ort und empfehlen die wirtschaftlichste Lösung.",
@@ -98,6 +104,7 @@ export const services: Service[] = [
     id: "schnellestrich",
     icon: Zap,
     title: "Schnellestrich",
+    heroTagline: "Belegreif in Rekordzeit",
     problem: "Ihr Problem: Termindrückt, aber der Estrich braucht ewig zum Trocknen?",
     description: "Unser Schnellestrich ist in Rekordzeit belegreif. Perfekt, wenn jeder Tag zählt.",
     longDescription: "Wenn die Zeit drängt, ist Schnellestrich die Lösung. Durch spezielle Bindemittel und Zusätze ist der Estrich deutlich schneller belegreif als herkömmliche Varianten. Ideal für Renovierungen, bei denen Sie schnell wieder einziehen möchten, oder Gewerbeprojekte mit straffen Zeitplänen.",
