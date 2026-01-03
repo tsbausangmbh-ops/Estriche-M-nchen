@@ -49,7 +49,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { apiRequest } from "@/lib/queryClient";
-import heroImage from "@assets/stock_images/professional_constru_6db39a97.jpg";
+import heroImage from "@assets/stock_images/worker_grinding_poli_0bfc1365.jpg";
 import serviceImage1 from "@assets/stock_images/professional_cement__c46ecbd9.jpg";
 import serviceImage2 from "@assets/stock_images/industrial_concrete__a49b9a59.jpg";
 import serviceImage3 from "@assets/stock_images/underfloor_heating_i_495aad7f.jpg";
