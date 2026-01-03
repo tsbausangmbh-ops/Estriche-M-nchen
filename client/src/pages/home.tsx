@@ -53,7 +53,7 @@ import heroImage from "@assets/generated_images/worker_grinding_screed_floor.png
 import serviceImage1 from "@assets/generated_images/worker_leveling_cement_screed.png";
 import serviceImage2 from "@assets/generated_images/polished_industrial_concrete_floor.png";
 import serviceImage3 from "@assets/generated_images/installing_underfloor_heating.png";
-import serviceImage4 from "@assets/generated_images/installing_floor_insulation.png";
+import serviceImage4 from "@assets/generated_images/three_workers_installing_insulation.png";
 import serviceImage5 from "@assets/generated_images/repairing_floor_cracks.png";
 import serviceImage6 from "@assets/generated_images/two_workers_pouring_screed.png";
 
