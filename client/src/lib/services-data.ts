@@ -13,6 +13,12 @@ import serviceImage3 from "@assets/generated_images/two_workers_milling_and_pipe
 import serviceImage4 from "@assets/generated_images/three_workers_installing_insulation.png";
 import serviceImage5 from "@assets/generated_images/repairing_floor_cracks.png";
 import serviceImage6 from "@assets/generated_images/two_workers_pouring_screed.png";
+import galleryQuality from "@assets/generated_images/workers_checking_floor_levelness.png";
+import galleryBeforeAfter from "@assets/generated_images/before_after_floor_renovation.png";
+import galleryHeating from "@assets/generated_images/underfloor_heating_installation_detail.png";
+import galleryLiving from "@assets/generated_images/modern_living_room_polished_floor.png";
+import galleryIndustrial from "@assets/generated_images/industrial_floor_coating_work.png";
+import galleryInsulation from "@assets/generated_images/floor_insulation_installation.png";
 
 export interface Testimonial {
   name: string;
@@ -43,6 +49,20 @@ export interface DINNorm {
   description: string;
 }
 
+export interface GalleryImage {
+  src: string;
+  alt: string;
+  caption: string;
+}
+
+export interface ProjectExample {
+  title: string;
+  location: string;
+  area: string;
+  duration: string;
+  description: string;
+}
+
 export interface Service {
   id: string;
   icon: LucideIcon;
@@ -69,6 +89,10 @@ export interface Service {
   urgency: string;
   image: string;
   price: string;
+  galleryImages: GalleryImage[];
+  projectExamples: ProjectExample[];
+  whyUs: string[];
+  detailedProcess: string;
 }
 
 export const services: Service[] = [
@@ -146,6 +170,24 @@ export const services: Service[] = [
     urgency: "Aktuell haben wir noch 3 freie Termine im Januar. Sichern Sie sich jetzt Ihren Wunschtermin, bevor die Auftragsbücher voll sind.",
     image: serviceImage1,
     price: "25-35",
+    galleryImages: [
+      { src: galleryQuality, alt: "Qualitätskontrolle mit Lasernivellierung", caption: "Präzise Ebenheitsmessung mit modernster Laser-Technik" },
+      { src: galleryBeforeAfter, alt: "Vorher-Nachher Vergleich", caption: "Transformation: Von beschädigtem Altboden zum perfekten Estrich" },
+      { src: galleryLiving, alt: "Fertiges Wohnzimmer mit Estrich", caption: "Das Ergebnis: Ein Boden, der jeden Belag perfekt trägt" }
+    ],
+    projectExamples: [
+      { title: "Neubau Einfamilienhaus", location: "München-Solln", area: "185 m²", duration: "2 Tage", description: "Kompletter Fließestrich für Wohnbereich mit Fußbodenheizung. Belegreife nach 4 Wochen, anschließend Eichenparkett verlegt." },
+      { title: "Dachgeschoss-Ausbau", location: "Schwabing", area: "68 m²", duration: "1 Tag", description: "Leichtestrich auf Holzbalkendecke mit Trittschalldämmung. Gewichtsoptimierte Lösung für den Altbau." },
+      { title: "Gewerbeeinheit Sanierung", location: "München-Laim", area: "320 m²", duration: "3 Tage", description: "Zementestrich C25 für Büroflächen. Ausgleich der Altsubstanz und Höhenanpassung an Bestandsböden." }
+    ],
+    whyUs: [
+      "Über 15 Jahre Erfahrung mit mehr als 1.200 erfolgreich abgeschlossenen Projekten in München und Umgebung",
+      "Eigener Fuhrpark mit Mischfahrzeugen für gleichbleibende Materialqualität direkt auf Ihrer Baustelle",
+      "Meisterbetrieb mit regelmäßigen Schulungen zu den neuesten Verlegetechniken und Materialien",
+      "Transparente Festpreise nach kostenloser Vor-Ort-Besichtigung – keine versteckten Kosten",
+      "Koordination mit anderen Gewerken: Wir stimmen uns mit Ihrem Architekt, Bauleiter und den Folgegewerken ab"
+    ],
+    detailedProcess: "Der Ablauf Ihres Estrichprojekts beginnt mit einer kostenlosen Vor-Ort-Besichtigung, bei der wir den Untergrund prüfen, Höhen messen und Ihre Anforderungen besprechen. Innerhalb von 48 Stunden erhalten Sie ein detailliertes Festpreisangebot. Nach Auftragserteilung koordinieren wir den Termin mit Ihrem Bauzeitplan. Am Verlegetag bereiten unsere Facharbeiter zunächst den Untergrund vor: Reinigung, Ausbesserung von Rissen, Anbringung der Randdämmstreifen. Dann wird der Estrich mit unseren eigenen Mischfahrzeugen angeliefert und fachgerecht eingebracht. Die Oberfläche wird geglättet und abgerieben. Nach der Verlegung kontrollieren wir regelmäßig die Trocknung und dokumentieren die Restfeuchte. Erst wenn der Estrich nachweislich belegreif ist, geben wir ihn für den Bodenbelag frei.",
   },
   {
     id: "industrieboeden",
@@ -221,6 +263,24 @@ export const services: Service[] = [
     urgency: "Industrieboden-Projekte erfordern Vorlauf. Kontaktieren Sie uns jetzt für eine Terminierung in den nächsten 4-6 Wochen.",
     image: serviceImage2,
     price: "45-80",
+    galleryImages: [
+      { src: galleryIndustrial, alt: "Industrieboden Beschichtung", caption: "Nahtlose Epoxid-Beschichtung in einer Produktionshalle" },
+      { src: galleryLiving, alt: "Sichtestrich Wohnbereich", caption: "Geschliffener Sichtestrich im modernen Loft-Design" },
+      { src: galleryQuality, alt: "Qualitätsprüfung", caption: "Ebenheitskontrolle mit Laser-Messtechnik" }
+    ],
+    projectExamples: [
+      { title: "Autohaus Showroom", location: "Unterschleißheim", area: "1.200 m²", duration: "2 Wochen", description: "Hochglanz-Sichtestrich mit Anti-Rutsch-Versiegelung. Befahrbar mit Fahrzeugen bis 3,5t, repräsentativ genug für Premium-Marken." },
+      { title: "Brauerei Lagerhalle", location: "Freising", area: "2.800 m²", duration: "3 Wochen", description: "Säurebeständiger Industrieboden für Getränkeproduktion. Chemikalienbeständig, leicht zu reinigen, HACCP-konform." },
+      { title: "Architekturbüro Loft", location: "Maxvorstadt", area: "340 m²", duration: "1 Woche", description: "Designorientierter Sichtestrich mit sichtbaren Zuschlagstoffen. Minimalistisch, robust und pflegeleicht." }
+    ],
+    whyUs: [
+      "Spezialisiert auf anspruchsvolle Industrie- und Gewerbeprojekte seit über 15 Jahren",
+      "Eigenes Labor für Materialprüfungen und Rezepturanpassungen",
+      "Ausführung auch nachts und am Wochenende, um Produktionsausfälle zu minimieren",
+      "Referenzen von DAX-Unternehmen und mittelständischen Betrieben in ganz Bayern",
+      "Garantierte Einhaltung aller BGR/ASR-Vorschriften für Arbeitssicherheit"
+    ],
+    detailedProcess: "Bei Industrieboden-Projekten beginnen wir mit einer umfassenden Belastungsanalyse: Welche Fahrzeuge fahren über den Boden? Welche Chemikalien werden verwendet? Gibt es besondere Hygieneanforderungen? Basierend auf dieser Analyse erstellen wir ein maßgeschneidertes Konzept. Die Untergrundvorbereitung ist entscheidend – wir kugelstrahlen, fräsen oder schleifen den Altbeton, um optimale Haftung zu gewährleisten. Der Spezialestrich wird dann in einer oder mehreren Schichten aufgebracht, gefolgt von der Oberflächenbehandlung: Schleifen für Sichtestrich, Beschichten für Industrieböden. Zum Abschluss erstellen wir ein vollständiges Prüfprotokoll mit allen relevanten Werten.",
   },
   {
     id: "fussbodenheizung",
@@ -296,6 +356,24 @@ export const services: Service[] = [
     urgency: "Die Heizperiode hat begonnen – und unsere Fräs-Teams sind gefragt. Sichern Sie sich jetzt Ihren Termin für diesen Winter.",
     image: serviceImage3,
     price: "45-65",
+    galleryImages: [
+      { src: galleryHeating, alt: "Heizungsrohre in Dämmung", caption: "Fachgerechte Rohrverlegung in der Dämmschicht" },
+      { src: galleryQuality, alt: "Präzise Fräsarbeiten", caption: "Computergesteuerte Fräsung für optimale Kanaltiefe" },
+      { src: galleryLiving, alt: "Wohnzimmer mit Fußbodenheizung", caption: "Das Ergebnis: Angenehme Wärme von unten" }
+    ],
+    projectExamples: [
+      { title: "Altbau-Nachrüstung", location: "München-Haidhausen", area: "92 m²", duration: "3 Tage", description: "Komplette Fußbodenheizung in bewohnter Altbauwohnung. Bewohner konnten während der Arbeiten in der Wohnung bleiben." },
+      { title: "Einfamilienhaus Erdgeschoss", location: "Pasing", area: "145 m²", duration: "4 Tage", description: "Nachrüstung im Bestand mit Anschluss an bestehende Wärmepumpe. Vorlauftemperatur optimiert für maximale Effizienz." },
+      { title: "Praxisräume", location: "Schwabing", area: "78 m²", duration: "2 Tage", description: "Schnelle Installation in einer Arztpraxis. Arbeiten am Wochenende, um den Praxisbetrieb nicht zu stören." }
+    ],
+    whyUs: [
+      "Spezialisiert auf nachträglichen Einbau von Fußbodenheizungen – unsere Kernkompetenz",
+      "Eigene, staubarme Fräsmaschinen mit integrierter Absaugung",
+      "Zusammenarbeit mit lokalen Heizungsinstallateuren für Komplettservice",
+      "Über 500 erfolgreiche Nachrüstungen in Münchner Altbauten",
+      "Installation auch in bewohnten Objekten – Raum für Raum"
+    ],
+    detailedProcess: "Ihr Weg zur Fußbodenheizung beginnt mit einer Bestandsaufnahme: Wir prüfen den vorhandenen Estrich auf Eignung, messen die Stärke und analysieren den Zustand. Dann erstellen wir einen detaillierten Heizkreisplan mit computergestützter Wärmebedarfsberechnung. Am ersten Arbeitstag entfernen wir den alten Bodenbelag und fräsen die Kanäle. Die Fräsmaschine ist mit einer leistungsstarken Absaugung ausgestattet, sodass kaum Staub entsteht. Am zweiten Tag legen wir die Heizungsrohre ein und verfüllen die Kanäle mit Spezialmörtel. Nach dem Aushärten (ca. 24 Stunden) können Sie den neuen Bodenbelag verlegen lassen. Die Druckprüfung und das Aufheizprotokoll erhalten Sie selbstverständlich dokumentiert.",
   },
   {
     id: "waermedaemmung",
@@ -372,6 +450,24 @@ export const services: Service[] = [
     urgency: "Fördergelder sind begrenzt – handeln Sie jetzt, um von aktuellen BAFA-Zuschüssen zu profitieren.",
     image: serviceImage4,
     price: "15-25",
+    galleryImages: [
+      { src: galleryInsulation, alt: "Dämmplatten werden verlegt", caption: "Professionelle Verlegung hochwertiger Dämmplatten" },
+      { src: galleryQuality, alt: "U-Wert-Messung", caption: "Dokumentierte Messung der Dämmwirkung" },
+      { src: galleryBeforeAfter, alt: "Vorher-Nachher Dämmung", caption: "Deutliche Verbesserung der Energieeffizienz" }
+    ],
+    projectExamples: [
+      { title: "Kellerdeckendämmung", location: "Grünwald", area: "85 m²", duration: "2 Tage", description: "80 mm XPS-Dämmung unter dem Erdgeschoss. Energieeinsparung von 28% bereits im ersten Winter messbar." },
+      { title: "Bodenplattendämmung Neubau", location: "Garching", area: "165 m²", duration: "1 Tag", description: "120 mm EPS-Dämmung mit Feuchtigkeitssperre nach GEG. Grundlage für KfW-55-Standard." },
+      { title: "Altbausanierung mit Trittschall", location: "Lehel", area: "72 m²", duration: "2 Tage", description: "Kombidämmung für Wärme- und Schallschutz in denkmalgeschütztem Gebäude. Minimalste Aufbauhöhe mit Vakuumdämmung." }
+    ],
+    whyUs: [
+      "Zertifizierte Energieberatung mit Fördermittel-Expertise (KfW, BAFA)",
+      "Berechnung der optimalen Dämmstärke nach aktuellem GEG",
+      "Partnerschaft mit führenden Dämmstoff-Herstellern für beste Materialqualität",
+      "Dokumentation aller U-Werte für Ihre Unterlagen und Fördermittelanträge",
+      "Kombination aus Wärme-, Schall- und Feuchtigkeitsschutz aus einer Hand"
+    ],
+    detailedProcess: "Energetische Dämmung beginnt bei uns mit einer Wärmebedarfsanalyse: Wir berechnen den aktuellen U-Wert Ihres Bodens und die erforderliche Dämmstärke nach GEG. Bei Förderfähigkeit unterstützen wir Sie beim Antrag. Die Ausführung startet mit der Untergrundvorbereitung und dem Verlegen der Dampfsperre gegen aufsteigende Feuchtigkeit. Dann bringen wir die Dämmplatten in der berechneten Stärke ein – fugenlos und wärmebrückenfrei. Die Randdämmstreifen sorgen für Schallschutz und Dehnungsfugen. Nach der Trennlage folgt der Estrich. Zum Abschluss dokumentieren wir alle Dämmwerte für Ihre Unterlagen.",
   },
   {
     id: "sanierung",
@@ -448,6 +544,24 @@ export const services: Service[] = [
     urgency: "Je früher Sie handeln, desto geringer der Schaden. Vereinbaren Sie jetzt Ihre kostenlose Schadensanalyse.",
     image: serviceImage5,
     price: "20-40",
+    galleryImages: [
+      { src: galleryBeforeAfter, alt: "Vorher-Nachher Sanierung", caption: "Dramatische Transformation: Von gerissen zu makellos" },
+      { src: galleryQuality, alt: "Rissdiagnose", caption: "Professionelle Schadensanalyse vor der Reparatur" },
+      { src: galleryLiving, alt: "Sanierter Boden", caption: "Fertig sanierter Estrich – bereit für den neuen Belag" }
+    ],
+    projectExamples: [
+      { title: "Wasserschaden-Sanierung", location: "Bogenhausen", area: "45 m²", duration: "1 Woche", description: "Technische Trocknung nach Rohrbruch, anschließend Hohlstellen-Verpressung. Versicherungsschaden dokumentiert und reguliert." },
+      { title: "Rissanierung Gewerbe", location: "Trudering", area: "280 m²", duration: "3 Tage", description: "Großflächige Rissinjection mit Epoxidharz in Lagerhalle. Ursache: Setzrisse nach Umbau. Belastbar nach 48 Stunden." },
+      { title: "Altbau-Estrich rettung", location: "Sendling", area: "68 m²", duration: "2 Tage", description: "Hohlstellen unter 30% der Fläche. Verpressung statt Neuaufbau – Ersparnis von über 8.000€." }
+    ],
+    whyUs: [
+      "Kostenlose Erstdiagnose vor Ort – ehrliche Einschätzung garantiert",
+      "Spezialisiert auf Rettung statt Abriss – wirtschaftlichste Lösung",
+      "24h-Notfall-Service bei Wasserschäden",
+      "Direkte Abwicklung mit Versicherungen bei regulierbaren Schäden",
+      "5 Jahre Gewährleistung auch auf Reparaturen"
+    ],
+    detailedProcess: "Bei Estrichschäden zählt schnelles Handeln. Unser Notfall-Team ist innerhalb von 24 Stunden bei Ihnen. Wir beginnen mit einer systematischen Schadensanalyse: Klopfprobe für Hohlstellen, Rissmusteranalyse, Feuchtemessung. Dann ermitteln wir die Ursache – nur wenn die Ursache behoben wird, hält die Reparatur. Bei Hohlstellen bohren wir gezielt Injektionslöcher und pressen Kunstharz unter Druck ein. Risse werden gefräst, gereinigt und mit Spezialharz verfüllt. Nach Aushärtung (24-48 Stunden) schleifen wir die Oberfläche plan. Sie erhalten ein vollständiges Protokoll für Ihre Unterlagen oder die Versicherung.",
   },
   {
     id: "schnellestrich",
@@ -523,6 +637,24 @@ export const services: Service[] = [
     urgency: "Zeitkritisches Projekt? Rufen Sie jetzt an – wir haben oft kurzfristig freie Kapazitäten für Schnellestrich-Aufträge.",
     image: serviceImage6,
     price: "35-50",
+    galleryImages: [
+      { src: galleryQuality, alt: "Feuchtemessung", caption: "Dokumentierte CM-Messung für garantierte Belegreife" },
+      { src: galleryBeforeAfter, alt: "Schnelle Transformation", caption: "Von Rohbau zu belegreif in nur 3 Tagen" },
+      { src: galleryLiving, alt: "Fertiger Schnellestrich", caption: "Bereit für den Bodenbelag – früher als geplant" }
+    ],
+    projectExamples: [
+      { title: "Ladenbau Neueröffnung", location: "Maximilianstraße", area: "180 m²", duration: "1 Tag", description: "1-Tages-Estrich für Boutique-Neueröffnung. Begehbar nach 6 Stunden, Bodenbelag am nächsten Tag." },
+      { title: "Wohnungsrenovierung", location: "Schwabing", area: "95 m²", duration: "1 Tag + 3 Tage Trocknung", description: "Schnellestrich für termingerechten Einzug. Familie konnte wie geplant umziehen." },
+      { title: "Hotel-Renovierung", location: "Altstadt", area: "420 m²", duration: "3 Tage", description: "15 Zimmer während der Nebensaison renoviert. Minimal-invasiv, Hotelbetrieb lief weiter." }
+    ],
+    whyUs: [
+      "Spezialisiert auf zeitkritische Projekte seit über 10 Jahren",
+      "Eigene Schnellestrich-Rezepturen für optimale Ergebnisse",
+      "Flexible Terminierung – auch kurzfristig und am Wochenende",
+      "Garantierte Belegreife zum vereinbarten Termin",
+      "Dokumentierte CM-Messung für Ihre Planungssicherheit"
+    ],
+    detailedProcess: "Bei zeitkritischen Projekten stimmen wir zunächst den exakten Zeitplan mit allen beteiligten Gewerken ab. Am Verlegetag bringen wir den Schnellestrich mit speziellen Bindemitteln ein. Entscheidend für schnelle Trocknung ist die Klimasteuerung: Wir optimieren Temperatur und Luftfeuchtigkeit im Raum. Täglich messen wir die Restfeuchte und dokumentieren den Fortschritt. Sobald der Estrich belegreif ist (je nach System 1-5 Tage), erhalten Sie eine schriftliche Freigabe mit allen Messwerten. Das nächste Gewerk kann sofort starten.",
   },
 ];
 
