@@ -14,15 +14,11 @@ import {
   ChevronRight,
   Layers,
   Thermometer,
-  Droplets,
   Shield,
   Wrench,
   Zap,
   Building2,
-  Home as HomeIcon,
-  Users,
-  Timer,
-  FileCheck
+  Users
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -67,27 +63,27 @@ type ContactFormData = z.infer<typeof contactFormSchema>;
 const services = [
   {
     icon: Layers,
-    title: "Zementestrich",
-    description: "Der Klassiker: robust, universell einsetzbar, ideal für Wohn- und Gewerbeflächen. Auf Wunsch mit Beschleuniger oder als Verbundestrich.",
+    title: "Zementestrich und Fließestrich",
+    description: "Hochwertige Estrichlösungen für Neubau und Renovierung. Robuste Böden für höchste Ansprüche mit modernster Verarbeitungstechnik.",
     features: ["Neubau & Sanierung", "Hohe Belastbarkeit", "Perfekte Grundlage für Beläge"],
   },
   {
-    icon: Droplets,
-    title: "Anhydritestrich",
-    description: "Besonders beliebt im Innenbereich: sehr gute Ebenheit, angenehmes Laufgefühl, ideal in Kombination mit Fußbodenheizung.",
-    features: ["Sehr plan & glatt", "Top für Fußbodenheizung", "Schnelle Verarbeitung"],
+    icon: Building2,
+    title: "Industrieböden und Sichtestrich",
+    description: "Robuste Böden für gewerbliche und industrielle Anforderungen. Moderne Optik kombiniert mit maximaler Funktionalität.",
+    features: ["Gewerbeflächen", "Hochbelastbar", "Designorientiert"],
   },
   {
     icon: Thermometer,
-    title: "Heizestrich",
-    description: "Estrich auf Fußbodenheizung braucht Erfahrung: richtige Überdeckung, Randzonen, Aufheizprotokoll und koordinierte Trocknung.",
-    features: ["Aufheiz-/Funktionsheizen", "Risse vermeiden", "Gewerkeabstimmung"],
+    title: "Fußbodenheizung einfräsen",
+    description: "Fußbodenheizung nachträglich einbauen, ohne den bestehenden Estrich komplett zu entfernen – schnell, sauber und effizient.",
+    features: ["Nachträglicher Einbau", "Kostensparend", "Schnelle Umsetzung"],
   },
   {
     icon: Shield,
-    title: "Dämmung & Bodenaufbau",
-    description: "Trittschalldämmung, Wärmedämmung, PE-Folie, Randdämmstreifen – normgerechter Aufbau inklusive Höhenausgleich.",
-    features: ["Trittschall reduzieren", "Wärmeverluste minimieren", "Saubere Anschlüsse"],
+    title: "Wärmedämmung & Abdichtung",
+    description: "Optimale Lösungen für den energetischen Wärmeschutz Ihres Gebäudes. Normgerechter Aufbau für beste Dämmwerte.",
+    features: ["Energieeffizienz", "Trittschalldämmung", "Feuchtigkeitsschutz"],
   },
   {
     icon: Wrench,
@@ -99,7 +95,7 @@ const services = [
     icon: Zap,
     title: "Schnellestrich",
     description: "Wenn's schnell gehen muss: mit abgestimmten Zusatzmitteln und sauberer Dokumentation schneller zur Belegreife.",
-    features: ["Beschleuniger nach Bedarf", "Koordination mit Folgegewerken", "Planung statt Risiko"],
+    features: ["Beschleuniger nach Bedarf", "Koordination mit Folgegewerken", "Termingerechte Umsetzung"],
   },
 ];
 
@@ -382,15 +378,16 @@ export default function Home() {
             {/* Hero Content */}
             <div className="lg:col-span-3 space-y-6">
               <Badge variant="secondary" className="text-sm">
-                Estricharbeiten in München
+                Ihr Experte für hochwertige Estricharbeiten
               </Badge>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]">
-                Plan. Tragfähig. Termintreu.
-                <span className="block text-primary mt-2">Estrich & Bodenaufbau vom Profi.</span>
+                Estrich München
+                <span className="block text-primary mt-2">Professionell. Termingerecht. Zuverlässig.</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                Ob Neubau, Sanierung oder Fußbodenheizung: Wir erstellen den passenden Estrichaufbau
-                fachgerecht, sauber und mit klarer Kommunikation – vom Aufmaß bis zur Abnahme.
+                Sie suchen einen zuverlässigen Partner für professionelle Estricharbeiten in München? 
+                Mit langjähriger Erfahrung, höchster Qualität und modernster Technik bieten wir Ihnen 
+                maßgeschneiderte Lösungen rund um Estrich und Fußbodenheizung.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-2">
@@ -416,29 +413,29 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t mt-8" data-testid="hero-trust-row">
                 <div className="flex items-start gap-3" data-testid="trust-item-0">
                   <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-5 h-5 text-primary" />
+                    <MapPin className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <div className="font-semibold text-sm" data-testid="text-trust-title-0">Saubere Baustelle</div>
-                    <div className="text-xs text-muted-foreground">Abkleben, Schutz, Ordnung</div>
+                    <div className="font-semibold text-sm" data-testid="text-trust-title-0">Regionale Präsenz</div>
+                    <div className="text-xs text-muted-foreground">München & Umgebung</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3" data-testid="trust-item-1">
                   <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Timer className="w-5 h-5 text-primary" />
+                    <Users className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <div className="font-semibold text-sm" data-testid="text-trust-title-1">Feste Termine</div>
-                    <div className="text-xs text-muted-foreground">Planung mit Puffer</div>
+                    <div className="font-semibold text-sm" data-testid="text-trust-title-1">Fachkompetenz</div>
+                    <div className="text-xs text-muted-foreground">Qualifizierte Fachleute</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3" data-testid="trust-item-2">
                   <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <FileCheck className="w-5 h-5 text-primary" />
+                    <Zap className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <div className="font-semibold text-sm" data-testid="text-trust-title-2">Gerade Flächen</div>
-                    <div className="text-xs text-muted-foreground">Präzise Höhen & Ebenheit</div>
+                    <div className="font-semibold text-sm" data-testid="text-trust-title-2">Innovative Technik</div>
+                    <div className="text-xs text-muted-foreground">Modernste Verfahren</div>
                   </div>
                 </div>
               </div>
@@ -568,37 +565,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust Badges */}
-      <section className="py-12 border-y bg-muted/30">
+      {/* Statistics Section */}
+      <section className="py-16 border-y bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center" data-testid="badge-privat-gewerbe">
-              <div className="w-12 h-12 mx-auto mb-3 rounded-md bg-primary/10 flex items-center justify-center">
-                <HomeIcon className="w-6 h-6 text-primary" />
-              </div>
-              <div className="font-semibold">Privat & Gewerbe</div>
-              <div className="text-sm text-muted-foreground">Wohnungen, Häuser, Hallen</div>
+          <div className="text-center mb-10">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2">Estrich und Fußbodenheizung aus einer Hand</h2>
+            <p className="text-muted-foreground">Wir bieten Ihnen die komplette Bandbreite der Estricharbeiten – von klassischem Zementestrich bis hin zu speziellen Lösungen wie Sichtestrich und Industrieestrich.</p>
+          </div>
+          <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto">
+            <div className="text-center" data-testid="stat-laufende">
+              <div className="text-4xl sm:text-5xl font-bold text-primary mb-2">48</div>
+              <div className="text-sm text-muted-foreground">Laufende Projekte</div>
             </div>
-            <div className="text-center" data-testid="badge-estriche">
-              <div className="w-12 h-12 mx-auto mb-3 rounded-md bg-primary/10 flex items-center justify-center">
-                <Layers className="w-6 h-6 text-primary" />
-              </div>
-              <div className="font-semibold">Alle gängigen Estriche</div>
-              <div className="text-sm text-muted-foreground">Zement, Anhydrit, Fließestrich</div>
+            <div className="text-center" data-testid="stat-abgeschlossen">
+              <div className="text-4xl sm:text-5xl font-bold text-primary mb-2">282</div>
+              <div className="text-sm text-muted-foreground">Abgeschlossene Projekte</div>
             </div>
-            <div className="text-center" data-testid="badge-region">
-              <div className="w-12 h-12 mx-auto mb-3 rounded-md bg-primary/10 flex items-center justify-center">
-                <MapPin className="w-6 h-6 text-primary" />
-              </div>
-              <div className="font-semibold">Region München</div>
-              <div className="text-sm text-muted-foreground">Stadt & Umland (25 km)</div>
-            </div>
-            <div className="text-center" data-testid="badge-beratung">
-              <div className="w-12 h-12 mx-auto mb-3 rounded-md bg-primary/10 flex items-center justify-center">
-                <Users className="w-6 h-6 text-primary" />
-              </div>
-              <div className="font-semibold">Transparente Beratung</div>
-              <div className="text-sm text-muted-foreground">Aufbau, Trocknung, Belegreife</div>
+            <div className="text-center" data-testid="stat-partner">
+              <div className="text-4xl sm:text-5xl font-bold text-primary mb-2">35</div>
+              <div className="text-sm text-muted-foreground">Business-Partner</div>
             </div>
           </div>
         </div>
@@ -610,8 +595,8 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Unsere Leistungen</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Wir planen den passenden Bodenaufbau, stimmen Höhen mit angrenzenden Gewerken ab
-              und liefern eine saubere, ebene Fläche als Basis für Parkett, Fliesen, Vinyl & Co.
+              Unsere Leistungspalette ist breit gefächert – von klassischem Zementestrich bis hin 
+              zu speziellen Lösungen wie Sichtestrich und nachträglichem Fräsen von Fußbodenheizungen.
             </p>
           </div>
 
@@ -1015,10 +1000,10 @@ export default function Home() {
             <div data-testid="footer-services">
               <h4 className="font-semibold mb-4">Leistungen</h4>
               <ul className="space-y-2 text-sm text-background/70">
-                <li>Zementestrich</li>
-                <li>Anhydritestrich</li>
-                <li>Heizestrich</li>
-                <li>Dämmung & Bodenaufbau</li>
+                <li>Zementestrich & Fließestrich</li>
+                <li>Industrieböden & Sichtestrich</li>
+                <li>Fußbodenheizung einfräsen</li>
+                <li>Wärmedämmung & Abdichtung</li>
                 <li>Sanierung & Reparatur</li>
               </ul>
             </div>
