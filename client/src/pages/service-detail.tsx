@@ -9,7 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { CheckCircle2, ChevronRight, ArrowLeft, Phone, Quote, Shield, Clock, Award, AlertTriangle, Users, Star, MapPin } from "lucide-react";
+import { CheckCircle2, ChevronRight, ArrowLeft, Phone, Quote, Shield, Clock, Award, AlertTriangle, Users, Star, MapPin, Ruler, Calendar, Building2, ThumbsUp } from "lucide-react";
 
 export default function ServiceDetail() {
   const params = useParams();
@@ -261,7 +261,7 @@ export default function ServiceDetail() {
       <section className="py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold mb-8">Unser Ablauf</h2>
-          <div className="space-y-0">
+          <div className="space-y-0 mb-8">
             {service.process.map((step, index) => (
               <div key={index} className="flex gap-4">
                 <div className="flex flex-col items-center">
@@ -275,6 +275,91 @@ export default function ServiceDetail() {
                 <div className="pb-12">
                   <p className="font-medium pt-2">{step}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+          <div className="bg-muted rounded-lg p-6">
+            <h3 className="font-semibold mb-3">Detaillierter Ablauf</h3>
+            <p className="text-muted-foreground leading-relaxed">{service.detailedProcess}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-accent">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-3">
+            <ThumbsUp className="w-6 h-6 text-primary" />
+            <h2 className="text-2xl font-bold">Warum Estrich München?</h2>
+          </div>
+          <p className="text-muted-foreground mb-8 max-w-2xl">
+            Was uns von anderen Estrichlegern unterscheidet
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {service.whyUs.map((reason, index) => (
+              <div key={index} className="flex items-start gap-4 p-5 bg-card rounded-lg border">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 className="w-4 h-4 text-primary" />
+                </div>
+                <p className="text-sm leading-relaxed">{reason}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-3">
+            <Building2 className="w-6 h-6 text-primary" />
+            <h2 className="text-2xl font-bold">Referenzprojekte</h2>
+          </div>
+          <p className="text-muted-foreground mb-8">
+            Ausgewählte Projekte, die unsere Expertise zeigen
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {service.projectExamples.map((project, index) => (
+              <Card key={index} className="overflow-hidden">
+                <CardContent className="p-5">
+                  <h3 className="font-semibold mb-3">{project.title}</h3>
+                  <div className="grid grid-cols-3 gap-2 mb-4 text-xs">
+                    <div className="flex items-center gap-1 text-muted-foreground">
+                      <MapPin className="w-3 h-3" />
+                      <span>{project.location}</span>
+                    </div>
+                    <div className="flex items-center gap-1 text-muted-foreground">
+                      <Ruler className="w-3 h-3" />
+                      <span>{project.area}</span>
+                    </div>
+                    <div className="flex items-center gap-1 text-muted-foreground">
+                      <Calendar className="w-3 h-3" />
+                      <span>{project.duration}</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-muted">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold mb-3">Bildergalerie</h2>
+          <p className="text-muted-foreground mb-8">
+            Einblicke in unsere Arbeit
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {service.galleryImages.map((image, index) => (
+              <div key={index} className="group">
+                <div className="relative rounded-xl overflow-hidden mb-3">
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground text-center">{image.caption}</p>
               </div>
             ))}
           </div>
