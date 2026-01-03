@@ -511,10 +511,10 @@ export default function ServiceDetail() {
 
       <section className="py-6 bg-foreground text-primary-foreground">
         <div className="px-4 sm:px-8 lg:px-12 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-sky-300">
             Bereit für Ihren neuen Boden?
           </h2>
-          <p className="text-primary-foreground/70 mb-6">
+          <p className="text-sky-200 mb-6">
             Kostenlose Beratung, verbindliches Festpreis-Angebot, saubere Arbeit.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
