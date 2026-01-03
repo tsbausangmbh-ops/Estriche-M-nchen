@@ -291,7 +291,7 @@ export default function ServiceDetail() {
             Was uns von anderen Estrichlegern unterscheidet
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {service.whyUs.map((reason, index) => (
+            {service.whyUs.slice(0, 6).map((reason, index) => (
               <div key={index} className="flex items-start gap-4 p-5 bg-card rounded-lg border">
                 <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <CheckCircle2 className="w-4 h-4 text-primary" />
