@@ -264,7 +264,7 @@ export default function Preise() {
               <div className="grid sm:grid-cols-2 gap-4">
                 {additionalServices.map((service, index) => (
                   <div key={index} className="flex justify-between items-center py-2 border-b last:border-b-0">
-                    <span className="text-sm">{service.name}</span>
+                    <span className="text-sm text-muted-foreground">{service.name}</span>
                     <Badge variant={service.price === "0 €" || service.price === "inklusive" ? "default" : "secondary"}>
                       {service.price}
                     </Badge>
