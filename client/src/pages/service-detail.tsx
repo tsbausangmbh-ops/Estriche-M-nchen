@@ -393,7 +393,7 @@ export default function ServiceDetail() {
                   Profitieren Sie von unserer langjährigen Erfahrung und dem Einsatz modernster Materialien für ein optimales Ergebnis.
                 </p>
                 <ul className="space-y-3">
-                  {service.benefits.slice(0, 4).map((benefit, index) => (
+                  {service.benefits.slice(0, 6).map((benefit, index) => (
                     <li key={index} className={`flex items-start gap-3 p-2 rounded-lg ${index === 0 ? 'bg-primary/5 border border-primary/20' : ''}`}>
                       <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${index === 0 ? 'bg-primary text-primary-foreground' : 'bg-primary/10'}`}>
                         <CheckCircle2 className="w-3 h-3" />
@@ -422,7 +422,7 @@ export default function ServiceDetail() {
                   Unsere Arbeit basiert auf präzisen technischen Vorgaben für ein langlebiges und qualitativ hochwertiges Ergebnis.
                 </p>
                 <ul className="space-y-3">
-                  {service.technicalDetails.slice(0, 4).map((detail, index) => (
+                  {service.technicalDetails.slice(0, 6).map((detail, index) => (
                     <li key={index} className={`flex items-start gap-3 p-2 rounded-lg ${index === 0 ? 'bg-primary/5 border border-primary/20' : ''}`}>
                       <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${index === 0 ? 'bg-primary text-primary-foreground' : 'bg-primary/10'}`}>
                         <CheckCircle2 className="w-3 h-3" />

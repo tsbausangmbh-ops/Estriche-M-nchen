@@ -125,7 +125,7 @@ export const services: Service[] = [
       "Persönlicher Projektleiter von Anfang bis Ende"
     ],
     features: ["Perfekte Ebenheit garantiert", "Für jeden Bodenbelag geeignet", "Schneller als Sie denken"],
-    benefits: ["Hohe Druckfestigkeit", "Feuchtigkeitsbeständig", "Wirtschaftlich bei großen Flächen", "Lange Lebensdauer"],
+    benefits: ["Hohe Druckfestigkeit", "Feuchtigkeitsbeständig", "Wirtschaftlich bei großen Flächen", "Lange Lebensdauer", "Für jeden Bodenbelag geeignet", "Optimale Lastabtragung"],
     included: [
       { title: "Untergrundvorbereitung", description: "Reinigung und Prüfung des Rohbodens, Ausbesserung von Rissen und Unebenheiten, Grundierung bei Bedarf" },
       { title: "Randdämmstreifen", description: "Umlaufende Dämmstreifen an allen Wänden zur Schallentopllung und als Dehnungsfuge" },
@@ -218,7 +218,7 @@ export const services: Service[] = [
       "Ausführung auch am Wochenende möglich"
     ],
     features: ["Extreme Belastbarkeit", "Optisch ein Hingucker", "Langlebig und wartungsarm"],
-    benefits: ["Hohe Abriebfestigkeit", "Chemikalienbeständig", "Fugenlose große Flächen möglich", "Pflegeleicht"],
+    benefits: ["Hohe Abriebfestigkeit", "Chemikalienbeständig", "Fugenlose große Flächen möglich", "Pflegeleicht", "Staubfrei und hygienisch", "Schlagfest und belastbar"],
     included: [
       { title: "Belastungsanalyse", description: "Ermittlung der Anforderungen: Radlasten, Chemikalien, Temperaturwechsel, Hygiene" },
       { title: "Untergrundvorbereitung", description: "Kugelstrahlen, Fräsen oder Schleifen des Untergrunds für optimale Haftung" },
@@ -311,7 +311,7 @@ export const services: Service[] = [
       "Kompatibel mit allen gängigen Wärmepumpen"
     ],
     features: ["Kein kompletter Abriss nötig", "In wenigen Tagen erledigt", "Ab 45€/m² möglich"],
-    benefits: ["Gleichmäßige Wärmeverteilung", "Energieeffizienter als Heizkörper", "Mehr Platz im Raum", "Allergikerfreundlich"],
+    benefits: ["Gleichmäßige Wärmeverteilung", "Energieeffizienter als Heizkörper", "Mehr Platz im Raum", "Allergikerfreundlich", "Fußwarmer Wohnkomfort", "Unsichtbare Heiztechnik"],
     included: [
       { title: "Heizlastberechnung", description: "Präzise Ermittlung des Wärmebedarfs für jeden Raum als Basis für die Planung" },
       { title: "Verlegungsplan", description: "Computergestützter Verlegungsplan mit optimaler Rohranordnung und Heizkreisen" },
@@ -404,7 +404,7 @@ export const services: Service[] = [
       "Fördermittel-Beratung für KfW und BAFA"
     ],
     features: ["Heizkosten sparen", "Trittschall reduzieren", "Normgerechter Aufbau"],
-    benefits: ["Bis zu 30% Energieeinsparung", "Verbesserter Wohnkomfort", "Schallschutz inklusive", "Feuchtigkeitsschutz"],
+    benefits: ["Bis zu 30% Energieeinsparung", "Verbesserter Wohnkomfort", "Schallschutz inklusive", "Feuchtigkeitsschutz", "Reduzierte Heizkosten", "Nachhaltige Bauweise"],
     included: [
       { title: "Wärmebedarfsanalyse", description: "Berechnung des U-Werts und der erforderlichen Dämmstärke nach EnEV/GEG" },
       { title: "Untergrundvorbereitung", description: "Reinigung, Ausgleich von Unebenheiten und Grundierung" },
@@ -498,7 +498,7 @@ export const services: Service[] = [
       "Garantie auch auf Reparaturarbeiten"
     ],
     features: ["Diagnose vor Ort", "Oft günstiger als Neubau", "Schnelle Lösung"],
-    benefits: ["Kein Komplettabriss nötig", "Kürzere Bauzeit", "Kostengünstiger", "Weniger Schmutz"],
+    benefits: ["Kein Komplettabriss nötig", "Kürzere Bauzeit", "Kostengünstiger", "Weniger Schmutz", "Bestandsschutz erhalten", "Schnelle Wiedernutzung"],
     included: [
       { title: "Schadensanalyse", description: "Visuelle Inspektion, Klopfprobe, Feuchtemessung und Rissmusteranalyse" },
       { title: "Ursachenermittlung", description: "Untersuchung der Schadensursache (Feuchtigkeit, Bewegung, Materialfehler)" },
@@ -592,7 +592,7 @@ export const services: Service[] = [
       "Auch kurzfristige Termine möglich"
     ],
     features: ["Bis zu 50% schneller", "Gleiche Qualität", "Ideal bei Zeitdruck"],
-    benefits: ["Belegreif in 1-3 Tagen", "Keine Qualitätseinbußen", "Planungssicherheit", "Frühere Nutzung möglich"],
+    benefits: ["Belegreif in 1-3 Tagen", "Keine Qualitätseinbußen", "Planungssicherheit", "Frühere Nutzung möglich", "Termingarantie für Folgegerwerke", "Ideal für Renovierungen"],
     included: [
       { title: "Terminplanung", description: "Abstimmung mit allen Gewerken für einen nahtlosen Ablauf" },
       { title: "Materialauswahl", description: "Wahl des optimalen Schnellestrichsystems für Ihre Anforderungen" },
