@@ -390,35 +390,31 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section id="hero" className="relative py-16 lg:py-24 overflow-hidden">
+      <section id="hero" className="relative py-20 lg:py-32 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid lg:grid-cols-5 gap-12 items-start">
             {/* Hero Content */}
-            <div className="lg:col-span-3 space-y-6 bg-background/90 backdrop-blur-sm p-8 rounded-lg">
-              <Badge variant="secondary" className="text-sm">
-                Schluss mit Baustress und Terminproblemen
+            <div className="lg:col-span-3 space-y-8">
+              <Badge variant="outline" className="text-sm border-primary/30 bg-primary/5 text-primary font-medium tracking-wide">
+                Estrich-Experten seit 2008
               </Badge>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05]">
                 Ihr Estrich-Problem?
-                <span className="block text-primary mt-2">Wir lösen es. Garantiert.</span>
+                <span className="block text-primary mt-3">Wir lösen es. Garantiert.</span>
               </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
+              <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
                 <strong className="text-foreground">Kennen Sie das?</strong> Handwerker, die nicht erscheinen. 
-                Termine, die platzen. Böden, die nicht eben sind. <strong className="text-foreground">Das muss nicht sein.</strong> 
+                Termine, die platzen. Böden, die nicht eben sind. <strong className="text-foreground">Das muss nicht sein.</strong>
+              </p>
+              <p className="text-lg text-foreground max-w-xl leading-relaxed">
                 Stellen Sie sich vor: Ein perfekt ebener Estrich, termingerecht geliefert, ohne Stress – 
                 so dass Sie endlich mit dem Verlegen beginnen können.
               </p>
-
-              <div className="bg-primary/5 border border-primary/20 rounded-md p-4 my-4">
-                <p className="text-sm font-medium flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span><strong>282+ zufriedene Kunden</strong> in München vertrauen uns bereits – wann dürfen wir auch Ihnen helfen?</span>
-                </p>
-              </div>
 
               <div className="flex flex-wrap gap-4 pt-2">
                 <Button 
@@ -440,46 +436,31 @@ export default function Home() {
               </div>
 
               {/* Trust Row - Pain Points Solved */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t mt-8" data-testid="hero-trust-row">
-                <div className="flex items-start gap-3" data-testid="trust-item-0">
-                  <div className="w-10 h-10 rounded-md bg-green-500/10 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-5 h-5 text-green-600" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-sm" data-testid="text-trust-title-0">Nie wieder Terminärger</div>
-                    <div className="text-xs text-muted-foreground">Wir halten, was wir versprechen</div>
-                  </div>
+              <div className="flex flex-wrap gap-6 pt-8" data-testid="hero-trust-row">
+                <div className="flex items-center gap-2" data-testid="trust-item-0">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span className="text-sm font-medium" data-testid="text-trust-title-0">Termingarantie</span>
                 </div>
-                <div className="flex items-start gap-3" data-testid="trust-item-1">
-                  <div className="w-10 h-10 rounded-md bg-green-500/10 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-5 h-5 text-green-600" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-sm" data-testid="text-trust-title-1">Keine bösen Überraschungen</div>
-                    <div className="text-xs text-muted-foreground">Festpreis-Garantie vorab</div>
-                  </div>
+                <div className="flex items-center gap-2" data-testid="trust-item-1">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span className="text-sm font-medium" data-testid="text-trust-title-1">Festpreis vorab</span>
                 </div>
-                <div className="flex items-start gap-3" data-testid="trust-item-2">
-                  <div className="w-10 h-10 rounded-md bg-green-500/10 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-5 h-5 text-green-600" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-sm" data-testid="text-trust-title-2">Endlich perfekte Böden</div>
-                    <div className="text-xs text-muted-foreground">Plan, eben, belegreif</div>
-                  </div>
+                <div className="flex items-center gap-2" data-testid="trust-item-2">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span className="text-sm font-medium" data-testid="text-trust-title-2">282+ Kunden</span>
                 </div>
               </div>
             </div>
 
             {/* Hero Form */}
-            <Card className="lg:col-span-2 shadow-lg border-primary/20" data-testid="card-hero-form">
+            <Card className="lg:col-span-2 shadow-xl border-0 bg-card/95 backdrop-blur-sm" data-testid="card-hero-form">
               <CardHeader className="pb-4">
-                <div className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-md w-fit mb-2">
+                <Badge className="w-fit mb-3">
                   Kostenlos & Unverbindlich
-                </div>
-                <CardTitle className="text-xl">Ihr persönliches Angebot in 24h</CardTitle>
-                <p className="text-sm text-muted-foreground">
-                  Nur 60 Sekunden – und Sie wissen, was Ihr Projekt kostet. Ohne Risiko.
+                </Badge>
+                <CardTitle className="text-2xl">Ihr Angebot in 24h</CardTitle>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  60 Sekunden ausfüllen, verbindlichen Preis erhalten. Kein Risiko, keine Verpflichtung.
                 </p>
               </CardHeader>
               <CardContent>
@@ -600,62 +581,68 @@ export default function Home() {
       </section>
 
       {/* Statistics Banner - Social Proof */}
-      <div className="bg-primary py-4 border-y">
+      <div className="bg-muted/50 py-6 border-y">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
-            <Badge variant="secondary" className="bg-primary-foreground/20 text-primary-foreground border-0 text-sm py-1.5 px-4" data-testid="stat-laufende">
-              <span className="font-bold mr-1.5">48</span> Aktuelle Projekte
-            </Badge>
-            <Badge variant="secondary" className="bg-primary-foreground/20 text-primary-foreground border-0 text-sm py-1.5 px-4" data-testid="stat-abgeschlossen">
-              <span className="font-bold mr-1.5">282+</span> Zufriedene Kunden
-            </Badge>
-            <Badge variant="secondary" className="bg-primary-foreground/20 text-primary-foreground border-0 text-sm py-1.5 px-4" data-testid="stat-partner">
-              <span className="font-bold mr-1.5">100%</span> Terminzuverlässigkeit
-            </Badge>
+          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-16">
+            <div className="text-center" data-testid="stat-laufende">
+              <div className="text-3xl font-bold text-primary">48</div>
+              <div className="text-xs text-muted-foreground uppercase tracking-wide mt-1">Aktuelle Projekte</div>
+            </div>
+            <div className="w-px h-10 bg-border hidden sm:block" />
+            <div className="text-center" data-testid="stat-abgeschlossen">
+              <div className="text-3xl font-bold text-primary">282+</div>
+              <div className="text-xs text-muted-foreground uppercase tracking-wide mt-1">Zufriedene Kunden</div>
+            </div>
+            <div className="w-px h-10 bg-border hidden sm:block" />
+            <div className="text-center" data-testid="stat-partner">
+              <div className="text-3xl font-bold text-primary">100%</div>
+              <div className="text-xs text-muted-foreground uppercase tracking-wide mt-1">Terminzuverlässigkeit</div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Services Section */}
-      <section id="leistungen" className="py-20">
+      <section id="leistungen" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unsere Leistungen</p>
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">So lösen wir Ihr Boden-Problem</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               Egal welche Herausforderung – wir haben die passende Lösung. Profitieren Sie von unserer 
               Erfahrung aus über 282 erfolgreich abgeschlossenen Projekten.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="overflow-hidden"
+                className="overflow-visible group"
                 data-testid={`card-service-${index}`}
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-52 overflow-hidden rounded-t-lg">
                   <img 
                     src={service.image} 
                     alt={service.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/20 to-transparent" />
                   <div className="absolute bottom-4 left-4">
-                    <div className="w-10 h-10 rounded-md bg-primary flex items-center justify-center">
-                      <service.icon className="w-5 h-5 text-primary-foreground" />
+                    <div className="w-12 h-12 rounded-lg bg-primary/90 backdrop-blur-sm flex items-center justify-center shadow-lg">
+                      <service.icon className="w-6 h-6 text-primary-foreground" />
                     </div>
                   </div>
                 </div>
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-xl" data-testid={`text-service-title-${index}`}>{service.title}</CardTitle>
-                  <p className="text-sm text-muted-foreground italic">{service.problem}</p>
+                <CardHeader className="pb-3 pt-5">
+                  <CardTitle className="text-lg" data-testid={`text-service-title-${index}`}>{service.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-foreground font-medium text-sm leading-relaxed">
+                <CardContent className="space-y-4 pt-0">
+                  <p className="text-sm text-muted-foreground italic">{service.problem}</p>
+                  <p className="text-sm leading-relaxed">
                     {service.description}
                   </p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 pt-2">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center gap-2 text-sm">
                         <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
@@ -679,64 +666,68 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section id="ablauf" className="py-20 bg-muted/30">
+      <section id="ablauf" className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unser Ablauf</p>
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">In 4 Schritten zum perfekten Boden</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               Kein Rätselraten, keine Überraschungen. So einfach ist der Weg zu Ihrem fertigen Estrich.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
-              <Card 
+              <div 
                 key={index} 
                 className="relative"
                 data-testid={`step-${index}`}
               >
-                <CardHeader className="pb-3">
-                  <div className="w-12 h-12 rounded-md bg-primary flex items-center justify-center mb-3">
-                    <span className="text-primary-foreground font-bold text-lg" data-testid={`text-step-number-${index}`}>{step.number}</span>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center shadow-lg">
+                    <span className="text-primary-foreground font-bold text-xl" data-testid={`text-step-number-${index}`}>{step.number}</span>
                   </div>
-                  <CardTitle className="text-lg" data-testid={`text-step-title-${index}`}>{step.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground leading-relaxed" data-testid={`text-step-description-${index}`}>{step.description}</p>
-                </CardContent>
-              </Card>
+                  {index < processSteps.length - 1 && (
+                    <div className="hidden lg:block flex-1 h-px bg-border" />
+                  )}
+                </div>
+                <h3 className="font-semibold text-lg mb-3" data-testid={`text-step-title-${index}`}>{step.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed" data-testid={`text-step-description-${index}`}>{step.description}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section id="preise" className="py-20">
+      <section id="preise" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Transparente Preise</p>
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Faire Preise, keine versteckten Kosten</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               Bei uns wissen Sie vorher, was es kostet. Keine bösen Überraschungen – versprochen.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {pricingItems.map((item, index) => (
-              <Card key={index} className="text-center" data-testid={`card-pricing-${index}`}>
-                <CardHeader>
+              <Card key={index} className="text-center relative overflow-visible" data-testid={`card-pricing-${index}`}>
+                <CardHeader className="pb-2">
                   <CardTitle className="text-lg" data-testid={`text-pricing-title-${index}`}>{item.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-2">
-                  <div className="text-3xl font-bold text-primary" data-testid={`text-pricing-value-${index}`}>
-                    ab {item.price} <span className="text-lg font-normal text-muted-foreground">€/m²</span>
+                <CardContent className="space-y-3 pt-2">
+                  <div className="text-4xl font-bold text-primary" data-testid={`text-pricing-value-${index}`}>
+                    ab {item.price}
                   </div>
-                  <p className="text-sm text-muted-foreground">{item.note}</p>
+                  <div className="text-sm text-muted-foreground">Euro pro m²</div>
+                  <p className="text-xs text-muted-foreground pt-2 border-t">{item.note}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <div className="text-center mt-8">
+          <div className="text-center mt-12">
             <Button size="lg" onClick={() => scrollToSection("kontakt")} data-testid="button-pricing-cta">
               Mein persönliches Angebot anfordern
               <ChevronRight className="ml-2 h-4 w-4" />
@@ -746,11 +737,12 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-20 bg-muted/30">
+      <section id="faq" className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Häufige Fragen</p>
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Haben Sie noch Fragen?</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               Hier beantworten wir die häufigsten Fragen unserer Kunden. Falls Ihre Frage nicht dabei ist – fragen Sie uns einfach!
             </p>
           </div>
@@ -789,11 +781,12 @@ export default function Home() {
       </section>
 
       {/* Service Areas */}
-      <section className="py-20">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unser Einsatzgebiet</p>
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Wir kommen zu Ihnen – schnell und zuverlässig</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               Egal ob München-Zentrum oder Umland – wir sind in kürzester Zeit vor Ort.
             </p>
           </div>
