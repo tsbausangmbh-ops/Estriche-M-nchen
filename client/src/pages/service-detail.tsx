@@ -255,27 +255,30 @@ export default function ServiceDetail() {
       <section className="py-16">
         <div className="px-4 sm:px-8 lg:px-12">
           <h2 className="text-2xl font-bold mb-8">Unser Ablauf</h2>
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-            <div className="space-y-0">
-              {service.process.map((step, index) => (
-                <div key={index} className="flex gap-4">
-                  <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground font-bold flex items-center justify-center text-sm">
-                      {index + 1}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+            <div className="bg-card rounded-lg border p-6 flex flex-col">
+              <h3 className="font-semibold mb-6">Arbeitsschritte</h3>
+              <div className="space-y-0 flex-1">
+                {service.process.map((step, index) => (
+                  <div key={index} className="flex gap-4">
+                    <div className="flex flex-col items-center">
+                      <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground font-bold flex items-center justify-center text-sm">
+                        {index + 1}
+                      </div>
+                      {index < service.process.length - 1 && (
+                        <div className="w-px flex-1 min-h-8 bg-border" />
+                      )}
                     </div>
-                    {index < service.process.length - 1 && (
-                      <div className="w-px h-12 bg-border" />
-                    )}
+                    <div className="pb-6">
+                      <p className="font-medium pt-2">{step}</p>
+                    </div>
                   </div>
-                  <div className="pb-12">
-                    <p className="font-medium pt-2">{step}</p>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-            <div className="bg-muted rounded-lg p-6 h-fit lg:sticky lg:top-24">
+            <div className="bg-muted rounded-lg p-6 flex flex-col">
               <h3 className="font-semibold mb-4">Detaillierter Ablauf</h3>
-              <div className="space-y-4">
+              <div className="space-y-4 flex-1">
                 {service.detailedProcess.split('\n\n').map((paragraph, index) => (
                   <p key={index} className="text-muted-foreground leading-relaxed text-sm">{paragraph}</p>
                 ))}
