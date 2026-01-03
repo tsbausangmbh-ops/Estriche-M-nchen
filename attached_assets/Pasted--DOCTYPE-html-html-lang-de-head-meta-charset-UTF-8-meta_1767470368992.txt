@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Estrich München | Heizestrich, Zementestrich, Fließestrich – schnell & sauber</title>
+  <meta name="description" content="Estricharbeiten in München & Umgebung: Heizestrich, Zementestrich, Anhydritestrich, Sanierung. Termintreu, sauber, fachgerecht. Jetzt Angebot anfragen." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Estrich München – Estrich & Bodenaufbau vom Profi" />
+  <meta property="og:description" content="Heizestrich, Zementestrich, Fließestrich, Sanierung. Schnell, sauber, plan." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Topbar (mobile-friendly quick info) -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span class="chip">München & 25 km</span>
+        <span class="chip">Antwort i.d.R. innerhalb 24h</span>
+      </div>
+      <div class="topbar-right">
+        <a class="topbar-link" href="#kontakt">Angebot anfragen</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="header" id="home">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Startseite">
+        <span class="brand-mark">E</span>
+        <span class="brand-text">
+          <strong>Estrich München</strong>
+          <small>Estrich • Bodenaufbau • Sanierung</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#ablauf">Ablauf</a>
+        <a href="#preise">Preise</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontakt" class="btn btn-primary">Kontakt</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="container mobile-menu-inner">
+        <a href="#leistungen" class="mobile-link">Leistungen</a>
+        <a href="#ablauf" class="mobile-link">Ablauf</a>
+        <a href="#preise" class="mobile-link">Preise</a>
+        <a href="#faq" class="mobile-link">FAQ</a>
+        <a href="#kontakt" class="btn btn-primary w-100">Jetzt Angebot anfragen</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Estricharbeiten in München</p>
+          <h1>Plan. Tragfähig. Termintreu.<br/>Estrich & Bodenaufbau vom Profi.</h1>
+          <p class="lead">
+            Ob Neubau, Sanierung oder Fußbodenheizung: Wir erstellen den passenden Estrichaufbau
+            fachgerecht, sauber und mit klarer Kommunikation – vom Aufmaß bis zur Abnahme.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#kontakt">Kostenlos anfragen</a>
+            <a class="btn btn-ghost" href="#leistungen">Leistungen ansehen</a>
+          </div>
+
+          <div class="trust-row">
+            <div class="trust-item">
+              <strong>Saubere Baustelle</strong>
+              <span>Abkleben, Schutz, Ordnung</span>
+            </div>
+            <div class="trust-item">
+              <strong>Feste Termine</strong>
+              <span>Planung mit Puffer</span>
+            </div>
+            <div class="trust-item">
+              <strong>Gerade Flächen</strong>
+              <span>Präzise Höhen & Ebenheit</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Schnellanfrage">
+          <h2>Schnell-Angebot</h2>
+          <p class="muted">In 60 Sekunden – wir melden uns zügig zurück.</p>
+
+          <form class="form" id="leadForm">
+            <label>
+              Name*
+              <input type="text" name="name" placeholder="Max Mustermann" required />
+            </label>
+
+            <label>
+              Telefon*
+              <input type="tel" name="phone" placeholder="+49 ..." required />
+            </label>
+
+            <label>
+              E-Mail*
+              <input type="email" name="email" placeholder="mail@beispiel.de" required />
+            </label>
+
+            <label>
+              Projekt*
+              <select name="project" required>
+                <option value="" selected disabled>Bitte auswählen</option>
+                <option>Neubau</option>
+                <option>Sanierung / Altbau</option>
+                <option>Fußbodenheizung / Heizestrich</option>
+                <option>Gewerbe</option>
+              </select>
+            </label>
+
+            <label>
+              Kurzbeschreibung*
+              <textarea name="message" rows="4" placeholder="z.B. 120 m², 1. OG, Heizestrich, Terminwunsch..." required></textarea>
+            </label>
+
+            <button class="btn btn-primary w-100" type="submit">Anfrage senden</button>
+            <p class="fineprint">Mit Absenden akzeptieren Sie die Verarbeitung Ihrer Daten zur Angebotsbearbeitung.</p>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Logos/Badges -->
+    <section class="badges">
+      <div class="container badges-grid">
+        <div class="badge">
+          <strong>Privat & Gewerbe</strong>
+          <span>Wohnungen, Häuser, Hallen</span>
+        </div>
+        <div class="badge">
+          <strong>Alle gängigen Estriche</strong>
+          <span>Zement, Anhydrit, Fließestrich</span>
+        </div>
+        <div class="badge">
+          <strong>Region München</strong>
+          <span>Stadt & Umland (25 km)</span>
+        </div>
+        <div class="badge">
+          <strong>Transparente Beratung</strong>
+          <span>Aufbau, Trocknung, Belegreife</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leistungen -->
+    <section class="section" id="leistungen">
+      <div class="container">
+        <div class="section-head">
+          <h2>Leistungen</h2>
+          <p class="muted">
+            Wir planen den passenden Bodenaufbau, stimmen Höhen mit angrenzenden Gewerken ab
+            und liefern eine saubere, ebene Fläche als Basis für Parkett, Fliesen, Vinyl & Co.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Zementestrich</h3>
+            <p>
+              Der Klassiker: robust, universell einsetzbar, ideal für Wohn- und Gewerbeflächen.
+              Auf Wunsch mit Beschleuniger oder als Verbundestrich – je nach Aufbau und Terminplan.
+            </p>
+            <ul class="list">
+              <li>Neubau & Sanierung</li>
+              <li>Hohe Belastbarkeit</li>
+              <li>Perfekte Grundlage für Beläge</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Anhydritestrich</h3>
+            <p>
+              Besonders beliebt im Innenbereich: sehr gute Ebenheit, angenehmes Laufgefühl,
+              ideal in Kombination mit Fußbodenheizung – mit sauberer Randdämmung und Fugenplanung.
+            </p>
+            <ul class="list">
+              <li>Sehr plan & glatt</li>
+              <li>Top für Fußbodenheizung</li>
+              <li>Schnelle Verarbeitung</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Heizestrich</h3>
+            <p>
+              Estrich auf Fußbodenheizung braucht Erfahrung: richtige Überdeckung, Randzonen,
+              Aufheizprotokoll und koordinierte Trocknung. Wir setzen das zuverlässig um.
+            </p>
+            <ul class="list">
+              <li>Aufheiz-/Funktionsheizen</li>
+              <li>Risse vermeiden (Fugen/Geometrie)</li>
+              <li>Termin- und Gewerkeabstimmung</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Dämmung & Bodenaufbau</h3>
+            <p>
+              Trittschalldämmung, Wärmedämmung, PE-Folie, Randdämmstreifen – wir bauen
+              den Bodenaufbau sauber und normgerecht auf, inklusive Höhenausgleich.
+            </p>
+            <ul class="list">
+              <li>Trittschall reduzieren</li>
+              <li>Wärmeverluste minimieren</li>
+              <li>Saubere Anschlüsse</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Sanierung & Reparatur</h3>
+            <p>
+              Hohllagen, Risse, Höhenprobleme oder beschädigte Stellen: Wir prüfen den Untergrund
+              und reparieren zielgerichtet – damit der Oberbelag dauerhaft hält.
+            </p>
+            <ul class="list">
+              <li>Untergrundprüfung</li>
+              <li>Teilflächen-Reparatur</li>
+              <li>Vorbereitung für neue Beläge</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Schnelltrocknung / Termindruck</h3>
+            <p>
+              Wenn’s schnell gehen muss: mit abgestimmten Zusatzmitteln, Lüftungskonzept und
+              sauberer Dokumentation kommen wir schneller zur Belegreife – realistisch geplant.
+            </p>
+            <ul class="list">
+              <li>Beschleuniger nach Bedarf</li>
+              <li>Koordination mit Folgegewerken</li>
+              <li>Planung statt Risiko</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ablauf -->
+    <section class="section alt" id="ablauf">
+      <div class="container">
+        <div class="section-head">
+          <h2>So läuft’s ab</h2>
+          <p class="muted">Klarer Prozess, klare Zuständigkeiten – damit du Planungssicherheit hast.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-no">1</div>
+            <div class="step-body">
+              <h3>Kurzanfrage & Rückruf</h3>
+              <p>Du sendest kurz Fläche, Aufbauwunsch und Terminfenster. Wir klären die wichtigsten Eckdaten.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-no">2</div>
+            <div class="step-body">
+              <h3>Aufmaß & Aufbau-Check</h3>
+              <p>Wir prüfen Höhen, Türen, Anschlüsse, Dämmung, Randdämmung, Fugen – und vermeiden spätere Überraschungen.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-no">3</div>
+            <div class="step-body">
+              <h3>Ausführung</h3>
+              <p>Saubere Vorbereitung, Abkleben/Schutz und fachgerechter Einbau. Du bekommst ein ordentliches Ergebnis – plan & tragfähig.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-no">4</div>
+            <div class="step-body">
+              <h3>Trocknung & Übergabe</h3>
+              <p>Wir geben Hinweise zu Lüftung/Begehbarkeit und koordinieren bei Bedarf das Funktionsheizen. Danach: Übergabe.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Preise/Orientierung -->
+    <section class="section" id="preise">
+      <div class="container">
+        <div class="section-head">
+          <h2>Preis-Orientierung</h2>
+          <p class="muted">
+            Jedes Objekt ist anders (Aufbauhöhe, Dämmung, Zugang, Pumpweg, Termin). Diese Werte helfen zur ersten Einordnung.
+          </p>
+        </div>
+
+        <div class="price-grid">
+          <div class="price-card">
+            <h3>Zementestrich</h3>
+            <p class="price">ab <strong>XX–YY € / m²</strong></p>
+            <p class="muted">Je nach Stärke, Aufbau und Baustellenlogistik.</p>
+          </div>
+
+          <div class="price-card">
+            <h3>Anhydrit / Fließestrich</h3>
+            <p class="price">ab <strong>XX–YY € / m²</strong></p>
+            <p class="muted">Ideal innen, sehr gute Ebenheit.</p>
+          </div>
+
+          <div class="price-card">
+            <h3>Heizestrich</h3>
+            <p class="price">ab <strong>XX–YY € / m²</strong></p>
+            <p class="muted">Mit abgestimmter Überdeckung & Fugenplanung.</p>
+          </div>
+
+          <div class="price-card">
+            <h3>Dämmung & Aufbau</h3>
+            <p class="price">ab <strong>XX–YY € / m²</strong></p>
+            <p class="muted">Material + Einbau abhängig vom System.</p>
+          </div>
+        </div>
+
+        <div class="note">
+          <strong>Hinweis:</strong> Ersetze die <em>XX–YY</em> Werte durch deine echten Preise.
+          Wenn du willst, gebe ich dir für München eine sinnvolle Preisspanne pro Aufbau (inkl. Varianten).
+        </div>
+      </div>
+    </section>
+
+    <!-- Bewertungen -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Was Kunden sagen</h2>
+          <p class="muted">Beispiele – kannst du später mit echten Google-Bewertungen ersetzen.</p>
+        </div>
+
+        <div class="reviews">
+          <figure class="review">
+            <blockquote>„Top Kommunikation, super sauber gearbeitet. Der Boden war perfekt plan – Parkett ging ohne Probleme drauf.“</blockquote>
+            <figcaption><strong>Privatkunde</strong><span>• München-Schwabing</span></figcaption>
+          </figure>
+
+          <figure class="review">
+            <blockquote>„Termine wurden eingehalten, Abstimmung mit Heizungsbauer lief reibungslos. Gerne wieder.“</blockquote>
+            <figcaption><strong>Bauträger</strong><span>• München-West</span></figcaption>
+          </figure>
+
+          <figure class="review">
+            <blockquote>„Sanierung im Altbau: Höhen sauber gelöst, Randdämmung korrekt, keine Überraschungen.“</blockquote>
+            <figcaption><strong>Hausverwaltung</strong><span>• München-Ost</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2>FAQ – Häufige Fragen</h2>
+          <p class="muted">Kurz & klar – damit du schnell entscheiden kannst.</p>
+        </div>
+
+        <div class="faq">
+          <details class="faq-item">
+            <summary>Wie schnell ist Estrich begehbar?</summary>
+            <p>Das hängt vom Estrichtyp, der Schichtdicke und den Bedingungen ab. Wir geben dir nach Ausführung klare Hinweise zur Begehbarkeit und zum weiteren Ablauf.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Wann ist der Estrich belegreif?</summary>
+            <p>Belegreife ist abhängig von Feuchte, Aufbau und Lüftung. Bei Heizestrich spielt das Funktionsheizen eine Rolle. Wir beraten realistisch – damit Folgegewerke sicher planen.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Was braucht ihr vor dem Termin?</summary>
+            <p>Wichtig sind: Flächen (m²), gewünschter Aufbau, Etage/Zugang, ob Fußbodenheizung vorhanden ist, und dein Terminfenster. Fotos helfen enorm.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Macht ihr auch Dämmung und Randdämmstreifen?</summary>
+            <p>Ja – wir übernehmen Dämmung, PE-Folie, Randdämmstreifen und den kompletten Bodenaufbau, sofern gewünscht.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Welche Bereiche deckt ihr ab?</summary>
+            <p>München und Umgebung (typisch bis ca. 25 km). Bei größeren Projekten auch nach Absprache.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section class="section contact" id="kontakt">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <h2>Jetzt unverbindlich anfragen</h2>
+          <p class="muted">
+            Schreib uns kurz, was du vorhast. Je genauer Fläche, Aufbau und Terminfenster – desto schneller bekommst du eine saubere Einschätzung.
+          </p>
+
+          <div class="contact-box">
+            <div class="contact-line">
+              <span class="dot"></span>
+              <div>
+                <strong>Typische Infos</strong>
+                <p class="muted">m² • Etage/Zugang • Estrichart • Fußbodenheizung • Termin</p>
+              </div>
+            </div>
+
+            <div class="contact-line">
+              <span class="dot"></span>
+              <div>
+                <strong>Vor-Ort möglich</strong>
+                <p class="muted">Aufmaß & Aufbau-Check für sichere Planung</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h3>Kontaktformular</h3>
+          <form class="form" id="contactForm">
+            <label>
+              Name*
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              E-Mail*
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Telefon*
+              <input type="tel" name="phone" required />
+            </label>
+            <label>
+              Adresse/Ort (optional)
+              <input type="text" name="city" placeholder="z.B. München, Grünwald, Dachau..." />
+            </label>
+            <label>
+              Nachricht*
+              <textarea name="message" rows="5" required placeholder="z.B. 85 m², Heizestrich, 2. OG, Start ab ..."></textarea>
+            </label>
+
+            <button class="btn btn-primary w-100" type="submit">Absenden</button>
+            <p class="fineprint">
+              Datenschutz: Deine Daten werden nur zur Bearbeitung deiner Anfrage genutzt.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>Estrich München</strong>
+          <p class="muted">Estrich • Bodenaufbau • Sanierung</p>
+        </div>
+        <div class="footer-links">
+          <a href="#home">Nach oben</a>
+          <a href="#faq">FAQ</a>
+          <a href="#kontakt">Kontakt</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <small class="muted">© <span id="year"></span> Estrich München. Alle Rechte vorbehalten.</small>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
