@@ -177,7 +177,7 @@ export const services: Service[] = [
     ],
     urgency: "Aktuell haben wir noch 3 freie Termine im Januar. Sichern Sie sich jetzt Ihren Wunschtermin, bevor die Auftragsbücher voll sind.",
     image: serviceImage1,
-    price: "25-35",
+    price: "25-45",
     galleryImages: [
       { src: galleryCementPour, alt: "Estrich wird eingebracht", caption: "Unsere Facharbeiter beim fachgerechten Einbringen des Zementestrichs" },
       { src: galleryQuality, alt: "Qualitätskontrolle mit Lasernivellierung", caption: "Präzise Ebenheitsmessung mit modernster Laser-Technik" },
@@ -273,7 +273,7 @@ export const services: Service[] = [
     ],
     urgency: "Industrieboden-Projekte erfordern Vorlauf. Kontaktieren Sie uns jetzt für eine Terminierung in den nächsten 4-6 Wochen.",
     image: serviceImage2,
-    price: "45-80",
+    price: "45-95",
     galleryImages: [
       { src: galleryIndustrialCoating, alt: "Industrieboden Beschichtung", caption: "Facharbeiter bei der Epoxid-Beschichtung" },
       { src: galleryIndustrial, alt: "Fertiger Industrieboden", caption: "Nahtlose Beschichtung in einer Produktionshalle" },
@@ -369,7 +369,7 @@ export const services: Service[] = [
     ],
     urgency: "Die Heizperiode hat begonnen – und unsere Fräs-Teams sind gefragt. Sichern Sie sich jetzt Ihren Termin für diesen Winter.",
     image: serviceImage3,
-    price: "45-65",
+    price: "45-75",
     galleryImages: [
       { src: galleryHeatingPipes, alt: "Heizungsrohre werden verlegt", caption: "Präzise Verlegung der Heizungsrohre im Schlangenverband" },
       { src: galleryHeating, alt: "Heizungsrohre in Dämmung", caption: "Fachgerechte Rohrverlegung in der Dämmschicht" },
@@ -466,7 +466,7 @@ export const services: Service[] = [
     ],
     urgency: "Fördergelder sind begrenzt – handeln Sie jetzt, um von aktuellen BAFA-Zuschüssen zu profitieren.",
     image: serviceImage4,
-    price: "15-25",
+    price: "18-45",
     galleryImages: [
       { src: galleryInsulationWork, alt: "Dämmarbeiten in Ausführung", caption: "Unsere Facharbeiter bei der fachgerechten Dämmung" },
       { src: galleryInsulation, alt: "Dämmplatten werden verlegt", caption: "Professionelle Verlegung hochwertiger Dämmplatten" },
@@ -563,7 +563,7 @@ export const services: Service[] = [
     ],
     urgency: "Je früher Sie handeln, desto geringer der Schaden. Vereinbaren Sie jetzt Ihre kostenlose Schadensanalyse.",
     image: serviceImage5,
-    price: "20-40",
+    price: "35-85",
     galleryImages: [
       { src: galleryRenovation, alt: "Vorher-Nachher Sanierung", caption: "Dramatische Transformation: Von gerissen zu makellos" },
       { src: galleryBeforeAfter, alt: "Sanierungsarbeiten", caption: "Professionelle Schadensanalyse und Reparatur" },
@@ -659,7 +659,7 @@ export const services: Service[] = [
     ],
     urgency: "Zeitkritisches Projekt? Rufen Sie jetzt an – wir haben oft kurzfristig freie Kapazitäten für Schnellestrich-Aufträge.",
     image: serviceImage6,
-    price: "35-50",
+    price: "35-55",
     galleryImages: [
       { src: galleryQuickScreed, alt: "Schnellestrich Einbau", caption: "Rapid-Estrich wird professionell eingebracht" },
       { src: galleryCementPour, alt: "Estrich wird gegossen", caption: "Präzises Einbringen des Schnellestrichs" },
