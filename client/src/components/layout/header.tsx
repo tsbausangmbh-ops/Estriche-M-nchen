@@ -70,27 +70,30 @@ export function Header() {
               >
                 Leistungen
               </Button>
-              <Button 
-                variant="ghost" 
-                onClick={() => scrollToSection("ablauf")}
-                data-testid="nav-ablauf"
-              >
-                Ablauf
-              </Button>
-              <Button 
-                variant="ghost" 
-                onClick={() => scrollToSection("preise")}
-                data-testid="nav-preise"
-              >
-                Preise
-              </Button>
-              <Button 
-                variant="ghost" 
-                onClick={() => scrollToSection("faq")}
-                data-testid="nav-faq"
-              >
-                FAQ
-              </Button>
+              <Link href="/ablauf">
+                <Button 
+                  variant="ghost" 
+                  data-testid="nav-ablauf"
+                >
+                  Ablauf
+                </Button>
+              </Link>
+              <Link href="/preise">
+                <Button 
+                  variant="ghost" 
+                  data-testid="nav-preise"
+                >
+                  Preise
+                </Button>
+              </Link>
+              <Link href="/faq">
+                <Button 
+                  variant="ghost" 
+                  data-testid="nav-faq"
+                >
+                  FAQ
+                </Button>
+              </Link>
               <Button 
                 onClick={() => scrollToSection("kontakt")}
                 data-testid="nav-kontakt"
@@ -126,30 +129,33 @@ export function Header() {
               >
                 Leistungen
               </Button>
-              <Button 
-                variant="ghost" 
-                className="w-full justify-start"
-                onClick={() => scrollToSection("ablauf")}
-                data-testid="mobile-nav-ablauf"
-              >
-                Ablauf
-              </Button>
-              <Button 
-                variant="ghost" 
-                className="w-full justify-start"
-                onClick={() => scrollToSection("preise")}
-                data-testid="mobile-nav-preise"
-              >
-                Preise
-              </Button>
-              <Button 
-                variant="ghost" 
-                className="w-full justify-start"
-                onClick={() => scrollToSection("faq")}
-                data-testid="mobile-nav-faq"
-              >
-                FAQ
-              </Button>
+              <Link href="/ablauf" onClick={() => setMobileMenuOpen(false)}>
+                <Button 
+                  variant="ghost" 
+                  className="w-full justify-start"
+                  data-testid="mobile-nav-ablauf"
+                >
+                  Ablauf
+                </Button>
+              </Link>
+              <Link href="/preise" onClick={() => setMobileMenuOpen(false)}>
+                <Button 
+                  variant="ghost" 
+                  className="w-full justify-start"
+                  data-testid="mobile-nav-preise"
+                >
+                  Preise
+                </Button>
+              </Link>
+              <Link href="/faq" onClick={() => setMobileMenuOpen(false)}>
+                <Button 
+                  variant="ghost" 
+                  className="w-full justify-start"
+                  data-testid="mobile-nav-faq"
+                >
+                  FAQ
+                </Button>
+              </Link>
               <Button 
                 className="w-full"
                 onClick={() => scrollToSection("kontakt")}
