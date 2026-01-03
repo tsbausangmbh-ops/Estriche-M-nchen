@@ -140,14 +140,92 @@ export default function Datenschutz() {
               </div>
 
               <div>
-                <h2 className="text-xl font-bold mb-3">6. Cookies</h2>
+                <h2 className="text-xl font-bold mb-3">6. Cookies und Speichertechnologien</h2>
+                
+                <h3 className="font-semibold mt-4 mb-2">Was sind Cookies?</h3>
                 <p className="text-muted-foreground">
-                  Diese Website verwendet technisch notwendige Cookies, um die Grundfunktionen der Website 
-                  zu gewährleisten. Diese Cookies werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO 
-                  gespeichert. Wir haben ein berechtigtes Interesse an der Speicherung von technisch 
-                  notwendigen Cookies zur technisch fehlerfreien und optimierten Bereitstellung unserer Dienste.
+                  Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden, wenn Sie 
+                  unsere Website besuchen. Sie dienen dazu, unsere Website nutzerfreundlicher, effektiver 
+                  und sicherer zu machen. Die Rechtsgrundlage für die Verwendung von Cookies ergibt sich 
+                  aus Art. 6 Abs. 1 DSGVO in Verbindung mit § 25 TTDSG (Telekommunikation-Telemedien-Datenschutz-Gesetz).
+                </p>
+
+                <h3 className="font-semibold mt-4 mb-2">Arten von Cookies</h3>
+                <p className="text-muted-foreground mb-2">
+                  Wir unterscheiden zwischen folgenden Cookie-Kategorien:
+                </p>
+                <ul className="list-disc pl-6 text-muted-foreground space-y-2">
+                  <li><strong>Technisch notwendige Cookies (§ 25 Abs. 2 Nr. 2 TTDSG):</strong> Diese 
+                  Cookies sind für den Betrieb der Website unbedingt erforderlich. Sie ermöglichen 
+                  grundlegende Funktionen wie Seitennavigation und Zugriff auf sichere Bereiche. Für 
+                  diese Cookies ist keine Einwilligung erforderlich.</li>
+                  <li><strong>Funktionale Cookies:</strong> Diese Cookies ermöglichen erweiterte 
+                  Funktionen wie das Speichern Ihrer Präferenzen (z.B. Spracheinstellungen, 
+                  Hell-/Dunkelmodus).</li>
+                  <li><strong>Analyse-Cookies:</strong> Diese Website verwendet derzeit keine 
+                  Analyse- oder Statistik-Cookies.</li>
+                  <li><strong>Marketing-Cookies:</strong> Diese Website verwendet keine Marketing-, 
+                  Werbe- oder Tracking-Cookies.</li>
+                </ul>
+
+                <h3 className="font-semibold mt-4 mb-2">Verwendete Cookies im Detail</h3>
+                <div className="overflow-x-auto mt-2">
+                  <table className="w-full text-sm text-muted-foreground border border-border">
+                    <thead className="bg-muted/50">
+                      <tr>
+                        <th className="p-2 text-left border-b border-border">Cookie-Name</th>
+                        <th className="p-2 text-left border-b border-border">Zweck</th>
+                        <th className="p-2 text-left border-b border-border">Speicherdauer</th>
+                        <th className="p-2 text-left border-b border-border">Kategorie</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="p-2 border-b border-border">theme</td>
+                        <td className="p-2 border-b border-border">Speichert die Anzeigeeinstellung (Hell-/Dunkelmodus)</td>
+                        <td className="p-2 border-b border-border">1 Jahr</td>
+                        <td className="p-2 border-b border-border">Funktional</td>
+                      </tr>
+                      <tr>
+                        <td className="p-2 border-b border-border">session_id</td>
+                        <td className="p-2 border-b border-border">Technische Sitzungsverwaltung</td>
+                        <td className="p-2 border-b border-border">Sitzung</td>
+                        <td className="p-2 border-b border-border">Notwendig</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h3 className="font-semibold mt-4 mb-2">Rechtsgrundlagen für Cookies</h3>
+                <p className="text-muted-foreground">
+                  <strong>Technisch notwendige Cookies:</strong> Die Verarbeitung erfolgt auf Grundlage 
+                  von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) i.V.m. § 25 Abs. 2 Nr. 2 TTDSG. 
+                  Unser berechtigtes Interesse liegt in der technisch fehlerfreien Bereitstellung unserer Website.
                   <br /><br />
-                  Wir verwenden keine Tracking-Cookies oder Cookies für Werbezwecke.
+                  <strong>Funktionale Cookies:</strong> Die Verarbeitung erfolgt auf Grundlage Ihrer 
+                  Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO i.V.m. § 25 Abs. 1 TTDSG.
+                </p>
+
+                <h3 className="font-semibold mt-4 mb-2">Cookie-Einstellungen verwalten</h3>
+                <p className="text-muted-foreground">
+                  Sie können Ihre Cookie-Einstellungen jederzeit ändern. Hierzu haben Sie folgende Möglichkeiten:
+                </p>
+                <ul className="list-disc pl-6 text-muted-foreground mt-2 space-y-1">
+                  <li>Über die Einstellungen Ihres Browsers können Sie Cookies blockieren, löschen 
+                  oder sich vor dem Setzen eines Cookies warnen lassen.</li>
+                  <li>Sie können die Einwilligung zu nicht notwendigen Cookies jederzeit mit 
+                  Wirkung für die Zukunft widerrufen.</li>
+                </ul>
+                <p className="text-muted-foreground mt-2">
+                  <strong>Hinweis:</strong> Bei Deaktivierung von Cookies kann die Funktionalität 
+                  dieser Website eingeschränkt sein.
+                </p>
+
+                <h3 className="font-semibold mt-4 mb-2">Lokaler Speicher (Local Storage)</h3>
+                <p className="text-muted-foreground">
+                  Neben Cookies nutzen wir auch den lokalen Speicher Ihres Browsers (Local Storage), 
+                  um Einstellungen wie den gewählten Anzeigemodus zu speichern. Diese Daten werden 
+                  ausschließlich lokal auf Ihrem Gerät gespeichert und nicht an unsere Server übertragen.
                 </p>
               </div>
 
