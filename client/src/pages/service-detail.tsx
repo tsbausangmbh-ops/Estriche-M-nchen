@@ -36,7 +36,7 @@ export default function ServiceDetail() {
   return (
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-4 sm:px-8 lg:px-12">
           <div className="flex items-center justify-between gap-4 h-16">
             <Link href="/">
               <Button variant="ghost" size="sm" className="gap-2" data-testid="button-back-home">
@@ -61,7 +61,7 @@ export default function ServiceDetail() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/50" />
         
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <div className="relative z-10 px-4 sm:px-8 lg:px-12 py-16 lg:py-24">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center">
@@ -119,7 +119,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-16 border-t">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-4 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="text-2xl font-bold mb-6">Was ist {service.title}?</h2>
@@ -160,7 +160,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-16 bg-accent">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-4 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               <Card className="overflow-hidden h-full">
@@ -212,7 +212,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-4 sm:px-8 lg:px-12">
           <h2 className="text-2xl font-bold mb-3">Welche Arten gibt es?</h2>
           <p className="text-muted-foreground mb-8">
             Je nach Projekt setzen wir unterschiedliche Varianten ein.
@@ -237,7 +237,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-16 bg-accent">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-4 sm:px-8 lg:px-12">
           <h2 className="text-2xl font-bold mb-3">Was ist inklusive?</h2>
           <p className="text-muted-foreground mb-8">
             Alles aus einer Hand – keine versteckten Kosten.
@@ -259,7 +259,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-4 sm:px-8 lg:px-12 max-w-4xl">
           <h2 className="text-2xl font-bold mb-8">Unser Ablauf</h2>
           <div className="space-y-0 mb-8">
             {service.process.map((step, index) => (
@@ -286,7 +286,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-16 bg-accent">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-4 sm:px-8 lg:px-12">
           <div className="flex items-center gap-3 mb-3">
             <ThumbsUp className="w-6 h-6 text-primary" />
             <h2 className="text-2xl font-bold">Warum Estrich München?</h2>
@@ -308,7 +308,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-4 sm:px-8 lg:px-12">
           <div className="flex items-center gap-3 mb-3">
             <Building2 className="w-6 h-6 text-primary" />
             <h2 className="text-2xl font-bold">Unsere Arbeit</h2>
@@ -361,7 +361,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-16 bg-muted">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-4 sm:px-8 lg:px-12">
           <div className="flex items-center gap-3 mb-6">
             <Shield className="w-6 h-6 text-primary" />
             <h2 className="text-2xl font-bold">Technik & Qualitätsstandards</h2>
@@ -416,7 +416,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-16 bg-accent">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-4 sm:px-8 lg:px-12 max-w-4xl">
           <h2 className="text-2xl font-bold mb-6">Häufige Fragen</h2>
           <Accordion type="single" collapsible className="space-y-2">
             {service.faqs.map((faq, index) => (
@@ -434,7 +434,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-12 bg-destructive/5 border-y border-destructive/10">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="px-4 sm:px-8 lg:px-12 text-center">
           <p className="text-destructive font-medium mb-4">
             {service.urgency}
           </p>
@@ -446,7 +446,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-16 bg-muted">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-4 sm:px-8 lg:px-12">
           <h2 className="text-2xl font-bold mb-6">Weitere Leistungen</h2>
           <div className="grid md:grid-cols-3 gap-4">
             {services.filter(s => s.id !== serviceId).slice(0, 3).map((otherService) => (
@@ -474,7 +474,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-16 bg-foreground text-primary-foreground">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="px-4 sm:px-8 lg:px-12 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Bereit für Ihren neuen Boden?
           </h2>
