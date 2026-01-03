@@ -59,7 +59,7 @@ export default function ServiceDetail() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${service.image})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
         
         <div className="relative z-10 px-4 sm:px-8 lg:px-12 py-16 lg:py-24">
           <div className="max-w-3xl">
