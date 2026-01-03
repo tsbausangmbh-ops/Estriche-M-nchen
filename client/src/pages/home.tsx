@@ -49,13 +49,13 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { apiRequest } from "@/lib/queryClient";
-import heroImage from "@assets/stock_images/worker_grinding_poli_0bfc1365.jpg";
-import serviceImage1 from "@assets/stock_images/professional_cement__c46ecbd9.jpg";
-import serviceImage2 from "@assets/stock_images/industrial_concrete__a49b9a59.jpg";
-import serviceImage3 from "@assets/stock_images/underfloor_heating_i_495aad7f.jpg";
-import serviceImage4 from "@assets/stock_images/floor_insulation_ins_89c91c1a.jpg";
-import serviceImage5 from "@assets/stock_images/floor_repair_renovat_fe7caae2.jpg";
-import serviceImage6 from "@assets/stock_images/fast_drying_screed_q_fe615262.jpg";
+import heroImage from "@assets/generated_images/worker_grinding_screed_floor.png";
+import serviceImage1 from "@assets/generated_images/worker_leveling_cement_screed.png";
+import serviceImage2 from "@assets/generated_images/polished_industrial_concrete_floor.png";
+import serviceImage3 from "@assets/generated_images/installing_underfloor_heating_pipes.png";
+import serviceImage4 from "@assets/generated_images/installing_floor_insulation.png";
+import serviceImage5 from "@assets/generated_images/repairing_concrete_floor_cracks.png";
+import serviceImage6 from "@assets/generated_images/pouring_quick-dry_screed.png";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name muss mindestens 2 Zeichen lang sein"),
