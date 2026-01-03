@@ -64,61 +64,67 @@ const services = [
   {
     icon: Layers,
     title: "Zementestrich und Fließestrich",
-    description: "Hochwertige Estrichlösungen für Neubau und Renovierung. Robuste Böden für höchste Ansprüche mit modernster Verarbeitungstechnik.",
-    features: ["Neubau & Sanierung", "Hohe Belastbarkeit", "Perfekte Grundlage für Beläge"],
+    problem: "Ihr Problem: Unebene Böden, die jeden Belag ruinieren?",
+    description: "Wir liefern perfekt plane Flächen – die ideale Basis für Parkett, Fliesen oder Vinyl. Kein Nacharbeiten, kein Ärger.",
+    features: ["Perfekte Ebenheit garantiert", "Für jeden Bodenbelag geeignet", "Schneller als Sie denken"],
   },
   {
     icon: Building2,
     title: "Industrieböden und Sichtestrich",
-    description: "Robuste Böden für gewerbliche und industrielle Anforderungen. Moderne Optik kombiniert mit maximaler Funktionalität.",
-    features: ["Gewerbeflächen", "Hochbelastbar", "Designorientiert"],
+    problem: "Ihr Problem: Böden, die der Belastung nicht standhalten?",
+    description: "Unsere Industrieböden sind für härteste Beanspruchung gemacht. Sichtestrich vereint dabei Funktion mit modernem Design.",
+    features: ["Extreme Belastbarkeit", "Optisch ein Hingucker", "Langlebig und wartungsarm"],
   },
   {
     icon: Thermometer,
     title: "Fußbodenheizung einfräsen",
-    description: "Fußbodenheizung nachträglich einbauen, ohne den bestehenden Estrich komplett zu entfernen – schnell, sauber und effizient.",
-    features: ["Nachträglicher Einbau", "Kostensparend", "Schnelle Umsetzung"],
+    problem: "Ihr Problem: Kalte Füße, aber Angst vor dem Renovierungschaos?",
+    description: "Wir fräsen Ihre Fußbodenheizung nachträglich ein – ohne den ganzen Estrich rauszureißen. Sauber, schnell, stressfrei.",
+    features: ["Kein kompletter Abriss nötig", "In wenigen Tagen erledigt", "Ab 45€/m² möglich"],
   },
   {
     icon: Shield,
     title: "Wärmedämmung & Abdichtung",
-    description: "Optimale Lösungen für den energetischen Wärmeschutz Ihres Gebäudes. Normgerechter Aufbau für beste Dämmwerte.",
-    features: ["Energieeffizienz", "Trittschalldämmung", "Feuchtigkeitsschutz"],
+    problem: "Ihr Problem: Hohe Heizkosten durch schlechte Dämmung?",
+    description: "Mit professioneller Wärmedämmung senken Sie Ihre Energiekosten dauerhaft. Wir machen Ihren Boden energieeffizient.",
+    features: ["Heizkosten sparen", "Trittschall reduzieren", "Normgerechter Aufbau"],
   },
   {
     icon: Wrench,
     title: "Sanierung & Reparatur",
-    description: "Hohllagen, Risse, Höhenprobleme oder beschädigte Stellen: Wir prüfen den Untergrund und reparieren zielgerichtet.",
-    features: ["Untergrundprüfung", "Teilflächen-Reparatur", "Vorbereitung für neue Beläge"],
+    problem: "Ihr Problem: Risse, Hohlstellen oder unebene alte Böden?",
+    description: "Wir retten Ihren bestehenden Estrich – oft ohne kompletten Austausch. Gezielt, schnell und kosteneffizient.",
+    features: ["Diagnose vor Ort", "Oft günstiger als Neubau", "Schnelle Lösung"],
   },
   {
     icon: Zap,
     title: "Schnellestrich",
-    description: "Wenn's schnell gehen muss: mit abgestimmten Zusatzmitteln und sauberer Dokumentation schneller zur Belegreife.",
-    features: ["Beschleuniger nach Bedarf", "Koordination mit Folgegewerken", "Termingerechte Umsetzung"],
+    problem: "Ihr Problem: Termindrückt, aber der Estrich braucht ewig zum Trocknen?",
+    description: "Unser Schnellestrich ist in Rekordzeit belegreif. Perfekt, wenn jeder Tag zählt.",
+    features: ["Bis zu 50% schneller", "Gleiche Qualität", "Ideal bei Zeitdruck"],
   },
 ];
 
 const processSteps = [
   {
     number: "01",
-    title: "Kurzanfrage & Rückruf",
-    description: "Sie senden kurz Fläche, Aufbauwunsch und Terminfenster. Wir klären die wichtigsten Eckdaten telefonisch.",
+    title: "Sie schildern Ihr Problem",
+    description: "60 Sekunden Formular ausfüllen – fertig. Kein langes Telefonieren, kein Warten. Wir melden uns bei Ihnen.",
   },
   {
     number: "02",
-    title: "Aufmaß & Aufbau-Check",
-    description: "Wir prüfen Höhen, Türen, Anschlüsse, Dämmung, Randdämmung, Fugen – und vermeiden spätere Überraschungen.",
+    title: "Wir finden die Lösung",
+    description: "Kostenlose Vor-Ort-Beratung. Wir analysieren, planen und geben Ihnen einen verbindlichen Festpreis. Keine versteckten Kosten.",
   },
   {
     number: "03",
-    title: "Ausführung",
-    description: "Saubere Vorbereitung, Abkleben/Schutz und fachgerechter Einbau. Sie bekommen ein ordentliches Ergebnis – plan & tragfähig.",
+    title: "Wir setzen um – stressfrei",
+    description: "Saubere Baustelle, pünktlicher Start, professionelle Ausführung. Sie lehnen sich zurück, wir arbeiten.",
   },
   {
     number: "04",
-    title: "Trocknung & Übergabe",
-    description: "Wir geben Hinweise zu Lüftung/Begehbarkeit und koordinieren bei Bedarf das Funktionsheizen. Danach: Übergabe.",
+    title: "Sie genießen das Ergebnis",
+    description: "Perfekt ebener Boden, termingerecht fertig. Endlich können Sie mit dem nächsten Schritt beginnen – ohne Verzögerung.",
   },
 ];
 
@@ -142,28 +148,28 @@ const pricingItems = [
 
 const faqItems = [
   {
-    question: "Wie lange muss Estrich trocknen?",
-    answer: "Die Trocknungszeit hängt von Estrichart, Stärke und Raumklima ab. Zementestrich benötigt in der Regel 1 Tag pro mm Stärke (bis 40 mm), danach 2 Tage pro mm. Anhydritestrich trocknet schneller. Wir geben Ihnen bei der Übergabe konkrete Hinweise zur Belegreife.",
+    question: "Ich habe schlechte Erfahrungen mit Handwerkern gemacht. Warum sollte ich Ihnen vertrauen?",
+    answer: "Das verstehen wir – und genau deshalb arbeiten wir anders: Festpreis vorab, schriftliche Terminzusage, und wir räumen hinter uns auf. Über 282 zufriedene Kunden in München können das bestätigen. Fragen Sie uns nach Referenzen – wir haben nichts zu verbergen.",
   },
   {
-    question: "Was kostet Estrich pro Quadratmeter?",
-    answer: "Der Preis hängt von vielen Faktoren ab: Estrichart, Aufbauhöhe, Dämmung, Zugang/Pumpweg und Termin. Als grobe Orientierung: 25–45 €/m². Für ein genaues Angebot benötigen wir die Projektdetails.",
+    question: "Was kostet mich das Ganze? Gibt es versteckte Kosten?",
+    answer: "Nein, bei uns nicht. Sie bekommen ein verbindliches Festpreis-Angebot nach der Besichtigung. Was wir nennen, gilt. Keine Nachforderungen, keine bösen Überraschungen. Richtwert: 25–45 €/m² je nach Aufbau.",
   },
   {
-    question: "Welcher Estrich eignet sich für Fußbodenheizung?",
-    answer: "Sowohl Zementestrich als auch Anhydritestrich funktionieren mit Fußbodenheizung. Anhydritestrich leitet Wärme etwas besser und kann dünner aufgebracht werden. Wir beraten Sie individuell zur besten Lösung.",
+    question: "Wie lange dauert es, bis ich meinen Bodenbelag verlegen kann?",
+    answer: "Normalerweise 3-4 Wochen bei Zementestrich. Aber: Mit unserem Schnellestrich geht's auch in der Hälfte der Zeit. Wir besprechen Ihren Zeitplan und finden die beste Lösung für Sie.",
   },
   {
-    question: "Können Sie auch kleine Flächen machen?",
-    answer: "Ja, wir übernehmen auch kleinere Projekte wie Badezimmer, Balkone oder einzelne Räume. Bei sehr kleinen Flächen kann ein Mindestauftragswert gelten – sprechen Sie uns einfach an.",
+    question: "Ich habe nur ein kleines Projekt (Bad, Balkon). Lohnt sich das für Sie?",
+    answer: "Ja, absolut! Wir nehmen auch kleinere Projekte an. Jeder Kunde ist uns wichtig – egal ob 15 m² oder 1500 m². Fragen Sie einfach unverbindlich an.",
   },
   {
-    question: "In welchem Gebiet sind Sie tätig?",
-    answer: "Wir arbeiten in ganz München und im Umkreis von ca. 25–30 km. Das umfasst u.a. Starnberg, Dachau, Freising, Erding und Fürstenfeldbruck.",
+    question: "Was passiert, wenn etwas schief geht?",
+    answer: "Dann machen wir es richtig – auf unsere Kosten. Wir stehen zu unserer Arbeit. Deshalb haben wir auch eine Gewährleistung auf alle unsere Leistungen. Ihr Risiko? Null.",
   },
   {
     question: "Wie schnell können Sie anfangen?",
-    answer: "Das hängt von unserer aktuellen Auslastung ab. In der Regel können wir innerhalb von 1–3 Wochen starten. Bei dringenden Projekten finden wir oft eine Lösung – fragen Sie uns einfach.",
+    answer: "Oft schneller als Sie denken. Normalerweise innerhalb von 1–3 Wochen. Bei dringenden Fällen? Rufen Sie uns an – wir finden fast immer eine Lösung.",
   },
 ];
 
@@ -624,15 +630,16 @@ export default function Home() {
                     <service.icon className="w-6 h-6 text-primary" />
                   </div>
                   <CardTitle className="text-xl" data-testid={`text-service-title-${index}`}>{service.title}</CardTitle>
+                  <p className="text-sm text-muted-foreground italic mt-2">{service.problem}</p>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-foreground font-medium text-sm leading-relaxed">
                     {service.description}
                   </p>
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center gap-2 text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -640,6 +647,14 @@ export default function Home() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-muted-foreground mb-4">Nicht sicher, welche Lösung die richtige ist?</p>
+            <Button size="lg" onClick={() => scrollToSection("kontakt")} data-testid="button-services-cta">
+              Kostenlose Beratung anfordern
+              <ChevronRight className="ml-2 h-4 w-4" />
+            </Button>
           </div>
         </div>
       </section>
@@ -743,6 +758,14 @@ export default function Home() {
               ))}
             </Accordion>
           </div>
+
+          <div className="text-center mt-12">
+            <p className="text-muted-foreground mb-4">Haben Sie eine andere Frage? Wir beantworten sie gerne persönlich.</p>
+            <Button size="lg" onClick={() => scrollToSection("kontakt")} data-testid="button-faq-cta">
+              Jetzt Kontakt aufnehmen
+              <ChevronRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -750,9 +773,9 @@ export default function Home() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Unser Einsatzgebiet</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Wir kommen zu Ihnen – schnell und zuverlässig</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Estricharbeiten in München und im Umkreis von ca. 25–30 km.
+              Egal ob München-Zentrum oder Umland – wir sind in kürzester Zeit vor Ort.
             </p>
           </div>
 
