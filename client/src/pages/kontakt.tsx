@@ -30,10 +30,14 @@ import { Phone, Mail, MapPin, Clock, ChevronRight, CheckCircle2, MessageSquare }
 import heroImage from "@assets/generated_images/workers_milling_and_pipes_blue.png";
 
 const contactFormSchema = z.object({
-  name: z.string().min(2, "Name muss mindestens 2 Zeichen lang sein"),
+  firstName: z.string().min(2, "Vorname muss mindestens 2 Zeichen lang sein"),
+  lastName: z.string().min(2, "Nachname muss mindestens 2 Zeichen lang sein"),
   phone: z.string().min(6, "Bitte geben Sie eine gültige Telefonnummer ein"),
   email: z.string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein"),
-  project: z.string().min(1, "Bitte wählen Sie ein Projekt aus"),
+  projectType: z.string().min(1, "Bitte wählen Sie eine Projektart aus"),
+  estrichType: z.string().min(1, "Bitte wählen Sie einen Estrich-Typ aus"),
+  squareMeters: z.string().optional(),
+  floor: z.string().optional(),
   message: z.string().min(10, "Bitte beschreiben Sie Ihr Projekt kurz"),
 });
 
@@ -46,23 +50,67 @@ const benefits = [
   "Keine versteckten Kosten",
 ];
 
+const projectTypes = [
+  { value: "neubau-efh", label: "Neubau Einfamilienhaus" },
+  { value: "neubau-mfh", label: "Neubau Mehrfamilienhaus" },
+  { value: "neubau-gewerbe", label: "Neubau Gewerbe/Industrie" },
+  { value: "sanierung-wohnung", label: "Sanierung Wohnung" },
+  { value: "sanierung-haus", label: "Sanierung Haus" },
+  { value: "sanierung-gewerbe", label: "Sanierung Gewerbe" },
+  { value: "anbau-aufstockung", label: "Anbau / Aufstockung" },
+  { value: "keller", label: "Keller / Souterrain" },
+  { value: "garage", label: "Garage / Carport" },
+  { value: "sonstiges", label: "Sonstiges Projekt" },
+];
+
+const estrichTypes = [
+  { value: "zementestrich", label: "Zementestrich (CT)" },
+  { value: "calciumsulfat", label: "Calciumsulfatestrich / Anhydrit (CA)" },
+  { value: "heizestrich", label: "Heizestrich (Fußbodenheizung)" },
+  { value: "schnellestrich", label: "Schnellestrich / Schnellzement" },
+  { value: "fliessestrich", label: "Fließestrich" },
+  { value: "trockenestrich", label: "Trockenestrich" },
+  { value: "industrieboden", label: "Industrieestrich / Hartstoffestrich" },
+  { value: "daemmung", label: "Estrich mit Wärmedämmung" },
+  { value: "unsicher", label: "Bin mir unsicher / Beratung gewünscht" },
+];
+
+const floorOptions = [
+  { value: "keller", label: "Keller / UG" },
+  { value: "eg", label: "Erdgeschoss" },
+  { value: "1og", label: "1. Obergeschoss" },
+  { value: "2og", label: "2. Obergeschoss" },
+  { value: "3og", label: "3. Obergeschoss" },
+  { value: "4og-plus", label: "4. OG oder höher" },
+  { value: "dg", label: "Dachgeschoss" },
+  { value: "mehrere", label: "Mehrere Stockwerke" },
+];
+
 export default function Kontakt() {
   const { toast } = useToast();
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
-      name: "",
+      firstName: "",
+      lastName: "",
       phone: "",
       email: "",
-      project: "",
+      projectType: "",
+      estrichType: "",
+      squareMeters: "",
+      floor: "",
       message: "",
     },
   });
 
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
-      return apiRequest("POST", "/api/contact", data);
+      const payload = {
+        ...data,
+        squareMeters: data.squareMeters ? parseInt(data.squareMeters) : null,
+      };
+      return apiRequest("POST", "/api/contact", payload);
     },
     onSuccess: () => {
       toast({
@@ -224,21 +272,41 @@ export default function Kontakt() {
                     <div className="grid sm:grid-cols-2 gap-4">
                       <FormField
                         control={form.control}
-                        name="name"
+                        name="firstName"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Name*</FormLabel>
+                            <FormLabel>Vorname*</FormLabel>
                             <FormControl>
                               <Input 
-                                placeholder="Max Mustermann" 
+                                placeholder="Max" 
                                 {...field} 
-                                data-testid="input-contact-name"
+                                data-testid="input-contact-firstname"
                               />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
                         )}
                       />
+                      <FormField
+                        control={form.control}
+                        name="lastName"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Nachname*</FormLabel>
+                            <FormControl>
+                              <Input 
+                                placeholder="Mustermann" 
+                                {...field} 
+                                data-testid="input-contact-lastname"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+
+                    <div className="grid sm:grid-cols-2 gap-4">
                       <FormField
                         control={form.control}
                         name="phone"
@@ -257,61 +325,132 @@ export default function Kontakt() {
                           </FormItem>
                         )}
                       />
-                    </div>
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>E-Mail*</FormLabel>
-                          <FormControl>
-                            <Input 
-                              placeholder="mail@beispiel.de" 
-                              type="email"
-                              {...field} 
-                              data-testid="input-contact-email"
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="project"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Projekt*</FormLabel>
-                          <Select onValueChange={field.onChange} value={field.value}>
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>E-Mail*</FormLabel>
                             <FormControl>
-                              <SelectTrigger data-testid="select-contact-project">
-                                <SelectValue placeholder="Bitte auswählen" />
-                              </SelectTrigger>
+                              <Input 
+                                placeholder="mail@beispiel.de" 
+                                type="email"
+                                {...field} 
+                                data-testid="input-contact-email"
+                              />
                             </FormControl>
-                            <SelectContent>
-                              <SelectItem value="neubau">Neubau</SelectItem>
-                              <SelectItem value="sanierung">Sanierung / Altbau</SelectItem>
-                              <SelectItem value="heizestrich">Fußbodenheizung / Heizestrich</SelectItem>
-                              <SelectItem value="industrieboden">Industrieboden / Gewerbe</SelectItem>
-                              <SelectItem value="daemmung">Wärmedämmung</SelectItem>
-                              <SelectItem value="schnellestrich">Schnellestrich</SelectItem>
-                              <SelectItem value="sonstiges">Sonstiges</SelectItem>
-                            </SelectContent>
-                          </Select>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <FormField
+                        control={form.control}
+                        name="projectType"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Projektart*</FormLabel>
+                            <Select onValueChange={field.onChange} value={field.value}>
+                              <FormControl>
+                                <SelectTrigger data-testid="select-contact-project-type">
+                                  <SelectValue placeholder="Bitte auswählen" />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                {projectTypes.map((type) => (
+                                  <SelectItem key={type.value} value={type.value}>
+                                    {type.label}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="estrichType"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Estrich-Typ*</FormLabel>
+                            <Select onValueChange={field.onChange} value={field.value}>
+                              <FormControl>
+                                <SelectTrigger data-testid="select-contact-estrich-type">
+                                  <SelectValue placeholder="Bitte auswählen" />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                {estrichTypes.map((type) => (
+                                  <SelectItem key={type.value} value={type.value}>
+                                    {type.label}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <FormField
+                        control={form.control}
+                        name="squareMeters"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Fläche (ca. m²)</FormLabel>
+                            <FormControl>
+                              <Input 
+                                placeholder="z.B. 120" 
+                                type="number"
+                                {...field} 
+                                data-testid="input-contact-sqm"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="floor"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Stockwerk</FormLabel>
+                            <Select onValueChange={field.onChange} value={field.value}>
+                              <FormControl>
+                                <SelectTrigger data-testid="select-contact-floor">
+                                  <SelectValue placeholder="Bitte auswählen" />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                {floorOptions.map((option) => (
+                                  <SelectItem key={option.value} value={option.value}>
+                                    {option.label}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+
                     <FormField
                       control={form.control}
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Ihr Projekt*</FormLabel>
+                          <FormLabel>Projektbeschreibung*</FormLabel>
                           <FormControl>
                             <Textarea 
-                              placeholder="Beschreiben Sie kurz Ihr Vorhaben: Fläche in m², Zeitrahmen, besondere Anforderungen..."
-                              className="min-h-[120px] resize-none"
+                              placeholder="Beschreiben Sie kurz Ihr Vorhaben: Zeitrahmen, besondere Anforderungen, Fußbodenheizung vorhanden..."
+                              className="min-h-[100px] resize-none"
                               {...field}
                               data-testid="textarea-contact-message"
                             />

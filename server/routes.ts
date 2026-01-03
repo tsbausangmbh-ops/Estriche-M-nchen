@@ -23,9 +23,12 @@ export async function registerRoutes(
       const inquiry = await storage.createContactInquiry(result.data);
       
       console.log("New contact inquiry received:", {
-        name: inquiry.name,
+        name: `${inquiry.firstName} ${inquiry.lastName}`,
         email: inquiry.email,
-        project: inquiry.project,
+        projectType: inquiry.projectType,
+        estrichType: inquiry.estrichType,
+        squareMeters: inquiry.squareMeters,
+        floor: inquiry.floor,
       });
 
       return res.status(201).json({ 
