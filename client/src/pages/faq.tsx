@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/accordion";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import heroImage from "@assets/generated_images/worker_grinding_screed_floor.png";
+import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.png";
 
 const faqCategories = [
   {
