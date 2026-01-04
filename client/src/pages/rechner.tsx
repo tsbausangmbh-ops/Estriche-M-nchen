@@ -174,6 +174,56 @@ export default function Rechner() {
         </div>
       </section>
 
+      <section className="py-12 bg-accent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Budgetrechner</p>
+              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+                Wissen Sie vorher, was Ihr Estrich kostet
+              </h2>
+            </div>
+
+            <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
+              <p>
+                Stellen Sie sich vor, wie beruhigend es ist, schon vor dem ersten Gespräch zu wissen, 
+                in welchem Rahmen sich Ihr Projekt bewegt. <strong>Keine bösen Überraschungen, keine 
+                versteckten Kosten.</strong> Einfach Klarheit von Anfang an.
+              </p>
+
+              <p>
+                Unser Budgetrechner gibt Ihnen in wenigen Klicks eine realistische Einschätzung. 
+                Wählen Sie Ihren Estrich-Typ, die Fläche und die gewünschten Zusatzleistungen – 
+                und sehen Sie sofort, was Sie erwartet.
+              </p>
+
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Warum diese Transparenz?</h3>
+
+              <p>
+                Wir glauben: Wer informiert entscheidet, entscheidet besser. Mit über 30 Jahren 
+                Erfahrung und mehr als 1.200 Projekten in München wissen wir genau, was Estrich 
+                kostet. <strong>Dieses Wissen teilen wir gerne mit Ihnen.</strong>
+              </p>
+
+              <p>
+                Die Berechnung ist unverbindlich und kostenlos. Für Ihr verbindliches Festpreis-Angebot 
+                kommen wir gerne zu Ihnen – ebenfalls kostenlos. Nutzen Sie jetzt den Rechner und 
+                verschaffen Sie sich Klarheit.
+              </p>
+            </div>
+
+            <div className="mt-10 flex flex-wrap gap-4 justify-center">
+              <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" asChild>
+                <a href="tel:+4989444438872">
+                  <Phone className="mr-2 h-4 w-4" />
+                  089 444438872
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-8">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-8">
