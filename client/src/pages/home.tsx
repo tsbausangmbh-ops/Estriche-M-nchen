@@ -46,12 +46,36 @@ import heroImage from "@assets/generated_images/worker_grinding_screed_floor.png
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
+const estrichTypes = [
+  { value: "zementestrich", label: "Zementestrich (CT)" },
+  { value: "calciumsulfat", label: "Calciumsulfatestrich / Anhydrit (CA)" },
+  { value: "heizestrich", label: "Heizestrich (Fußbodenheizung)" },
+  { value: "schnellestrich", label: "Schnellestrich / Schnellzement" },
+  { value: "fliessestrich", label: "Fließestrich" },
+  { value: "trockenestrich", label: "Trockenestrich" },
+  { value: "industrieboden", label: "Industrieestrich / Hartstoffestrich" },
+  { value: "unsicher", label: "Bin mir unsicher / Beratung gewünscht" },
+];
+
+const floorOptions = [
+  { value: "keller", label: "Keller / UG" },
+  { value: "eg", label: "Erdgeschoss" },
+  { value: "1og", label: "1. Obergeschoss" },
+  { value: "2og", label: "2. Obergeschoss" },
+  { value: "3og", label: "3. Obergeschoss" },
+  { value: "4og-plus", label: "4. OG oder höher" },
+  { value: "dg", label: "Dachgeschoss" },
+  { value: "mehrere", label: "Mehrere Stockwerke" },
+];
+
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name muss mindestens 2 Zeichen lang sein"),
   phone: z.string().min(6, "Bitte geben Sie eine gültige Telefonnummer ein"),
   email: z.string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein"),
-  project: z.string().min(1, "Bitte wählen Sie ein Projekt aus"),
-  message: z.string().min(10, "Bitte beschreiben Sie Ihr Projekt kurz"),
+  estrichType: z.string().min(1, "Bitte wählen Sie einen Estrich-Typ aus"),
+  squareMeters: z.string().optional(),
+  floor: z.string().optional(),
+  message: z.string().optional(),
   privacyConsent: z.boolean().refine(val => val === true, {
     message: "Bitte stimmen Sie der Datenschutzerklärung zu",
   }),
@@ -149,7 +173,9 @@ export default function Home() {
       name: "",
       phone: "",
       email: "",
-      project: "",
+      estrichType: "",
+      squareMeters: "",
+      floor: "",
       message: "",
       privacyConsent: false,
     },
@@ -157,7 +183,21 @@ export default function Home() {
 
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
-      return apiRequest("POST", "/api/contact", data);
+      const nameParts = data.name.trim().split(" ");
+      const firstName = nameParts[0] || "";
+      const lastName = nameParts.slice(1).join(" ") || "";
+      const payload = {
+        firstName,
+        lastName,
+        phone: data.phone,
+        email: data.email,
+        projectType: "Startseite-Anfrage",
+        estrichType: data.estrichType,
+        squareMeters: data.squareMeters ? parseInt(data.squareMeters) : null,
+        floor: data.floor || null,
+        message: data.message || "",
+      };
+      return apiRequest("POST", "/api/contact", payload);
     },
     onSuccess: () => {
       toast({
@@ -323,37 +363,82 @@ export default function Home() {
                     />
                     <FormField
                       control={form.control}
-                      name="project"
+                      name="estrichType"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Projekt*</FormLabel>
+                          <FormLabel>Estrich-Typ*</FormLabel>
                           <Select onValueChange={field.onChange} value={field.value}>
                             <FormControl>
-                              <SelectTrigger data-testid="select-project">
+                              <SelectTrigger data-testid="select-estrich-type">
                                 <SelectValue placeholder="Bitte auswählen" />
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent>
-                              <SelectItem value="neubau">Neubau</SelectItem>
-                              <SelectItem value="sanierung">Sanierung / Altbau</SelectItem>
-                              <SelectItem value="heizestrich">Fußbodenheizung / Heizestrich</SelectItem>
-                              <SelectItem value="gewerbe">Gewerbe</SelectItem>
+                              {estrichTypes.map((type) => (
+                                <SelectItem key={type.value} value={type.value}>
+                                  {type.label}
+                                </SelectItem>
+                              ))}
                             </SelectContent>
                           </Select>
                           <FormMessage />
                         </FormItem>
                       )}
                     />
+                    <div className="grid grid-cols-2 gap-3">
+                      <FormField
+                        control={form.control}
+                        name="squareMeters"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Fläche (m²)</FormLabel>
+                            <FormControl>
+                              <Input 
+                                placeholder="z.B. 120" 
+                                type="number"
+                                {...field} 
+                                data-testid="input-sqm"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="floor"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Stockwerk</FormLabel>
+                            <Select onValueChange={field.onChange} value={field.value}>
+                              <FormControl>
+                                <SelectTrigger data-testid="select-floor">
+                                  <SelectValue placeholder="Auswählen" />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                {floorOptions.map((option) => (
+                                  <SelectItem key={option.value} value={option.value}>
+                                    {option.label}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
                     <FormField
                       control={form.control}
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Kurzbeschreibung*</FormLabel>
+                          <FormLabel>Nachricht (optional)</FormLabel>
                           <FormControl>
                             <Textarea 
-                              placeholder="z.B. 120 m², 1. OG, Heizestrich, Terminwunsch..." 
-                              rows={3}
+                              placeholder="Weitere Infos, Terminwunsch..." 
+                              rows={2}
                               {...field} 
                               data-testid="input-message"
                             />
@@ -801,37 +886,82 @@ export default function Home() {
                     />
                     <FormField
                       control={form.control}
-                      name="project"
+                      name="estrichType"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Projekt*</FormLabel>
+                          <FormLabel>Estrich-Typ*</FormLabel>
                           <Select onValueChange={field.onChange} value={field.value}>
                             <FormControl>
-                              <SelectTrigger data-testid="select-contact-project">
+                              <SelectTrigger data-testid="select-contact-estrich-type">
                                 <SelectValue placeholder="Bitte auswählen" />
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent>
-                              <SelectItem value="neubau">Neubau</SelectItem>
-                              <SelectItem value="sanierung">Sanierung / Altbau</SelectItem>
-                              <SelectItem value="heizestrich">Fußbodenheizung / Heizestrich</SelectItem>
-                              <SelectItem value="gewerbe">Gewerbe</SelectItem>
+                              {estrichTypes.map((type) => (
+                                <SelectItem key={type.value} value={type.value}>
+                                  {type.label}
+                                </SelectItem>
+                              ))}
                             </SelectContent>
                           </Select>
                           <FormMessage />
                         </FormItem>
                       )}
                     />
+                    <div className="grid grid-cols-2 gap-4">
+                      <FormField
+                        control={form.control}
+                        name="squareMeters"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Fläche (m²)</FormLabel>
+                            <FormControl>
+                              <Input 
+                                placeholder="z.B. 120" 
+                                type="number"
+                                {...field} 
+                                data-testid="input-contact-sqm"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="floor"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Stockwerk</FormLabel>
+                            <Select onValueChange={field.onChange} value={field.value}>
+                              <FormControl>
+                                <SelectTrigger data-testid="select-contact-floor">
+                                  <SelectValue placeholder="Auswählen" />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                {floorOptions.map((option) => (
+                                  <SelectItem key={option.value} value={option.value}>
+                                    {option.label}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
                     <FormField
                       control={form.control}
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Kurzbeschreibung*</FormLabel>
+                          <FormLabel>Nachricht (optional)</FormLabel>
                           <FormControl>
                             <Textarea 
-                              placeholder="z.B. 120 m², 1. OG, Heizestrich, Terminwunsch..." 
-                              rows={4}
+                              placeholder="Weitere Infos, Terminwunsch..." 
+                              rows={3}
                               {...field} 
                               data-testid="input-contact-message"
                             />
