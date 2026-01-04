@@ -1,19 +1,42 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { Badge } from "@/components/ui/badge";
+import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.png";
 
 export default function Datenschutz() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
       
+      <section className="relative py-20 sm:py-24 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/60" />
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-3 mb-4">
+              <Badge className="bg-white/20 text-white border-white/30 text-xs font-medium">
+                Rechtliches
+              </Badge>
+            </div>
+            
+            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
+              Datenschutzerklärung
+            </h1>
+            
+            <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
+              Gemäß der Datenschutz-Grundverordnung (DSGVO) und dem EU AI Act
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">Datenschutzerklärung</h1>
-          <p className="text-muted-foreground mb-8">
-            Gemäß der Datenschutz-Grundverordnung (DSGVO) und dem EU AI Act
-          </p>
-          
           <Card className="mb-6">
             <CardContent className="p-6 space-y-8">
               
