@@ -16,13 +16,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { useToast } from "@/hooks/use-toast";
@@ -34,13 +27,10 @@ import heroImage from "@assets/generated_images/workers_milling_and_pipes_blue.p
 const contactFormSchema = z.object({
   firstName: z.string().min(2, "Vorname muss mindestens 2 Zeichen lang sein"),
   lastName: z.string().min(2, "Nachname muss mindestens 2 Zeichen lang sein"),
+  address: z.string().min(5, "Bitte geben Sie eine gültige Adresse ein"),
   phone: z.string().min(6, "Bitte geben Sie eine gültige Telefonnummer ein"),
   email: z.string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein"),
-  projectType: z.string().min(1, "Bitte wählen Sie eine Projektart aus"),
-  estrichType: z.string().min(1, "Bitte wählen Sie einen Estrich-Typ aus"),
-  squareMeters: z.string().optional(),
-  floor: z.string().optional(),
-  message: z.string().min(10, "Bitte beschreiben Sie Ihr Projekt kurz"),
+  reason: z.string().min(10, "Bitte beschreiben Sie kurz Ihr Anliegen"),
   privacyConsent: z.boolean().refine(val => val === true, {
     message: "Bitte stimmen Sie der Datenschutzerklärung zu",
   }),
@@ -55,42 +45,6 @@ const benefits = [
   "Keine versteckten Kosten",
 ];
 
-const projectTypes = [
-  { value: "neubau-efh", label: "Neubau Einfamilienhaus" },
-  { value: "neubau-mfh", label: "Neubau Mehrfamilienhaus" },
-  { value: "neubau-gewerbe", label: "Neubau Gewerbe/Industrie" },
-  { value: "sanierung-wohnung", label: "Sanierung Wohnung" },
-  { value: "sanierung-haus", label: "Sanierung Haus" },
-  { value: "sanierung-gewerbe", label: "Sanierung Gewerbe" },
-  { value: "anbau-aufstockung", label: "Anbau / Aufstockung" },
-  { value: "keller", label: "Keller / Souterrain" },
-  { value: "garage", label: "Garage / Carport" },
-  { value: "sonstiges", label: "Sonstiges Projekt" },
-];
-
-const estrichTypes = [
-  { value: "zementestrich", label: "Zementestrich (CT)" },
-  { value: "calciumsulfat", label: "Calciumsulfatestrich / Anhydrit (CA)" },
-  { value: "heizestrich", label: "Heizestrich (Fußbodenheizung)" },
-  { value: "schnellestrich", label: "Schnellestrich / Schnellzement" },
-  { value: "fliessestrich", label: "Fließestrich" },
-  { value: "trockenestrich", label: "Trockenestrich" },
-  { value: "industrieboden", label: "Industrieestrich / Hartstoffestrich" },
-  { value: "daemmung", label: "Estrich mit Wärmedämmung" },
-  { value: "unsicher", label: "Bin mir unsicher / Beratung gewünscht" },
-];
-
-const floorOptions = [
-  { value: "keller", label: "Keller / UG" },
-  { value: "eg", label: "Erdgeschoss" },
-  { value: "1og", label: "1. Obergeschoss" },
-  { value: "2og", label: "2. Obergeschoss" },
-  { value: "3og", label: "3. Obergeschoss" },
-  { value: "4og-plus", label: "4. OG oder höher" },
-  { value: "dg", label: "Dachgeschoss" },
-  { value: "mehrere", label: "Mehrere Stockwerke" },
-];
-
 export default function Kontakt() {
   const { toast } = useToast();
 
@@ -99,24 +53,17 @@ export default function Kontakt() {
     defaultValues: {
       firstName: "",
       lastName: "",
+      address: "",
       phone: "",
       email: "",
-      projectType: "",
-      estrichType: "",
-      squareMeters: "",
-      floor: "",
-      message: "",
+      reason: "",
       privacyConsent: false,
     },
   });
 
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
-      const payload = {
-        ...data,
-        squareMeters: data.squareMeters ? parseInt(data.squareMeters) : null,
-      };
-      return apiRequest("POST", "/api/contact", payload);
+      return apiRequest("POST", "/api/contact", data);
     },
     onSuccess: () => {
       toast({
@@ -267,7 +214,7 @@ export default function Kontakt() {
                 <div className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-md w-fit mb-2">
                   Antwort innerhalb von 24 Stunden
                 </div>
-                <CardTitle>Jetzt Projekt beschreiben</CardTitle>
+                <CardTitle>Kontaktformular</CardTitle>
                 <p className="text-sm text-muted-foreground">
                   Füllen Sie das Formular aus – wir melden uns schnellstmöglich bei Ihnen.
                 </p>
@@ -312,6 +259,24 @@ export default function Kontakt() {
                       />
                     </div>
 
+                    <FormField
+                      control={form.control}
+                      name="address"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Adresse*</FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="Musterstraße 123, 80331 München" 
+                              {...field} 
+                              data-testid="input-contact-address"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
                     <div className="grid sm:grid-cols-2 gap-4">
                       <FormField
                         control={form.control}
@@ -351,120 +316,25 @@ export default function Kontakt() {
                       />
                     </div>
 
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <FormField
-                        control={form.control}
-                        name="projectType"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Projektart*</FormLabel>
-                            <Select onValueChange={field.onChange} value={field.value}>
-                              <FormControl>
-                                <SelectTrigger data-testid="select-contact-project-type">
-                                  <SelectValue placeholder="Bitte auswählen" />
-                                </SelectTrigger>
-                              </FormControl>
-                              <SelectContent>
-                                {projectTypes.map((type) => (
-                                  <SelectItem key={type.value} value={type.value}>
-                                    {type.label}
-                                  </SelectItem>
-                                ))}
-                              </SelectContent>
-                            </Select>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="estrichType"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Estrich-Typ*</FormLabel>
-                            <Select onValueChange={field.onChange} value={field.value}>
-                              <FormControl>
-                                <SelectTrigger data-testid="select-contact-estrich-type">
-                                  <SelectValue placeholder="Bitte auswählen" />
-                                </SelectTrigger>
-                              </FormControl>
-                              <SelectContent>
-                                {estrichTypes.map((type) => (
-                                  <SelectItem key={type.value} value={type.value}>
-                                    {type.label}
-                                  </SelectItem>
-                                ))}
-                              </SelectContent>
-                            </Select>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                    </div>
-
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <FormField
-                        control={form.control}
-                        name="squareMeters"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Fläche (ca. m²)</FormLabel>
-                            <FormControl>
-                              <Input 
-                                placeholder="z.B. 120" 
-                                type="number"
-                                {...field} 
-                                data-testid="input-contact-sqm"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="floor"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Stockwerk</FormLabel>
-                            <Select onValueChange={field.onChange} value={field.value}>
-                              <FormControl>
-                                <SelectTrigger data-testid="select-contact-floor">
-                                  <SelectValue placeholder="Bitte auswählen" />
-                                </SelectTrigger>
-                              </FormControl>
-                              <SelectContent>
-                                {floorOptions.map((option) => (
-                                  <SelectItem key={option.value} value={option.value}>
-                                    {option.label}
-                                  </SelectItem>
-                                ))}
-                              </SelectContent>
-                            </Select>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                    </div>
-
                     <FormField
                       control={form.control}
-                      name="message"
+                      name="reason"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Projektbeschreibung*</FormLabel>
+                          <FormLabel>Grund Ihrer Anfrage*</FormLabel>
                           <FormControl>
                             <Textarea 
-                              placeholder="Beschreiben Sie kurz Ihr Vorhaben: Zeitrahmen, besondere Anforderungen, Fußbodenheizung vorhanden..."
+                              placeholder="Beschreiben Sie kurz Ihr Anliegen..."
                               className="min-h-[100px] resize-none"
                               {...field}
-                              data-testid="textarea-contact-message"
+                              data-testid="textarea-contact-reason"
                             />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
                       )}
                     />
+
                     <FormField
                       control={form.control}
                       name="privacyConsent"
@@ -490,6 +360,7 @@ export default function Kontakt() {
                         </FormItem>
                       )}
                     />
+
                     <Button 
                       type="submit" 
                       size="lg" 
@@ -497,7 +368,7 @@ export default function Kontakt() {
                       disabled={contactMutation.isPending}
                       data-testid="button-contact-submit"
                     >
-                      {contactMutation.isPending ? "Wird gesendet..." : "Kostenlos anfragen"}
+                      {contactMutation.isPending ? "Wird gesendet..." : "Anfrage senden"}
                       <ChevronRight className="ml-2 h-4 w-4" />
                     </Button>
                   </form>
