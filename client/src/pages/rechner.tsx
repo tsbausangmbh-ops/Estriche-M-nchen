@@ -27,7 +27,7 @@ import {
   Wrench,
   AlertTriangle
 } from "lucide-react";
-import heroImage from "@assets/generated_images/workers_checking_level_blue.png";
+import heroImage from "@assets/generated_images/worker_calculating_costs_on_tablet.png";
 
 const estrichTypes = [
   { value: "zementestrich", label: "Zementestrich (CT)", basePrice: 32, description: "Klassiker für Wohnbau" },
@@ -54,13 +54,21 @@ const floorOptions = [
   { value: "keller", label: "Keller", surcharge: 3 },
 ];
 
+const speedOptions = [
+  { value: "standard", label: "Standard (ca. 28 Tage)", surcharge: 0 },
+  { value: "14tage", label: "Schnell verlegereif (14 Tage)", surcharge: 8 },
+  { value: "7tage", label: "Express verlegereif (7 Tage)", surcharge: 15 },
+];
+
 const additionalOptions = [
-  { id: "trittschall", label: "Trittschalldämmung", price: 12, icon: Volume2, description: "20-40mm Dämmung" },
-  { id: "waermedaemmung", label: "Wärmedämmung", price: 18, icon: Thermometer, description: "60-100mm EPS/XPS" },
-  { id: "heizung", label: "Fußbodenheizung-Vorbereitung", price: 8, icon: Thermometer, description: "Heizrohr-Einbettung" },
-  { id: "randdaemmstreifen", label: "Randdämmstreifen", price: 2.5, icon: Layers, description: "Umlaufend verlegt" },
-  { id: "grundierung", label: "Grundierung Untergrund", price: 4, icon: Wrench, description: "Haftvermittlung" },
-  { id: "folie", label: "PE-Folie/Dampfsperre", price: 2, icon: Layers, description: "Feuchtigkeitsschutz" },
+  { id: "trittschall", label: "Trittschalldämmung", price: 12, icon: Volume2, description: "20-40mm Dämmung", required: false },
+  { id: "waermedaemmung", label: "Wärmedämmung", price: 18, icon: Thermometer, description: "60-100mm EPS/XPS", required: false },
+  { id: "heizung", label: "Fußbodenheizung-Vorbereitung", price: 8, icon: Thermometer, description: "Heizrohr-Einbettung", required: false },
+  { id: "randdaemmstreifen", label: "Randdämmstreifen", price: 2.5, icon: Layers, description: "Umlaufend verlegt", required: false },
+  { id: "grundierung", label: "Grundierung Untergrund", price: 4, icon: Wrench, description: "Haftvermittlung", required: false },
+  { id: "folie", label: "PE-Folie/Dampfsperre", price: 2, icon: Layers, description: "Feuchtigkeitsschutz", required: false },
+  { id: "baustelleneinrichtung", label: "Baustelleneinrichtung", price: 4.5, icon: Truck, description: "Immer inklusive", required: true },
+  { id: "reinigung", label: "Baustellenreinigung", price: 2.8, icon: Wrench, description: "Immer inklusive", required: true },
 ];
 
 export default function Rechner() {
@@ -68,7 +76,8 @@ export default function Rechner() {
   const [estrichType, setEstrichType] = useState<string>("zementestrich");
   const [thickness, setThickness] = useState<string>("45");
   const [floor, setFloor] = useState<string>("eg");
-  const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
+  const [speed, setSpeed] = useState<string>("standard");
+  const [selectedOptions, setSelectedOptions] = useState<string[]>(["baustelleneinrichtung", "reinigung"]);
   const [showResult, setShowResult] = useState(false);
 
   const calculatePrice = () => {
@@ -78,8 +87,9 @@ export default function Rechner() {
     const selectedEstrich = estrichTypes.find(e => e.value === estrichType);
     const selectedThickness = thicknessOptions.find(t => t.value === thickness);
     const selectedFloor = floorOptions.find(f => f.value === floor);
+    const selectedSpeed = speedOptions.find(s => s.value === speed);
 
-    if (!selectedEstrich || !selectedThickness || !selectedFloor) {
+    if (!selectedEstrich || !selectedThickness || !selectedFloor || !selectedSpeed) {
       return { min: 0, max: 0, breakdown: [] };
     }
 
@@ -92,6 +102,11 @@ export default function Rechner() {
     const floorSurcharge = sqm * selectedFloor.surcharge;
     if (floorSurcharge > 0) {
       breakdown.push({ label: `Stockwerkzuschlag (${selectedFloor.label})`, amount: floorSurcharge });
+    }
+
+    const speedSurcharge = sqm * selectedSpeed.surcharge;
+    if (speedSurcharge > 0) {
+      breakdown.push({ label: `Schnellzuschlag (${selectedSpeed.label})`, amount: speedSurcharge });
     }
 
     let optionsCost = 0;
@@ -107,10 +122,7 @@ export default function Rechner() {
     const anfahrt = 55;
     breakdown.push({ label: "Anfahrt München", amount: anfahrt });
 
-    const baustelleneinrichtung = sqm >= 50 ? 450 : 280;
-    breakdown.push({ label: "Baustelleneinrichtung", amount: baustelleneinrichtung });
-
-    const subtotal = estrichCost + floorSurcharge + optionsCost + anfahrt + baustelleneinrichtung;
+    const subtotal = estrichCost + floorSurcharge + speedSurcharge + optionsCost + anfahrt;
     
     const minTotal = Math.round(subtotal * 0.85);
     const maxTotal = Math.round(subtotal * 1.15);
@@ -121,6 +133,9 @@ export default function Rechner() {
   const result = calculatePrice();
 
   const toggleOption = (optionId: string) => {
+    const option = additionalOptions.find(o => o.id === optionId);
+    if (option?.required) return;
+    
     setSelectedOptions(prev => 
       prev.includes(optionId) 
         ? prev.filter(id => id !== optionId)
@@ -235,6 +250,22 @@ export default function Rechner() {
                       </SelectContent>
                     </Select>
                   </div>
+
+                  <div>
+                    <Label>Verlegereife / Trocknungszeit</Label>
+                    <Select value={speed} onValueChange={setSpeed}>
+                      <SelectTrigger className="mt-1" data-testid="select-calculator-speed">
+                        <SelectValue placeholder="Trocknungszeit wählen" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {speedOptions.map((option) => (
+                          <SelectItem key={option.value} value={option.value}>
+                            {option.label} {option.surcharge > 0 && `(+${option.surcharge} €/m² netto)`}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
                 </CardContent>
               </Card>
 
@@ -250,21 +281,23 @@ export default function Rechner() {
                     {additionalOptions.map((option) => (
                       <div 
                         key={option.id} 
-                        className="flex items-start space-x-3 p-3 rounded-md border hover:bg-accent/50 transition-colors cursor-pointer"
+                        className={`flex items-start space-x-3 p-3 rounded-md border transition-colors ${option.required ? 'bg-accent/30 cursor-not-allowed' : 'hover:bg-accent/50 cursor-pointer'}`}
                         onClick={() => toggleOption(option.id)}
                       >
                         <Checkbox
                           id={option.id}
                           checked={selectedOptions.includes(option.id)}
                           onCheckedChange={() => toggleOption(option.id)}
+                          disabled={option.required}
                           data-testid={`checkbox-${option.id}`}
                         />
                         <div className="flex-1">
-                          <Label htmlFor={option.id} className="font-medium cursor-pointer">
+                          <Label htmlFor={option.id} className={`font-medium ${option.required ? 'cursor-not-allowed' : 'cursor-pointer'}`}>
                             {option.label}
+                            {option.required && <span className="ml-2 text-xs text-muted-foreground">(immer dabei)</span>}
                           </Label>
                           <p className="text-xs text-muted-foreground">{option.description}</p>
-                          <p className="text-xs font-medium text-primary mt-1">+{option.price} €/m²</p>
+                          <p className="text-xs font-medium text-primary mt-1">+{option.price} €/m² netto</p>
                         </div>
                       </div>
                     ))}
@@ -297,7 +330,7 @@ export default function Rechner() {
                           <p className="text-3xl font-bold text-primary" data-testid="text-price-range">
                             {result.min.toLocaleString('de-DE')} – {result.max.toLocaleString('de-DE')} €
                           </p>
-                          <p className="text-xs text-muted-foreground mt-1">inkl. MwSt.</p>
+                          <p className="text-xs text-muted-foreground mt-1">netto zzgl. MwSt.</p>
                         </div>
 
                         <div className="space-y-2">

@@ -171,54 +171,7 @@ export default function Ablauf() {
         </div>
       </section>
 
-      <section className="py-6">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8">
-            {processSteps.map((step, index) => (
-              <div key={index} className="relative" data-testid={`process-step-${index}`}>
-                <div className="flex gap-6">
-                  <div className="flex flex-col items-center">
-                    <div className="w-16 h-16 rounded-xl bg-primary flex items-center justify-center shadow-lg flex-shrink-0">
-                      <span className="text-primary-foreground font-bold text-xl">{step.number}</span>
-                    </div>
-                    {index < processSteps.length - 1 && (
-                      <div className="w-px flex-1 min-h-8 bg-border mt-4" />
-                    )}
-                  </div>
-                  <div className="flex-1 pb-8">
-                    <div className="flex flex-wrap items-center gap-3 mb-2">
-                      <h2 className="text-xl font-bold tracking-tight">{step.title}</h2>
-                      <Badge variant="secondary" className="text-xs">
-                        <Clock className="w-3 h-3 mr-1" />
-                        {step.duration}
-                      </Badge>
-                    </div>
-                    <p className="text-muted-foreground mb-4 leading-relaxed">{step.description}</p>
-                    <Card>
-                      <CardContent className="p-4">
-                        <div className="flex items-center gap-2 mb-3">
-                          <step.icon className="w-4 h-4 text-primary" />
-                          <span className="text-sm font-medium">Was in diesem Schritt passiert:</span>
-                        </div>
-                        <ul className="space-y-2">
-                          {step.details.map((detail, detailIndex) => (
-                            <li key={detailIndex} className="flex items-start gap-2 text-sm">
-                              <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                              <span>{detail}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12">
+      <section className="py-12 bg-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
@@ -385,6 +338,53 @@ export default function Ablauf() {
                 </a>
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-6">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-8">
+            {processSteps.map((step, index) => (
+              <div key={index} className="relative" data-testid={`process-step-${index}`}>
+                <div className="flex gap-6">
+                  <div className="flex flex-col items-center">
+                    <div className="w-16 h-16 rounded-xl bg-primary flex items-center justify-center shadow-lg flex-shrink-0">
+                      <span className="text-primary-foreground font-bold text-xl">{step.number}</span>
+                    </div>
+                    {index < processSteps.length - 1 && (
+                      <div className="w-px flex-1 min-h-8 bg-border mt-4" />
+                    )}
+                  </div>
+                  <div className="flex-1 pb-8">
+                    <div className="flex flex-wrap items-center gap-3 mb-2">
+                      <h2 className="text-xl font-bold tracking-tight">{step.title}</h2>
+                      <Badge variant="secondary" className="text-xs">
+                        <Clock className="w-3 h-3 mr-1" />
+                        {step.duration}
+                      </Badge>
+                    </div>
+                    <p className="text-muted-foreground mb-4 leading-relaxed">{step.description}</p>
+                    <Card>
+                      <CardContent className="p-4">
+                        <div className="flex items-center gap-2 mb-3">
+                          <step.icon className="w-4 h-4 text-primary" />
+                          <span className="text-sm font-medium">Was in diesem Schritt passiert:</span>
+                        </div>
+                        <ul className="space-y-2">
+                          {step.details.map((detail, detailIndex) => (
+                            <li key={detailIndex} className="flex items-start gap-2 text-sm">
+                              <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                              <span>{detail}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
