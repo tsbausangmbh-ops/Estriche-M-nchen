@@ -209,143 +209,63 @@ export default function UeberUns() {
             <div className="text-center mb-10">
               <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unsere Geschichte</p>
               <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-                Wie alles begann – Eine Geschichte von Frustration und Entschlossenheit
+                Wie alles begann
               </h2>
             </div>
 
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
               <p>
-                Es war 1994, als Mustafa Sakar zum ersten Mal das frustrierende Gefühl erlebte, das so viele Bauherren kennen. Er stand in seinem 
-                eigenen Neubau, und der Estrichleger war wieder einmal nicht erschienen. Zum dritten Mal in Folge. Die Verzögerung kostete 
-                ihn nicht nur Zeit und Nerven – sie kostete ihn bares Geld, weil der Fliesenleger, der schon bereitstand, unverrichteter 
-                Dinge wieder abziehen musste.
+                1994 stand Mustafa Sakar in seinem eigenen Neubau – und der Estrichleger war zum dritten Mal nicht erschienen. 
+                Der Fliesenleger musste unverrichteter Dinge wieder abziehen. Frustration, Zeit und Geld verloren.
               </p>
 
               <p>
-                In diesem Moment fasste er einen Entschluss, der sein Leben verändern sollte: <strong>„Wenn ich es nicht besser machen kann 
-                als diese Leute, dann werde ich es überhaupt nicht machen. Aber wenn ich es besser machen kann – dann schulde ich es jedem 
-                Bauherrn, der das gleiche erlebt wie ich gerade."</strong>
+                In diesem Moment fasste er einen Entschluss: <strong>„Wenn ich es besser machen kann als diese Leute, dann 
+                schulde ich es jedem Bauherrn, der das gleiche erlebt wie ich."</strong> Diese Worte sind bis heute das 
+                Fundament unseres Unternehmens.
+              </p>
+
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Was Sie bei uns bekommen</h3>
+
+              <p>
+                <strong>Ruhe.</strong> Ihr Projekt liegt in erfahrenen Händen. Der Preis steht fest, der Termin steht fest, 
+                die Qualität wird stimmen. Nachts schlafen Sie gut.
               </p>
 
               <p>
-                Diese Worte sind auch heute noch das Fundament unseres Unternehmens. Sie erklären, warum wir bei jedem einzelnen Projekt 
-                so handeln, als wäre es unser eigenes Zuhause. Sie erklären, warum wir Termine heilig halten. Und sie erklären, warum wir 
-                niemals einen Preis nennen, den wir später erhöhen.
-              </p>
-
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Der steinige Weg zum Erfolg</h3>
-
-              <p>
-                Die ersten Jahre waren nicht einfach. Mustafa Sakar arbeitete oft 14-Stunden-Tage, manchmal sogar länger. Er lernte jedes 
-                Detail seines Handwerks, machte seine Meisterprüfung und bildete sich ständig weiter. Schon früh erkannte er: <strong>Qualität 
-                allein reicht nicht aus. Die Kunden brauchen auch Zuverlässigkeit, Ehrlichkeit und vor allem – Vertrauen.</strong>
+                <strong>Zeit zurück.</strong> Keine Telefonate, um Handwerkern hinterherzulaufen. Keine Diskussionen über 
+                Nachforderungen. Diese Zeit gehört wieder Ihnen.
               </p>
 
               <p>
-                Genau dieses Vertrauen aufzubauen, wurde zur Mission. Während andere Betriebe mit niedrigen Preisen lockten und später 
-                Nachforderungen stellten, ging die Estrich München GmbH einen anderen Weg. Einen Weg, der anfangs schwieriger war, aber 
-                langfristig zum Erfolg führte: absolute Ehrlichkeit, verbindliche Festpreise und das Einhalten von Zusagen – ohne Ausnahme.
+                <strong>Einen echten Partner.</strong> Wir verschwinden nicht nach der Fertigstellung. Fünf Jahre 
+                Gewährleistung – bei uns gelebte Realität, kein Marketingversprechen.
               </p>
 
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Was Sie wirklich bekommen, wenn Sie uns beauftragen</h3>
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Unser Team</h3>
 
               <p>
-                Vielleicht fragen Sie sich jetzt: „Was unterscheidet die Estrich München GmbH wirklich von anderen Anbietern?" Die Antwort 
-                ist einfacher, als Sie vielleicht denken – und gleichzeitig tiefgreifender, als Sie sich vorstellen können.
+                Bei uns arbeiten Fachleute, die ihr Handwerk lieben. Jeder Mitarbeiter teilt unsere Werte: Ehrlichkeit ist 
+                nicht verhandelbar. Ein Versprechen bleibt ein Versprechen. Wenn Sie unser Team auf Ihrer Baustelle erleben, 
+                werden Sie den Unterschied spüren.
               </p>
 
-              <p>
-                <strong>Sie bekommen Ruhe.</strong> Die Ruhe zu wissen, dass Ihr Projekt in erfahrenen Händen liegt. Die Ruhe, sich nicht 
-                täglich fragen zu müssen, ob die Handwerker wohl pünktlich erscheinen. Die Ruhe, nachts gut zu schlafen, weil Sie wissen: 
-                Der Preis steht fest, der Termin steht fest, und die Qualität wird stimmen.
-              </p>
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Unsere Philosophie</h3>
 
               <p>
-                <strong>Sie bekommen Zeit zurück.</strong> Zeit, die Sie sonst damit verbringen würden, hinter Handwerkern herzutelefonieren. 
-                Zeit, die Sie sonst für stressige Diskussionen über Nachforderungen opfern würden. Diese Zeit gehört jetzt wieder Ihnen – 
-                für Ihre Familie, Ihr Geschäft, Ihre Leidenschaften.
+                <strong>Wir versprechen nur, was wir halten können. Und dann liefern wir mehr.</strong> Wenn wir Montag 
+                8 Uhr sagen, stehen wir 7:45 Uhr vor Ihrer Tür. Der genannte Preis ist der Endpreis. Bei Terminverzug 
+                durch uns: 100 Euro Gutschrift.
               </p>
 
               <p>
-                <strong>Sie bekommen einen Partner.</strong> Keinen bloßen Dienstleister, der nach getaner Arbeit verschwindet. Sondern einen 
-                Partner, der auch nach der Fertigstellung für Sie da ist. Der auf Ihre Fragen antwortet. Der Probleme löst, falls welche 
-                auftreten sollten. Der zu seinem Wort steht – fünf Jahre Gewährleistung sind bei uns kein Marketingversprechen, sondern 
-                gelebte Realität.
-              </p>
-
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Die Menschen hinter dem Unternehmen</h3>
-
-              <p>
-                Ein Unternehmen ist immer nur so gut wie die Menschen, die es ausmachen. Bei der Estrich München GmbH arbeiten keine 
-                austauschbaren Arbeitskräfte – bei uns arbeiten Fachleute, die ihr Handwerk lieben und leben.
+                Nach 30 Jahren könnten wir uns zurücklehnen. Stattdessen investieren wir weiter in Weiterbildung und 
+                modernste Technik. Die Werte von 1994 bleiben unser Kompass: Ehrlichkeit, Zuverlässigkeit, Qualität, Respekt.
               </p>
 
               <p>
-                Jeder einzelne Mitarbeiter hat eine umfassende Ausbildung durchlaufen und bildet sich kontinuierlich weiter. Aber was noch 
-                wichtiger ist: Jeder teilt unsere Werte. Die Überzeugung, dass Ehrlichkeit nicht verhandelbar ist. Der Anspruch, dass ein 
-                Versprechen ein Versprechen bleibt. Die Leidenschaft für Perfektion, die sich in jedem Quadratmeter zeigt, den wir verlegen.
-              </p>
-
-              <p>
-                Wenn Sie unsere Mitarbeiter auf Ihrer Baustelle erleben, werden Sie den Unterschied spüren. Sie werden sehen, wie konzentriert 
-                und sorgfältig gearbeitet wird. Sie werden hören, wie respektvoll miteinander und mit Ihnen kommuniziert wird. Und Sie werden 
-                fühlen, dass hier Menschen am Werk sind, die stolz auf ihre Arbeit sind.
-              </p>
-
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Warum Münchner Bauherren immer wieder zu uns kommen</h3>
-
-              <p>
-                In über 30 Jahren haben wir eines gelernt: <strong>Der beste Maßstab für Qualität sind nicht Zertifikate oder Auszeichnungen – 
-                es sind zufriedene Kunden, die wiederkommen.</strong> Und genau das passiert bei uns. Immer wieder.
-              </p>
-
-              <p>
-                Familien, die vor Jahren ihren ersten Estrich bei uns verlegen ließen, kommen heute wieder – für die Renovierung, für den 
-                Anbau, für die Garage. Bauträger, die einmal mit uns gearbeitet haben, rufen uns für jedes weitere Projekt an. Architekten, 
-                die unsere Arbeit kennen, empfehlen uns ihren Kunden mit vollem Vertrauen.
-              </p>
-
-              <p>
-                Das geschieht nicht durch Zufall. Es geschieht, weil wir jeden einzelnen Kunden so behandeln, wie wir selbst behandelt 
-                werden möchten. Mit Respekt, mit Ehrlichkeit, mit dem aufrichtigen Wunsch, das bestmögliche Ergebnis zu liefern. Diese 
-                Haltung lässt sich nicht vorspielen – sie muss echt sein. Und bei uns ist sie das.
-              </p>
-
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Unsere Philosophie: Weniger versprechen, mehr liefern</h3>
-
-              <p>
-                In einer Branche, die leider oft von übertriebenen Versprechen und enttäuschten Erwartungen geprägt ist, haben wir uns für 
-                einen anderen Ansatz entschieden. <strong>Wir versprechen nur das, was wir sicher halten können. Und dann liefern wir mehr.</strong>
-              </p>
-
-              <p>
-                Wenn wir sagen, dass wir am Montag um 8 Uhr beginnen, dann stehen wir um 7:45 Uhr vor Ihrer Tür. Wenn wir einen Preis nennen, 
-                dann ist das der Preis – nicht der „ungefähre" Preis, nicht der „voraussichtliche" Preis, sondern der endgültige, verbindliche 
-                Preis. Wenn wir ein Fertigstellungsdatum zusagen, dann können Sie den Fliesenleger für den Tag danach bestellen.
-              </p>
-
-              <p>
-                Diese Verlässlichkeit ist keine Selbstverständlichkeit – wir wissen das. Aber für uns ist sie es. Weil wir glauben, dass 
-                Handwerk nicht nur aus technischen Fähigkeiten besteht, sondern vor allem aus Charakter und Werten.
-              </p>
-
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Was die Zukunft bringt</h3>
-
-              <p>
-                Nach über 30 erfolgreichen Jahren könnten wir uns zufrieden zurücklehnen. Aber genau das tun wir nicht. Denn wir wissen: 
-                Stillstand bedeutet Rückschritt. Deshalb investieren wir kontinuierlich in Weiterbildung, in modernste Technik und in 
-                innovative Verfahren.
-              </p>
-
-              <p>
-                Gleichzeitig bleiben wir unseren Wurzeln treu. Die Werte, die Mustafa Sakar 1994 in dieses Unternehmen eingebracht hat, 
-                sind auch heute noch unser Kompass. Ehrlichkeit, Zuverlässigkeit, Qualität, Respekt. Diese Werte werden auch in 30 Jahren 
-                noch das Fundament unserer Arbeit sein.
-              </p>
-
-              <p>
-                <strong>Denn am Ende des Tages geht es nicht um Estrich. Es geht um Vertrauen. Es geht um Sicherheit. Es geht darum, dass 
-                Sie sich auf jemanden verlassen können.</strong> Und genau das ist unser Versprechen an Sie.
+                <strong>Am Ende geht es nicht um Estrich. Es geht um Vertrauen.</strong> Und genau das ist unser 
+                Versprechen an Sie.
               </p>
             </div>
           </div>
