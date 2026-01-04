@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ChevronRight, HelpCircle } from "lucide-react";
+import { ChevronRight, HelpCircle, Shield, Zap, Award, CheckCircle2 } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -187,6 +187,73 @@ export default function FAQ() {
             <Link href="/angebot">
               <Button size="lg" data-testid="button-faq-cta">
                 Ihre Frage stellen
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-8 bg-accent border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">
+                Ihre Sicherheit steht bei uns an erster Stelle
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                <strong className="text-foreground">Kennen Sie das Gefühl?</strong> Sie haben Fragen, 
+                aber niemand nimmt sich wirklich Zeit für Sie. Bei uns ist das anders.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Wir beantworten nicht nur Ihre Fragen – wir sorgen dafür, dass Sie sich 
+                <strong className="text-foreground"> sicher und gut beraten</strong> fühlen. 
+                Denn nur wer informiert ist, kann die richtigen Entscheidungen treffen.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="flex items-start gap-3 p-4 bg-card rounded-lg border">
+                <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Shield className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sm mb-1">Transparente Beratung</h3>
+                  <p className="text-xs text-muted-foreground">Keine versteckten Kosten, keine bösen Überraschungen.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 p-4 bg-card rounded-lg border">
+                <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Zap className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sm mb-1">Schnelle Antworten</h3>
+                  <p className="text-xs text-muted-foreground">Rückruf innerhalb von 24 Stunden garantiert.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 p-4 bg-card rounded-lg border">
+                <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Award className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sm mb-1">Echte Expertise</h3>
+                  <p className="text-xs text-muted-foreground">30+ Jahre Erfahrung – wir kennen jede Situation.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 p-4 bg-card rounded-lg border">
+                <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sm mb-1">Persönliche Betreuung</h3>
+                  <p className="text-xs text-muted-foreground">Ein Ansprechpartner für Ihr gesamtes Projekt.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-6 text-center">
+            <Link href="/angebot">
+              <Button size="lg" data-testid="button-faq-benefits-cta">
+                Jetzt persönliche Beratung anfordern
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
