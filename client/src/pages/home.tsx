@@ -681,11 +681,11 @@ export default function Home() {
                   <div>
                     <div className="font-semibold">Telefon</div>
                     <a 
-                      href="tel:+4989123456789" 
+                      href="tel:+4989444438872" 
                       className="text-muted-foreground hover:text-primary transition-colors"
                       data-testid="link-phone"
                     >
-                      +49 89 123 456 789
+                      089 444438872
                     </a>
                   </div>
                 </div>

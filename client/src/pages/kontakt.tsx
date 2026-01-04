@@ -185,11 +185,11 @@ export default function Kontakt() {
                   <div>
                     <div className="font-semibold">Telefon</div>
                     <a 
-                      href="tel:+4989123456789" 
+                      href="tel:+4989444438872" 
                       className="text-muted-foreground hover:text-primary transition-colors"
                       data-testid="link-phone"
                     >
-                      +49 89 123 456 789
+                      089 444438872
                     </a>
                     <p className="text-sm text-muted-foreground mt-1">
                       Rufen Sie uns an – wir beraten Sie gerne persönlich.

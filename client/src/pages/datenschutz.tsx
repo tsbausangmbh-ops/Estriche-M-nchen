@@ -41,10 +41,10 @@ export default function Datenschutz() {
                   Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
                   <br /><br />
                   Estrich München GmbH<br />
-                  Musterstraße 123<br />
+                  Hardenbergstr. 4<br />
                   80331 München<br />
                   Deutschland<br /><br />
-                  Telefon: +49 89 123 456 789<br />
+                  Telefon: 089 444438872<br />
                   E-Mail: datenschutz@estrich-muenchen.de
                 </p>
               </div>

@@ -17,7 +17,7 @@ export default function Impressum() {
                 <h2 className="text-xl font-bold mb-3">Angaben gemäß § 5 TMG</h2>
                 <p className="text-muted-foreground">
                   Estrich München GmbH<br />
-                  Musterstraße 123<br />
+                  Hardenbergstr. 4<br />
                   80331 München<br />
                   Deutschland
                 </p>
@@ -26,7 +26,7 @@ export default function Impressum() {
               <div>
                 <h2 className="text-xl font-bold mb-3">Kontakt</h2>
                 <p className="text-muted-foreground">
-                  Telefon: +49 89 123 456 789<br />
+                  Telefon: 089 444438872<br />
                   E-Mail: info@estrich-muenchen.de
                 </p>
               </div>
@@ -68,7 +68,7 @@ export default function Impressum() {
                 <h2 className="text-xl font-bold mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
                 <p className="text-muted-foreground">
                   Mustafa Sakar<br />
-                  Musterstraße 123<br />
+                  Hardenbergstr. 4<br />
                   80331 München
                 </p>
               </div>

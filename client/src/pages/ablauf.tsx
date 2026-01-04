@@ -15,7 +15,7 @@ const processSteps = [
     description: "Sie füllen unser einfaches Kontaktformular aus oder rufen uns direkt an. Beschreiben Sie kurz Ihr Projekt – wir brauchen nur die wichtigsten Eckdaten.",
     details: [
       "Formular in unter 60 Sekunden ausfüllen",
-      "Alternativ: Direkter Anruf unter +49 89 123 456 789",
+      "Alternativ: Direkter Anruf unter 089 444438872",
       "Keine Warteschleifen, persönliche Ansprechpartner",
       "Rückruf garantiert innerhalb von 24 Stunden"
     ],

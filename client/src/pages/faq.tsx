@@ -311,8 +311,8 @@ export default function FAQ() {
               </Button>
             </Link>
             <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" asChild>
-              <a href="tel:+4989123456789">
-                Direkt anrufen: +49 89 123 456 789
+              <a href="tel:+4989444438872">
+                Direkt anrufen: 089 444438872
               </a>
             </Button>
           </div>
