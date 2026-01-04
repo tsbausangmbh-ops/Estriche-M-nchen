@@ -16,6 +16,13 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { useToast } from "@/hooks/use-toast";
@@ -24,12 +31,36 @@ import { Phone, Mail, MapPin, Clock, ChevronRight, CheckCircle2, MessageSquare }
 import { Link } from "wouter";
 import heroImage from "@assets/generated_images/workers_milling_and_pipes_blue.png";
 
+const estrichTypes = [
+  { value: "zementestrich", label: "Zementestrich (CT)" },
+  { value: "calciumsulfat", label: "Calciumsulfatestrich / Anhydrit (CA)" },
+  { value: "heizestrich", label: "Heizestrich (Fußbodenheizung)" },
+  { value: "schnellestrich", label: "Schnellestrich / Schnellzement" },
+  { value: "fliessestrich", label: "Fließestrich" },
+  { value: "trockenestrich", label: "Trockenestrich" },
+  { value: "industrieboden", label: "Industrieestrich / Hartstoffestrich" },
+  { value: "unsicher", label: "Bin mir unsicher / Beratung gewünscht" },
+];
+
+const floorOptions = [
+  { value: "keller", label: "Keller / UG" },
+  { value: "eg", label: "Erdgeschoss" },
+  { value: "1og", label: "1. Obergeschoss" },
+  { value: "2og", label: "2. Obergeschoss" },
+  { value: "3og", label: "3. Obergeschoss" },
+  { value: "4og-plus", label: "4. OG oder höher" },
+  { value: "dg", label: "Dachgeschoss" },
+  { value: "mehrere", label: "Mehrere Stockwerke" },
+];
+
 const contactFormSchema = z.object({
   firstName: z.string().min(2, "Vorname muss mindestens 2 Zeichen lang sein"),
   lastName: z.string().min(2, "Nachname muss mindestens 2 Zeichen lang sein"),
-  address: z.string().min(5, "Bitte geben Sie eine gültige Adresse ein"),
   phone: z.string().min(6, "Bitte geben Sie eine gültige Telefonnummer ein"),
   email: z.string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein"),
+  estrichType: z.string().min(1, "Bitte wählen Sie einen Estrich-Typ aus"),
+  squareMeters: z.string().optional(),
+  floor: z.string().optional(),
   reason: z.string().min(10, "Bitte beschreiben Sie kurz Ihr Anliegen"),
   privacyConsent: z.boolean().refine(val => val === true, {
     message: "Bitte stimmen Sie der Datenschutzerklärung zu",
@@ -53,9 +84,11 @@ export default function Kontakt() {
     defaultValues: {
       firstName: "",
       lastName: "",
-      address: "",
       phone: "",
       email: "",
+      estrichType: "",
+      squareMeters: "",
+      floor: "",
       reason: "",
       privacyConsent: false,
     },
@@ -63,7 +96,18 @@ export default function Kontakt() {
 
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
-      return apiRequest("POST", "/api/contact", data);
+      const payload = {
+        firstName: data.firstName,
+        lastName: data.lastName,
+        phone: data.phone,
+        email: data.email,
+        projectType: "Kontaktanfrage",
+        estrichType: data.estrichType,
+        squareMeters: data.squareMeters ? parseInt(data.squareMeters) : null,
+        floor: data.floor || null,
+        message: data.reason,
+      };
+      return apiRequest("POST", "/api/contact", payload);
     },
     onSuccess: () => {
       toast({
@@ -259,24 +303,6 @@ export default function Kontakt() {
                       />
                     </div>
 
-                    <FormField
-                      control={form.control}
-                      name="address"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Adresse*</FormLabel>
-                          <FormControl>
-                            <Input 
-                              placeholder="Musterstraße 123, 80331 München" 
-                              {...field} 
-                              data-testid="input-contact-address"
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
                     <div className="grid sm:grid-cols-2 gap-4">
                       <FormField
                         control={form.control}
@@ -314,6 +340,78 @@ export default function Kontakt() {
                           </FormItem>
                         )}
                       />
+                    </div>
+
+                    <div className="border-t pt-4">
+                      <h3 className="font-semibold mb-3 text-sm">Projektdetails</h3>
+                      <div className="grid sm:grid-cols-3 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="estrichType"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Estrich-Typ*</FormLabel>
+                              <Select onValueChange={field.onChange} value={field.value}>
+                                <FormControl>
+                                  <SelectTrigger data-testid="select-contact-estrich-type">
+                                    <SelectValue placeholder="Bitte auswählen" />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent>
+                                  {estrichTypes.map((type) => (
+                                    <SelectItem key={type.value} value={type.value}>
+                                      {type.label}
+                                    </SelectItem>
+                                  ))}
+                                </SelectContent>
+                              </Select>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="squareMeters"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Fläche (ca. m²)</FormLabel>
+                              <FormControl>
+                                <Input 
+                                  placeholder="z.B. 120" 
+                                  type="number"
+                                  {...field} 
+                                  data-testid="input-contact-sqm"
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="floor"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Stockwerk</FormLabel>
+                              <Select onValueChange={field.onChange} value={field.value}>
+                                <FormControl>
+                                  <SelectTrigger data-testid="select-contact-floor">
+                                    <SelectValue placeholder="Auswählen" />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent>
+                                  {floorOptions.map((option) => (
+                                    <SelectItem key={option.value} value={option.value}>
+                                      {option.label}
+                                    </SelectItem>
+                                  ))}
+                                </SelectContent>
+                              </Select>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
                     </div>
 
                     <FormField
