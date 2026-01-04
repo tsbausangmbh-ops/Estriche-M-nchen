@@ -211,7 +211,7 @@ export default function Angebot() {
       </section>
 
       <section className="py-8">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="shadow-lg border-primary/20" data-testid="card-angebot-form">
             <CardHeader className="text-center pb-6">
               <div className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-md w-fit mx-auto mb-3">
