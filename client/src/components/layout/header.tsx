@@ -118,6 +118,14 @@ export function Header() {
                   Preise
                 </Button>
               </Link>
+              <Link href="/rechner">
+                <Button 
+                  variant="ghost" 
+                  data-testid="nav-rechner"
+                >
+                  Rechner
+                </Button>
+              </Link>
               <Link href="/faq">
                 <Button 
                   variant="ghost" 
@@ -200,6 +208,15 @@ export function Header() {
                   data-testid="mobile-nav-preise"
                 >
                   Preise
+                </Button>
+              </Link>
+              <Link href="/rechner" onClick={() => setMobileMenuOpen(false)}>
+                <Button 
+                  variant="ghost" 
+                  className="w-full justify-start"
+                  data-testid="mobile-nav-rechner"
+                >
+                  Rechner
                 </Button>
               </Link>
               <Link href="/faq" onClick={() => setMobileMenuOpen(false)}>

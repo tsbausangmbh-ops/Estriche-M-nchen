@@ -19,6 +19,7 @@ import Datenschutz from "@/pages/datenschutz";
 import AGB from "@/pages/agb";
 import UeberUns from "@/pages/ueber-uns";
 import Angebot from "@/pages/angebot";
+import Rechner from "@/pages/rechner";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -47,6 +48,7 @@ function Router() {
       <Route path="/agb" component={AGB} />
       <Route path="/ueber-uns" component={UeberUns} />
       <Route path="/angebot" component={Angebot} />
+      <Route path="/rechner" component={Rechner} />
       <Route component={NotFound} />
     </Switch>
   );
