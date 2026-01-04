@@ -557,9 +557,9 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-6">
-            <Link href="/angebot">
+            <Link href="/rechner">
               <Button size="lg" data-testid="button-pricing-cta">
-                Mein persönliches Angebot anfordern
+                Kostenloser Budgetrechner
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
