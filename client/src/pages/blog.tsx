@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Link } from "wouter";
-import { ChevronRight, Clock, Calendar, BookOpen } from "lucide-react";
+import { ChevronRight, Clock, Calendar, BookOpen, CheckCircle2, Shield, Award, Zap } from "lucide-react";
 import { blogArticles } from "@/lib/blog-data";
 import heroImage from "@assets/generated_images/workers_pouring_cement_screed.png";
 
@@ -53,6 +53,74 @@ export default function Blog() {
               Praxisnahe Tipps, Anleitungen und Expertenwissen rund um Estrich, Bodenaufbau und Sanierung. 
               Damit Sie informierte Entscheidungen treffen können.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-8 bg-accent border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">
+                Warum Sie bei Estrich München richtig sind
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                <strong className="text-foreground">Stellen Sie sich vor:</strong> Ihr Estrich wird 
+                termingerecht verlegt, die Qualität stimmt, und Sie können sich auf das konzentrieren, 
+                was wirklich wichtig ist – Ihr Bauprojekt voranzubringen.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Mit über 30 Jahren Erfahrung in München wissen wir genau, worauf es ankommt. 
+                Kein Rätselraten, keine bösen Überraschungen – nur professionelle Arbeit, 
+                auf die Sie sich verlassen können.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="flex items-start gap-3 p-4 bg-card rounded-lg border">
+                <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Shield className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sm mb-1">Festpreis-Garantie</h3>
+                  <p className="text-xs text-muted-foreground">Was wir anbieten, gilt – keine versteckten Kosten.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 p-4 bg-card rounded-lg border">
+                <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Zap className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sm mb-1">Termingarantie</h3>
+                  <p className="text-xs text-muted-foreground">Pünktlich fertig, damit Ihr Projekt nicht stockt.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 p-4 bg-card rounded-lg border">
+                <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Award className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sm mb-1">30+ Jahre Erfahrung</h3>
+                  <p className="text-xs text-muted-foreground">Meisterbetrieb mit regionalem Know-how.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 p-4 bg-card rounded-lg border">
+                <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sm mb-1">5 Jahre Gewährleistung</h3>
+                  <p className="text-xs text-muted-foreground">Wir stehen zu unserer Arbeit – schriftlich.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-6 text-center">
+            <Link href="/angebot">
+              <Button size="lg" data-testid="button-ratgeber-benefits-cta">
+                Jetzt kostenloses Angebot anfordern
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
