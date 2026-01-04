@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { MapPin, Clock, Menu, X, ChevronDown } from "lucide-react";
+import { MapPin, Clock, Menu, X, ChevronDown, ArrowLeft } from "lucide-react";
 import { services } from "@/lib/services-data";
 
 export function Header() {
@@ -57,17 +57,31 @@ export function Header() {
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link href="/">
-              <a className="flex items-center gap-3" data-testid="link-logo">
-                <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-xl">E</span>
-                </div>
-                <div className="hidden sm:block">
-                  <div className="font-bold text-lg leading-tight">Estrich München</div>
-                  <div className="text-xs text-muted-foreground">Estrich • Bodenaufbau • Sanierung</div>
-                </div>
-              </a>
-            </Link>
+            <div className="flex items-center gap-2">
+              {!isHomePage && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => window.history.back()}
+                  data-testid="button-back"
+                  aria-label="Zurück"
+                  className="mr-1"
+                >
+                  <ArrowLeft className="h-5 w-5" />
+                </Button>
+              )}
+              <Link href="/">
+                <a className="flex items-center gap-3" data-testid="link-logo">
+                  <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center">
+                    <span className="text-primary-foreground font-bold text-xl">E</span>
+                  </div>
+                  <div className="hidden sm:block">
+                    <div className="font-bold text-lg leading-tight">Estrich München</div>
+                    <div className="text-xs text-muted-foreground">Estrich • Bodenaufbau • Sanierung</div>
+                  </div>
+                </a>
+              </Link>
+            </div>
 
             <nav className="hidden md:flex items-center gap-1">
               <DropdownMenu>
