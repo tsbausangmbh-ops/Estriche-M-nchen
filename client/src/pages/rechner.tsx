@@ -214,7 +214,7 @@ export default function Rechner() {
 
             <div className="mt-10 flex flex-wrap gap-4 justify-center">
               <Link href="/rechner">
-                <Button size="lg" variant="outline" className="border-primary text-primary" data-testid="button-nlp-rechner">
+                <Button size="lg" data-testid="button-nlp-rechner">
                   Kostenloser Budgetrechner
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>

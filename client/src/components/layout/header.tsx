@@ -120,8 +120,6 @@ export function Header() {
               </Link>
               <Link href="/rechner">
                 <Button 
-                  variant="outline" 
-                  className="border-primary text-primary"
                   data-testid="nav-rechner"
                 >
                   Kostenloser Budgetrechner
@@ -213,8 +211,7 @@ export function Header() {
               </Link>
               <Link href="/rechner" onClick={() => setMobileMenuOpen(false)}>
                 <Button 
-                  variant="outline" 
-                  className="w-full justify-start border-primary text-primary"
+                  className="w-full justify-start"
                   data-testid="mobile-nav-rechner"
                 >
                   Kostenloser Budgetrechner

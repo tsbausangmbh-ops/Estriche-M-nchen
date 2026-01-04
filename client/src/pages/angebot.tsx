@@ -183,7 +183,7 @@ export default function Angebot() {
               auf das Sie sich verlassen können. Kostenlos und ohne Verpflichtung.
             </p>
             <Link href="/rechner">
-              <Button size="lg" variant="outline" className="border-primary text-primary bg-white/10 backdrop-blur-sm" data-testid="button-angebot-rechner">
+              <Button size="lg" data-testid="button-angebot-rechner">
                 Kostenloser Budgetrechner
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
