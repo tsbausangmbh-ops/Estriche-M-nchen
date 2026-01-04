@@ -34,7 +34,7 @@ export default function Impressum() {
               <div>
                 <h2 className="text-xl font-bold mb-3">Vertreten durch</h2>
                 <p className="text-muted-foreground">
-                  Geschäftsführer: Max Mustermann
+                  Geschäftsführer: Mustafa Sakar
                 </p>
               </div>
 
@@ -67,7 +67,7 @@ export default function Impressum() {
               <div>
                 <h2 className="text-xl font-bold mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
                 <p className="text-muted-foreground">
-                  Max Mustermann<br />
+                  Mustafa Sakar<br />
                   Musterstraße 123<br />
                   80331 München
                 </p>
