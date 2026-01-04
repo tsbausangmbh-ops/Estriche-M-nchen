@@ -226,12 +226,14 @@ export default function Home() {
                 </Link>
                 <Button 
                   size="lg" 
-                  variant="outline"
-                  className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-                  onClick={() => scrollToSection("leistungen")}
-                  data-testid="button-hero-services"
+                  className="bg-zinc-900 text-white hover:bg-zinc-800"
+                  asChild
+                  data-testid="button-hero-call"
                 >
-                  Wie wir helfen
+                  <a href="tel:+4989444438872">
+                    <Phone className="mr-2 h-4 w-4" />
+                    089 444438872
+                  </a>
                 </Button>
               </div>
 
