@@ -27,7 +27,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
-import { CheckCircle2, Clock, Shield, Award, FileText } from "lucide-react";
+import { CheckCircle2, Clock, Shield, Award, FileText, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 import heroImage from "@assets/generated_images/workers_pouring_cement_screed.png";
 
@@ -178,10 +178,16 @@ export default function Angebot() {
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 tracking-tight">
               Ihr Festpreis-Angebot in 24 Stunden
             </h1>
-            <p className="text-lg text-gray-200 leading-relaxed">
+            <p className="text-lg text-gray-200 leading-relaxed mb-6">
               Beschreiben Sie Ihr Projekt – und wir erstellen Ihnen ein verbindliches Angebot, 
               auf das Sie sich verlassen können. Kostenlos und ohne Verpflichtung.
             </p>
+            <Link href="/rechner">
+              <Button size="lg" variant="outline" className="border-primary text-primary bg-white/10 backdrop-blur-sm" data-testid="button-angebot-rechner">
+                Kostenloser Budgetrechner
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -213,6 +213,12 @@ export default function Rechner() {
             </div>
 
             <div className="mt-10 flex flex-wrap gap-4 justify-center">
+              <Link href="/rechner">
+                <Button size="lg" variant="outline" className="border-primary text-primary" data-testid="button-nlp-rechner">
+                  Kostenloser Budgetrechner
+                  <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
               <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" asChild>
                 <a href="tel:+4989444438872">
                   <Phone className="mr-2 h-4 w-4" />
