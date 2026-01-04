@@ -183,144 +183,56 @@ export default function Ablauf() {
 
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
               <p>
-                Kennen Sie das beklemmende Gefühl, wenn Sie einen Handwerker beauftragen und nicht wissen, was als 
-                Nächstes passiert? Wann kommt er? Was macht er genau? Wie lange dauert es? Und was kostet das am Ende 
-                wirklich? Diese Ungewissheit raubt vielen Bauherren den Schlaf. Aber das muss nicht sein.
+                Kennen Sie das Gefühl, wenn Sie einen Handwerker beauftragen und nicht wissen, was als 
+                Nächstes passiert? Wann kommt er? Was macht er genau? Was kostet das am Ende wirklich? 
+                Diese Ungewissheit raubt vielen Bauherren den Schlaf. <strong>Aber das muss nicht sein.</strong>
               </p>
 
               <p>
-                <strong>Stellen Sie sich vor, wie es sich anfühlt, wenn Sie bei jedem Schritt genau wissen, was 
-                passiert.</strong> Wenn Sie nicht mehr ständig anrufen müssen, um den Stand der Dinge zu erfahren. 
-                Wenn Sie sich entspannt zurücklehnen können, weil alles nach Plan läuft. Genau dieses Gefühl möchten 
-                wir Ihnen geben.
+                Stellen Sie sich vor, wie es sich anfühlt, wenn Sie bei jedem Schritt genau wissen, was 
+                passiert. Wenn Sie sich entspannt zurücklehnen können, weil alles nach Plan läuft. 
+                Genau dieses Gefühl möchten wir Ihnen geben.
               </p>
 
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Warum Transparenz so wichtig ist</h3>
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Transparenz als Grundlage</h3>
 
               <p>
-                In der Baubranche herrscht oft eine Kultur der Intransparenz. Handwerker kommen und gehen, Termine 
-                werden verschoben, und am Ende weiß niemand mehr, wer wann was gemacht hat. Das führt zu Frustration, 
-                Verzögerungen und oft auch zu höheren Kosten.
-              </p>
-
-              <p>
-                Wir haben früh erkannt: <strong>Transparenz ist nicht nur ein Serviceversprechen – sie ist die 
-                Grundlage für Vertrauen.</strong> Deshalb haben wir unseren Ablauf so gestaltet, dass Sie zu jedem 
-                Zeitpunkt genau wissen, wo Ihr Projekt steht. Keine Überraschungen. Keine Fragezeichen. Nur Klarheit.
-              </p>
-
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Die sieben Schritte im Detail</h3>
-
-              <p>
-                Jeder der sieben Schritte in unserem Ablauf ist durchdacht und erprobt. Über 30 Jahre Erfahrung und 
-                mehr als 1.200 abgeschlossene Projekte haben uns gezeigt, was funktioniert – und was nicht. Wir haben 
-                unseren Prozess immer weiter verfeinert, bis er so reibungslos läuft wie heute.
+                In der Baubranche herrscht oft Intransparenz. Termine werden verschoben, Kosten steigen. 
+                Wir haben unseren Ablauf so gestaltet, dass Sie zu jedem Zeitpunkt genau wissen, wo Ihr 
+                Projekt steht. <strong>Keine Überraschungen. Keine Fragezeichen. Nur Klarheit.</strong>
               </p>
 
               <p>
-                Beginnen wir mit der Kontaktaufnahme: Sie erreichen uns, wir hören zu. Kein Call-Center, keine 
-                Warteschleife, sondern ein echtes Gespräch mit einem Fachmann. In wenigen Minuten wissen Sie, ob 
-                wir der richtige Partner für Ihr Projekt sind.
+                Jeder unserer sieben Schritte ist durchdacht und erprobt. Über 30 Jahre Erfahrung und 
+                mehr als 1.200 Projekte haben uns gezeigt, was funktioniert. Von der kostenlosen 
+                Besichtigung bis zur gemeinsamen Abnahme – alles läuft reibungslos.
+              </p>
+
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Ihr Festpreis-Angebot</h3>
+
+              <p>
+                Innerhalb von 48 Stunden nach der Besichtigung erhalten Sie unser verbindliches Angebot. 
+                <strong>Dieser Preis steht. Er wird nicht nachverhandelt, nicht erhöht.</strong> Das 
+                Risiko tragen wir – nicht Sie.
               </p>
 
               <p>
-                Dann kommen wir zu Ihnen. Die Vor-Ort-Besichtigung ist kostenlos – und sie ist unerlässlich. Denn 
-                nur wenn wir Ihre Baustelle mit eigenen Augen sehen, können wir ein realistisches Angebot erstellen. 
-                Wir prüfen den Untergrund, messen die Flächen, notieren uns alle Besonderheiten. Und wir sprechen 
-                mit Ihnen: Was sind Ihre Wünsche? Welche Bedenken haben Sie? Was ist Ihnen besonders wichtig?
+                Wir koordinieren uns mit allen anderen Gewerken und stellen sicher, dass unser Zeitplan 
+                mit Ihrem Gesamtplan harmoniert. So vermeiden wir Verzögerungen und die berühmten 
+                „Wir warten noch auf den Estrichleger"-Situationen.
               </p>
 
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Das Festpreis-Angebot: Ihre Sicherheit</h3>
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Qualität und Gewährleistung</h3>
 
               <p>
-                Innerhalb von 48 Stunden nach der Besichtigung erhalten Sie unser Angebot. Es ist detailliert, 
-                verständlich und verbindlich. Sie sehen genau, was wir tun werden, welche Materialien wir verwenden 
-                und was es kostet. <strong>Dieser Preis steht. Er wird nicht nachverhandelt, nicht erhöht, nicht 
-                „angepasst".</strong>
-              </p>
-
-              <p>
-                Vielleicht fragen Sie sich: „Wie können die das garantieren?" Die Antwort ist einfach: Erfahrung. 
-                Nach über 1.200 Projekten in München und Umgebung wissen wir genau, was uns erwartet. Wir kalkulieren 
-                sorgfältig, berücksichtigen alle Eventualitäten und fügen einen angemessenen Puffer ein. So können 
-                wir Ihnen einen Preis nennen, der hält – egal was passiert.
-              </p>
-
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Koordination wie ein Uhrwerk</h3>
-
-              <p>
-                Ein Bauprojekt ist wie ein Puzzle: Viele Teile müssen zur richtigen Zeit am richtigen Ort sein. 
-                Der Estrich muss fertig sein, bevor der Fliesenleger kommt. Die Dämmung muss verlegt sein, bevor 
-                der Estrich gegossen wird. Alles muss ineinandergreifen.
+                Mit kalibrierten Messgeräten prüfen wir die Restfeuchte. Erst wenn der Estrich wirklich 
+                belegreif ist – nachweislich dokumentiert – geben wir ihn frei. Am Ende erhalten Sie alle 
+                Unterlagen und fünf Jahre Gewährleistung.
               </p>
 
               <p>
-                Wir koordinieren uns nicht nur mit Ihnen, sondern auch mit allen anderen Gewerken. Wir sprechen 
-                mit Ihrem Bauleiter, Ihrem Architekten, Ihrem Installateur. Wir stellen sicher, dass unser Zeitplan 
-                mit dem Gesamtplan harmoniert. <strong>So vermeiden wir Leerlauf, Verzögerungen und die berühmten 
-                „Wir warten noch auf den Estrichleger"-Situationen.</strong>
-              </p>
-
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Die Ausführung: Handwerk mit Herz</h3>
-
-              <p>
-                Wenn der Tag der Ausführung gekommen ist, erleben Sie den Unterschied. Unsere Mitarbeiter erscheinen 
-                pünktlich, in sauberer Arbeitskleidung, mit allem, was sie brauchen. Sie arbeiten konzentriert, 
-                sorgfältig und mit sichtbarem Stolz auf ihr Handwerk.
-              </p>
-
-              <p>
-                Stellen Sie sich vor, wie Sie zusehen, wie Ihr neuer Estrich entsteht. Wie die Oberfläche glatt 
-                und eben wird. Wie Ihre Baustelle am Ende des Tages ordentlich aufgeräumt hinterlassen wird. 
-                <strong>Das ist nicht nur Arbeit – das ist Handwerkskunst.</strong>
-              </p>
-
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Qualitätskontrolle: Wir gehen auf Nummer sicher</h3>
-
-              <p>
-                Ein Estrich braucht Zeit zum Trocknen. Wie lange genau, hängt von vielen Faktoren ab: 
-                Materialzusammensetzung, Schichtdicke, Raumtemperatur, Luftfeuchtigkeit. Wir überlassen hier nichts 
-                dem Zufall.
-              </p>
-
-              <p>
-                Mit kalibrierten Messgeräten prüfen wir regelmäßig die Restfeuchte. Wir dokumentieren jeden Messwert. 
-                Erst wenn der Estrich wirklich belegreif ist – nicht „vermutlich", sondern nachweislich – geben wir 
-                ihn frei. Diese Dokumentation erhalten Sie natürlich für Ihre Unterlagen.
-              </p>
-
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Die Übergabe: Ein gutes Ende</h3>
-
-              <p>
-                Am Ende steht die gemeinsame Abnahme. Wir gehen mit Ihnen durch Ihr Objekt, zeigen Ihnen das 
-                Ergebnis, erklären, worauf Sie achten sollten. Sie erhalten alle Dokumentationen, Messprotokolle 
-                und Pflegehinweise. Und dann beginnt unsere Gewährleistung: fünf volle Jahre, in denen wir für 
-                unsere Arbeit einstehen.
-              </p>
-
-              <p>
-                <strong>Aber unsere Beziehung endet nicht hier.</strong> Auch nach der Übergabe sind wir für Sie 
-                da. Haben Sie Fragen? Rufen Sie an. Gibt es ein Problem? Wir kümmern uns. Brauchen Sie uns für 
-                ein neues Projekt? Wir freuen uns auf Ihren Anruf.
-              </p>
-
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Warum dieser Ablauf für Sie Gold wert ist</h3>
-
-              <p>
-                Ein strukturierter Ablauf bedeutet für Sie: weniger Stress, weniger Unsicherheit, weniger 
-                unangenehme Überraschungen. Es bedeutet, dass Sie sich auf das konzentrieren können, was wirklich 
-                wichtig ist – Ihr Zuhause, Ihre Familie, Ihr Projekt. <strong>Wir kümmern uns um den Rest.</strong>
-              </p>
-
-              <p>
-                Über 282 zufriedene Kunden in München haben diesen Ablauf erlebt. Sie haben gespürt, wie es ist, 
-                wenn ein Handwerksbetrieb hält, was er verspricht. Sie haben die Erleichterung erfahren, wenn 
-                alles nach Plan läuft. Und viele von ihnen sind wiedergekommen – für das nächste Projekt, die 
-                nächste Renovierung, die nächste Empfehlung.
-              </p>
-
-              <p>
-                Sind Sie bereit, diesen Unterschied selbst zu erleben?
+                <strong>Über 282 zufriedene Kunden in München haben diesen Ablauf erlebt.</strong> 
+                Sind Sie bereit, den Unterschied selbst zu erleben?
               </p>
             </div>
 
