@@ -26,6 +26,7 @@ export class MemStorage implements IStorage {
       squareMeters: insertInquiry.squareMeters ?? null,
       floor: insertInquiry.floor ?? null,
       message: insertInquiry.message,
+      budgetSummary: insertInquiry.budgetSummary ?? null,
       createdAt: new Date(),
     };
     this.contactInquiries.set(id, inquiry);

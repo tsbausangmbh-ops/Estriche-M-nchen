@@ -1,10 +1,23 @@
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { useMutation } from "@tanstack/react-query";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import {
   Select,
   SelectContent,
@@ -15,6 +28,8 @@ import {
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Link } from "wouter";
+import { useToast } from "@/hooks/use-toast";
+import { apiRequest } from "@/lib/queryClient";
 import { 
   Calculator, 
   ChevronRight, 
@@ -25,9 +40,24 @@ import {
   Volume2,
   Truck,
   Wrench,
-  AlertTriangle
+  AlertTriangle,
+  Send,
+  CheckCircle2
 } from "lucide-react";
 import heroImage from "@assets/generated_images/worker_calculating_costs_on_tablet.png";
+
+const budgetContactSchema = z.object({
+  firstName: z.string().min(2, "Vorname muss mindestens 2 Zeichen lang sein"),
+  lastName: z.string().min(2, "Nachname muss mindestens 2 Zeichen lang sein"),
+  phone: z.string().min(6, "Bitte geben Sie eine gültige Telefonnummer ein"),
+  email: z.string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein"),
+  message: z.string().optional(),
+  privacyConsent: z.boolean().refine(val => val === true, {
+    message: "Bitte stimmen Sie der Datenschutzerklärung zu",
+  }),
+});
+
+type BudgetContactFormData = z.infer<typeof budgetContactSchema>;
 
 const estrichTypes = [
   { value: "zementestrich", label: "Zementestrich (CT)", basePrice: 32, description: "Klassiker für Wohnbau" },
@@ -72,6 +102,7 @@ const additionalOptions = [
 ];
 
 export default function Rechner() {
+  const { toast } = useToast();
   const [squareMeters, setSquareMeters] = useState<string>("100");
   const [estrichType, setEstrichType] = useState<string>("zementestrich");
   const [thickness, setThickness] = useState<string>("45");
@@ -79,6 +110,94 @@ export default function Rechner() {
   const [speed, setSpeed] = useState<string>("standard");
   const [selectedOptions, setSelectedOptions] = useState<string[]>(["baustelleneinrichtung", "reinigung"]);
   const [showResult, setShowResult] = useState(false);
+  const [showContactForm, setShowContactForm] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const form = useForm<BudgetContactFormData>({
+    resolver: zodResolver(budgetContactSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      phone: "",
+      email: "",
+      message: "",
+      privacyConsent: false,
+    },
+  });
+
+  const generateBudgetSummary = () => {
+    const selectedEstrich = estrichTypes.find(e => e.value === estrichType);
+    const selectedThickness = thicknessOptions.find(t => t.value === thickness);
+    const selectedFloor = floorOptions.find(f => f.value === floor);
+    const selectedSpeed = speedOptions.find(s => s.value === speed);
+    const sqm = parseFloat(squareMeters) || 0;
+    const result = calculatePrice();
+
+    const optionsList = selectedOptions
+      .map(id => additionalOptions.find(o => o.id === id)?.label)
+      .filter(Boolean)
+      .join(", ");
+
+    return `
+BUDGETRECHNER-ERGEBNIS
+======================
+Geschätzter Preisrahmen: ${result.min.toLocaleString('de-DE')} – ${result.max.toLocaleString('de-DE')} € netto
+
+PROJEKTDETAILS:
+- Fläche: ${sqm} m²
+- Estrich-Typ: ${selectedEstrich?.label || estrichType}
+- Stärke: ${selectedThickness?.label || thickness}
+- Stockwerk: ${selectedFloor?.label || floor}
+- Trocknungszeit: ${selectedSpeed?.label || speed}
+- Zusatzleistungen: ${optionsList || "Keine"}
+
+KOSTENAUFSTELLUNG:
+${result.breakdown.map(item => `- ${item.label}: ${item.amount.toLocaleString('de-DE')} €`).join('\n')}
+
+Zwischensumme: ${result.subtotal?.toLocaleString('de-DE')} € netto
+Preisrahmen: ${result.min.toLocaleString('de-DE')} – ${result.max.toLocaleString('de-DE')} € netto
+
+Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wird nach einer Vor-Ort-Besichtigung ermittelt.
+    `.trim();
+  };
+
+  const contactMutation = useMutation({
+    mutationFn: async (data: BudgetContactFormData) => {
+      const selectedEstrich = estrichTypes.find(e => e.value === estrichType);
+      const payload = {
+        firstName: data.firstName,
+        lastName: data.lastName,
+        phone: data.phone,
+        email: data.email,
+        projectType: "Budgetrechner-Anfrage",
+        estrichType: selectedEstrich?.label || estrichType,
+        squareMeters: parseInt(squareMeters) || null,
+        floor: floor,
+        message: data.message || "Anfrage über Budgetrechner",
+        budgetSummary: generateBudgetSummary(),
+      };
+      return apiRequest("POST", "/api/contact", payload);
+    },
+    onSuccess: () => {
+      toast({
+        title: "Anfrage erfolgreich gesendet!",
+        description: "Wir haben Ihre Budgetberechnung erhalten und melden uns innerhalb von 24 Stunden.",
+      });
+      form.reset();
+      setFormSubmitted(true);
+    },
+    onError: () => {
+      toast({
+        title: "Fehler",
+        description: "Bitte versuchen Sie es später erneut.",
+        variant: "destructive",
+      });
+    },
+  });
+
+  const onSubmit = (data: BudgetContactFormData) => {
+    contactMutation.mutate(data);
+  };
 
   const calculatePrice = () => {
     const sqm = parseFloat(squareMeters) || 0;
@@ -423,6 +542,184 @@ export default function Rechner() {
                     )}
                   </CardContent>
                 </Card>
+
+                {showResult && parseFloat(squareMeters) > 0 && !formSubmitted && (
+                  <Card className="border-primary">
+                    <CardContent className="p-5 space-y-4">
+                      <h3 className="font-bold flex items-center gap-2">
+                        <Send className="w-4 h-4 text-primary" />
+                        Budget per E-Mail erhalten
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        Erhalten Sie Ihre Budgetberechnung per E-Mail und wir kontaktieren Sie für ein verbindliches Angebot.
+                      </p>
+                      
+                      {!showContactForm ? (
+                        <Button 
+                          className="w-full" 
+                          onClick={() => setShowContactForm(true)}
+                          data-testid="button-show-budget-form"
+                        >
+                          Budget mit Kontaktdaten senden
+                          <ChevronRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      ) : (
+                        <Form {...form}>
+                          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                            <div className="grid grid-cols-2 gap-3">
+                              <FormField
+                                control={form.control}
+                                name="firstName"
+                                render={({ field }) => (
+                                  <FormItem>
+                                    <FormLabel className="text-xs">Vorname*</FormLabel>
+                                    <FormControl>
+                                      <Input 
+                                        placeholder="Max" 
+                                        {...field} 
+                                        data-testid="input-budget-firstname"
+                                      />
+                                    </FormControl>
+                                    <FormMessage />
+                                  </FormItem>
+                                )}
+                              />
+                              <FormField
+                                control={form.control}
+                                name="lastName"
+                                render={({ field }) => (
+                                  <FormItem>
+                                    <FormLabel className="text-xs">Nachname*</FormLabel>
+                                    <FormControl>
+                                      <Input 
+                                        placeholder="Mustermann" 
+                                        {...field} 
+                                        data-testid="input-budget-lastname"
+                                      />
+                                    </FormControl>
+                                    <FormMessage />
+                                  </FormItem>
+                                )}
+                              />
+                            </div>
+                            
+                            <FormField
+                              control={form.control}
+                              name="email"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <FormLabel className="text-xs">E-Mail*</FormLabel>
+                                  <FormControl>
+                                    <Input 
+                                      placeholder="max@beispiel.de" 
+                                      type="email"
+                                      {...field} 
+                                      data-testid="input-budget-email"
+                                    />
+                                  </FormControl>
+                                  <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+                            
+                            <FormField
+                              control={form.control}
+                              name="phone"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <FormLabel className="text-xs">Telefon*</FormLabel>
+                                  <FormControl>
+                                    <Input 
+                                      placeholder="+49 ..." 
+                                      type="tel"
+                                      {...field} 
+                                      data-testid="input-budget-phone"
+                                    />
+                                  </FormControl>
+                                  <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+                            
+                            <FormField
+                              control={form.control}
+                              name="message"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <FormLabel className="text-xs">Nachricht (optional)</FormLabel>
+                                  <FormControl>
+                                    <Textarea 
+                                      placeholder="Weitere Infos zu Ihrem Projekt..."
+                                      className="resize-none text-sm"
+                                      rows={2}
+                                      {...field} 
+                                      data-testid="input-budget-message"
+                                    />
+                                  </FormControl>
+                                  <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+                            
+                            <FormField
+                              control={form.control}
+                              name="privacyConsent"
+                              render={({ field }) => (
+                                <FormItem className="flex flex-row items-start space-x-2 space-y-0">
+                                  <FormControl>
+                                    <Checkbox
+                                      checked={field.value}
+                                      onCheckedChange={field.onChange}
+                                      data-testid="checkbox-budget-privacy"
+                                    />
+                                  </FormControl>
+                                  <div className="space-y-1 leading-none">
+                                    <FormLabel className="text-xs font-normal">
+                                      Ich habe die{" "}
+                                      <Link href="/datenschutz" className="underline text-primary">
+                                        Datenschutzerklärung
+                                      </Link>{" "}
+                                      gelesen und stimme zu.*
+                                    </FormLabel>
+                                    <FormMessage />
+                                  </div>
+                                </FormItem>
+                              )}
+                            />
+                            
+                            <Button 
+                              type="submit" 
+                              className="w-full"
+                              disabled={contactMutation.isPending}
+                              data-testid="button-submit-budget"
+                            >
+                              {contactMutation.isPending ? (
+                                "Wird gesendet..."
+                              ) : (
+                                <>
+                                  <Send className="mr-2 h-4 w-4" />
+                                  Budgetberechnung senden
+                                </>
+                              )}
+                            </Button>
+                          </form>
+                        </Form>
+                      )}
+                    </CardContent>
+                  </Card>
+                )}
+
+                {formSubmitted && (
+                  <Card className="border-green-500 bg-green-50 dark:bg-green-950/20">
+                    <CardContent className="p-5 text-center space-y-3">
+                      <CheckCircle2 className="w-10 h-10 text-green-600 mx-auto" />
+                      <h3 className="font-bold text-green-800 dark:text-green-200">Anfrage erfolgreich gesendet!</h3>
+                      <p className="text-sm text-green-700 dark:text-green-300">
+                        Wir haben Ihre Budgetberechnung erhalten und melden uns innerhalb von 24 Stunden bei Ihnen.
+                      </p>
+                    </CardContent>
+                  </Card>
+                )}
 
                 <Card className="bg-foreground text-primary-foreground">
                   <CardContent className="p-5 space-y-4">

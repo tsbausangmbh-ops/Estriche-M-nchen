@@ -29,6 +29,7 @@ export async function registerRoutes(
         estrichType: inquiry.estrichType,
         squareMeters: inquiry.squareMeters,
         floor: inquiry.floor,
+        budgetSummary: inquiry.budgetSummary ? "Included" : "None",
       });
 
       return res.status(201).json({ 

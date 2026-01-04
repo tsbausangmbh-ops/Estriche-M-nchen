@@ -14,6 +14,7 @@ export const contactInquiries = pgTable("contact_inquiries", {
   squareMeters: integer("square_meters"),
   floor: text("floor"),
   message: text("message").notNull(),
+  budgetSummary: text("budget_summary"),
   createdAt: timestamp("created_at").defaultNow(),
 });
 
