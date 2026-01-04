@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { services } from "@/lib/services-data";
+import { CookieSettingsButton } from "@/components/cookie-consent";
 
 export function Footer() {
   return (
@@ -70,6 +71,7 @@ export function Footer() {
                 AGB
               </a>
             </Link>
+            <CookieSettingsButton />
           </div>
         </div>
       </div>
