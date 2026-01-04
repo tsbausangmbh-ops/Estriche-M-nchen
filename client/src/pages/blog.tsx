@@ -29,10 +29,7 @@ export default function Blog() {
         article.category === categories.find(c => c.id === activeCategory)?.label
       );
 
-  const scrollToContact = () => {
-    window.location.href = "/#kontakt";
-  };
-
+  
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -136,10 +133,12 @@ export default function Blog() {
           <p className="text-muted-foreground mb-6">
             Unsere Experten beraten Sie gerne persönlich und kostenlos.
           </p>
-          <Button size="lg" onClick={scrollToContact} data-testid="button-blog-cta">
-            Kostenlose Beratung anfordern
-            <ChevronRight className="ml-2 h-4 w-4" />
-          </Button>
+          <Link href="/angebot">
+            <Button size="lg" data-testid="button-blog-cta">
+              Kostenlose Beratung anfordern
+              <ChevronRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
         </div>
       </section>
 

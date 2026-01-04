@@ -12,10 +12,7 @@ export default function BlogArticle() {
   const { slug } = useParams<{ slug: string }>();
   const article = getArticleBySlug(slug || "");
 
-  const scrollToContact = () => {
-    window.location.href = "/#kontakt";
-  };
-
+  
   if (!article) {
     return (
       <div className="min-h-screen bg-background">
@@ -161,10 +158,12 @@ export default function BlogArticle() {
           <p className="text-muted-foreground mb-6">
             Wir beraten Sie gerne und erstellen Ihnen ein unverbindliches Angebot.
           </p>
-          <Button size="lg" onClick={scrollToContact} data-testid="button-article-cta">
-            Jetzt Beratung anfordern
-            <ChevronRight className="ml-2 h-4 w-4" />
-          </Button>
+          <Link href="/angebot">
+            <Button size="lg" data-testid="button-article-cta">
+              Jetzt Beratung anfordern
+              <ChevronRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
         </div>
       </section>
 

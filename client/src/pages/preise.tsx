@@ -160,10 +160,7 @@ const additionalServices = [
 ];
 
 export default function Preise() {
-  const scrollToContact = () => {
-    window.location.href = "/#kontakt";
-  };
-
+  
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -184,10 +181,12 @@ export default function Preise() {
               Bei uns wissen Sie vorher, was es kostet. Alle Preise sind Richtwerte für München und Umgebung. 
               Nach der kostenlosen Besichtigung erhalten Sie ein verbindliches Festpreis-Angebot.
             </p>
-            <Button size="lg" onClick={scrollToContact} data-testid="button-preise-cta">
-              Mein persönliches Angebot anfordern
-              <ChevronRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href="/angebot">
+              <Button size="lg" data-testid="button-preise-cta">
+                Mein persönliches Angebot anfordern
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -316,10 +315,12 @@ export default function Preise() {
             Die Richtwerte geben Ihnen eine Orientierung. Für Ihr konkretes Projekt erstellen wir 
             ein individuelles Festpreis-Angebot – kostenlos und unverbindlich.
           </p>
-          <Button size="lg" variant="secondary" onClick={scrollToContact} data-testid="button-preise-footer-cta">
-            Kostenloses Angebot anfordern
-            <ChevronRight className="ml-1 h-4 w-4" />
-          </Button>
+          <Link href="/angebot">
+            <Button size="lg" variant="secondary" data-testid="button-preise-footer-cta">
+              Kostenloses Angebot anfordern
+              <ChevronRight className="ml-1 h-4 w-4" />
+            </Button>
+          </Link>
         </div>
       </section>
 

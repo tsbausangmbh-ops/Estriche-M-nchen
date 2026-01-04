@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChevronRight, HelpCircle } from "lucide-react";
@@ -161,10 +162,6 @@ const faqCategories = [
 ];
 
 export default function FAQ() {
-  const scrollToContact = () => {
-    window.location.href = "/#kontakt";
-  };
-
   const totalQuestions = faqCategories.reduce((sum, cat) => sum + cat.questions.length, 0);
 
   return (
@@ -187,10 +184,12 @@ export default function FAQ() {
               Hier finden Sie ausführliche Antworten auf die häufigsten Fragen rund um Estrich, 
               Fußbodenheizung, Kosten und unseren Ablauf. Falls Ihre Frage nicht dabei ist – fragen Sie uns!
             </p>
-            <Button size="lg" onClick={scrollToContact} data-testid="button-faq-cta">
-              Ihre Frage stellen
-              <ChevronRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href="/angebot">
+              <Button size="lg" data-testid="button-faq-cta">
+                Ihre Frage stellen
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -238,10 +237,12 @@ export default function FAQ() {
             schnell, kompetent und unverbindlich.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" onClick={scrollToContact} data-testid="button-faq-contact">
-              Jetzt Frage stellen
-              <ChevronRight className="ml-1 h-4 w-4" />
-            </Button>
+            <Link href="/angebot">
+              <Button size="lg" data-testid="button-faq-contact">
+                Jetzt Frage stellen
+                <ChevronRight className="ml-1 h-4 w-4" />
+              </Button>
+            </Link>
             <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" asChild>
               <a href="tel:+4989123456789">
                 Direkt anrufen: +49 89 123 456 789

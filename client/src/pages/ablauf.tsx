@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -140,10 +141,6 @@ const guarantees = [
 ];
 
 export default function Ablauf() {
-  const scrollToContact = () => {
-    window.location.href = "/#kontakt";
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -164,10 +161,12 @@ export default function Ablauf() {
               Kein Rätselraten, keine Überraschungen. Wir zeigen Ihnen genau, wie der Weg 
               zu Ihrem neuen Boden aussieht – transparent und nachvollziehbar.
             </p>
-            <Button size="lg" onClick={scrollToContact} data-testid="button-ablauf-cta">
-              Jetzt Projekt starten
-              <ChevronRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href="/angebot">
+              <Button size="lg" data-testid="button-ablauf-cta">
+                Jetzt Projekt starten
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -255,10 +254,12 @@ export default function Ablauf() {
           <p className="text-primary-foreground/70 mb-6 max-w-2xl mx-auto">
             Starten Sie jetzt Ihr Projekt. In nur 60 Sekunden erfahren Sie, wie wir Ihnen helfen können.
           </p>
-          <Button size="lg" variant="secondary" onClick={scrollToContact} data-testid="button-ablauf-footer-cta">
-            Kostenloses Angebot anfordern
-            <ChevronRight className="ml-1 h-4 w-4" />
-          </Button>
+          <Link href="/angebot">
+            <Button size="lg" variant="secondary" data-testid="button-ablauf-footer-cta">
+              Kostenloses Angebot anfordern
+              <ChevronRight className="ml-1 h-4 w-4" />
+            </Button>
+          </Link>
         </div>
       </section>
 

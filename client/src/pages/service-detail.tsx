@@ -25,10 +25,6 @@ export default function ServiceDetail() {
     );
   }
 
-  const scrollToContact = () => {
-    window.location.href = "/#kontakt";
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -69,10 +65,12 @@ export default function ServiceDetail() {
             </div>
 
             <div className="flex flex-wrap gap-3 mb-8">
-              <Button size="lg" onClick={scrollToContact} data-testid="button-hero-cta">
-                Kostenloses Angebot
-                <ChevronRight className="ml-1 h-4 w-4" />
-              </Button>
+              <Link href="/angebot">
+                <Button size="lg" data-testid="button-hero-cta">
+                  Kostenloses Angebot
+                  <ChevronRight className="ml-1 h-4 w-4" />
+                </Button>
+              </Link>
               <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" data-testid="button-hero-call">
                 <Phone className="mr-2 h-4 w-4" />
                 089 / 123 456 78
@@ -180,9 +178,11 @@ export default function ServiceDetail() {
                       </div>
                     ))}
                   </div>
-                  <Button className="w-full" onClick={scrollToContact}>
-                    Angebot anfordern
-                  </Button>
+                  <Link href="/angebot">
+                    <Button className="w-full">
+                      Angebot anfordern
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             </div>
@@ -474,10 +474,12 @@ export default function ServiceDetail() {
           <p className="text-destructive font-medium mb-4">
             {service.urgency}
           </p>
-          <Button onClick={scrollToContact} data-testid="button-urgency-cta">
-            Jetzt Termin sichern
-            <ChevronRight className="ml-1 h-4 w-4" />
-          </Button>
+          <Link href="/angebot">
+            <Button data-testid="button-urgency-cta">
+              Jetzt Termin sichern
+              <ChevronRight className="ml-1 h-4 w-4" />
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -518,10 +520,12 @@ export default function ServiceDetail() {
             Kostenlose Beratung, verbindliches Festpreis-Angebot, saubere Arbeit.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Button size="lg" variant="secondary" onClick={scrollToContact} data-testid="button-footer-cta">
-              Angebot anfordern
-              <ChevronRight className="ml-1 h-4 w-4" />
-            </Button>
+            <Link href="/angebot">
+              <Button size="lg" variant="secondary" data-testid="button-footer-cta">
+                Angebot anfordern
+                <ChevronRight className="ml-1 h-4 w-4" />
+              </Button>
+            </Link>
             <Button 
               size="lg" 
               className="bg-zinc-900 text-white hover:bg-zinc-800"

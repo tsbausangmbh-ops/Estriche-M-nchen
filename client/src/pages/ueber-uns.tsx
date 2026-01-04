@@ -87,10 +87,7 @@ const teamValues = [
 ];
 
 export default function UeberUns() {
-  const scrollToContact = () => {
-    window.location.href = "/#kontakt";
-  };
-
+  
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -116,10 +113,12 @@ export default function UeberUns() {
               wenn Ihr Projekt einfach läuft.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" onClick={scrollToContact} data-testid="button-hero-cta">
-                Kostenloses Angebot anfordern
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link href="/angebot">
+                <Button size="lg" data-testid="button-hero-cta">
+                  Kostenloses Angebot anfordern
+                  <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
               <Badge className="bg-white/10 text-white border-white/20 text-sm py-2 px-4">
                 <Award className="w-4 h-4 mr-2" />
                 30+ Jahre Meisterbetrieb
@@ -323,10 +322,12 @@ export default function UeberUns() {
             erstellen Ihnen ein verbindliches Festpreis-Angebot.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" variant="secondary" onClick={scrollToContact} data-testid="button-footer-cta">
-              Jetzt Beratung anfordern
-              <ChevronRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href="/angebot">
+              <Button size="lg" variant="secondary" data-testid="button-footer-cta">
+                Jetzt Beratung anfordern
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
             <Link href="/kontakt">
               <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
                 Kontaktseite besuchen

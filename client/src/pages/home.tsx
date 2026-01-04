@@ -215,14 +215,15 @@ export default function Home() {
               </p>
 
               <div className="flex flex-wrap gap-4 pt-2">
-                <Button 
-                  size="lg" 
-                  onClick={() => scrollToSection("kontakt")}
-                  data-testid="button-hero-cta"
-                >
-                  Ja, ich will stressfreien Estrich
-                  <ChevronRight className="ml-2 h-4 w-4" />
-                </Button>
+                <Link href="/angebot">
+                  <Button 
+                    size="lg" 
+                    data-testid="button-hero-cta"
+                  >
+                    Ja, ich will stressfreien Estrich
+                    <ChevronRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
                 <Button 
                   size="lg" 
                   variant="outline"
@@ -479,10 +480,12 @@ export default function Home() {
 
           <div className="text-center mt-6">
             <p className="text-muted-foreground mb-4">Nicht sicher, welche Lösung die richtige ist?</p>
-            <Button size="lg" onClick={() => scrollToSection("kontakt")} data-testid="button-services-cta">
-              Kostenlose Beratung anfordern
-              <ChevronRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href="/angebot">
+              <Button size="lg" data-testid="button-services-cta">
+                Kostenlose Beratung anfordern
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -552,10 +555,12 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-6">
-            <Button size="lg" onClick={() => scrollToSection("kontakt")} data-testid="button-pricing-cta">
-              Mein persönliches Angebot anfordern
-              <ChevronRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href="/angebot">
+              <Button size="lg" data-testid="button-pricing-cta">
+                Mein persönliches Angebot anfordern
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -596,10 +601,12 @@ export default function Home() {
 
           <div className="text-center mt-6">
             <p className="text-muted-foreground mb-4">Haben Sie eine andere Frage? Wir beantworten sie gerne persönlich.</p>
-            <Button size="lg" onClick={() => scrollToSection("kontakt")} data-testid="button-faq-cta">
-              Jetzt Kontakt aufnehmen
-              <ChevronRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href="/angebot">
+              <Button size="lg" data-testid="button-faq-cta">
+                Jetzt Kontakt aufnehmen
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
