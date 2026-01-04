@@ -24,7 +24,7 @@ import heroImage from "@assets/generated_images/three_workers_laying_screed_blue
 
 const milestones = [
   { year: "1994", title: "Gründung", description: "Start als kleiner Familienbetrieb in München mit einer klaren Vision: Handwerk, dem man vertrauen kann." },
-  { year: "2005", title: "Meisterbetrieb", description: "Zertifizierung durch die Handwerkskammer München und Erweiterung des Teams auf 8 Fachkräfte." },
+  { year: "2005", title: "Meisterbetrieb", description: "Zertifizierung durch die Handwerkskammer München und Erweiterung der Firma mit zusätzlichen Fachkräften." },
   { year: "2015", title: "1.000 Projekte", description: "Ein stolzer Meilenstein – über 1.000 erfolgreich abgeschlossene Projekte in München und Umgebung." },
   { year: "2024", title: "30 Jahre", description: "Drei Jahrzehnte Qualität, Zuverlässigkeit und zufriedene Kunden. Und wir fangen gerade erst an." },
 ];
