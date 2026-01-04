@@ -69,7 +69,8 @@ const floorOptions = [
 ];
 
 const contactFormSchema = z.object({
-  name: z.string().min(2, "Name muss mindestens 2 Zeichen lang sein"),
+  firstName: z.string().min(2, "Vorname muss mindestens 2 Zeichen lang sein"),
+  lastName: z.string().min(2, "Nachname muss mindestens 2 Zeichen lang sein"),
   phone: z.string().min(6, "Bitte geben Sie eine gültige Telefonnummer ein"),
   email: z.string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein"),
   estrichType: z.string().min(1, "Bitte wählen Sie einen Estrich-Typ aus"),
@@ -170,7 +171,8 @@ export default function Home() {
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
-      name: "",
+      firstName: "",
+      lastName: "",
       phone: "",
       email: "",
       estrichType: "",
@@ -183,12 +185,9 @@ export default function Home() {
 
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
-      const nameParts = data.name.trim().split(" ");
-      const firstName = nameParts[0] || "";
-      const lastName = nameParts.slice(1).join(" ") || "";
       const payload = {
-        firstName,
-        lastName,
+        firstName: data.firstName,
+        lastName: data.lastName,
         phone: data.phone,
         email: data.email,
         projectType: "Startseite-Anfrage",
@@ -308,59 +307,80 @@ export default function Home() {
               <CardContent>
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Name*</FormLabel>
-                          <FormControl>
-                            <Input 
-                              placeholder="Max Mustermann" 
-                              {...field} 
-                              data-testid="input-name"
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="phone"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Telefon*</FormLabel>
-                          <FormControl>
-                            <Input 
-                              placeholder="+49 ..." 
-                              type="tel"
-                              {...field} 
-                              data-testid="input-phone"
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>E-Mail*</FormLabel>
-                          <FormControl>
-                            <Input 
-                              placeholder="mail@beispiel.de" 
-                              type="email"
-                              {...field} 
-                              data-testid="input-email"
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                    <div className="grid grid-cols-2 gap-3">
+                      <FormField
+                        control={form.control}
+                        name="firstName"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Vorname*</FormLabel>
+                            <FormControl>
+                              <Input 
+                                placeholder="Max" 
+                                {...field} 
+                                data-testid="input-firstname"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="lastName"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Nachname*</FormLabel>
+                            <FormControl>
+                              <Input 
+                                placeholder="Mustermann" 
+                                {...field} 
+                                data-testid="input-lastname"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+                    <div className="grid grid-cols-2 gap-3">
+                      <FormField
+                        control={form.control}
+                        name="phone"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Telefon*</FormLabel>
+                            <FormControl>
+                              <Input 
+                                placeholder="+49 ..." 
+                                type="tel"
+                                {...field} 
+                                data-testid="input-phone"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>E-Mail*</FormLabel>
+                            <FormControl>
+                              <Input 
+                                placeholder="mail@beispiel.de" 
+                                type="email"
+                                {...field} 
+                                data-testid="input-email"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
                     <FormField
                       control={form.control}
                       name="estrichType"
@@ -832,21 +852,40 @@ export default function Home() {
                     <div className="grid sm:grid-cols-2 gap-4">
                       <FormField
                         control={form.control}
-                        name="name"
+                        name="firstName"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Name*</FormLabel>
+                            <FormLabel>Vorname*</FormLabel>
                             <FormControl>
                               <Input 
-                                placeholder="Max Mustermann" 
+                                placeholder="Max" 
                                 {...field} 
-                                data-testid="input-contact-name"
+                                data-testid="input-contact-firstname"
                               />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
                         )}
                       />
+                      <FormField
+                        control={form.control}
+                        name="lastName"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Nachname*</FormLabel>
+                            <FormControl>
+                              <Input 
+                                placeholder="Mustermann" 
+                                {...field} 
+                                data-testid="input-contact-lastname"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+                    <div className="grid sm:grid-cols-2 gap-4">
                       <FormField
                         control={form.control}
                         name="phone"
@@ -865,25 +904,25 @@ export default function Home() {
                           </FormItem>
                         )}
                       />
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>E-Mail*</FormLabel>
+                            <FormControl>
+                              <Input 
+                                placeholder="mail@beispiel.de" 
+                                type="email"
+                                {...field} 
+                                data-testid="input-contact-email"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
                     </div>
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>E-Mail*</FormLabel>
-                          <FormControl>
-                            <Input 
-                              placeholder="mail@beispiel.de" 
-                              type="email"
-                              {...field} 
-                              data-testid="input-contact-email"
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
                     <FormField
                       control={form.control}
                       name="estrichType"
