@@ -181,9 +181,9 @@ export default function Preise() {
               Bei uns wissen Sie vorher, was es kostet. Alle Preise sind Richtwerte für München und Umgebung. 
               Nach der kostenlosen Besichtigung erhalten Sie ein verbindliches Festpreis-Angebot.
             </p>
-            <Link href="/angebot">
+            <Link href="/rechner">
               <Button size="lg" data-testid="button-preise-cta">
-                Mein persönliches Angebot anfordern
+                Jetzt kostenlos mein Budget berechnen
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
