@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, ChevronRight, Info, Layers, Building2, Thermometer, Shield, Wrench, Zap } from "lucide-react";
+import { CheckCircle2, ChevronRight, Info, Layers, Building2, Thermometer, Shield, Wrench, Zap, Phone } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Link } from "wouter";
@@ -253,7 +253,153 @@ export default function Preise() {
         </div>
       </section>
 
-      <section className="py-6 bg-accent">
+      <section className="py-12 bg-accent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Preistransparenz</p>
+              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+                Warum Sie bei uns keine bösen Überraschungen erleben werden
+              </h2>
+            </div>
+
+            <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
+              <p>
+                Kennen Sie das? Sie beauftragen einen Handwerker, er nennt Ihnen einen Preis – und am Ende 
+                zahlen Sie plötzlich 30%, 50% oder sogar mehr. „Unvorhergesehene Mehrarbeiten", heißt es dann. 
+                Oder: „Das war im Angebot nicht enthalten." Diese Worte haben schon unzählige Bauherren in 
+                München um den Schlaf gebracht.
+              </p>
+
+              <p>
+                <strong>Wir haben uns geschworen, dass Ihnen das bei uns niemals passieren wird.</strong>
+              </p>
+
+              <p>
+                Stellen Sie sich vor, wie es sich anfühlt, wenn Sie ein Angebot in der Hand halten und absolut 
+                sicher wissen: Das ist der Preis. Nicht ungefähr. Nicht „circa". Sondern exakt. Sie können 
+                planen, budgetieren und vor allem – ruhig schlafen. Denn Sie wissen: Es wird keine 
+                Nachforderung geben. Keine unangenehmen Überraschungen. Keine stressigen Diskussionen.
+              </p>
+
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Das Problem der Branche – und unsere Lösung</h3>
+
+              <p>
+                In der Baubranche ist es leider gängige Praxis geworden, mit niedrigen „Lockangeboten" zu 
+                arbeiten. Der Kunde freut sich über den günstigen Preis, unterschreibt – und dann beginnt das 
+                böse Erwachen. Plötzlich „zeigt sich", dass der Untergrund nicht so ist wie gedacht. Plötzlich 
+                braucht man „zusätzliches Material". Plötzlich ist „mehr Aufwand" nötig.
+              </p>
+
+              <p>
+                Wir machen es anders. Radikal anders. Bevor wir Ihnen einen Preis nennen, kommen wir zu Ihnen. 
+                Wir schauen uns alles an. Den Untergrund. Die Zugänge. Die Gegebenheiten. Wir messen, prüfen, 
+                dokumentieren. Erst dann erstellen wir Ihr Angebot. Und dieser Preis steht.
+              </p>
+
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Was bedeutet „Festpreis" bei uns konkret?</h3>
+
+              <p>
+                Wenn wir Ihnen sagen: „Ihr Estrich kostet 4.850 Euro" – dann zahlen Sie exakt 4.850 Euro. 
+                Nicht 4.851. Nicht 5.200. Nicht 6.000. Sondern 4.850. Selbst wenn wir uns verkalkuliert haben. 
+                Selbst wenn Unvorhergesehenes passiert. Selbst wenn es länger dauert als geplant. Das Risiko 
+                tragen wir – nicht Sie.
+              </p>
+
+              <p>
+                <strong>Warum können wir das anbieten?</strong> Weil wir seit über 30 Jahren Estrich in München 
+                verlegen. Weil wir jede Situation schon erlebt haben. Weil wir genau wissen, was uns erwartet – 
+                und was es kostet. Diese Erfahrung gibt uns die Sicherheit, verbindliche Preise zu nennen. 
+                Und Ihnen gibt sie die Sicherheit, dass Sie nicht mehr bezahlen als vereinbart.
+              </p>
+
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Die Preise auf dieser Seite – eine ehrliche Orientierung</h3>
+
+              <p>
+                Die Preise, die Sie hier sehen, sind keine Marketing-Phantasien. Es sind realistische Richtwerte, 
+                basierend auf unserer täglichen Arbeit in München und Umgebung. Sie geben Ihnen eine erste 
+                Orientierung – mehr nicht. Denn jedes Projekt ist einzigartig.
+              </p>
+
+              <p>
+                Vielleicht haben Sie einen alten Holzbalken-Untergrund, der besondere Vorbereitung braucht. 
+                Vielleicht liegt Ihr Objekt im 4. Stock ohne Aufzug, was den Materialaufwand erhöht. Vielleicht 
+                brauchen Sie eine spezielle Dämmung für den Schallschutz. All das beeinflusst den Preis.
+              </p>
+
+              <p>
+                Aber genau deshalb kommen wir ja zu Ihnen. Um alles zu erfassen. Um nichts zu übersehen. Um 
+                Ihnen dann einen Preis zu nennen, auf den Sie sich verlassen können.
+              </p>
+
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Sparen Sie am richtigen Ende</h3>
+
+              <p>
+                Wir wissen: Bei vielen Projekten zählt jeder Euro. Und natürlich wollen Sie nicht mehr bezahlen 
+                als nötig. Aber lassen Sie uns ehrlich sein: <strong>Der billigste Anbieter ist selten der 
+                günstigste.</strong>
+              </p>
+
+              <p>
+                Ein Estrich, der schlecht gemacht ist, kostet Sie am Ende mehr. Durch Risse, die repariert werden 
+                müssen. Durch Unebenheiten, die der Fliesenleger ausgleichen muss. Durch Verzögerungen, die Ihr 
+                ganzes Projekt aufhalten. Durch den Ärger und die Nerven, die Sie investieren müssen.
+              </p>
+
+              <p>
+                Bei uns bekommen Sie vom ersten Tag an Qualität. Einen Boden, der jahrzehntelang hält. Handwerker, 
+                die wissen, was sie tun. Termine, die eingehalten werden. Und einen Preis, der steht. Das ist 
+                echte Wirtschaftlichkeit.
+              </p>
+
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Ihre Investition – in Zahlen und in Werten</h3>
+
+              <p>
+                Was kostet ein guter Estrich? Das hängt von vielen Faktoren ab. Aber eines können wir Ihnen 
+                versprechen: Bei uns bekommen Sie für jeden Euro einen echten Gegenwert. Qualität, die Sie 
+                sehen und fühlen können. Zuverlässigkeit, auf die Sie bauen können. Und die Gewissheit, dass 
+                Sie die richtige Entscheidung getroffen haben.
+              </p>
+
+              <p>
+                Stellen Sie sich vor, wie es sein wird: Ihr Estrich ist fertig, perfekt eben, bereit für den 
+                Bodenbelag Ihrer Wahl. Sie stehen darauf und wissen: Das hält. Das wurde richtig gemacht. Das 
+                war jeden Cent wert. <strong>Genau dieses Gefühl möchten wir Ihnen geben.</strong>
+              </p>
+
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Der nächste Schritt ist einfach</h3>
+
+              <p>
+                Sie haben Fragen zu den Preisen? Sie möchten wissen, was Ihr konkretes Projekt kosten wird? 
+                Dann lassen Sie uns sprechen. Unverbindlich. Kostenlos. Ohne Druck.
+              </p>
+
+              <p>
+                Wir kommen zu Ihnen, schauen uns alles an und erstellen Ihnen ein verbindliches Festpreis-Angebot. 
+                Ein Angebot, auf das Sie sich verlassen können. Ein Preis, der steht. <strong>Das ist unser 
+                Versprechen an Sie.</strong>
+              </p>
+            </div>
+
+            <div className="mt-10 flex flex-wrap gap-4 justify-center">
+              <Link href="/angebot">
+                <Button size="lg" data-testid="button-nlp-section-cta">
+                  Jetzt Festpreis-Angebot anfordern
+                  <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" asChild>
+                <a href="tel:+4989444438872">
+                  <Phone className="mr-2 h-4 w-4" />
+                  089 444438872
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-6">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-extrabold tracking-tight mb-6 text-center">
             Zusätzliche Leistungen & Service
