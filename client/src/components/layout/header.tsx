@@ -120,10 +120,11 @@ export function Header() {
               </Link>
               <Link href="/rechner">
                 <Button 
-                  variant="ghost" 
+                  variant="outline" 
+                  className="border-primary text-primary"
                   data-testid="nav-rechner"
                 >
-                  Rechner
+                  Kostenloser Budgetrechner
                 </Button>
               </Link>
               <Link href="/faq">
@@ -212,11 +213,11 @@ export function Header() {
               </Link>
               <Link href="/rechner" onClick={() => setMobileMenuOpen(false)}>
                 <Button 
-                  variant="ghost" 
-                  className="w-full justify-start"
+                  variant="outline" 
+                  className="w-full justify-start border-primary text-primary"
                   data-testid="mobile-nav-rechner"
                 >
-                  Rechner
+                  Kostenloser Budgetrechner
                 </Button>
               </Link>
               <Link href="/faq" onClick={() => setMobileMenuOpen(false)}>
