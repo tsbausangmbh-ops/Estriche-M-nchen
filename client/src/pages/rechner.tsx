@@ -487,20 +487,20 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
                       <div 
                         key={option.id} 
                         className={`flex items-start space-x-3 p-3 rounded-md border transition-colors ${option.required ? 'bg-accent/30 cursor-not-allowed' : 'hover:bg-accent/50 cursor-pointer'}`}
-                        onClick={() => toggleOption(option.id)}
+                        onClick={() => !option.required && toggleOption(option.id)}
                       >
                         <Checkbox
                           id={option.id}
                           checked={selectedOptions.includes(option.id)}
-                          onCheckedChange={() => toggleOption(option.id)}
                           disabled={option.required}
                           data-testid={`checkbox-${option.id}`}
+                          className="pointer-events-none"
                         />
                         <div className="flex-1">
-                          <Label htmlFor={option.id} className={`font-medium ${option.required ? 'cursor-not-allowed' : 'cursor-pointer'}`}>
+                          <span className={`font-medium ${option.required ? 'cursor-not-allowed' : 'cursor-pointer'}`}>
                             {option.label}
                             {option.required && <span className="ml-2 text-xs text-muted-foreground">(immer dabei)</span>}
-                          </Label>
+                          </span>
                           <p className="text-xs text-muted-foreground">{option.description}</p>
                           <p className="text-xs font-medium text-primary mt-1">+{option.price} €/m² netto</p>
                         </div>
