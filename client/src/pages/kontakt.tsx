@@ -181,7 +181,7 @@ export default function Kontakt() {
                   089 444438872
                 </a>
               </Button>
-              <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" asChild>
+              <Button size="lg" className="bg-black text-white hover:bg-black/90" asChild>
                 <a href="mailto:info@estriche-muenchen.de">
                   <Mail className="mr-2 h-4 w-4" />
                   E-Mail schreiben
