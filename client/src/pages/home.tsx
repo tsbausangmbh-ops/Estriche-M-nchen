@@ -46,6 +46,12 @@ import { Link } from "wouter";
 import heroImage from "@assets/generated_images/worker_grinding_screed_floor.png";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { 
+  generateLocalBusinessSchema, 
+  generateFAQSchema, 
+  generateHowToSchema,
+  businessInfo 
+} from "@/lib/seo-schemas";
 
 const estrichTypes = [
   { value: "zementestrich", label: "Zementestrich (CT)" },
@@ -228,7 +234,29 @@ export default function Home() {
       <Helmet>
         <title>Estrich München | Estrichleger Meisterbetrieb | Festpreis-Garantie</title>
         <meta name="description" content="Estrich München: Zementestrich, Fließestrich, Heizestrich vom Meisterbetrieb. 30+ Jahre Erfahrung, 2.500+ Projekte, Festpreis-Garantie. ☎ 089 444438872" />
+        <meta name="keywords" content="Estrich München, Estrichleger München, Zementestrich München, Fließestrich München, Heizestrich München, Estrich verlegen lassen, Estrich Kosten pro qm" />
+        <meta name="geo.region" content="DE-BY" />
+        <meta name="geo.placename" content="München" />
+        <meta name="geo.position" content="48.1779;11.5193" />
+        <meta name="ICBM" content="48.1779, 11.5193" />
         <link rel="canonical" href="https://estriche-muenchen.de/" />
+        <meta property="og:title" content="Estrich München | Meisterbetrieb mit Festpreis-Garantie" />
+        <meta property="og:description" content="Professionelle Estricharbeiten in München. Zementestrich, Fließestrich, Heizestrich. 30+ Jahre Erfahrung, 2.500+ Projekte." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://estriche-muenchen.de/" />
+        <meta property="og:locale" content="de_DE" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Estrich München | Meisterbetrieb mit Festpreis-Garantie" />
+        <meta name="twitter:description" content="Professionelle Estricharbeiten in München. Festpreis-Garantie, termingerecht, qualitätsgeprüft." />
+        <script type="application/ld+json">
+          {JSON.stringify(generateLocalBusinessSchema())}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(generateFAQSchema(faqItems.map(f => ({ question: f.question, answer: f.answer }))))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(generateHowToSchema(processSteps.map(s => ({ name: s.title, text: s.description }))))}
+        </script>
       </Helmet>
       <Header />
 

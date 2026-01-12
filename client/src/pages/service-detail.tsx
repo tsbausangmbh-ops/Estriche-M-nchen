@@ -7,6 +7,12 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, ChevronRight, Phone, Quote, Shield, Clock, Award, AlertTriangle, Users, Star, MapPin, Ruler, Calendar, Building2, ThumbsUp } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { 
+  generateServiceSchema, 
+  generateBreadcrumbSchema,
+  generateFAQSchema,
+  businessInfo 
+} from "@/lib/seo-schemas";
 
 export default function ServiceDetail() {
   const params = useParams();
@@ -31,7 +37,35 @@ export default function ServiceDetail() {
       <Helmet>
         <title>{service.title} München | {service.heroTagline} | Estriche München</title>
         <meta name="description" content={`${service.title} in München: ${service.description.substring(0, 150)}... Jetzt kostenlos beraten lassen!`} />
+        <meta name="keywords" content={`${service.title} München, ${service.title} verlegen lassen, ${service.title} Kosten pro qm, ${service.title} Meisterbetrieb`} />
+        <meta name="geo.region" content="DE-BY" />
+        <meta name="geo.placename" content="München" />
         <link rel="canonical" href={`https://estriche-muenchen.de/leistungen/${service.id}`} />
+        <meta property="og:title" content={`${service.title} München | Estriche München`} />
+        <meta property="og:description" content={service.description.substring(0, 200)} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://estriche-muenchen.de/leistungen/${service.id}`} />
+        <meta property="og:locale" content="de_DE" />
+        <script type="application/ld+json">
+          {JSON.stringify(generateServiceSchema({
+            name: `${service.title} München`,
+            description: service.description,
+            url: `https://estriche-muenchen.de/leistungen/${service.id}`,
+            priceRange: service.price
+          }))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(generateBreadcrumbSchema([
+            { name: "Startseite", url: "https://estriche-muenchen.de/" },
+            { name: "Leistungen", url: "https://estriche-muenchen.de/leistungen" },
+            { name: service.title, url: `https://estriche-muenchen.de/leistungen/${service.id}` }
+          ]))}
+        </script>
+        {service.faqs && service.faqs.length > 0 && (
+          <script type="application/ld+json">
+            {JSON.stringify(generateFAQSchema(service.faqs.map((f: {question: string; answer: string}) => ({ question: f.question, answer: f.answer }))))}
+          </script>
+        )}
       </Helmet>
       <Header />
 
