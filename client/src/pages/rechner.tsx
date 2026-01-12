@@ -128,7 +128,7 @@ const waermedaemmungOptions = [
 
 const fussbodenheizungOptions = [
   { value: "none", label: "Keine", price: 0 },
-  { value: "heizung", label: "Fußbodenheizung", price: 18, description: "Nur Verlegen ohne Material" },
+  { value: "heizung", label: "Fußbodenheizung verlegen", price: 28.50, description: "Nur Verlegen ohne Material" },
   { value: "einbettung", label: "Nur Einbettung", price: 8, description: "Heizrohr-Einbettung" },
 ];
 
