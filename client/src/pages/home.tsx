@@ -675,11 +675,11 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-6">
-            <p className="text-muted-foreground mb-4">Berechnen Sie jetzt, was Ihr Projekt wirklich kostet – <strong className="text-foreground">in unter 2 Minuten</strong>.</p>
+            <p className="text-muted-foreground mb-4">Starten Sie jetzt – <strong className="text-foreground">Ihr persönliches Angebot wartet bereits auf Sie</strong>.</p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/rechner">
+              <Link href="/kontakt">
                 <Button size="lg" data-testid="button-pricing-cta">
-                  Jetzt Kosten berechnen
+                  Jetzt unverbindlich anfragen
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
