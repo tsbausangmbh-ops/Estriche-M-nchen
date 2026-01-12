@@ -158,7 +158,7 @@ export default function Ablauf() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/40" />
         <div className="relative w-full mx-auto px-4 sm:px-8 lg:px-12">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="text-center">
             <Badge variant="outline" className="mb-4 border-white/30 text-white">Unser Ablauf</Badge>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-white">
               In 7 Schritten zum perfekten Estrich
@@ -309,7 +309,7 @@ export default function Ablauf() {
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">Unsere Garantien für Sie</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground">
               Wir stehen zu unserer Arbeit – mit schriftlichen Garantien, die Sie absichern.
             </p>
           </div>
@@ -338,7 +338,7 @@ export default function Ablauf() {
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Bereit, den ersten Schritt zu machen?
           </h2>
-          <p className="text-primary-foreground/70 mb-6 max-w-2xl mx-auto">
+          <p className="text-primary-foreground/70 mb-6">
             Starten Sie jetzt Ihr Projekt. In nur 60 Sekunden erfahren Sie, wie wir Ihnen helfen können.
           </p>
           <Link href="/angebot">

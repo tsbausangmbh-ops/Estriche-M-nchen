@@ -178,7 +178,7 @@ export default function Preise() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/40" />
         <div className="relative w-full mx-auto px-4 sm:px-8 lg:px-12">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="text-center">
             <Badge variant="outline" className="mb-4 border-white/30 text-white">Transparente Preise</Badge>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-white">
               Faire Preise für München
@@ -199,12 +199,12 @@ export default function Preise() {
 
       <section className="py-8 bg-muted/30 border-b">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
-          <div className="text-center max-w-3xl mx-auto mb-6">
+          <div className="text-center mb-6">
             <h2 className="text-xl sm:text-2xl font-extrabold mb-3 tracking-tight">
               Welches Problem möchten Sie lösen?
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {[
               { q: "Wie viel kostet mein Projekt?", a: "→ Nutzen Sie unseren Rechner" },
               { q: "Welcher Estrich ist der richtige?", a: "→ Wir beraten Sie kostenlos" },
@@ -409,7 +409,7 @@ export default function Preise() {
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Jetzt Ihr persönliches Angebot anfordern
           </h2>
-          <p className="text-primary-foreground/70 mb-6 max-w-2xl mx-auto">
+          <p className="text-primary-foreground/70 mb-6">
             Die Richtwerte geben Ihnen eine Orientierung. Für Ihr konkretes Projekt erstellen wir 
             ein individuelles Festpreis-Angebot – kostenlos und unverbindlich.
           </p>
