@@ -179,15 +179,14 @@ export default function Ablauf() {
 
       <section className="py-12 bg-accent">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-10">
-              <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Weg zum perfekten Boden</p>
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-                Warum ein klarer Ablauf Ihnen Stress erspart
-              </h2>
-            </div>
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Weg zum perfekten Boden</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+              Warum ein klarer Ablauf Ihnen Stress erspart
+            </h2>
+          </div>
 
-            <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
+          <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
               <p>
                 Kennen Sie das Gefühl, wenn Sie einen Handwerker beauftragen und nicht wissen, was als 
                 Nächstes passiert? Wann kommt er? Was macht er genau? Was kostet das am Ende wirklich? 
@@ -243,19 +242,18 @@ export default function Ablauf() {
             </div>
 
             <div className="mt-10 flex flex-wrap gap-4 justify-center">
-              <Link href="/angebot">
-                <Button size="lg" data-testid="button-nlp-ablauf-cta">
-                  Jetzt Projekt starten
-                  <ChevronRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-              <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" asChild>
-                <a href="tel:+4989444438872">
-                  <Phone className="mr-2 h-4 w-4" />
-                  089 444438872
-                </a>
+            <Link href="/angebot">
+              <Button size="lg" data-testid="button-nlp-ablauf-cta">
+                Jetzt Projekt starten
+                <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
-            </div>
+            </Link>
+            <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" asChild>
+              <a href="tel:+4989444438872">
+                <Phone className="mr-2 h-4 w-4" />
+                089 444438872
+              </a>
+            </Button>
           </div>
         </div>
       </section>

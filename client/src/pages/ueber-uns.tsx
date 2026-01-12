@@ -205,15 +205,14 @@ export default function UeberUns() {
 
       <section className="py-12">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-10">
-              <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unsere Geschichte</p>
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-                Wie alles begann
-              </h2>
-            </div>
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unsere Geschichte</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+              Wie alles begann
+            </h2>
+          </div>
 
-            <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
+          <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
               <p>
                 1994 stand Mustafa Sakar in seinem eigenen Neubau – und der Estrichleger war zum dritten Mal nicht erschienen. 
                 Der Fliesenleger musste unverrichteter Dinge wieder abziehen. Frustration, Zeit und Geld verloren.
@@ -265,9 +264,8 @@ export default function UeberUns() {
 
               <p>
                 <strong>Am Ende geht es nicht um Estrich. Es geht um Vertrauen.</strong> Und genau das ist unser 
-                Versprechen an Sie.
-              </p>
-            </div>
+              Versprechen an Sie.
+            </p>
           </div>
         </div>
       </section>
