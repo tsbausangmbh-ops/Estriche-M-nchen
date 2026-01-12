@@ -58,12 +58,11 @@ export default function AGB() {
                   (4) Diese AGB gelten sowohl gegenüber Verbrauchern als auch gegenüber Unternehmern, 
                   es sei denn, in der jeweiligen Klausel wird eine Differenzierung vorgenommen.
                   <br /><br />
-                  (5) <strong>Partnernetzwerk:</strong> Der Auftragnehmer ist Mitglied im Partnernetzwerk 
-                  qualifizierter Estrichfachbetriebe. Bei hoher Auftragslage oder spezialisierten Anforderungen 
-                  behält sich der Auftragnehmer vor, Leistungen ganz oder teilweise durch qualifizierte 
-                  Partnerbetriebe ausführen zu lassen, die nach den Qualitätsstandards und Vorgaben des 
-                  Auftragnehmers arbeiten. Die vertragliche Verantwortung gegenüber dem Auftraggeber 
-                  verbleibt uneingeschränkt beim Auftragnehmer.
+                  (5) <strong>Partnernetzwerk:</strong> Die Ausführung der Estricharbeiten erfolgt durch 
+                  qualifizierte Meisterbetriebe und Fachfirmen aus unserem Partnernetzwerk. Der Auftragnehmer 
+                  vermittelt und koordiniert diese Leistungen. Die ausführenden Partnerbetriebe sind für die 
+                  fachgerechte Durchführung der Arbeiten verantwortlich und arbeiten nach höchsten 
+                  Qualitätsstandards.
                 </p>
               </div>
 

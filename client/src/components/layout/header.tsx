@@ -34,7 +34,7 @@ export function Header() {
     <>
       <div className="bg-foreground text-background py-1.5 text-xs text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          Arbeiten werden von unserem Partnernetzwerk und unseren Meisterfirmen ausgeführt
+          Fachgerechte Ausführung durch unser Netzwerk qualifizierter Meisterbetriebe
         </div>
       </div>
       <div className="bg-foreground text-background py-2 text-sm">
