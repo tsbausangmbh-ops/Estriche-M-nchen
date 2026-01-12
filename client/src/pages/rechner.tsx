@@ -230,8 +230,8 @@ export default function Rechner() {
     result.breakdown.forEach((item) => {
       doc.setTextColor(100, 100, 100);
       doc.text(item.label, 20, y);
-      doc.setTextColor(40, 40, 40);
-      doc.text(`${item.amount.toLocaleString('de-DE')} €`, 150, y, { align: 'right' });
+      doc.setTextColor(item.amount < 0 ? 0 : 40, item.amount < 0 ? 128 : 40, item.amount < 0 ? 0 : 40);
+      doc.text(item.info || `${item.amount.toLocaleString('de-DE')} €`, 150, y, { align: 'right' });
       y += 7;
     });
     
@@ -321,7 +321,7 @@ PROJEKTDETAILS:
 - Weitere Zusatzleistungen: ${optionsList || "Keine"}
 
 KOSTENAUFSTELLUNG:
-${result.breakdown.map(item => `- ${item.label}: ${item.amount.toLocaleString('de-DE')} €`).join('\n')}
+${result.breakdown.map(item => `- ${item.label}: ${item.info || item.amount.toLocaleString('de-DE') + ' €'}`).join('\n')}
 
 Zwischensumme: ${result.subtotal?.toLocaleString('de-DE')} € netto
 Preisrahmen: ${result.min.toLocaleString('de-DE')} – ${result.max.toLocaleString('de-DE')} € netto
@@ -381,7 +381,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
       return { min: 0, max: 0, breakdown: [] };
     }
 
-    const breakdown: { label: string; amount: number }[] = [];
+    const breakdown: { label: string; amount: number; info?: string }[] = [];
 
     const baseEstrichCost = sqm * selectedEstrich.basePrice;
     breakdown.push({ label: `${selectedEstrich.label} (${sqm} m²)`, amount: baseEstrichCost });
@@ -389,29 +389,35 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
     const thicknessSurcharge = (selectedThickness.multiplier > 1) 
       ? sqm * selectedEstrich.basePrice * (selectedThickness.multiplier - 1) 
       : 0;
-    if (thicknessSurcharge > 0) {
-      breakdown.push({ label: `Stärkezuschlag (${selectedThickness.label})`, amount: thicknessSurcharge });
-    }
+    breakdown.push({ 
+      label: `Estrichstärke (${selectedThickness.label})`, 
+      amount: thicknessSurcharge,
+      info: thicknessSurcharge === 0 ? 'inkl.' : undefined
+    });
 
     const estrichCost = baseEstrichCost + thicknessSurcharge;
 
     const selectedProjektart = projektartOptions.find(p => p.value === projektart);
     const projektartSurcharge = sqm * (selectedProjektart?.surcharge || 0);
-    if (projektartSurcharge < 0) {
-      breakdown.push({ label: `Neubau-Rabatt`, amount: projektartSurcharge });
-    } else if (projektartSurcharge > 0) {
-      breakdown.push({ label: `Sanierungszuschlag`, amount: projektartSurcharge });
-    }
+    breakdown.push({ 
+      label: `Projektart (${selectedProjektart?.label || projektart})`, 
+      amount: projektartSurcharge,
+      info: projektartSurcharge === 0 ? 'inkl.' : (projektartSurcharge < 0 ? 'Rabatt' : undefined)
+    });
 
     const floorSurcharge = sqm * selectedFloor.surcharge;
-    if (floorSurcharge > 0) {
-      breakdown.push({ label: `Stockwerkzuschlag (${selectedFloor.label})`, amount: floorSurcharge });
-    }
+    breakdown.push({ 
+      label: `Stockwerk (${selectedFloor.label})`, 
+      amount: floorSurcharge,
+      info: floorSurcharge === 0 ? 'inkl.' : undefined
+    });
 
     const speedSurcharge = sqm * selectedSpeed.surcharge;
-    if (speedSurcharge > 0) {
-      breakdown.push({ label: `Schnellzuschlag (${selectedSpeed.label})`, amount: speedSurcharge });
-    }
+    breakdown.push({ 
+      label: `Trocknungszeit (${selectedSpeed.label})`, 
+      amount: speedSurcharge,
+      info: speedSurcharge === 0 ? 'inkl.' : undefined
+    });
 
     const selectedTrittschall = trittschallOptions.find(t => t.value === trittschall);
     const trittschallCost = (selectedTrittschall && selectedTrittschall.price > 0) ? sqm * selectedTrittschall.price : 0;
@@ -861,7 +867,9 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
                           {result.breakdown.map((item, index) => (
                             <div key={index} className="flex justify-between text-sm">
                               <span className="text-muted-foreground">{item.label}</span>
-                              <span>{item.amount.toLocaleString('de-DE')} €</span>
+                              <span className={item.amount < 0 ? 'text-green-600 dark:text-green-400' : ''}>
+                                {item.info || `${item.amount.toLocaleString('de-DE')} €`}
+                              </span>
                             </div>
                           ))}
                           <div className="border-t pt-2 mt-2">
