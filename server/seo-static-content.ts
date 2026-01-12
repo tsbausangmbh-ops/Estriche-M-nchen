@@ -621,9 +621,9 @@ function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
     "email": "info@estrich-muenchen.de",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Musterstraße 1",
+      "streetAddress": "Hardenbergstr. 4",
       "addressLocality": "München",
-      "postalCode": "80331",
+      "postalCode": "80992",
       "addressRegion": "Bayern",
       "addressCountry": "DE"
     },
