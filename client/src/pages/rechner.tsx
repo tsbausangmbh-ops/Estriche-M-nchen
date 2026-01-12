@@ -427,9 +427,11 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
 
     const selectedTrittschall = trittschallOptions.find(t => t.value === trittschall);
     const trittschallCost = (selectedTrittschall && selectedTrittschall.price > 0) ? sqm * selectedTrittschall.price : 0;
-    if (trittschallCost > 0) {
-      breakdown.push({ label: `Trittschalldämmung (${selectedTrittschall!.label})`, amount: trittschallCost });
-    }
+    breakdown.push({ 
+      label: `Trittschalldämmung (${selectedTrittschall?.label || 'Keine'})`, 
+      amount: trittschallCost,
+      info: trittschallCost === 0 ? 'inkl.' : undefined
+    });
 
     const selectedWaermedaemmung = waermedaemmungOptions.find(w => w.value === waermedaemmung);
     const waermedaemmungCost = (selectedWaermedaemmung && selectedWaermedaemmung.price > 0) ? sqm * selectedWaermedaemmung.price : 0;
@@ -726,67 +728,37 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
                       </SelectContent>
                     </Select>
                   </div>
-                </CardContent>
-              </Card>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg flex items-center gap-2">
-                    <Volume2 className="w-5 h-5 text-primary" />
-                    Trittschalldämmung
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground mb-3">Wählen Sie die gewünschte Dämmstärke für optimalen Schallschutz.</p>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                    {trittschallOptions.map((option) => (
-                      <div 
-                        key={option.value}
-                        onClick={() => setTrittschall(option.value)}
-                        className={`p-3 rounded-md border cursor-pointer transition-colors text-center ${
-                          trittschall === option.value 
-                            ? 'border-primary bg-primary/10' 
-                            : 'hover:bg-accent/50'
-                        }`}
-                        data-testid={`trittschall-${option.value}`}
-                      >
-                        <span className="font-medium block">{option.label}</span>
-                        {option.price > 0 && (
-                          <span className="text-xs text-primary">+{option.price} €/m²</span>
-                        )}
-                      </div>
-                    ))}
+                  <div>
+                    <Label>Trittschalldämmung</Label>
+                    <Select value={trittschall} onValueChange={setTrittschall}>
+                      <SelectTrigger className="mt-1" data-testid="select-calculator-trittschall">
+                        <SelectValue placeholder="Trittschalldämmung wählen" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {trittschallOptions.map((option) => (
+                          <SelectItem key={option.value} value={option.value}>
+                            {option.label} {option.price > 0 && `(+${option.price} €/m²)`}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   </div>
-                </CardContent>
-              </Card>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg flex items-center gap-2">
-                    <Thermometer className="w-5 h-5 text-primary" />
-                    Wärmedämmung
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground mb-3">Wählen Sie Material und Stärke der Wärmedämmung (EPS = Standard, XPS = druckfester).</p>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
-                    {waermedaemmungOptions.map((option) => (
-                      <div 
-                        key={option.value}
-                        onClick={() => setWaermedaemmung(option.value)}
-                        className={`p-3 rounded-md border cursor-pointer transition-colors text-center ${
-                          waermedaemmung === option.value 
-                            ? 'border-primary bg-primary/10' 
-                            : 'hover:bg-accent/50'
-                        }`}
-                        data-testid={`waermedaemmung-${option.value}`}
-                      >
-                        <span className="font-medium block">{option.label}</span>
-                        {option.price > 0 && (
-                          <span className="text-xs text-primary">+{option.price} €/m²</span>
-                        )}
-                      </div>
-                    ))}
+                  <div>
+                    <Label>Wärmedämmung</Label>
+                    <Select value={waermedaemmung} onValueChange={setWaermedaemmung}>
+                      <SelectTrigger className="mt-1" data-testid="select-calculator-waermedaemmung">
+                        <SelectValue placeholder="Wärmedämmung wählen" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {waermedaemmungOptions.map((option) => (
+                          <SelectItem key={option.value} value={option.value}>
+                            {option.label} {option.price > 0 && `(+${option.price} €/m²)`}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   </div>
                 </CardContent>
               </Card>
