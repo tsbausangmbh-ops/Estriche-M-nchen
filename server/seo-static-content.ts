@@ -361,40 +361,49 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   rechner: {
-    title: "Estrich Kostenrechner München - Budget online berechnen | Estrich München",
-    metaDescription: "Estrich Kosten online berechnen: Geben Sie Ihre Fläche ein und erhalten Sie sofort eine Preisschätzung. Kostenloser Budgetrechner für Ihr Projekt!",
-    mainKeyword: "Estrich Kostenrechner",
+    title: "Estrich Kostenrechner München 2025 | Preis pro m² sofort berechnen",
+    metaDescription: "Estrich Kosten München sofort berechnen: Zementestrich ab 32€/m², Fließestrich ab 42€/m². Kostenloser Online-Rechner mit Festpreis-Garantie. Jetzt Budget kalkulieren!",
+    mainKeyword: "Estrich Kostenrechner München",
     longTailKeywords: [
-      "Estrich Kosten berechnen online",
-      "Estrich Preis Kalkulator",
-      "Was kostet mein Estrich Rechner",
-      "Estrich Budget planen München",
-      "Estrichkosten schätzen Quadratmeter",
-      "Estrich Preisrechner kostenlos",
-      "Estrich Kalkulation online",
-      "Estrich Kostenvoranschlag berechnen"
+      "estrich kosten rechner",
+      "estrich preis pro m2",
+      "estrich kosten münchen",
+      "zementestrich kosten berechnen",
+      "fließestrich preis rechner",
+      "estrich verlegen kosten kalkulator",
+      "estrich münchen preis pro qm",
+      "estrich kalkulator online kostenlos",
+      "was kostet estrich pro quadratmeter",
+      "estrich preisrechner 2025"
     ],
-    h1: "Estrich Kostenrechner - Berechnen Sie Ihr Budget in 30 Sekunden",
+    h1: "Estrich Kostenrechner München 2025 - Preis pro m² sofort berechnen",
     sections: [
       {
-        h2: "Kostenloser Estrich-Budgetrechner",
-        h3s: ["Sofortige Preisschätzung", "Alle Estricharten verfügbar"],
-        content: `Mit unserem kostenlosen Estrich Kostenrechner erhalten Sie in nur 30 Sekunden eine realistische Preisschätzung für Ihr Projekt. Wählen Sie Estrichart, Fläche und gewünschte Optionen - der Rechner kalkuliert sofort Ihre geschätzten Kosten.`
+        h2: "Estrich Kosten pro m² sofort berechnen - Kostenloser Online-Rechner",
+        h3s: ["Zementestrich ab 32€/m²", "Fließestrich ab 42€/m²", "Schnellestrich ab 48€/m²"],
+        content: `Mit unserem kostenlosen Estrich Kostenrechner München berechnen Sie in nur 30 Sekunden Ihre Estrich Kosten pro Quadratmeter. Der Rechner kalkuliert präzise: Zementestrich ab 32€/m², Calciumsulfat-Fließestrich ab 42€/m², Schnellestrich ab 48€/m² und Industrieestrich ab 65€/m². Alle Preise gelten für München und Umgebung mit Festpreis-Garantie.`
       },
       {
-        h2: "So nutzen Sie den Estrich Preisrechner",
-        h3s: ["Schritt 1: Estrichart wählen", "Schritt 2: Fläche eingeben", "Schritt 3: Optionen auswählen"],
-        content: `Geben Sie Ihre Fläche in Quadratmetern ein, wählen Sie die gewünschte Estrichart und optionale Zusatzleistungen. Der Rechner zeigt Ihnen sofort die geschätzten Kosten - transparent aufgeschlüsselt nach Position.`
+        h2: "Estrich Preis berechnen - So funktioniert der Kalkulator",
+        h3s: ["Schritt 1: Fläche in m² eingeben", "Schritt 2: Estrichart wählen", "Schritt 3: Optionen auswählen", "Sofort-Ergebnis erhalten"],
+        content: `Der Estrich Preisrechner ist einfach zu bedienen: Geben Sie Ihre Fläche in Quadratmetern ein, wählen Sie die gewünschte Estrichart (Zementestrich, Fließestrich, Heizestrich oder Schnellestrich) und fügen Sie optionale Zusatzleistungen wie Trittschalldämmung, Wärmedämmung oder Fußbodenheizung hinzu. Der Rechner zeigt Ihnen sofort den geschätzten Gesamtpreis - transparent aufgeschlüsselt nach Position.`
       },
       {
-        h2: "Vom Richtwert zum verbindlichen Festpreis",
-        content: `Der Kostenrechner liefert einen realistischen Richtwert. Für ein verbindliches Festpreisangebot vereinbaren Sie eine kostenlose Vor-Ort-Besichtigung. Unser Estrichmeister nimmt das genaue Aufmaß und erstellt Ihr persönliches Angebot.`
+        h2: "Was kostet Estrich verlegen in München 2025?",
+        h3s: ["Aktuelle Estrich Preise pro m²", "Faktoren die den Preis beeinflussen"],
+        content: `Die Estrich Kosten in München 2025 liegen zwischen 32-65€ pro m² je nach Estrichart. Faktoren die den Preis beeinflussen: Estrichstärke (45-85mm), Stockwerk (EG bis 4.OG), Projektart (Neubau oder Sanierung), Trocknungszeit und gewählte Zusatzleistungen. Bei Neubau erhalten Sie 5€/m² Rabatt. Größere Flächen ab 100m² reduzieren den Preis pro m² zusätzlich.`
+      },
+      {
+        h2: "Vom Kostenrechner zum verbindlichen Festpreis-Angebot",
+        content: `Der Estrich Kostenrechner liefert realistische Richtwerte für Ihr Budget. Für ein verbindliches Festpreis-Angebot vereinbaren Sie eine kostenlose Vor-Ort-Besichtigung. Unser Estrichmeister nimmt das genaue Aufmaß und erstellt Ihr persönliches Angebot - ohne versteckte Kosten. Die Beratung ist 100% kostenlos und unverbindlich.`
       }
     ],
     faqs: [
-      { q: "Wie genau ist der Estrich Kostenrechner?", a: "Der Rechner liefert realistische Richtwerte. Das verbindliche Angebot erstellen wir nach Vor-Ort-Besichtigung - meist liegt es nahe am Rechner-Ergebnis." },
-      { q: "Welche Kosten sind im Rechner enthalten?", a: "Material, Verlegung, Anfahrt München, Baustelleneinrichtung und Reinigung. Bei Expresszuschlag kommen die gewählten Aufpreise dazu." },
-      { q: "Kann ich direkt über den Rechner beauftragen?", a: "Der Rechner dient zur Orientierung. Für die Beauftragung vereinbaren Sie eine kostenlose Vor-Ort-Beratung." }
+      { q: "Was kostet Estrich pro m² in München?", a: "Estrich kostet in München zwischen 25-65€ pro m² je nach Art: Zementestrich ab 32€/m², Fließestrich ab 42€/m², Schnellestrich ab 48€/m². Der genaue Preis hängt von Stärke, Stockwerk und Zusatzleistungen ab." },
+      { q: "Wie berechne ich meine Estrich-Kosten?", a: "Mit unserem kostenlosen Online-Rechner: Geben Sie Ihre Fläche in m² ein, wählen Sie Estrichart und Stärke, und erhalten Sie sofort eine unverbindliche Kosteneinschätzung mit Festpreis-Option." },
+      { q: "Ist der Estrich-Kostenrechner kostenlos?", a: "Ja, unser Estrich-Kostenrechner ist 100% kostenlos und unverbindlich. Sie erhalten sofort eine Budgeteinschätzung ohne Registrierung." },
+      { q: "Wie genau ist der Estrich Kostenrechner?", a: "Der Rechner liefert realistische Richtwerte basierend auf aktuellen München-Preisen 2025. Das verbindliche Angebot erstellen wir nach Vor-Ort-Besichtigung - meist liegt es nahe am Rechner-Ergebnis." },
+      { q: "Welche Kosten sind im Estrich-Preis enthalten?", a: "Material, fachgerechte Verlegung, Anfahrt München (55€ pauschal), Baustelleneinrichtung und Endreinigung. Dämmung, Fußbodenheizung und Express-Trocknung werden separat kalkuliert." }
     ]
   },
   kontakt: {
@@ -553,8 +562,9 @@ const pagesSEO: Record<string, PageSEO> = {
 };
 
 function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
-  const baseUrl = "https://estrich-muenchen.de";
+  const baseUrl = "https://estriche-muenchen.de";
   const canonicalUrl = `${baseUrl}${canonicalPath}`;
+  const isRechnerPage = canonicalPath === '/rechner';
   
   const sectionsHTML = page.sections.map(section => {
     let sectionContent = `<section>\n<h2>${section.h2}</h2>\n`;
@@ -651,6 +661,13 @@ function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
       }
     ],
     "sameAs": [],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "282",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Estrich-Dienstleistungen",
@@ -664,6 +681,56 @@ function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
     }
   }
   </script>
+  ${isRechnerPage ? `
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Estrich Kostenrechner München",
+    "description": "Kostenloser Online-Rechner zur Kalkulation von Estrich-Kosten in München und Umgebung",
+    "url": "${baseUrl}/rechner",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "description": "Kostenlose Nutzung des Estrich-Kostenrechners"
+    },
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Estriche München",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hardenbergstr. 4",
+        "addressLocality": "München",
+        "postalCode": "80992",
+        "addressCountry": "DE"
+      }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Startseite",
+        "item": "${baseUrl}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Estrich Kostenrechner",
+        "item": "${baseUrl}/rechner"
+      }
+    ]
+  }
+  </script>
+  ` : ''}
 </head>
 <body>
   <header>
@@ -676,6 +743,7 @@ function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
       <a href="/leistungen/sanierung" title="Estrichsanierung München">Sanierung</a>
       <a href="/leistungen/schnellestrich" title="Schnellestrich München">Schnellestrich</a>
       <a href="/preise" title="Estrich Preise München">Preise</a>
+      <a href="/rechner" title="Estrich Kostenrechner München">Kostenrechner</a>
       <a href="/kontakt" title="Kontakt Estrich München">Kontakt</a>
     </nav>
   </header>
