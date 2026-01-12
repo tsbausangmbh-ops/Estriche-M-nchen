@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useMutation } from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
+import jsPDF from "jspdf";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -43,7 +44,9 @@ import {
   Wrench,
   AlertTriangle,
   Send,
-  CheckCircle2
+  CheckCircle2,
+  Download,
+  FileText
 } from "lucide-react";
 import heroImage from "@assets/generated_images/worker_calculating_costs_on_tablet.png";
 
@@ -58,7 +61,15 @@ const budgetContactSchema = z.object({
   }),
 });
 
+const pdfDownloadSchema = z.object({
+  email: z.string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein"),
+  privacyConsent: z.boolean().refine(val => val === true, {
+    message: "Bitte stimmen Sie der Datenschutzerklärung zu",
+  }),
+});
+
 type BudgetContactFormData = z.infer<typeof budgetContactSchema>;
+type PdfDownloadFormData = z.infer<typeof pdfDownloadSchema>;
 
 const projektartOptions = [
   { value: "neubau", label: "Neubau", surcharge: 0, description: "Neubauprojekt" },
@@ -144,6 +155,8 @@ export default function Rechner() {
   const [showResult, setShowResult] = useState(false);
   const [showContactForm, setShowContactForm] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [showPdfForm, setShowPdfForm] = useState(false);
+  const [pdfDownloaded, setPdfDownloaded] = useState(false);
 
   const form = useForm<BudgetContactFormData>({
     resolver: zodResolver(budgetContactSchema),
@@ -156,6 +169,127 @@ export default function Rechner() {
       privacyConsent: false,
     },
   });
+
+  const pdfForm = useForm<PdfDownloadFormData>({
+    resolver: zodResolver(pdfDownloadSchema),
+    defaultValues: {
+      email: "",
+      privacyConsent: false,
+    },
+  });
+
+  const generatePDF = (email: string) => {
+    const result = calculatePrice();
+    const doc = new jsPDF();
+    
+    doc.setFontSize(20);
+    doc.setTextColor(40, 40, 40);
+    doc.text("Estriche München", 20, 20);
+    
+    doc.setFontSize(12);
+    doc.setTextColor(100, 100, 100);
+    doc.text("Budgetrechner - Kostenübersicht", 20, 30);
+    
+    doc.setDrawColor(200, 200, 200);
+    doc.line(20, 35, 190, 35);
+    
+    doc.setFontSize(11);
+    doc.setTextColor(40, 40, 40);
+    let y = 45;
+    
+    doc.setFontSize(14);
+    doc.text("Projektdetails", 20, y);
+    y += 10;
+    
+    doc.setFontSize(10);
+    const details = [
+      ["Projektart:", projektartOptions.find(p => p.value === projektart)?.label || projektart],
+      ["Fläche:", `${squareMeters} m²`],
+      ["Estrich-Typ:", estrichTypes.find(e => e.value === estrichType)?.label || estrichType],
+      ["Stärke:", thicknessOptions.find(t => t.value === thickness)?.label || thickness],
+      ["Stockwerk:", floorOptions.find(f => f.value === floor)?.label || floor],
+      ["Trocknungszeit:", speedOptions.find(s => s.value === speed)?.label || speed],
+      ["Trittschalldämmung:", trittschallOptions.find(t => t.value === trittschall)?.label || "Keine"],
+      ["Wärmedämmung:", waermedaemmungOptions.find(w => w.value === waermedaemmung)?.label || "Keine"],
+      ["Fußbodenheizung:", fussbodenheizungOptions.find(f => f.value === fussbodenheizung)?.label || "Keine"],
+    ];
+    
+    details.forEach(([label, value]) => {
+      doc.setTextColor(100, 100, 100);
+      doc.text(label, 20, y);
+      doc.setTextColor(40, 40, 40);
+      doc.text(value, 70, y);
+      y += 7;
+    });
+    
+    y += 10;
+    doc.setFontSize(14);
+    doc.text("Kostenaufstellung", 20, y);
+    y += 10;
+    
+    doc.setFontSize(10);
+    result.breakdown.forEach((item) => {
+      doc.setTextColor(100, 100, 100);
+      doc.text(item.label, 20, y);
+      doc.setTextColor(40, 40, 40);
+      doc.text(`${item.amount.toLocaleString('de-DE')} €`, 150, y, { align: 'right' });
+      y += 7;
+    });
+    
+    doc.setDrawColor(200, 200, 200);
+    doc.line(20, y, 190, y);
+    y += 7;
+    
+    doc.setFontSize(11);
+    doc.text("Zwischensumme:", 20, y);
+    doc.text(`${result.subtotal?.toLocaleString('de-DE')} € netto`, 150, y, { align: 'right' });
+    y += 10;
+    
+    doc.setFontSize(14);
+    doc.setTextColor(200, 100, 0);
+    doc.text("Geschätzter Preisrahmen:", 20, y);
+    y += 8;
+    doc.setFontSize(16);
+    doc.text(`${result.min.toLocaleString('de-DE')} – ${result.max.toLocaleString('de-DE')} € netto`, 20, y);
+    
+    y += 20;
+    doc.setFontSize(9);
+    doc.setTextColor(150, 150, 150);
+    doc.text("Hinweis: Diese Berechnung dient nur zur Orientierung.", 20, y);
+    y += 5;
+    doc.text("Der tatsächliche Preis wird nach einer Vor-Ort-Besichtigung ermittelt.", 20, y);
+    
+    y += 15;
+    doc.setTextColor(100, 100, 100);
+    doc.text("Kontaktieren Sie uns für ein verbindliches Angebot:", 20, y);
+    y += 7;
+    doc.setTextColor(40, 40, 40);
+    doc.text("Tel: 089 444438872 | E-Mail: info@estriche-muenchen.de", 20, y);
+    y += 7;
+    doc.text("Web: www.estriche-muenchen.de", 20, y);
+    
+    doc.save("Estriche-Muenchen-Budgetrechner.pdf");
+    
+    return email;
+  };
+
+  const onPdfSubmit = async (data: PdfDownloadFormData) => {
+    try {
+      generatePDF(data.email);
+      setPdfDownloaded(true);
+      setShowPdfForm(false);
+      toast({
+        title: "PDF erfolgreich erstellt!",
+        description: "Die Budgetübersicht wurde heruntergeladen.",
+      });
+    } catch (error) {
+      toast({
+        title: "Fehler",
+        description: "PDF konnte nicht erstellt werden.",
+        variant: "destructive",
+      });
+    }
+  };
 
   const generateBudgetSummary = () => {
     const selectedEstrich = estrichTypes.find(e => e.value === estrichType);
@@ -747,6 +881,94 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
                     )}
                   </CardContent>
                 </Card>
+
+                {showResult && parseFloat(squareMeters) > 0 && (
+                  <Card className="border-green-500/50 bg-green-50/50 dark:bg-green-950/20">
+                    <CardContent className="p-5 space-y-4">
+                      <h3 className="font-bold flex items-center gap-2">
+                        <FileText className="w-4 h-4 text-green-600" />
+                        PDF-Angebot herunterladen
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        Laden Sie Ihre Kostenübersicht als PDF herunter.
+                      </p>
+                      
+                      {pdfDownloaded ? (
+                        <div className="flex items-center gap-2 p-3 bg-green-100 dark:bg-green-900/30 rounded-md text-green-800 dark:text-green-200">
+                          <CheckCircle2 className="w-4 h-4" />
+                          <p className="text-sm">PDF wurde erfolgreich heruntergeladen!</p>
+                        </div>
+                      ) : !showPdfForm ? (
+                        <Button 
+                          className="w-full bg-green-600 hover:bg-green-700" 
+                          onClick={() => setShowPdfForm(true)}
+                          data-testid="button-show-pdf-form"
+                        >
+                          <Download className="mr-2 h-4 w-4" />
+                          Kostenlos als PDF herunterladen
+                        </Button>
+                      ) : (
+                        <Form {...pdfForm}>
+                          <form onSubmit={pdfForm.handleSubmit(onPdfSubmit)} className="space-y-4">
+                            <FormField
+                              control={pdfForm.control}
+                              name="email"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <FormLabel className="text-xs">E-Mail-Adresse*</FormLabel>
+                                  <FormControl>
+                                    <Input 
+                                      type="email"
+                                      placeholder="ihre@email.de" 
+                                      {...field} 
+                                      data-testid="input-pdf-email"
+                                    />
+                                  </FormControl>
+                                  <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+                            
+                            <FormField
+                              control={pdfForm.control}
+                              name="privacyConsent"
+                              render={({ field }) => (
+                                <FormItem className="flex flex-row items-start space-x-2 space-y-0">
+                                  <FormControl>
+                                    <Checkbox
+                                      checked={field.value}
+                                      onCheckedChange={field.onChange}
+                                      data-testid="checkbox-pdf-privacy"
+                                    />
+                                  </FormControl>
+                                  <div className="space-y-1 leading-none">
+                                    <FormLabel className="text-xs font-normal">
+                                      Ich stimme der{" "}
+                                      <Link href="/datenschutz" className="text-primary underline">
+                                        Datenschutzerklärung
+                                      </Link>{" "}
+                                      zu.*
+                                    </FormLabel>
+                                    <FormMessage />
+                                  </div>
+                                </FormItem>
+                              )}
+                            />
+                            
+                            <Button 
+                              type="submit" 
+                              className="w-full bg-green-600 hover:bg-green-700"
+                              data-testid="button-download-pdf"
+                            >
+                              <Download className="mr-2 h-4 w-4" />
+                              PDF jetzt herunterladen
+                            </Button>
+                          </form>
+                        </Form>
+                      )}
+                    </CardContent>
+                  </Card>
+                )}
 
                 {showResult && parseFloat(squareMeters) > 0 && !formSubmitted && (
                   <Card className="border-primary">
