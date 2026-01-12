@@ -286,6 +286,32 @@ export default function Kontakt() {
                   </ul>
                 </CardContent>
               </Card>
+
+              <Card className="mt-6 overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="p-4 border-b">
+                    <h3 className="font-bold flex items-center gap-2">
+                      <MapPin className="w-4 h-4 text-primary" />
+                      Unser Standort in München
+                    </h3>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      Hardenbergstr. 4, 80992 München
+                    </p>
+                  </div>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.8!2d11.4989!3d48.1803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e76ffffffff%3A0x0!2sHardenbergstra%C3%9Fe%204%2C%2080992%20M%C3%BCnchen!5e0!3m2!1sde!2sde!4v1704067200000!5m2!1sde!2sde"
+                    width="100%"
+                    height="200"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Estriche München Standort"
+                    className="w-full"
+                    data-testid="map-google-embed"
+                  />
+                </CardContent>
+              </Card>
             </div>
 
             <Card className="shadow-lg border-primary/20" data-testid="card-contact-form">
