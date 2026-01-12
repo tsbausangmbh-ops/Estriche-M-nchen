@@ -6,7 +6,7 @@ import logoImage from "@assets/Logo_Universal_1768216877638.png";
 export function Footer() {
   return (
     <footer className="bg-foreground text-background py-12" data-testid="footer">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2" data-testid="footer-brand">
             <Link href="/" className="flex items-center gap-3 mb-4">
