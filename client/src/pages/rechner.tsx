@@ -115,8 +115,13 @@ const waermedaemmungOptions = [
   { value: "100mm-xps", label: "100 mm XPS oder mehr", price: 30 },
 ];
 
+const fussbodenheizungOptions = [
+  { value: "none", label: "Keine", price: 0 },
+  { value: "heizung", label: "Fußbodenheizung", price: 12, description: "Komplette Heizungsinstallation" },
+  { value: "einbettung", label: "Nur Einbettung", price: 8, description: "Heizrohr-Einbettung" },
+];
+
 const additionalOptions = [
-  { id: "heizung", label: "Fußbodenheizung-Vorbereitung", price: 8, icon: Thermometer, description: "Heizrohr-Einbettung", required: false, isFlat: false },
   { id: "randdaemmstreifen", label: "Randdämmstreifen", price: 2.5, icon: Layers, description: "Umlaufend verlegt", required: false, isFlat: false },
   { id: "grundierung", label: "Grundierung Untergrund", price: 4, icon: Wrench, description: "Haftvermittlung", required: false, isFlat: false },
   { id: "folie", label: "PE-Folie/Dampfsperre", price: 2, icon: Layers, description: "Feuchtigkeitsschutz", required: false, isFlat: false },
@@ -134,6 +139,7 @@ export default function Rechner() {
   const [speed, setSpeed] = useState<string>("standard");
   const [trittschall, setTrittschall] = useState<string>("none");
   const [waermedaemmung, setWaermedaemmung] = useState<string>("none");
+  const [fussbodenheizung, setFussbodenheizung] = useState<string>("none");
   const [selectedOptions, setSelectedOptions] = useState<string[]>(["baustelleneinrichtung", "reinigung"]);
   const [showResult, setShowResult] = useState(false);
   const [showContactForm, setShowContactForm] = useState(false);
@@ -178,6 +184,7 @@ PROJEKTDETAILS:
 - Trocknungszeit: ${selectedSpeed?.label || speed}
 - Trittschalldämmung: ${trittschallOptions.find(t => t.value === trittschall)?.label || "Keine"}
 - Wärmedämmung: ${waermedaemmungOptions.find(w => w.value === waermedaemmung)?.label || "Keine"}
+- Fußbodenheizung: ${fussbodenheizungOptions.find(f => f.value === fussbodenheizung)?.label || "Keine"}
 - Weitere Zusatzleistungen: ${optionsList || "Keine"}
 
 KOSTENAUFSTELLUNG:
@@ -273,6 +280,12 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
     if (selectedWaermedaemmung && selectedWaermedaemmung.price > 0) {
       const waermedaemmungCost = sqm * selectedWaermedaemmung.price;
       breakdown.push({ label: `Wärmedämmung (${selectedWaermedaemmung.label})`, amount: waermedaemmungCost });
+    }
+
+    const selectedFussbodenheizung = fussbodenheizungOptions.find(f => f.value === fussbodenheizung);
+    if (selectedFussbodenheizung && selectedFussbodenheizung.price > 0) {
+      const fussbodenheizungCost = sqm * selectedFussbodenheizung.price;
+      breakdown.push({ label: `${selectedFussbodenheizung.label}`, amount: fussbodenheizungCost });
     }
 
     let optionsCost = 0;
@@ -592,6 +605,37 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
                             : 'hover:bg-accent/50'
                         }`}
                         data-testid={`waermedaemmung-${option.value}`}
+                      >
+                        <span className="font-medium block">{option.label}</span>
+                        {option.price > 0 && (
+                          <span className="text-xs text-primary">+{option.price} €/m²</span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg flex items-center gap-2">
+                    <Thermometer className="w-5 h-5 text-primary" />
+                    Fußbodenheizung
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground mb-3">Wählen Sie die gewünschte Heizungsoption.</p>
+                  <div className="grid grid-cols-3 gap-2">
+                    {fussbodenheizungOptions.map((option) => (
+                      <div 
+                        key={option.value}
+                        onClick={() => setFussbodenheizung(option.value)}
+                        className={`p-3 rounded-md border cursor-pointer transition-colors text-center ${
+                          fussbodenheizung === option.value 
+                            ? 'border-primary bg-primary/10' 
+                            : 'hover:bg-accent/50'
+                        }`}
+                        data-testid={`fussbodenheizung-${option.value}`}
                       >
                         <span className="font-medium block">{option.label}</span>
                         {option.price > 0 && (
