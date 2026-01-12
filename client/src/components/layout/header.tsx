@@ -49,13 +49,13 @@ export function Header() {
               Antwort i.d.R. innerhalb 24h
             </Badge>
           </div>
-          <Link 
-            href="/kontakt"
+          <a 
+            href="mailto:info@estriche-muenchen.de?subject=Angebotsanfrage%20Estrich"
             className="text-background/90 hover:text-background transition-colors font-medium"
             data-testid="link-topbar-contact"
           >
             Angebot anfragen
-          </Link>
+          </a>
         </div>
       </div>
 
