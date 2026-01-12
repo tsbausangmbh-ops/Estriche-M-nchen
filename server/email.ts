@@ -76,7 +76,7 @@ export async function sendContactNotification(inquiry: ContactInquiry): Promise<
     <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
       <div style="background-color: #e07800; color: white; padding: 20px; text-align: center;">
         <h1 style="margin: 0;">Neue Kontaktanfrage</h1>
-        <p style="margin: 5px 0 0;">Estrich München</p>
+        <p style="margin: 5px 0 0;">Estriche München</p>
       </div>
       
       <div style="padding: 20px; background-color: #fff;">
@@ -135,7 +135,7 @@ export async function sendContactNotification(inquiry: ContactInquiry): Promise<
   `;
 
   const textBody = `
-Neue Kontaktanfrage - Estrich München
+Neue Kontaktanfrage - Estriche München
 
 KONTAKTDATEN
 Name: ${inquiry.firstName} ${inquiry.lastName}
