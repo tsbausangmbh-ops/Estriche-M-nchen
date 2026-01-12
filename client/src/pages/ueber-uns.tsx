@@ -104,23 +104,39 @@ export default function UeberUns() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
           <div className="max-w-3xl">
-            <Badge variant="secondary" className="mb-4 border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide">
-              <Building2 className="w-3 h-3 mr-1" />
-              Über uns
-            </Badge>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground mb-6 tracking-tight">
-              Von Estrich-Stress zu Sorgenfreiheit in München
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center">
+                <Building2 className="w-6 h-6 text-white" />
+              </div>
+              <Badge className="bg-white/20 text-white border-white/30 text-xs font-medium">
+                Über uns
+              </Badge>
+            </div>
+            
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
+              Von Estrich-Stress zu Sorgenfreiheit
             </h1>
-            <p className="text-lg sm:text-xl text-primary-foreground/80 leading-relaxed mb-6">
+            
+            <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">
               Seit über 30 Jahren verwandeln wir Baustellen-Chaos in perfekte Böden – 
               termingerecht, zum Festpreis, ohne Ausreden. Stellen Sie sich vor, wie es sich anfühlt, 
               wenn Ihr Projekt einfach läuft.
             </p>
-            <div className="flex flex-wrap gap-4">
+
+            <div className="flex flex-wrap gap-3 mb-8">
+              {["30+ Jahre Erfahrung", "Meisterbetrieb", "München & Umgebung", "2.500+ Projekte"].map((feature, index) => (
+                <div key={index} className="flex items-center gap-2 text-sm text-white/90">
+                  <CheckCircle2 className="w-4 h-4 text-primary" />
+                  <span>{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap gap-3 mb-8">
               <Link href="/angebot">
                 <Button size="lg" data-testid="button-hero-cta">
-                  Kostenloses Angebot anfordern
-                  <ChevronRight className="ml-2 h-4 w-4" />
+                  Kostenloses Angebot
+                  <ChevronRight className="ml-1 h-4 w-4" />
                 </Button>
               </Link>
               <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" asChild>
@@ -129,6 +145,21 @@ export default function UeberUns() {
                   089 444438872
                 </a>
               </Button>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-6 text-white/70 text-sm">
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4" />
+                <span>280+ zufriedene Kunden</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Shield className="w-4 h-4 text-primary" />
+                <span>100€ bei Verspätung</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-primary" />
+                <span>Festpreis-Garantie</span>
+              </div>
             </div>
           </div>
         </div>
