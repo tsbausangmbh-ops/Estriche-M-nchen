@@ -386,9 +386,11 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
     const baseEstrichCost = sqm * selectedEstrich.basePrice;
     breakdown.push({ label: `${selectedEstrich.label} (${sqm} m²)`, amount: baseEstrichCost });
 
+    console.log('Thickness debug:', { thickness, selectedThickness, multiplier: selectedThickness.multiplier });
     const thicknessSurcharge = (selectedThickness.multiplier > 1) 
       ? sqm * selectedEstrich.basePrice * (selectedThickness.multiplier - 1) 
       : 0;
+    console.log('Thickness surcharge:', thicknessSurcharge);
     if (thicknessSurcharge > 0) {
       breakdown.push({ label: `Stärkezuschlag (${selectedThickness.label})`, amount: thicknessSurcharge });
     }
