@@ -435,9 +435,11 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
 
     const selectedFussbodenheizung = fussbodenheizungOptions.find(f => f.value === fussbodenheizung);
     const fussbodenheizungCost = (selectedFussbodenheizung && selectedFussbodenheizung.price > 0) ? sqm * selectedFussbodenheizung.price : 0;
-    if (fussbodenheizungCost > 0) {
-      breakdown.push({ label: `${selectedFussbodenheizung!.label}`, amount: fussbodenheizungCost });
-    }
+    breakdown.push({ 
+      label: `Fußbodenheizung (${selectedFussbodenheizung?.label || 'Keine'})`, 
+      amount: fussbodenheizungCost,
+      info: fussbodenheizungCost === 0 ? 'inkl.' : undefined
+    });
 
     let optionsCost = 0;
     selectedOptions.forEach(optionId => {
