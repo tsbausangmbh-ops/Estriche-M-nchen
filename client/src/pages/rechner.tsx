@@ -60,6 +60,11 @@ const budgetContactSchema = z.object({
 
 type BudgetContactFormData = z.infer<typeof budgetContactSchema>;
 
+const projektartOptions = [
+  { value: "neubau", label: "Neubau", surcharge: 0, description: "Neubauprojekt" },
+  { value: "sanierung", label: "Sanierung / Renovierung", surcharge: 5, description: "Bestandsgebäude" },
+];
+
 const estrichTypes = [
   { value: "zementestrich", label: "Zementestrich (CT)", basePrice: 32, description: "Klassiker für Wohnbau" },
   { value: "calciumsulfat", label: "Calciumsulfatestrich (CA)", basePrice: 38, description: "Ideal für Fußbodenheizung" },
@@ -121,6 +126,7 @@ const additionalOptions = [
 
 export default function Rechner() {
   const { toast } = useToast();
+  const [projektart, setProjektart] = useState<string>("neubau");
   const [squareMeters, setSquareMeters] = useState<string>("100");
   const [estrichType, setEstrichType] = useState<string>("zementestrich");
   const [thickness, setThickness] = useState<string>("45");
@@ -164,6 +170,7 @@ BUDGETRECHNER-ERGEBNIS
 Geschätzter Preisrahmen: ${result.min.toLocaleString('de-DE')} – ${result.max.toLocaleString('de-DE')} € netto
 
 PROJEKTDETAILS:
+- Projektart: ${projektartOptions.find(p => p.value === projektart)?.label || projektart}
 - Fläche: ${sqm} m²
 - Estrich-Typ: ${selectedEstrich?.label || estrichType}
 - Stärke: ${selectedThickness?.label || thickness}
@@ -239,6 +246,12 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
     const basePrice = selectedEstrich.basePrice * selectedThickness.multiplier;
     const estrichCost = sqm * basePrice;
     breakdown.push({ label: `${selectedEstrich.label} (${sqm} m²)`, amount: estrichCost });
+
+    const selectedProjektart = projektartOptions.find(p => p.value === projektart);
+    const projektartSurcharge = sqm * (selectedProjektart?.surcharge || 0);
+    if (projektartSurcharge > 0) {
+      breakdown.push({ label: `Sanierungszuschlag`, amount: projektartSurcharge });
+    }
 
     const floorSurcharge = sqm * selectedFloor.surcharge;
     if (floorSurcharge > 0) {
@@ -424,6 +437,27 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
+                  <div>
+                    <Label className="mb-2 block">Um welche Art von Projekt handelt es sich?</Label>
+                    <div className="grid grid-cols-2 gap-3">
+                      {projektartOptions.map((option) => (
+                        <div 
+                          key={option.value}
+                          onClick={() => setProjektart(option.value)}
+                          className={`p-4 rounded-md border cursor-pointer transition-colors text-center ${
+                            projektart === option.value 
+                              ? 'border-primary bg-primary/10' 
+                              : 'hover:bg-accent/50'
+                          }`}
+                          data-testid={`projektart-${option.value}`}
+                        >
+                          <span className="font-medium block">{option.label}</span>
+                          <span className="text-xs text-muted-foreground">{option.description}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
                   <div>
                     <Label htmlFor="sqm">Fläche in Quadratmetern (m²)</Label>
                     <Input
