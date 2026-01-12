@@ -100,8 +100,17 @@ const trittschallOptions = [
   { value: "60mm", label: "60 mm oder mehr", price: 16 },
 ];
 
+const waermedaemmungOptions = [
+  { value: "none", label: "Keine", price: 0 },
+  { value: "60mm-eps", label: "60 mm EPS", price: 14 },
+  { value: "80mm-eps", label: "80 mm EPS", price: 18 },
+  { value: "100mm-eps", label: "100 mm EPS", price: 22 },
+  { value: "60mm-xps", label: "60 mm XPS", price: 18 },
+  { value: "80mm-xps", label: "80 mm XPS", price: 24 },
+  { value: "100mm-xps", label: "100 mm XPS oder mehr", price: 30 },
+];
+
 const additionalOptions = [
-  { id: "waermedaemmung", label: "Wärmedämmung", price: 18, icon: Thermometer, description: "60-100mm EPS/XPS", required: false },
   { id: "heizung", label: "Fußbodenheizung-Vorbereitung", price: 8, icon: Thermometer, description: "Heizrohr-Einbettung", required: false },
   { id: "randdaemmstreifen", label: "Randdämmstreifen", price: 2.5, icon: Layers, description: "Umlaufend verlegt", required: false },
   { id: "grundierung", label: "Grundierung Untergrund", price: 4, icon: Wrench, description: "Haftvermittlung", required: false },
@@ -118,6 +127,7 @@ export default function Rechner() {
   const [floor, setFloor] = useState<string>("eg");
   const [speed, setSpeed] = useState<string>("standard");
   const [trittschall, setTrittschall] = useState<string>("none");
+  const [waermedaemmung, setWaermedaemmung] = useState<string>("none");
   const [selectedOptions, setSelectedOptions] = useState<string[]>(["baustelleneinrichtung", "reinigung"]);
   const [showResult, setShowResult] = useState(false);
   const [showContactForm, setShowContactForm] = useState(false);
@@ -160,6 +170,7 @@ PROJEKTDETAILS:
 - Stockwerk: ${selectedFloor?.label || floor}
 - Trocknungszeit: ${selectedSpeed?.label || speed}
 - Trittschalldämmung: ${trittschallOptions.find(t => t.value === trittschall)?.label || "Keine"}
+- Wärmedämmung: ${waermedaemmungOptions.find(w => w.value === waermedaemmung)?.label || "Keine"}
 - Weitere Zusatzleistungen: ${optionsList || "Keine"}
 
 KOSTENAUFSTELLUNG:
@@ -243,6 +254,12 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
     if (selectedTrittschall && selectedTrittschall.price > 0) {
       const trittschallCost = sqm * selectedTrittschall.price;
       breakdown.push({ label: `Trittschalldämmung (${selectedTrittschall.label})`, amount: trittschallCost });
+    }
+
+    const selectedWaermedaemmung = waermedaemmungOptions.find(w => w.value === waermedaemmung);
+    if (selectedWaermedaemmung && selectedWaermedaemmung.price > 0) {
+      const waermedaemmungCost = sqm * selectedWaermedaemmung.price;
+      breakdown.push({ label: `Wärmedämmung (${selectedWaermedaemmung.label})`, amount: waermedaemmungCost });
     }
 
     let optionsCost = 0;
@@ -510,6 +527,37 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
                             : 'hover:bg-accent/50'
                         }`}
                         data-testid={`trittschall-${option.value}`}
+                      >
+                        <span className="font-medium block">{option.label}</span>
+                        {option.price > 0 && (
+                          <span className="text-xs text-primary">+{option.price} €/m²</span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg flex items-center gap-2">
+                    <Thermometer className="w-5 h-5 text-primary" />
+                    Wärmedämmung
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground mb-3">Wählen Sie Material und Stärke der Wärmedämmung (EPS = Standard, XPS = druckfester).</p>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+                    {waermedaemmungOptions.map((option) => (
+                      <div 
+                        key={option.value}
+                        onClick={() => setWaermedaemmung(option.value)}
+                        className={`p-3 rounded-md border cursor-pointer transition-colors text-center ${
+                          waermedaemmung === option.value 
+                            ? 'border-primary bg-primary/10' 
+                            : 'hover:bg-accent/50'
+                        }`}
+                        data-testid={`waermedaemmung-${option.value}`}
                       >
                         <span className="font-medium block">{option.label}</span>
                         {option.price > 0 && (
