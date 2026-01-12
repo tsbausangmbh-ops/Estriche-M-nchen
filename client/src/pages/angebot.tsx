@@ -198,7 +198,7 @@ export default function Angebot() {
         </div>
       </section>
 
-      <section className="py-6 bg-accent">
+      <section className="py-8 bg-accent">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="text-center max-w-3xl mx-auto mb-6">
             <h2 className="text-xl sm:text-2xl font-extrabold mb-3 tracking-tight">

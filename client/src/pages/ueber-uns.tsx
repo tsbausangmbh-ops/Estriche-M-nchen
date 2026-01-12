@@ -160,7 +160,7 @@ export default function UeberUns() {
         </div>
       </section>
 
-      <section className="py-6 bg-accent">
+      <section className="py-8 bg-accent">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="grid md:grid-cols-4 gap-6">
             <Card className="text-center">

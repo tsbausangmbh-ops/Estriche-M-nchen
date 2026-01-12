@@ -233,7 +233,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section id="hero" className="relative py-12 lg:py-16 overflow-hidden">
+      <section id="hero" className="relative py-10 lg:py-14 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -747,7 +747,7 @@ export default function Home() {
       </section>
 
       {/* Service Areas */}
-      <section className="py-6 bg-accent">
+      <section className="py-8 bg-accent">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Vorteil: Lokale Nähe</p>

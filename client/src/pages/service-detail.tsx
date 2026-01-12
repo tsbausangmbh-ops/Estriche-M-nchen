@@ -101,7 +101,7 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      <section className="py-6 border-t">
+      <section className="py-8 border-t">
         <div className="px-4 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
@@ -142,7 +142,7 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      <section className="py-6 bg-accent">
+      <section className="py-8 bg-accent">
         <div className="px-4 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
@@ -196,7 +196,7 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      <section className="py-6">
+      <section className="py-8">
         <div className="px-4 sm:px-8 lg:px-12">
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-3 tracking-tight">Welche Arten gibt es?</h2>
           <p className="text-muted-foreground mb-8">
@@ -221,7 +221,7 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      <section className="py-6 bg-accent">
+      <section className="py-8 bg-accent">
         <div className="px-4 sm:px-8 lg:px-12">
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-3 tracking-tight">Was ist inklusive?</h2>
           <p className="text-muted-foreground mb-8">
@@ -243,7 +243,7 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      <section className="py-6">
+      <section className="py-8">
         <div className="px-4 sm:px-8 lg:px-12">
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 tracking-tight">Unser Ablauf</h2>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
@@ -279,7 +279,7 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      <section className="py-6 bg-accent">
+      <section className="py-8 bg-accent">
         <div className="px-4 sm:px-8 lg:px-12">
           <div className="flex items-center gap-3 mb-3">
             <ThumbsUp className="w-6 h-6 text-primary" />
@@ -301,7 +301,7 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      <section className="py-6">
+      <section className="py-8">
         <div className="px-4 sm:px-8 lg:px-12">
           <div className="flex items-center gap-3 mb-3">
             <Building2 className="w-6 h-6 text-primary" />
@@ -354,7 +354,7 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      <section className="py-6 bg-muted">
+      <section className="py-8 bg-muted">
         <div className="px-4 sm:px-8 lg:px-12">
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 mb-4">
@@ -461,7 +461,7 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      <section className="py-6 bg-accent">
+      <section className="py-8 bg-accent">
         <div className="px-4 sm:px-8 lg:px-12">
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 tracking-tight">Häufig gestellte Fragen</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -475,7 +475,7 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      <section className="py-4 bg-destructive/5 border-y border-destructive/10">
+      <section className="py-8 bg-destructive/5 border-y border-destructive/10">
         <div className="px-4 sm:px-8 lg:px-12 text-center">
           <p className="text-destructive font-medium mb-4">
             {service.urgency}
@@ -489,7 +489,7 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      <section className="py-6 bg-muted">
+      <section className="py-8 bg-muted">
         <div className="px-4 sm:px-8 lg:px-12">
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 tracking-tight">Weitere Leistungen</h2>
           <div className="grid md:grid-cols-3 gap-4">

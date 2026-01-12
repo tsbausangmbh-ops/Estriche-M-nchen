@@ -197,7 +197,7 @@ export default function Preise() {
         </div>
       </section>
 
-      <section className="py-6 bg-muted/30 border-b">
+      <section className="py-8 bg-muted/30 border-b">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="text-center max-w-3xl mx-auto mb-6">
             <h2 className="text-xl sm:text-2xl font-extrabold mb-3 tracking-tight">
@@ -291,7 +291,7 @@ export default function Preise() {
         </div>
       </section>
 
-      <section className="py-6">
+      <section className="py-8">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-6">
             {priceCategories.map((category, index) => (
@@ -353,7 +353,7 @@ export default function Preise() {
         </div>
       </section>
 
-      <section className="py-6">
+      <section className="py-8">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <h2 className="text-2xl font-extrabold tracking-tight mb-6 text-center">
             Zusätzliche Leistungen & Service
@@ -375,7 +375,7 @@ export default function Preise() {
         </div>
       </section>
 
-      <section className="py-6">
+      <section className="py-8">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <h2 className="text-2xl font-extrabold tracking-tight mb-6 text-center">
             So funktioniert unser Festpreis
@@ -406,7 +406,7 @@ export default function Preise() {
         </div>
       </section>
 
-      <section className="py-6 bg-foreground text-primary-foreground">
+      <section className="py-12 bg-foreground text-primary-foreground">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Jetzt Ihr persönliches Angebot anfordern

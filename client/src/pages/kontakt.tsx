@@ -162,7 +162,7 @@ export default function Kontakt() {
         </div>
       </section>
 
-      <section className="py-6 bg-accent border-b">
+      <section className="py-8 bg-accent border-b">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="text-center max-w-3xl mx-auto mb-8">
             <h2 className="text-2xl sm:text-3xl font-extrabold mb-4 tracking-tight">
@@ -197,7 +197,7 @@ export default function Kontakt() {
         </div>
       </section>
 
-      <section className="py-6">
+      <section className="py-8">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>

@@ -260,7 +260,7 @@ export default function Ablauf() {
         </div>
       </section>
 
-      <section className="py-6">
+      <section className="py-8">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="space-y-8">
             {processSteps.map((step, index) => (
@@ -307,7 +307,7 @@ export default function Ablauf() {
         </div>
       </section>
 
-      <section className="py-6 bg-accent">
+      <section className="py-8 bg-accent">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">Unsere Garantien für Sie</h2>
@@ -335,7 +335,7 @@ export default function Ablauf() {
         </div>
       </section>
 
-      <section className="py-6 bg-foreground text-primary-foreground">
+      <section className="py-12 bg-foreground text-primary-foreground">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Bereit, den ersten Schritt zu machen?

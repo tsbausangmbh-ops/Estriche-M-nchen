@@ -76,7 +76,7 @@ export default function BlogArticle() {
         </div>
       </section>
 
-      <section className="py-6">
+      <section className="py-8">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <article className="prose prose-lg max-w-none">
             {article.content.map((paragraph, index) => {
@@ -150,7 +150,7 @@ export default function BlogArticle() {
         </div>
       </section>
 
-      <section className="py-6 bg-accent">
+      <section className="py-8 bg-accent">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12 text-center">
           <h2 className="text-2xl font-extrabold tracking-tight mb-4">
             Bereit für Ihr Estrich-Projekt?

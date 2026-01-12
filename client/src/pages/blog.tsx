@@ -131,7 +131,7 @@ export default function Blog() {
         </div>
       </section>
 
-      <section className="py-6">
+      <section className="py-8">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="flex flex-wrap gap-2 mb-8">
             {categories.map((category) => (
@@ -199,7 +199,7 @@ export default function Blog() {
         </div>
       </section>
 
-      <section className="py-6 bg-accent">
+      <section className="py-8 bg-accent">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12 text-center">
           <h2 className="text-2xl font-extrabold tracking-tight mb-4">
             Haben Sie eine Frage zu Ihrem Projekt?

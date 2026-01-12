@@ -501,7 +501,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
         </div>
       </section>
 
-      <section className="py-6 bg-muted/30 border-b">
+      <section className="py-8 bg-muted/30 border-b">
         <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="text-center max-w-4xl mx-auto mb-6">
             <h2 className="text-xl sm:text-2xl font-extrabold mb-3 tracking-tight">
