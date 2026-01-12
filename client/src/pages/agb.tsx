@@ -62,7 +62,8 @@ export default function AGB() {
                   qualifizierte Meisterbetriebe und Fachfirmen aus unserem Partnernetzwerk. Der Auftragnehmer 
                   vermittelt und koordiniert diese Leistungen. Die ausführenden Partnerbetriebe sind für die 
                   fachgerechte Durchführung der Arbeiten verantwortlich und arbeiten nach höchsten 
-                  Qualitätsstandards.
+                  Qualitätsstandards.<br />
+                  Ausführende Firma: Hüseyin Türker (Estrich T.H. UG)
                 </p>
               </div>
 
