@@ -1,0 +1,33 @@
+# robots.txt für estriche-muenchen.de
+# Optimiert für maximale Indexierung durch Suchmaschinen
+
+User-agent: *
+Allow: /
+
+# Sitemap-Verweis
+Sitemap: https://estriche-muenchen.de/sitemap.xml
+
+# Crawl-Delay für schonenden Zugriff
+Crawl-delay: 1
+
+# Googlebot spezifisch
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bingbot spezifisch  
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Blockiere unwichtige Ressourcen
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /assets/*.map
+
+# Erlaube wichtige Ressourcen für Rendering
+Allow: /assets/*.js
+Allow: /assets/*.css
+Allow: /assets/*.png
+Allow: /assets/*.jpg
+Allow: /assets/*.webp
