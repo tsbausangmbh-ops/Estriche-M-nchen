@@ -91,8 +91,16 @@ const speedOptions = [
   { value: "7tage", label: "Express verlegereif (7 Tage)", surcharge: 15 },
 ];
 
+const trittschallOptions = [
+  { value: "none", label: "Keine", price: 0 },
+  { value: "20mm", label: "20 mm", price: 8 },
+  { value: "30mm", label: "30 mm", price: 10 },
+  { value: "40mm", label: "40 mm", price: 12 },
+  { value: "50mm", label: "50 mm", price: 14 },
+  { value: "60mm", label: "60 mm oder mehr", price: 16 },
+];
+
 const additionalOptions = [
-  { id: "trittschall", label: "Trittschalldämmung", price: 12, icon: Volume2, description: "20-40mm Dämmung", required: false },
   { id: "waermedaemmung", label: "Wärmedämmung", price: 18, icon: Thermometer, description: "60-100mm EPS/XPS", required: false },
   { id: "heizung", label: "Fußbodenheizung-Vorbereitung", price: 8, icon: Thermometer, description: "Heizrohr-Einbettung", required: false },
   { id: "randdaemmstreifen", label: "Randdämmstreifen", price: 2.5, icon: Layers, description: "Umlaufend verlegt", required: false },
@@ -109,6 +117,7 @@ export default function Rechner() {
   const [thickness, setThickness] = useState<string>("45");
   const [floor, setFloor] = useState<string>("eg");
   const [speed, setSpeed] = useState<string>("standard");
+  const [trittschall, setTrittschall] = useState<string>("none");
   const [selectedOptions, setSelectedOptions] = useState<string[]>(["baustelleneinrichtung", "reinigung"]);
   const [showResult, setShowResult] = useState(false);
   const [showContactForm, setShowContactForm] = useState(false);
@@ -150,7 +159,8 @@ PROJEKTDETAILS:
 - Stärke: ${selectedThickness?.label || thickness}
 - Stockwerk: ${selectedFloor?.label || floor}
 - Trocknungszeit: ${selectedSpeed?.label || speed}
-- Zusatzleistungen: ${optionsList || "Keine"}
+- Trittschalldämmung: ${trittschallOptions.find(t => t.value === trittschall)?.label || "Keine"}
+- Weitere Zusatzleistungen: ${optionsList || "Keine"}
 
 KOSTENAUFSTELLUNG:
 ${result.breakdown.map(item => `- ${item.label}: ${item.amount.toLocaleString('de-DE')} €`).join('\n')}
@@ -227,6 +237,12 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
     const speedSurcharge = sqm * selectedSpeed.surcharge;
     if (speedSurcharge > 0) {
       breakdown.push({ label: `Schnellzuschlag (${selectedSpeed.label})`, amount: speedSurcharge });
+    }
+
+    const selectedTrittschall = trittschallOptions.find(t => t.value === trittschall);
+    if (selectedTrittschall && selectedTrittschall.price > 0) {
+      const trittschallCost = sqm * selectedTrittschall.price;
+      breakdown.push({ label: `Trittschalldämmung (${selectedTrittschall.label})`, amount: trittschallCost });
     }
 
     let optionsCost = 0;
@@ -477,8 +493,39 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
               <Card>
                 <CardHeader>
                   <CardTitle className="text-lg flex items-center gap-2">
+                    <Volume2 className="w-5 h-5 text-primary" />
+                    Trittschalldämmung
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground mb-3">Wählen Sie die gewünschte Dämmstärke für optimalen Schallschutz.</p>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                    {trittschallOptions.map((option) => (
+                      <div 
+                        key={option.value}
+                        onClick={() => setTrittschall(option.value)}
+                        className={`p-3 rounded-md border cursor-pointer transition-colors text-center ${
+                          trittschall === option.value 
+                            ? 'border-primary bg-primary/10' 
+                            : 'hover:bg-accent/50'
+                        }`}
+                        data-testid={`trittschall-${option.value}`}
+                      >
+                        <span className="font-medium block">{option.label}</span>
+                        {option.price > 0 && (
+                          <span className="text-xs text-primary">+{option.price} €/m²</span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg flex items-center gap-2">
                     <Wrench className="w-5 h-5 text-primary" />
-                    Zusatzleistungen
+                    Weitere Zusatzleistungen
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
