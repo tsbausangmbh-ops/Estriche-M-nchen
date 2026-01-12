@@ -87,23 +87,23 @@ type ContactFormData = z.infer<typeof contactFormSchema>;
 const processSteps = [
   {
     number: "01",
-    title: "Sie schildern Ihr Problem",
-    description: "Füllen Sie unser einfaches Formular in nur 60 Sekunden aus – kein langes Telefonieren, kein Warten in Warteschleifen. Beschreiben Sie kurz Ihr Projekt und Ihre Wünsche. Wir melden uns garantiert innerhalb von 24 Stunden bei Ihnen zurück. So sparen Sie Zeit und Nerven von Anfang an.",
+    title: "Sichern Sie sich Ihren Termin",
+    description: "Füllen Sie das Formular in nur 60 Sekunden aus – keine Warteschleife, kein Stress. Innerhalb von 24 Stunden meldet sich Ihr persönlicher Ansprechpartner. Jeder Tag, den Sie warten, schiebt Ihr Projekt weiter nach hinten. Handeln Sie jetzt.",
   },
   {
     number: "02",
-    title: "Wir finden die Lösung",
-    description: "Unser Experte kommt kostenlos zu Ihnen vor Ort und analysiert die Situation. Wir besprechen alle Optionen, klären Ihre Fragen und erstellen ein maßgeschneidertes Konzept. Sie erhalten einen verbindlichen Festpreis – schwarz auf weiß, ohne versteckte Kosten oder böse Überraschungen.",
+    title: "Ihr Festpreis – schwarz auf weiß",
+    description: "Unser Experte kommt kostenlos zu Ihnen. Sie sehen genau, was gemacht wird und was es kostet – ohne Kleingedrucktes, ohne versteckte Nachforderungen. 97% unserer Kunden sagen: 'Endlich mal ein Handwerker, der Wort hält.'",
   },
   {
     number: "03",
-    title: "Wir setzen um – stressfrei",
-    description: "Pünktlicher Start zum vereinbarten Termin, professionelle Ausführung durch unser erfahrenes Team. Wir halten die Baustelle sauber, arbeiten effizient und kommunizieren transparent. Sie können sich entspannen – wir kümmern uns um alles und halten Sie auf dem Laufenden.",
+    title: "Wir arbeiten – Sie entspannen",
+    description: "Am vereinbarten Tag sind wir pünktlich da. Sie spüren die Professionalität: saubere Baustelle, klare Kommunikation, keine Überraschungen. Während wir arbeiten, können Sie sich um Wichtigeres kümmern.",
   },
   {
     number: "04",
-    title: "Sie genießen das Ergebnis",
-    description: "Perfekt ebener Estrich, termingerecht fertiggestellt und qualitätsgeprüft. Endlich können Sie mit dem nächsten Schritt Ihres Projekts beginnen – Bodenbelag verlegen, einziehen, weiterbauen. Keine Verzögerungen, keine Nachbesserungen nötig. Einfach ein Boden, der hält, was wir versprechen.",
+    title: "Ihr perfekter Boden – garantiert",
+    description: "Stellen Sie sich vor: Der Bodenleger kommt, prüft den Untergrund – und nickt anerkennend. 'Perfekt vorbereitet.' Keine Verzögerungen, keine Nacharbeiten. Einfach ein Boden, auf den Sie stolz sein können.",
   },
 ];
 
@@ -111,47 +111,47 @@ const pricingItems = [
   {
     title: "Zementestrich",
     price: "25–45",
-    note: "Je nach Stärke, Aufbau und Baustellenlogistik.",
+    note: "Der Klassiker. Robust, bewährt, wirtschaftlich. 85% unserer Kunden wählen diese Option.",
     slug: "zementestrich",
   },
   {
     title: "Industrieböden",
     price: "45–95",
-    note: "Hochbelastbar für Gewerbe und Industrie.",
+    note: "Für Betriebe, die keine Kompromisse machen. Hält 15+ Jahre problemlos.",
     slug: "industrieboeden",
   },
   {
     title: "Fußbodenheizung",
     price: "45–75",
-    note: "Inkl. Abstimmung und Aufheizprotokoll.",
+    note: "Wohlige Wärme unter den Füßen. Inkl. Aufheizprotokoll für die Versicherung.",
     slug: "fussbodenheizung",
   },
 ];
 
 const faqItems = [
   {
-    question: "Ich habe schlechte Erfahrungen mit Handwerkern gemacht. Warum sollte ich Ihnen vertrauen?",
-    answer: "Das verstehen wir – und genau deshalb arbeiten wir anders: Festpreis vorab, schriftliche Terminzusage, und wir räumen hinter uns auf. Über 282 zufriedene Kunden in München können das bestätigen. Fragen Sie uns nach Referenzen – wir haben nichts zu verbergen.",
+    question: "Warum sollte ich ausgerechnet Ihnen vertrauen?",
+    answer: "Weil wir liefern, was wir versprechen – und das schwarz auf weiß. Festpreis vorab, 100€ bei Verspätung, 5 Jahre Gewährleistung. 282 zufriedene Kunden in München können das bestätigen. Fragen Sie uns nach Referenzen in Ihrer Nähe – wir haben nichts zu verbergen.",
   },
   {
     question: "Was kostet mich das Ganze? Gibt es versteckte Kosten?",
-    answer: "Nein, bei uns nicht. Sie bekommen ein verbindliches Festpreis-Angebot nach der Besichtigung. Was wir nennen, gilt. Keine Nachforderungen, keine bösen Überraschungen. Richtwert: 25–45 €/m² je nach Aufbau.",
+    answer: "Bei uns gibt es nur einen Preis – den, der im Angebot steht. Keine Nachforderungen, keine bösen Überraschungen. Richtwert: 25–45 €/m². Fordern Sie jetzt Ihr unverbindliches Festpreis-Angebot an und Sie wissen sofort, woran Sie sind.",
   },
   {
-    question: "Wie lange dauert es, bis ich meinen Bodenbelag verlegen kann?",
-    answer: "Normalerweise 3-4 Wochen bei Zementestrich. Aber: Mit unserem Schnellestrich geht's auch in der Hälfte der Zeit. Wir besprechen Ihren Zeitplan und finden die beste Lösung für Sie.",
+    question: "Wie lange muss ich auf meinen neuen Boden warten?",
+    answer: "Zementestrich: 3-4 Wochen bis zur Belegreife. Zu lange? Unser Schnellestrich ist in 3-7 Tagen begehbar. Jede Woche, die Sie mit der Entscheidung warten, verzögert Ihren Einzug. Sichern Sie sich jetzt einen der wenigen freien Termine.",
   },
   {
-    question: "Ich habe nur ein kleines Projekt (Bad, Balkon). Lohnt sich das für Sie?",
-    answer: "Ja, absolut! Wir nehmen auch kleinere Projekte an. Jeder Kunde ist uns wichtig – egal ob 15 m² oder 1500 m². Fragen Sie einfach unverbindlich an.",
+    question: "Lohnt sich das auch für kleine Projekte wie Bad oder Balkon?",
+    answer: "Absolut! Ob 15 m² oder 1.500 m² – jedes Projekt verdient Qualität. Viele kleine Projekte entwickeln sich zu langjährigen Kundenbeziehungen. Fragen Sie einfach unverbindlich an – Sie riskieren nichts.",
   },
   {
-    question: "Was passiert, wenn etwas schief geht?",
-    answer: "Dann machen wir es richtig – auf unsere Kosten. Wir stehen zu unserer Arbeit. Deshalb haben wir auch eine Gewährleistung auf alle unsere Leistungen. Ihr Risiko? Null.",
+    question: "Was, wenn etwas schief geht?",
+    answer: "Dann machen wir es richtig – auf unsere Kosten. Ohne Wenn und Aber. 5 Jahre Gewährleistung auf alle Arbeiten, 100€ Gutschrift bei Verspätung. Ihr Risiko? Null. Das können wir uns leisten, weil wir wissen, was wir tun.",
   },
   {
     question: "Wie schnell können Sie anfangen?",
-    answer: "Oft schneller als Sie denken. Normalerweise innerhalb von 1–3 Wochen. Bei dringenden Fällen? Rufen Sie uns an – wir finden fast immer eine Lösung.",
+    answer: "Normalerweise innerhalb von 1–3 Wochen. Aber Vorsicht: Unsere Kapazitäten sind begrenzt. Wer zuerst kommt, mahlt zuerst. Bei dringenden Fällen rufen Sie uns direkt an – wir finden fast immer eine Lösung.",
   },
 ];
 
@@ -237,20 +237,21 @@ export default function Home() {
           <div className="grid lg:grid-cols-5 gap-12 items-start">
             {/* Hero Content */}
             <div className="lg:col-span-3 space-y-8">
-              <Badge variant="outline" className="text-sm border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide">
-                Estrich-Experten seit 2008
+              <Badge variant="outline" className="text-sm border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide animate-pulse">
+                Nur noch 3 Termine im Januar verfügbar
               </Badge>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] text-primary-foreground">
-                Ihr Estrich-Problem?
-                <span className="block text-primary mt-3">Wir lösen es. Garantiert.</span>
+                Endlich ein Estrich, der
+                <span className="block text-primary mt-3">hält, was er verspricht.</span>
               </h1>
               <p className="text-lg text-primary-foreground/80 max-w-xl leading-relaxed">
-                <strong className="text-primary-foreground">Kennen Sie das?</strong> Handwerker, die nicht erscheinen. 
-                Termine, die platzen. Böden, die nicht eben sind. <strong className="text-primary-foreground">Das muss nicht sein.</strong>
+                <strong className="text-primary-foreground">Sie kennen das Gefühl:</strong> Handwerker, die nicht erscheinen. 
+                Termine, die platzen. Versteckte Kosten, die plötzlich auftauchen. <strong className="text-primary-foreground">Schluss damit.</strong>
               </p>
               <p className="text-lg text-primary-foreground max-w-xl leading-relaxed">
-                Stellen Sie sich vor: Ein perfekt ebener Estrich, termingerecht geliefert, ohne Stress – 
-                so dass Sie endlich mit dem Verlegen beginnen können.
+                <em>Stellen Sie sich vor:</em> In nur wenigen Wochen haben Sie einen <strong className="text-primary-foreground">perfekt ebenen Boden</strong> – 
+                termingerecht, zum Festpreis, ohne böse Überraschungen. Sie spüren die Erleichterung, 
+                wenn Sie endlich mit dem Bodenbelag beginnen können.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-2">
@@ -259,7 +260,7 @@ export default function Home() {
                     size="lg" 
                     data-testid="button-hero-cta"
                   >
-                    Ja, ich will stressfreien Estrich
+                    Jetzt Festpreis-Angebot sichern
                     <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
@@ -280,15 +281,15 @@ export default function Home() {
               <div className="flex flex-wrap gap-6 pt-8" data-testid="hero-trust-row">
                 <div className="flex items-center gap-2" data-testid="trust-item-0">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-sm font-medium text-primary-foreground" data-testid="text-trust-title-0">Termingarantie</span>
+                  <span className="text-sm font-medium text-primary-foreground" data-testid="text-trust-title-0">100€ bei Verspätung</span>
                 </div>
                 <div className="flex items-center gap-2" data-testid="trust-item-1">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-sm font-medium text-primary-foreground" data-testid="text-trust-title-1">Festpreis vorab</span>
+                  <span className="text-sm font-medium text-primary-foreground" data-testid="text-trust-title-1">Festpreis-Garantie</span>
                 </div>
                 <div className="flex items-center gap-2" data-testid="trust-item-2">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-sm font-medium text-primary-foreground" data-testid="text-trust-title-2">282+ Kunden</span>
+                  <span className="text-sm font-medium text-primary-foreground" data-testid="text-trust-title-2">282 zufriedene Kunden</span>
                 </div>
               </div>
             </div>
@@ -296,12 +297,13 @@ export default function Home() {
             {/* Hero Form */}
             <Card className="lg:col-span-2 shadow-xl border-0 bg-card/95 backdrop-blur-sm" data-testid="card-hero-form">
               <CardHeader className="pb-4">
-                <Badge className="w-fit mb-3">
-                  Kostenlos & Unverbindlich
+                <Badge className="w-fit mb-3 bg-green-600 hover:bg-green-700">
+                  Antwort garantiert in 24h
                 </Badge>
-                <CardTitle className="text-2xl">Ihr Angebot in 24h</CardTitle>
+                <CardTitle className="text-2xl">Fordern Sie jetzt Ihr Festpreis-Angebot an</CardTitle>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  60 Sekunden ausfüllen, verbindlichen Preis erhalten. Kein Risiko, keine Verpflichtung.
+                  <strong>In nur 60 Sekunden</strong> ausfüllen – Sie erhalten einen verbindlichen Preis. 
+                  <span className="text-foreground"> Kein Risiko, keine versteckten Kosten.</span>
                 </p>
               </CardHeader>
               <CardContent>
@@ -514,18 +516,23 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-16">
             <div className="text-center" data-testid="stat-laufende">
-              <div className="text-3xl font-bold text-primary">48</div>
-              <div className="text-xs text-background/70 uppercase tracking-wide mt-1">Aktuelle Projekte</div>
+              <div className="text-3xl font-bold text-primary">15+</div>
+              <div className="text-xs text-background/70 uppercase tracking-wide mt-1">Jahre Erfahrung</div>
             </div>
             <div className="w-px h-10 bg-background/20 hidden sm:block" />
             <div className="text-center" data-testid="stat-abgeschlossen">
-              <div className="text-3xl font-bold text-primary">282+</div>
-              <div className="text-xs text-background/70 uppercase tracking-wide mt-1">Zufriedene Kunden</div>
+              <div className="text-3xl font-bold text-primary">282</div>
+              <div className="text-xs text-background/70 uppercase tracking-wide mt-1">Begeisterte Kunden</div>
             </div>
             <div className="w-px h-10 bg-background/20 hidden sm:block" />
             <div className="text-center" data-testid="stat-partner">
-              <div className="text-3xl font-bold text-primary">100%</div>
-              <div className="text-xs text-background/70 uppercase tracking-wide mt-1">Terminzuverlässigkeit</div>
+              <div className="text-3xl font-bold text-primary">100€</div>
+              <div className="text-xs text-background/70 uppercase tracking-wide mt-1">Bei Verspätung</div>
+            </div>
+            <div className="w-px h-10 bg-background/20 hidden sm:block" />
+            <div className="text-center" data-testid="stat-guarantee">
+              <div className="text-3xl font-bold text-primary">5 Jahre</div>
+              <div className="text-xs text-background/70 uppercase tracking-wide mt-1">Gewährleistung</div>
             </div>
           </div>
         </div>
@@ -536,10 +543,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unsere Leistungen</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">So lösen wir Ihr Boden-Problem</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Wählen Sie die Lösung, die zu Ihnen passt</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-              Egal welche Herausforderung – wir haben die passende Lösung. Profitieren Sie von unserer 
-              Erfahrung aus über 282 erfolgreich abgeschlossenen Projekten.
+              282 Münchner Kunden haben uns ihr Vertrauen geschenkt. Entdecken Sie, welche Lösung 
+              <strong className="text-foreground"> Ihr Projekt zum Erfolg führt</strong>.
             </p>
           </div>
 
@@ -586,10 +593,10 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-6">
-            <p className="text-muted-foreground mb-4">Nicht sicher, welche Lösung die richtige ist?</p>
+            <p className="text-muted-foreground mb-4">Nicht sicher? <strong className="text-foreground">Wir beraten Sie ehrlich</strong> – und finden die günstigste Lösung für Ihr Projekt.</p>
             <Link href="/angebot">
               <Button size="lg" data-testid="button-services-cta">
-                Kostenlose Beratung anfordern
+                Jetzt kostenlose Beratung sichern
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
@@ -602,9 +609,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unser Ablauf</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">In 4 Schritten zum perfekten Boden</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">So einfach kommen Sie zu Ihrem Traumboden</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-              Kein Rätselraten, keine Überraschungen. So einfach ist der Weg zu Ihrem fertigen Estrich.
+              Während andere Handwerker Chaos verursachen, <strong className="text-foreground">erleben Sie bei uns Professionalität</strong>. Jeder Schritt ist durchdacht.
             </p>
           </div>
 
@@ -636,9 +643,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Transparente Preise</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Faire Preise, keine versteckten Kosten</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Wissen Sie genau, was es kostet – bevor Sie sich entscheiden</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-              Bei uns wissen Sie vorher, was es kostet. Keine bösen Überraschungen – versprochen.
+              Andere Handwerker schicken Rechnungen mit Überraschungen. <strong className="text-foreground">Bei uns gibt es nur einen Preis: den, der im Angebot steht.</strong>
             </p>
           </div>
 
@@ -662,9 +669,10 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-6">
+            <p className="text-muted-foreground mb-4">Berechnen Sie jetzt, was Ihr Projekt wirklich kostet – <strong className="text-foreground">in unter 2 Minuten</strong>.</p>
             <Link href="/rechner">
               <Button size="lg" data-testid="button-pricing-cta">
-                Kostenloser Budgetrechner
+                Jetzt Kosten berechnen
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
@@ -676,10 +684,10 @@ export default function Home() {
       <section id="faq" className="py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Häufige Fragen</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Haben Sie noch Fragen?</h2>
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihre Bedenken – unsere Antworten</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Das fragen uns 9 von 10 Kunden</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-              Hier beantworten wir die häufigsten Fragen unserer Kunden. Falls Ihre Frage nicht dabei ist – fragen Sie uns einfach!
+              Sie haben Zweifel? Das ist verständlich. Lesen Sie, warum unsere Kunden ihre Skepsis überwunden haben – <strong className="text-foreground">und heute begeistert sind</strong>.
             </p>
           </div>
 
@@ -707,10 +715,10 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-6">
-            <p className="text-muted-foreground mb-4">Haben Sie eine andere Frage? Wir beantworten sie gerne persönlich.</p>
+            <p className="text-muted-foreground mb-4">Noch unsicher? <strong className="text-foreground">Ein Gespräch kostet Sie nichts – außer 5 Minuten Zeit.</strong></p>
             <Link href="/angebot">
               <Button size="lg" data-testid="button-faq-cta">
-                Jetzt Kontakt aufnehmen
+                Jetzt unverbindlich anfragen
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
@@ -722,10 +730,10 @@ export default function Home() {
       <section className="py-6 bg-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unser Einsatzgebiet</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Wir kommen zu Ihnen – schnell und zuverlässig</h2>
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Vorteil: Lokale Nähe</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">In Ihrer Nachbarschaft – morgen schon vor Ort</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-              Egal ob München-Zentrum oder Umland – wir sind in kürzester Zeit vor Ort.
+              Keine langen Anfahrtswege, keine Verzögerungen. <strong className="text-foreground">Wir kennen München</strong> – und sind schneller bei Ihnen, als Sie denken.
             </p>
           </div>
 
@@ -774,10 +782,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Bereit, Ihr Estrich-Problem zu lösen?</h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Der erste Schritt zu Ihrem neuen Boden</h2>
               <p className="text-muted-foreground mb-8">
-                Machen Sie jetzt den ersten Schritt. In nur 60 Sekunden erfahren Sie, 
-                was Ihr Projekt kostet – <strong className="text-foreground">garantiert ohne Verpflichtung</strong>.
+                <strong className="text-foreground">Jeder Tag Warten</strong> schiebt Ihr Projekt weiter nach hinten. 
+                Machen Sie jetzt den ersten Schritt – in nur 60 Sekunden wissen Sie, woran Sie sind. <strong className="text-foreground">100% kostenlos, 0% Risiko.</strong>
               </p>
 
               <div className="space-y-6">
@@ -838,12 +846,12 @@ export default function Home() {
             {/* Contact Form */}
             <Card className="shadow-lg border-primary/20" data-testid="card-contact-form">
               <CardHeader>
-                <div className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-md w-fit mb-2">
-                  Antwort innerhalb von 24 Stunden
+                <div className="bg-green-600 text-primary-foreground text-xs font-semibold px-3 py-1 rounded-md w-fit mb-2">
+                  Antwort garantiert in 24h
                 </div>
-                <CardTitle>Jetzt starten – kostenlos & unverbindlich</CardTitle>
+                <CardTitle>Fordern Sie jetzt Ihr Festpreis-Angebot an</CardTitle>
                 <p className="text-sm text-muted-foreground">
-                  Beschreiben Sie Ihr Projekt – und wir zeigen Ihnen, wie wir helfen können.
+                  <strong className="text-foreground">60 Sekunden</strong> – mehr brauchen Sie nicht. Dann wissen Sie, was Ihr Projekt kostet.
                 </p>
               </CardHeader>
               <CardContent>
@@ -1041,8 +1049,11 @@ export default function Home() {
                       disabled={contactMutation.isPending}
                       data-testid="button-contact-submit"
                     >
-                      {contactMutation.isPending ? "Wird gesendet..." : "Ja, ich möchte mein kostenloses Angebot"}
+                      {contactMutation.isPending ? "Wird gesendet..." : "Jetzt Festpreis-Angebot anfordern →"}
                     </Button>
+                    <p className="text-xs text-muted-foreground text-center mt-2">
+                      Kein Spam, keine Weitergabe Ihrer Daten. Nur Ihr persönliches Angebot.
+                    </p>
                   </form>
                 </Form>
               </CardContent>
