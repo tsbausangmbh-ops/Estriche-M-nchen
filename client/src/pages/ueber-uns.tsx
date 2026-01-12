@@ -102,7 +102,7 @@ export default function UeberUns() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/75 to-black/65" />
-        <div className="relative w-full mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="relative w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="max-w-3xl">
             <Badge variant="secondary" className="mb-4 bg-white/10 text-white border-white/20">
               <Building2 className="w-3 h-3 mr-1" />
@@ -135,7 +135,7 @@ export default function UeberUns() {
       </section>
 
       <section className="py-8 bg-foreground">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-16">
             <div className="text-center">
               <div className="text-3xl font-bold text-primary">30+</div>
@@ -161,7 +161,7 @@ export default function UeberUns() {
       </section>
 
       <section className="py-8 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="grid md:grid-cols-4 gap-6">
             <Card className="text-center">
               <CardContent className="pt-6 pb-5">
@@ -204,7 +204,7 @@ export default function UeberUns() {
       </section>
 
       <section className="py-12">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unsere Geschichte</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
@@ -271,7 +271,7 @@ export default function UeberUns() {
       </section>
 
       <section className="py-12 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Mehrwert</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
@@ -306,7 +306,7 @@ export default function UeberUns() {
       </section>
 
       <section className="py-12">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Meilensteine</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
@@ -333,7 +333,7 @@ export default function UeberUns() {
       </section>
 
       <section className="py-12 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Warum wir?</p>
@@ -390,7 +390,7 @@ export default function UeberUns() {
       </section>
 
       <section className="py-12">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unsere Werte</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
@@ -429,7 +429,7 @@ export default function UeberUns() {
       </section>
 
       <section className="py-12 bg-foreground text-primary-foreground">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12 text-center">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 text-center">
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-4">
             Bereit für einen Boden, der hält was wir versprechen?
           </h2>

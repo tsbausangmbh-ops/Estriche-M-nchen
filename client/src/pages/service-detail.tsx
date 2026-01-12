@@ -42,7 +42,7 @@ export default function ServiceDetail() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
         
-        <div className="relative z-10 px-4 sm:px-8 lg:px-12 py-16 lg:py-24">
+        <div className="relative z-10 px-4 sm:px-20 lg:px-48 py-16 lg:py-24">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center">
@@ -102,7 +102,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-8 border-t">
-        <div className="px-4 sm:px-8 lg:px-12">
+        <div className="px-4 sm:px-20 lg:px-48">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 tracking-tight">Was ist {service.title}?</h2>
@@ -143,7 +143,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-8 bg-accent">
-        <div className="px-4 sm:px-8 lg:px-12">
+        <div className="px-4 sm:px-20 lg:px-48">
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               <Card className="overflow-hidden h-full">
@@ -197,7 +197,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-8">
-        <div className="px-4 sm:px-8 lg:px-12">
+        <div className="px-4 sm:px-20 lg:px-48">
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-3 tracking-tight">Welche Arten gibt es?</h2>
           <p className="text-muted-foreground mb-8">
             Je nach Projekt setzen wir unterschiedliche Varianten ein.
@@ -222,7 +222,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-8 bg-accent">
-        <div className="px-4 sm:px-8 lg:px-12">
+        <div className="px-4 sm:px-20 lg:px-48">
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-3 tracking-tight">Was ist inklusive?</h2>
           <p className="text-muted-foreground mb-8">
             Alles aus einer Hand – keine versteckten Kosten.
@@ -244,7 +244,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-8">
-        <div className="px-4 sm:px-8 lg:px-12">
+        <div className="px-4 sm:px-20 lg:px-48">
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 tracking-tight">Unser Ablauf</h2>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
             <div className="bg-card rounded-lg border p-6 flex flex-col">
@@ -280,7 +280,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-8 bg-accent">
-        <div className="px-4 sm:px-8 lg:px-12">
+        <div className="px-4 sm:px-20 lg:px-48">
           <div className="flex items-center gap-3 mb-3">
             <ThumbsUp className="w-6 h-6 text-primary" />
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Warum Estrich München?</h2>
@@ -302,7 +302,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-8">
-        <div className="px-4 sm:px-8 lg:px-12">
+        <div className="px-4 sm:px-20 lg:px-48">
           <div className="flex items-center gap-3 mb-3">
             <Building2 className="w-6 h-6 text-primary" />
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Unsere Arbeit</h2>
@@ -355,7 +355,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-8 bg-muted">
-        <div className="px-4 sm:px-8 lg:px-12">
+        <div className="px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 mb-4">
               <Shield className="w-7 h-7 text-primary" />
@@ -462,7 +462,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-8 bg-accent">
-        <div className="px-4 sm:px-8 lg:px-12">
+        <div className="px-4 sm:px-20 lg:px-48">
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 tracking-tight">Häufig gestellte Fragen</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {service.faqs.slice(0, 6).map((faq, index) => (
@@ -476,7 +476,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-8 bg-destructive/5 border-y border-destructive/10">
-        <div className="px-4 sm:px-8 lg:px-12 text-center">
+        <div className="px-4 sm:px-20 lg:px-48 text-center">
           <p className="text-destructive font-medium mb-4">
             {service.urgency}
           </p>
@@ -490,7 +490,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-8 bg-muted">
-        <div className="px-4 sm:px-8 lg:px-12">
+        <div className="px-4 sm:px-20 lg:px-48">
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 tracking-tight">Weitere Leistungen</h2>
           <div className="grid md:grid-cols-3 gap-4">
             {services.filter(s => s.id !== serviceId).slice(0, 3).map((otherService) => (
@@ -518,7 +518,7 @@ export default function ServiceDetail() {
       </section>
 
       <section className="py-6 bg-foreground text-primary-foreground">
-        <div className="px-4 sm:px-8 lg:px-12 text-center">
+        <div className="px-4 sm:px-20 lg:px-48 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-sky-300">
             Bereit für Ihren neuen Boden?
           </h2>

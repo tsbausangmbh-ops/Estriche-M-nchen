@@ -157,7 +157,7 @@ export default function Ablauf() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/40" />
-        <div className="relative w-full mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="relative w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center">
             <Badge variant="outline" className="mb-4 border-white/30 text-white">Unser Ablauf</Badge>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-white">
@@ -178,7 +178,7 @@ export default function Ablauf() {
       </section>
 
       <section className="py-12 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Weg zum perfekten Boden</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
@@ -259,7 +259,7 @@ export default function Ablauf() {
       </section>
 
       <section className="py-8">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="space-y-8">
             {processSteps.map((step, index) => (
               <div key={index} className="relative" data-testid={`process-step-${index}`}>
@@ -306,7 +306,7 @@ export default function Ablauf() {
       </section>
 
       <section className="py-8 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">Unsere Garantien für Sie</h2>
             <p className="text-muted-foreground">
@@ -334,7 +334,7 @@ export default function Ablauf() {
       </section>
 
       <section className="py-12 bg-foreground text-primary-foreground">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12 text-center">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Bereit, den ersten Schritt zu machen?
           </h2>

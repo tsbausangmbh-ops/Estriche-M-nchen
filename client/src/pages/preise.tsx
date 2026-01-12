@@ -177,7 +177,7 @@ export default function Preise() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/40" />
-        <div className="relative w-full mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="relative w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center">
             <Badge variant="outline" className="mb-4 border-white/30 text-white">Transparente Preise</Badge>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-white">
@@ -198,7 +198,7 @@ export default function Preise() {
       </section>
 
       <section className="py-8 bg-muted/30 border-b">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-6">
             <h2 className="text-xl sm:text-2xl font-extrabold mb-3 tracking-tight">
               Welches Problem möchten Sie lösen?
@@ -223,7 +223,7 @@ export default function Preise() {
       </section>
 
       <section className="py-12 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Preistransparenz</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
@@ -290,7 +290,7 @@ export default function Preise() {
       </section>
 
       <section className="py-8">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="grid lg:grid-cols-2 gap-6">
             {priceCategories.map((category, index) => (
               <Card key={index} className="overflow-hidden" data-testid={`price-card-${index}`}>
@@ -352,7 +352,7 @@ export default function Preise() {
       </section>
 
       <section className="py-8">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <h2 className="text-2xl font-extrabold tracking-tight mb-6 text-center">
             Zusätzliche Leistungen & Service
           </h2>
@@ -374,7 +374,7 @@ export default function Preise() {
       </section>
 
       <section className="py-8">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <h2 className="text-2xl font-extrabold tracking-tight mb-6 text-center">
             So funktioniert unser Festpreis
           </h2>
@@ -405,7 +405,7 @@ export default function Preise() {
       </section>
 
       <section className="py-12 bg-foreground text-primary-foreground">
-        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12 text-center">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Jetzt Ihr persönliches Angebot anfordern
           </h2>
