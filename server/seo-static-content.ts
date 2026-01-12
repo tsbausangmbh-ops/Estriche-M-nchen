@@ -415,7 +415,7 @@ const pagesSEO: Record<string, PageSEO> = {
     sections: [
       {
         h2: "So erreichen Sie uns",
-        h3s: ["Telefon: 089 / 444 43 887 2", "E-Mail: info@estrich-muenchen.de"],
+        h3s: ["Telefon: 089 / 444 43 887 2", "E-Mail: info@estriche-muenchen.de"],
         content: `Rufen Sie uns an oder schreiben Sie uns - wir melden uns schnell zurück. Montag bis Freitag sind wir von 7:00 bis 18:00 Uhr erreichbar. Außerhalb der Geschäftszeiten hinterlassen Sie eine Nachricht, wir rufen am nächsten Werktag zurück.`
       },
       {
@@ -618,7 +618,7 @@ function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
     "description": "${page.metaDescription}",
     "url": "${baseUrl}",
     "telephone": "+49-89-444-438-872",
-    "email": "info@estrich-muenchen.de",
+    "email": "info@estriche-muenchen.de",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Hardenbergstr. 4",
@@ -687,7 +687,7 @@ function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
       <section>
         <h2>Jetzt kostenlos beraten lassen</h2>
         <p>Telefon: <a href="tel:+4989444438872">089 / 444 43 887 2</a></p>
-        <p>E-Mail: <a href="mailto:info@estrich-muenchen.de">info@estrich-muenchen.de</a></p>
+        <p>E-Mail: <a href="mailto:info@estriche-muenchen.de">info@estriche-muenchen.de</a></p>
         <p>Oder nutzen Sie unser <a href="/angebot" title="Kostenloses Estrich Angebot anfordern">Kontaktformular</a> für eine unverbindliche Anfrage.</p>
       </section>
     </article>

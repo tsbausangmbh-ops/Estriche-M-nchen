@@ -47,7 +47,7 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Kontakt</h4>
             <ul className="space-y-2 text-sm text-background/70">
               <li data-testid="text-footer-phone">089 444438872</li>
-              <li data-testid="text-footer-email">info@estrich-muenchen.de</li>
+              <li data-testid="text-footer-email">info@estriche-muenchen.de</li>
               <li>München & Umgebung</li>
               <li>Mo–Fr: 7:00–18:00</li>
             </ul>

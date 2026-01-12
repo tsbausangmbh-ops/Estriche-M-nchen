@@ -195,11 +195,11 @@ export default function Kontakt() {
                   <div>
                     <div className="font-semibold">E-Mail</div>
                     <a 
-                      href="mailto:info@estrich-muenchen.de" 
+                      href="mailto:info@estriche-muenchen.de" 
                       className="text-muted-foreground hover:text-primary transition-colors"
                       data-testid="link-email"
                     >
-                      info@estrich-muenchen.de
+                      info@estriche-muenchen.de
                     </a>
                     <p className="text-sm text-muted-foreground mt-1">
                       Schreiben Sie uns – Antwort meist noch am selben Tag.

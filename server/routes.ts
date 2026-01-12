@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactInquirySchema } from "@shared/schema";
 import { fromError } from "zod-validation-error";
+import { sendContactNotification } from "./email";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -32,9 +33,16 @@ export async function registerRoutes(
         budgetSummary: inquiry.budgetSummary ? "Included" : "None",
       });
 
+      const emailResult = await sendContactNotification(inquiry);
+      
+      if (!emailResult.success) {
+        console.warn("Email notification failed:", emailResult.error);
+      }
+
       return res.status(201).json({ 
         success: true, 
-        message: "Anfrage erfolgreich gesendet" 
+        message: "Anfrage erfolgreich gesendet",
+        emailSent: emailResult.success
       });
     } catch (error) {
       console.error("Error creating contact inquiry:", error);

@@ -53,7 +53,7 @@ export default function Impressum() {
                 <h2 className="text-xl font-bold mb-3">Kontakt</h2>
                 <p className="text-muted-foreground">
                   Telefon: 089 444438872<br />
-                  E-Mail: info@estrich-muenchen.de
+                  E-Mail: info@estriche-muenchen.de
                 </p>
               </div>
 
