@@ -111,12 +111,12 @@ const waermedaemmungOptions = [
 ];
 
 const additionalOptions = [
-  { id: "heizung", label: "Fußbodenheizung-Vorbereitung", price: 8, icon: Thermometer, description: "Heizrohr-Einbettung", required: false },
-  { id: "randdaemmstreifen", label: "Randdämmstreifen", price: 2.5, icon: Layers, description: "Umlaufend verlegt", required: false },
-  { id: "grundierung", label: "Grundierung Untergrund", price: 4, icon: Wrench, description: "Haftvermittlung", required: false },
-  { id: "folie", label: "PE-Folie/Dampfsperre", price: 2, icon: Layers, description: "Feuchtigkeitsschutz", required: false },
-  { id: "baustelleneinrichtung", label: "Baustelleneinrichtung", price: 4.5, icon: Truck, description: "Immer inklusive", required: true },
-  { id: "reinigung", label: "Baustellenreinigung", price: 2.8, icon: Wrench, description: "Immer inklusive", required: true },
+  { id: "heizung", label: "Fußbodenheizung-Vorbereitung", price: 8, icon: Thermometer, description: "Heizrohr-Einbettung", required: false, isFlat: false },
+  { id: "randdaemmstreifen", label: "Randdämmstreifen", price: 2.5, icon: Layers, description: "Umlaufend verlegt", required: false, isFlat: false },
+  { id: "grundierung", label: "Grundierung Untergrund", price: 4, icon: Wrench, description: "Haftvermittlung", required: false, isFlat: false },
+  { id: "folie", label: "PE-Folie/Dampfsperre", price: 2, icon: Layers, description: "Feuchtigkeitsschutz", required: false, isFlat: false },
+  { id: "baustelleneinrichtung", label: "Baustelleneinrichtung", price: 450, icon: Truck, description: "Immer inklusive", required: true, isFlat: true },
+  { id: "reinigung", label: "Baustellenreinigung", price: 2.8, icon: Wrench, description: "Immer inklusive", required: true, isFlat: false },
 ];
 
 export default function Rechner() {
@@ -266,9 +266,9 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
     selectedOptions.forEach(optionId => {
       const option = additionalOptions.find(o => o.id === optionId);
       if (option) {
-        const cost = sqm * option.price;
+        const cost = option.isFlat ? option.price : sqm * option.price;
         optionsCost += cost;
-        breakdown.push({ label: option.label, amount: cost });
+        breakdown.push({ label: option.isFlat ? `${option.label} (Pauschal)` : option.label, amount: cost });
       }
     });
 
@@ -597,7 +597,9 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
                             {option.required && <span className="ml-2 text-xs text-muted-foreground">(immer dabei)</span>}
                           </span>
                           <p className="text-xs text-muted-foreground">{option.description}</p>
-                          <p className="text-xs font-medium text-primary mt-1">+{option.price} €/m² netto</p>
+                          <p className="text-xs font-medium text-primary mt-1">
+                            {option.isFlat ? `Pauschal: ${option.price} € netto` : `+${option.price} €/m² netto`}
+                          </p>
                         </div>
                       </div>
                     ))}
