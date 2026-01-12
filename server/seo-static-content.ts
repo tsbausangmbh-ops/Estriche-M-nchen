@@ -490,7 +490,7 @@ const pagesSEO: Record<string, PageSEO> = {
       {
         h2: "30 Jahre Handwerkskunst und Leidenschaft",
         h3s: ["Gründung 1994 aus Überzeugung", "Meisterbetrieb mit Tradition"],
-        content: `1994 gründete Mustafa Sakar die Estrich München GmbH aus einer einfachen Überzeugung: Bauherren verdienen Handwerker, auf die sie sich verlassen können. Nach einer frustrierenden Erfahrung mit unzuverlässigen Estrichlegern beschloss er, es selbst besser zu machen.`
+        content: `1994 gründete Mustafa Sakar Estrich München aus einer einfachen Überzeugung: Bauherren verdienen Handwerker, auf die sie sich verlassen können. Nach einer frustrierenden Erfahrung mit unzuverlässigen Estrichlegern beschloss er, es selbst besser zu machen.`
       },
       {
         h2: "Unsere Werte - Was uns antreibt",
@@ -614,7 +614,7 @@ function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Estrich München GmbH",
+    "name": "Mustafa Sakar - Estrich München",
     "description": "${page.metaDescription}",
     "url": "${baseUrl}",
     "telephone": "+49-89-444-438-872",
@@ -693,7 +693,7 @@ function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
     </article>
   </main>
   <footer>
-    <p>© 2025 Estrich München GmbH - Ihr Meisterbetrieb für Estricharbeiten seit 1994</p>
+    <p>© 2025 Mustafa Sakar - Estrich München - Ihr Fachbetrieb für Estricharbeiten</p>
     <p>Telefon: <a href="tel:+4989444438872">089 / 444 43 887 2</a> | München und Umgebung</p>
     <nav aria-label="Fußzeilen-Navigation">
       <a href="/impressum" title="Impressum">Impressum</a>

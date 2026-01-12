@@ -29,7 +29,7 @@ export default function AGB() {
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
-              der Estrich München GmbH für Estrich- und Bodenarbeiten<br />
+              von Mustafa Sakar - Estrich München für Estrich- und Bodenarbeiten<br />
               Gemäß BGB Bauvertragsrecht (§§ 650a–650o BGB)
             </p>
           </div>
@@ -44,8 +44,8 @@ export default function AGB() {
               <div>
                 <h2 className="text-xl font-bold mb-3">§ 1 Geltungsbereich und Vertragsart</h2>
                 <p className="text-muted-foreground">
-                  (1) Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen der 
-                  Estrich München GmbH (nachfolgend „Auftragnehmer") und dem Kunden (nachfolgend „Auftraggeber") 
+                  (1) Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen 
+                  Mustafa Sakar - Estrich München (nachfolgend „Auftragnehmer") und dem Kunden (nachfolgend „Auftraggeber") 
                   über Estrich-, Boden- und Dämmarbeiten sowie damit verbundene Leistungen.
                   <br /><br />
                   (2) Bei den von uns erbrachten Leistungen handelt es sich um Bauverträge im Sinne des 

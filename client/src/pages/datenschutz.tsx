@@ -63,12 +63,12 @@ export default function Datenschutz() {
                 <p className="text-muted-foreground">
                   Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
                   <br /><br />
-                  Estrich München GmbH<br />
+                  Mustafa Sakar - Estrich München<br />
                   Hardenbergstr. 4<br />
-                  80331 München<br />
+                  80992 München<br />
                   Deutschland<br /><br />
                   Telefon: 089 444438872<br />
-                  E-Mail: datenschutz@estrich-muenchen.de
+                  E-Mail: info@estriche-muenchen.de
                 </p>
               </div>
 

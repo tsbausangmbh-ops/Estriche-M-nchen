@@ -128,7 +128,7 @@ export async function sendContactNotification(inquiry: ContactInquiry): Promise<
       
       <div style="background-color: #333; color: white; padding: 15px; text-align: center; font-size: 12px;">
         <p style="margin: 0;">Diese E-Mail wurde automatisch generiert.</p>
-        <p style="margin: 5px 0 0;">Estrich München GmbH | Hardenbergstr. 4 | 80992 München</p>
+        <p style="margin: 5px 0 0;">Mustafa Sakar - Estrich München | Hardenbergstr. 4 | 80992 München</p>
       </div>
     </body>
     </html>
@@ -153,7 +153,7 @@ ${inquiry.budgetSummary ? `KOSTENVORANSCHLAG\n${inquiry.budgetSummary}\n` : ""}
 
 ---
 Diese E-Mail wurde automatisch generiert.
-Estrich München GmbH | Hardenbergstr. 4 | 80992 München
+Mustafa Sakar - Estrich München | Hardenbergstr. 4 | 80992 München
   `;
 
   try {

@@ -29,7 +29,7 @@ export default function Impressum() {
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
-              Angaben gemäß § 5 TMG und rechtliche Informationen zur Estrich München GmbH.
+              Angaben gemäß § 5 TMG und rechtliche Informationen.
             </p>
           </div>
         </div>
@@ -42,9 +42,10 @@ export default function Impressum() {
               <div>
                 <h2 className="text-xl font-bold mb-3">Angaben gemäß § 5 TMG</h2>
                 <p className="text-muted-foreground">
-                  Estrich München GmbH<br />
+                  Mustafa Sakar<br />
+                  Estrich München<br />
                   Hardenbergstr. 4<br />
-                  80331 München<br />
+                  80992 München<br />
                   Deutschland
                 </p>
               </div>
@@ -54,30 +55,6 @@ export default function Impressum() {
                 <p className="text-muted-foreground">
                   Telefon: 089 444438872<br />
                   E-Mail: info@estriche-muenchen.de
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-xl font-bold mb-3">Vertreten durch</h2>
-                <p className="text-muted-foreground">
-                  Geschäftsführer: Mustafa Sakar
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-xl font-bold mb-3">Registereintrag</h2>
-                <p className="text-muted-foreground">
-                  Eintragung im Handelsregister<br />
-                  Registergericht: Amtsgericht München<br />
-                  Registernummer: HRB 123456
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-xl font-bold mb-3">Umsatzsteuer-ID</h2>
-                <p className="text-muted-foreground">
-                  Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br />
-                  DE 123 456 789
                 </p>
               </div>
 
