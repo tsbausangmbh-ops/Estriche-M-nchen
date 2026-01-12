@@ -490,9 +490,122 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Estrich Kostenrechner München | Kosten online berechnen</title>
-        <meta name="description" content="Berechnen Sie Ihre Estrich-Kosten in München kostenlos online. Unverbindliche Kalkulation für Zementestrich, Fließestrich und Heizestrich." />
+        <title>Estrich Kostenrechner München 2025 | Preis pro m² sofort berechnen</title>
+        <meta name="description" content="Estrich Kosten München sofort berechnen: Zementestrich ab 32€/m², Fließestrich ab 42€/m². Kostenloser Online-Rechner mit Festpreis-Garantie. Jetzt Budget kalkulieren!" />
+        <meta name="keywords" content="estrich kosten rechner, estrich preis pro m2, estrich kosten münchen, zementestrich kosten, fließestrich preis, estrich verlegen kosten, estrich münchen preis, estrich kalkulator" />
         <link rel="canonical" href="https://estriche-muenchen.de/rechner" />
+        
+        <meta property="og:title" content="Estrich Kostenrechner München 2025 | Preis pro m² berechnen" />
+        <meta property="og:description" content="Kostenloser Estrich-Kostenrechner für München. Berechnen Sie jetzt Ihre Estrich-Kosten pro m² – Zementestrich, Fließestrich, Heizestrich. Festpreis-Garantie!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://estriche-muenchen.de/rechner" />
+        <meta property="og:locale" content="de_DE" />
+        <meta property="og:site_name" content="Estriche München" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Estrich Kostenrechner München | Preis sofort berechnen" />
+        <meta name="twitter:description" content="Berechnen Sie Ihre Estrich-Kosten in München kostenlos. Online-Rechner mit Sofort-Ergebnis." />
+        
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+        <meta name="author" content="Estriche München - Mustafa Sakar" />
+        <meta name="geo.region" content="DE-BY" />
+        <meta name="geo.placename" content="München" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Estrich Kostenrechner München",
+            "description": "Kostenloser Online-Rechner zur Kalkulation von Estrich-Kosten in München und Umgebung",
+            "url": "https://estriche-muenchen.de/rechner",
+            "applicationCategory": "UtilityApplication",
+            "operatingSystem": "Web",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "EUR",
+              "description": "Kostenlose Nutzung des Estrich-Kostenrechners"
+            },
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Estriche München",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Hardenbergstr. 4",
+                "addressLocality": "München",
+                "postalCode": "80992",
+                "addressCountry": "DE"
+              },
+              "telephone": "+49 89 444438872",
+              "email": "info@estriche-muenchen.de",
+              "areaServed": {
+                "@type": "City",
+                "name": "München"
+              }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "282",
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          })}
+        </script>
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Was kostet Estrich pro m² in München?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Estrich kostet in München zwischen 25-65€ pro m² je nach Art: Zementestrich ab 32€/m², Fließestrich ab 42€/m², Schnellestrich ab 48€/m². Der genaue Preis hängt von Stärke, Stockwerk und Zusatzleistungen ab."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Wie berechne ich meine Estrich-Kosten?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Mit unserem kostenlosen Online-Rechner: Geben Sie Ihre Fläche in m² ein, wählen Sie Estrichart und Stärke, und erhalten Sie sofort eine unverbindliche Kosteneinschätzung mit Festpreis-Option."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Ist der Estrich-Kostenrechner kostenlos?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ja, unser Estrich-Kostenrechner ist 100% kostenlos und unverbindlich. Sie erhalten sofort eine Budgeteinschätzung ohne Registrierung."
+                }
+              }
+            ]
+          })}
+        </script>
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Startseite",
+                "item": "https://estriche-muenchen.de"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Estrich Kostenrechner",
+                "item": "https://estriche-muenchen.de/rechner"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
       <Header />
 
@@ -503,7 +616,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/40" />
         <div className="relative w-full mx-auto px-4 sm:px-8 lg:px-12">
-          <div className="text-center max-w-4xl mx-auto">
+          <div className="text-center">
             <Badge variant="outline" className="mb-4 border-white/30 text-white">
               <Calculator className="w-3 h-3 mr-1" />
               Kostenrechner
