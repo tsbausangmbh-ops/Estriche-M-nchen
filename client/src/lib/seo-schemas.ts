@@ -55,7 +55,7 @@ export const munichDistricts = [
   "Ramersdorf"
 ];
 
-export function generateLocalBusinessSchema() {
+export function generateLocalBusinessSchema(logoUrl?: string, imageUrl?: string) {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -68,8 +68,8 @@ export function generateLocalBusinessSchema() {
     "email": businessInfo.email,
     "foundingDate": businessInfo.foundingDate,
     "priceRange": businessInfo.priceRange,
-    "image": `${businessInfo.url}/logo.png`,
-    "logo": `${businessInfo.url}/logo.png`,
+    ...(imageUrl && { "image": imageUrl }),
+    ...(logoUrl && { "logo": logoUrl }),
     "address": {
       "@type": "PostalAddress",
       ...businessInfo.address

@@ -167,7 +167,17 @@ export default function Preise() {
       <Helmet>
         <title>Estrich Preise München | Kosten pro m² | Transparente Festpreise</title>
         <meta name="description" content="Estrich Kosten München: Zementestrich ab 25€/m², Fließestrich ab 28€/m², Industrieboden ab 45€/m². Transparente Preise mit Festpreis-Garantie." />
+        <meta name="keywords" content="Estrich Preise München, Estrich Kosten pro qm, Zementestrich Preis, Fließestrich Kosten, Heizestrich Preise, Estrich verlegen Kosten" />
+        <meta name="geo.region" content="DE-BY" />
+        <meta name="geo.placename" content="München" />
         <link rel="canonical" href="https://estriche-muenchen.de/preise" />
+        <meta property="og:title" content="Estrich Preise München | Transparente Kosten" />
+        <meta property="og:description" content="Faire Estrich-Preise in München. Zementestrich ab 25€/m², Festpreis-Garantie ohne versteckte Kosten." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://estriche-muenchen.de/preise" />
+        <meta property="og:locale" content="de_DE" />
+        <meta property="og:image" content="https://estriche-muenchen.de/og-image.png" />
+        <meta name="twitter:image" content="https://estriche-muenchen.de/og-image.png" />
       </Helmet>
       <Header />
 

@@ -135,7 +135,17 @@ export default function Kontakt() {
       <Helmet>
         <title>Kontakt | Estrich München | Kostenlose Beratung ☎ 089 444438872</title>
         <meta name="description" content="Kontaktieren Sie Estriche München für kostenlose Beratung und Festpreis-Angebote. ☎ 089 444438872 | info@estriche-muenchen.de | Mo-Fr 7-18 Uhr" />
+        <meta name="keywords" content="Estrich München Kontakt, Estrichleger anrufen, Estrich Angebot München, kostenlose Beratung Estrich" />
+        <meta name="geo.region" content="DE-BY" />
+        <meta name="geo.placename" content="München" />
         <link rel="canonical" href="https://estriche-muenchen.de/kontakt" />
+        <meta property="og:title" content="Kontakt | Estrich München" />
+        <meta property="og:description" content="Kostenlose Beratung für Ihr Estrich-Projekt. Festpreis-Angebot innerhalb 24h." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://estriche-muenchen.de/kontakt" />
+        <meta property="og:locale" content="de_DE" />
+        <meta property="og:image" content="https://estriche-muenchen.de/og-image.png" />
+        <meta name="twitter:image" content="https://estriche-muenchen.de/og-image.png" />
       </Helmet>
       <Header />
       

@@ -248,8 +248,12 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Estrich München | Meisterbetrieb mit Festpreis-Garantie" />
         <meta name="twitter:description" content="Professionelle Estricharbeiten in München. Festpreis-Garantie, termingerecht, qualitätsgeprüft." />
+        <meta property="og:image" content="https://estriche-muenchen.de/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:image" content="https://estriche-muenchen.de/og-image.png" />
         <script type="application/ld+json">
-          {JSON.stringify(generateLocalBusinessSchema())}
+          {JSON.stringify(generateLocalBusinessSchema("https://estriche-muenchen.de/logo.png", "https://estriche-muenchen.de/og-image.png"))}
         </script>
         <script type="application/ld+json">
           {JSON.stringify(generateFAQSchema(faqItems.map(f => ({ question: f.question, answer: f.answer }))))}

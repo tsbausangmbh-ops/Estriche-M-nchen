@@ -12,6 +12,7 @@ import {
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.png";
+import { generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo-schemas";
 
 const faqCategories = [
   {
@@ -164,13 +165,31 @@ const faqCategories = [
 
 export default function FAQ() {
   const totalQuestions = faqCategories.reduce((sum, cat) => sum + cat.questions.length, 0);
+  const allFaqs = faqCategories.flatMap(cat => cat.questions);
 
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Häufige Fragen (FAQ) | Estrich München | Beratung & Antworten</title>
         <meta name="description" content="Antworten auf häufige Fragen zu Estricharbeiten: Trocknungszeit, Kosten, Materialien, Fußbodenheizung und mehr. Expertenberatung vom Münchner Meisterbetrieb." />
+        <meta name="keywords" content="Estrich FAQ, Estrich Fragen, Estrich Trocknungszeit, Estrich Kosten, Zementestrich Fragen, Fußbodenheizung Estrich" />
         <link rel="canonical" href="https://estriche-muenchen.de/faq" />
+        <meta property="og:title" content="Häufige Fragen (FAQ) | Estrich München" />
+        <meta property="og:description" content="Expertenantworten auf Ihre Fragen zu Estricharbeiten in München." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://estriche-muenchen.de/faq" />
+        <meta property="og:locale" content="de_DE" />
+        <meta property="og:image" content="https://estriche-muenchen.de/og-image.png" />
+        <meta name="twitter:image" content="https://estriche-muenchen.de/og-image.png" />
+        <script type="application/ld+json">
+          {JSON.stringify(generateFAQSchema(allFaqs.map(f => ({ question: f.question, answer: f.answer }))))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(generateBreadcrumbSchema([
+            { name: "Startseite", url: "https://estriche-muenchen.de/" },
+            { name: "FAQ", url: "https://estriche-muenchen.de/faq" }
+          ]))}
+        </script>
       </Helmet>
       <Header />
 
