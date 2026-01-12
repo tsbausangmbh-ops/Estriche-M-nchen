@@ -384,9 +384,17 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
 
     const breakdown: { label: string; amount: number }[] = [];
 
-    const basePrice = selectedEstrich.basePrice * selectedThickness.multiplier;
-    const estrichCost = sqm * basePrice;
-    breakdown.push({ label: `${selectedEstrich.label} (${sqm} m²)`, amount: estrichCost });
+    const baseEstrichCost = sqm * selectedEstrich.basePrice;
+    breakdown.push({ label: `${selectedEstrich.label} (${sqm} m²)`, amount: baseEstrichCost });
+
+    const thicknessSurcharge = (selectedThickness.multiplier > 1) 
+      ? sqm * selectedEstrich.basePrice * (selectedThickness.multiplier - 1) 
+      : 0;
+    if (thicknessSurcharge > 0) {
+      breakdown.push({ label: `Stärkezuschlag (${selectedThickness.label})`, amount: thicknessSurcharge });
+    }
+
+    const estrichCost = baseEstrichCost + thicknessSurcharge;
 
     const selectedProjektart = projektartOptions.find(p => p.value === projektart);
     const projektartSurcharge = sqm * (selectedProjektart?.surcharge || 0);
