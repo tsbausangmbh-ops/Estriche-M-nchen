@@ -40,7 +40,7 @@ export default function BlogArticle() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <section className="relative py-16 sm:py-20 overflow-hidden">
+      <section className="relative py-10 sm:py-14 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}

@@ -168,7 +168,7 @@ export default function FAQ() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <section className="relative py-16 lg:py-24 overflow-hidden">
+      <section className="relative py-10 lg:py-14 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}

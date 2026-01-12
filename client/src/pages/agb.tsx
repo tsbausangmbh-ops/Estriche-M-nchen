@@ -9,7 +9,7 @@ export default function AGB() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <section className="relative py-20 sm:py-24 overflow-hidden">
+      <section className="relative py-10 sm:py-14 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}

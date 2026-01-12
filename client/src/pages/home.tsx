@@ -227,7 +227,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section id="hero" className="relative py-20 lg:py-32 overflow-hidden">
+      <section id="hero" className="relative py-12 lg:py-16 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
