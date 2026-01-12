@@ -9,18 +9,16 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2" data-testid="footer-brand">
-            <Link href="/">
-              <a className="flex items-center gap-3 mb-4">
-                <img 
-                  src={logoImage} 
-                  alt="Estrich München Logo" 
-                  className="h-10 w-auto rounded-md"
-                />
-                <div>
-                  <div className="font-bold text-lg">Estrich München</div>
-                  <div className="text-xs text-background/70">Estrich • Bodenaufbau • Sanierung</div>
-                </div>
-              </a>
+            <Link href="/" className="flex items-center gap-3 mb-4">
+              <img 
+                src={logoImage} 
+                alt="Estrich München Logo" 
+                className="h-10 w-auto rounded-md"
+              />
+              <div>
+                <div className="font-bold text-lg">Estrich München</div>
+                <div className="text-xs text-background/70">Estrich • Bodenaufbau • Sanierung</div>
+              </div>
             </Link>
             <p className="text-background/70 text-sm max-w-md" data-testid="text-footer-description">
               Ihr zuverlässiger Partner für professionelle Estricharbeiten in München und Umgebung. 
@@ -33,10 +31,8 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-background/70">
               {services.slice(0, 5).map((service) => (
                 <li key={service.id}>
-                  <Link href={`/leistungen/${service.id}`}>
-                    <a className="hover:text-background transition-colors">
-                      {service.title}
-                    </a>
+                  <Link href={`/leistungen/${service.id}`} className="hover:text-background transition-colors">
+                    {service.title}
                   </Link>
                 </li>
               ))}
@@ -59,20 +55,14 @@ export function Footer() {
             © {new Date().getFullYear()} Estrich München. Alle Rechte vorbehalten.
           </p>
           <div className="flex flex-wrap gap-6 text-sm text-background/60">
-            <Link href="/impressum">
-              <a className="hover:text-background transition-colors" data-testid="link-impressum">
-                Impressum
-              </a>
+            <Link href="/impressum" className="hover:text-background transition-colors" data-testid="link-impressum">
+              Impressum
             </Link>
-            <Link href="/datenschutz">
-              <a className="hover:text-background transition-colors" data-testid="link-datenschutz">
-                Datenschutz
-              </a>
+            <Link href="/datenschutz" className="hover:text-background transition-colors" data-testid="link-datenschutz">
+              Datenschutz
             </Link>
-            <Link href="/agb">
-              <a className="hover:text-background transition-colors" data-testid="link-agb">
-                AGB
-              </a>
+            <Link href="/agb" className="hover:text-background transition-colors" data-testid="link-agb">
+              AGB
             </Link>
             <CookieSettingsButton />
           </div>
