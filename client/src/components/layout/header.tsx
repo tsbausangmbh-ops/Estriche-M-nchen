@@ -49,14 +49,13 @@ export function Header() {
               Antwort i.d.R. innerhalb 24h
             </Badge>
           </div>
-          <a 
-            href="#kontakt" 
-            onClick={(e) => { e.preventDefault(); scrollToSection("kontakt"); }}
+          <Link 
+            href="/kontakt"
             className="text-background/90 hover:text-background transition-colors font-medium"
             data-testid="link-topbar-contact"
           >
             Angebot anfragen
-          </a>
+          </Link>
         </div>
       </div>
 
