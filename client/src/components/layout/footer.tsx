@@ -12,11 +12,11 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-3 mb-4">
               <img 
                 src={logoImage} 
-                alt="Estrich München Logo" 
+                alt="Estriche München Logo" 
                 className="h-10 w-auto rounded-md"
               />
               <div>
-                <div className="font-bold text-lg">Estrich München</div>
+                <div className="font-bold text-lg">Estriche München</div>
                 <div className="text-xs text-background/70">Estrich • Bodenaufbau • Sanierung</div>
               </div>
             </Link>
@@ -52,7 +52,7 @@ export function Footer() {
 
         <div className="border-t border-background/20 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-background/60">
-            © {new Date().getFullYear()} Estrich München. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} Estriche München. Alle Rechte vorbehalten.
           </p>
           <div className="flex flex-wrap gap-6 text-sm text-background/60">
             <Link href="/impressum" className="hover:text-background transition-colors" data-testid="link-impressum">

@@ -79,11 +79,11 @@ export function Header() {
               <Link href="/" className="flex items-center gap-3" data-testid="link-logo">
                 <img 
                   src={logoImage} 
-                  alt="Estrich München Logo" 
+                  alt="Estriche München Logo" 
                   className="h-12 w-auto rounded-md"
                 />
                 <div className="hidden sm:block">
-                  <div className="font-bold text-lg leading-tight">Estrich München</div>
+                  <div className="font-bold text-lg leading-tight">Estriche München</div>
                   <div className="text-xs text-muted-foreground">Estrich • Bodenaufbau • Sanierung</div>
                 </div>
               </Link>
