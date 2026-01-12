@@ -63,7 +63,7 @@ export default function Datenschutz() {
                 <p className="text-muted-foreground">
                   Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
                   <br /><br />
-                  Mustafa Sakar - Estrich München<br />
+                  Mustafa Sakar - Estriche München<br />
                   Hardenbergstr. 4<br />
                   80992 München<br />
                   Deutschland<br /><br />

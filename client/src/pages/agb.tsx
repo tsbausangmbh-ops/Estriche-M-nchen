@@ -29,7 +29,7 @@ export default function AGB() {
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
-              von Mustafa Sakar - Estrich München für Estrich- und Bodenarbeiten<br />
+              von Mustafa Sakar - Estriche München für Estrich- und Bodenarbeiten<br />
               Gemäß BGB Bauvertragsrecht (§§ 650a–650o BGB)
             </p>
           </div>
@@ -45,7 +45,7 @@ export default function AGB() {
                 <h2 className="text-xl font-bold mb-3">§ 1 Geltungsbereich und Vertragsart</h2>
                 <p className="text-muted-foreground">
                   (1) Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen 
-                  Mustafa Sakar - Estrich München (nachfolgend „Auftragnehmer") und dem Kunden (nachfolgend „Auftraggeber") 
+                  Mustafa Sakar - Estriche München (nachfolgend „Auftragnehmer") und dem Kunden (nachfolgend „Auftraggeber") 
                   über Estrich-, Boden- und Dämmarbeiten sowie damit verbundene Leistungen.
                   <br /><br />
                   (2) Bei den von uns erbrachten Leistungen handelt es sich um Bauverträge im Sinne des 
@@ -57,6 +57,13 @@ export default function AGB() {
                   <br /><br />
                   (4) Diese AGB gelten sowohl gegenüber Verbrauchern als auch gegenüber Unternehmern, 
                   es sei denn, in der jeweiligen Klausel wird eine Differenzierung vorgenommen.
+                  <br /><br />
+                  (5) <strong>Partnernetzwerk:</strong> Der Auftragnehmer ist Mitglied im Partnernetzwerk 
+                  qualifizierter Estrichfachbetriebe. Bei hoher Auftragslage oder spezialisierten Anforderungen 
+                  behält sich der Auftragnehmer vor, Leistungen ganz oder teilweise durch qualifizierte 
+                  Partnerbetriebe ausführen zu lassen, die nach den Qualitätsstandards und Vorgaben des 
+                  Auftragnehmers arbeiten. Die vertragliche Verantwortung gegenüber dem Auftraggeber 
+                  verbleibt uneingeschränkt beim Auftragnehmer.
                 </p>
               </div>
 

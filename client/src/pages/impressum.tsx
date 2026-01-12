@@ -68,6 +68,16 @@ export default function Impressum() {
               </div>
 
               <div>
+                <h2 className="text-xl font-bold mb-3">Partnernetzwerk</h2>
+                <p className="text-muted-foreground">
+                  Estriche München ist Mitglied im Partnernetzwerk qualifizierter Estrichfachbetriebe. 
+                  Bei hoher Auftragslage oder spezialisierten Anforderungen arbeiten wir mit geprüften 
+                  Partnerbetrieben zusammen, die unsere Qualitätsstandards teilen und nach unseren 
+                  Vorgaben arbeiten. Die Verantwortung für alle Arbeiten liegt bei Mustafa Sakar.
+                </p>
+              </div>
+
+              <div>
                 <h2 className="text-xl font-bold mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
                 <p className="text-muted-foreground">
                   Mustafa Sakar<br />
