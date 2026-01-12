@@ -661,53 +661,52 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Budgetrechner</p>
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-                Wissen Sie vorher, was Ihr Estrich kostet
-              </h2>
-            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+              Wissen Sie vorher, was Ihr Estrich kostet
+            </h2>
+          </div>
 
-            <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
-              <p>
-                Stellen Sie sich vor, wie beruhigend es ist, schon vor dem ersten Gespräch zu wissen, 
-                in welchem Rahmen sich Ihr Projekt bewegt. <strong>Keine bösen Überraschungen, keine 
-                versteckten Kosten.</strong> Einfach Klarheit von Anfang an.
-              </p>
+          <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
+            <p>
+              Stellen Sie sich vor, wie beruhigend es ist, schon vor dem ersten Gespräch zu wissen, 
+              in welchem Rahmen sich Ihr Projekt bewegt. <strong>Keine bösen Überraschungen, keine 
+              versteckten Kosten.</strong> Einfach Klarheit von Anfang an.
+            </p>
 
-              <p>
-                Unser Budgetrechner gibt Ihnen in wenigen Klicks eine realistische Einschätzung. 
-                Wählen Sie Ihren Estrich-Typ, die Fläche und die gewünschten Zusatzleistungen – 
-                und sehen Sie sofort, was Sie erwartet.
-              </p>
+            <p>
+              Unser Budgetrechner gibt Ihnen in wenigen Klicks eine realistische Einschätzung. 
+              Wählen Sie Ihren Estrich-Typ, die Fläche und die gewünschten Zusatzleistungen – 
+              und sehen Sie sofort, was Sie erwartet.
+            </p>
 
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Warum diese Transparenz?</h3>
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Warum diese Transparenz?</h3>
 
-              <p>
-                Wir glauben: Wer informiert entscheidet, entscheidet besser. Mit über 30 Jahren 
-                Erfahrung und mehr als 1.200 Projekten in München wissen wir genau, was Estrich 
-                kostet. <strong>Dieses Wissen teilen wir gerne mit Ihnen.</strong>
-              </p>
+            <p>
+              Wir glauben: Wer informiert entscheidet, entscheidet besser. Mit über 30 Jahren 
+              Erfahrung und mehr als 1.200 Projekten in München wissen wir genau, was Estrich 
+              kostet. <strong>Dieses Wissen teilen wir gerne mit Ihnen.</strong>
+            </p>
 
-              <p>
-                Die Berechnung ist unverbindlich und kostenlos. Für Ihr verbindliches Festpreis-Angebot 
-                kommen wir gerne zu Ihnen – ebenfalls kostenlos. Nutzen Sie jetzt den Rechner und 
-                verschaffen Sie sich Klarheit.
-              </p>
-            </div>
+            <p>
+              Die Berechnung ist unverbindlich und kostenlos. Für Ihr verbindliches Festpreis-Angebot 
+              kommen wir gerne zu Ihnen – ebenfalls kostenlos. Nutzen Sie jetzt den Rechner und 
+              verschaffen Sie sich Klarheit.
+            </p>
+          </div>
 
-            <div className="mt-10 flex flex-wrap gap-4 justify-center">
-              <Link href="/rechner">
-                <Button size="lg" data-testid="button-nlp-rechner">
-                  Jetzt Ihre Anfrage stellen
-                  <ChevronRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-              <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" asChild>
-                <a href="tel:+4989444438872">
-                  <Phone className="mr-2 h-4 w-4" />
-                  089 444438872
-                </a>
+          <div className="mt-10 flex flex-wrap gap-4 justify-center">
+            <Link href="/rechner">
+              <Button size="lg" data-testid="button-nlp-rechner">
+                Jetzt Ihre Anfrage stellen
+                <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
-            </div>
+            </Link>
+            <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" asChild>
+              <a href="tel:+4989444438872">
+                <Phone className="mr-2 h-4 w-4" />
+                089 444438872
+              </a>
+            </Button>
           </div>
         </div>
       </section>
@@ -1288,101 +1287,99 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
 
       <section className="py-12 bg-accent">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
-          <div>
-            <div className="text-center mb-10">
-              <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Kostenrechner</p>
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-                Warum nur ein Richtwert? – Ehrlichkeit statt falscher Versprechen
-              </h2>
-            </div>
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Kostenrechner</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+              Warum nur ein Richtwert? – Ehrlichkeit statt falscher Versprechen
+            </h2>
+          </div>
 
-            <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
-              <p>
-                Sie haben gerade unseren Kostenrechner genutzt – und vielleicht fragen Sie sich: „Warum kann 
-                mir niemand einfach einen festen Preis sagen?" Diese Frage ist berechtigt, und Sie verdienen 
-                eine ehrliche Antwort.
-              </p>
+          <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
+            <p>
+              Sie haben gerade unseren Kostenrechner genutzt – und vielleicht fragen Sie sich: „Warum kann 
+              mir niemand einfach einen festen Preis sagen?" Diese Frage ist berechtigt, und Sie verdienen 
+              eine ehrliche Antwort.
+            </p>
 
-              <p>
-                <strong>Die Wahrheit ist: Jedes Bauprojekt ist einzigartig.</strong> Selbst wenn zwei Räume 
-                exakt gleich groß sind, können die Kosten völlig unterschiedlich ausfallen. Der Untergrund 
-                spielt eine Rolle, die Zugänglichkeit, die vorhandene Bausubstanz, die Jahreszeit, und 
-                dutzende weitere Faktoren, die man aus der Ferne nicht beurteilen kann.
-              </p>
+            <p>
+              <strong>Die Wahrheit ist: Jedes Bauprojekt ist einzigartig.</strong> Selbst wenn zwei Räume 
+              exakt gleich groß sind, können die Kosten völlig unterschiedlich ausfallen. Der Untergrund 
+              spielt eine Rolle, die Zugänglichkeit, die vorhandene Bausubstanz, die Jahreszeit, und 
+              dutzende weitere Faktoren, die man aus der Ferne nicht beurteilen kann.
+            </p>
 
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Was der Rechner kann – und was nicht</h3>
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Was der Rechner kann – und was nicht</h3>
 
-              <p>
-                Unser Kostenrechner gibt Ihnen eine erste Orientierung. Er basiert auf unseren durchschnittlichen 
-                Preisen für Projekte in München und Umgebung. Wenn Sie 100 Quadratmeter Zementestrich im 
-                Erdgeschoss verlegen lassen möchten, zeigt er Ihnen einen realistischen Preisrahmen.
-              </p>
+            <p>
+              Unser Kostenrechner gibt Ihnen eine erste Orientierung. Er basiert auf unseren durchschnittlichen 
+              Preisen für Projekte in München und Umgebung. Wenn Sie 100 Quadratmeter Zementestrich im 
+              Erdgeschoss verlegen lassen möchten, zeigt er Ihnen einen realistischen Preisrahmen.
+            </p>
 
-              <p>
-                Was er nicht kann: Er kennt Ihren Untergrund nicht. Er weiß nicht, ob der Zugang zur Baustelle 
-                einfach oder schwierig ist. Er kann nicht sehen, ob Höhenunterschiede ausgeglichen werden müssen. 
-                Er berücksichtigt keine besonderen Anforderungen, die Sie vielleicht haben.
-              </p>
+            <p>
+              Was er nicht kann: Er kennt Ihren Untergrund nicht. Er weiß nicht, ob der Zugang zur Baustelle 
+              einfach oder schwierig ist. Er kann nicht sehen, ob Höhenunterschiede ausgeglichen werden müssen. 
+              Er berücksichtigt keine besonderen Anforderungen, die Sie vielleicht haben.
+            </p>
 
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Warum wir keinen Online-Festpreis nennen</h3>
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Warum wir keinen Online-Festpreis nennen</h3>
 
-              <p>
-                Manche Anbieter werben mit Online-Festpreisen. Das klingt verlockend – aber seien Sie vorsichtig. 
-                Entweder sind diese Preise so hoch angesetzt, dass sie jeden Untergrund und jede Schwierigkeit 
-                abdecken (und Sie zahlen für Probleme, die Sie gar nicht haben). Oder sie sind zu niedrig – 
-                und dann kommen die Nachforderungen, sobald die Arbeiter auf der Baustelle stehen.
-              </p>
+            <p>
+              Manche Anbieter werben mit Online-Festpreisen. Das klingt verlockend – aber seien Sie vorsichtig. 
+              Entweder sind diese Preise so hoch angesetzt, dass sie jeden Untergrund und jede Schwierigkeit 
+              abdecken (und Sie zahlen für Probleme, die Sie gar nicht haben). Oder sie sind zu niedrig – 
+              und dann kommen die Nachforderungen, sobald die Arbeiter auf der Baustelle stehen.
+            </p>
 
-              <p>
-                <strong>Wir wählen einen anderen Weg: Ehrlichkeit von Anfang an.</strong> Der Rechner gibt 
-                Ihnen eine realistische Spanne. Für einen verbindlichen Preis kommen wir zu Ihnen – kostenlos 
-                und unverbindlich. Wir schauen uns alles an, stellen Fragen, verstehen Ihr Projekt. Und dann 
-                bekommen Sie einen Preis, der steht.
-              </p>
+            <p>
+              <strong>Wir wählen einen anderen Weg: Ehrlichkeit von Anfang an.</strong> Der Rechner gibt 
+              Ihnen eine realistische Spanne. Für einen verbindlichen Preis kommen wir zu Ihnen – kostenlos 
+              und unverbindlich. Wir schauen uns alles an, stellen Fragen, verstehen Ihr Projekt. Und dann 
+              bekommen Sie einen Preis, der steht.
+            </p>
 
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Die Vorteile einer Vor-Ort-Besichtigung</h3>
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Die Vorteile einer Vor-Ort-Besichtigung</h3>
 
-              <p>
-                Bei der kostenlosen Besichtigung passiert mehr als nur Messen. Wir beraten Sie, welche 
-                Estrich-Art für Ihren Zweck am besten geeignet ist. Wir erkennen potenzielle Probleme, 
-                bevor sie teuer werden. Wir sprechen über Ihren Zeitplan und wie er mit unserem harmoniert.
-              </p>
+            <p>
+              Bei der kostenlosen Besichtigung passiert mehr als nur Messen. Wir beraten Sie, welche 
+              Estrich-Art für Ihren Zweck am besten geeignet ist. Wir erkennen potenzielle Probleme, 
+              bevor sie teuer werden. Wir sprechen über Ihren Zeitplan und wie er mit unserem harmoniert.
+            </p>
 
-              <p>
-                Und am Ende haben Sie etwas Wertvolles: Einen verbindlichen Festpreis, schwarz auf weiß, 
-                ohne Hintertürchen. Einen Preis, der sich nicht ändert – egal was passiert. 
-                <strong>Das ist unser Versprechen.</strong>
-              </p>
+            <p>
+              Und am Ende haben Sie etwas Wertvolles: Einen verbindlichen Festpreis, schwarz auf weiß, 
+              ohne Hintertürchen. Einen Preis, der sich nicht ändert – egal was passiert. 
+              <strong>Das ist unser Versprechen.</strong>
+            </p>
 
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Der nächste Schritt</h3>
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Der nächste Schritt</h3>
 
-              <p>
-                Sie haben jetzt eine Orientierung, was Ihr Projekt ungefähr kosten könnte. Der Rechner hat 
-                seinen Zweck erfüllt. Wenn Sie es genau wissen möchten – und wenn Sie einen Partner suchen, 
-                der zu seinem Wort steht – dann sprechen Sie mit uns.
-              </p>
+            <p>
+              Sie haben jetzt eine Orientierung, was Ihr Projekt ungefähr kosten könnte. Der Rechner hat 
+              seinen Zweck erfüllt. Wenn Sie es genau wissen möchten – und wenn Sie einen Partner suchen, 
+              der zu seinem Wort steht – dann sprechen Sie mit uns.
+            </p>
 
-              <p>
-                Ein Anruf, eine E-Mail, ein Formular – mehr braucht es nicht. Wir melden uns schnell zurück, 
-                vereinbaren einen Termin nach Ihrem Zeitplan, und schon bald halten Sie ein Angebot in der 
-                Hand, auf das Sie sich verlassen können.
-              </p>
-            </div>
+            <p>
+              Ein Anruf, eine E-Mail, ein Formular – mehr braucht es nicht. Wir melden uns schnell zurück, 
+              vereinbaren einen Termin nach Ihrem Zeitplan, und schon bald halten Sie ein Angebot in der 
+              Hand, auf das Sie sich verlassen können.
+            </p>
+          </div>
 
-            <div className="mt-10 flex flex-wrap gap-4 justify-center">
-              <Link href="/angebot">
-                <Button size="lg" data-testid="button-nlp-cta">
-                  Jetzt verbindliches Angebot anfordern
-                  <ChevronRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-              <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" asChild>
-                <a href="tel:+4989444438872">
-                  <Phone className="mr-2 h-4 w-4" />
-                  089 444438872
-                </a>
+          <div className="mt-10 flex flex-wrap gap-4 justify-center">
+            <Link href="/angebot">
+              <Button size="lg" data-testid="button-nlp-cta">
+                Jetzt verbindliches Angebot anfordern
+                <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
-            </div>
+            </Link>
+            <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" asChild>
+              <a href="tel:+4989444438872">
+                <Phone className="mr-2 h-4 w-4" />
+                089 444438872
+              </a>
+            </Button>
           </div>
         </div>
       </section>
