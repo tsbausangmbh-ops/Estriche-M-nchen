@@ -72,8 +72,8 @@ type BudgetContactFormData = z.infer<typeof budgetContactSchema>;
 type PdfDownloadFormData = z.infer<typeof pdfDownloadSchema>;
 
 const projektartOptions = [
-  { value: "neubau", label: "Neubau", surcharge: 0, description: "Neubauprojekt" },
-  { value: "sanierung", label: "Sanierung / Renovierung", surcharge: 5, description: "Bestandsgebäude" },
+  { value: "neubau", label: "Neubau", surcharge: -5, description: "Neubauprojekt" },
+  { value: "sanierung", label: "Sanierung / Renovierung", surcharge: 0, description: "Bestandsgebäude" },
 ];
 
 const estrichTypes = [
@@ -397,7 +397,9 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
 
     const selectedProjektart = projektartOptions.find(p => p.value === projektart);
     const projektartSurcharge = sqm * (selectedProjektart?.surcharge || 0);
-    if (projektartSurcharge > 0) {
+    if (projektartSurcharge < 0) {
+      breakdown.push({ label: `Neubau-Rabatt`, amount: projektartSurcharge });
+    } else if (projektartSurcharge > 0) {
       breakdown.push({ label: `Sanierungszuschlag`, amount: projektartSurcharge });
     }
 
