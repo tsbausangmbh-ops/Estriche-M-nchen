@@ -134,7 +134,6 @@ const fussbodenheizungOptions = [
 
 const additionalOptions = [
   { id: "randdaemmstreifen", label: "Randdämmstreifen", price: 2.5, icon: Layers, description: "Umlaufend verlegt", required: false, isFlat: false },
-  { id: "grundierung", label: "Grundierung Untergrund", price: 4, icon: Wrench, description: "Haftvermittlung", required: false, isFlat: false },
   { id: "folie", label: "PE-Folie/Dampfsperre", price: 2, icon: Layers, description: "Feuchtigkeitsschutz", required: false, isFlat: false },
   { id: "baustelleneinrichtung", label: "Baustelleneinrichtung", price: 450, icon: Truck, description: "Immer inklusive", required: true, isFlat: true },
   { id: "reinigung", label: "Baustellenreinigung", price: 2.8, icon: Wrench, description: "Immer inklusive", required: true, isFlat: false },
