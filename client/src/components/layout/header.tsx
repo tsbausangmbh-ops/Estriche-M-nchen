@@ -75,7 +75,7 @@ export function Header() {
                 <img 
                   src={logoImage} 
                   alt="Estrich München Logo" 
-                  className="h-10 w-auto rounded-md bg-background p-1"
+                  className="h-10 w-auto rounded-md"
                 />
                 <div className="hidden sm:block">
                   <div className="font-bold text-lg leading-tight">Estrich München</div>
