@@ -710,6 +710,22 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
                       </SelectContent>
                     </Select>
                   </div>
+
+                  <div>
+                    <Label>Fußbodenheizung</Label>
+                    <Select value={fussbodenheizung} onValueChange={setFussbodenheizung}>
+                      <SelectTrigger className="mt-1" data-testid="select-calculator-fussbodenheizung">
+                        <SelectValue placeholder="Fußbodenheizung wählen" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {fussbodenheizungOptions.map((option) => (
+                          <SelectItem key={option.value} value={option.value}>
+                            {option.label} {option.price > 0 && `(+${option.price} €/m²)`}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
                 </CardContent>
               </Card>
 
@@ -764,37 +780,6 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
                             : 'hover:bg-accent/50'
                         }`}
                         data-testid={`waermedaemmung-${option.value}`}
-                      >
-                        <span className="font-medium block">{option.label}</span>
-                        {option.price > 0 && (
-                          <span className="text-xs text-primary">+{option.price} €/m²</span>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg flex items-center gap-2">
-                    <Thermometer className="w-5 h-5 text-primary" />
-                    Fußbodenheizung
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground mb-3">Wählen Sie die gewünschte Heizungsoption.</p>
-                  <div className="grid grid-cols-3 gap-2">
-                    {fussbodenheizungOptions.map((option) => (
-                      <div 
-                        key={option.value}
-                        onClick={() => setFussbodenheizung(option.value)}
-                        className={`p-3 rounded-md border cursor-pointer transition-colors text-center ${
-                          fussbodenheizung === option.value 
-                            ? 'border-primary bg-primary/10' 
-                            : 'hover:bg-accent/50'
-                        }`}
-                        data-testid={`fussbodenheizung-${option.value}`}
                       >
                         <span className="font-medium block">{option.label}</span>
                         {option.price > 0 && (
