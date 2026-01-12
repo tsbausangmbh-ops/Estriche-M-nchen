@@ -427,9 +427,11 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
 
     const selectedWaermedaemmung = waermedaemmungOptions.find(w => w.value === waermedaemmung);
     const waermedaemmungCost = (selectedWaermedaemmung && selectedWaermedaemmung.price > 0) ? sqm * selectedWaermedaemmung.price : 0;
-    if (waermedaemmungCost > 0) {
-      breakdown.push({ label: `Wärmedämmung (${selectedWaermedaemmung!.label})`, amount: waermedaemmungCost });
-    }
+    breakdown.push({ 
+      label: `Wärmedämmung (${selectedWaermedaemmung?.label || 'Keine'})`, 
+      amount: waermedaemmungCost,
+      info: waermedaemmungCost === 0 ? 'inkl.' : undefined
+    });
 
     const selectedFussbodenheizung = fussbodenheizungOptions.find(f => f.value === fussbodenheizung);
     const fussbodenheizungCost = (selectedFussbodenheizung && selectedFussbodenheizung.price > 0) ? sqm * selectedFussbodenheizung.price : 0;
