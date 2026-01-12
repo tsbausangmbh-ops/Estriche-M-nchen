@@ -63,7 +63,8 @@ export default function Impressum() {
                 <p className="text-muted-foreground">
                   Berufsbezeichnung: Estrichleger / Bauunternehmen<br />
                   Zuständige Kammer: Handwerkskammer für München und Oberbayern<br />
-                  Verliehen in: Deutschland
+                  Verliehen in: Deutschland<br />
+                  Ausführende Firma: Hüseyin Türker (Estrich T.H. UG)
                 </p>
               </div>
 
