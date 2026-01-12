@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -143,6 +144,11 @@ const guarantees = [
 export default function Ablauf() {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Ablauf Estricharbeiten München | 7 Schritte zum perfekten Boden</title>
+        <meta name="description" content="So läuft Ihr Estrich-Projekt ab: Von der Kontaktaufnahme über die Vor-Ort-Besichtigung bis zur Abnahme. Transparenter Ablauf mit Festpreis-Garantie." />
+        <link rel="canonical" href="https://estriche-muenchen.de/ablauf" />
+      </Helmet>
       <Header />
 
       <section className="relative py-10 lg:py-14 overflow-hidden">

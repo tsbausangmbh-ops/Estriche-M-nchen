@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -7,6 +8,11 @@ import heroImage from "@assets/generated_images/workers_checking_level_blue.png"
 export default function Impressum() {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Impressum | Estriche München | Mustafa Sakar</title>
+        <meta name="description" content="Impressum von Estriche München. Angaben gemäß § 5 TMG. Inhaber: Mustafa Sakar, Hardenbergstr. 4, 80992 München." />
+        <link rel="canonical" href="https://estriche-muenchen.de/impressum" />
+      </Helmet>
       <Header />
       
       <section className="relative py-10 sm:py-14 overflow-hidden">

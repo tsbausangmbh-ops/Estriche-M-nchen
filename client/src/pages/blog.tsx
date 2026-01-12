@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -32,6 +33,11 @@ export default function Blog() {
   
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Estrich Ratgeber München | Tipps & Fachwissen vom Experten</title>
+        <meta name="description" content="Estrich-Ratgeber: Fachartikel zu Zementestrich, Fließestrich, Fußbodenheizung und mehr. Expertenwissen vom Münchner Meisterbetrieb." />
+        <link rel="canonical" href="https://estriche-muenchen.de/blog" />
+      </Helmet>
       <Header />
       
       <section className="relative py-10 sm:py-14 overflow-hidden">

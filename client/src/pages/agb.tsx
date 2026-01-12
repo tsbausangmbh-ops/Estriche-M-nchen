@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -7,6 +8,11 @@ import heroImage from "@assets/generated_images/two_workers_pouring_screed_blue.
 export default function AGB() {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>AGB | Allgemeine Geschäftsbedingungen | Estriche München</title>
+        <meta name="description" content="Allgemeine Geschäftsbedingungen von Estriche München für Estrich- und Bodenarbeiten gemäß BGB Bauvertragsrecht (§§ 650a–650o BGB)." />
+        <link rel="canonical" href="https://estriche-muenchen.de/agb" />
+      </Helmet>
       <Header />
       
       <section className="relative py-10 sm:py-14 overflow-hidden">
