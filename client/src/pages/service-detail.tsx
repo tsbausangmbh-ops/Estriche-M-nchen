@@ -35,14 +35,14 @@ export default function ServiceDetail() {
       </Helmet>
       <Header />
 
-      <section className="relative min-h-[70vh] flex items-center">
+      <section className="relative py-10 lg:py-14 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${service.image})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
         
-        <div className="relative z-10 px-4 sm:px-20 lg:px-48 py-16 lg:py-24">
+        <div className="relative w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center">
