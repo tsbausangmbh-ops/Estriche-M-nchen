@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ChevronRight, HelpCircle, Shield, Zap, Award, CheckCircle2 } from "lucide-react";
+import { ChevronRight, HelpCircle, Shield, Zap, Award, CheckCircle2, Phone, Users } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -181,21 +181,63 @@ export default function FAQ() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
-          <div className="text-center max-w-3xl mx-auto">
-            <Badge variant="outline" className="mb-4 border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide">Häufige Fragen</Badge>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-primary-foreground">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center">
+                <HelpCircle className="w-6 h-6 text-white" />
+              </div>
+              <Badge className="bg-white/20 text-white border-white/30 text-xs font-medium">
+                Häufige Fragen
+              </Badge>
+            </div>
+            
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
               {totalQuestions} Antworten auf Ihre Fragen
             </h1>
-            <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
+            
+            <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">
               Hier finden Sie ausführliche Antworten auf die häufigsten Fragen rund um Estrich, 
               Fußbodenheizung, Kosten und unseren Ablauf. Falls Ihre Frage nicht dabei ist – fragen Sie uns!
             </p>
-            <Link href="/angebot">
-              <Button size="lg" data-testid="button-faq-cta">
-                Ihre Frage stellen
-                <ChevronRight className="ml-2 h-4 w-4" />
+
+            <div className="flex flex-wrap gap-3 mb-8">
+              {["Expertenberatung", "Schnelle Antworten", "Kostenlose Hilfe", "Praxiswissen"].map((feature, index) => (
+                <div key={index} className="flex items-center gap-2 text-sm text-white/90">
+                  <CheckCircle2 className="w-4 h-4 text-primary" />
+                  <span>{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap gap-3 mb-8">
+              <Link href="/angebot">
+                <Button size="lg" data-testid="button-faq-cta">
+                  Ihre Frage stellen
+                  <ChevronRight className="ml-1 h-4 w-4" />
+                </Button>
+              </Link>
+              <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" asChild>
+                <a href="tel:+4989444438872">
+                  <Phone className="mr-2 h-4 w-4" />
+                  089 444438872
+                </a>
               </Button>
-            </Link>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-6 text-white/70 text-sm">
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4" />
+                <span>280+ zufriedene Kunden</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Shield className="w-4 h-4 text-primary" />
+                <span>100€ bei Verspätung</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-primary" />
+                <span>Festpreis-Garantie</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
