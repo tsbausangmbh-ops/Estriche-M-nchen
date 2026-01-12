@@ -239,7 +239,7 @@ export default function Home() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
-        <div className="w-full mx-auto px-4 sm:px-12 lg:px-20 relative">
+        <div className="w-full mx-auto px-4 sm:px-16 lg:px-32 relative">
           <div className="grid lg:grid-cols-5 gap-12 items-start">
             {/* Hero Content */}
             <div className="lg:col-span-3 space-y-8">
@@ -519,7 +519,7 @@ export default function Home() {
 
       {/* Statistics Banner - Social Proof */}
       <div className="bg-foreground py-8">
-        <div className="w-full mx-auto px-4 sm:px-12 lg:px-20">
+        <div className="w-full mx-auto px-4 sm:px-16 lg:px-32">
           <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-16">
             <div className="text-center" data-testid="stat-laufende">
               <div className="text-3xl font-bold text-primary">15+</div>
@@ -546,7 +546,7 @@ export default function Home() {
 
       {/* Services Section */}
       <section id="leistungen" className="py-6 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-12 lg:px-20">
+        <div className="w-full mx-auto px-4 sm:px-16 lg:px-32">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unsere Leistungen</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Wählen Sie die Lösung, die zu Ihnen passt</h2>
@@ -612,7 +612,7 @@ export default function Home() {
 
       {/* Process Section */}
       <section id="ablauf" className="py-6">
-        <div className="w-full mx-auto px-4 sm:px-12 lg:px-20">
+        <div className="w-full mx-auto px-4 sm:px-16 lg:px-32">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unser Ablauf</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">So einfach kommen Sie zu Ihrem Traumboden</h2>
@@ -646,7 +646,7 @@ export default function Home() {
 
       {/* Pricing Section */}
       <section id="preise" className="py-6 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-12 lg:px-20">
+        <div className="w-full mx-auto px-4 sm:px-16 lg:px-32">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Transparente Preise</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Wissen Sie genau, was es kostet – bevor Sie sich entscheiden</h2>
@@ -695,7 +695,7 @@ export default function Home() {
 
       {/* FAQ Section */}
       <section id="faq" className="py-6">
-        <div className="w-full mx-auto px-4 sm:px-12 lg:px-20">
+        <div className="w-full mx-auto px-4 sm:px-16 lg:px-32">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihre Bedenken – unsere Antworten</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Das fragen uns 9 von 10 Kunden</h2>
@@ -748,7 +748,7 @@ export default function Home() {
 
       {/* Service Areas */}
       <section className="py-8 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-12 lg:px-20">
+        <div className="w-full mx-auto px-4 sm:px-16 lg:px-32">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Vorteil: Lokale Nähe</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">In Ihrer Nachbarschaft – morgen schon vor Ort</h2>
@@ -799,7 +799,7 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="kontakt" className="py-6 bg-muted/30">
-        <div className="w-full mx-auto px-4 sm:px-12 lg:px-20">
+        <div className="w-full mx-auto px-4 sm:px-16 lg:px-32">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Der erste Schritt zu Ihrem neuen Boden</h2>
