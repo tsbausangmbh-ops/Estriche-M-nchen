@@ -32,7 +32,7 @@ export function Header() {
 
   return (
     <>
-      <div className="bg-primary/10 text-primary py-1.5 text-xs text-center border-b border-primary/20">
+      <div className="bg-foreground text-background py-1.5 text-xs text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           Meisterbetrieb im Partnernetzwerk qualifizierter Estrichfachbetriebe
         </div>
