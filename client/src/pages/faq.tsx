@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChevronRight, HelpCircle, Shield, Zap, Award, CheckCircle2 } from "lucide-react";
@@ -166,6 +167,11 @@ export default function FAQ() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Häufige Fragen (FAQ) | Estrich München | Beratung & Antworten</title>
+        <meta name="description" content="Antworten auf häufige Fragen zu Estricharbeiten: Trocknungszeit, Kosten, Materialien, Fußbodenheizung und mehr. Expertenberatung vom Münchner Meisterbetrieb." />
+        <link rel="canonical" href="https://estriche-muenchen.de/faq" />
+      </Helmet>
       <Header />
 
       <section className="relative py-10 lg:py-14 overflow-hidden">

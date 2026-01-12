@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useMutation } from "@tanstack/react-query";
+import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -161,6 +162,11 @@ export default function Angebot() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Kostenloses Angebot anfordern | Estrich München | Festpreis-Garantie</title>
+        <meta name="description" content="Fordern Sie jetzt Ihr kostenloses Festpreis-Angebot für Estricharbeiten in München an. Antwort in 24h, unverbindlich, mit persönlicher Beratung." />
+        <link rel="canonical" href="https://estriche-muenchen.de/angebot" />
+      </Helmet>
       <Header />
       
       <section className="relative py-10 sm:py-14 overflow-hidden">

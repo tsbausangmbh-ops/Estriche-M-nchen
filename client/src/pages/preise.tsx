@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -163,6 +164,11 @@ export default function Preise() {
   
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Estrich Preise München | Kosten pro m² | Transparente Festpreise</title>
+        <meta name="description" content="Estrich Kosten München: Zementestrich ab 25€/m², Fließestrich ab 28€/m², Industrieboden ab 45€/m². Transparente Preise mit Festpreis-Garantie." />
+        <link rel="canonical" href="https://estriche-muenchen.de/preise" />
+      </Helmet>
       <Header />
 
       <section className="relative py-10 lg:py-14 overflow-hidden">

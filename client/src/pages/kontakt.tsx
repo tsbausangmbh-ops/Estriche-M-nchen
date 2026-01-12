@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useMutation } from "@tanstack/react-query";
+import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -131,6 +132,11 @@ export default function Kontakt() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Kontakt | Estrich München | Kostenlose Beratung ☎ 089 444438872</title>
+        <meta name="description" content="Kontaktieren Sie Estriche München für kostenlose Beratung und Festpreis-Angebote. ☎ 089 444438872 | info@estriche-muenchen.de | Mo-Fr 7-18 Uhr" />
+        <link rel="canonical" href="https://estriche-muenchen.de/kontakt" />
+      </Helmet>
       <Header />
       
       <section className="relative py-10 sm:py-14 overflow-hidden">

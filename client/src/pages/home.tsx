@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useMutation } from "@tanstack/react-query";
+import { Helmet } from "react-helmet-async";
 import { 
   Phone, 
   Mail, 
@@ -224,6 +225,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Estrich München | Estrichleger Meisterbetrieb | Festpreis-Garantie</title>
+        <meta name="description" content="Estrich München: Zementestrich, Fließestrich, Heizestrich vom Meisterbetrieb. 30+ Jahre Erfahrung, 2.500+ Projekte, Festpreis-Garantie. ☎ 089 444438872" />
+        <link rel="canonical" href="https://estriche-muenchen.de/" />
+      </Helmet>
       <Header />
 
       {/* Hero Section */}
@@ -670,12 +676,19 @@ export default function Home() {
 
           <div className="text-center mt-6">
             <p className="text-muted-foreground mb-4">Berechnen Sie jetzt, was Ihr Projekt wirklich kostet – <strong className="text-foreground">in unter 2 Minuten</strong>.</p>
-            <Link href="/rechner">
-              <Button size="lg" data-testid="button-pricing-cta">
-                Jetzt Kosten berechnen
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/rechner">
+                <Button size="lg" data-testid="button-pricing-cta">
+                  Jetzt Kosten berechnen
+                  <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/preise">
+                <Button size="lg" variant="outline" data-testid="button-full-price-list">
+                  Komplette Preisübersicht
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -716,12 +729,19 @@ export default function Home() {
 
           <div className="text-center mt-6">
             <p className="text-muted-foreground mb-4">Noch unsicher? <strong className="text-foreground">Ein Gespräch kostet Sie nichts – außer 5 Minuten Zeit.</strong></p>
-            <Link href="/angebot">
-              <Button size="lg" data-testid="button-faq-cta">
-                Jetzt unverbindlich anfragen
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/angebot">
+                <Button size="lg" data-testid="button-faq-cta">
+                  Jetzt unverbindlich anfragen
+                  <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/faq">
+                <Button size="lg" variant="outline" data-testid="button-more-faq">
+                  Alle häufigen Fragen ansehen
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

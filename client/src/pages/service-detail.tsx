@@ -1,4 +1,5 @@
 import { useParams, Link } from "wouter";
+import { Helmet } from "react-helmet-async";
 import { getServiceById, services } from "@/lib/services-data";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -27,6 +28,11 @@ export default function ServiceDetail() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{service.title} München | {service.heroTagline} | Estriche München</title>
+        <meta name="description" content={`${service.title} in München: ${service.description.substring(0, 150)}... Jetzt kostenlos beraten lassen!`} />
+        <link rel="canonical" href={`https://estriche-muenchen.de/leistungen/${service.id}`} />
+      </Helmet>
       <Header />
 
       <section className="relative min-h-[70vh] flex items-center">

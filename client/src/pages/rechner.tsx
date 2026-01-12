@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useMutation } from "@tanstack/react-query";
+import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -268,6 +269,11 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Estrich Kostenrechner München | Kosten online berechnen</title>
+        <meta name="description" content="Berechnen Sie Ihre Estrich-Kosten in München kostenlos online. Unverbindliche Kalkulation für Zementestrich, Fließestrich und Heizestrich." />
+        <link rel="canonical" href="https://estriche-muenchen.de/rechner" />
+      </Helmet>
       <Header />
 
       <section className="relative py-10 lg:py-14 overflow-hidden">
