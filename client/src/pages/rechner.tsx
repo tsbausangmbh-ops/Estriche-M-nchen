@@ -397,12 +397,18 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
 
     const estrichCost = baseEstrichCost + thicknessSurcharge;
 
+    breakdown.push({ 
+      label: `Fläche`, 
+      amount: 0,
+      info: `${sqm} m²`
+    });
+
     const selectedProjektart = projektartOptions.find(p => p.value === projektart);
     const projektartSurcharge = sqm * (selectedProjektart?.surcharge || 0);
     breakdown.push({ 
       label: `Projektart (${selectedProjektart?.label || projektart})`, 
       amount: projektartSurcharge,
-      info: projektartSurcharge === 0 ? 'inkl.' : (projektartSurcharge < 0 ? 'Rabatt' : undefined)
+      info: projektartSurcharge === 0 ? 'inkl.' : undefined
     });
 
     const floorSurcharge = sqm * selectedFloor.surcharge;
