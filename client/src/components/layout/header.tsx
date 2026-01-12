@@ -71,18 +71,16 @@ export function Header() {
                   <ArrowLeft className="h-5 w-5" />
                 </Button>
               )}
-              <Link href="/">
-                <a className="flex items-center gap-3" data-testid="link-logo">
-                  <img 
-                    src={logoImage} 
-                    alt="Estrich München Logo" 
-                    className="h-10 w-auto rounded-md bg-white p-1"
-                  />
-                  <div className="hidden sm:block">
-                    <div className="font-bold text-lg leading-tight">Estrich München</div>
-                    <div className="text-xs text-muted-foreground">Estrich • Bodenaufbau • Sanierung</div>
-                  </div>
-                </a>
+              <Link href="/" className="flex items-center gap-3" data-testid="link-logo">
+                <img 
+                  src={logoImage} 
+                  alt="Estrich München Logo" 
+                  className="h-10 w-auto rounded-md bg-background p-1"
+                />
+                <div className="hidden sm:block">
+                  <div className="font-bold text-lg leading-tight">Estrich München</div>
+                  <div className="text-xs text-muted-foreground">Estrich • Bodenaufbau • Sanierung</div>
+                </div>
               </Link>
             </div>
 
