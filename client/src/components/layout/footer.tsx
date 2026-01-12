@@ -42,9 +42,15 @@ export function Footer() {
           <div data-testid="footer-contact">
             <h4 className="font-semibold mb-4">Kontakt</h4>
             <ul className="space-y-2 text-sm text-background/70">
-              <li data-testid="text-footer-phone">089 444438872</li>
-              <li data-testid="text-footer-email">info@estriche-muenchen.de</li>
-              <li>München & Umgebung</li>
+              <li data-testid="text-footer-phone">
+                <a href="tel:+4989444438872" className="hover:text-background transition-colors">089 444438872</a>
+              </li>
+              <li data-testid="text-footer-email">
+                <a href="mailto:info@estriche-muenchen.de" className="hover:text-background transition-colors">info@estriche-muenchen.de</a>
+              </li>
+              <li>
+                <a href="https://maps.google.com/?q=Hardenbergstr.+4,+80992+München" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">Hardenbergstr. 4, 80992 München</a>
+              </li>
               <li>Mo–Fr: 7:00–18:00</li>
             </ul>
           </div>
