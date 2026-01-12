@@ -145,7 +145,7 @@ export default function Kontakt() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/60" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="max-w-3xl">
             <Badge variant="secondary" className="mb-4 bg-white/10 text-white border-white/20">
               <MessageSquare className="w-3 h-3 mr-1" />
@@ -163,7 +163,7 @@ export default function Kontakt() {
       </section>
 
       <section className="py-6 bg-accent border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="text-center max-w-3xl mx-auto mb-8">
             <h2 className="text-2xl sm:text-3xl font-extrabold mb-4 tracking-tight">
               Erkennen Sie sich wieder?
@@ -198,7 +198,7 @@ export default function Kontakt() {
       </section>
 
       <section className="py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-2xl sm:text-3xl font-extrabold mb-4 tracking-tight">

@@ -180,7 +180,7 @@ export default function FAQ() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/40" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="text-center max-w-3xl mx-auto">
             <Badge variant="outline" className="mb-4 border-white/30 text-white">Häufige Fragen</Badge>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-white">
@@ -201,7 +201,7 @@ export default function FAQ() {
       </section>
 
       <section className="py-8 bg-accent border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">
@@ -268,7 +268,7 @@ export default function FAQ() {
       </section>
 
       <section className="py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="grid md:grid-cols-2 gap-6">
             {faqCategories.map((category, categoryIndex) => (
               <div key={categoryIndex} data-testid={`faq-category-${categoryIndex}`}>
@@ -301,7 +301,7 @@ export default function FAQ() {
       </section>
 
       <section className="py-6 bg-accent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12 text-center">
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">
             Ihre Frage war nicht dabei?
           </h2>

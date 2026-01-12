@@ -22,7 +22,7 @@ export default function AGB() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/60" />
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
               <Badge className="bg-white/20 text-white border-white/30 text-xs font-medium">
@@ -43,7 +43,7 @@ export default function AGB() {
       </section>
 
       <section className="py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12">
           <Card className="mb-6">
             <CardContent className="p-6 space-y-8">
               
