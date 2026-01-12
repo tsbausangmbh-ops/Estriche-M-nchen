@@ -42,7 +42,7 @@ export default function ServiceDetail() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
         
-        <div className="relative w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center">
@@ -57,7 +57,7 @@ export default function ServiceDetail() {
               {service.title}
             </h1>
             
-            <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">
+            <p className="text-lg text-primary-foreground/80 leading-relaxed mb-6 max-w-2xl">
               {service.heroTagline}
             </p>
 

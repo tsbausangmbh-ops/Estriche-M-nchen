@@ -157,13 +157,13 @@ export default function Ablauf() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
-        <div className="relative w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
           <div className="text-center">
-            <Badge variant="outline" className="mb-4 border-white/30 text-white">Unser Ablauf</Badge>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-white">
+            <Badge variant="outline" className="mb-4 border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide">Unser Ablauf</Badge>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-primary-foreground">
               In 7 Schritten zum perfekten Estrich
             </h1>
-            <p className="text-lg text-white/80 leading-relaxed mb-8">
+            <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
               Kein Rätselraten, keine Überraschungen. Wir zeigen Ihnen genau, wie der Weg 
               zu Ihrem neuen Boden aussieht – transparent und nachvollziehbar.
             </p>

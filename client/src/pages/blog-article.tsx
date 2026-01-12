@@ -46,15 +46,15 @@ export default function BlogArticle() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
-        <div className="relative w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
           <Link href="/ratgeber">
-            <Button variant="ghost" className="mb-4 text-white/80 hover:text-white hover:bg-white/10">
+            <Button variant="ghost" className="mb-4 text-primary-foreground/80 hover:text-white hover:bg-white/10">
               <ChevronLeft className="mr-1 h-4 w-4" />
               Alle Artikel
             </Button>
           </Link>
           <div className="flex items-center gap-3 mb-4 flex-wrap">
-            <Badge variant="secondary" className="bg-white/10 text-white border-white/20">
+            <Badge variant="secondary" className="border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide">
               {article.category}
             </Badge>
             <span className="text-sm text-gray-300 flex items-center gap-1">

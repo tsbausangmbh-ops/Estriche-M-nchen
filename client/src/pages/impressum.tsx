@@ -22,7 +22,7 @@ export default function Impressum() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
         
-        <div className="relative w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
               <Badge className="bg-white/20 text-white border-white/30 text-xs font-medium">
@@ -34,7 +34,7 @@ export default function Impressum() {
               Impressum
             </h1>
             
-            <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
+            <p className="text-lg text-primary-foreground/80 leading-relaxed max-w-2xl">
               Angaben gemäß § 5 TMG und rechtliche Informationen.
             </p>
           </div>

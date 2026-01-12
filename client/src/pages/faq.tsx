@@ -180,13 +180,13 @@ export default function FAQ() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
-        <div className="relative w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
           <div className="text-center max-w-3xl mx-auto">
-            <Badge variant="outline" className="mb-4 border-white/30 text-white">Häufige Fragen</Badge>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-white">
+            <Badge variant="outline" className="mb-4 border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide">Häufige Fragen</Badge>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-primary-foreground">
               {totalQuestions} Antworten auf Ihre Fragen
             </h1>
-            <p className="text-lg text-white/80 leading-relaxed mb-8">
+            <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
               Hier finden Sie ausführliche Antworten auf die häufigsten Fragen rund um Estrich, 
               Fußbodenheizung, Kosten und unseren Ablauf. Falls Ihre Frage nicht dabei ist – fragen Sie uns!
             </p>

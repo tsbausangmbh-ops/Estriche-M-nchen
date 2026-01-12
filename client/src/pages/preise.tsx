@@ -177,13 +177,13 @@ export default function Preise() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
-        <div className="relative w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
           <div className="text-center">
-            <Badge variant="outline" className="mb-4 border-white/30 text-white">Transparente Preise</Badge>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-white">
+            <Badge variant="outline" className="mb-4 border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide">Transparente Preise</Badge>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-primary-foreground">
               Faire Preise für München
             </h1>
-            <p className="text-lg text-white/80 leading-relaxed mb-8">
+            <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
               Bei uns wissen Sie vorher, was es kostet. Alle Preise sind Richtwerte für München und Umgebung. 
               Nach der kostenlosen Besichtigung erhalten Sie ein verbindliches Festpreis-Angebot.
             </p>
