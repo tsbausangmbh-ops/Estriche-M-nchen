@@ -43,7 +43,7 @@ export default function Impressum() {
                 <h2 className="text-xl font-bold mb-3">Angaben gemäß § 5 TMG</h2>
                 <p className="text-muted-foreground">
                   Mustafa Sakar<br />
-                  Estrich München<br />
+                  Estriche München<br />
                   Hardenbergstr. 4<br />
                   80992 München<br />
                   Deutschland
@@ -72,7 +72,7 @@ export default function Impressum() {
                 <p className="text-muted-foreground">
                   Mustafa Sakar<br />
                   Hardenbergstr. 4<br />
-                  80331 München
+                  80992 München
                 </p>
               </div>
 
