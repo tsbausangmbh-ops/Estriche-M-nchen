@@ -128,7 +128,7 @@ const waermedaemmungOptions = [
 
 const fussbodenheizungOptions = [
   { value: "none", label: "Keine", price: 0 },
-  { value: "heizung", label: "Fußbodenheizung", price: 12, description: "Komplette Heizungsinstallation" },
+  { value: "heizung", label: "Fußbodenheizung", price: 18, description: "Nur Verlegen ohne Material" },
   { value: "einbettung", label: "Nur Einbettung", price: 8, description: "Heizrohr-Einbettung" },
 ];
 
@@ -405,21 +405,21 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
     }
 
     const selectedTrittschall = trittschallOptions.find(t => t.value === trittschall);
-    if (selectedTrittschall && selectedTrittschall.price > 0) {
-      const trittschallCost = sqm * selectedTrittschall.price;
-      breakdown.push({ label: `Trittschalldämmung (${selectedTrittschall.label})`, amount: trittschallCost });
+    const trittschallCost = (selectedTrittschall && selectedTrittschall.price > 0) ? sqm * selectedTrittschall.price : 0;
+    if (trittschallCost > 0) {
+      breakdown.push({ label: `Trittschalldämmung (${selectedTrittschall!.label})`, amount: trittschallCost });
     }
 
     const selectedWaermedaemmung = waermedaemmungOptions.find(w => w.value === waermedaemmung);
-    if (selectedWaermedaemmung && selectedWaermedaemmung.price > 0) {
-      const waermedaemmungCost = sqm * selectedWaermedaemmung.price;
-      breakdown.push({ label: `Wärmedämmung (${selectedWaermedaemmung.label})`, amount: waermedaemmungCost });
+    const waermedaemmungCost = (selectedWaermedaemmung && selectedWaermedaemmung.price > 0) ? sqm * selectedWaermedaemmung.price : 0;
+    if (waermedaemmungCost > 0) {
+      breakdown.push({ label: `Wärmedämmung (${selectedWaermedaemmung!.label})`, amount: waermedaemmungCost });
     }
 
     const selectedFussbodenheizung = fussbodenheizungOptions.find(f => f.value === fussbodenheizung);
-    if (selectedFussbodenheizung && selectedFussbodenheizung.price > 0) {
-      const fussbodenheizungCost = sqm * selectedFussbodenheizung.price;
-      breakdown.push({ label: `${selectedFussbodenheizung.label}`, amount: fussbodenheizungCost });
+    const fussbodenheizungCost = (selectedFussbodenheizung && selectedFussbodenheizung.price > 0) ? sqm * selectedFussbodenheizung.price : 0;
+    if (fussbodenheizungCost > 0) {
+      breakdown.push({ label: `${selectedFussbodenheizung!.label}`, amount: fussbodenheizungCost });
     }
 
     let optionsCost = 0;
@@ -435,7 +435,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
     const anfahrt = 55;
     breakdown.push({ label: "Anfahrt München", amount: anfahrt });
 
-    const subtotal = estrichCost + floorSurcharge + speedSurcharge + optionsCost + anfahrt;
+    const subtotal = estrichCost + projektartSurcharge + floorSurcharge + speedSurcharge + trittschallCost + waermedaemmungCost + fussbodenheizungCost + optionsCost + anfahrt;
     
     const minTotal = Math.round(subtotal * 0.85);
     const maxTotal = Math.round(subtotal * 1.15);
