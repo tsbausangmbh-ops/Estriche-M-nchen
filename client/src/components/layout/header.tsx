@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { MapPin, Clock, Menu, X, ChevronDown, ArrowLeft } from "lucide-react";
 import { services } from "@/lib/services-data";
+import logoImage from "@assets/Logo_Universal_1768216877638.png";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -72,9 +73,11 @@ export function Header() {
               )}
               <Link href="/">
                 <a className="flex items-center gap-3" data-testid="link-logo">
-                  <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center">
-                    <span className="text-primary-foreground font-bold text-xl">E</span>
-                  </div>
+                  <img 
+                    src={logoImage} 
+                    alt="Estrich München Logo" 
+                    className="h-10 w-auto"
+                  />
                   <div className="hidden sm:block">
                     <div className="font-bold text-lg leading-tight">Estrich München</div>
                     <div className="text-xs text-muted-foreground">Estrich • Bodenaufbau • Sanierung</div>

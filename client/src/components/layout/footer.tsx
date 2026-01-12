@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { services } from "@/lib/services-data";
 import { CookieSettingsButton } from "@/components/cookie-consent";
+import logoImage from "@assets/Logo_Universal_1768216877638.png";
 
 export function Footer() {
   return (
@@ -10,9 +11,11 @@ export function Footer() {
           <div className="md:col-span-2" data-testid="footer-brand">
             <Link href="/">
               <a className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-xl">E</span>
-                </div>
+                <img 
+                  src={logoImage} 
+                  alt="Estrich München Logo" 
+                  className="h-10 w-auto"
+                />
                 <div>
                   <div className="font-bold text-lg">Estrich München</div>
                   <div className="text-xs text-background/70">Estrich • Bodenaufbau • Sanierung</div>
