@@ -52,7 +52,7 @@ export function Footer() {
 
         <div className="border-t border-background/20 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-background/60">
-            © {new Date().getFullYear()} Estriche München. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} Estriche München. Alle Rechte vorbehalten. | Website by Extrucon GmbH
           </p>
           <div className="flex flex-wrap gap-6 text-sm text-background/60">
             <Link href="/impressum" className="hover:text-background transition-colors" data-testid="link-impressum">
