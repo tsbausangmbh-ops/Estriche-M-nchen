@@ -431,7 +431,7 @@ export default function UeberUns() {
       </section>
 
       <section className="py-12 bg-foreground text-primary-foreground">
-        <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 text-center">
+        <div className="w-full mx-auto px-4 sm:px-8 lg:px-12 text-center">
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-4">
             Bereit für einen Boden, der hält was wir versprechen?
           </h2>
