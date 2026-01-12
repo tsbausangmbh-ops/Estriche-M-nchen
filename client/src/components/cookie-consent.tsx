@@ -28,6 +28,15 @@ interface CookieConsentProps {
   onPreferencesChange?: (preferences: CookiePreferences) => void;
 }
 
+// Global state for opening cookie settings from anywhere
+let globalOpenSettings: (() => void) | null = null;
+
+export function openCookieSettingsGlobal() {
+  if (globalOpenSettings) {
+    globalOpenSettings();
+  }
+}
+
 export function CookieConsent({ onPreferencesChange }: CookieConsentProps) {
   const [showBanner, setShowBanner] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
@@ -52,6 +61,10 @@ export function CookieConsent({ onPreferencesChange }: CookieConsentProps) {
     } else {
       setShowBanner(true);
     }
+    
+    // Register global open function
+    globalOpenSettings = () => setShowSettings(true);
+    return () => { globalOpenSettings = null; };
   }, []);
 
   const savePreferences = (prefs: CookiePreferences) => {
@@ -96,10 +109,7 @@ export function CookieConsent({ onPreferencesChange }: CookieConsentProps) {
     setShowBanner(false);
   };
 
-  if (!showBanner && !showSettings) {
-    return null;
-  }
-
+  // Always render the dialog for settings, even if banner is hidden
   return (
     <>
       {showBanner && !showSettings && (
@@ -304,20 +314,13 @@ export function useCookiePreferences() {
     }
   }, []);
 
-  const openCookieSettings = () => {
-    localStorage.removeItem(COOKIE_CONSENT_KEY);
-    window.location.reload();
-  };
-
-  return { preferences, openCookieSettings };
+  return { preferences, openCookieSettings: openCookieSettingsGlobal };
 }
 
 export function CookieSettingsButton() {
-  const { openCookieSettings } = useCookiePreferences();
-
   return (
     <button
-      onClick={openCookieSettings}
+      onClick={openCookieSettingsGlobal}
       className="hover:text-background transition-colors text-sm"
       data-testid="button-cookie-settings"
     >
