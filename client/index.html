@@ -88,6 +88,13 @@
       "priceRange": "€€",
       "currenciesAccepted": "EUR",
       "paymentAccepted": "Überweisung, Bar",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "282",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Estrich-Leistungen",
@@ -115,6 +122,63 @@
         "name": "Startseite",
         "item": "https://estriche-muenchen.de/"
       }]
+    }
+    </script>
+    
+    <!-- FAQ Schema for Featured Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was kostet Estrich pro m² in München?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Estrich kostet in München zwischen 32-65€ pro m² je nach Art: Zementestrich ab 32€/m², Fließestrich ab 42€/m², Schnellestrich ab 48€/m². Der genaue Preis hängt von Stärke, Stockwerk und Zusatzleistungen ab. Nutzen Sie unseren kostenlosen Online-Rechner für eine sofortige Kalkulation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie lange muss Estrich trocknen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Trocknungszeit hängt von der Estrichart ab: Zementestrich braucht ca. 1 Tag pro mm Dicke (50mm = 50 Tage). Schnellestrich ist bereits nach 1-5 Tagen belegreif. Calciumsulfat-Fließestrich trocknet etwas schneller als Zementestrich."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welcher Estrich ist der beste für Fußbodenheizung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Calciumsulfat-Fließestrich (CAF) ist ideal für Fußbodenheizungen, da er eine bessere Wärmeleitfähigkeit hat und gleichmäßiger aufheizt. Zementestrich funktioniert ebenfalls gut, braucht aber etwas länger zum Aufheizen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann man Fußbodenheizung nachträglich einbauen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, mit dem Fräsverfahren können Heizungsrohre direkt in den bestehenden Estrich eingefräst werden - ohne den alten Boden zu entfernen. Die Installation dauert nur 2-4 Tage und ist auch in bewohnten Räumen möglich."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- WebSite Schema for Sitelinks Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Estriche München",
+      "url": "https://estriche-muenchen.de",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://estriche-muenchen.de/suche?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>
   </head>
