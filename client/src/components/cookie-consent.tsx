@@ -318,7 +318,7 @@ export function CookieSettingsButton() {
   return (
     <button
       onClick={openCookieSettings}
-      className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+      className="hover:text-background transition-colors text-sm"
       data-testid="button-cookie-settings"
     >
       Cookie-Einstellungen
