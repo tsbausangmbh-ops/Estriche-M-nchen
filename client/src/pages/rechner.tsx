@@ -397,7 +397,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
             <div className="mt-10 flex flex-wrap gap-4 justify-center">
               <Link href="/rechner">
                 <Button size="lg" data-testid="button-nlp-rechner">
-                  Kostenloser Budgetrechner
+                  Jetzt Ihre Anfrage stellen
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
