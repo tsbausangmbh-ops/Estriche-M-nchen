@@ -655,7 +655,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
             {pricingItems.map((item, index) => (
               <Link key={index} href={`/leistungen/${item.slug}`}>
                 <Card className="text-center relative overflow-visible hover-elevate cursor-pointer h-full" data-testid={`card-pricing-${index}`}>
@@ -704,7 +704,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto">
+          <div>
             <Accordion type="single" collapsible className="space-y-4">
               {faqItems.map((item, index) => (
                 <AccordionItem 
