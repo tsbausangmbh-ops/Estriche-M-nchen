@@ -633,7 +633,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
         </div>
       </section>
 
-      <section className="py-8 bg-muted/30 border-b">
+      <section className="py-8 bg-muted/30">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-6">
             <h2 className="text-xl sm:text-2xl font-extrabold mb-3 tracking-tight">
@@ -659,9 +659,8 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
 
       <section className="py-12 bg-accent">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
-          <div>
-            <div className="text-center mb-10">
-              <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Budgetrechner</p>
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Budgetrechner</p>
               <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
                 Wissen Sie vorher, was Ihr Estrich kostet
               </h2>
