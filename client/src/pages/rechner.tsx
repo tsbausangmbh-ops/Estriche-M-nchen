@@ -635,12 +635,12 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
 
       <section className="py-8 bg-muted/30 border-b">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
-          <div className="text-center max-w-4xl mx-auto mb-6">
+          <div className="text-center mb-6">
             <h2 className="text-xl sm:text-2xl font-extrabold mb-3 tracking-tight">
               Warum berechnen Kunden hier ihr Budget?
             </h2>
           </div>
-          <div className="grid sm:grid-cols-3 gap-4 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-3 gap-4">
             {[
               { reason: "Ich will wissen, ob mein Budget reicht", benefit: "Klarheit in 2 Minuten" },
               { reason: "Ich brauche Zahlen für meine Bank", benefit: "PDF-Export möglich" },
@@ -659,7 +659,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
 
       <section className="py-12 bg-accent">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
-          <div className="max-w-6xl mx-auto">
+          <div>
             <div className="text-center mb-10">
               <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Budgetrechner</p>
               <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
@@ -1289,7 +1289,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
 
       <section className="py-12 bg-accent">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
-          <div className="max-w-6xl mx-auto">
+          <div>
             <div className="text-center mb-10">
               <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Kostenrechner</p>
               <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
