@@ -99,6 +99,7 @@ const floorOptions = [
   { value: "3og", label: "3. Obergeschoss", surcharge: 6 },
   { value: "4og", label: "4. OG oder höher", surcharge: 10 },
   { value: "keller", label: "Keller", surcharge: 3 },
+  { value: "mehrere", label: "Mehrere Stockwerke", surcharge: 0 },
 ];
 
 const speedOptions = [
