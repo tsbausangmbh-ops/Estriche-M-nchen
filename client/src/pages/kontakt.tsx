@@ -156,6 +156,41 @@ export default function Kontakt() {
         </div>
       </section>
 
+      <section className="py-6 bg-accent border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-8">
+            <h2 className="text-2xl sm:text-3xl font-extrabold mb-4 tracking-tight">
+              Erkennen Sie sich wieder?
+            </h2>
+            <p className="text-muted-foreground">
+              Viele unserer Kunden kommen mit genau diesen Herausforderungen zu uns:
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+            {[
+              "Sie brauchen einen zuverlässigen Estrich, aber haben schlechte Erfahrungen mit Handwerkern gemacht?",
+              "Sie wissen nicht, welcher Estrich für Ihr Projekt der richtige ist?",
+              "Sie haben Angst vor versteckten Kosten und bösen Überraschungen?",
+              "Ihr Bauprojekt hat einen festen Zeitplan und Sie brauchen Terminsicherheit?",
+              "Sie planen eine Fußbodenheizung und wissen nicht, welcher Estrich sich eignet?",
+              "Sie sanieren und der alte Estrich muss raus – aber wie geht es weiter?"
+            ].map((question, index) => (
+              <Card key={index} className="bg-background">
+                <CardContent className="p-4 flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <p className="text-sm">{question}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="text-center mt-6">
+            <p className="text-muted-foreground">
+              <strong className="text-foreground">Dann sind Sie bei uns richtig.</strong> Erzählen Sie uns Ihr Problem – wir finden die Lösung.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">

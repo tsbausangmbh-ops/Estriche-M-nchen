@@ -192,8 +192,31 @@ export default function Angebot() {
         </div>
       </section>
 
-      <section className="py-8 bg-accent">
+      <section className="py-6 bg-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-6">
+            <h2 className="text-xl sm:text-2xl font-extrabold mb-3 tracking-tight">
+              Was ist Ihre größte Herausforderung?
+            </h2>
+            <p className="text-muted-foreground text-sm">
+              Wählen Sie, was auf Sie zutrifft – wir haben die passende Lösung:
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-5xl mx-auto mb-6">
+            {[
+              { problem: "Ich brauche Terminsicherheit", solution: "100€ bei Verspätung" },
+              { problem: "Ich will keine versteckten Kosten", solution: "Festpreis-Garantie" },
+              { problem: "Ich brauche schnelle Trocknung", solution: "Express-Service" },
+              { problem: "Ich weiß nicht, welcher Estrich passt", solution: "Kostenlose Beratung" }
+            ].map((item, index) => (
+              <Card key={index} className="bg-background text-center">
+                <CardContent className="p-4">
+                  <p className="text-sm font-medium mb-2">{item.problem}</p>
+                  <Badge variant="secondary" className="text-xs">{item.solution}</Badge>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
           <div className="grid md:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start gap-4" data-testid={`benefit-${index}`}>

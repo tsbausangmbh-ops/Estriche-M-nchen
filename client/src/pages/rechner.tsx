@@ -293,6 +293,30 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
         </div>
       </section>
 
+      <section className="py-6 bg-muted/30 border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-6">
+            <h2 className="text-xl sm:text-2xl font-extrabold mb-3 tracking-tight">
+              Warum berechnen Kunden hier ihr Budget?
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {[
+              { reason: "Ich will wissen, ob mein Budget reicht", benefit: "Klarheit in 2 Minuten" },
+              { reason: "Ich brauche Zahlen für meine Bank", benefit: "PDF-Export möglich" },
+              { reason: "Ich will Angebote vergleichen können", benefit: "Realistische Richtwerte" }
+            ].map((item, index) => (
+              <Card key={index} className="bg-background">
+                <CardContent className="p-4 text-center">
+                  <p className="text-sm italic mb-2">{item.reason}</p>
+                  <Badge variant="secondary" className="text-xs">{item.benefit}</Badge>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-12 bg-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
