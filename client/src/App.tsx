@@ -21,6 +21,7 @@ import AGB from "@/pages/agb";
 import UeberUns from "@/pages/ueber-uns";
 import Angebot from "@/pages/angebot";
 import Rechner from "@/pages/rechner";
+import CookieEinstellungen from "@/pages/cookie-einstellungen";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -50,6 +51,7 @@ function Router() {
       <Route path="/ueber-uns" component={UeberUns} />
       <Route path="/angebot" component={Angebot} />
       <Route path="/rechner" component={Rechner} />
+      <Route path="/cookie-einstellungen" component={CookieEinstellungen} />
       <Route component={NotFound} />
     </Switch>
   );

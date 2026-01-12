@@ -1,6 +1,5 @@
 import { Link } from "wouter";
 import { services } from "@/lib/services-data";
-import { CookieSettingsButton } from "@/components/cookie-consent";
 import logoImage from "@assets/Logo_Universal_1768216877638.png";
 
 export function Footer() {
@@ -73,7 +72,9 @@ export function Footer() {
             <Link href="/agb" className="hover:text-background transition-colors" data-testid="link-agb">
               AGB
             </Link>
-            <CookieSettingsButton />
+            <Link href="/cookie-einstellungen" className="hover:text-background transition-colors" data-testid="link-cookie-settings">
+              Cookie-Einstellungen
+            </Link>
           </div>
         </div>
       </div>
