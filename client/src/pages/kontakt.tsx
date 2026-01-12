@@ -175,13 +175,13 @@ export default function Kontakt() {
             </div>
 
             <div className="flex flex-wrap gap-3 mb-8">
-              <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" asChild>
+              <Button size="lg" asChild>
                 <a href="tel:+4989444438872">
                   <Phone className="mr-2 h-4 w-4" />
                   089 444438872
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
+              <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" asChild>
                 <a href="mailto:info@estriche-muenchen.de">
                   <Mail className="mr-2 h-4 w-4" />
                   E-Mail schreiben
