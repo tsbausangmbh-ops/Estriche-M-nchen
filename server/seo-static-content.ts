@@ -9,6 +9,80 @@ interface PageSEO {
 }
 
 const servicesData: Record<string, PageSEO> = {
+  fliessestrich: {
+    title: "Fließestrich München - Selbstnivellierender Calciumsulfatestrich | Estrich München",
+    metaDescription: "Fließestrich verlegen in München. Calciumsulfat-Fließestrich (CAF) perfekt für Fußbodenheizung. Meisterbetrieb mit Festpreisgarantie. Jetzt beraten lassen!",
+    mainKeyword: "Fließestrich München",
+    longTailKeywords: [
+      "Calciumsulfat-Fließestrich München",
+      "CAF Estrich verlegen lassen",
+      "Fließestrich für Fußbodenheizung",
+      "Anhydritestrich München",
+      "Selbstnivellierender Estrich",
+      "Fließestrich Kosten pro qm",
+      "Fließestrich Trocknungszeit",
+      "Fließestrich vs Zementestrich"
+    ],
+    h1: "Fließestrich München - Calciumsulfat-Fließestrich vom Meister",
+    sections: [
+      {
+        h2: "Fließestrich verlegen - Perfekt eben ohne Nacharbeit",
+        h3s: ["Selbstnivellierende Verlegung", "Ideal für Fußbodenheizung"],
+        content: `Calciumsulfat-Fließestrich (CAF) ist die moderne Lösung für perfekt ebene Böden. Der selbstnivellierende Estrich verteilt sich gleichmäßig und schafft eine absolut plane Oberfläche - ideal als Untergrund für Fliesen, Parkett oder Vinyl. Seine hervorragende Wärmeleitfähigkeit macht ihn zum perfekten Partner für Fußbodenheizungen.`
+      },
+      {
+        h2: "Vorteile von Fließestrich gegenüber Zementestrich",
+        h3s: ["Bessere Wärmeleitfähigkeit", "Schnellere Verlegung"],
+        content: `Fließestrich bietet bis zu 40% bessere Wärmeleitfähigkeit als Zementestrich - Ihre Fußbodenheizung reagiert schneller und spart Energie. Die Verlegung erfolgt zügig: Große Flächen lassen sich in einem Arbeitsgang nivellieren. Die Trocknungszeit beträgt etwa 1 Tag pro mm Stärke.`
+      },
+      {
+        h2: "Fließestrich Kosten und Preise in München",
+        content: `Die Kosten für Fließestrich liegen bei 38-52 €/m² netto zzgl. MwSt., abhängig von Fläche und Estrichstärke. Im Vergleich zu Zementestrich ist der Materialpreis etwas höher, dafür sparen Sie bei der Verlegung und profitieren von besserer Wärmeleitfähigkeit.`
+      }
+    ],
+    faqs: [
+      { q: "Ist Fließestrich besser als Zementestrich?", a: "Für Fußbodenheizungen ja - Fließestrich hat bessere Wärmeleitfähigkeit. Zementestrich ist feuchtigkeitsbeständiger für Nassräume." },
+      { q: "Wie lange muss Fließestrich trocknen?", a: "Etwa 1 Tag pro mm Estrichstärke. Ein 45 mm starker Fließestrich braucht ca. 45 Tage bis zur Belegreife." },
+      { q: "Was kostet Fließestrich pro m²?", a: "In München kostet Fließestrich zwischen 38-52 €/m² netto zzgl. MwSt., inklusive Material und Verlegung." }
+    ]
+  },
+  heizestrich: {
+    title: "Heizestrich München - Estrich für Fußbodenheizung | Estrich München",
+    metaDescription: "Heizestrich für Fußbodenheizung in München verlegen lassen. Optimale Wärmeübertragung, schnellere Aufheizzeit. Meisterbetrieb mit Festpreisgarantie!",
+    mainKeyword: "Heizestrich München",
+    longTailKeywords: [
+      "Estrich Fußbodenheizung München",
+      "Heizestrich verlegen lassen",
+      "Fußbodenheizung Estrich Aufbau",
+      "Heizestrich Kosten pro qm",
+      "Zementestrich Fußbodenheizung",
+      "Fließestrich Fußbodenheizung",
+      "Heizestrich Trocknungszeit",
+      "Funktionsheizen Estrich"
+    ],
+    h1: "Heizestrich München - Optimaler Estrich für Ihre Fußbodenheizung",
+    sections: [
+      {
+        h2: "Heizestrich - Der perfekte Partner für Fußbodenheizungen",
+        h3s: ["Optimale Wärmeübertragung", "Schnellere Reaktionszeit"],
+        content: `Heizestrich ist speziell für die Kombination mit Fußbodenheizungen konzipiert. Die optimale Einbettung der Heizrohre und die richtige Estrichmischung sorgen für maximale Wärmeübertragung und schnelle Reaktionszeiten. Ob Zementestrich oder Calciumsulfat-Fließestrich - wir wählen das ideale System für Ihr Projekt.`
+      },
+      {
+        h2: "Aufbau und Verlegung von Heizestrich",
+        h3s: ["Dämmschicht und Randdämmstreifen", "Heizrohrverlegung und Estricheinbau"],
+        content: `Der fachgerechte Aufbau beginnt mit der Dämmschicht und Randdämmstreifen. Nach der Heizrohrverlegung durch Ihren Heizungsbauer bringen wir den Heizestrich ein - mindestens 45 mm über der Heizrohr-Oberkante. Nach dem Funktionsheizen ist der Boden bereit für den Oberbelag.`
+      },
+      {
+        h2: "Funktionsheizen - Wichtig für langlebige Böden",
+        content: `Das Funktionsheizen ist unverzichtbar: 21 Tage nach Estricheinbau wird die Heizung langsam hochgefahren. Wir dokumentieren den gesamten Prozess und erstellen das Aufheizprotokoll für Ihren Bodenleger.`
+      }
+    ],
+    faqs: [
+      { q: "Welcher Estrich ist am besten für Fußbodenheizung?", a: "Calciumsulfat-Fließestrich hat die beste Wärmeleitfähigkeit. Zementestrich ist robuster und feuchtigkeitsbeständig." },
+      { q: "Wie dick muss Heizestrich über der Heizung sein?", a: "Mindestens 45 mm Überdeckung über den Heizrohren. Die Gesamtstärke liegt meist bei 65-85 mm." },
+      { q: "Wann kann ich nach dem Heizestrich heizen?", a: "Das Funktionsheizen beginnt frühestens 21 Tage nach Estricheinbau, dann wird langsam hochgefahren." }
+    ]
+  },
   zementestrich: {
     title: "Zementestrich München - Professionelle Estrichverlegung vom Meister | Estrich München",
     metaDescription: "Zementestrich verlegen lassen in München. Meisterbetrieb mit 30+ Jahren Erfahrung, Festpreisgarantie, DIN-konforme Ausführung. Jetzt kostenlose Beratung!",
@@ -558,6 +632,105 @@ const pagesSEO: Record<string, PageSEO> = {
       { q: "Wie schnell bekomme ich ein Angebot?", a: "Nach der Vor-Ort-Besichtigung erhalten Sie das Angebot innerhalb von 24-48 Stunden per E-Mail." },
       { q: "Kann der Preis sich nachträglich ändern?", a: "Nein, unser Festpreis ist verbindlich. Nachforderungen gibt es bei uns nicht - es sei denn, Sie beauftragen Zusatzleistungen." }
     ]
+  },
+  impressum: {
+    title: "Impressum | Mustafa Sakar - Estriche München",
+    metaDescription: "Impressum von Estriche München. Angaben gemäß § 5 TMG. Mustafa Sakar, Hardenbergstr. 4, 80992 München. Kontakt: info@estriche-muenchen.de",
+    mainKeyword: "Impressum Estrich München",
+    longTailKeywords: ["Estrich München Kontakt", "Estrichleger München Adresse", "Estriche München Inhaber"],
+    h1: "Impressum",
+    sections: [
+      {
+        h2: "Angaben gemäß § 5 TMG",
+        content: `Mustafa Sakar - Estriche München, Hardenbergstr. 4, 80992 München, Deutschland. Telefon: 089 444438872, E-Mail: info@estriche-muenchen.de. Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz wird auf Anfrage mitgeteilt.`
+      },
+      {
+        h2: "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",
+        content: `Mustafa Sakar, Hardenbergstr. 4, 80992 München`
+      },
+      {
+        h2: "Streitschlichtung",
+        content: `Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.`
+      }
+    ]
+  },
+  datenschutz: {
+    title: "Datenschutzerklärung | Estriche München | DSGVO-konform",
+    metaDescription: "Datenschutzerklärung von Estriche München gemäß DSGVO und EU AI Act. Informationen zur Verarbeitung Ihrer personenbezogenen Daten.",
+    mainKeyword: "Datenschutz Estrich München",
+    longTailKeywords: ["DSGVO Estrich München", "Datenschutzerklärung Handwerker", "Cookies Estrich Website"],
+    h1: "Datenschutzerklärung",
+    sections: [
+      {
+        h2: "Datenschutz auf einen Blick",
+        content: `Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.`
+      },
+      {
+        h2: "Verantwortliche Stelle",
+        content: `Mustafa Sakar - Estriche München, Hardenbergstr. 4, 80992 München. Telefon: 089 444438872, E-Mail: info@estriche-muenchen.de`
+      },
+      {
+        h2: "Ihre Rechte",
+        content: `Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer Daten sowie das Recht auf Datenübertragbarkeit und Widerspruch.`
+      }
+    ]
+  },
+  agb: {
+    title: "AGB | Allgemeine Geschäftsbedingungen | Estriche München",
+    metaDescription: "Allgemeine Geschäftsbedingungen von Estriche München. Regelungen zu Auftragserteilung, Gewährleistung und Zahlungsbedingungen.",
+    mainKeyword: "AGB Estrich München",
+    longTailKeywords: ["Geschäftsbedingungen Estrichleger", "Gewährleistung Estrich", "Zahlungsbedingungen Handwerker"],
+    h1: "Allgemeine Geschäftsbedingungen",
+    sections: [
+      {
+        h2: "Geltungsbereich",
+        content: `Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen Mustafa Sakar - Estriche München und dem Auftraggeber über Estricharbeiten und damit verbundene Leistungen.`
+      },
+      {
+        h2: "Gewährleistung",
+        content: `Wir gewähren auf alle Estricharbeiten eine Gewährleistung von 5 Jahren gemäß BGB § 634a Abs. 1 Nr. 2. Die Gewährleistung umfasst Material- und Ausführungsmängel.`
+      },
+      {
+        h2: "Zahlungsbedingungen",
+        content: `Die Zahlung erfolgt nach Fertigstellung und Abnahme der Arbeiten. Bei größeren Projekten können Abschlagszahlungen vereinbart werden.`
+      }
+    ]
+  },
+  cookieeinstellungen: {
+    title: "Cookie-Einstellungen | Estriche München | Datenschutz",
+    metaDescription: "Verwalten Sie Ihre Cookie-Einstellungen für Estriche München. Passen Sie Ihre Datenschutz-Präferenzen an.",
+    mainKeyword: "Cookie Einstellungen Estrich München",
+    longTailKeywords: ["Cookie Präferenzen", "Datenschutz Einstellungen", "Cookie Verwaltung"],
+    h1: "Cookie-Einstellungen",
+    sections: [
+      {
+        h2: "Cookie-Präferenzen verwalten",
+        content: `Hier können Sie Ihre Cookie-Präferenzen verwalten. Wir respektieren Ihre Privatsphäre und geben Ihnen volle Kontrolle über Ihre Daten.`
+      },
+      {
+        h2: "Arten von Cookies",
+        h3s: ["Notwendige Cookies", "Analyse-Cookies", "Marketing-Cookies"],
+        content: `Notwendige Cookies sind für den Betrieb der Website unerlässlich. Analyse-Cookies helfen uns, die Website zu verbessern. Marketing-Cookies werden für personalisierte Werbung verwendet.`
+      }
+    ]
+  },
+  ratgeber: {
+    title: "Estrich Ratgeber München - Tipps & Wissen vom Experten | Estriche München",
+    metaDescription: "Estrich Ratgeber: Expertenwissen zu Estricharten, Trocknungszeiten, Kosten und Tipps. Alles was Sie über Estrich wissen müssen.",
+    mainKeyword: "Estrich Ratgeber",
+    longTailKeywords: ["Estrich Tipps", "Estrich Wissen", "Estrich Beratung", "Estrich FAQ"],
+    h1: "Estrich Ratgeber - Expertenwissen für Ihr Projekt",
+    sections: [
+      {
+        h2: "Alles über Estrich",
+        content: `In unserem Ratgeber finden Sie umfassende Informationen zu allen Estricharten, Trocknungszeiten, Kosten und praktische Tipps für Ihr Bauprojekt.`
+      },
+      {
+        h2: "Beliebte Themen",
+        h3s: ["Estricharten im Vergleich", "Trocknungszeiten berechnen", "Kosten kalkulieren"],
+        content: `Erfahren Sie mehr über die Unterschiede zwischen Zementestrich und Fließestrich, wie Sie die Trocknungszeit berechnen und was Estrich in München kostet.`
+      }
+    ]
   }
 };
 
@@ -799,7 +972,12 @@ function generatePage(pageId: string): string {
     kontakt: '/kontakt',
     faq: '/faq',
     ueberuns: '/ueber-uns',
-    angebot: '/angebot'
+    angebot: '/angebot',
+    impressum: '/impressum',
+    datenschutz: '/datenschutz',
+    agb: '/agb',
+    cookieeinstellungen: '/cookie-einstellungen',
+    ratgeber: '/ratgeber'
   };
   
   return generateBaseHTML(page, pathMap[pageId] || '/');
@@ -822,7 +1000,12 @@ export function generateStaticSEOContent(path: string): string {
     '/kontakt': 'kontakt',
     '/faq': 'faq',
     '/ueber-uns': 'ueberuns',
-    '/angebot': 'angebot'
+    '/angebot': 'angebot',
+    '/impressum': 'impressum',
+    '/datenschutz': 'datenschutz',
+    '/agb': 'agb',
+    '/cookie-einstellungen': 'cookieeinstellungen',
+    '/ratgeber': 'ratgeber'
   };
   
   const pageId = pageMap[path];
