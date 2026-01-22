@@ -1431,6 +1431,21 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
         </div>
       </section>
 
+      <section className="py-6">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+          <Card className="border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20">
+            <CardContent className="p-4">
+              <h3 className="font-semibold text-sm mb-2">Hinweis zur Leistungserbringung</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Die angebotenen Leistungen werden durch rechtlich selbstständige Einzelgewerbebetriebe erbracht. 
+                Der jeweilige Vertragspartner wird im Angebot und Auftrag ausdrücklich benannt. 
+                Eine gemeinschaftliche Haftung mehrerer Gewerbebetriebe besteht nicht.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
