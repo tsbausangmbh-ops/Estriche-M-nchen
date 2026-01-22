@@ -279,8 +279,7 @@ export default function Home() {
                 Nur noch 3 Termine im Januar verfügbar
               </Badge>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] text-primary-foreground">
-                Endlich ein Estrich, der
-                <span className="block text-primary mt-3">hält, was er verspricht.</span>
+                Endlich ein Estrich, der <span className="text-primary">hält, was er verspricht.</span>
               </h1>
               <p className="text-lg text-primary-foreground/80 max-w-xl leading-relaxed">
                 <strong className="text-primary-foreground">Sie kennen das Gefühl:</strong> Handwerker, die nicht erscheinen. 
