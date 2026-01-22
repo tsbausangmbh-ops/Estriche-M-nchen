@@ -164,7 +164,8 @@ export default function Angebot() {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Kostenloses Angebot anfordern | Estrich München | Festpreis-Garantie</title>
-        <meta name="description" content="Fordern Sie jetzt Ihr kostenloses Festpreis-Angebot für Estricharbeiten in München an. Antwort in 24h, unverbindlich, mit persönlicher Beratung." />
+        <meta name="description" content="Kostenloses Estrich-Angebot München: Festpreis-Garantie, Antwort in 24h. Zementestrich, Fließestrich, Heizestrich vom Meisterbetrieb." />
+        <meta name="keywords" content="Estrich Angebot München, Estrich Kostenvoranschlag, Estrich Festpreis, Estrichleger Angebot kostenlos, Estrich Beratung München, Estrich anfragen" />
         <link rel="canonical" href="https://estriche-muenchen.de/angebot" />
       </Helmet>
       <Header />

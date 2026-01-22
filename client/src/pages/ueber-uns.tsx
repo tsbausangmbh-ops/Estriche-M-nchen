@@ -98,8 +98,8 @@ export default function UeberUns() {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Über uns | Estrich Meisterbetrieb München | 30+ Jahre Erfahrung</title>
-        <meta name="description" content="Lernen Sie Estriche München kennen: Meisterbetrieb seit 1994, 2.500+ Projekte, Festpreis-Garantie. Inhaber Mustafa Sakar und sein erfahrenes Team." />
-        <meta name="keywords" content="Estrichleger München, Estrich Meisterbetrieb, Estrich Firma München, Mustafa Sakar, Estrich Team München" />
+        <meta name="description" content="Über Estriche München: Meisterbetrieb seit 1994, Inhaber Mustafa Sakar, 2.500+ Projekte. Festpreis-Garantie, 5 Jahre Gewährleistung." />
+        <meta name="keywords" content="Estrichleger München, Estrich Meisterbetrieb München, Estrich Firma München, Mustafa Sakar Estrich, Estrich Team München, Estrich Fachbetrieb, Estrichleger Erfahrung, Estrich Gewährleistung" />
         <link rel="canonical" href="https://estriche-muenchen.de/ueber-uns" />
         <meta property="og:title" content="Über uns | Estrich Meisterbetrieb München" />
         <meta property="og:description" content="30+ Jahre Erfahrung, 2.500+ Projekte – lernen Sie unser Team kennen." />

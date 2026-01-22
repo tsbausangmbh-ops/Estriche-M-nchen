@@ -233,8 +233,8 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Estrich München | Estrichleger Meisterbetrieb | Festpreis-Garantie</title>
-        <meta name="description" content="Estrich München: Zementestrich, Fließestrich, Heizestrich vom Meisterbetrieb. 30+ Jahre Erfahrung, 2.500+ Projekte, Festpreis-Garantie. ☎ 089 444438872" />
-        <meta name="keywords" content="Estrich München, Estrichleger München, Zementestrich München, Fließestrich München, Heizestrich München, Estrich verlegen lassen, Estrich Kosten pro qm" />
+        <meta name="description" content="Estrich München vom Meisterbetrieb: Zementestrich ab 32€/m², Fließestrich, Heizestrich. 30+ Jahre Erfahrung, Festpreis-Garantie. ☎ 089 444438872" />
+        <meta name="keywords" content="Estrich München, Estrichleger München, Zementestrich München, Fließestrich München, Heizestrich München, Industrieboden München, Fußbodenheizung nachrüsten, Estrichsanierung München, Estrich Kosten pro qm, Schnellestrich München" />
         <meta name="geo.region" content="DE-BY" />
         <meta name="geo.placename" content="München" />
         <meta name="geo.position" content="48.1779;11.5193" />

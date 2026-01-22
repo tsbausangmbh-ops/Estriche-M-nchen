@@ -13,7 +13,8 @@ export default function Impressum() {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Impressum | Estriche München | Mustafa Sakar</title>
-        <meta name="description" content="Impressum von Estriche München. Angaben gemäß § 5 TMG. Inhaber: Mustafa Sakar, Hardenbergstr. 4, 80992 München." />
+        <meta name="description" content="Impressum von Estriche München – Estrichleger Meisterbetrieb. Inhaber: Mustafa Sakar, Hardenbergstr. 4, 80992 München. ☎ 089 444438872. Angaben gemäß § 5 TMG." />
+        <meta name="keywords" content="Impressum Estriche München, Estrichleger Kontakt, Mustafa Sakar München, Estrich Firma Impressum, Handwerker Impressum Bayern" />
         <link rel="canonical" href="https://estriche-muenchen.de/impressum" />
       </Helmet>
       <Header />

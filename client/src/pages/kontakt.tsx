@@ -135,8 +135,8 @@ export default function Kontakt() {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Kontakt | Estrich München | Kostenlose Beratung ☎ 089 444438872</title>
-        <meta name="description" content="Kontaktieren Sie Estriche München für kostenlose Beratung und Festpreis-Angebote. ☎ 089 444438872 | info@estriche-muenchen.de | Mo-Fr 7-18 Uhr" />
-        <meta name="keywords" content="Estrich München Kontakt, Estrichleger anrufen, Estrich Angebot München, kostenlose Beratung Estrich" />
+        <meta name="description" content="Estrich München Kontakt: Kostenlose Beratung, Festpreis in 24h. ☎ 089 444438872 | Mo-Fr 7-18 Uhr. Meisterbetrieb." />
+        <meta name="keywords" content="Estrich München Kontakt, Estrichleger anrufen, Estrich Angebot München, kostenlose Beratung Estrich, Estrich Telefon, Estrich Termin buchen, Estricharbeiten anfragen" />
         <meta name="geo.region" content="DE-BY" />
         <meta name="geo.placename" content="München" />
         <link rel="canonical" href="https://estriche-muenchen.de/kontakt" />
