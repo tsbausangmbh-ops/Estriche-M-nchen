@@ -3,6 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useMutation } from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
+import { generateBreadcrumbSchema, generateLocalBusinessSchema } from "@/lib/seo-schemas";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -146,6 +147,15 @@ export default function Kontakt() {
         <meta property="og:locale" content="de_DE" />
         <meta property="og:image" content="https://estriche-muenchen.de/og-image.png" />
         <meta name="twitter:image" content="https://estriche-muenchen.de/og-image.png" />
+        <script type="application/ld+json">
+          {JSON.stringify(generateBreadcrumbSchema([
+            { name: "Startseite", url: "https://estriche-muenchen.de/" },
+            { name: "Kontakt", url: "https://estriche-muenchen.de/kontakt" }
+          ]))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(generateLocalBusinessSchema())}
+        </script>
       </Helmet>
       <Header />
       

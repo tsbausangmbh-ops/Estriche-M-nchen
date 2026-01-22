@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
+import { generateBreadcrumbSchema, generateHowToSchema, generateWebPageSchema } from "@/lib/seo-schemas";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -148,6 +149,29 @@ export default function Ablauf() {
         <title>Ablauf Estricharbeiten München | 7 Schritte zum perfekten Boden</title>
         <meta name="description" content="So läuft Ihr Estrich-Projekt ab: Von der Kontaktaufnahme über die Vor-Ort-Besichtigung bis zur Abnahme. Transparenter Ablauf mit Festpreis-Garantie." />
         <link rel="canonical" href="https://estriche-muenchen.de/ablauf" />
+        <meta property="og:title" content="Ablauf Estricharbeiten München | 7 Schritte" />
+        <meta property="og:description" content="Transparenter Projektablauf: Von Anfrage bis Abnahme in 7 Schritten." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://estriche-muenchen.de/ablauf" />
+        <meta property="og:locale" content="de_DE" />
+        <meta property="og:image" content="https://estriche-muenchen.de/og-image.png" />
+        <script type="application/ld+json">
+          {JSON.stringify(generateBreadcrumbSchema([
+            { name: "Startseite", url: "https://estriche-muenchen.de/" },
+            { name: "Ablauf", url: "https://estriche-muenchen.de/ablauf" }
+          ]))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(generateHowToSchema([
+            { name: "Kontaktaufnahme", text: "Rufen Sie uns an oder schreiben Sie uns online." },
+            { name: "Vor-Ort-Besichtigung", text: "Wir kommen kostenlos zu Ihnen und nehmen alles auf." },
+            { name: "Festpreis-Angebot", text: "Sie erhalten ein verbindliches Angebot innerhalb von 48h." },
+            { name: "Terminvereinbarung", text: "Wir koordinieren den optimalen Termin für Ihr Projekt." },
+            { name: "Ausführung", text: "Professionelle Verlegung durch unser erfahrenes Team." },
+            { name: "Trocknungsphase", text: "Kontrollierte Trocknung mit Dokumentation." },
+            { name: "Abnahme", text: "Gemeinsame Endkontrolle und Übergabe der Unterlagen." }
+          ]))}
+        </script>
       </Helmet>
       <Header />
 

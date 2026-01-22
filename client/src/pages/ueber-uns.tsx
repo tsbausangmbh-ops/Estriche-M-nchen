@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Link } from "wouter";
+import { Helmet } from "react-helmet-async";
+import { generateBreadcrumbSchema, generateLocalBusinessSchema } from "@/lib/seo-schemas";
 import { 
   ChevronRight, 
   CheckCircle2, 
@@ -94,6 +96,27 @@ export default function UeberUns() {
   
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Über uns | Estrich Meisterbetrieb München | 30+ Jahre Erfahrung</title>
+        <meta name="description" content="Lernen Sie Estriche München kennen: Meisterbetrieb seit 1994, 2.500+ Projekte, Festpreis-Garantie. Inhaber Mustafa Sakar und sein erfahrenes Team." />
+        <meta name="keywords" content="Estrichleger München, Estrich Meisterbetrieb, Estrich Firma München, Mustafa Sakar, Estrich Team München" />
+        <link rel="canonical" href="https://estriche-muenchen.de/ueber-uns" />
+        <meta property="og:title" content="Über uns | Estrich Meisterbetrieb München" />
+        <meta property="og:description" content="30+ Jahre Erfahrung, 2.500+ Projekte – lernen Sie unser Team kennen." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://estriche-muenchen.de/ueber-uns" />
+        <meta property="og:locale" content="de_DE" />
+        <meta property="og:image" content="https://estriche-muenchen.de/og-image.png" />
+        <script type="application/ld+json">
+          {JSON.stringify(generateBreadcrumbSchema([
+            { name: "Startseite", url: "https://estriche-muenchen.de/" },
+            { name: "Über uns", url: "https://estriche-muenchen.de/ueber-uns" }
+          ]))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(generateLocalBusinessSchema())}
+        </script>
+      </Helmet>
       <Header />
       
       <section className="relative py-10 lg:py-14 overflow-hidden">
