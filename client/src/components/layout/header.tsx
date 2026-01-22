@@ -82,6 +82,7 @@ export function Header() {
                   className="h-12 w-auto rounded-md"
                   width="48"
                   height="48"
+                  // @ts-ignore - fetchpriority is valid HTML5 attribute
                   fetchPriority="high"
                 />
                 <div className="hidden sm:block">

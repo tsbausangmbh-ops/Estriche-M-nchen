@@ -217,9 +217,30 @@
       "hasCredential": [{"@type": "EducationalOccupationalCredential", "credentialCategory": "Meisterbrief", "name": "Estrichleger Meister"}],
       "founder": {
         "@type": "Person",
+        "@id": "https://estriche-muenchen.de/#mustafasakar",
         "name": "Mustafa Sakar",
         "jobTitle": "Geschäftsführer und Estrichlegermeister",
-        "knowsAbout": ["Estricharbeiten", "Fußbodenbau", "Bauhandwerk"]
+        "knowsAbout": ["Estricharbeiten", "Fußbodenbau", "Bauhandwerk", "DIN 18560", "Bodenaufbau"],
+        "worksFor": {"@type": "Organization", "name": "Estriche München"},
+        "alumniOf": {"@type": "Organization", "name": "Handwerkskammer München"},
+        "hasCredential": {"@type": "EducationalOccupationalCredential", "credentialCategory": "Meisterbrief", "name": "Estrichlegermeister"}
+      },
+      "knowsLanguage": ["de", "tr"],
+      "numberOfEmployees": {"@type": "QuantitativeValue", "minValue": 5, "maxValue": 15},
+      "areaServed": [
+        {"@type": "City", "name": "München"},
+        {"@type": "AdministrativeArea", "name": "Landkreis München"},
+        {"@type": "State", "name": "Bayern"}
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Estrich-Leistungen 2026",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Zementestrich", "description": "DIN 18560 konform"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fließestrich", "description": "Calciumsulfat-Fließestrich"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Heizestrich", "description": "Für Fußbodenheizung"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Schnellestrich", "description": "Belegreif in 1-5 Tagen"}}
+        ]
       },
       "slogan": "Festpreis-Garantie. Termingarantie. 5 Jahre Gewährleistung.",
       "award": "30+ Jahre Erfahrung mit über 2.500 Projekten"
