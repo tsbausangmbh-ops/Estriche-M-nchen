@@ -82,8 +82,7 @@ export function Header() {
                   className="h-12 w-auto rounded-md"
                   width="48"
                   height="48"
-                  // @ts-ignore - fetchpriority is valid HTML5 attribute
-                  fetchPriority="high"
+                  {...{ fetchpriority: "high" } as any}
                 />
                 <div className="hidden sm:block">
                   <div className="font-bold text-lg leading-tight">Estriche München</div>
