@@ -281,3 +281,267 @@ export const seoKeywords = {
   ],
   local: munichDistricts.map(d => `Estrich München ${d}`)
 };
+
+export function generateProfessionalServiceSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": `${businessInfo.url}/#professionalservice`,
+    "name": businessInfo.name,
+    "alternateName": ["Estrich München", "Estrichleger München", "Estriche München"],
+    "description": "Professionelle Estricharbeiten in München und Umgebung. Zementestrich, Fließestrich, Heizestrich, Industrieböden vom Meisterbetrieb mit 30+ Jahren Erfahrung.",
+    "url": businessInfo.url,
+    "telephone": businessInfo.telephone,
+    "email": businessInfo.email,
+    "foundingDate": businessInfo.foundingDate,
+    "priceRange": businessInfo.priceRange,
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": ["Überweisung", "Bar", "Rechnung"],
+    "address": {
+      "@type": "PostalAddress",
+      ...businessInfo.address
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": businessInfo.geo.latitude,
+      "longitude": businessInfo.geo.longitude
+    },
+    "areaServed": [
+      ...serviceAreas.map(city => ({
+        "@type": "City",
+        "name": city
+      })),
+      {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 48.1351,
+          "longitude": 11.5820
+        },
+        "geoRadius": "50000"
+      }
+    ],
+    "knowsAbout": [
+      "Zementestrich",
+      "Fließestrich",
+      "Calciumsulfatestrich",
+      "Heizestrich",
+      "Industrieestrich",
+      "Fußbodenheizung",
+      "Estrichsanierung",
+      "Schnellestrich",
+      "Wärmedämmung",
+      "DIN 18560"
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Meisterbrief",
+        "name": "Estrichleger Meister"
+      }
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Mustafa Sakar",
+      "jobTitle": "Geschäftsführer und Estrichlegermeister",
+      "knowsAbout": ["Estricharbeiten", "Fußbodenbau", "Bauhandwerk"]
+    },
+    "slogan": "Festpreis-Garantie. Termingarantie. 5 Jahre Gewährleistung.",
+    "award": "30+ Jahre Erfahrung mit über 2.500 Projekten"
+  };
+}
+
+export function generateReviewSchema() {
+  const reviews = [
+    {
+      author: "Thomas M.",
+      date: "2025-11-15",
+      rating: 5,
+      text: "Absolut zuverlässig! Termin wurde eingehalten, Preis war fix, Qualität top. So muss Handwerk sein."
+    },
+    {
+      author: "Sandra K.",
+      date: "2025-10-22",
+      rating: 5,
+      text: "Fließestrich im ganzen EG, perfekt eben. Das Team war super freundlich und hat alles sauber hinterlassen."
+    },
+    {
+      author: "Michael B.",
+      date: "2025-09-08",
+      rating: 5,
+      text: "Fußbodenheizung nachgerüstet ohne großen Umbau. Ging schneller als gedacht. Klare Empfehlung!"
+    },
+    {
+      author: "Christine H.",
+      date: "2025-08-14",
+      rating: 5,
+      text: "Nach Wasserschaden komplette Estrichsanierung. Schnell, professionell, faire Abrechnung."
+    },
+    {
+      author: "Peter W.",
+      date: "2025-07-20",
+      rating: 5,
+      text: "Industrieboden für unsere Werkstatt - extrem belastbar und nach einer Woche belegreif."
+    }
+  ];
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${businessInfo.url}/#reviews`,
+    "name": businessInfo.name,
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "282",
+      "reviewCount": "282"
+    },
+    "review": reviews.map(r => ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": r.author
+      },
+      "datePublished": r.date,
+      "reviewBody": r.text,
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": r.rating,
+        "bestRating": 5,
+        "worstRating": 1
+      }
+    }))
+  };
+}
+
+export function generateSpeakableSchema(page: { url: string; headline: string; summary: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": page.url,
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", ".hero-text", ".key-benefits"]
+    },
+    "name": page.headline,
+    "description": page.summary
+  };
+}
+
+export function generateVideoSchema(video: {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  uploadDate: string;
+  duration: string;
+  contentUrl?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": video.name,
+    "description": video.description,
+    "thumbnailUrl": video.thumbnailUrl,
+    "uploadDate": video.uploadDate,
+    "duration": video.duration,
+    ...(video.contentUrl && { "contentUrl": video.contentUrl }),
+    "publisher": {
+      "@type": "Organization",
+      "name": businessInfo.name,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${businessInfo.url}/logo.png`
+      }
+    }
+  };
+}
+
+export function generateArticleSchema(article: {
+  headline: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified?: string;
+  author?: string;
+  image?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": article.headline,
+    "description": article.description,
+    "url": article.url,
+    "datePublished": article.datePublished,
+    "dateModified": article.dateModified || article.datePublished,
+    "author": {
+      "@type": "Person",
+      "name": article.author || "Mustafa Sakar"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": businessInfo.name,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${businessInfo.url}/logo.png`
+      }
+    },
+    ...(article.image && {
+      "image": {
+        "@type": "ImageObject",
+        "url": article.image
+      }
+    }),
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": article.url
+    }
+  };
+}
+
+export function generateOfferCatalogSchema() {
+  const services = [
+    { name: "Zementestrich", price: "32", description: "Klassischer Zementestrich nach DIN 18560" },
+    { name: "Fließestrich", price: "42", description: "Selbstnivellierender Calciumsulfat-Fließestrich" },
+    { name: "Heizestrich", price: "45", description: "Optimiert für Fußbodenheizungen" },
+    { name: "Schnellestrich", price: "48", description: "Belegreif in 1-5 Tagen" },
+    { name: "Industrieestrich", price: "65", description: "Hochbelastbare Böden für Gewerbe" }
+  ];
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Estrich-Preise München 2026",
+    "description": "Aktuelle Estrich-Preise pro Quadratmeter in München",
+    "numberOfItems": services.length,
+    "itemListElement": services.map((s, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "item": {
+        "@type": "Offer",
+        "name": s.name,
+        "description": s.description,
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": s.price,
+          "priceCurrency": "EUR",
+          "unitText": "QM",
+          "referenceQuantity": {
+            "@type": "QuantitativeValue",
+            "value": "1",
+            "unitCode": "MTK"
+          }
+        },
+        "seller": {
+          "@type": "LocalBusiness",
+          "@id": `${businessInfo.url}/#organization`
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "München"
+        }
+      }
+    }))
+  };
+}
