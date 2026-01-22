@@ -341,6 +341,73 @@ export default function Preise() {
         </div>
       </section>
 
+      <section className="py-8 bg-accent">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+          <div className="text-center mb-8">
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-2">Preisvergleich</p>
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">
+              Estrich-Preise München 2026 im Überblick
+            </h2>
+            <p className="text-xs text-muted-foreground">Stand: Januar 2026 | Letzte Aktualisierung: 22.01.2026</p>
+          </div>
+          
+          <div className="overflow-x-auto">
+            <table className="w-full bg-background rounded-lg overflow-hidden text-sm" data-testid="price-comparison-table">
+              <thead className="bg-muted">
+                <tr>
+                  <th className="px-4 py-3 text-left font-semibold">Estrichart</th>
+                  <th className="px-4 py-3 text-left font-semibold">Preis pro m²</th>
+                  <th className="px-4 py-3 text-left font-semibold">Trocknungszeit</th>
+                  <th className="px-4 py-3 text-left font-semibold">Empfohlen für</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                <tr>
+                  <td className="px-4 py-3 font-medium">Zementestrich (CT)</td>
+                  <td className="px-4 py-3 text-primary font-semibold">25–35 €</td>
+                  <td className="px-4 py-3">28–42 Tage</td>
+                  <td className="px-4 py-3 text-muted-foreground">Wohnbau, Keller, Feuchträume</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 font-medium">Fließestrich (CA)</td>
+                  <td className="px-4 py-3 text-primary font-semibold">28–40 €</td>
+                  <td className="px-4 py-3">21–35 Tage</td>
+                  <td className="px-4 py-3 text-muted-foreground">Fußbodenheizung, große Flächen</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 font-medium">Heizestrich</td>
+                  <td className="px-4 py-3 text-primary font-semibold">35–50 €</td>
+                  <td className="px-4 py-3">21–35 Tage</td>
+                  <td className="px-4 py-3 text-muted-foreground">Neubau mit Fußbodenheizung</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 font-medium">Schnellestrich</td>
+                  <td className="px-4 py-3 text-primary font-semibold">40–55 €</td>
+                  <td className="px-4 py-3">1–7 Tage</td>
+                  <td className="px-4 py-3 text-muted-foreground">Renovierung, Zeitdruck</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 font-medium">Industrieestrich</td>
+                  <td className="px-4 py-3 text-primary font-semibold">45–80 €</td>
+                  <td className="px-4 py-3">14–28 Tage</td>
+                  <td className="px-4 py-3 text-muted-foreground">Gewerbe, Hallen, Garagen</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 font-medium">Sichtestrich</td>
+                  <td className="px-4 py-3 text-primary font-semibold">65–120 €</td>
+                  <td className="px-4 py-3">28–42 Tage</td>
+                  <td className="px-4 py-3 text-muted-foreground">Lofts, Showrooms, Design</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <p className="text-xs text-muted-foreground mt-4 text-center">
+            Alle Preise verstehen sich als Richtwerte inkl. Material und Einbau. Exakter Festpreis nach kostenloser Vor-Ort-Besichtigung.
+          </p>
+        </div>
+      </section>
+
       <section className="py-8">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="grid lg:grid-cols-2 gap-6">

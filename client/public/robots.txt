@@ -1,5 +1,5 @@
 # robots.txt für estriche-muenchen.de
-# Optimiert für maximale Indexierung durch Suchmaschinen
+# Optimiert für Suchmaschinen und KI-Suchsysteme (GEO 2026)
 
 User-agent: *
 Allow: /
@@ -7,18 +7,78 @@ Allow: /
 # Sitemap-Verweis
 Sitemap: https://estriche-muenchen.de/sitemap.xml
 
-# Crawl-Delay für schonenden Zugriff
-Crawl-delay: 1
+# === SUCHMASCHINEN-BOTS ===
 
-# Googlebot spezifisch
+# Googlebot - Volle Priorität
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
 
-# Bingbot spezifisch  
+# Google AI/SGE
+User-agent: Google-Extended
+Allow: /
+
+# Bingbot
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
+
+# === KI-SUCHMASCHINEN (GEO) ===
+
+# ChatGPT / OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Claude / Anthropic
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Microsoft Copilot
+User-agent: Copilot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# YouBot (You.com)
+User-agent: YouBot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+Crawl-delay: 1
+
+# === SOCIAL MEDIA BOTS ===
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# === BLOCKIERUNGEN ===
 
 # Blockiere unwichtige Ressourcen
 Disallow: /api/
@@ -31,3 +91,17 @@ Allow: /assets/*.css
 Allow: /assets/*.png
 Allow: /assets/*.jpg
 Allow: /assets/*.webp
+
+# === SCRAPER BLOCKIEREN ===
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
