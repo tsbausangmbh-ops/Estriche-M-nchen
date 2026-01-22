@@ -354,6 +354,8 @@ export default function ServiceDetail() {
                   <img 
                     src={image.src} 
                     alt={image.alt}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
@@ -536,6 +538,8 @@ export default function ServiceDetail() {
                     <img 
                       src={otherService.image} 
                       alt={otherService.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
