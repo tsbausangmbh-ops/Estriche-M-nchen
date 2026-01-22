@@ -167,12 +167,12 @@ export default function Kontakt() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              Sprechen Sie mit uns
+              <strong>Estrichleger München kontaktieren</strong> – Sprechen Sie mit uns
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">
-              Erzählen Sie uns von Ihrem Projekt. Wir beraten Sie kostenlos und erstellen Ihnen 
-              ein verbindliches Festpreis-Angebot – ohne Verpflichtung.
+              Erzählen Sie uns von Ihrem <strong>Estrich-Projekt</strong>. Wir beraten Sie kostenlos und erstellen Ihnen 
+              ein verbindliches <strong>Festpreis-Angebot</strong> – ohne Verpflichtung.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-8">
@@ -221,7 +221,7 @@ export default function Kontakt() {
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center max-w-3xl mx-auto mb-8">
             <h2 className="text-2xl sm:text-3xl font-extrabold mb-4 tracking-tight">
-              Erkennen Sie sich wieder?
+              <strong>Estrich-Beratung</strong> – Erkennen Sie sich wieder?
             </h2>
             <p className="text-muted-foreground">
               Viele unserer Kunden kommen mit genau diesen Herausforderungen zu uns:
@@ -257,7 +257,7 @@ export default function Kontakt() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-2xl sm:text-3xl font-extrabold mb-4 tracking-tight">
-                So erreichen Sie uns
+                <strong>Estrich Anfrage</strong> – So erreichen Sie uns
               </h2>
               <p className="text-muted-foreground mb-8">
                 Ob per Telefon, E-Mail oder Kontaktformular – wir sind für Sie da und 
@@ -336,7 +336,7 @@ export default function Kontakt() {
 
               <Card className="bg-accent">
                 <CardContent className="p-6">
-                  <h3 className="font-bold mb-4">Das erwartet Sie bei uns:</h3>
+                  <h3 className="font-bold mb-4">Das erwartet Sie bei Ihrer <strong>Estrich-Anfrage</strong>:</h3>
                   <ul className="space-y-3">
                     {benefits.map((benefit, index) => (
                       <li key={index} className="flex items-center gap-3">
@@ -350,7 +350,7 @@ export default function Kontakt() {
 
               <Card className="mt-6 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20">
                 <CardContent className="p-4">
-                  <h3 className="font-semibold text-sm mb-2">Hinweis zur Leistungserbringung</h3>
+                  <p className="font-semibold text-sm mb-2">Hinweis zur Leistungserbringung</p>
                   <p className="text-xs text-muted-foreground leading-relaxed">
                     Die angebotenen Leistungen werden durch rechtlich selbstständige Einzelgewerbebetriebe erbracht. 
                     Der jeweilige Vertragspartner wird im Angebot und Auftrag ausdrücklich benannt. 
@@ -364,7 +364,7 @@ export default function Kontakt() {
                   <div className="p-4 border-b">
                     <h3 className="font-bold flex items-center gap-2">
                       <MapPin className="w-4 h-4 text-primary" />
-                      Unser Standort in München
+                      <strong>Estrich München</strong> – Unser Standort
                     </h3>
                     <p className="text-sm text-muted-foreground mt-1">
                       Hardenbergstr. 4, 80992 München
@@ -476,7 +476,7 @@ export default function Kontakt() {
                     </div>
 
                     <div className="border-t pt-4">
-                      <h3 className="font-semibold mb-3 text-sm">Projektdetails</h3>
+                      <h3 className="font-semibold mb-3 text-sm"><strong>Estrich-Projekt</strong> Details</h3>
                       <div className="grid sm:grid-cols-3 gap-4">
                         <FormField
                           control={form.control}

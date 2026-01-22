@@ -199,7 +199,7 @@ export default function Preise() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              Faire Preise für München
+              <strong>Estrich Preise München</strong> – Faire Kosten pro m²
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">
@@ -253,7 +253,7 @@ export default function Preise() {
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-6">
             <h2 className="text-xl sm:text-2xl font-extrabold mb-3 tracking-tight">
-              Welches Problem möchten Sie lösen?
+              <strong>Estrich Kosten</strong> berechnen – Welches Problem möchten Sie lösen?
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
@@ -279,7 +279,7 @@ export default function Preise() {
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Preistransparenz</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-              Warum Sie bei uns keine bösen Überraschungen erleben werden
+              <strong>Estrich Festpreis</strong> – Warum Sie keine bösen Überraschungen erleben
             </h2>
           </div>
 
@@ -296,7 +296,7 @@ export default function Preise() {
                 budgetieren und ruhig schlafen.
               </p>
 
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Unser Festpreis-Versprechen</h3>
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Estrich Preisgarantie</strong> – Unser Festpreis-Versprechen</h3>
 
               <p>
                 Bevor wir Ihnen einen Preis nennen, kommen wir zu Ihnen. Wir prüfen den Untergrund, die 
@@ -310,7 +310,7 @@ export default function Preise() {
                 gibt uns die Sicherheit für verbindliche Preise.
               </p>
 
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Qualität statt Billigangebot</h3>
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Estrich Qualität</strong> statt Billigangebot</h3>
 
               <p>
                 Der billigste Anbieter ist selten der günstigste. Ein schlecht gemachter Estrich kostet Sie 
@@ -346,7 +346,7 @@ export default function Preise() {
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-2">Preisvergleich</p>
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">
-              Estrich-Preise München 2026 im Überblick
+              <strong>Estrich Kosten pro qm</strong> München 2026 im Überblick
             </h2>
             <p className="text-xs text-muted-foreground">Stand: Januar 2026 | Letzte Aktualisierung: 22.01.2026</p>
           </div>
@@ -472,9 +472,9 @@ export default function Preise() {
 
       <section className="py-8">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
-          <h2 className="text-2xl font-extrabold tracking-tight mb-6 text-center">
-            Zusätzliche Leistungen & Service
-          </h2>
+            <h3 className="text-2xl font-extrabold tracking-tight mb-6 text-center">
+              Zusätzliche <strong>Estrich-Leistungen</strong> & Service
+            </h3>
           <Card>
             <CardContent className="p-6">
               <div className="grid sm:grid-cols-2 gap-4">
@@ -494,28 +494,28 @@ export default function Preise() {
 
       <section className="py-8">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
-          <h2 className="text-2xl font-extrabold tracking-tight mb-6 text-center">
-            So funktioniert unser Festpreis
-          </h2>
+            <h3 className="text-2xl font-extrabold tracking-tight mb-6 text-center">
+              So funktioniert unser <strong>Estrich Festpreis-Angebot</strong>
+            </h3>
           <div className="grid md:grid-cols-3 gap-6">
             <Card>
               <CardContent className="p-5 text-center">
                 <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground font-bold flex items-center justify-center mx-auto mb-4">1</div>
-                <h3 className="font-bold mb-2">Besichtigung</h3>
+                <p className="font-bold mb-2">Besichtigung</p>
                 <p className="text-sm text-muted-foreground">Wir kommen kostenlos zu Ihnen und erfassen alle Details vor Ort.</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-5 text-center">
                 <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground font-bold flex items-center justify-center mx-auto mb-4">2</div>
-                <h3 className="font-bold mb-2">Festpreis-Angebot</h3>
+                <p className="font-bold mb-2">Festpreis-Angebot</p>
                 <p className="text-sm text-muted-foreground">Sie erhalten ein verbindliches Angebot – was drin steht, gilt.</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-5 text-center">
                 <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground font-bold flex items-center justify-center mx-auto mb-4">3</div>
-                <h3 className="font-bold mb-2">Keine Überraschungen</h3>
+                <p className="font-bold mb-2">Keine Überraschungen</p>
                 <p className="text-sm text-muted-foreground">Sie zahlen exakt den vereinbarten Preis. Keine Nachforderungen.</p>
               </CardContent>
             </Card>
@@ -526,7 +526,7 @@ export default function Preise() {
       <section className="py-12 bg-foreground text-primary-foreground">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-            Jetzt Ihr persönliches Angebot anfordern
+            Jetzt Ihr persönliches <strong>Estrich Angebot</strong> anfordern
           </h2>
           <p className="text-primary-foreground/70 mb-6">
             Die Richtwerte geben Ihnen eine Orientierung. Für Ihr konkretes Projekt erstellen wir 

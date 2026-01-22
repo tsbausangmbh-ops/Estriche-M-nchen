@@ -114,13 +114,13 @@ export default function UeberUns() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              Von Estrich-Stress zu Sorgenfreiheit
+              <strong>Estrich Meisterbetrieb München</strong> – Von Stress zu Sorgenfreiheit
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">
-              Seit über 30 Jahren verwandeln wir Baustellen-Chaos in perfekte Böden – 
-              termingerecht, zum Festpreis, ohne Ausreden. Stellen Sie sich vor, wie es sich anfühlt, 
-              wenn Ihr Projekt einfach läuft.
+              Seit über 30 Jahren verwandeln wir Baustellen-Chaos in perfekte <strong>Estrichböden</strong> – 
+              termingerecht, zum <strong>Festpreis</strong>, ohne Ausreden. Stellen Sie sich vor, wie es sich anfühlt, 
+              wenn Ihr <strong>Estrich-Projekt</strong> einfach läuft.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-8">
@@ -199,7 +199,7 @@ export default function UeberUns() {
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
                   <Shield className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="font-bold mb-1">Festpreis-Garantie</h3>
+                <p className="font-bold mb-1">Festpreis-Garantie</p>
                 <p className="text-sm text-muted-foreground">Was wir nennen, gilt. Immer.</p>
               </CardContent>
             </Card>
@@ -208,7 +208,7 @@ export default function UeberUns() {
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
                   <Clock className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="font-bold mb-1">Termingarantie</h3>
+                <p className="font-bold mb-1">Termingarantie</p>
                 <p className="text-sm text-muted-foreground">Pünktlich wie versprochen.</p>
               </CardContent>
             </Card>
@@ -217,7 +217,7 @@ export default function UeberUns() {
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
                   <Award className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="font-bold mb-1">30+ Jahre Erfahrung</h3>
+                <p className="font-bold mb-1">30+ Jahre Erfahrung</p>
                 <p className="text-sm text-muted-foreground">Meisterbetrieb seit 1994.</p>
               </CardContent>
             </Card>
@@ -226,7 +226,7 @@ export default function UeberUns() {
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
                   <Star className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="font-bold mb-1">5 Jahre Gewährleistung</h3>
+                <p className="font-bold mb-1">5 Jahre Gewährleistung</p>
                 <p className="text-sm text-muted-foreground">Volle Absicherung nach BGB.</p>
               </CardContent>
             </Card>
@@ -239,7 +239,7 @@ export default function UeberUns() {
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unsere Geschichte</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-              Wie alles begann
+              <strong>Estrich Firma München</strong> – Wie alles begann
             </h2>
           </div>
 
@@ -255,7 +255,7 @@ export default function UeberUns() {
                 Fundament unseres Unternehmens.
               </p>
 
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Was Sie bei uns bekommen</h3>
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Estrich-Service</strong> – Was Sie bei uns bekommen</h3>
 
               <p>
                 <strong>Ruhe.</strong> Ihr Projekt liegt in erfahrenen Händen. Der Preis steht fest, der Termin steht fest, 
@@ -272,7 +272,7 @@ export default function UeberUns() {
                 Gewährleistung – bei uns gelebte Realität, kein Marketingversprechen.
               </p>
 
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Unser Team</h3>
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Estrichleger Team</strong> in München</h3>
 
               <p>
                 Bei uns arbeiten Fachleute, die ihr Handwerk lieben. Jeder Mitarbeiter teilt unsere Werte: Ehrlichkeit ist 
@@ -280,7 +280,7 @@ export default function UeberUns() {
                 werden Sie den Unterschied spüren.
               </p>
 
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Unsere Philosophie</h3>
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Estrich Qualität</strong> – Unsere Philosophie</h3>
 
               <p>
                 <strong>Wir versprechen nur, was wir halten können. Und dann liefern wir mehr.</strong> Wenn wir Montag 
@@ -306,7 +306,7 @@ export default function UeberUns() {
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Mehrwert</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-              Was Sie durch uns gewinnen
+              <strong>Estrich verlegen lassen</strong> – Was Sie durch uns gewinnen
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               Sie werden spüren, wie sich Ihr Bauprojekt verändert – von Unsicherheit zu Vertrauen, 
@@ -321,7 +321,7 @@ export default function UeberUns() {
                   <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
                     <benefit.icon className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
+                  <p className="text-xl font-bold mb-3">{benefit.title}</p>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
                     {benefit.description}
                   </p>
@@ -341,7 +341,7 @@ export default function UeberUns() {
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Meilensteine</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-              30 Jahre Handwerkskunst aus München
+              <strong>Estrich Fachbetrieb</strong> – 30 Jahre aus München
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               Was als kleiner Familienbetrieb begann, ist heute einer der vertrauenswürdigsten 
@@ -354,7 +354,7 @@ export default function UeberUns() {
               <Card key={index} data-testid={`card-milestone-${index}`}>
                 <CardContent className="pt-6 pb-5">
                   <div className="text-3xl font-bold text-primary mb-2">{milestone.year}</div>
-                  <h3 className="font-bold mb-2">{milestone.title}</h3>
+                  <p className="font-bold mb-2">{milestone.title}</p>
                   <p className="text-sm text-muted-foreground">{milestone.description}</p>
                 </CardContent>
               </Card>
@@ -369,12 +369,12 @@ export default function UeberUns() {
             <div>
               <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Warum wir?</p>
               <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-6">
-                Warum Münchner Bauherren uns vertrauen
+                <strong>Estrichleger München</strong> – Warum Bauherren uns vertrauen
               </h2>
               <div className="space-y-6">
                 {trustReasons.map((reason, index) => (
                   <div key={index}>
-                    <h3 className="font-bold text-lg mb-2">{reason.title}</h3>
+                    <p className="font-bold text-lg mb-2">{reason.title}</p>
                     <p className="text-muted-foreground leading-relaxed">{reason.description}</p>
                   </div>
                 ))}
@@ -383,7 +383,7 @@ export default function UeberUns() {
 
             <Card className="bg-primary/5 border-primary/20">
               <CardContent className="p-8">
-                <h3 className="font-bold text-xl mb-6">Unsere Garantien für Sie</h3>
+                <p className="font-bold text-xl mb-6">Unsere Garantien für Sie</p>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
@@ -425,7 +425,7 @@ export default function UeberUns() {
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unsere Werte</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-              Das treibt uns an – jeden einzelnen Tag
+              <strong>Estrich-Fachmann</strong> – Das treibt uns an
             </h2>
           </div>
 
@@ -436,7 +436,7 @@ export default function UeberUns() {
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                     <value.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="font-bold mb-2">{value.title}</h3>
+                  <p className="font-bold mb-2">{value.title}</p>
                   <p className="text-sm text-muted-foreground">{value.description}</p>
                 </CardContent>
               </Card>
@@ -445,7 +445,7 @@ export default function UeberUns() {
 
           <Card>
             <CardContent className="p-6">
-              <h3 className="font-bold text-lg mb-4 text-center">Zertifizierungen & Mitgliedschaften</h3>
+              <p className="font-bold text-lg mb-4 text-center">Zertifizierungen & Mitgliedschaften</p>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {certifications.map((cert, index) => (
                   <div key={index} className="flex items-center gap-2 text-sm">
@@ -463,7 +463,7 @@ export default function UeberUns() {
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <Card className="border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20">
             <CardContent className="p-4">
-              <h3 className="font-semibold text-sm mb-2">Hinweis zur Leistungserbringung</h3>
+              <p className="font-semibold text-sm mb-2">Hinweis zur Leistungserbringung</p>
               <p className="text-xs text-muted-foreground leading-relaxed">
                 Die angebotenen Leistungen werden durch rechtlich selbstständige Einzelgewerbebetriebe erbracht. 
                 Der jeweilige Vertragspartner wird im Angebot und Auftrag ausdrücklich benannt. 

@@ -169,12 +169,12 @@ export default function Ablauf() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              In 7 Schritten zum perfekten Estrich
+              <strong>Estrich verlegen</strong> Ablauf – In 7 Schritten zum perfekten Boden
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">
               Kein Rätselraten, keine Überraschungen. Wir zeigen Ihnen genau, wie der Weg 
-              zu Ihrem neuen Boden aussieht – transparent und nachvollziehbar.
+              zu Ihrem neuen <strong>Estrich</strong> aussieht – transparent und nachvollziehbar.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-8">
@@ -224,7 +224,7 @@ export default function Ablauf() {
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Weg zum perfekten Boden</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-              Warum ein klarer Ablauf Ihnen Stress erspart
+              <strong>Estrich Ablauf</strong> – Warum Klarheit Ihnen Stress erspart
             </h2>
           </div>
 
@@ -241,7 +241,7 @@ export default function Ablauf() {
                 Genau dieses Gefühl möchten wir Ihnen geben.
               </p>
 
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Transparenz als Grundlage</h3>
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Estrich-Projekt</strong> – Transparenz als Grundlage</h3>
 
               <p>
                 In der Baubranche herrscht oft Intransparenz. Termine werden verschoben, Kosten steigen. 
@@ -255,7 +255,7 @@ export default function Ablauf() {
                 Besichtigung bis zur gemeinsamen Abnahme – alles läuft reibungslos.
               </p>
 
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Ihr Festpreis-Angebot</h3>
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Estrich Festpreis</strong> – Ihr verbindliches Angebot</h3>
 
               <p>
                 Innerhalb von 48 Stunden nach der Besichtigung erhalten Sie unser verbindliches Angebot. 
@@ -269,7 +269,7 @@ export default function Ablauf() {
                 „Wir warten noch auf den Estrichleger"-Situationen.
               </p>
 
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Qualität und Gewährleistung</h3>
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Estrich Qualität</strong> und Gewährleistung</h3>
 
               <p>
                 Mit kalibrierten Messgeräten prüfen wir die Restfeuchte. Erst wenn der Estrich wirklich 
@@ -316,7 +316,7 @@ export default function Ablauf() {
                   </div>
                   <div className="flex-1 pb-8">
                     <div className="flex flex-wrap items-center gap-3 mb-2">
-                      <h2 className="text-xl font-bold tracking-tight">{step.title}</h2>
+                      <p className="text-xl font-bold tracking-tight">{step.title}</p>
                       <Badge variant="secondary" className="text-xs">
                         <Clock className="w-3 h-3 mr-1" />
                         {step.duration}
@@ -350,7 +350,7 @@ export default function Ablauf() {
       <section className="py-8 bg-accent">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">Unsere Garantien für Sie</h2>
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4"><strong>Estrich Garantie</strong> – Unsere Sicherheit für Sie</h2>
             <p className="text-muted-foreground">
               Wir stehen zu unserer Arbeit – mit schriftlichen Garantien, die Sie absichern.
             </p>
@@ -364,7 +364,7 @@ export default function Ablauf() {
                       <guarantee.icon className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-bold mb-1">{guarantee.title}</h3>
+                      <p className="font-bold mb-1">{guarantee.title}</p>
                       <p className="text-sm text-muted-foreground">{guarantee.description}</p>
                     </div>
                   </div>

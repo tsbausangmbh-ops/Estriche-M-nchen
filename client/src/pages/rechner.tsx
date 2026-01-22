@@ -630,12 +630,12 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              Estrich-Kostenrechner
+              <strong>Estrich Kosten berechnen</strong> – Kostenrechner München
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">
-              Berechnen Sie unverbindlich die ungefähren Kosten für Ihr Estrich-Projekt. 
-              Für ein verbindliches Angebot kontaktieren Sie uns – kostenlos und ohne Verpflichtung.
+              Berechnen Sie unverbindlich die ungefähren <strong>Estrich Kosten pro m²</strong> für Ihr Projekt. 
+              Für ein verbindliches <strong>Festpreis-Angebot</strong> kontaktieren Sie uns – kostenlos und ohne Verpflichtung.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-8">
@@ -684,7 +684,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-6">
             <h2 className="text-xl sm:text-2xl font-extrabold mb-3 tracking-tight">
-              Warum berechnen Kunden hier ihr Budget?
+              <strong>Estrich Preise</strong> – Warum Kunden hier berechnen
             </h2>
           </div>
           <div className="grid sm:grid-cols-3 gap-4">
@@ -709,7 +709,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Budgetrechner</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-              Wissen Sie vorher, was Ihr Estrich kostet
+              <strong>Was kostet Estrich?</strong> – Wissen Sie vorher Bescheid
             </h2>
           </div>
 
@@ -726,7 +726,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
               und sehen Sie sofort, was Sie erwartet.
             </p>
 
-            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Warum diese Transparenz?</h3>
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Estrich Kosten transparent</strong> – Warum diese Offenheit?</h3>
 
             <p>
               Wir glauben: Wer informiert entscheidet, entscheidet besser. Mit über 30 Jahren 
@@ -1028,10 +1028,10 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
                 {showResult && parseFloat(squareMeters) > 0 && (
                   <Card className="border-green-500/50 bg-green-50/50 dark:bg-green-950/20">
                     <CardContent className="p-5 space-y-4">
-                      <h3 className="font-bold flex items-center gap-2">
+                      <p className="font-bold flex items-center gap-2">
                         <FileText className="w-4 h-4 text-green-600" />
                         PDF-Angebot herunterladen
-                      </h3>
+                      </p>
                       <p className="text-sm text-muted-foreground">
                         Laden Sie Ihre Kostenübersicht als PDF herunter.
                       </p>
@@ -1116,10 +1116,10 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
                 {showResult && parseFloat(squareMeters) > 0 && !formSubmitted && (
                   <Card className="border-primary">
                     <CardContent className="p-5 space-y-4">
-                      <h3 className="font-bold flex items-center gap-2">
+                      <p className="font-bold flex items-center gap-2">
                         <Send className="w-4 h-4 text-primary" />
                         Budget per E-Mail erhalten
-                      </h3>
+                      </p>
                       <p className="text-sm text-muted-foreground">
                         Erhalten Sie Ihre Budgetberechnung per E-Mail und wir kontaktieren Sie für ein verbindliches Angebot.
                       </p>
@@ -1283,7 +1283,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
                   <Card className="border-green-500 bg-green-50 dark:bg-green-950/20">
                     <CardContent className="p-5 text-center space-y-3">
                       <CheckCircle2 className="w-10 h-10 text-green-600 mx-auto" />
-                      <h3 className="font-bold text-green-800 dark:text-green-200">Anfrage erfolgreich gesendet!</h3>
+                      <p className="font-bold text-green-800 dark:text-green-200">Anfrage erfolgreich gesendet!</p>
                       <p className="text-sm text-green-700 dark:text-green-300">
                         Wir haben Ihre Budgetberechnung erhalten und melden uns innerhalb von 24 Stunden bei Ihnen.
                       </p>
@@ -1293,7 +1293,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
 
                 <Card className="bg-foreground text-primary-foreground">
                   <CardContent className="p-5 space-y-4">
-                    <h3 className="font-bold">Verbindliches Angebot gewünscht?</h3>
+                    <p className="font-bold">Verbindliches Angebot gewünscht?</p>
                     <p className="text-sm text-primary-foreground/70">
                       Für einen verbindlichen Festpreis kommen wir kostenlos zu Ihnen und erstellen 
                       ein individuelles Angebot – ohne Verpflichtung.
@@ -1337,7 +1337,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Kostenrechner</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
-              Warum nur ein Richtwert? – Ehrlichkeit statt falscher Versprechen
+              <strong>Estrich Preis pro m²</strong> – Warum nur ein Richtwert?
             </h2>
           </div>
 
@@ -1355,7 +1355,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
               dutzende weitere Faktoren, die man aus der Ferne nicht beurteilen kann.
             </p>
 
-            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Was der Rechner kann – und was nicht</h3>
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Estrich Kostenrechner</strong> – Was er kann und was nicht</h3>
 
             <p>
               Unser Kostenrechner gibt Ihnen eine erste Orientierung. Er basiert auf unseren durchschnittlichen 
@@ -1369,7 +1369,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
               Er berücksichtigt keine besonderen Anforderungen, die Sie vielleicht haben.
             </p>
 
-            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Warum wir keinen Online-Festpreis nennen</h3>
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Estrich Festpreis</strong> – Warum wir keinen Online-Preis nennen</h3>
 
             <p>
               Manche Anbieter werben mit Online-Festpreisen. Das klingt verlockend – aber seien Sie vorsichtig. 
@@ -1385,7 +1385,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
               bekommen Sie einen Preis, der steht.
             </p>
 
-            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Die Vorteile einer Vor-Ort-Besichtigung</h3>
+            <p className="text-xl font-bold text-foreground mt-8 mb-4">Die Vorteile einer Vor-Ort-Besichtigung</p>
 
             <p>
               Bei der kostenlosen Besichtigung passiert mehr als nur Messen. Wir beraten Sie, welche 
@@ -1399,7 +1399,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
               <strong>Das ist unser Versprechen.</strong>
             </p>
 
-            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Der nächste Schritt</h3>
+            <p className="text-xl font-bold text-foreground mt-8 mb-4">Der nächste Schritt</p>
 
             <p>
               Sie haben jetzt eine Orientierung, was Ihr Projekt ungefähr kosten könnte. Der Rechner hat 
@@ -1435,7 +1435,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <Card className="border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20">
             <CardContent className="p-4">
-              <h3 className="font-semibold text-sm mb-2">Hinweis zur Leistungserbringung</h3>
+              <p className="font-semibold text-sm mb-2">Hinweis zur Leistungserbringung</p>
               <p className="text-xs text-muted-foreground leading-relaxed">
                 Die angebotenen Leistungen werden durch rechtlich selbstständige Einzelgewerbebetriebe erbracht. 
                 Der jeweilige Vertragspartner wird im Angebot und Auftrag ausdrücklich benannt. 

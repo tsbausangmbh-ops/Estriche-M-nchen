@@ -279,7 +279,7 @@ export default function Home() {
                 Nur noch 3 Termine im Januar verfügbar
               </Badge>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] text-primary-foreground">
-                Endlich ein Estrich, der <span className="text-primary">hält, was er verspricht.</span>
+                <strong>Estrich München</strong> – Endlich ein Estrich, der <span className="text-primary">hält, was er verspricht.</span>
               </h1>
               <p className="text-lg text-primary-foreground/80 max-w-xl leading-relaxed">
                 <strong className="text-primary-foreground">Sie kennen das Gefühl:</strong> Handwerker, die nicht erscheinen. 
@@ -580,10 +580,12 @@ export default function Home() {
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unsere Leistungen</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Wählen Sie die Lösung, die zu Ihnen passt</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Unsere <strong>Estrich-Leistungen</strong> – Wählen Sie Ihre Lösung</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-              282 Münchner Kunden haben uns ihr Vertrauen geschenkt. Entdecken Sie, welche Lösung 
-              <strong className="text-foreground"> Ihr Projekt zum Erfolg führt</strong>.
+              Von <Link href="/leistungen/zementestrich" className="text-primary hover:underline"><strong>Zementestrich</strong></Link> über{" "}
+              <Link href="/leistungen/fliessestrich" className="text-primary hover:underline"><strong>Fließestrich</strong></Link> bis{" "}
+              <Link href="/leistungen/heizestrich" className="text-primary hover:underline"><strong>Heizestrich</strong></Link>:{" "}
+              <strong className="text-foreground">282 Münchner Kunden</strong> vertrauen uns.
             </p>
           </div>
 
@@ -648,7 +650,7 @@ export default function Home() {
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unser Ablauf</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">So einfach kommen Sie zu Ihrem Traumboden</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">So einfach lassen Sie <strong>Estrich verlegen</strong> in München</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               Während andere Handwerker Chaos verursachen, <strong className="text-foreground">erleben Sie bei uns Professionalität</strong>. Jeder Schritt ist durchdacht.
             </p>
@@ -669,7 +671,7 @@ export default function Home() {
                     <div className="hidden lg:block flex-1 h-px bg-border" />
                   )}
                 </div>
-                <h3 className="font-bold text-lg mb-3 tracking-tight" data-testid={`text-step-title-${index}`}>{step.title}</h3>
+                <h3 className="font-bold text-lg mb-3 tracking-tight" data-testid={`text-step-title-${index}`}><strong>{step.title}</strong></h3>
                 <p className="text-sm text-muted-foreground leading-relaxed" data-testid={`text-step-description-${index}`}>{step.description}</p>
               </div>
             ))}
@@ -682,7 +684,7 @@ export default function Home() {
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Transparente Preise</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Wissen Sie genau, was es kostet – bevor Sie sich entscheiden</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight"><strong>Estrich Preise</strong> München – Wissen Sie genau, was es kostet</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               Andere Handwerker schicken Rechnungen mit Überraschungen. <strong className="text-foreground">Bei uns gibt es nur einen Preis: den, der im Angebot steht.</strong>
             </p>
@@ -731,7 +733,7 @@ export default function Home() {
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihre Bedenken – unsere Antworten</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Das fragen uns 9 von 10 Kunden</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Häufige Fragen zu <strong>Estrich</strong> – Das fragen uns 9 von 10 Kunden</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               Sie haben Zweifel? Das ist verständlich. Lesen Sie, warum unsere Kunden ihre Skepsis überwunden haben – <strong className="text-foreground">und heute begeistert sind</strong>.
             </p>
@@ -784,7 +786,7 @@ export default function Home() {
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Vorteil: Lokale Nähe</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">In Ihrer Nachbarschaft – morgen schon vor Ort</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight"><strong>Estrichleger München</strong> – In Ihrer Nachbarschaft vor Ort</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               Keine langen Anfahrtswege, keine Verzögerungen. <strong className="text-foreground">Wir kennen München</strong> – und sind schneller bei Ihnen, als Sie denken.
             </p>
@@ -835,7 +837,7 @@ export default function Home() {
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Der erste Schritt zu Ihrem neuen Boden</h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight"><strong>Estrich Angebot</strong> anfordern – Ihr erster Schritt</h2>
               <p className="text-muted-foreground mb-8">
                 <strong className="text-foreground">Jeder Tag Warten</strong> schiebt Ihr Projekt weiter nach hinten. 
                 Machen Sie jetzt den ersten Schritt – in nur 60 Sekunden wissen Sie, woran Sie sind. <strong className="text-foreground">100% kostenlos, 0% Risiko.</strong>

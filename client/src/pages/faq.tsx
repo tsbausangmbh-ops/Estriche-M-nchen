@@ -211,12 +211,12 @@ export default function FAQ() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              {totalQuestions} Antworten auf Ihre Fragen
+              <strong>Estrich FAQ</strong> – {totalQuestions} Antworten auf Ihre Fragen
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">
-              Hier finden Sie ausführliche Antworten auf die häufigsten Fragen rund um Estrich, 
-              Fußbodenheizung, Kosten und unseren Ablauf. Falls Ihre Frage nicht dabei ist – fragen Sie uns!
+              Hier finden Sie ausführliche Antworten auf die häufigsten Fragen rund um <strong>Estrich</strong>, 
+              <strong>Fußbodenheizung</strong>, <strong>Estrich Kosten</strong> und unseren Ablauf. Falls Ihre Frage nicht dabei ist – fragen Sie uns!
             </p>
 
             <div className="flex flex-wrap gap-3 mb-8">
@@ -266,7 +266,7 @@ export default function FAQ() {
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">
-                Ihre Sicherheit steht bei uns an erster Stelle
+                <strong>Estrich-Beratung</strong> – Ihre Sicherheit steht an erster Stelle
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 <strong className="text-foreground">Kennen Sie das Gefühl?</strong> Sie haben Fragen, 
@@ -284,7 +284,7 @@ export default function FAQ() {
                   <Shield className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-sm mb-1">Transparente Beratung</h3>
+                  <p className="font-semibold text-sm mb-1">Transparente Beratung</p>
                   <p className="text-xs text-muted-foreground">Keine versteckten Kosten, keine bösen Überraschungen.</p>
                 </div>
               </div>
@@ -293,7 +293,7 @@ export default function FAQ() {
                   <Zap className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-sm mb-1">Schnelle Antworten</h3>
+                  <p className="font-semibold text-sm mb-1">Schnelle Antworten</p>
                   <p className="text-xs text-muted-foreground">Rückruf innerhalb von 24 Stunden garantiert.</p>
                 </div>
               </div>
@@ -302,7 +302,7 @@ export default function FAQ() {
                   <Award className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-sm mb-1">Echte Expertise</h3>
+                  <p className="font-semibold text-sm mb-1">Echte Expertise</p>
                   <p className="text-xs text-muted-foreground">30+ Jahre Erfahrung – wir kennen jede Situation.</p>
                 </div>
               </div>
@@ -311,7 +311,7 @@ export default function FAQ() {
                   <CheckCircle2 className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-sm mb-1">Persönliche Betreuung</h3>
+                  <p className="font-semibold text-sm mb-1">Persönliche Betreuung</p>
                   <p className="text-xs text-muted-foreground">Ein Ansprechpartner für Ihr gesamtes Projekt.</p>
                 </div>
               </div>
@@ -335,7 +335,7 @@ export default function FAQ() {
               <div key={categoryIndex} data-testid={`faq-category-${categoryIndex}`}>
                 <div className="flex items-center gap-3 mb-4">
                   <HelpCircle className="w-5 h-5 text-primary" />
-                  <h2 className="text-xl font-bold tracking-tight">{category.title}</h2>
+                  <h3 className="text-xl font-bold tracking-tight">{category.title}</h3>
                   <Badge variant="secondary" className="text-xs">{category.questions.length} Fragen</Badge>
                 </div>
                 <Accordion type="single" collapsible className="space-y-2">
