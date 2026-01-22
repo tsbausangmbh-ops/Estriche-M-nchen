@@ -80,6 +80,9 @@ export function Header() {
                   src={logoImage} 
                   alt="Estriche München Logo" 
                   className="h-12 w-auto rounded-md"
+                  width="48"
+                  height="48"
+                  fetchPriority="high"
                 />
                 <div className="hidden sm:block">
                   <div className="font-bold text-lg leading-tight">Estriche München</div>

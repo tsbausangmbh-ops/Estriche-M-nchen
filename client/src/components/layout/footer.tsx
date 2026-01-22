@@ -13,6 +13,10 @@ export function Footer() {
                 src={logoImage} 
                 alt="Estriche München Logo" 
                 className="h-10 w-auto rounded-md"
+                width="40"
+                height="40"
+                loading="lazy"
+                decoding="async"
               />
               <div>
                 <div className="font-bold text-lg">Estriche München</div>
