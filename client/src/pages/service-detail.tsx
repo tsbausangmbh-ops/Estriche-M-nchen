@@ -322,7 +322,7 @@ export default function ServiceDetail() {
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Warum Estrich München?</h2>
           </div>
           <p className="text-muted-foreground mb-8 max-w-2xl">
-            Was uns von anderen Estrichlegern unterscheidet
+            Was uns von anderen Estrichlegern unterscheidet – Sehen Sie unsere <Link href="/preise" className="text-primary hover:underline"><strong>Estrich Preise</strong></Link>.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {service.whyUs.slice(0, 6).map((reason, index) => (
@@ -563,7 +563,7 @@ export default function ServiceDetail() {
             Bereit für Ihren neuen Boden?
           </h2>
           <p className="text-sky-200 mb-6">
-            Kostenlose Beratung, verbindliches Festpreis-Angebot, saubere Arbeit.
+            <Link href="/kontakt" className="underline hover:no-underline"><strong>Kostenlose Beratung</strong></Link>, verbindliches Festpreis-Angebot, saubere Arbeit.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link href="/angebot">

@@ -737,7 +737,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
             <p>
               Die Berechnung ist unverbindlich und kostenlos. Für Ihr verbindliches Festpreis-Angebot 
               kommen wir gerne zu Ihnen – ebenfalls kostenlos. Nutzen Sie jetzt den Rechner und 
-              verschaffen Sie sich Klarheit.
+              verschaffen Sie sich Klarheit. Mehr Details zu unseren <Link href="/preise" className="text-primary hover:underline"><strong>Estrich Preisen</strong></Link> und dem <Link href="/ablauf" className="text-primary hover:underline"><strong>Projekt-Ablauf</strong></Link>.
             </p>
           </div>
 
@@ -1382,7 +1382,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
               <strong>Wir wählen einen anderen Weg: Ehrlichkeit von Anfang an.</strong> Der Rechner gibt 
               Ihnen eine realistische Spanne. Für einen verbindlichen Preis kommen wir zu Ihnen – kostenlos 
               und unverbindlich. Wir schauen uns alles an, stellen Fragen, verstehen Ihr Projekt. Und dann 
-              bekommen Sie einen Preis, der steht.
+              bekommen Sie einen Preis, der steht. <Link href="/kontakt" className="text-primary hover:underline"><strong>Kontaktieren Sie uns</strong></Link> für Ihre <Link href="/faq" className="text-primary hover:underline"><strong>Fragen zu Estrich</strong></Link>.
             </p>
 
             <p className="text-xl font-bold text-foreground mt-8 mb-4">Die Vorteile einer Vor-Ort-Besichtigung</p>

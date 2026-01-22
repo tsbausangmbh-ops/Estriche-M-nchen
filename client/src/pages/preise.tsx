@@ -305,9 +305,9 @@ export default function Preise() {
               </p>
 
               <p>
-                Warum können wir das anbieten? Weil wir seit über 30 Jahren Estrich in München verlegen. 
+                Warum können wir das anbieten? Weil wir seit über 30 Jahren <Link href="/" className="text-primary hover:underline"><strong>Estrich in München</strong></Link> verlegen. 
                 Über 1.200 Projekte haben uns gezeigt, was uns erwartet und was es kostet. Diese Erfahrung 
-                gibt uns die Sicherheit für verbindliche Preise.
+                gibt uns die Sicherheit für verbindliche Preise. Berechnen Sie Ihre <Link href="/rechner" className="text-primary hover:underline"><strong>Estrich Kosten</strong></Link> vorab mit unserem Online-Rechner.
               </p>
 
               <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Estrich Qualität</strong> statt Billigangebot</h3>
@@ -315,7 +315,7 @@ export default function Preise() {
               <p>
                 Der billigste Anbieter ist selten der günstigste. Ein schlecht gemachter Estrich kostet Sie 
                 am Ende mehr – durch Risse, Unebenheiten und Verzögerungen. Bei uns bekommen Sie vom ersten 
-                Tag an Qualität: Ein Boden, der jahrzehntelang hält.
+                Tag an Qualität: Ein Boden, der jahrzehntelang hält. Bei Fragen hilft unser <Link href="/faq" className="text-primary hover:underline"><strong>Estrich FAQ</strong></Link>.
               </p>
 
               <p>

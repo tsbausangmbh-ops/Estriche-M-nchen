@@ -275,7 +275,7 @@ export default function FAQ() {
               <p className="text-muted-foreground leading-relaxed">
                 Wir beantworten nicht nur Ihre Fragen – wir sorgen dafür, dass Sie sich 
                 <strong className="text-foreground"> sicher und gut beraten</strong> fühlen. 
-                Denn nur wer informiert ist, kann die richtigen Entscheidungen treffen.
+                Denn nur wer informiert ist, kann die richtigen Entscheidungen treffen. Sehen Sie auch unsere <Link href="/preise" className="text-primary hover:underline"><strong>Estrich Preise</strong></Link> und den <Link href="/ablauf" className="text-primary hover:underline"><strong>Ablauf</strong></Link>.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 gap-4">

@@ -252,7 +252,7 @@ export default function UeberUns() {
               <p>
                 In diesem Moment fasste er einen Entschluss: <strong>„Wenn ich es besser machen kann als diese Leute, dann 
                 schulde ich es jedem Bauherrn, der das gleiche erlebt wie ich."</strong> Diese Worte sind bis heute das 
-                Fundament unseres Unternehmens.
+                Fundament unseres Unternehmens. Erfahren Sie mehr über unseren <Link href="/ablauf" className="text-primary hover:underline"><strong>Projekt-Ablauf</strong></Link> und unsere <Link href="/preise" className="text-primary hover:underline"><strong>transparenten Preise</strong></Link>.
               </p>
 
               <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Estrich-Service</strong> – Was Sie bei uns bekommen</h3>

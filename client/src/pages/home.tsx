@@ -763,7 +763,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-6">
-            <p className="text-muted-foreground mb-4">Noch unsicher? <strong className="text-foreground">Ein Gespräch kostet Sie nichts – außer 5 Minuten Zeit.</strong></p>
+            <p className="text-muted-foreground mb-4">Noch unsicher? Sehen Sie unsere <Link href="/preise" className="text-primary hover:underline"><strong>Estrich Preise</strong></Link> oder nutzen Sie den <Link href="/rechner" className="text-primary hover:underline"><strong>Kostenrechner</strong></Link>. <strong className="text-foreground">Ein Gespräch kostet Sie nichts – außer 5 Minuten Zeit.</strong></p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/angebot">
                 <Button size="lg" data-testid="button-faq-cta">
@@ -788,7 +788,7 @@ export default function Home() {
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Vorteil: Lokale Nähe</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight"><strong>Estrichleger München</strong> – In Ihrer Nachbarschaft vor Ort</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-              Keine langen Anfahrtswege, keine Verzögerungen. <strong className="text-foreground">Wir kennen München</strong> – und sind schneller bei Ihnen, als Sie denken.
+              Keine langen Anfahrtswege, keine Verzögerungen. <strong className="text-foreground">Wir kennen München</strong> – und sind schneller bei Ihnen, als Sie denken. Erfahren Sie mehr <Link href="/ueber-uns" className="text-primary hover:underline"><strong>über unser Team</strong></Link>.
             </p>
           </div>
 

@@ -251,8 +251,8 @@ export default function Ablauf() {
 
               <p>
                 Jeder unserer sieben Schritte ist durchdacht und erprobt. Über 30 Jahre Erfahrung und 
-                mehr als 1.200 Projekte haben uns gezeigt, was funktioniert. Von der kostenlosen 
-                Besichtigung bis zur gemeinsamen Abnahme – alles läuft reibungslos.
+                mehr als 1.200 Projekte haben uns gezeigt, was funktioniert. Von der <Link href="/kontakt" className="text-primary hover:underline"><strong>kostenlosen Beratung</strong></Link> bis 
+                zur gemeinsamen Abnahme – alles läuft reibungslos. Informieren Sie sich über unsere <Link href="/preise" className="text-primary hover:underline"><strong>Estrich Preise</strong></Link>.
               </p>
 
               <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Estrich Festpreis</strong> – Ihr verbindliches Angebot</h3>
@@ -279,7 +279,7 @@ export default function Ablauf() {
 
               <p>
                 <strong>Über 282 zufriedene Kunden in München haben diesen Ablauf erlebt.</strong> 
-                Sind Sie bereit, den Unterschied selbst zu erleben?
+                Sind Sie bereit, den Unterschied selbst zu erleben? Erfahren Sie mehr <Link href="/ueber-uns" className="text-primary hover:underline"><strong>über unser Team</strong></Link>.
               </p>
             </div>
 

@@ -246,7 +246,7 @@ export default function Kontakt() {
           </div>
           <div className="text-center mt-6">
             <p className="text-muted-foreground">
-              <strong className="text-foreground">Dann sind Sie bei uns richtig.</strong> Erzählen Sie uns Ihr Problem – wir finden die Lösung.
+              <strong className="text-foreground">Dann sind Sie bei uns richtig.</strong> Erzählen Sie uns Ihr Problem – wir finden die Lösung. Lesen Sie auch unser <Link href="/faq" className="text-primary hover:underline"><strong>FAQ</strong></Link> oder berechnen Sie Ihre <Link href="/rechner" className="text-primary hover:underline"><strong>Estrich Kosten</strong></Link>.
             </p>
           </div>
         </div>
