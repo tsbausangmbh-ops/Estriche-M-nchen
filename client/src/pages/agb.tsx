@@ -14,6 +14,7 @@ export default function AGB() {
       <Helmet>
         <title>AGB | Allgemeine Geschäftsbedingungen | Estriche München</title>
         <meta name="description" content="Allgemeine Geschäftsbedingungen von Estriche München für Estrich- und Bodenarbeiten gemäß BGB Bauvertragsrecht (§§ 650a–650o BGB)." />
+        <meta name="keywords" content="AGB Estrich München, Allgemeine Geschäftsbedingungen Estrichleger, Bauvertrag München, Estrichvertrag AGB, Handwerker AGB Bayern" />
         <link rel="canonical" href="https://estriche-muenchen.de/agb" />
       </Helmet>
       <Header />
@@ -46,7 +47,7 @@ export default function AGB() {
             </p>
 
             <div className="flex flex-wrap gap-3 mb-8">
-              {["BGB-konform", "Verbraucherschutz", "Festpreis-Garantie", "Faire Bedingungen"].map((feature, index) => (
+              {["BGB-konform", "Verbraucherschutz", "VOB/B 2019", "Faire Bedingungen"].map((feature, index) => (
                 <div key={index} className="flex items-center gap-2 text-sm text-white/90">
                   <CheckCircle2 className="w-4 h-4 text-primary" />
                   <span>{feature}</span>
@@ -91,285 +92,439 @@ export default function AGB() {
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <Card className="mb-6">
             <CardContent className="p-6 space-y-8">
-              
-              <div>
-                <h2 className="text-xl font-bold mb-3">§ 1 Geltungsbereich und Vertragsart</h2>
-                <p className="text-muted-foreground">
-                  (1) Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen 
-                  Estriche München (nachfolgend „Auftragnehmer") und dem Kunden (nachfolgend „Auftraggeber") 
-                  über Estrich-, Boden- und Dämmarbeiten sowie damit verbundene Leistungen.
-                  <br /><br />
-                  (2) Bei den von uns erbrachten Leistungen handelt es sich um Bauverträge im Sinne des 
-                  § 650a BGB. Es gelten daher die besonderen Vorschriften des Bauvertragsrechts 
-                  (§§ 650a–650o BGB) in der jeweils aktuellen Fassung.
-                  <br /><br />
-                  (3) Abweichende Bedingungen des Auftraggebers werden nicht anerkannt, es sei denn, der 
-                  Auftragnehmer stimmt ihrer Geltung ausdrücklich schriftlich zu.
-                  <br /><br />
-                  (4) Diese AGB gelten sowohl gegenüber Verbrauchern als auch gegenüber Unternehmern, 
-                  es sei denn, in der jeweiligen Klausel wird eine Differenzierung vorgenommen.
-                  <br /><br />
-                  (5) <strong>Partnernetzwerk:</strong> Die Ausführung der Estricharbeiten erfolgt durch 
-                  qualifizierte Meisterbetriebe und Fachfirmen aus unserem Partnernetzwerk. Der Auftragnehmer 
-                  vermittelt und koordiniert diese Leistungen. Die ausführenden Partnerbetriebe sind für die 
-                  fachgerechte Durchführung der Arbeiten verantwortlich und arbeiten nach höchsten 
-                  Qualitätsstandards.<br />
-                  Ausführende Firma: Hüseyin Türker (Estrich T.H. UG)
-                </p>
-              </div>
 
-              <div>
-                <h2 className="text-xl font-bold mb-3">§ 2 Vertragsschluss und Angebot</h2>
-                <p className="text-muted-foreground">
-                  (1) Unsere Angebote sind freibleibend und unverbindlich, sofern sie nicht ausdrücklich 
-                  als verbindlich gekennzeichnet sind.
-                  <br /><br />
-                  (2) Ein Vertrag kommt erst durch unsere schriftliche Auftragsbestätigung oder durch 
-                  Beginn der Ausführung der Arbeiten zustande.
-                  <br /><br />
-                  (3) Festpreisangebote sind bindend für den angegebenen Zeitraum, in der Regel 30 Tage 
-                  ab Angebotsdatum. Sie basieren auf den bei der Besichtigung festgestellten Gegebenheiten.
-                  <br /><br />
-                  (4) Ändern sich die Gegebenheiten zwischen Besichtigung und Ausführung wesentlich, 
-                  behalten wir uns eine Anpassung des Angebots vor.
+              <div className="p-4 bg-muted/50 rounded-lg">
+                <h2 className="text-lg font-bold mb-3">Rechtsgrundlagen dieser AGB (Stand 2026)</h2>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Diese AGB wurden gemäß den aktuellen gesetzlichen Anforderungen für das Baugewerbe erstellt 
+                  und berücksichtigen insbesondere:
                 </p>
-              </div>
-
-              <div>
-                <h2 className="text-xl font-bold mb-3">§ 3 Leistungsumfang</h2>
-                <p className="text-muted-foreground">
-                  (1) Der Umfang der Leistungen ergibt sich aus dem schriftlichen Angebot bzw. der 
-                  Auftragsbestätigung. Mündliche Nebenabreden bedürfen der schriftlichen Bestätigung.
-                  <br /><br />
-                  (2) Zusätzliche Leistungen, die während der Ausführung erforderlich werden und nicht 
-                  im ursprünglichen Angebot enthalten sind, werden gesondert berechnet. Der Auftraggeber 
-                  wird hierüber vorab informiert.
-                  <br /><br />
-                  (3) Die Ausführung erfolgt nach den anerkannten Regeln der Technik, insbesondere nach 
-                  den einschlägigen DIN-Normen.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-xl font-bold mb-3">§ 3a Änderungen und Anordnungsrecht (§§ 650b, 650c BGB)</h2>
-                <p className="text-muted-foreground">
-                  (1) <strong>Änderungswünsche des Auftraggebers:</strong> Wünscht der Auftraggeber eine 
-                  Änderung des vereinbarten Leistungsumfangs oder eine Anpassung zur Erreichung des 
-                  vereinbarten Werkerfolgs (§ 650b Abs. 1 BGB), unterbreiten wir nach Prüfung ein 
-                  entsprechendes Angebot über die Mehr- oder Mindervergütung.
-                  <br /><br />
-                  (2) <strong>Anordnungsrecht:</strong> Sofern keine Einigung zustande kommt, kann der 
-                  Auftraggeber die Änderung in Textform anordnen (§ 650b Abs. 2 BGB), soweit die 
-                  Änderung zumutbar ist. Wir sind an die Anordnung gebunden.
-                  <br /><br />
-                  (3) <strong>Vergütungsanpassung nach § 650c BGB:</strong> Im Fall einer Anordnung nach 
-                  § 650b Abs. 2 BGB wird die Vergütung für den vermehrten oder verminderten Aufwand 
-                  nach den tatsächlich erforderlichen Kosten mit angemessenen Zuschlägen für 
-                  allgemeine Geschäftskosten, Wagnis und Gewinn ermittelt. Alternativ kann die 
-                  Vergütung auf Grundlage der ursprünglichen Preisvereinbarung (Urkalkulation) 
-                  fortgeschrieben werden.
-                  <br /><br />
-                  (4) <strong>80%-Abschlagszahlung:</strong> Für den infolge einer Anordnung vermehrten 
-                  Aufwand kann der Auftragnehmer gemäß § 650c Abs. 3 BGB eine Abschlagszahlung in 
-                  Höhe von 80% einer nach den Grundsätzen des Absatzes 1 erstellten Aufstellung 
-                  verlangen.
-                  <br /><br />
-                  (5) <strong>Einstweilige Verfügung:</strong> Der Auftragnehmer kann zur Durchsetzung 
-                  des Vergütungsanspruchs gemäß § 650d BGB eine einstweilige Verfügung auch ohne 
-                  Glaubhaftmachung der Eilbedürftigkeit beantragen.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-xl font-bold mb-3">§ 4 Mitwirkungspflichten des Auftraggebers</h2>
-                <p className="text-muted-foreground">
-                  (1) Der Auftraggeber hat sicherzustellen, dass:
-                </p>
-                <ul className="list-disc pl-6 text-muted-foreground mt-2 space-y-1">
-                  <li>der Untergrund für die Estricharbeiten ordnungsgemäß vorbereitet ist</li>
-                  <li>erforderliche Anschlüsse für Wasser und Strom vorhanden sind</li>
-                  <li>die Arbeitsflächen frei zugänglich und geräumt sind</li>
-                  <li>witterungsbedingte Voraussetzungen (Temperatur, Feuchtigkeit) gegeben sind</li>
-                  <li>notwendige Genehmigungen vorliegen</li>
+                <ul className="list-disc pl-6 text-sm text-muted-foreground space-y-1">
+                  <li>BGB §§ 631-651 (Werkvertragsrecht) – Grundlagen des Werkvertrags</li>
+                  <li>BGB §§ 650a-650h (Bauvertragsrecht) – Spezielle Regelungen für Bauverträge seit 01.01.2018</li>
+                  <li>BGB §§ 650i-650n (Verbraucherbauvertrag) – Besonderer Schutz für Verbraucher</li>
+                  <li>BGB §§ 305-310 (AGB-Recht) – Inhaltskontrolle und Einbeziehung</li>
+                  <li>DSGVO & BDSG – Datenschutzrechtliche Anforderungen</li>
+                  <li>VOB/B 2019 – Vergabe- und Vertragsordnung für Bauleistungen (bei B2B-Verträgen)</li>
                 </ul>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-bold mb-2">1. Allgemeines und Vertragsschluss</h2>
+                
+                <h3 className="font-semibold mt-4 mb-2">§ 1 Geltungsbereich</h3>
+                <p className="text-muted-foreground">
+                  (1) Die nachstehenden Allgemeinen Geschäftsbedingungen gelten für alle Rechtsgeschäfte der 
+                  Estriche München, Mustafa Sakar, Hardenbergstr. 4, 80992 München (nachfolgend "Auftragnehmer" 
+                  genannt) mit ihren Vertragspartnern (nachfolgend "Auftraggeber" genannt).
+                </p>
                 <p className="text-muted-foreground mt-2">
-                  (2) Verzögerungen durch mangelhafte Mitwirkung des Auftraggebers berechtigen den 
-                  Auftragnehmer zur Terminverschiebung und ggf. zur Geltendmachung von Mehrkosten.
+                  (2) Diese AGB gelten für Werkverträge im Sinne der §§ 631 ff. BGB sowie für Bauverträge im 
+                  Sinne des § 650a BGB. Bei Verträgen mit Verbrauchern (§ 13 BGB) gelten ergänzend die 
+                  Bestimmungen zum Verbraucherbauvertrag (§§ 650i-650n BGB).
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (3) Abweichende, entgegenstehende oder ergänzende Allgemeine Geschäftsbedingungen des 
+                  Auftraggebers werden nur dann Vertragsbestandteil, wenn und soweit der Auftragnehmer ihrer 
+                  Geltung ausdrücklich schriftlich zugestimmt hat.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (4) Diese AGB gelten gegenüber Unternehmern (§ 14 BGB) auch für alle zukünftigen 
+                  Geschäftsbeziehungen.
+                </p>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 2 Vertragsgegenstand (Bauvertrag § 650a BGB)</h3>
+                <p className="text-muted-foreground">
+                  (1) Der Auftragnehmer erbringt Werkleistungen im Bereich Estricharbeiten, Bodenarbeiten und 
+                  Wärmedämmung. Der genaue Leistungsumfang ergibt sich aus dem jeweiligen Angebot und der 
+                  Leistungsbeschreibung.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Der Vertrag ist ein Bauvertrag im Sinne des § 650a Abs. 1 BGB, wenn er die Herstellung, 
+                  die Wiederherstellung, die Beseitigung oder den Umbau eines Bauwerks, einer Außenanlage oder 
+                  eines Teils davon zum Gegenstand hat.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (3) Der Auftragnehmer ist berechtigt, zur Ausführung des Auftrags qualifizierte Subunternehmer 
+                  und Partnerbetriebe heranzuziehen.
+                </p>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 3 Zustandekommen des Vertrages</h3>
+                <p className="text-muted-foreground">
+                  (1) Angebote des Auftragnehmers sind freibleibend und unverbindlich, sofern sie nicht 
+                  ausdrücklich als verbindlich gekennzeichnet sind. Die Angebotserstellung kann kostenpflichtig 
+                  sein, wenn dies vorher vereinbart wurde.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Ein Vertrag kommt durch schriftliche Auftragserteilung (Brief, E-Mail, Fax) oder durch 
+                  ausdrückliche mündliche Beauftragung mit schriftlicher Bestätigung zustande.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (3) Bei Verbraucherbauverträgen (§ 650i BGB) erhält der Auftraggeber vor Vertragsschluss eine 
+                  detaillierte Baubeschreibung gemäß § 650j BGB, die Gegenstand des Vertrages wird.
+                </p>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 4 Getrennte Gewerbebetriebe / Vertragspartner</h3>
+                <p className="text-muted-foreground">
+                  (1) Die auf dieser Website dargestellten Leistungen werden von rechtlich selbstständigen 
+                  Einzelgewerbebetrieben erbracht.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Vertragspartner des Kunden ist ausschließlich der im jeweiligen Angebot, Auftrag und in 
+                  der Rechnung ausdrücklich benannte Gewerbebetrieb.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (3) Eine gemeinschaftliche Leistungserbringung im Sinne einer Gesellschaft bürgerlichen Rechts 
+                  (GbR) oder eine gesamtschuldnerische Haftung mehrerer Gewerbebetriebe ist nicht vereinbart und 
+                  wird ausdrücklich ausgeschlossen.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (4) Soweit Leistungen durch weitere, rechtlich selbstständige Partnerbetriebe ausgeführt werden, 
+                  erfolgt dies im Auftrag und unter Verantwortung des jeweiligen Vertragspartners.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-xl font-bold mb-3">§ 5 Preise und Zahlungsbedingungen</h2>
+                <h2 className="text-xl font-bold mb-2">2. Besondere Bestimmungen für Verbraucher</h2>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 5 Widerrufsrecht bei außerhalb von Geschäftsräumen geschlossenen Verträgen</h3>
+                <p className="text-muted-foreground font-semibold">Widerrufsbelehrung (§§ 312g, 355 BGB)</p>
+                <p className="text-muted-foreground mt-2">
+                  <strong>Widerrufsrecht:</strong> Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von 
+                  Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag des 
+                  Vertragsabschlusses.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (Estriche München, Hardenbergstr. 4, 80992 
+                  München, E-Mail: info@estriche-muenchen.de, Tel: 089 444438872) mittels einer eindeutigen 
+                  Erklärung (z. B. ein mit der Post versandter Brief oder E-Mail) über Ihren Entschluss, diesen 
+                  Vertrag zu widerrufen, informieren.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  <strong>Folgen des Widerrufs:</strong> Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle 
+                  Zahlungen, die wir von Ihnen erhalten haben, unverzüglich und spätestens binnen vierzehn Tagen 
+                  ab dem Tag zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf bei uns eingegangen ist.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (1) Das Widerrufsrecht gilt nur für Verbraucher bei Verträgen, die außerhalb unserer 
+                  Geschäftsräume geschlossen wurden (z.B. beim Kunden vor Ort).
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Das Widerrufsrecht erlischt bei einem Vertrag zur Erbringung von Dienstleistungen, wenn der 
+                  Auftragnehmer die Dienstleistung vollständig erbracht hat und mit der Ausführung erst begonnen 
+                  hat, nachdem der Verbraucher ausdrücklich zugestimmt hat.
+                </p>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 6 Baubeschreibung (§ 650j BGB)</h3>
                 <p className="text-muted-foreground">
-                  (1) Alle Preise verstehen sich in Euro inklusive der gesetzlichen Mehrwertsteuer, 
-                  sofern nicht anders angegeben.
-                  <br /><br />
-                  (2) Bei Aufträgen über 5.000 € netto kann eine Anzahlung von bis zu 30% des 
-                  Auftragswertes vereinbart werden.
-                  <br /><br />
-                  (3) Die Schlusszahlung ist innerhalb von 14 Tagen nach Rechnungsstellung ohne 
-                  Abzug fällig, sofern nicht anders vereinbart.
-                  <br /><br />
-                  (4) Bei Zahlungsverzug werden Verzugszinsen in gesetzlicher Höhe berechnet 
-                  (Verbraucher: 5 Prozentpunkte über Basiszins, Unternehmer: 9 Prozentpunkte über Basiszins).
+                  (1) Bei Verbraucherbauverträgen erhält der Auftraggeber rechtzeitig vor Abgabe seiner 
+                  Vertragserklärung eine Baubeschreibung in Textform.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Die Baubeschreibung enthält die wesentlichen Eigenschaften des Bauwerks, insbesondere: Art 
+                  und Umfang der Bauleistungen, Gebäudedaten, Beschreibung der Baukonstruktion, Ausbaustandards 
+                  und technische Angaben.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (3) Soweit die Baubeschreibung unvollständig oder unklar ist, ist der Vertrag zugunsten des 
+                  Verbrauchers auszulegen (§ 650k Abs. 2 BGB).
+                </p>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 7 Abschlagszahlungen bei Verbraucherverträgen (§ 650m BGB)</h3>
+                <p className="text-muted-foreground">
+                  (1) Bei Verbraucherbauverträgen dürfen Abschlagszahlungen insgesamt maximal 90 % der vereinbarten 
+                  Gesamtvergütung nicht übersteigen.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Der Auftragnehmer kann eine Abschlagszahlung in Höhe des Wertes der von ihm erbrachten und 
+                  nach dem Vertrag geschuldeten Leistungen verlangen (§ 632a Abs. 1 BGB).
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (3) Die Schlusszahlung (mindestens 10 %) wird nach erfolgter Abnahme fällig.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-xl font-bold mb-3">§ 6 Ausführungsfristen</h2>
+                <h2 className="text-xl font-bold mb-2">3. Ausführung und Vergütung</h2>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 8 Vergütung & Zahlungsbedingungen</h3>
                 <p className="text-muted-foreground">
-                  (1) Vereinbarte Termine und Fristen sind verbindlich. Termine für den Arbeitsbeginn 
-                  werden nach Auftragserteilung abgestimmt.
-                  <br /><br />
-                  (2) Bei Verzögerungen durch höhere Gewalt, unvorhersehbare Hindernisse oder durch 
-                  den Auftraggeber zu vertretende Umstände verlängern sich die Fristen entsprechend.
-                  <br /><br />
-                  (3) Der Auftragnehmer informiert den Auftraggeber unverzüglich über absehbare 
-                  Verzögerungen.
+                  (1) Es gelten die im Angebot vereinbarten Preise. Alle Preise verstehen sich in Euro netto 
+                  zuzüglich der gesetzlichen Mehrwertsteuer, sofern nicht anders angegeben.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Zahlungen sind, sofern nicht anders vereinbart, innerhalb von 14 Tagen nach Rechnungsstellung 
+                  ohne Abzug fällig.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (3) Bei Zahlungsverzug ist der Auftragnehmer berechtigt, Verzugszinsen in Höhe von 5 Prozentpunkten 
+                  über dem Basiszinssatz (bei Verbrauchern) bzw. 9 Prozentpunkten über dem Basiszinssatz (bei 
+                  Unternehmern) zu verlangen (§§ 288, 247 BGB).
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (4) Abschlagszahlungen werden gemäß § 632a BGB nach Baufortschritt in Rechnung gestellt. Die Höhe 
+                  der Abschläge richtet sich nach dem Wert der erbrachten Leistung.
+                </p>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 9 Anordnungsrecht des Auftraggebers (§ 650b BGB)</h3>
+                <p className="text-muted-foreground">
+                  (1) Der Auftraggeber kann Änderungen des vereinbarten Werkerfolgs oder Änderungen, die zur 
+                  Erreichung des vereinbarten Werkerfolgs notwendig sind, verlangen.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Streben die Parteien Einvernehmen über die Änderung an, trifft den Auftragnehmer eine 
+                  Mitwirkungspflicht. Nach Ablauf einer 30-Tage-Frist kann der Auftraggeber die Änderung in 
+                  Textform anordnen.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (3) Der Auftragnehmer ist nur dann zur Ausführung der Änderung verpflichtet, wenn ihm die 
+                  Ausführung zumutbar ist.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (4) Für die Vergütungsanpassung gilt § 650c BGB.
+                </p>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 10 Vergütungsanpassung (§ 650c BGB)</h3>
+                <p className="text-muted-foreground">
+                  (1) Bei Anordnungen nach § 650b BGB hat der Auftragnehmer Anspruch auf Anpassung der Vergütung.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Die Höhe des Vergütungsanspruchs bemisst sich nach den tatsächlich erforderlichen Kosten mit 
+                  angemessenen Zuschlägen für allgemeine Geschäftskosten, Wagnis und Gewinn.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (3) Der Auftragnehmer kann zur Berechnung auf die Ansätze einer vereinbarten Urkalkulation 
+                  zurückgreifen.
+                </p>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 11 Mitwirkungspflichten des Auftraggebers</h3>
+                <p className="text-muted-foreground">
+                  (1) Der Auftraggeber ist verpflichtet, alle notwendigen Mitwirkungshandlungen zu erbringen 
+                  (z.B. Zugang zur Baustelle, Bereitstellung von Strom/Wasser, Vorlage erforderlicher Unterlagen 
+                  und Genehmigungen, Räumung der Arbeitsbereiche).
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Verzögerungen, die durch fehlende Mitwirkung entstehen, gehen nicht zu Lasten des 
+                  Auftragnehmers. Entstehende Mehrkosten können dem Auftraggeber in Rechnung gestellt werden.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (3) Der Auftraggeber hat den Auftragnehmer über alle ihm bekannten Umstände zu informieren, 
+                  die für die Ausführung relevant sind (z.B. Asbest, Altlasten, besondere Gebäudebedingungen).
                 </p>
               </div>
 
               <div>
-                <h2 className="text-xl font-bold mb-3">§ 7 Abnahme (§ 640 BGB)</h2>
+                <h2 className="text-xl font-bold mb-2">4. Abnahme und Gewährleistung</h2>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 12 Abnahme (§ 640 BGB)</h3>
                 <p className="text-muted-foreground">
-                  (1) Nach Fertigstellung der Arbeiten erfolgt eine gemeinsame Abnahme gemäß § 640 BGB. 
-                  Der Auftraggeber ist verpflichtet, innerhalb von 12 Werktagen nach Fertigstellungsanzeige 
-                  die Abnahme durchzuführen.
-                  <br /><br />
-                  (2) <strong>Fiktive Abnahme:</strong> Erklärt der Auftraggeber nicht innerhalb einer vom 
-                  Auftragnehmer gesetzten angemessenen Frist, ob er das Werk abnimmt, und liegt kein 
-                  wesentlicher Mangel vor, gilt das Werk als abgenommen (§ 640 Abs. 2 BGB).
-                  <br /><br />
-                  (3) Die Abnahme gilt auch als erfolgt, wenn der Auftraggeber die Leistung nutzt oder den 
-                  Bodenbelag verlegen lässt, ohne wesentliche Mängel gerügt zu haben.
-                  <br /><br />
-                  (4) <strong>Zustandsfeststellung bei Verweigerung:</strong> Verweigert der Auftraggeber 
-                  die Abnahme unter Angabe von Mängeln, kann auf Verlangen einer Partei eine gemeinsame 
-                  Zustandsfeststellung durchgeführt werden (§ 650g BGB).
-                  <br /><br />
-                  (5) Etwaige Mängel sind bei der Abnahme schriftlich festzuhalten. Dem Auftraggeber 
-                  steht bei einem wesentlichen Mangel ein Leistungsverweigerungsrecht zu, dessen Höhe 
-                  in der Regel dem Doppelten der voraussichtlichen Mängelbeseitigungskosten entspricht.
+                  (1) Der Auftraggeber ist verpflichtet, das vertragsmäßig hergestellte Werk abzunehmen, sofern 
+                  nicht nach der Beschaffenheit des Werkes die Abnahme ausgeschlossen ist.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Wegen unwesentlicher Mängel kann die Abnahme nicht verweigert werden.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (3) Als abgenommen gilt ein Werk auch, wenn der Auftragnehmer dem Auftraggeber nach 
+                  Fertigstellung eine angemessene Frist zur Abnahme gesetzt hat und der Auftraggeber die 
+                  Abnahme nicht innerhalb dieser Frist unter Angabe mindestens eines Mangels verweigert hat 
+                  (fiktive Abnahme gemäß § 640 Abs. 2 BGB).
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (4) Mit der Abnahme gehen die Gefahr und die Beweislast auf den Auftraggeber über. Zudem 
+                  werden die Gewährleistungsfristen in Gang gesetzt und die Schlussrechnung wird fällig.
+                </p>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 13 Gewährleistung (§§ 633, 634 BGB)</h3>
+                <p className="text-muted-foreground">
+                  (1) Der Auftragnehmer gewährleistet, dass das Werk bei Abnahme frei von Sach- und Rechtsmängeln ist.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Die Gewährleistungsfrist beträgt gemäß § 634a Abs. 1 Nr. 2 BGB fünf (5) Jahre bei Bauwerken 
+                  und Arbeiten an Bauwerken, beginnend mit der Abnahme.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (3) Offensichtliche Mängel sind dem Auftragnehmer unverzüglich, spätestens jedoch innerhalb von 
+                  zwei Wochen nach Abnahme schriftlich anzuzeigen.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (4) Bei Mängeln stehen dem Auftraggeber folgende Rechte zu (§ 634 BGB): Nacherfüllung verlangen, 
+                  selbst beseitigen und Ersatz der erforderlichen Aufwendungen verlangen, vom Vertrag zurücktreten 
+                  oder die Vergütung mindern, sowie Schadensersatz oder Ersatz vergeblicher Aufwendungen verlangen.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (5) Der Auftraggeber hat dem Auftragnehmer zunächst Gelegenheit zur Nacherfüllung zu geben. Erst 
+                  nach erfolglosem Fristablauf oder Verweigerung stehen dem Auftraggeber die weiteren Rechte zu.
+                </p>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 14 Haftung</h3>
+                <p className="text-muted-foreground">
+                  (1) Der Auftragnehmer haftet unbeschränkt für Schäden aus der Verletzung des Lebens, des Körpers 
+                  oder der Gesundheit, die auf einer vorsätzlichen oder fahrlässigen Pflichtverletzung beruhen.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Der Auftragnehmer haftet unbeschränkt für sonstige Schäden, die auf einer vorsätzlichen oder 
+                  grob fahrlässigen Pflichtverletzung beruhen.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (3) Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten (Kardinalpflichten) ist die 
+                  Haftung auf den vertragstypischen, vorhersehbaren Schaden begrenzt.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (4) Die Haftung nach dem Produkthaftungsgesetz sowie aufgrund von Garantiezusagen bleibt unberührt.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (5) Der Auftragnehmer verfügt über eine Betriebshaftpflichtversicherung. Details zur Deckungssumme 
+                  können auf Anfrage mitgeteilt werden.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-xl font-bold mb-3">§ 8 Gewährleistung</h2>
-                <p className="text-muted-foreground">
-                  (1) Die Gewährleistungsfrist beträgt 5 Jahre ab Abnahme (§ 634a BGB).
-                  <br /><br />
-                  (2) Mängelansprüche setzen voraus, dass der Auftraggeber seiner Untersuchungs- und 
-                  Rügepflicht ordnungsgemäß nachgekommen ist. Erkennbare Mängel sind unverzüglich, 
-                  spätestens bei der Abnahme, zu rügen.
-                  <br /><br />
-                  (3) Bei berechtigten Mängelrügen wird der Auftragnehmer nach seiner Wahl nachbessern 
-                  oder Ersatzleistung erbringen.
-                  <br /><br />
-                  (4) Die Gewährleistung erstreckt sich nicht auf Schäden durch:
-                </p>
-                <ul className="list-disc pl-6 text-muted-foreground mt-2 space-y-1">
-                  <li>unsachgemäße Behandlung oder Nutzung durch den Auftraggeber</li>
-                  <li>Einwirkungen Dritter</li>
-                  <li>Nichteinhaltung der Trocknungszeiten</li>
-                  <li>vorzeitige Belastung oder Beheizung</li>
-                </ul>
-              </div>
+                <h2 className="text-xl font-bold mb-2">5. Kündigung und Beendigung</h2>
 
-              <div>
-                <h2 className="text-xl font-bold mb-3">§ 9 Haftung</h2>
+                <h3 className="font-semibold mt-4 mb-2">§ 15 Kündigung durch den Auftraggeber (§ 648 BGB)</h3>
                 <p className="text-muted-foreground">
-                  (1) Der Auftragnehmer haftet unbeschränkt für Schäden aus der Verletzung des Lebens, 
-                  des Körpers oder der Gesundheit sowie für vorsätzlich oder grob fahrlässig verursachte Schäden.
-                  <br /><br />
-                  (2) Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung 
-                  auf den vertragstypisch vorhersehbaren Schaden begrenzt.
-                  <br /><br />
-                  (3) Im Übrigen ist die Haftung für leichte Fahrlässigkeit ausgeschlossen, soweit 
-                  gesetzlich zulässig.
+                  (1) Der Auftraggeber kann den Vertrag jederzeit bis zur Vollendung des Werkes kündigen.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Bei Kündigung ist der Auftragnehmer berechtigt, die vereinbarte Vergütung zu verlangen, muss 
+                  sich jedoch dasjenige anrechnen lassen, was er infolge der Aufhebung an Aufwendungen erspart oder 
+                  durch anderweitige Verwendung seiner Arbeitskraft erwirbt.
+                </p>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 16 Kündigung aus wichtigem Grund (§ 648a BGB)</h3>
+                <p className="text-muted-foreground">
+                  (1) Beide Vertragsparteien können den Vertrag aus wichtigem Grund ohne Einhaltung einer 
+                  Kündigungsfrist kündigen.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Ein wichtiger Grund liegt vor, wenn dem kündigenden Teil unter Berücksichtigung aller 
+                  Umstände und unter Abwägung der beiderseitigen Interessen die Fortsetzung des Vertragsverhältnisses 
+                  nicht zugemutet werden kann.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (3) Nach der Kündigung können beide Parteien verlangen, dass der Zustand des Werkes gemeinsam 
+                  festgestellt wird.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-xl font-bold mb-3">§ 10 Eigentumsvorbehalt</h2>
+                <h2 className="text-xl font-bold mb-2">6. Sonstige Bestimmungen</h2>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 17 Eigentumsvorbehalt</h3>
                 <p className="text-muted-foreground">
-                  Bis zur vollständigen Bezahlung aller Forderungen aus dem Vertragsverhältnis behält 
-                  sich der Auftragnehmer das Eigentum an den gelieferten Materialien vor, soweit diese 
-                  noch nicht mit dem Bauwerk verbunden sind.
+                  (1) Bis zur vollständigen Bezahlung aller Forderungen aus der Geschäftsverbindung verbleiben 
+                  gelieferte Materialien und Waren im Eigentum des Auftragnehmers.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Bei vertragswidrigem Verhalten des Auftraggebers, insbesondere bei Zahlungsverzug, ist der 
+                  Auftragnehmer berechtigt, die Vorbehaltsware zurückzufordern.
+                </p>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 18 Datenschutz</h3>
+                <p className="text-muted-foreground">
+                  (1) Der Auftragnehmer erhebt und verarbeitet personenbezogene Daten des Auftraggebers im Rahmen 
+                  der Vertragserfüllung gemäß Art. 6 Abs. 1 lit. b DSGVO.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Weitere Informationen zur Datenverarbeitung finden sich in unserer{" "}
+                  <Link href="/datenschutz" className="text-primary underline hover:no-underline">
+                    Datenschutzerklärung
+                  </Link>.
+                </p>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 19 Streitschlichtung</h3>
+                <p className="text-muted-foreground">
+                  (1) Die EU-Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:{" "}
+                  <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" 
+                     className="text-primary underline hover:no-underline">
+                    https://ec.europa.eu/consumers/odr
+                  </a>
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Der Auftragnehmer ist weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer 
+                  Verbraucherschlichtungsstelle teilzunehmen.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (3) Bei Streitigkeiten aus Bauverträgen kann die Schlichtungsstelle der Handwerkskammer München 
+                  angerufen werden.
+                </p>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 20 Schriftform und Textform</h3>
+                <p className="text-muted-foreground">
+                  (1) Änderungen und Ergänzungen dieses Vertrages bedürfen zu ihrer Wirksamkeit der Textform 
+                  (§ 126b BGB). Dies gilt auch für die Abbedingung dieser Schriftformklausel.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Mündliche Nebenabreden sind nur wirksam, wenn sie schriftlich bestätigt werden.
+                </p>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 21 Anwendbares Recht und Gerichtsstand</h3>
+                <p className="text-muted-foreground">
+                  (1) Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts (CISG).
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Gerichtsstand für alle Streitigkeiten aus dem Vertragsverhältnis ist, soweit gesetzlich 
+                  zulässig, München. Bei Verbrauchern gilt der gesetzliche Gerichtsstand.
+                </p>
+
+                <h3 className="font-semibold mt-4 mb-2">§ 22 Salvatorische Klausel</h3>
+                <p className="text-muted-foreground">
+                  (1) Sollte eine Bestimmung dieser AGB unwirksam sein oder werden, so bleibt der Vertrag im 
+                  Übrigen wirksam.
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  (2) Anstelle der unwirksamen Bestimmung gilt eine dem wirtschaftlichen Zweck der unwirksamen 
+                  Bestimmung möglichst nahekommende wirksame Regelung als vereinbart.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-xl font-bold mb-3">§ 11 Datenschutz</h2>
-                <p className="text-muted-foreground">
-                  Die Verarbeitung personenbezogener Daten erfolgt gemäß unserer Datenschutzerklärung 
-                  und im Einklang mit der DSGVO (EU) 2016/679. Die Datenschutzerklärung ist auf unserer 
-                  Website abrufbar.
-                </p>
-              </div>
+                <h2 className="text-xl font-bold mb-2">7. Wichtige gesetzliche Hinweise</h2>
+                <p className="text-muted-foreground font-semibold">Zusammenfassung der relevanten Gesetze (Stand 2026)</p>
 
-              <div>
-                <h2 className="text-xl font-bold mb-3">§ 12 Schlussbestimmungen</h2>
-                <p className="text-muted-foreground">
-                  (1) Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts.
-                  <br /><br />
-                  (2) Gerichtsstand für alle Streitigkeiten aus dem Vertragsverhältnis ist, soweit 
-                  gesetzlich zulässig, München.
-                  <br /><br />
-                  (3) Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, bleibt die 
-                  Wirksamkeit der übrigen Bestimmungen unberührt.
-                  <br /><br />
-                  (4) Änderungen und Ergänzungen dieser AGB bedürfen der Schriftform.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-xl font-bold mb-3">§ 13 Hinweise für Verbraucher</h2>
-                <p className="text-muted-foreground">
-                  (1) Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag 
-                  zu widerrufen, sofern die Arbeiten noch nicht begonnen haben.
-                  <br /><br />
-                  (2) Das Widerrufsrecht erlischt bei Verträgen über Dienstleistungen vorzeitig, wenn 
-                  wir die Dienstleistung vollständig erbracht haben und mit der Ausführung der 
-                  Dienstleistung erst begonnen haben, nachdem Sie dazu Ihre ausdrückliche Zustimmung 
-                  gegeben haben und gleichzeitig Ihre Kenntnis davon bestätigt haben, dass Sie Ihr 
-                  Widerrufsrecht bei vollständiger Vertragserfüllung verlieren.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-xl font-bold mb-3">§ 14 Besondere Bestimmungen für Verbraucherbauverträge (§ 650i–650o BGB)</h2>
-                <p className="text-muted-foreground">
-                  (1) <strong>Anwendungsbereich:</strong> Ist der Auftraggeber Verbraucher und umfassen die 
-                  beauftragten Arbeiten erhebliche Umbaumaßnahmen an einem bestehenden Gebäude, gelten 
-                  zusätzlich die §§ 650i–650o BGB (Verbraucherbauvertrag).
-                  <br /><br />
-                  (2) <strong>Baubeschreibung:</strong> Bei Verbraucherbauverträgen erhält der Auftraggeber 
-                  rechtzeitig vor Vertragsschluss eine Baubeschreibung gemäß § 650j BGB mit den wesentlichen 
-                  Eigenschaften der Bauleistung.
-                  <br /><br />
-                  (3) <strong>Widerrufsrecht:</strong> Dem Verbraucher steht ein Widerrufsrecht nach 
-                  § 650l BGB zu. Die Widerrufsfrist beträgt vierzehn Tage ab Vertragsschluss. Bei 
-                  Fernabsatzverträgen beginnt die Frist nicht vor Erfüllung der Informationspflichten.
-                  <br /><br />
-                  (4) <strong>Abschlagszahlungen:</strong> Abschlagszahlungen dürfen gemäß § 650m BGB 
-                  maximal 90% der Gesamtvergütung betragen. Zudem kann der Auftragnehmer bei der 
-                  ersten Abschlagszahlung eine Sicherheit für die rechtzeitige Zahlung verlangen.
-                  <br /><br />
-                  (5) <strong>Fertigstellungssicherheit:</strong> Der Auftraggeber kann bei einem 
-                  Verbraucherbauvertrag gemäß § 650m Abs. 2 BGB eine Sicherheit in Höhe von 5% der 
-                  Vergütung für die rechtzeitige Herstellung des Werks ohne wesentliche Mängel verlangen.
-                  <br /><br />
-                  (6) <strong>Erstellung von Unterlagen:</strong> Der Auftragnehmer erstellt und übergibt 
-                  dem Auftraggeber gemäß § 650n BGB rechtzeitig vor Beginn der Ausführung die Unterlagen, 
-                  die dieser benötigt, um gegenüber Behörden den Nachweis führen zu können.
-                </p>
+                <div className="mt-4 space-y-3 text-muted-foreground">
+                  <p>
+                    <strong>Werkvertragsrecht (§§ 631-651 BGB):</strong> Grundlagen für alle Werkverträge: Vergütung, 
+                    Abnahme, Gewährleistung, Kündigung.
+                  </p>
+                  <p>
+                    <strong>Bauvertragsrecht (§§ 650a-650h BGB) – seit 01.01.2018:</strong> Spezielle Regelungen für 
+                    Bauverträge: Anordnungsrecht (§ 650b), Vergütungsanpassung (§ 650c), Kündigung aus wichtigem Grund 
+                    (§ 648a), Zustandsfeststellung (§ 650g).
+                  </p>
+                  <p>
+                    <strong>Verbraucherbauvertrag (§§ 650i-650n BGB):</strong> Besonderer Schutz für Verbraucher: 
+                    Baubeschreibung (§ 650j), 14-Tage-Widerrufsrecht (§ 650h), max. 90% Abschlagszahlungen (§ 650m), 
+                    Unterlagenzugang (§ 650n).
+                  </p>
+                  <p>
+                    <strong>AGB-Recht (§§ 305-310 BGB):</strong> Einbeziehung, Inhaltskontrolle, Klauselverbote. 
+                    Transparenzgebot und Verbot überraschender Klauseln.
+                  </p>
+                  <p>
+                    <strong>Gewährleistungsfristen (§ 634a BGB):</strong> 5 Jahre bei Bauwerken (ab Abnahme), 2 Jahre 
+                    bei sonstigen Werken.
+                  </p>
+                  <p>
+                    <strong>Datenschutz (DSGVO, BDSG):</strong> Datenschutzerklärung, Einwilligung, Betroffenenrechte, 
+                    Auftragsverarbeitung.
+                  </p>
+                  <p>
+                    <strong>Fernabsatzrecht (§§ 312-312k BGB):</strong> Widerrufsrecht bei außerhalb von Geschäftsräumen 
+                    geschlossenen Verträgen.
+                  </p>
+                  <p>
+                    <strong>VOB/B 2019:</strong> Vergabe- und Vertragsordnung für Bauleistungen – bei B2B-Verträgen 
+                    als Ergänzung vereinbar.
+                  </p>
+                </div>
               </div>
 
               <div className="pt-4 border-t">
                 <p className="text-sm text-muted-foreground">
                   Stand: Januar 2026<br />
-                  Rechtsgrundlagen: BGB Bauvertragsrecht (§§ 650a–650o BGB) in der Fassung vom 01.01.2018, 
-                  zuletzt geändert durch Gesetz vom 10.08.2021, VOB/B, DSGVO
+                  Diese AGB wurden gemäß den aktuellen Anforderungen für das Baugewerbe und Verbraucherschutzrecht 2026 erstellt.
                 </p>
               </div>
             </CardContent>

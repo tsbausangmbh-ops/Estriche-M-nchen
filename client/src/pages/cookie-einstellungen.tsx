@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Link } from "wouter";
-import { Cookie, Shield, BarChart3, Megaphone, CheckCircle2, Phone, Users, ChevronRight } from "lucide-react";
+import { Cookie, Shield, BarChart3, Sparkles, CheckCircle2, Phone, Users, ChevronRight, Settings } from "lucide-react";
 import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.png";
 
 const COOKIE_CONSENT_KEY = "estrich-cookie-consent";
@@ -16,18 +16,27 @@ const COOKIE_CONSENT_VERSION = "1.0";
 interface CookiePreferences {
   essential: boolean;
   analytics: boolean;
-  marketing: boolean;
+  personalization: boolean;
   timestamp: string;
   version: string;
+  consentId: string;
+}
+
+function generateConsentId(): string {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
 }
 
 export default function CookieEinstellungen() {
   const [preferences, setPreferences] = useState<CookiePreferences>({
     essential: true,
     analytics: false,
-    marketing: false,
+    personalization: false,
     timestamp: "",
     version: COOKIE_CONSENT_VERSION,
+    consentId: "",
   });
   const [saved, setSaved] = useState(false);
 
@@ -48,6 +57,7 @@ export default function CookieEinstellungen() {
       ...prefs,
       timestamp: new Date().toISOString(),
       version: COOKIE_CONSENT_VERSION,
+      consentId: prefs.consentId || generateConsentId(),
     };
     localStorage.setItem(COOKIE_CONSENT_KEY, JSON.stringify(updatedPrefs));
     setPreferences(updatedPrefs);
@@ -59,9 +69,10 @@ export default function CookieEinstellungen() {
     savePreferences({
       essential: true,
       analytics: true,
-      marketing: true,
+      personalization: true,
       timestamp: "",
       version: COOKIE_CONSENT_VERSION,
+      consentId: preferences.consentId || generateConsentId(),
     });
   };
 
@@ -69,9 +80,10 @@ export default function CookieEinstellungen() {
     savePreferences({
       essential: true,
       analytics: false,
-      marketing: false,
+      personalization: false,
       timestamp: "",
       version: COOKIE_CONSENT_VERSION,
+      consentId: preferences.consentId || generateConsentId(),
     });
   };
 
@@ -79,11 +91,18 @@ export default function CookieEinstellungen() {
     savePreferences(preferences);
   };
 
+  const formatDate = (isoString: string) => {
+    if (!isoString) return "-";
+    const date = new Date(isoString);
+    return date.toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" });
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Cookie-Einstellungen | Estriche München | Datenschutz</title>
-        <meta name="description" content="Verwalten Sie Ihre Cookie-Einstellungen für Estriche München. Passen Sie Ihre Datenschutz-Präferenzen an." />
+        <title>Cookie-Richtlinie | Estriche München | Datenschutz</title>
+        <meta name="description" content="Cookie-Richtlinie von Estriche München gemäß DSGVO und TDDDG. Verwalten Sie Ihre Cookie-Einstellungen." />
+        <meta name="keywords" content="Cookie Richtlinie Estrich, Cookies Estrichleger München, TDDDG Handwerker Website, Tracking Baufirma Bayern, Cookie Einstellungen Bauunternehmen" />
         <link rel="canonical" href="https://estriche-muenchen.de/cookie-einstellungen" />
       </Helmet>
       <Header />
@@ -107,16 +126,16 @@ export default function CookieEinstellungen() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              Cookie-Einstellungen
+              Cookie-Richtlinie
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">
-              Hier können Sie Ihre Cookie-Präferenzen verwalten. Wir respektieren Ihre Privatsphäre 
-              und geben Ihnen volle Kontrolle über Ihre Daten.
+              Diese Webseite verwendet Cookies. Wir verwenden Cookies, um Inhalte zu personalisieren 
+              und die Zugriffe auf unsere Website zu analysieren.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-8">
-              {["DSGVO-konform", "Volle Kontrolle", "Transparente Nutzung", "Jederzeit änderbar"].map((feature, index) => (
+              {["DSGVO-konform", "TDDDG-konform", "Volle Kontrolle", "Jederzeit änderbar"].map((feature, index) => (
                 <div key={index} className="flex items-center gap-2 text-sm text-white/90">
                   <CheckCircle2 className="w-4 h-4 text-primary" />
                   <span>{feature}</span>
@@ -169,115 +188,136 @@ export default function CookieEinstellungen() {
           )}
 
           <Card className="mb-6">
-            <CardContent className="p-6">
-              <p className="text-muted-foreground mb-6">
-                Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten. 
-                Einige Cookies sind für den Betrieb der Website unerlässlich, während andere uns helfen, 
-                die Website zu verbessern und Ihnen personalisierte Inhalte anzuzeigen.
-              </p>
-
-              <div className="space-y-4">
-                <Card>
-                  <CardHeader className="pb-3">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                          <Shield className="w-5 h-5 text-primary" />
-                        </div>
-                        <div>
-                          <CardTitle className="text-base">Notwendige Cookies</CardTitle>
-                          <p className="text-sm text-muted-foreground">Immer aktiv</p>
-                        </div>
-                      </div>
-                      <Switch 
-                        checked={true} 
-                        disabled 
-                        data-testid="switch-cookie-essential"
-                      />
-                    </div>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <p className="text-sm text-muted-foreground">
-                      Diese Cookies sind für den Betrieb der Website unerlässlich. Sie ermöglichen grundlegende 
-                      Funktionen wie die Seitennavigation und den Zugang zu geschützten Bereichen. Die Website 
-                      kann ohne diese Cookies nicht ordnungsgemäß funktionieren.
-                    </p>
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      <Badge variant="secondary">Session-Management</Badge>
-                      <Badge variant="secondary">Sicherheit</Badge>
-                      <Badge variant="secondary">CSRF-Schutz</Badge>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardHeader className="pb-3">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center">
-                          <BarChart3 className="w-5 h-5 text-blue-500" />
-                        </div>
-                        <div>
-                          <CardTitle className="text-base">Analyse-Cookies</CardTitle>
-                          <p className="text-sm text-muted-foreground">Optional</p>
-                        </div>
-                      </div>
-                      <Switch 
-                        checked={preferences.analytics}
-                        onCheckedChange={(checked) => setPreferences(prev => ({ ...prev, analytics: checked }))}
-                        data-testid="switch-cookie-analytics"
-                      />
-                    </div>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <p className="text-sm text-muted-foreground">
-                      Diese Cookies helfen uns zu verstehen, wie Besucher mit unserer Website interagieren. 
-                      Die gesammelten Informationen werden anonymisiert und helfen uns, die Website zu 
-                      verbessern und benutzerfreundlicher zu gestalten.
-                    </p>
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      <Badge variant="secondary">Besucherstatistiken</Badge>
-                      <Badge variant="secondary">Seitenaufrufe</Badge>
-                      <Badge variant="secondary">Verweildauer</Badge>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardHeader className="pb-3">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center">
-                          <Megaphone className="w-5 h-5 text-orange-500" />
-                        </div>
-                        <div>
-                          <CardTitle className="text-base">Marketing-Cookies</CardTitle>
-                          <p className="text-sm text-muted-foreground">Optional</p>
-                        </div>
-                      </div>
-                      <Switch 
-                        checked={preferences.marketing}
-                        onCheckedChange={(checked) => setPreferences(prev => ({ ...prev, marketing: checked }))}
-                        data-testid="switch-cookie-marketing"
-                      />
-                    </div>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <p className="text-sm text-muted-foreground">
-                      Diese Cookies werden verwendet, um Werbung relevanter für Sie zu gestalten. Sie können 
-                      auch dazu dienen, die Wirksamkeit von Werbekampagnen zu messen. Diese Cookies werden 
-                      von Drittanbietern gesetzt.
-                    </p>
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      <Badge variant="secondary">Personalisierte Werbung</Badge>
-                      <Badge variant="secondary">Remarketing</Badge>
-                      <Badge variant="secondary">Conversion-Tracking</Badge>
-                    </div>
-                  </CardContent>
-                </Card>
+            <CardContent className="p-6 space-y-6">
+              <div>
+                <h2 className="text-xl font-bold mb-3">Was sind Cookies?</h2>
+                <p className="text-muted-foreground">
+                  Cookies sind kleine Textdateien, die von Webseiten verwendet werden, um die Benutzererfahrung 
+                  effizienter zu gestalten.
+                </p>
+                <p className="text-muted-foreground mt-3">
+                  Laut Gesetz können wir Cookies auf Ihrem Gerät speichern, wenn diese für den Betrieb dieser 
+                  Seite unbedingt notwendig sind. Für alle anderen Cookie-Typen benötigen wir Ihre Erlaubnis.
+                </p>
+                <p className="text-muted-foreground mt-3">
+                  Diese Seite verwendet unterschiedliche Cookie-Typen. Einige Cookies werden von Drittparteien 
+                  platziert, die auf unseren Seiten erscheinen.
+                </p>
+                <p className="text-muted-foreground mt-3">
+                  Sie können Ihre Einwilligung jederzeit von der Cookie-Erklärung auf unserer Website ändern 
+                  oder widerrufen.
+                </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 mt-8">
+              <div>
+                <p className="text-muted-foreground">
+                  Erfahren Sie in unserer{" "}
+                  <Link href="/datenschutz" className="text-primary underline hover:no-underline">
+                    Datenschutzrichtlinie
+                  </Link>{" "}
+                  mehr darüber, wer wir sind, wie Sie uns kontaktieren können und wie wir personenbezogene 
+                  Daten verarbeiten.
+                </p>
+              </div>
+
+              {preferences.consentId && preferences.timestamp && (
+                <div className="p-4 bg-muted/50 rounded-lg">
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Ihre Einwilligungs-ID:</strong> {preferences.consentId}<br />
+                    <strong>Datum:</strong> {formatDate(preferences.timestamp)}
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-2">
+                    Bitte geben Sie diese Daten an, wenn Sie uns bezüglich Ihrer Einwilligung kontaktieren.
+                  </p>
+                </div>
+              )}
+
+              <div>
+                <p className="text-sm text-muted-foreground">
+                  Ihre Einwilligung trifft auf die folgenden Domains zu: <strong>www.estriche-muenchen.de</strong>
+                </p>
+                <p className="text-sm text-muted-foreground mt-2">
+                  Die Cookie-Erklärung wurde das letzte Mal am 21.1.2026 aktualisiert.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="mb-6">
+            <CardHeader>
+              <div className="flex items-center gap-3">
+                <Settings className="w-5 h-5 text-primary" />
+                <CardTitle>Individuelle Cookie-Konfiguration</CardTitle>
+              </div>
+              <p className="text-sm text-muted-foreground mt-2">
+                Verwalten Sie Ihre Präferenzen direkt hier auf der Seite.
+              </p>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <Card>
+                <CardHeader className="pb-3">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                        <Shield className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <CardTitle className="text-base">Essenziell</CardTitle>
+                        <p className="text-sm text-muted-foreground">Notwendig für die Grundfunktionen (immer aktiv)</p>
+                      </div>
+                    </div>
+                    <Switch 
+                      checked={true} 
+                      disabled 
+                      data-testid="switch-cookie-essential"
+                    />
+                  </div>
+                </CardHeader>
+              </Card>
+
+              <Card>
+                <CardHeader className="pb-3">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center">
+                        <BarChart3 className="w-5 h-5 text-blue-500" />
+                      </div>
+                      <div>
+                        <CardTitle className="text-base">Analyse & Statistik</CardTitle>
+                        <p className="text-sm text-muted-foreground">Helfen uns, die Nutzung der Website zu verstehen</p>
+                      </div>
+                    </div>
+                    <Switch 
+                      checked={preferences.analytics}
+                      onCheckedChange={(checked) => setPreferences(prev => ({ ...prev, analytics: checked }))}
+                      data-testid="switch-cookie-analytics"
+                    />
+                  </div>
+                </CardHeader>
+              </Card>
+
+              <Card>
+                <CardHeader className="pb-3">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center">
+                        <Sparkles className="w-5 h-5 text-purple-500" />
+                      </div>
+                      <div>
+                        <CardTitle className="text-base">Personalisierung</CardTitle>
+                        <p className="text-sm text-muted-foreground">Optimiert Ihr Erlebnis durch relevante Inhalte</p>
+                      </div>
+                    </div>
+                    <Switch 
+                      checked={preferences.personalization}
+                      onCheckedChange={(checked) => setPreferences(prev => ({ ...prev, personalization: checked }))}
+                      data-testid="switch-cookie-personalization"
+                    />
+                  </div>
+                </CardHeader>
+              </Card>
+
+              <div className="flex flex-col sm:flex-row gap-3 pt-4">
                 <Button 
                   variant="outline" 
                   className="flex-1"
@@ -305,35 +345,110 @@ export default function CookieEinstellungen() {
             </CardContent>
           </Card>
 
+          <Card className="mb-6">
+            <CardContent className="p-6 space-y-6">
+              <div>
+                <h2 className="text-xl font-bold mb-4">Notwendig (2)</h2>
+                <p className="text-muted-foreground mb-4">
+                  Notwendige Cookies helfen dabei, eine Webseite nutzbar zu machen, indem sie Grundfunktionen 
+                  wie Seitennavigation und Zugriff auf sichere Bereiche der Webseite ermöglichen. Die Webseite 
+                  kann ohne diese Cookies nicht richtig funktionieren.
+                </p>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm border border-border">
+                    <thead className="bg-muted/50">
+                      <tr>
+                        <th className="p-3 text-left border-b border-border font-semibold">Name</th>
+                        <th className="p-3 text-left border-b border-border font-semibold">Anbieter</th>
+                        <th className="p-3 text-left border-b border-border font-semibold">Zweck</th>
+                        <th className="p-3 text-left border-b border-border font-semibold">Dauer</th>
+                        <th className="p-3 text-left border-b border-border font-semibold">Typ</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-muted-foreground">
+                      <tr>
+                        <td className="p-3 border-b border-border">CookieConsent</td>
+                        <td className="p-3 border-b border-border">Estriche München</td>
+                        <td className="p-3 border-b border-border">Speichert den Zustimmungsstatus des Benutzers für Cookies auf der aktuellen Domäne.</td>
+                        <td className="p-3 border-b border-border">1 Jahr</td>
+                        <td className="p-3 border-b border-border">HTTP-Cookie</td>
+                      </tr>
+                      <tr>
+                        <td className="p-3 border-b border-border">session_id</td>
+                        <td className="p-3 border-b border-border">Estriche München</td>
+                        <td className="p-3 border-b border-border">Wird verwendet, um Server-Anfragen an das Webseitenbackend zu managen.</td>
+                        <td className="p-3 border-b border-border">Sitzung</td>
+                        <td className="p-3 border-b border-border">HTTP-Cookie</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-bold mb-4">Statistiken (3)</h2>
+                <p className="text-muted-foreground mb-4">
+                  Statistik-Cookies helfen Webseiten-Besitzern zu verstehen, wie Besucher mit Webseiten 
+                  interagieren, indem Informationen anonym gesammelt und gemeldet werden.
+                </p>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm border border-border">
+                    <thead className="bg-muted/50">
+                      <tr>
+                        <th className="p-3 text-left border-b border-border font-semibold">Name</th>
+                        <th className="p-3 text-left border-b border-border font-semibold">Anbieter</th>
+                        <th className="p-3 text-left border-b border-border font-semibold">Zweck</th>
+                        <th className="p-3 text-left border-b border-border font-semibold">Dauer</th>
+                        <th className="p-3 text-left border-b border-border font-semibold">Typ</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-muted-foreground">
+                      <tr>
+                        <td className="p-3 border-b border-border">_ga</td>
+                        <td className="p-3 border-b border-border">Google</td>
+                        <td className="p-3 border-b border-border">Registriert eine eindeutige ID, die verwendet wird, um statistische Daten dazu, wie der Besucher die Website nutzt, zu generieren.</td>
+                        <td className="p-3 border-b border-border">2 Jahre</td>
+                        <td className="p-3 border-b border-border">HTTP-Cookie</td>
+                      </tr>
+                      <tr>
+                        <td className="p-3 border-b border-border">_gat</td>
+                        <td className="p-3 border-b border-border">Google</td>
+                        <td className="p-3 border-b border-border">Wird von Google Analytics verwendet, um die Anforderungsrate einzuschränken</td>
+                        <td className="p-3 border-b border-border">1 Tag</td>
+                        <td className="p-3 border-b border-border">HTTP-Cookie</td>
+                      </tr>
+                      <tr>
+                        <td className="p-3 border-b border-border">_gid</td>
+                        <td className="p-3 border-b border-border">Google</td>
+                        <td className="p-3 border-b border-border">Registriert eine eindeutige ID, die verwendet wird, um statistische Daten dazu, wie der Besucher die Website nutzt, zu generieren.</td>
+                        <td className="p-3 border-b border-border">1 Tag</td>
+                        <td className="p-3 border-b border-border">HTTP-Cookie</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           <Card>
             <CardContent className="p-6 space-y-6">
               <div>
-                <h2 className="text-xl font-bold mb-3">Weitere Informationen</h2>
+                <h2 className="text-xl font-bold mb-3">Kontakt</h2>
                 <p className="text-muted-foreground">
-                  Für detaillierte Informationen zum Datenschutz und zur Verwendung Ihrer personenbezogenen 
-                  Daten besuchen Sie bitte unsere{" "}
-                  <Link href="/datenschutz" className="text-primary underline hover:no-underline">
-                    Datenschutzerklärung
-                  </Link>.
+                  Bei Fragen zu unserer Cookie-Richtlinie können Sie uns jederzeit kontaktieren:<br /><br />
+                  Mustafa Sakar - Estriche München<br />
+                  Hardenbergstr. 4<br />
+                  80992 München<br /><br />
+                  E-Mail: <a href="mailto:info@estriche-muenchen.de" className="text-primary underline hover:no-underline">info@estriche-muenchen.de</a><br />
+                  Telefon: <a href="tel:+4989444438872" className="text-primary underline hover:no-underline">089 444438872</a>
                 </p>
               </div>
 
-              <div>
-                <h3 className="font-semibold mb-2">Ihre Rechte</h3>
-                <ul className="text-muted-foreground space-y-2 list-disc list-inside">
-                  <li>Sie können Ihre Cookie-Einstellungen jederzeit ändern</li>
-                  <li>Sie haben das Recht auf Auskunft über Ihre gespeicherten Daten</li>
-                  <li>Sie können die Löschung Ihrer Daten verlangen</li>
-                  <li>Sie können der Datenverarbeitung widersprechen</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="font-semibold mb-2">Kontakt</h3>
-                <p className="text-muted-foreground">
-                  Bei Fragen zum Datenschutz können Sie uns jederzeit kontaktieren:<br />
-                  E-Mail: <a href="mailto:info@estriche-muenchen.de" className="text-primary underline hover:no-underline">info@estriche-muenchen.de</a><br />
-                  Telefon: <a href="tel:+4989444438872" className="text-primary underline hover:no-underline">089 444438872</a>
+              <div className="pt-4 border-t">
+                <p className="text-sm text-muted-foreground">
+                  Stand: Januar 2026<br />
+                  Diese Cookie-Richtlinie wurde gemäß den Anforderungen des TDDDG und der DSGVO erstellt.
                 </p>
               </div>
             </CardContent>
