@@ -92,6 +92,15 @@ export function Header() {
             </div>
 
             <nav className="hidden md:flex items-center gap-1">
+              <Link href="/">
+                <Button 
+                  variant="ghost" 
+                  data-testid="nav-home"
+                  className={isHomePage ? "bg-accent" : ""}
+                >
+                  Estrich München
+                </Button>
+              </Link>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" data-testid="nav-leistungen">
@@ -123,7 +132,7 @@ export function Header() {
                   variant="ghost" 
                   data-testid="nav-preise"
                 >
-                  Preise
+                  Estrich Preise
                 </Button>
               </Link>
               <Link href="/rechner">
@@ -183,6 +192,15 @@ export function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden border-t bg-background">
             <div className="px-4 py-4 space-y-2">
+              <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+                <Button 
+                  variant="ghost" 
+                  className={`w-full justify-start ${isHomePage ? "bg-accent" : ""}`}
+                  data-testid="mobile-nav-home"
+                >
+                  Estrich München
+                </Button>
+              </Link>
               <div className="text-sm font-medium text-muted-foreground px-3 py-2">Leistungen</div>
               <div className="pl-2 space-y-1 mb-2">
                 {services.map((service) => (
@@ -214,7 +232,7 @@ export function Header() {
                   className="w-full justify-start"
                   data-testid="mobile-nav-preise"
                 >
-                  Preise
+                  Estrich Preise
                 </Button>
               </Link>
               <Link href="/rechner" onClick={() => setMobileMenuOpen(false)}>

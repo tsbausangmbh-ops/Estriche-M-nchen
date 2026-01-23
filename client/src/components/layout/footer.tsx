@@ -30,71 +30,74 @@ export function Footer() {
           </div>
 
           <div data-testid="footer-services">
-            <h4 className="font-semibold mb-4">Estrich-Leistungen München</h4>
+            <h4 className="font-semibold mb-4">Estrichleger München – Leistungen</h4>
             <ul className="space-y-2 text-sm text-background/70">
               <li>
+                <Link href="/" className="hover:text-background transition-colors font-medium">
+                  Estrich München
+                </Link>
+              </li>
+              <li>
                 <Link href="/leistungen/zementestrich" className="hover:text-background transition-colors">
-                  Zementestrich München
+                  Zementestrich München verlegen
                 </Link>
               </li>
               <li>
                 <Link href="/leistungen/fliessestrich" className="hover:text-background transition-colors">
-                  Fließestrich München
+                  Fließestrich München verlegen
                 </Link>
               </li>
               <li>
                 <Link href="/leistungen/heizestrich" className="hover:text-background transition-colors">
-                  Heizestrich München
+                  Heizestrich München Fußbodenheizung
                 </Link>
               </li>
               <li>
                 <Link href="/leistungen/industrieboeden" className="hover:text-background transition-colors">
-                  Industrieböden München
+                  Industrieestrich München Gewerbe
                 </Link>
               </li>
               <li>
                 <Link href="/leistungen/fussbodenheizung" className="hover:text-background transition-colors">
-                  Fußbodenheizung nachrüsten
+                  Fußbodenheizung nachrüsten München
                 </Link>
               </li>
               <li>
                 <Link href="/leistungen/schnellestrich" className="hover:text-background transition-colors">
-                  Schnellestrich München
-                </Link>
-              </li>
-              <li>
-                <Link href="/leistungen/waermedaemmung" className="hover:text-background transition-colors">
-                  Wärmedämmung Boden
+                  Schnellestrich München belegreif
                 </Link>
               </li>
               <li>
                 <Link href="/leistungen/sanierung" className="hover:text-background transition-colors">
-                  Estrichsanierung München
+                  Estrich Sanierung München Altbau
                 </Link>
               </li>
             </ul>
           </div>
 
           <div data-testid="footer-info">
-            <h4 className="font-semibold mb-4">Estrichleger Meisterbetrieb</h4>
+            <h4 className="font-semibold mb-4">Estrich Kosten & Beratung</h4>
             <ul className="space-y-2 text-sm text-background/70">
               <li>
-                <Link href="/preise" className="hover:text-background transition-colors">Estrich Preise München</Link>
+                <Link href="/preise" className="hover:text-background transition-colors font-medium">Estrich Kosten München pro m²</Link>
               </li>
               <li>
-                <Link href="/rechner" className="hover:text-background transition-colors">Estrich Kosten berechnen</Link>
+                <Link href="/rechner" className="hover:text-background transition-colors">Estrich Preise berechnen Rechner</Link>
               </li>
               <li>
-                <Link href="/ablauf" className="hover:text-background transition-colors">Estrich verlegen Ablauf</Link>
+                <Link href="/ablauf" className="hover:text-background transition-colors">Estrich verlegen Ablauf München</Link>
               </li>
               <li>
-                <Link href="/faq" className="hover:text-background transition-colors">Estrich FAQ München</Link>
+                <Link href="/faq" className="hover:text-background transition-colors">Estrich FAQ häufige Fragen</Link>
               </li>
               <li>
                 <Link href="/ueber-uns" className="hover:text-background transition-colors">Estrichleger Meisterbetrieb München</Link>
               </li>
               <li>
-                <Link href="/angebot" className="hover:text-background transition-colors">Kostenloses Angebot</Link>
+                <Link href="/angebot" className="hover:text-background transition-colors">Estrich Angebot kostenlos anfordern</Link>
+              </li>
+              <li>
+                <Link href="/ratgeber" className="hover:text-background transition-colors">Estrich Ratgeber Tipps</Link>
               </li>
             </ul>
           </div>
