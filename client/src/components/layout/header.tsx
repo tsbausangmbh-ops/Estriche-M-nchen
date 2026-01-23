@@ -79,13 +79,13 @@ export function Header() {
                 <img 
                   src={logoImage} 
                   alt="Estriche München Logo" 
-                  className="h-8 w-auto rounded-md"
+                  className="h-10 w-auto rounded-md"
                   width="48"
                   height="48"
                   {...{ fetchpriority: "high" } as any}
                 />
                 <div className="hidden sm:block">
-                  <div className="font-extrabold text-sm leading-tight">Estriche München</div>
+                  <div className="font-extrabold text-base leading-tight">Estriche München</div>
                   <div className="text-[8px] text-muted-foreground">Estrich • Bodenaufbau • Sanierung</div>
                 </div>
               </Link>
