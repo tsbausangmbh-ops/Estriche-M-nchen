@@ -79,19 +79,19 @@ export function Header() {
                 <img 
                   src={logoImage} 
                   alt="Estriche München Logo" 
-                  className="h-12 w-auto rounded-md"
+                  className="h-9 w-auto rounded-md"
                   width="48"
                   height="48"
                   {...{ fetchpriority: "high" } as any}
                 />
                 <div className="hidden sm:block">
-                  <div className="font-bold text-lg leading-tight">Estriche München</div>
-                  <div className="text-xs text-muted-foreground">Estrich • Bodenaufbau • Sanierung</div>
+                  <div className="font-bold text-sm leading-tight">Estriche München</div>
+                  <div className="text-[10px] text-muted-foreground">Estrich • Bodenaufbau • Sanierung</div>
                 </div>
               </Link>
             </div>
 
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav className="hidden xl:flex items-center gap-1">
               <Link href="/">
                 <Button 
                   variant="ghost" 
@@ -174,7 +174,7 @@ export function Header() {
               <ThemeToggle />
             </nav>
 
-            <div className="flex items-center gap-2 lg:hidden">
+            <div className="flex items-center gap-2 xl:hidden">
               <ThemeToggle />
               <Button
                 variant="ghost"
@@ -190,7 +190,7 @@ export function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t bg-background">
+          <div className="xl:hidden border-t bg-background">
             <div className="px-4 py-4 space-y-2">
               <Link href="/" onClick={() => setMobileMenuOpen(false)}>
                 <Button 
