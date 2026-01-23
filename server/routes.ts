@@ -8,25 +8,27 @@ import { sendContactNotification } from "./email";
 const SITE_URL = "https://estriche-muenchen.de";
 
 const sitemapRoutes = [
-  { url: "/", priority: 1.0, changefreq: "weekly" },
-  { url: "/leistungen/zementestrich", priority: 0.9, changefreq: "monthly" },
-  { url: "/leistungen/fliessestrich", priority: 0.9, changefreq: "monthly" },
-  { url: "/leistungen/industrieboeden", priority: 0.9, changefreq: "monthly" },
-  { url: "/leistungen/fussbodenheizung", priority: 0.9, changefreq: "monthly" },
-  { url: "/leistungen/waermedaemmung", priority: 0.9, changefreq: "monthly" },
-  { url: "/leistungen/sanierung", priority: 0.9, changefreq: "monthly" },
-  { url: "/leistungen/schnellestrich", priority: 0.9, changefreq: "monthly" },
-  { url: "/ueber-uns", priority: 0.7, changefreq: "monthly" },
-  { url: "/angebot", priority: 0.8, changefreq: "weekly" },
-  { url: "/kontakt", priority: 0.8, changefreq: "monthly" },
-  { url: "/preise", priority: 0.8, changefreq: "monthly" },
-  { url: "/rechner", priority: 0.95, changefreq: "weekly" },
-  { url: "/ablauf", priority: 0.7, changefreq: "monthly" },
-  { url: "/faq", priority: 0.7, changefreq: "monthly" },
-  { url: "/blog", priority: 0.6, changefreq: "weekly" },
-  { url: "/impressum", priority: 0.3, changefreq: "yearly" },
-  { url: "/datenschutz", priority: 0.3, changefreq: "yearly" },
-  { url: "/agb", priority: 0.3, changefreq: "yearly" },
+  { url: "/", priority: 1.0, changefreq: "weekly", title: "Estrich München" },
+  { url: "/leistungen/zementestrich", priority: 0.9, changefreq: "monthly", title: "Zementestrich München" },
+  { url: "/leistungen/fliessestrich", priority: 0.9, changefreq: "monthly", title: "Fließestrich München" },
+  { url: "/leistungen/heizestrich", priority: 0.9, changefreq: "monthly", title: "Heizestrich München" },
+  { url: "/leistungen/industrieboeden", priority: 0.9, changefreq: "monthly", title: "Industrieboden München" },
+  { url: "/leistungen/sichtestrich", priority: 0.9, changefreq: "monthly", title: "Sichtestrich München" },
+  { url: "/leistungen/fussbodenheizung", priority: 0.9, changefreq: "monthly", title: "Fußbodenheizung nachrüsten München" },
+  { url: "/leistungen/waermedaemmung", priority: 0.9, changefreq: "monthly", title: "Wärmedämmung Estrich München" },
+  { url: "/leistungen/sanierung", priority: 0.9, changefreq: "monthly", title: "Estrichsanierung München" },
+  { url: "/leistungen/schnellestrich", priority: 0.9, changefreq: "monthly", title: "Schnellestrich München" },
+  { url: "/ueber-uns", priority: 0.7, changefreq: "monthly", title: "Über uns - Estrichleger Meisterbetrieb" },
+  { url: "/angebot", priority: 0.8, changefreq: "weekly", title: "Estrich Angebot München" },
+  { url: "/kontakt", priority: 0.8, changefreq: "monthly", title: "Kontakt Estrich München" },
+  { url: "/preise", priority: 0.8, changefreq: "monthly", title: "Estrich Preise München" },
+  { url: "/rechner", priority: 0.95, changefreq: "weekly", title: "Estrich Kostenrechner München" },
+  { url: "/ablauf", priority: 0.7, changefreq: "monthly", title: "Ablauf Estrichverlegung" },
+  { url: "/faq", priority: 0.7, changefreq: "monthly", title: "Estrich FAQ München" },
+  { url: "/blog", priority: 0.6, changefreq: "weekly", title: "Estrich Blog" },
+  { url: "/impressum", priority: 0.3, changefreq: "yearly", title: "Impressum" },
+  { url: "/datenschutz", priority: 0.3, changefreq: "yearly", title: "Datenschutz" },
+  { url: "/agb", priority: 0.3, changefreq: "yearly", title: "AGB" },
 ];
 
 export async function registerRoutes(
@@ -50,15 +52,32 @@ ${sitemapRoutes.map(route => `  <url>
     res.send(xml);
   });
 
-  // SEO: robots.txt
+  // SEO: robots.txt with enhanced directives
   app.get("/robots.txt", (req, res) => {
-    const robots = `User-agent: *
+    const robots = `# Estrich München - robots.txt
+# https://estriche-muenchen.de
+
+User-agent: *
 Allow: /
 
+# Sitemap location
 Sitemap: ${SITE_URL}/sitemap.xml
 
 # Disallow admin/API routes
 Disallow: /api/
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Googlebot specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bingbot specific  
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
 `;
     res.header("Content-Type", "text/plain");
     res.send(robots);
