@@ -19,7 +19,7 @@ export function Footer() {
               />
               <div>
                 <div className="font-bold text-xs">Estriche München</div>
-                <div className="text-[6px] text-background/50 tracking-wide">Estrich • Bodenaufbau • Sanierung</div>
+                <div className="text-[9px] text-background/50">Estrich • Bodenaufbau • Sanierung</div>
               </div>
             </Link>
             <p className="text-background/50 text-[9px] leading-relaxed" data-testid="text-footer-description">
@@ -28,8 +28,8 @@ export function Footer() {
           </div>
 
           <div data-testid="footer-services">
-            <h4 className="font-semibold text-[9px] mb-3 text-background/80">Leistungen</h4>
-            <ul className="space-y-1.5 text-[9px] text-background/50">
+            <h4 className="font-semibold text-[10px] mb-3 text-background/80">Leistungen</h4>
+            <ul className="space-y-1.5 text-[10px] text-background/50">
               <li><Link href="/" className="hover:text-background transition-colors">Estrich München</Link></li>
               <li><Link href="/leistungen/zementestrich" className="hover:text-background transition-colors">Zementestrich München</Link></li>
               <li><Link href="/leistungen/fliessestrich" className="hover:text-background transition-colors">Fließestrich München</Link></li>
@@ -41,8 +41,8 @@ export function Footer() {
           </div>
 
           <div data-testid="footer-info">
-            <h4 className="font-semibold text-[9px] mb-3 text-background/80">Infos & Preise</h4>
-            <ul className="space-y-1.5 text-[9px] text-background/50">
+            <h4 className="font-semibold text-[10px] mb-3 text-background/80">Infos & Preise</h4>
+            <ul className="space-y-1.5 text-[10px] text-background/50">
               <li><Link href="/preise" className="hover:text-background transition-colors">Estrich Kosten München</Link></li>
               <li><Link href="/rechner" className="hover:text-background transition-colors">Kostenrechner</Link></li>
               <li><Link href="/ablauf" className="hover:text-background transition-colors">Ablauf</Link></li>
@@ -54,8 +54,8 @@ export function Footer() {
           </div>
 
           <div data-testid="footer-contact">
-            <h4 className="font-semibold text-[9px] mb-3 text-background/80">Kontakt</h4>
-            <ul className="space-y-1.5 text-[9px] text-background/50">
+            <h4 className="font-semibold text-[10px] mb-3 text-background/80">Kontakt</h4>
+            <ul className="space-y-1.5 text-[10px] text-background/50">
               <li data-testid="text-footer-phone">
                 <a href="tel:+4989444438872" className="hover:text-background transition-colors">089 444438872</a>
               </li>
@@ -70,8 +70,8 @@ export function Footer() {
           </div>
 
           <div data-testid="footer-legal">
-            <h4 className="font-semibold text-[9px] mb-3 text-background/80">Rechtliches</h4>
-            <ul className="space-y-1.5 text-[9px] text-background/50">
+            <h4 className="font-semibold text-[10px] mb-3 text-background/80">Rechtliches</h4>
+            <ul className="space-y-1.5 text-[10px] text-background/50">
               <li><Link href="/impressum" className="hover:text-background transition-colors">Impressum</Link></li>
               <li><Link href="/datenschutz" className="hover:text-background transition-colors">Datenschutz</Link></li>
               <li><Link href="/agb" className="hover:text-background transition-colors">AGB</Link></li>
