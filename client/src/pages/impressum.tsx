@@ -93,16 +93,13 @@ export default function Impressum() {
             <CardContent className="p-6 space-y-8">
               <div>
                 <h2 className="text-xl font-bold mb-3">Angaben gemäß § 5 TMG</h2>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Die Website Estriche München wird gemeinschaftlich betrieben von zwei rechtlich selbstständigen Einzelgewerben:
-                </p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="p-4 border rounded-lg">
                   <div className="flex items-center gap-2 mb-3">
                     <Building2 className="w-5 h-5 text-primary" />
-                    <h3 className="font-bold text-sm">Gewerbebetrieb 1</h3>
+                    <h3 className="font-bold text-sm">Betreiber</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
                     <strong>Name:</strong> Mustafa Sakar<br />
@@ -122,20 +119,19 @@ export default function Impressum() {
                 <div className="p-4 border rounded-lg">
                   <div className="flex items-center gap-2 mb-3">
                     <Building2 className="w-5 h-5 text-primary" />
-                    <h3 className="font-bold text-sm">Gewerbebetrieb 2</h3>
+                    <h3 className="font-bold text-sm">Ausführender Partnerbetrieb</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    <strong>Name:</strong> Ali Kemal Kurt<br />
-                    <strong>Rechtsform:</strong> Einzelunternehmen<br />
-                    <strong>Firmenauftritt:</strong> Estriche München<br /><br />
+                    <strong>Firma:</strong> Estrich T. H. UG (haftungsbeschränkt)<br />
+                    <strong>Rechtsform:</strong> UG (haftungsbeschränkt)<br /><br />
                     <strong>Anschrift:</strong><br />
-                    Zielstattstr. 9<br />
-                    81379 München<br />
+                    Seebruckerstr. 15<br />
+                    81825 München<br />
                     Deutschland<br /><br />
-                    <strong>Telefon:</strong> 0152 122 740 43<br />
-                    <strong>E-Mail:</strong> info@komplettsanierungen-haus-wohnung.de<br /><br />
-                    <strong>Tätigkeitsbereich:</strong><br />
-                    Ausführende Bau-, Sanierungs- und Renovierungsleistungen sowie handwerkliche Tätigkeiten
+                    <strong>Handelsregister:</strong> HRB 282493, Amtsgericht München<br />
+                    <strong>Geschäftsführer:</strong> Hüseyin Türker<br /><br />
+                    <strong>Tätigkeit:</strong><br />
+                    Estrichverlegung und Ausführung von Isolierarbeiten
                   </p>
                 </div>
               </div>
@@ -149,20 +145,10 @@ export default function Impressum() {
               </div>
 
               <div>
-                <h2 className="text-xl font-bold mb-3">Rechtlicher Hinweis zur Gewerbetrennung</h2>
+                <h2 className="text-xl font-bold mb-3">Vertragspartner</h2>
                 <p className="text-sm text-muted-foreground">
-                  Die genannten Gewerbebetriebe sind rechtlich, wirtschaftlich und steuerlich eigenständig.<br /><br />
-                  Der jeweilige Vertragspartner, Rechnungssteller und Leistungserbringer wird im Angebot, Auftrag und auf der Rechnung eindeutig benannt.<br /><br />
-                  <strong>Es besteht keine gemeinsame Haftung.</strong>
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-xl font-bold mb-3">Vertragspartner je Auftrag</h2>
-                <p className="text-sm text-muted-foreground">
-                  Vertragspartner dieses Angebots ist der im Angebot namentlich genannte Gewerbebetrieb.<br /><br />
-                  Rechnungsstellung, Gewährleistung und Haftung erfolgen ausschließlich über den jeweiligen Vertragspartner.<br /><br />
-                  Weitere Leistungen können durch rechtlich selbstständige Partnerbetriebe ausgeführt werden.
+                  Der jeweilige Vertragspartner wird im Angebot und Auftrag ausdrücklich benannt.<br />
+                  Rechnungsstellung, Gewährleistung und Haftung erfolgen über den jeweiligen Vertragspartner.
                 </p>
               </div>
 
@@ -170,9 +156,7 @@ export default function Impressum() {
                 <h2 className="text-xl font-bold mb-3">Verantwortlich für den Inhalt gemäß § 18 MStV</h2>
                 <p className="text-sm text-muted-foreground">
                   Mustafa Sakar<br />
-                  Hardenbergstr. 4, 80992 München<br /><br />
-                  Ali Kemal Kurt<br />
-                  Zielstattstr. 9, 81379 München
+                  Hardenbergstr. 4, 80992 München
                 </p>
               </div>
 
@@ -190,21 +174,9 @@ export default function Impressum() {
               <div>
                 <h2 className="text-xl font-bold mb-3">Partnernetzwerk</h2>
                 <p className="text-sm text-muted-foreground">
-                  Wir arbeiten mit rechtlich selbstständigen Einzelgewerbebetrieben und ausgewählten Partnerfirmen.<br /><br />
-                  Der jeweilige Vertragspartner wird im Angebot und in der Rechnung eindeutig ausgewiesen. Sämtliche meisterpflichtigen Gewerke werden durch unser Partnernetzwerk ausgeführt. Hierbei handelt es sich ausnahmslos um eingetragene Meisterfirmen der Handwerkskammer München.
+                  Sämtliche Estricharbeiten werden durch unseren Partnerbetrieb Estrich T. H. UG ausgeführt, 
+                  eine eingetragene Meisterfirma der Handwerkskammer München.
                 </p>
-                
-                <div className="mt-4 p-4 border rounded-lg">
-                  <h3 className="font-bold text-sm mb-2">Ausführender Partnerbetrieb Estricharbeiten</h3>
-                  <p className="text-sm text-muted-foreground">
-                    <strong>Estrich T. H. UG (haftungsbeschränkt)</strong><br />
-                    Seebruckerstr. 15<br />
-                    81825 München<br /><br />
-                    <strong>Handelsregister:</strong> HRB 282493, Amtsgericht München<br />
-                    <strong>Geschäftsführer:</strong> Hüseyin Türker<br />
-                    <strong>Tätigkeit:</strong> Estrichverlegung und Ausführung von Isolierarbeiten
-                  </p>
-                </div>
               </div>
 
               <div>
