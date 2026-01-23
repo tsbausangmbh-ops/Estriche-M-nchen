@@ -315,36 +315,42 @@ const pagesSEO: Record<string, PageSEO> = {
     metaDescription: "Estrich verlegen lassen in München vom Meisterbetrieb. Zementestrich, Fußbodenheizung nachrüsten, Industrieböden. 30+ Jahre Erfahrung, Festpreisgarantie. Jetzt beraten!",
     mainKeyword: "Estrich München",
     longTailKeywords: [
-      "Estrich verlegen lassen München",
-      "Estrichleger München Meisterbetrieb",
-      "Estricharbeiten München Festpreis",
-      "Estrich Kosten München berechnen",
-      "Estrichfirma München Empfehlung",
-      "Estrich für Neubau München",
-      "Estrich Altbausanierung München",
-      "Professioneller Estrichleger Oberbayern"
+      "Estrich München",
+      "Estrichleger München",
+      "Zementestrich München",
+      "Fließestrich München",
+      "Estrich Kosten München",
+      "Estrich Neubau München",
+      "Estrich Sanierung München",
+      "Estrichleger Meisterbetrieb München"
     ],
-    h1: "Estrich München - Ihr Meisterbetrieb für perfekte Böden",
+    h1: "Estrich München - Ihr Estrichleger Meisterbetrieb für perfekte Böden",
     sections: [
       {
-        h2: "Estrich verlegen lassen vom Meisterbetrieb mit 30+ Jahren Erfahrung",
-        h3s: ["Zementestrich und Fließestrich", "Industrieböden und Sichtestrich", "Fußbodenheizung nachrüsten"],
-        content: `Willkommen bei Estrich München, Ihrem Meisterbetrieb für professionelle Estricharbeiten in München und Umgebung. Mit über 30 Jahren Erfahrung und mehr als 2.500 erfolgreich abgeschlossenen Projekten sind wir Ihr verlässlicher Partner für alle Estricharbeiten - von Zementestrich im Neubau bis zur Fußbodenheizung-Nachrüstung im Altbau.`
+        h2: "Estrichleger München - Meisterbetrieb mit 30+ Jahren Erfahrung",
+        h3s: ["Zementestrich München ab 32€/m²", "Fließestrich München für Fußbodenheizung", "Estrich Neubau und Estrich Sanierung München"],
+        content: `Sie suchen einen zuverlässigen Estrichleger in München? Als Estrichleger Meisterbetrieb München liefern wir professionelle Estricharbeiten in ganz München und Umgebung. Mit über 30 Jahren Erfahrung und mehr als 2.500 erfolgreich abgeschlossenen Projekten sind wir Ihr verlässlicher Partner für Zementestrich München, Fließestrich München und Heizestrich München.`
       },
       {
-        h2: "Unsere Estrich-Leistungen in München",
-        content: `Ob Zementestrich, Calciumsulfat-Fließestrich, belastbare Industrieböden, eleganter Sichtestrich, nachträgliche Fußbodenheizung, professionelle Wärmedämmung, Estrichsanierung oder zeitsparender Schnellestrich - wir liefern höchste Qualität zu transparenten Festpreisen.`
+        h2: "Estrich München - Alle Leistungen aus einer Hand",
+        h3s: ["Zementestrich München", "Fließestrich München", "Estrichsanierung München"],
+        content: `Unsere Estrich-Leistungen in München: Zementestrich München ab 32€/m², Fließestrich München ab 38€/m², Heizestrich München für Fußbodenheizung, Industrieböden München für Gewerbe, Schnellestrich München bei Termindruck, Estrichsanierung München für Altbauten. Alle Estrich Kosten München transparent und als Festpreis.`
       },
       {
-        h2: "Warum Estrich München Ihr bester Partner ist",
-        h3s: ["Festpreisgarantie ohne Nachforderungen", "5 Jahre Gewährleistung nach BGB", "Termingarantie oder 100€ Gutschrift"],
-        content: `Wir arbeiten strikt nach deutschen Industrienormen (DIN 18560, DIN 18202) und bieten transparente Festpreise nach kostenloser Vor-Ort-Besichtigung. Unsere Kunden schätzen Zuverlässigkeit, Pünktlichkeit und saubere Arbeitsweise. Bei Terminverzug durch uns erhalten Sie 100€ Gutschrift.`
+        h2: "Estrich Kosten München - Transparente Preise pro m²",
+        h3s: ["Estrich Neubau München ab 32€/m²", "Estrich Sanierung München ab 25€/m²"],
+        content: `Was kostet Estrich in München? Estrich Kosten München: Zementestrich 32-45€/m², Fließestrich 38-52€/m², Heizestrich 42-55€/m², Schnellestrich 48-65€/m². Ob Estrich Neubau München oder Estrich Sanierung München - Sie erhalten verbindliche Festpreise ohne versteckte Kosten. Rufen Sie jetzt an: 089 444438872.`
+      },
+      {
+        h2: "Estrichleger Meisterbetrieb München - Ihre Vorteile",
+        h3s: ["Festpreisgarantie München", "5 Jahre Gewährleistung", "Termingarantie oder 100€"],
+        content: `Als Estrichleger Meisterbetrieb München arbeiten wir nach DIN 18560 mit Festpreisgarantie. Bei Terminverzug erhalten Sie 100€ Gutschrift. Estrich München mit 5 Jahren Gewährleistung. Unser Servicegebiet: München, Starnberg, Freising, Dachau, Erding, Ebersberg, Fürstenfeldbruck.`
       }
     ],
     faqs: [
-      { q: "Was kostet Estrich verlegen in München?", a: "Je nach Estrichart zwischen 32-65 €/m² netto zzgl. MwSt. Wir erstellen verbindliche Festpreise nach kostenloser Vor-Ort-Besichtigung." },
-      { q: "Wie lange dauert die Estrichverlegung?", a: "Die reine Verlegung dauert bei 100 m² ca. 1 Tag. Die Trocknungszeit beträgt bei Zementestrich ca. 1 Tag pro mm Stärke." },
-      { q: "Arbeiten Sie auch im Münchner Umland?", a: "Ja, wir sind in ganz Oberbayern tätig: München, Starnberg, Freising, Dachau, Erding, Ebersberg, Fürstenfeldbruck." }
+      { q: "Was kostet Estrich verlegen in München?", a: "Estrich Kosten München: Zementestrich ab 32€/m², Fließestrich ab 38€/m², Heizestrich ab 42€/m². Verbindliche Festpreise nach Vor-Ort-Besichtigung." },
+      { q: "Welcher Estrichleger in München ist empfehlenswert?", a: "Als Estrichleger Meisterbetrieb München mit 30+ Jahren Erfahrung und 282 Google-Bewertungen bieten wir höchste Qualität mit Festpreisgarantie." },
+      { q: "Macht ihr auch Estrich Sanierung München?", a: "Ja, Estrich Sanierung München gehört zu unseren Kernleistungen. Altbausanierung, Rissreparatur, Estrichausbesserung - alles aus einer Hand." }
     ]
   },
   ablauf: {

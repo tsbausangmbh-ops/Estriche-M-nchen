@@ -282,12 +282,12 @@ export default function Home() {
                 <strong>Estrich München</strong> – Endlich ein Estrich, der <span className="text-primary">hält, was er verspricht.</span>
               </h1>
               <p className="text-lg text-primary-foreground/80 max-w-xl leading-relaxed">
-                <strong className="text-primary-foreground">Sie kennen das Gefühl:</strong> Handwerker, die nicht erscheinen. 
+                <strong className="text-primary-foreground">Sie suchen einen zuverlässigen Estrichleger in München?</strong> Handwerker, die nicht erscheinen. 
                 Termine, die platzen. Versteckte Kosten, die plötzlich auftauchen. <strong className="text-primary-foreground">Schluss damit.</strong>
               </p>
               <p className="text-lg text-primary-foreground max-w-xl leading-relaxed">
-                <em>Stellen Sie sich vor:</em> In nur wenigen Wochen haben Sie einen <strong className="text-primary-foreground">perfekt ebenen Boden</strong> – 
-                termingerecht, zum Festpreis, ohne böse Überraschungen. Sie spüren die Erleichterung, 
+                Als <strong className="text-primary-foreground">Estrichleger Meisterbetrieb in München</strong> liefern wir <strong className="text-primary-foreground">Zementestrich</strong>, <strong className="text-primary-foreground">Fließestrich</strong> und <strong className="text-primary-foreground">Heizestrich</strong> – 
+                termingerecht, zum Festpreis, ohne böse Überraschungen. Ob <strong className="text-primary-foreground">Estrich Neubau München</strong> oder <strong className="text-primary-foreground">Estrich Sanierung München</strong>: Sie spüren die Erleichterung, 
                 wenn Sie endlich mit dem Bodenbelag beginnen können.
               </p>
 
@@ -580,12 +580,12 @@ export default function Home() {
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unsere Leistungen</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Unsere <strong>Estrich-Leistungen</strong> – Wählen Sie Ihre Lösung</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Unsere <strong>Estrich-Leistungen in München</strong> – Wählen Sie Ihre Lösung</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-              Von <Link href="/leistungen/zementestrich" className="text-primary hover:underline"><strong>Zementestrich</strong></Link> über{" "}
-              <Link href="/leistungen/fliessestrich" className="text-primary hover:underline"><strong>Fließestrich</strong></Link> bis{" "}
-              <Link href="/leistungen/heizestrich" className="text-primary hover:underline"><strong>Heizestrich</strong></Link>:{" "}
-              <strong className="text-foreground">282 Münchner Kunden</strong> vertrauen uns.
+              Von <Link href="/leistungen/zementestrich" className="text-primary hover:underline"><strong>Zementestrich München</strong></Link> über{" "}
+              <Link href="/leistungen/fliessestrich" className="text-primary hover:underline"><strong>Fließestrich München</strong></Link> bis{" "}
+              <Link href="/leistungen/heizestrich" className="text-primary hover:underline"><strong>Heizestrich München</strong></Link>:{" "}
+              <strong className="text-foreground">282 Münchner Kunden</strong> vertrauen unserem <strong>Estrichleger Meisterbetrieb</strong>.
             </p>
           </div>
 
@@ -650,9 +650,9 @@ export default function Home() {
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unser Ablauf</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">So einfach lassen Sie <strong>Estrich verlegen</strong> in München</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">So einfach lassen Sie <strong>Estrich verlegen in München</strong></h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-              Während andere Handwerker Chaos verursachen, <strong className="text-foreground">erleben Sie bei uns Professionalität</strong>. Jeder Schritt ist durchdacht.
+              Als erfahrener <strong className="text-foreground">Estrichleger München</strong> wissen wir: Professionalität beginnt bei der Planung. <strong className="text-foreground">Ob Neubau oder Altbausanierung</strong> – jeder Schritt ist durchdacht.
             </p>
           </div>
 
@@ -684,9 +684,9 @@ export default function Home() {
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Transparente Preise</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight"><strong>Estrich Preise</strong> München – Wissen Sie genau, was es kostet</h2>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight"><strong>Estrich Kosten München</strong> – Transparente Preise für jeden Estrich-Typ</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-              Andere Handwerker schicken Rechnungen mit Überraschungen. <strong className="text-foreground">Bei uns gibt es nur einen Preis: den, der im Angebot steht.</strong>
+              Was kostet <strong className="text-foreground">Estrich pro m² in München</strong>? Andere Handwerker schicken Rechnungen mit Überraschungen. <strong className="text-foreground">Bei uns gibt es nur einen Preis: den, der im Angebot steht.</strong>
             </p>
           </div>
 
