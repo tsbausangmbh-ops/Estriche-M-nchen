@@ -30,35 +30,71 @@ export function Footer() {
           </div>
 
           <div data-testid="footer-services">
-            <h4 className="font-semibold mb-4">Leistungen</h4>
+            <h4 className="font-semibold mb-4">Estrich-Leistungen München</h4>
             <ul className="space-y-2 text-sm text-background/70">
-              {services.map((service) => (
-                <li key={service.id}>
-                  <Link href={`/leistungen/${service.id}`} className="hover:text-background transition-colors">
-                    {service.title}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="/leistungen/zementestrich" className="hover:text-background transition-colors">
+                  Zementestrich München
+                </Link>
+              </li>
+              <li>
+                <Link href="/leistungen/fliessestrich" className="hover:text-background transition-colors">
+                  Fließestrich München
+                </Link>
+              </li>
+              <li>
+                <Link href="/leistungen/heizestrich" className="hover:text-background transition-colors">
+                  Heizestrich München
+                </Link>
+              </li>
+              <li>
+                <Link href="/leistungen/industrieboeden" className="hover:text-background transition-colors">
+                  Industrieböden München
+                </Link>
+              </li>
+              <li>
+                <Link href="/leistungen/fussbodenheizung" className="hover:text-background transition-colors">
+                  Fußbodenheizung nachrüsten
+                </Link>
+              </li>
+              <li>
+                <Link href="/leistungen/schnellestrich" className="hover:text-background transition-colors">
+                  Schnellestrich München
+                </Link>
+              </li>
+              <li>
+                <Link href="/leistungen/waermedaemmung" className="hover:text-background transition-colors">
+                  Wärmedämmung Boden
+                </Link>
+              </li>
+              <li>
+                <Link href="/leistungen/sanierung" className="hover:text-background transition-colors">
+                  Estrichsanierung München
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div data-testid="footer-info">
-            <h4 className="font-semibold mb-4">Informationen</h4>
+            <h4 className="font-semibold mb-4">Estrichleger Meisterbetrieb</h4>
             <ul className="space-y-2 text-sm text-background/70">
               <li>
-                <Link href="/preise" className="hover:text-background transition-colors">Preise & Kosten</Link>
+                <Link href="/preise" className="hover:text-background transition-colors">Estrich Preise München</Link>
               </li>
               <li>
-                <Link href="/ablauf" className="hover:text-background transition-colors">Unser Ablauf</Link>
+                <Link href="/rechner" className="hover:text-background transition-colors">Estrich Kosten berechnen</Link>
               </li>
               <li>
-                <Link href="/faq" className="hover:text-background transition-colors">Häufige Fragen</Link>
+                <Link href="/ablauf" className="hover:text-background transition-colors">Estrich verlegen Ablauf</Link>
               </li>
               <li>
-                <Link href="/ratgeber" className="hover:text-background transition-colors">Ratgeber</Link>
+                <Link href="/faq" className="hover:text-background transition-colors">Estrich FAQ München</Link>
               </li>
               <li>
-                <Link href="/ueber-uns" className="hover:text-background transition-colors">Über uns</Link>
+                <Link href="/ueber-uns" className="hover:text-background transition-colors">Estrichleger Meisterbetrieb München</Link>
+              </li>
+              <li>
+                <Link href="/angebot" className="hover:text-background transition-colors">Kostenloses Angebot</Link>
               </li>
             </ul>
           </div>

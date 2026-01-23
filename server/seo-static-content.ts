@@ -934,9 +934,33 @@ function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
     </article>
   </main>
   <footer>
-    <p>© 2025 Mustafa Sakar - Estriche München - Ihr Fachbetrieb für Estricharbeiten</p>
+    <section>
+      <h4>Estrich-Leistungen München</h4>
+      <nav aria-label="Estrich Leistungen">
+        <a href="/leistungen/zementestrich" title="Zementestrich München">Zementestrich München</a>
+        <a href="/leistungen/fliessestrich" title="Fließestrich München">Fließestrich München</a>
+        <a href="/leistungen/heizestrich" title="Heizestrich München">Heizestrich München</a>
+        <a href="/leistungen/industrieboeden" title="Industrieböden München">Industrieböden München</a>
+        <a href="/leistungen/fussbodenheizung" title="Fußbodenheizung nachrüsten">Fußbodenheizung nachrüsten</a>
+        <a href="/leistungen/schnellestrich" title="Schnellestrich München">Schnellestrich München</a>
+        <a href="/leistungen/waermedaemmung" title="Wärmedämmung Boden">Wärmedämmung Boden</a>
+        <a href="/leistungen/sanierung" title="Estrichsanierung München">Estrichsanierung München</a>
+      </nav>
+    </section>
+    <section>
+      <h4>Estrichleger Meisterbetrieb München</h4>
+      <nav aria-label="Informationen">
+        <a href="/preise" title="Estrich Preise München">Estrich Preise München</a>
+        <a href="/rechner" title="Estrich Kosten berechnen">Estrich Kosten berechnen</a>
+        <a href="/ablauf" title="Estrich verlegen Ablauf">Estrich verlegen Ablauf</a>
+        <a href="/faq" title="Estrich FAQ München">Estrich FAQ München</a>
+        <a href="/ueber-uns" title="Estrichleger Meisterbetrieb München">Estrichleger Meisterbetrieb München</a>
+        <a href="/angebot" title="Kostenloses Angebot">Kostenloses Angebot</a>
+      </nav>
+    </section>
+    <p>© 2026 Mustafa Sakar - Estriche München - Ihr Fachbetrieb für Estricharbeiten</p>
     <p>Telefon: <a href="tel:+4989444438872">089 / 444 43 887 2</a> | München und Umgebung</p>
-    <nav aria-label="Fußzeilen-Navigation">
+    <nav aria-label="Rechtliches">
       <a href="/impressum" title="Impressum">Impressum</a>
       <a href="/datenschutz" title="Datenschutzerklärung">Datenschutz</a>
       <a href="/agb" title="AGB">AGB</a>
