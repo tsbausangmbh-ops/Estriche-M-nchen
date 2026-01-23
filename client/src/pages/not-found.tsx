@@ -1,19 +1,57 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { AlertCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { AlertCircle, Home, Phone, Wrench, Info, Calculator, FileText } from "lucide-react";
+import { Link } from "wouter";
 
 export default function NotFound() {
+  const pages = [
+    { href: "/", label: "Startseite", icon: Home, description: "Zurück zur Hauptseite" },
+    { href: "/leistungen", label: "Leistungen", icon: Wrench, description: "Unsere Estrich-Services" },
+    { href: "/kostenrechner", label: "Kostenrechner", icon: Calculator, description: "Estrich-Kosten berechnen" },
+    { href: "/ueber-uns", label: "Über uns", icon: Info, description: "Unser Unternehmen" },
+    { href: "/kontakt", label: "Kontakt", icon: Phone, description: "Anfrage senden" },
+    { href: "/impressum", label: "Impressum", icon: FileText, description: "Rechtliche Informationen" },
+  ];
+
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
-      <Card className="w-full max-w-md mx-4">
+    <div className="min-h-screen w-full flex items-center justify-center bg-background py-12 px-4">
+      <Card className="w-full max-w-lg">
         <CardContent className="pt-6">
-          <div className="flex mb-4 gap-2">
-            <AlertCircle className="h-8 w-8 text-red-500" />
-            <h1 className="text-2xl font-bold text-gray-900">404 Page Not Found</h1>
+          <div className="flex items-center mb-4 gap-3">
+            <AlertCircle className="h-8 w-8 text-destructive" />
+            <h1 className="text-2xl font-bold">Seite nicht gefunden</h1>
           </div>
 
-          <p className="mt-4 text-sm text-gray-600">
-            Did you forget to add the page to the router?
+          <p className="text-muted-foreground mb-6">
+            Die angeforderte Seite existiert nicht. Hier finden Sie unsere verfügbaren Seiten:
           </p>
+
+          <div className="grid gap-2">
+            {pages.map((page) => (
+              <Link key={page.href} href={page.href}>
+                <Button 
+                  variant="ghost" 
+                  className="w-full justify-start h-auto py-3 px-4"
+                  data-testid={`link-404-${page.label.toLowerCase().replace(/\s+/g, '-')}`}
+                >
+                  <page.icon className="h-5 w-5 mr-3 text-primary" />
+                  <div className="text-left">
+                    <div className="font-medium">{page.label}</div>
+                    <div className="text-xs text-muted-foreground">{page.description}</div>
+                  </div>
+                </Button>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-6 pt-4 border-t text-center">
+            <Link href="/">
+              <Button data-testid="button-404-home">
+                <Home className="h-4 w-4 mr-2" />
+                Zur Startseite
+              </Button>
+            </Link>
+          </div>
         </CardContent>
       </Card>
     </div>
