@@ -1,11 +1,16 @@
 # robots.txt für estriche-muenchen.de
-# Optimiert für Suchmaschinen und KI-Suchsysteme (GEO 2026)
+# Optimiert für Suchmaschinen, KI-Suchsysteme und GEO (2026)
+# Standort: München, Bayern, Deutschland
+# Geo-Koordinaten: 48.1351, 11.5820
 
 User-agent: *
 Allow: /
 
 # Sitemap-Verweis
 Sitemap: https://estriche-muenchen.de/sitemap.xml
+
+# LLMs.txt für KI-Systeme
+# LLMs-Txt: https://estriche-muenchen.de/llms.txt
 
 # === SUCHMASCHINEN-BOTS ===
 
@@ -14,8 +19,21 @@ User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
 
-# Google AI/SGE
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+# Google AI/SGE (Search Generative Experience)
 User-agent: Google-Extended
+Allow: /
+
+# Google Gemini
+User-agent: Gemini
 Allow: /
 
 # Bingbot
@@ -23,7 +41,22 @@ User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
-# === KI-SUCHMASCHINEN (GEO) ===
+User-agent: msnbot
+Allow: /
+
+# Yandex (für internationale Sichtbarkeit)
+User-agent: Yandex
+Allow: /
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# === KI-SUCHMASCHINEN (GEO 2026) ===
 
 # ChatGPT / OpenAI
 User-agent: GPTBot
@@ -32,8 +65,14 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 # Perplexity AI
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
 Allow: /
 
 # Claude / Anthropic
@@ -43,15 +82,24 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
-# Meta AI
+User-agent: ClaudeBot
+Allow: /
+
+# Meta AI / Llama
 User-agent: FacebookBot
 Allow: /
 
 User-agent: Meta-ExternalAgent
 Allow: /
 
+User-agent: Meta-ExternalFetcher
+Allow: /
+
 # Microsoft Copilot
 User-agent: Copilot
+Allow: /
+
+User-agent: CopilotChat
 Allow: /
 
 # Cohere AI
@@ -62,10 +110,24 @@ Allow: /
 User-agent: YouBot
 Allow: /
 
-# Apple Intelligence
+# Apple Intelligence / Siri
 User-agent: Applebot
 Allow: /
 Crawl-delay: 1
+
+User-agent: AppleBot-Extended
+Allow: /
+
+# Mistral AI
+User-agent: MistralBot
+Allow: /
+
+# xAI / Grok
+User-agent: Grok
+Allow: /
+
+User-agent: xAI-Grok
+Allow: /
 
 # === SOCIAL MEDIA BOTS ===
 
@@ -78,19 +140,29 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
-# === BLOCKIERUNGEN ===
+User-agent: Pinterest
+Allow: /
 
-# Blockiere unwichtige Ressourcen
-Disallow: /api/
-Disallow: /*.json$
-Disallow: /assets/*.map
+User-agent: Slackbot
+Allow: /
 
-# Erlaube wichtige Ressourcen für Rendering
+# === ERLAUBE WICHTIGE RESSOURCEN ===
+
 Allow: /assets/*.js
 Allow: /assets/*.css
 Allow: /assets/*.png
 Allow: /assets/*.jpg
 Allow: /assets/*.webp
+Allow: /assets/*.svg
+Allow: /llms.txt
+Allow: /sitemap.xml
+
+# === BLOCKIERUNGEN ===
+
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /assets/*.map
+Disallow: /.well-known/
 
 # === SCRAPER BLOCKIEREN ===
 
@@ -105,3 +177,17 @@ Disallow: /
 
 User-agent: AhrefsBot
 Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+# === GEO-INFORMATIONEN ===
+# Einzugsgebiet: München und Umgebung (50km Radius)
+# Stadtteile: Schwabing, Bogenhausen, Trudering, Pasing, Sendling, Laim, Neuhausen
+# Umliegende Städte: Dachau, Freising, Erding, Starnberg, Fürstenfeldbruck, Germering
