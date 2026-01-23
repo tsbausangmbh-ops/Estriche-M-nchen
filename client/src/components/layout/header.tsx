@@ -85,8 +85,8 @@ export function Header() {
                   {...{ fetchpriority: "high" } as any}
                 />
                 <div className="hidden sm:block">
-                  <div className="font-bold text-xs leading-tight">Estriche München</div>
-                  <div className="text-[9px] text-muted-foreground">Estrich • Bodenaufbau • Sanierung</div>
+                  <div className="font-extrabold text-sm leading-tight">Estriche München</div>
+                  <div className="text-[10px] text-muted-foreground">Estrich • Bodenaufbau • Sanierung</div>
                 </div>
               </Link>
             </div>
