@@ -81,7 +81,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-background/10 mt-6 pt-4 text-center">
-          <p className="text-[10px] text-background/40">
+          <p className="text-[9px] text-background/40">
             © {new Date().getFullYear()}{" "}
             <Link href="/" className="hover:text-background/60 transition-colors">Estriche München</Link>
             {" "}·{" "}Alle Rechte vorbehalten{" "}·{" "}Website by{" "}
