@@ -62,6 +62,7 @@ function Router() {
         <Route path="/angebot" component={Angebot} />
         <Route path="/rechner" component={Rechner} />
         <Route path="/cookie-einstellungen" component={CookieEinstellungen} />
+        <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
       </Switch>
     </Suspense>
