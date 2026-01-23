@@ -269,45 +269,53 @@ export default function UeberUns() {
 
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
               <p>
-                1994 stand Mustafa Sakar in seinem eigenen Neubau – und der Estrichleger war zum dritten Mal nicht erschienen. 
+                1994 stand Mustafa Sakar in seinem eigenen Neubau – und der <strong>Estrichleger</strong> war zum dritten Mal nicht erschienen. 
                 Der Fliesenleger musste unverrichteter Dinge wieder abziehen. Frustration, Zeit und Geld verloren.
               </p>
 
               <p>
                 In diesem Moment fasste er einen Entschluss: <strong>„Wenn ich es besser machen kann als diese Leute, dann 
                 schulde ich es jedem Bauherrn, der das gleiche erlebt wie ich."</strong> Diese Worte sind bis heute das 
-                Fundament unseres Unternehmens. Erfahren Sie mehr über unseren <Link href="/ablauf" className="text-primary hover:underline"><strong>Projekt-Ablauf</strong></Link> und unsere <Link href="/preise" className="text-primary hover:underline"><strong>transparenten Preise</strong></Link>.
+                Fundament unseres Unternehmens als <strong>Estrichleger München</strong>. Erfahren Sie mehr über unseren <Link href="/ablauf" className="text-primary hover:underline"><strong>Projekt-Ablauf</strong></Link> und unsere <Link href="/preise" className="text-primary hover:underline"><strong>transparenten Estrichkosten</strong></Link>.
               </p>
 
-              <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Estrich-Service</strong> – Was Sie bei uns bekommen</h3>
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Estrich-Service München</strong> – Was Sie bei uns bekommen</h3>
 
               <p>
                 <strong>Ruhe.</strong> Ihr Projekt liegt in erfahrenen Händen. Der Preis steht fest, der Termin steht fest, 
-                die Qualität wird stimmen. Nachts schlafen Sie gut.
+                die Qualität wird stimmen. Ob <Link href="/leistungen/zementestrich" className="text-primary hover:underline">Zementestrich</Link>, 
+                <Link href="/leistungen/fliessestrich" className="text-primary hover:underline"> Fließestrich</Link> oder 
+                <Link href="/leistungen/heizestrich" className="text-primary hover:underline"> Heizestrich</Link> – nachts schlafen Sie gut.
               </p>
 
               <p>
                 <strong>Zeit zurück.</strong> Keine Telefonate, um Handwerkern hinterherzulaufen. Keine Diskussionen über 
-                Nachforderungen. Diese Zeit gehört wieder Ihnen.
+                Nachforderungen. Diese Zeit gehört wieder Ihnen. Unsere <strong>Estrichkosten Neubau</strong> und <strong>Estrichkosten Sanierung</strong> sind 
+                von Anfang an transparent – nutzen Sie unseren <Link href="/rechner" className="text-primary hover:underline">Kostenrechner</Link>.
               </p>
 
               <p>
                 <strong>Einen echten Partner.</strong> Wir verschwinden nicht nach der Fertigstellung. Fünf Jahre 
-                Gewährleistung – bei uns gelebte Realität, kein Marketingversprechen.
+                Gewährleistung – bei uns gelebte Realität, kein Marketingversprechen. Das unterscheidet uns von anderen 
+                <strong> Estrichlegern in München</strong>.
               </p>
 
               <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Partnerschaft mit Estrich T. H. UG</strong> – Meisterliche Ausführung</h3>
 
               <p>
                 2018 entstand eine strategische Partnerschaft, die unser Unternehmen auf das nächste Level gehoben hat: 
-                <strong>Hüseyin Türker</strong>, Geschäftsführer der <strong>Estrich T. H. UG</strong> (HRB 282493, Amtsgericht München), 
-                bringt jahrzehntelange Erfahrung in der Estrichverlegung und Isolierarbeiten mit. 
+                <strong> Hüseyin Türker</strong>, Geschäftsführer der <strong>Estrich T. H. UG</strong> (HRB 282493, Amtsgericht München), 
+                bringt jahrzehntelange Erfahrung in der Estrichverlegung und Isolierarbeiten mit. Als eingetragene Meisterfirma 
+                der Handwerkskammer München garantiert sein Team höchste Qualität bei <Link href="/leistungen/zementestrich" className="text-primary hover:underline">Zementestrich</Link>, 
+                <Link href="/leistungen/fliessestrich" className="text-primary hover:underline"> Fließestrich</Link> und 
+                <Link href="/leistungen/industrieboeden" className="text-primary hover:underline"> Industrieestrich</Link>.
               </p>
 
               <p>
                 Diese Partnerschaft vereint das Beste aus beiden Welten: Mustafa Sakar übernimmt Bauleitung, Projektsteuerung 
                 und Kundenberatung – Hüseyin Türker und sein Team garantieren die meisterliche Ausführung vor Ort. 
-                Das Ergebnis: Perfekt koordinierte Projekte mit höchster handwerklicher Qualität.
+                Das Ergebnis: Perfekt koordinierte Projekte mit höchster handwerklicher Qualität – von der ersten Beratung 
+                bis zur finalen Abnahme gemäß <strong>DIN 18560</strong>.
               </p>
 
               <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Estrichleger Team</strong> in München</h3>
@@ -315,26 +323,186 @@ export default function UeberUns() {
               <p>
                 Bei uns arbeiten Fachleute, die ihr Handwerk lieben. Jeder Mitarbeiter teilt unsere Werte: Ehrlichkeit ist 
                 nicht verhandelbar. Ein Versprechen bleibt ein Versprechen. Wenn Sie unser Team auf Ihrer Baustelle erleben, 
-                werden Sie den Unterschied spüren.
+                werden Sie den Unterschied spüren. Ob <strong>Estrich im Neubau</strong> oder <Link href="/leistungen/sanierung" className="text-primary hover:underline">Estrich Sanierung im Altbau</Link> – 
+                wir behandeln jedes Projekt mit derselben Sorgfalt.
               </p>
+
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Unsere Estrich-Leistungen</strong> im Überblick</h3>
+
+              <p>
+                Als <strong>Estrichleger München</strong> bieten wir das komplette Spektrum an Estricharbeiten:
+              </p>
+
+              <ul className="list-disc pl-6 space-y-2">
+                <li><Link href="/leistungen/zementestrich" className="text-primary hover:underline"><strong>Zementestrich (CT)</strong></Link> – Der Klassiker für Neubau und Sanierung, robust und langlebig</li>
+                <li><Link href="/leistungen/fliessestrich" className="text-primary hover:underline"><strong>Fließestrich / Calciumsulfatestrich (CA)</strong></Link> – Selbstnivellierend, ideal für große Flächen</li>
+                <li><Link href="/leistungen/heizestrich" className="text-primary hover:underline"><strong>Heizestrich</strong></Link> – Optimale Wärmeleitung für Fußbodenheizungen</li>
+                <li><Link href="/leistungen/schnellestrich" className="text-primary hover:underline"><strong>Schnellestrich</strong></Link> – Belegreif in 24-48 Stunden statt Wochen</li>
+                <li><Link href="/leistungen/industrieboeden" className="text-primary hover:underline"><strong>Industrieestrich</strong></Link> – Hochbelastbar für Gewerbe und Industrie</li>
+                <li><Link href="/leistungen/sanierung" className="text-primary hover:underline"><strong>Estrichsanierung</strong></Link> – Altbau-Sanierung und Reparaturen</li>
+              </ul>
 
               <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Estrich Qualität</strong> – Unsere Philosophie</h3>
 
               <p>
                 <strong>Wir versprechen nur, was wir halten können. Und dann liefern wir mehr.</strong> Wenn wir Montag 
                 8 Uhr sagen, stehen wir 7:45 Uhr vor Ihrer Tür. Der genannte Preis ist der Endpreis. Bei Terminverzug 
-                durch uns: 100 Euro Gutschrift.
+                durch uns: 100 Euro Gutschrift. Das gilt für jeden <strong>Estrich München</strong> Auftrag.
               </p>
 
               <p>
                 Nach 30 Jahren könnten wir uns zurücklehnen. Stattdessen investieren wir weiter in Weiterbildung und 
-                modernste Technik. Die Werte von 1994 bleiben unser Kompass: Ehrlichkeit, Zuverlässigkeit, Qualität, Respekt.
+                modernste Technik. Die Werte von 1994 bleiben unser Kompass: Ehrlichkeit, Zuverlässigkeit, Qualität, Respekt. 
+                Alle Arbeiten erfolgen nach <strong>DIN 18560</strong> und <strong>DIN 18202</strong> – mit CM-Feuchtemessung 
+                und vollständigem Aufheizprotokoll.
               </p>
 
               <p>
                 <strong>Am Ende geht es nicht um Estrich. Es geht um Vertrauen.</strong> Und genau das ist unser 
-              Versprechen an Sie.
+                Versprechen an Sie. Fordern Sie jetzt Ihr <Link href="/angebot" className="text-primary hover:underline"><strong>kostenloses Angebot</strong></Link> an.
+              </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-muted/30">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Praxisbeispiele</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+              <strong>Estrich Projekte München</strong> – Fallbeispiele
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Echte Projekte, echte Ergebnisse. So arbeiten wir als <strong>Estrichleger München</strong>.
             </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card>
+              <CardContent className="p-6">
+                <Badge className="mb-4">Neubau</Badge>
+                <h3 className="font-bold text-lg mb-2">Einfamilienhaus Bogenhausen</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  <strong>Projekt:</strong> 180 m² <Link href="/leistungen/zementestrich" className="text-primary hover:underline">Zementestrich</Link> mit <Link href="/leistungen/heizestrich" className="text-primary hover:underline">Fußbodenheizung</Link><br />
+                  <strong>Estrichkosten Neubau:</strong> 5.400 € inkl. MwSt.<br />
+                  <strong>Bauzeit:</strong> 2 Tage Einbau, 4 Wochen Trocknung
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  „Pünktlich, sauber, professionell. Der Fliesenleger konnte termingerecht starten." – Familie M.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <Badge className="mb-4">Sanierung</Badge>
+                <h3 className="font-bold text-lg mb-2">Altbau-Sanierung Schwabing</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  <strong>Projekt:</strong> 95 m² <Link href="/leistungen/sanierung" className="text-primary hover:underline">Estrichsanierung</Link> + Dämmung<br />
+                  <strong>Estrichkosten Sanierung:</strong> 4.750 € inkl. MwSt.<br />
+                  <strong>Besonderheit:</strong> Altbau mit Holzbalkendecke
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  „Die Beratung war Gold wert. Der Fließestrich war die richtige Wahl für unser Projekt." – Herr K.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <Badge className="mb-4">Gewerbe</Badge>
+                <h3 className="font-bold text-lg mb-2">Lagerhalle Feldmoching</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  <strong>Projekt:</strong> 450 m² <Link href="/leistungen/industrieboeden" className="text-primary hover:underline">Industrieestrich</Link><br />
+                  <strong>Estrichkosten:</strong> 18.900 € inkl. MwSt.<br />
+                  <strong>Bauzeit:</strong> 3 Tage, <Link href="/leistungen/schnellestrich" className="text-primary hover:underline">Schnellestrich</Link>
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  „Dank Schnellestrich konnten wir nach 48 Stunden bereits Regale aufstellen." – Firma B.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Häufige Fragen</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+              FAQ – <strong>Estrichleger München</strong>
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="font-bold mb-2">Was kostet Estrich in München pro m²?</h3>
+                <p className="text-sm text-muted-foreground">
+                  Die <strong>Estrichkosten München</strong> liegen je nach Estrichart zwischen 25-45 €/m² (Zementestrich) 
+                  und 35-55 €/m² (Fließestrich). Nutzen Sie unseren <Link href="/rechner" className="text-primary hover:underline">Kostenrechner</Link> für 
+                  eine erste Schätzung oder fordern Sie ein <Link href="/angebot" className="text-primary hover:underline">kostenloses Angebot</Link> an.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="font-bold mb-2">Welcher Estrich für Fußbodenheizung?</h3>
+                <p className="text-sm text-muted-foreground">
+                  Für Fußbodenheizungen empfehlen wir <Link href="/leistungen/fliessestrich" className="text-primary hover:underline">Fließestrich (Calciumsulfat)</Link> wegen 
+                  der besseren Wärmeleitfähigkeit, oder <Link href="/leistungen/heizestrich" className="text-primary hover:underline">speziellen Heizestrich</Link>. 
+                  Beide Varianten bieten wir als <strong>Estrichleger München</strong> an.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="font-bold mb-2">Wie lange dauert Estrich-Trocknung?</h3>
+                <p className="text-sm text-muted-foreground">
+                  <Link href="/leistungen/zementestrich" className="text-primary hover:underline">Zementestrich</Link>: ca. 4-6 Wochen bis zur Belegreife. 
+                  <Link href="/leistungen/schnellestrich" className="text-primary hover:underline"> Schnellestrich</Link>: nur 24-48 Stunden. 
+                  Wir führen eine CM-Messung durch und erstellen ein Aufheizprotokoll gemäß DIN 18560.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="font-bold mb-2">Estrichkosten Neubau vs. Sanierung?</h3>
+                <p className="text-sm text-muted-foreground">
+                  <strong>Estrichkosten Neubau</strong> sind meist günstiger (einfachere Logistik). 
+                  <strong> Estrichkosten Sanierung</strong> können höher sein wegen Altbestand-Entfernung und erschwertem Zugang. 
+                  Mehr Infos auf unserer <Link href="/preise" className="text-primary hover:underline">Preisseite</Link>.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="font-bold mb-2">Warum Estriche München wählen?</h3>
+                <p className="text-sm text-muted-foreground">
+                  30+ Jahre Erfahrung, Meisterbetrieb, Festpreis-Garantie, 5 Jahre Gewährleistung und 100€ bei Verspätung. 
+                  Als <strong>Estrichleger München</strong> kennen wir die lokalen Gegebenheiten und arbeiten mit regionalen Partnern.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="font-bold mb-2">Welche Estricharten bieten Sie an?</h3>
+                <p className="text-sm text-muted-foreground">
+                  Wir bieten <Link href="/leistungen/zementestrich" className="text-primary hover:underline">Zementestrich</Link>, 
+                  <Link href="/leistungen/fliessestrich" className="text-primary hover:underline"> Fließestrich</Link>, 
+                  <Link href="/leistungen/heizestrich" className="text-primary hover:underline"> Heizestrich</Link>, 
+                  <Link href="/leistungen/schnellestrich" className="text-primary hover:underline"> Schnellestrich</Link>, 
+                  <Link href="/leistungen/industrieboeden" className="text-primary hover:underline"> Industrieestrich</Link> und 
+                  <Link href="/leistungen/sanierung" className="text-primary hover:underline"> Estrichsanierung</Link>.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
