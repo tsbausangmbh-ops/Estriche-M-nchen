@@ -11,7 +11,11 @@ import {
   CheckCircle2, 
   ChevronRight,
   Building2,
-  Ruler
+  Ruler,
+  Wrench,
+  Shield,
+  Thermometer,
+  Zap
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -139,31 +143,57 @@ const pricingItems = [
 const faqItems = [
   {
     question: "Was kostet Estrich pro m² in München?",
-    answer: "Die Estrich Kosten München variieren je nach Art: Zementestrich kostet 32-45€/m², Fließestrich 38-52€/m², Heizestrich 42-55€/m². Bei Estrich Neubau München erhalten Sie 5€/m² Rabatt. Estrich Sanierung München startet ab 25€/m². Alle Preise verstehen sich netto zzgl. MwSt. und beinhalten Material, Verlegung und Anfahrt.",
+    answer: "Die Estrich Kosten München variieren je nach Art: Zementestrich kostet 32-45€/m², Fließestrich 38-52€/m², Heizestrich 42-55€/m². Bei Estrich Neubau München erhalten Sie 5€/m² Rabatt. Estrich Sanierung München startet ab 25€/m². Alle Preise verstehen sich netto zzgl. MwSt. und beinhalten Material, Verlegung und Anfahrt im gesamten Münchner Stadtgebiet (Schwabing, Bogenhausen, Pasing, Sendling etc.).",
+    link: "/preise",
+    linkText: "Zur Preisübersicht",
   },
   {
     question: "Welcher Estrichleger in München ist empfehlenswert?",
-    answer: "Als Estrichleger Meisterbetrieb München mit über 30 Jahren Erfahrung und 282 Google-Bewertungen (4,9 Sterne) bieten wir höchste Qualität mit Festpreis-Garantie. Wir sind Ihr zuverlässiger Estrichleger München für Zementestrich, Fließestrich, Heizestrich und Industrieböden.",
+    answer: "Als Estrichleger Meisterbetrieb München mit über 30 Jahren Erfahrung und 282 Google-Bewertungen (4,9 Sterne) bieten wir höchste Qualität mit Festpreis-Garantie. Wir sind Ihr zuverlässiger Estrichleger München für Zementestrich, Fließestrich, Heizestrich und Industrieböden – von Altstadt-Lehel bis Trudering-Riem.",
+    link: "/ueber-uns",
+    linkText: "Mehr über unseren Meisterbetrieb",
   },
   {
     question: "Was ist besser: Zementestrich oder Fließestrich?",
-    answer: "Zementestrich München ist der Klassiker – robust, günstig (ab 32€/m²), ideal für Neubau und Keller. Fließestrich München eignet sich perfekt für Fußbodenheizungen dank besserer Wärmeleitfähigkeit. Bei großen Flächen nivelliert sich Fließestrich selbst. Wir beraten Sie kostenlos, welche Variante für Ihr Projekt optimal ist.",
+    answer: "Zementestrich München (DIN 18560-CT) ist der Klassiker – robust, günstig (ab 32€/m²), ideal für Neubau und Keller. Fließestrich München (Calciumsulfatestrich CA) eignet sich perfekt für Fußbodenheizungen dank besserer Wärmeleitfähigkeit (λ=1,0 W/mK). Bei großen Flächen nivelliert sich Fließestrich selbst – besonders beliebt in Münchner Altbauten. Wir beraten Sie kostenlos, welche Variante für Ihr Projekt optimal ist.",
+    link: "/leistungen/zementestrich",
+    linkText: "Mehr zu Zementestrich",
   },
   {
     question: "Wie lange dauert die Estrich-Trocknungszeit?",
-    answer: "Zementestrich braucht ca. 1 Tag pro mm Dicke (bei 50mm = 50 Tage). Schnellestrich München ist bereits nach 1-5 Tagen belegreif – ideal bei Termindruck. Calciumsulfat-Fließestrich trocknet etwas schneller. Wir messen die Restfeuchte mit CM-Gerät und dokumentieren alles für Ihre Gewährleistung.",
+    answer: "Zementestrich nach DIN 18560 braucht ca. 1 Tag pro mm Dicke (bei 50mm = 50 Tage, bei 65mm = 65 Tage). Schnellestrich München ist bereits nach 1-5 Tagen belegreif – ideal bei Termindruck. Calciumsulfat-Fließestrich trocknet etwas schneller (ca. 0,8 Tage/mm). Wir messen die Restfeuchte normgerecht mit CM-Gerät und dokumentieren alles für Ihre Gewährleistung.",
+    link: "/leistungen/schnellestrich",
+    linkText: "Schnellestrich-Optionen",
   },
   {
     question: "Macht ihr auch Estrich für Neubau und Sanierung?",
-    answer: "Ja! Estrich Neubau München und Estrich Sanierung München gehören zu unseren Kernleistungen. Beim Neubau arbeiten wir eng mit Ihrem Bauträger zusammen. Bei Altbausanierungen übernehmen wir Rissreparatur, Hohlstellensanierung und Wasserschadenbehebung. 5 Jahre Gewährleistung auf alle Arbeiten.",
+    answer: "Ja! Estrich Neubau München und Estrich Sanierung München gehören zu unseren Kernleistungen. Beim Neubau arbeiten wir eng mit Ihrem Bauträger zusammen – ob Einfamilienhaus in Pasing, Mehrfamilienhaus in Schwabing oder Gewerbebau in Garching. Bei Altbausanierungen übernehmen wir Rissreparatur, Hohlstellensanierung und Wasserschadenbehebung. 5 Jahre Gewährleistung auf alle Arbeiten nach BGB §634a.",
+    link: "/leistungen/sanierung",
+    linkText: "Sanierungsleistungen ansehen",
   },
   {
     question: "Wie schnell können Sie anfangen?",
-    answer: "Normalerweise innerhalb von 1–3 Wochen. Als etablierter Estrichleger München haben wir begrenzte Kapazitäten – wer zuerst kommt, mahlt zuerst. Bei dringenden Fällen (Schnellestrich München) rufen Sie uns direkt an: 089 444438872. Wir finden fast immer eine Lösung.",
+    answer: "Normalerweise innerhalb von 1–3 Wochen – je nach Auftragslage. Als etablierter Estrichleger München mit Sitz in der Hardenbergstraße sind wir schnell in allen Stadtteilen: Bogenhausen, Haidhausen, Sendling, Moosach, Milbertshofen. Bei dringenden Fällen (Schnellestrich München) rufen Sie uns direkt an: 089 444438872. Wir finden fast immer eine Lösung.",
+    link: "/kontakt",
+    linkText: "Jetzt Termin anfragen",
   },
   {
     question: "Welche Garantien bieten Sie?",
-    answer: "5 Jahre Gewährleistung auf alle Estricharbeiten, Festpreis-Garantie ohne Nachforderungen, 100€ Gutschrift bei Verspätung durch uns. Als Estrichleger Meisterbetrieb München arbeiten wir nach DIN 18560 und DIN 18202 – höchste Qualitätsstandards garantiert.",
+    answer: "5 Jahre Gewährleistung auf alle Estricharbeiten (gesetzlich nur 4 Jahre!), Festpreis-Garantie ohne Nachforderungen, 100€ Gutschrift bei Verspätung durch uns. Als Estrichleger Meisterbetrieb München arbeiten wir ausschließlich nach DIN 18560 (Estriche im Bauwesen) und DIN 18202 (Toleranzen im Hochbau) – höchste Qualitätsstandards garantiert. Unser Betrieb ist bei der Handwerkskammer München eingetragen.",
+    link: "/faq",
+    linkText: "Alle Fragen & Antworten",
+  },
+  {
+    question: "Welche Estricharten bieten Sie in München an?",
+    answer: "Als Vollsortimenter bieten wir alle Estricharten: Zementestrich (CT) für Wohn- und Gewerbebau, Calciumsulfat-Fließestrich (CA) für Fußbodenheizungen, Heizestrich mit normgerechtem Aufheizprotokoll nach DIN EN 1264, Schnellestrich für eilige Projekte, Trockenestrich für Altbausanierung, Industrieestrich/Hartstoffestrich für Gewerbe und Sichtestrich als Design-Element. Wir sind Ihr Estrichleger München für jeden Anwendungsfall.",
+    link: "/leistungen",
+    linkText: "Alle Leistungen im Überblick",
+  },
+  {
+    question: "In welchen Münchner Stadtteilen sind Sie tätig?",
+    answer: "Wir arbeiten in allen 25 Münchner Stadtbezirken: Altstadt-Lehel, Ludwigsvorstadt-Isarvorstadt, Maxvorstadt, Schwabing-West, Au-Haidhausen, Sendling, Schwanthalerhöhe, Neuhausen-Nymphenburg, Moosach, Bogenhausen, Trudering-Riem, Pasing-Obermenzing und mehr. Dazu das gesamte Umland: Starnberg, Dachau, Freising, Erding, Fürstenfeldbruck bis zu 30km Radius. Keine Anfahrtskosten im Stadtgebiet München!",
+    link: "/kontakt",
+    linkText: "Einsatzgebiet prüfen",
   },
 ];
 
@@ -171,34 +201,82 @@ const caseStudies = [
   {
     title: "Einfamilienhaus Neubau München-Pasing",
     type: "Estrich Neubau München",
-    area: "180 m² Zementestrich",
+    area: "180 m² Zementestrich CT-F4",
     duration: "2 Tage Verlegung",
-    description: "Kompletter Bodenaufbau mit Wärmedämmung und Zementestrich für ein Einfamilienhaus. Der Bauherr war begeistert von der termingerechten Fertigstellung und der perfekten Ebenheit.",
+    description: "Kompletter Bodenaufbau mit 100mm EPS-Dämmung und 65mm Zementestrich nach DIN 18560 für ein Einfamilienhaus im Stadtteil Pasing-Obermenzing. Der Bauherr war begeistert von der termingerechten Fertigstellung und der Ebenheit nach DIN 18202.",
+    link: "/leistungen/zementestrich",
   },
   {
     title: "Altbausanierung München-Schwabing",
     type: "Estrich Sanierung München",
-    area: "95 m² Fließestrich + Fußbodenheizung",
+    area: "95 m² Fließestrich CA + Fußbodenheizung",
     duration: "3 Tage komplett",
-    description: "Estrichsanierung in einem 1920er Altbau mit nachträglicher Fußbodenheizung. Besondere Herausforderung: minimale Aufbauhöhe bei maximaler Wärmeleistung.",
+    description: "Estrichsanierung in einem 1920er Jugendstil-Altbau in Schwabing-West mit nachträglicher Fußbodenheizung. Besondere Herausforderung: nur 45mm Aufbauhöhe. Lösung: Calciumsulfat-Fließestrich mit optimaler Wärmeleitfähigkeit.",
+    link: "/leistungen/fliessestrich",
   },
   {
-    title: "Gewerbehalle Garching",
+    title: "Gewerbehalle Garching bei München",
     type: "Industrieboden München",
     area: "650 m² Hartstoffestrich",
     duration: "4 Tage Ausführung",
-    description: "Hochbelastbarer Industrieboden für einen Logistikbetrieb. Gabelstaplertauglich, staubfrei versiegelt, mit 15 Jahren Belastungsgarantie.",
+    description: "Hochbelastbarer Industrieboden für einen Logistikbetrieb in Garching. Gabelstaplertauglich, staubfrei versiegelt, mit Oberflächenhärte nach DIN EN 13813 und 15 Jahren Belastungsgarantie.",
+    link: "/leistungen/industrieboeden",
+  },
+  {
+    title: "Mehrfamilienhaus Bogenhausen",
+    type: "Heizestrich München",
+    area: "420 m² Heizestrich mit Aufheizprotokoll",
+    duration: "5 Tage für 6 Wohnungen",
+    description: "Neubau-Wohnanlage in München-Bogenhausen mit Fußbodenheizung. Alle 6 Wohneinheiten mit normgerechtem Aufheizprotokoll nach DIN EN 1264, CM-Feuchtemessung dokumentiert für Bodenleger.",
+    link: "/leistungen/heizestrich",
+  },
+  {
+    title: "Schnellestrich Haidhausen",
+    type: "Schnellestrich München",
+    area: "75 m² Schnellzement",
+    duration: "1 Tag + 3 Tage Trocknung",
+    description: "Wasserschaden-Sanierung in Au-Haidhausen mit extremem Termindruck. Lösung: Schnellestrich mit Belegreife nach nur 3 Tagen. Parkett konnte termingerecht verlegt werden.",
+    link: "/leistungen/schnellestrich",
   },
 ];
 
 const regions = [
-  "Altstadt-Lehel", "Schwabing", "Maxvorstadt", "Haidhausen", "Neuhausen-Nymphenburg",
-  "Sendling", "Bogenhausen", "Moosach", "Milbertshofen", "Pasing", "Aubing", "Laim"
+  "Altstadt-Lehel", "Ludwigsvorstadt-Isarvorstadt", "Maxvorstadt", "Schwabing-West", 
+  "Au-Haidhausen", "Sendling", "Sendling-Westpark", "Schwanthalerhöhe", "Neuhausen-Nymphenburg",
+  "Moosach", "Milbertshofen-Am Hart", "Schwabing-Freimann", "Bogenhausen", "Berg am Laim",
+  "Trudering-Riem", "Ramersdorf-Perlach", "Obergiesing-Fasangarten", "Untergiesing-Harlaching",
+  "Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln", "Hadern", "Pasing-Obermenzing",
+  "Aubing-Lochhausen-Langwied", "Allach-Untermenzing", "Feldmoching-Hasenbergl", "Laim"
 ];
 
 const surroundingAreas = [
   "Starnberg", "Dachau", "Freising", "Erding", "Fürstenfeldbruck", "Germering",
-  "Unterschleißheim", "Garching", "Unterhaching", "Ottobrunn", "Haar", "Grünwald"
+  "Unterschleißheim", "Garching", "Unterhaching", "Ottobrunn", "Haar", "Grünwald",
+  "Planegg", "Pullach", "Ismaning", "Vaterstetten", "Grasbrunn", "Neubiberg",
+  "Taufkirchen", "Oberschleißheim", "Gröbenzell", "Olching", "Gilching", "Puchheim"
+];
+
+const technicalSpecs = [
+  {
+    title: "Zementestrich CT nach DIN 18560",
+    specs: ["Mindestdicke: 45-65mm", "Biegezugfestigkeit: F4-F7", "Trocknungszeit: 1 Tag/mm", "Belastbar nach: 28 Tagen"],
+    description: "Der robuste Klassiker für Wohn- und Gewerbebau in München. Geeignet für alle Bodenbeläge.",
+  },
+  {
+    title: "Calciumsulfat-Fließestrich CA",
+    specs: ["Mindestdicke: 35-45mm", "Selbstnivellierend", "Schnellere Trocknung", "Ideal für Fußbodenheizung"],
+    description: "Perfekte Wärmeleitfähigkeit für Fußbodenheizungen. Besonders eben durch Selbstnivellierung.",
+  },
+  {
+    title: "Heizestrich für Fußbodenheizung",
+    specs: ["Überdeckung Heizrohre: min. 45mm", "Aufheizprotokoll nach DIN EN 1264", "Wärmeleitgruppe 045-065", "Belegreif nach Aufheizprotokoll"],
+    description: "Optimierte Wärmeverteilung für maximale Energieeffizienz. Inkl. normgerechtem Aufheizprotokoll.",
+  },
+  {
+    title: "Schnellestrich / Schnellzement",
+    specs: ["Begehbar nach: 24h", "Belegreif nach: 1-5 Tagen", "Höhere Frühfestigkeit", "Ideal bei Termindruck"],
+    description: "Die schnelle Lösung bei Zeitmangel. Ideal für Sanierungen und enge Bautermine in München.",
+  },
 ];
 
 export default function Home() {
@@ -784,7 +862,12 @@ export default function Home() {
                     {item.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pb-4" data-testid={`text-faq-answer-${index}`}>
-                    {item.answer}
+                    <p className="mb-2">{item.answer}</p>
+                    {item.link && (
+                      <Link href={item.link} className="text-primary hover:underline text-sm font-medium inline-flex items-center gap-1">
+                        {item.linkText} <ChevronRight className="w-3 h-3" />
+                      </Link>
+                    )}
                   </AccordionContent>
                 </AccordionItem>
               ))}
@@ -810,8 +893,113 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Technical Specifications Section - Deep Content */}
+      <section id="estrich-wissen" className="py-8 bg-accent">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+          <div className="text-center mb-8">
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Fachwissen</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">
+              <strong>Estrich-Fachwissen</strong> – DIN-Normen & technische Spezifikationen
+            </h2>
+            <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
+              Als <strong className="text-foreground">Estrichleger Meisterbetrieb München</strong> arbeiten wir ausschließlich nach 
+              <strong className="text-foreground"> DIN 18560</strong> (Estriche im Bauwesen) und <strong className="text-foreground">DIN 18202</strong> (Toleranzen im Hochbau). 
+              Hier finden Sie die wichtigsten technischen Daten für Ihre Planung.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            {technicalSpecs.map((spec, index) => (
+              <Card key={index} className="overflow-visible" data-testid={`card-tech-spec-${index}`}>
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    {index === 0 && <Wrench className="w-5 h-5 text-primary" />}
+                    {index === 1 && <Thermometer className="w-5 h-5 text-primary" />}
+                    {index === 2 && <Zap className="w-5 h-5 text-primary" />}
+                    {index === 3 && <Clock className="w-5 h-5 text-primary" />}
+                    {spec.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <p className="text-sm text-muted-foreground">{spec.description}</p>
+                  <div className="grid grid-cols-2 gap-2">
+                    {spec.specs.map((s, i) => (
+                      <div key={i} className="flex items-center gap-2 text-xs">
+                        <CheckCircle2 className="w-3 h-3 text-primary flex-shrink-0" />
+                        <span>{s}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="bg-card border rounded-lg p-6">
+            <h3 className="text-xl font-bold mb-4">
+              <strong>Estrich München</strong> – Qualitätsstandards unseres Meisterbetriebs
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <Shield className="w-5 h-5 text-primary" />
+                  <strong>DIN-konforme Ausführung</strong>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Alle <Link href="/leistungen/zementestrich" className="text-primary hover:underline">Zementestrich-Arbeiten</Link> und{" "}
+                  <Link href="/leistungen/fliessestrich" className="text-primary hover:underline">Fließestrich-Verlegungen</Link> erfolgen 
+                  nach DIN 18560 mit dokumentierter Qualitätssicherung. Ebenheitstoleranzen nach DIN 18202 garantiert.
+                </p>
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <Thermometer className="w-5 h-5 text-primary" />
+                  <strong>Normgerechte Aufheizprotokolle</strong>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Bei <Link href="/leistungen/heizestrich" className="text-primary hover:underline">Heizestrich für Fußbodenheizung</Link> erstellen wir 
+                  Aufheizprotokolle nach DIN EN 1264. Dokumentation für Versicherung und Gewährleistung inklusive. 
+                  Besonders wichtig bei <strong>Estrich Neubau München</strong>.
+                </p>
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <Zap className="w-5 h-5 text-primary" />
+                  <strong>CM-Feuchtemessung</strong>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Vor der Bodenbelagsverlegung messen wir die Restfeuchte mit der CM-Methode (Calciumcarbid). 
+                  Grenzwerte: Zementestrich ≤2,0 CM-%, Calciumsulfatestrich ≤0,5 CM-%. Messprotokoll für Ihren Bodenleger.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <p className="text-muted-foreground mb-4">
+              <strong className="text-foreground">Haben Sie technische Fragen?</strong> Unsere Meister beraten Sie kostenlos zu 
+              <Link href="/leistungen" className="text-primary hover:underline"> allen Estricharten</Link>,{" "}
+              <Link href="/preise" className="text-primary hover:underline">Estrich Kosten München</Link> und optimalen Aufbauhöhen.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/angebot">
+                <Button size="lg" data-testid="button-tech-cta">
+                  Kostenlose Fachberatung anfordern
+                  <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/rechner">
+                <Button size="lg" variant="outline" data-testid="button-tech-calculator">
+                  Estrich-Kostenrechner
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Case Studies Section */}
-      <section id="referenzen" className="py-8 bg-accent">
+      <section id="referenzen" className="py-8 bg-muted/30">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Referenzen</p>
@@ -823,9 +1011,9 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {caseStudies.map((study, index) => (
-              <Card key={index} className="overflow-visible" data-testid={`card-case-study-${index}`}>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {caseStudies.slice(0, 6).map((study, index) => (
+              <Card key={index} className="overflow-visible hover-elevate" data-testid={`card-case-study-${index}`}>
                 <CardHeader className="pb-3">
                   <Badge variant="secondary" className="w-fit mb-2 text-xs">{study.type}</Badge>
                   <CardTitle className="text-lg">{study.title}</CardTitle>
@@ -842,6 +1030,11 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-sm leading-relaxed">{study.description}</p>
+                  {study.link && (
+                    <Link href={study.link} className="text-primary hover:underline text-sm font-medium inline-flex items-center gap-1">
+                      Mehr erfahren <ChevronRight className="w-3 h-3" />
+                    </Link>
+                  )}
                 </CardContent>
               </Card>
             ))}
