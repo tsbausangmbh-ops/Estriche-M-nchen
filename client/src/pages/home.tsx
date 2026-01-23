@@ -1239,7 +1239,7 @@ export default function Home() {
                   </div>
                   <div>
                     <div className="font-semibold">Erreichbarkeit</div>
-                    <div className="text-muted-foreground" data-testid="text-business-hours">Mo–Fr: 7:00–18:00 Uhr</div>
+                    <div className="text-muted-foreground" data-testid="text-business-hours">Mo–Fr: 08:00–16:30 Uhr</div>
                   </div>
                 </div>
               </div>

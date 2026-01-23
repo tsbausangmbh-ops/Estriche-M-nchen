@@ -65,7 +65,7 @@ export function Footer() {
               <li>
                 <a href="https://maps.google.com/?q=Hardenbergstr.+4,+80992+München" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">Hardenbergstr. 4<br />80992 München</a>
               </li>
-              <li>Mo–Fr: 7:00–18:00</li>
+              <li>Mo–Fr: 08:00–16:30</li>
             </ul>
           </div>
 

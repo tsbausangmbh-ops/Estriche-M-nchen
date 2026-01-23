@@ -505,7 +505,7 @@ const pagesSEO: Record<string, PageSEO> = {
       {
         h2: "So erreichen Sie uns",
         h3s: ["Telefon: 089 / 444 43 887 2", "E-Mail: info@estriche-muenchen.de"],
-        content: `Rufen Sie uns an oder schreiben Sie uns - wir melden uns schnell zurück. Montag bis Freitag sind wir von 7:00 bis 18:00 Uhr erreichbar. Außerhalb der Geschäftszeiten hinterlassen Sie eine Nachricht, wir rufen am nächsten Werktag zurück.`
+        content: `Rufen Sie uns an oder schreiben Sie uns - wir melden uns schnell zurück. Montag bis Freitag sind wir von 08:00 bis 16:30 Uhr erreichbar. Außerhalb der Geschäftszeiten hinterlassen Sie eine Nachricht, wir rufen am nächsten Werktag zurück.`
       },
       {
         h2: "Kostenlose Vor-Ort-Beratung anfragen",
@@ -835,8 +835,8 @@ function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "07:00",
-        "closes": "18:00"
+        "opens": "08:00",
+        "closes": "16:30"
       }
     ],
     "sameAs": [],

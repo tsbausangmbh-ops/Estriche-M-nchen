@@ -18,7 +18,7 @@ export const businessInfo = {
   },
   priceRange: "€€",
   foundingDate: "1994",
-  openingHours: "Mo-Fr 07:00-18:00"
+  openingHours: "Mo-Fr 08:00-16:30"
 };
 
 export const serviceAreas = [
@@ -87,8 +87,8 @@ export function generateLocalBusinessSchema(logoUrl?: string, imageUrl?: string)
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "07:00",
-        "closes": "18:00"
+        "opens": "08:00",
+        "closes": "16:30"
       }
     ],
     "aggregateRating": {

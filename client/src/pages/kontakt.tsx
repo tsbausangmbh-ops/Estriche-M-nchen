@@ -335,7 +335,7 @@ export default function Kontakt() {
                   <div>
                     <div className="font-semibold">Erreichbarkeit</div>
                     <div className="text-muted-foreground" data-testid="text-business-hours">
-                      Mo–Fr: 7:00–18:00 Uhr
+                      Mo–Fr: 08:00–16:30 Uhr
                     </div>
                     <p className="text-sm text-muted-foreground mt-1">
                       Außerhalb der Zeiten: Nachricht hinterlassen, wir rufen zurück.
