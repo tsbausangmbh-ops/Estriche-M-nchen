@@ -32,12 +32,12 @@ export function Header() {
 
   return (
     <>
-      <div className="bg-foreground text-background py-1.5 text-xs text-center">
+      <div className="bg-foreground text-background py-1 text-[10px] text-center">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           Professionelle und fachgerechte Ausführung durch unser Netzwerk an qualifizierten Meisterbetrieben
         </div>
       </div>
-      <div className="bg-foreground text-background py-2 text-sm">
+      <div className="bg-foreground text-background py-1.5 text-xs">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-4 flex-wrap">
             <Badge variant="secondary" className="bg-background/10 text-background border-0">
@@ -61,7 +61,7 @@ export function Header() {
 
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-14">
             <div className="flex items-center gap-2">
               {!isHomePage && (
                 <Button
@@ -79,14 +79,14 @@ export function Header() {
                 <img 
                   src={logoImage} 
                   alt="Estriche München Logo" 
-                  className="h-9 w-auto rounded-md"
+                  className="h-8 w-auto rounded-md"
                   width="48"
                   height="48"
                   {...{ fetchpriority: "high" } as any}
                 />
                 <div className="hidden sm:block">
-                  <div className="font-bold text-sm leading-tight">Estriche München</div>
-                  <div className="text-[10px] text-muted-foreground">Estrich • Bodenaufbau • Sanierung</div>
+                  <div className="font-bold text-xs leading-tight">Estriche München</div>
+                  <div className="text-[9px] text-muted-foreground">Estrich • Bodenaufbau • Sanierung</div>
                 </div>
               </Link>
             </div>
