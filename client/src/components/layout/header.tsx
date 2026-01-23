@@ -86,7 +86,7 @@ export function Header() {
                 />
                 <div className="hidden sm:block">
                   <div className="font-extrabold text-sm leading-tight">Estriche München</div>
-                  <div className="text-[10px] text-muted-foreground">Estrich • Bodenaufbau • Sanierung</div>
+                  <div className="text-[8px] text-muted-foreground">Estrich • Bodenaufbau • Sanierung</div>
                 </div>
               </Link>
             </div>

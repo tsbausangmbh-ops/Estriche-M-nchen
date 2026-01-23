@@ -19,7 +19,7 @@ export function Footer() {
               />
               <div>
                 <div className="font-extrabold text-sm">Estriche München</div>
-                <div className="text-[10px] text-background/50">Estrich • Bodenaufbau • Sanierung</div>
+                <div className="text-[8px] text-background/50">Estrich • Bodenaufbau • Sanierung</div>
               </div>
             </Link>
             <p className="text-background/50 text-[11px] leading-relaxed" data-testid="text-footer-description">
