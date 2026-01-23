@@ -20,7 +20,7 @@ export default function AGB() {
       </Helmet>
       <Header />
       
-      <section className="relative py-10 lg:py-14 overflow-hidden">
+      <section className="relative py-6 lg:py-8 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -89,7 +89,7 @@ export default function AGB() {
         </div>
       </section>
 
-      <section className="py-12">
+      <section className="py-6">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <Card className="mb-6">
             <CardContent className="p-6 space-y-8">
@@ -533,7 +533,7 @@ export default function AGB() {
         </div>
       </section>
 
-      <section className="pb-12">
+      <section className="pb-6">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <BusinessInfoCard />
         </div>

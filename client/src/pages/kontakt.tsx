@@ -160,7 +160,7 @@ export default function Kontakt() {
       </Helmet>
       <Header />
       
-      <section className="relative py-10 lg:py-14 overflow-hidden">
+      <section className="relative py-6 lg:py-8 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}

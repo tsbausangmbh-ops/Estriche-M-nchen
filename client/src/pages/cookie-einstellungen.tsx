@@ -108,7 +108,7 @@ export default function CookieEinstellungen() {
       </Helmet>
       <Header />
       
-      <section className="relative py-10 lg:py-14 overflow-hidden">
+      <section className="relative py-6 lg:py-8 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -177,7 +177,7 @@ export default function CookieEinstellungen() {
         </div>
       </section>
 
-      <section className="py-12">
+      <section className="py-6">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           {saved && (
             <div className="mb-6 p-4 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 rounded-lg flex items-center gap-3">

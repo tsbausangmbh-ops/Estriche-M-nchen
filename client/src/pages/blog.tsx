@@ -41,7 +41,7 @@ export default function Blog() {
       </Helmet>
       <Header />
       
-      <section className="relative py-10 lg:py-14 overflow-hidden">
+      <section className="relative py-6 lg:py-8 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -194,7 +194,7 @@ export default function Blog() {
           </div>
 
           {filteredArticles.length === 0 ? (
-            <div className="text-center py-12">
+            <div className="text-center py-6">
               <p className="text-muted-foreground">
                 Noch keine Artikel in dieser Kategorie. Schauen Sie bald wieder vorbei!
               </p>

@@ -195,7 +195,7 @@ export default function Preise() {
       </Helmet>
       <Header />
 
-      <section className="relative py-10 lg:py-14 overflow-hidden">
+      <section className="relative py-6 lg:py-8 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -288,7 +288,7 @@ export default function Preise() {
         </div>
       </section>
 
-      <section className="py-12 bg-accent">
+      <section className="py-6 bg-accent">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Preistransparenz</p>
@@ -537,7 +537,7 @@ export default function Preise() {
         </div>
       </section>
 
-      <section className="py-12 bg-foreground text-primary-foreground">
+      <section className="py-6 bg-foreground text-primary-foreground">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Jetzt Ihr persönliches <strong>Estrich Angebot</strong> anfordern

@@ -17,7 +17,7 @@ export default function BlogArticle() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <div className="max-w-7xl mx-auto px-4 py-16 text-center">
+        <div className="max-w-7xl mx-auto px-4 py-10 text-center">
           <h1 className="text-2xl font-bold mb-4">Artikel nicht gefunden</h1>
           <p className="text-muted-foreground mb-6">Der gesuchte Artikel existiert nicht.</p>
           <Link href="/ratgeber">
@@ -40,7 +40,7 @@ export default function BlogArticle() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <section className="relative py-10 lg:py-14 overflow-hidden">
+      <section className="relative py-6 lg:py-8 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
