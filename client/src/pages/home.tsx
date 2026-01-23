@@ -599,7 +599,7 @@ export default function Home() {
                   <div className="relative h-52 overflow-hidden rounded-t-lg">
                     <img 
                       src={service.image} 
-                      alt={service.title}
+                      alt={`${service.title} München - Estricharbeiten vom Meisterbetrieb`}
                       loading="lazy"
                       decoding="async"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

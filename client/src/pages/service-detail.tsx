@@ -537,7 +537,7 @@ export default function ServiceDetail() {
                   <div className="relative h-32 overflow-hidden">
                     <img 
                       src={otherService.image} 
-                      alt={otherService.title}
+                      alt={`${otherService.title} München - Estricharbeiten vom Meisterbetrieb`}
                       loading="lazy"
                       decoding="async"
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
