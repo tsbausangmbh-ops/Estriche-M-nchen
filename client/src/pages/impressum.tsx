@@ -191,8 +191,20 @@ export default function Impressum() {
                 <h2 className="text-xl font-bold mb-3">Partnernetzwerk</h2>
                 <p className="text-sm text-muted-foreground">
                   Wir arbeiten mit rechtlich selbstständigen Einzelgewerbebetrieben und ausgewählten Partnerfirmen.<br /><br />
-                  Der jeweilige Vertragspartner wird im Angebot und in der Rechnung eindeutig ausgewiesen. Sämtliche meisterpflichtigen Gewerke (u.a. Elektro, Sanitär, Heizung) werden durch unser Partnernetzwerk ausgeführt. Hierbei handelt es sich ausnahmslos um eingetragene Meisterfirmen der Handwerkskammer München.
+                  Der jeweilige Vertragspartner wird im Angebot und in der Rechnung eindeutig ausgewiesen. Sämtliche meisterpflichtigen Gewerke werden durch unser Partnernetzwerk ausgeführt. Hierbei handelt es sich ausnahmslos um eingetragene Meisterfirmen der Handwerkskammer München.
                 </p>
+                
+                <div className="mt-4 p-4 border rounded-lg">
+                  <h3 className="font-bold text-sm mb-2">Ausführender Partnerbetrieb Estricharbeiten</h3>
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Estrich T. H. UG (haftungsbeschränkt)</strong><br />
+                    Seebruckerstr. 15<br />
+                    81825 München<br /><br />
+                    <strong>Handelsregister:</strong> HRB 282493, Amtsgericht München<br />
+                    <strong>Geschäftsführer:</strong> Hüseyin Türker<br />
+                    <strong>Tätigkeit:</strong> Estrichverlegung und Ausführung von Isolierarbeiten
+                  </p>
+                </div>
               </div>
 
               <div>
