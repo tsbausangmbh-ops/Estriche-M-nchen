@@ -29,13 +29,13 @@ export function Footer() {
           <div data-testid="footer-services">
             <h4 className="font-semibold text-background/80 mb-2" style={{fontSize: '11px'}}>Leistungen</h4>
             <ul className="space-y-1 text-background/50" style={{fontSize: '11px'}}>
-              <li><Link href="/" className="hover:text-background">Estrich München</Link></li>
-              <li><Link href="/leistungen/zementestrich" className="hover:text-background">Zementestrich</Link></li>
-              <li><Link href="/leistungen/fliessestrich" className="hover:text-background">Fließestrich</Link></li>
-              <li><Link href="/leistungen/heizestrich" className="hover:text-background">Heizestrich</Link></li>
-              <li><Link href="/leistungen/industrieboeden" className="hover:text-background">Industrieestrich</Link></li>
-              <li><Link href="/leistungen/schnellestrich" className="hover:text-background">Schnellestrich</Link></li>
-              <li><Link href="/leistungen/sanierung" className="hover:text-background">Sanierung</Link></li>
+              <li><Link href="/" className="hover:text-blue-400 transition-colors">Estrich München</Link></li>
+              <li><Link href="/leistungen/zementestrich" className="hover:text-blue-400 transition-colors">Zementestrich</Link></li>
+              <li><Link href="/leistungen/fliessestrich" className="hover:text-blue-400 transition-colors">Fließestrich</Link></li>
+              <li><Link href="/leistungen/heizestrich" className="hover:text-blue-400 transition-colors">Heizestrich</Link></li>
+              <li><Link href="/leistungen/industrieboeden" className="hover:text-blue-400 transition-colors">Industrieestrich</Link></li>
+              <li><Link href="/leistungen/schnellestrich" className="hover:text-blue-400 transition-colors">Schnellestrich</Link></li>
+              <li><Link href="/leistungen/sanierung" className="hover:text-blue-400 transition-colors">Sanierung</Link></li>
             </ul>
           </div>
 
@@ -43,13 +43,13 @@ export function Footer() {
           <div data-testid="footer-info">
             <h4 className="font-semibold text-background/80 mb-2" style={{fontSize: '11px'}}>Infos & Preise</h4>
             <ul className="space-y-1 text-background/50" style={{fontSize: '11px'}}>
-              <li><Link href="/preise" className="hover:text-background">Estrich Kosten</Link></li>
-              <li><Link href="/rechner" className="hover:text-background">Kostenrechner</Link></li>
-              <li><Link href="/ablauf" className="hover:text-background">Ablauf</Link></li>
-              <li><Link href="/faq" className="hover:text-background">FAQ</Link></li>
-              <li><Link href="/ueber-uns" className="hover:text-background">Über uns</Link></li>
-              <li><Link href="/angebot" className="hover:text-background">Angebot</Link></li>
-              <li><Link href="/ratgeber" className="hover:text-background">Ratgeber</Link></li>
+              <li><Link href="/preise" className="hover:text-blue-400 transition-colors">Estrich Kosten</Link></li>
+              <li><Link href="/rechner" className="hover:text-blue-400 transition-colors">Kostenrechner</Link></li>
+              <li><Link href="/ablauf" className="hover:text-blue-400 transition-colors">Ablauf</Link></li>
+              <li><Link href="/faq" className="hover:text-blue-400 transition-colors">FAQ</Link></li>
+              <li><Link href="/ueber-uns" className="hover:text-blue-400 transition-colors">Über uns</Link></li>
+              <li><Link href="/angebot" className="hover:text-blue-400 transition-colors">Angebot</Link></li>
+              <li><Link href="/ratgeber" className="hover:text-blue-400 transition-colors">Ratgeber</Link></li>
             </ul>
           </div>
 
@@ -57,9 +57,9 @@ export function Footer() {
           <div data-testid="footer-contact">
             <h4 className="font-semibold text-background/80 mb-2" style={{fontSize: '11px'}}>Kontakt</h4>
             <ul className="space-y-1 text-background/50" style={{fontSize: '11px'}}>
-              <li><a href="tel:+4989444438872" className="hover:text-background">089 444438872</a></li>
-              <li><a href="mailto:info@estriche-muenchen.de" className="hover:text-background">info@estriche-muenchen.de</a></li>
-              <li><a href="https://maps.google.com/?q=Hardenbergstr.+4,+80992+München" target="_blank" rel="noopener noreferrer" className="hover:text-background">Hardenbergstr. 4, 80992 München</a></li>
+              <li><a href="tel:+4989444438872" className="hover:text-blue-400 transition-colors">089 444438872</a></li>
+              <li><a href="mailto:info@estriche-muenchen.de" className="hover:text-blue-400 transition-colors">info@estriche-muenchen.de</a></li>
+              <li><a href="https://maps.google.com/?q=Hardenbergstr.+4,+80992+München" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Hardenbergstr. 4, 80992 München</a></li>
               <li>Mo–Fr: 08:00–16:30</li>
             </ul>
           </div>
@@ -68,10 +68,10 @@ export function Footer() {
           <div data-testid="footer-legal">
             <h4 className="font-semibold text-background/80 mb-2" style={{fontSize: '11px'}}>Rechtliches</h4>
             <ul className="space-y-1 text-background/50" style={{fontSize: '11px'}}>
-              <li><Link href="/impressum" className="hover:text-background">Impressum</Link></li>
-              <li><Link href="/datenschutz" className="hover:text-background">Datenschutz</Link></li>
-              <li><Link href="/agb" className="hover:text-background">AGB</Link></li>
-              <li><Link href="/cookie-einstellungen" className="hover:text-background">Cookie-Einstellungen</Link></li>
+              <li><Link href="/impressum" className="hover:text-blue-400 transition-colors">Impressum</Link></li>
+              <li><Link href="/datenschutz" className="hover:text-blue-400 transition-colors">Datenschutz</Link></li>
+              <li><Link href="/agb" className="hover:text-blue-400 transition-colors">AGB</Link></li>
+              <li><Link href="/cookie-einstellungen" className="hover:text-blue-400 transition-colors">Cookie-Einstellungen</Link></li>
             </ul>
           </div>
         </div>
@@ -80,9 +80,9 @@ export function Footer() {
         <div className="border-t border-background/10 mt-4 pt-3 text-center">
           <p className="text-background/40" style={{fontSize: '9px'}}>
             © {new Date().getFullYear()} Estriche München · Alle Rechte vorbehalten · Website by{" "}
-            <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-background/60">Extrucon GmbH</a>
+            <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Extrucon GmbH</a>
             {" & "}
-            <a href="https://kshwmont.com" target="_blank" rel="noopener noreferrer" className="hover:text-background/60">KSHWmont d.o.o.</a>
+            <a href="https://kshwmont.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">KSHWmont d.o.o.</a>
           </p>
         </div>
       </div>
