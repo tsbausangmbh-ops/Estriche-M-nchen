@@ -4,6 +4,11 @@ import logoImage from "@assets/Logo_Universal_1768216877638.png";
 export function Footer() {
   return (
     <footer className="bg-foreground text-background py-6" data-testid="footer">
+      <style>{`
+        .footer-link:hover {
+          color: #60a5fa !important;
+        }
+      `}</style>
       <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
           
@@ -29,13 +34,13 @@ export function Footer() {
           <div data-testid="footer-services">
             <h4 className="font-semibold text-background/80 mb-2" style={{fontSize: '11px'}}>Leistungen</h4>
             <ul className="space-y-1 text-background/50" style={{fontSize: '11px'}}>
-              <li><Link href="/" className="hover:text-blue-400 transition-colors">Estrich München</Link></li>
-              <li><Link href="/leistungen/zementestrich" className="hover:text-blue-400 transition-colors">Zementestrich</Link></li>
-              <li><Link href="/leistungen/fliessestrich" className="hover:text-blue-400 transition-colors">Fließestrich</Link></li>
-              <li><Link href="/leistungen/heizestrich" className="hover:text-blue-400 transition-colors">Heizestrich</Link></li>
-              <li><Link href="/leistungen/industrieboeden" className="hover:text-blue-400 transition-colors">Industrieestrich</Link></li>
-              <li><Link href="/leistungen/schnellestrich" className="hover:text-blue-400 transition-colors">Schnellestrich</Link></li>
-              <li><Link href="/leistungen/sanierung" className="hover:text-blue-400 transition-colors">Sanierung</Link></li>
+              <li><Link href="/" className="footer-link">Estrich München</Link></li>
+              <li><Link href="/leistungen/zementestrich" className="footer-link">Zementestrich</Link></li>
+              <li><Link href="/leistungen/fliessestrich" className="footer-link">Fließestrich</Link></li>
+              <li><Link href="/leistungen/heizestrich" className="footer-link">Heizestrich</Link></li>
+              <li><Link href="/leistungen/industrieboeden" className="footer-link">Industrieestrich</Link></li>
+              <li><Link href="/leistungen/schnellestrich" className="footer-link">Schnellestrich</Link></li>
+              <li><Link href="/leistungen/sanierung" className="footer-link">Sanierung</Link></li>
             </ul>
           </div>
 
@@ -43,13 +48,13 @@ export function Footer() {
           <div data-testid="footer-info">
             <h4 className="font-semibold text-background/80 mb-2" style={{fontSize: '11px'}}>Infos & Preise</h4>
             <ul className="space-y-1 text-background/50" style={{fontSize: '11px'}}>
-              <li><Link href="/preise" className="hover:text-blue-400 transition-colors">Estrich Kosten</Link></li>
-              <li><Link href="/rechner" className="hover:text-blue-400 transition-colors">Kostenrechner</Link></li>
-              <li><Link href="/ablauf" className="hover:text-blue-400 transition-colors">Ablauf</Link></li>
-              <li><Link href="/faq" className="hover:text-blue-400 transition-colors">FAQ</Link></li>
-              <li><Link href="/ueber-uns" className="hover:text-blue-400 transition-colors">Über uns</Link></li>
-              <li><Link href="/angebot" className="hover:text-blue-400 transition-colors">Angebot</Link></li>
-              <li><Link href="/ratgeber" className="hover:text-blue-400 transition-colors">Ratgeber</Link></li>
+              <li><Link href="/preise" className="footer-link">Estrich Kosten</Link></li>
+              <li><Link href="/rechner" className="footer-link">Kostenrechner</Link></li>
+              <li><Link href="/ablauf" className="footer-link">Ablauf</Link></li>
+              <li><Link href="/faq" className="footer-link">FAQ</Link></li>
+              <li><Link href="/ueber-uns" className="footer-link">Über uns</Link></li>
+              <li><Link href="/angebot" className="footer-link">Angebot</Link></li>
+              <li><Link href="/ratgeber" className="footer-link">Ratgeber</Link></li>
             </ul>
           </div>
 
@@ -57,9 +62,9 @@ export function Footer() {
           <div data-testid="footer-contact">
             <h4 className="font-semibold text-background/80 mb-2" style={{fontSize: '11px'}}>Kontakt</h4>
             <ul className="space-y-1 text-background/50" style={{fontSize: '11px'}}>
-              <li><a href="tel:+4989444438872" className="hover:text-blue-400 transition-colors">089 444438872</a></li>
-              <li><a href="mailto:info@estriche-muenchen.de" className="hover:text-blue-400 transition-colors">info@estriche-muenchen.de</a></li>
-              <li><a href="https://maps.google.com/?q=Hardenbergstr.+4,+80992+München" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Hardenbergstr. 4, 80992 München</a></li>
+              <li><a href="tel:+4989444438872" className="footer-link">089 444438872</a></li>
+              <li><a href="mailto:info@estriche-muenchen.de" className="footer-link">info@estriche-muenchen.de</a></li>
+              <li><a href="https://maps.google.com/?q=Hardenbergstr.+4,+80992+München" target="_blank" rel="noopener noreferrer" className="footer-link">Hardenbergstr. 4, 80992 München</a></li>
               <li>Mo–Fr: 08:00–16:30</li>
             </ul>
           </div>
@@ -68,10 +73,10 @@ export function Footer() {
           <div data-testid="footer-legal">
             <h4 className="font-semibold text-background/80 mb-2" style={{fontSize: '11px'}}>Rechtliches</h4>
             <ul className="space-y-1 text-background/50" style={{fontSize: '11px'}}>
-              <li><Link href="/impressum" className="hover:text-blue-400 transition-colors">Impressum</Link></li>
-              <li><Link href="/datenschutz" className="hover:text-blue-400 transition-colors">Datenschutz</Link></li>
-              <li><Link href="/agb" className="hover:text-blue-400 transition-colors">AGB</Link></li>
-              <li><Link href="/cookie-einstellungen" className="hover:text-blue-400 transition-colors">Cookie-Einstellungen</Link></li>
+              <li><Link href="/impressum" className="footer-link">Impressum</Link></li>
+              <li><Link href="/datenschutz" className="footer-link">Datenschutz</Link></li>
+              <li><Link href="/agb" className="footer-link">AGB</Link></li>
+              <li><Link href="/cookie-einstellungen" className="footer-link">Cookie-Einstellungen</Link></li>
             </ul>
           </div>
         </div>
@@ -80,9 +85,9 @@ export function Footer() {
         <div className="border-t border-background/10 mt-4 pt-3 text-center">
           <p className="text-background/40" style={{fontSize: '9px'}}>
             © {new Date().getFullYear()} Estriche München · Alle Rechte vorbehalten · Website by{" "}
-            <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Extrucon GmbH</a>
+            <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="footer-link">Extrucon GmbH</a>
             {" & "}
-            <a href="https://kshwmont.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">KSHWmont d.o.o.</a>
+            <a href="https://kshwmont.com" target="_blank" rel="noopener noreferrer" className="footer-link">KSHWmont d.o.o.</a>
           </p>
         </div>
       </div>
