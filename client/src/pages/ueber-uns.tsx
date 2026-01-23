@@ -26,10 +26,10 @@ import heroImage from "@assets/generated_images/three_workers_laying_screed_blue
 import { BusinessInfoCard } from "@/components/business-info-card";
 
 const milestones = [
-  { year: "1994", title: "Gründung", description: "Start als kleiner Familienbetrieb in München mit einer klaren Vision: Handwerk, dem man vertrauen kann." },
-  { year: "2005", title: "Meisterbetrieb", description: "Zertifizierung durch die Handwerkskammer München und Erweiterung der Firma mit zusätzlichen Fachkräften." },
-  { year: "2015", title: "1.000 Projekte", description: "Ein stolzer Meilenstein – über 1.000 erfolgreich abgeschlossene Projekte in München und Umgebung." },
-  { year: "2024", title: "30 Jahre", description: "Drei Jahrzehnte Qualität, Zuverlässigkeit und zufriedene Kunden. Und wir fangen gerade erst an." },
+  { year: "1994", title: "Gründung", description: "Mustafa Sakar gründet Estriche München – aus Frust über unzuverlässige Handwerker entsteht eine Vision." },
+  { year: "2005", title: "Meisterbetrieb", description: "Zertifizierung durch die Handwerkskammer München und Erweiterung mit zusätzlichen Fachkräften." },
+  { year: "2018", title: "Partnerschaft", description: "Strategische Partnerschaft mit Estrich T. H. UG (GF Hüseyin Türker) – Meisterbetrieb für Estrichverlegung." },
+  { year: "2024", title: "30 Jahre", description: "Drei Jahrzehnte Qualität, über 1.200 Projekte, 282+ zufriedene Kunden. Und wir fangen gerade erst an." },
 ];
 
 const customerBenefits = [
@@ -294,6 +294,20 @@ export default function UeberUns() {
               <p>
                 <strong>Einen echten Partner.</strong> Wir verschwinden nicht nach der Fertigstellung. Fünf Jahre 
                 Gewährleistung – bei uns gelebte Realität, kein Marketingversprechen.
+              </p>
+
+              <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Partnerschaft mit Estrich T. H. UG</strong> – Meisterliche Ausführung</h3>
+
+              <p>
+                2018 entstand eine strategische Partnerschaft, die unser Unternehmen auf das nächste Level gehoben hat: 
+                <strong>Hüseyin Türker</strong>, Geschäftsführer der <strong>Estrich T. H. UG</strong> (HRB 282493, Amtsgericht München), 
+                bringt jahrzehntelange Erfahrung in der Estrichverlegung und Isolierarbeiten mit. 
+              </p>
+
+              <p>
+                Diese Partnerschaft vereint das Beste aus beiden Welten: Mustafa Sakar übernimmt Bauleitung, Projektsteuerung 
+                und Kundenberatung – Hüseyin Türker und sein Team garantieren die meisterliche Ausführung vor Ort. 
+                Das Ergebnis: Perfekt koordinierte Projekte mit höchster handwerklicher Qualität.
               </p>
 
               <h3 className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Estrichleger Team</strong> in München</h3>
