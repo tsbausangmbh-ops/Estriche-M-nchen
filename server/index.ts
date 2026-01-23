@@ -13,9 +13,13 @@ app.use(compression());
 
 // Security & Performance Headers
 app.use((req, res, next) => {
-  // Cache static assets aggressively
-  if (req.path.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$/)) {
+  // Cache fingerprinted assets (with hash in filename) aggressively
+  if (req.path.match(/\.[a-f0-9]{8,}\.(js|css)$/)) {
     res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+  } 
+  // Cache other static assets with shorter duration (1 week)
+  else if (req.path.match(/\.(png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|webp)$/)) {
+    res.setHeader('Cache-Control', 'public, max-age=604800, stale-while-revalidate=86400');
   }
   // Security headers
   res.setHeader('X-Content-Type-Options', 'nosniff');
