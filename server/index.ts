@@ -3,9 +3,26 @@ import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
 import { seoBotMiddleware } from "./seo-bot-middleware";
+import compression from "compression";
 
 const app = express();
 const httpServer = createServer(app);
+
+// Enable gzip/brotli compression for all responses
+app.use(compression());
+
+// Security & Performance Headers
+app.use((req, res, next) => {
+  // Cache static assets aggressively
+  if (req.path.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$/)) {
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+  }
+  // Security headers
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  next();
+});
 
 declare module "http" {
   interface IncomingMessage {
