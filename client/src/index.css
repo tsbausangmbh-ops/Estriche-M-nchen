@@ -236,3 +236,10 @@
     inset: -1px;
   }
 }
+
+/* Footer Link Hover - Blau */
+footer a:hover,
+footer a:focus {
+  color: #60a5fa !important;
+  transition: color 0.2s ease;
+}
