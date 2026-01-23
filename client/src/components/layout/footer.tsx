@@ -122,6 +122,8 @@ export function Footer() {
             <Link href="/" className="hover:text-background transition-colors">Estriche München</Link>. 
             Alle Rechte vorbehalten. | Website by{" "}
             <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">Extrucon GmbH</a>
+            {" "}und{" "}
+            <a href="https://kshwmont.com" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">KSHWmont d.o.o.</a>
           </p>
           <div className="flex flex-wrap gap-6 text-sm text-background/60">
             <Link href="/impressum" className="hover:text-background transition-colors" data-testid="link-impressum">
