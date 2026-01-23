@@ -10,7 +10,8 @@ import {
   Clock,
   CheckCircle2, 
   ChevronRight,
-  Building2
+  Building2,
+  Ruler
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -137,28 +138,56 @@ const pricingItems = [
 
 const faqItems = [
   {
-    question: "Warum sollte ich ausgerechnet Ihnen vertrauen?",
-    answer: "Weil wir liefern, was wir versprechen – und das schwarz auf weiß. Festpreis vorab, 100€ bei Verspätung, 5 Jahre Gewährleistung. 282 zufriedene Kunden in München können das bestätigen. Fragen Sie uns nach Referenzen in Ihrer Nähe – wir haben nichts zu verbergen.",
+    question: "Was kostet Estrich pro m² in München?",
+    answer: "Die Estrich Kosten München variieren je nach Art: Zementestrich kostet 32-45€/m², Fließestrich 38-52€/m², Heizestrich 42-55€/m². Bei Estrich Neubau München erhalten Sie 5€/m² Rabatt. Estrich Sanierung München startet ab 25€/m². Alle Preise verstehen sich netto zzgl. MwSt. und beinhalten Material, Verlegung und Anfahrt.",
   },
   {
-    question: "Was kostet mich das Ganze? Gibt es versteckte Kosten?",
-    answer: "Bei uns gibt es nur einen Preis – den, der im Angebot steht. Keine Nachforderungen, keine bösen Überraschungen. Richtwert: 25–45 €/m². Fordern Sie jetzt Ihr unverbindliches Festpreis-Angebot an und Sie wissen sofort, woran Sie sind.",
+    question: "Welcher Estrichleger in München ist empfehlenswert?",
+    answer: "Als Estrichleger Meisterbetrieb München mit über 30 Jahren Erfahrung und 282 Google-Bewertungen (4,9 Sterne) bieten wir höchste Qualität mit Festpreis-Garantie. Wir sind Ihr zuverlässiger Estrichleger München für Zementestrich, Fließestrich, Heizestrich und Industrieböden.",
   },
   {
-    question: "Wie lange muss ich auf meinen neuen Boden warten?",
-    answer: "Zementestrich: 3-4 Wochen bis zur Belegreife. Zu lange? Unser Schnellestrich ist in 3-7 Tagen begehbar. Jede Woche, die Sie mit der Entscheidung warten, verzögert Ihren Einzug. Sichern Sie sich jetzt einen der wenigen freien Termine.",
+    question: "Was ist besser: Zementestrich oder Fließestrich?",
+    answer: "Zementestrich München ist der Klassiker – robust, günstig (ab 32€/m²), ideal für Neubau und Keller. Fließestrich München eignet sich perfekt für Fußbodenheizungen dank besserer Wärmeleitfähigkeit. Bei großen Flächen nivelliert sich Fließestrich selbst. Wir beraten Sie kostenlos, welche Variante für Ihr Projekt optimal ist.",
   },
   {
-    question: "Lohnt sich das auch für kleine Projekte wie Bad oder Balkon?",
-    answer: "Absolut! Ob 15 m² oder 1.500 m² – jedes Projekt verdient Qualität. Viele kleine Projekte entwickeln sich zu langjährigen Kundenbeziehungen. Fragen Sie einfach unverbindlich an – Sie riskieren nichts.",
+    question: "Wie lange dauert die Estrich-Trocknungszeit?",
+    answer: "Zementestrich braucht ca. 1 Tag pro mm Dicke (bei 50mm = 50 Tage). Schnellestrich München ist bereits nach 1-5 Tagen belegreif – ideal bei Termindruck. Calciumsulfat-Fließestrich trocknet etwas schneller. Wir messen die Restfeuchte mit CM-Gerät und dokumentieren alles für Ihre Gewährleistung.",
   },
   {
-    question: "Was, wenn etwas schief geht?",
-    answer: "Dann machen wir es richtig – auf unsere Kosten. Ohne Wenn und Aber. 5 Jahre Gewährleistung auf alle Arbeiten, 100€ Gutschrift bei Verspätung. Ihr Risiko? Null. Das können wir uns leisten, weil wir wissen, was wir tun.",
+    question: "Macht ihr auch Estrich für Neubau und Sanierung?",
+    answer: "Ja! Estrich Neubau München und Estrich Sanierung München gehören zu unseren Kernleistungen. Beim Neubau arbeiten wir eng mit Ihrem Bauträger zusammen. Bei Altbausanierungen übernehmen wir Rissreparatur, Hohlstellensanierung und Wasserschadenbehebung. 5 Jahre Gewährleistung auf alle Arbeiten.",
   },
   {
     question: "Wie schnell können Sie anfangen?",
-    answer: "Normalerweise innerhalb von 1–3 Wochen. Aber Vorsicht: Unsere Kapazitäten sind begrenzt. Wer zuerst kommt, mahlt zuerst. Bei dringenden Fällen rufen Sie uns direkt an – wir finden fast immer eine Lösung.",
+    answer: "Normalerweise innerhalb von 1–3 Wochen. Als etablierter Estrichleger München haben wir begrenzte Kapazitäten – wer zuerst kommt, mahlt zuerst. Bei dringenden Fällen (Schnellestrich München) rufen Sie uns direkt an: 089 444438872. Wir finden fast immer eine Lösung.",
+  },
+  {
+    question: "Welche Garantien bieten Sie?",
+    answer: "5 Jahre Gewährleistung auf alle Estricharbeiten, Festpreis-Garantie ohne Nachforderungen, 100€ Gutschrift bei Verspätung durch uns. Als Estrichleger Meisterbetrieb München arbeiten wir nach DIN 18560 und DIN 18202 – höchste Qualitätsstandards garantiert.",
+  },
+];
+
+const caseStudies = [
+  {
+    title: "Einfamilienhaus Neubau München-Pasing",
+    type: "Estrich Neubau München",
+    area: "180 m² Zementestrich",
+    duration: "2 Tage Verlegung",
+    description: "Kompletter Bodenaufbau mit Wärmedämmung und Zementestrich für ein Einfamilienhaus. Der Bauherr war begeistert von der termingerechten Fertigstellung und der perfekten Ebenheit.",
+  },
+  {
+    title: "Altbausanierung München-Schwabing",
+    type: "Estrich Sanierung München",
+    area: "95 m² Fließestrich + Fußbodenheizung",
+    duration: "3 Tage komplett",
+    description: "Estrichsanierung in einem 1920er Altbau mit nachträglicher Fußbodenheizung. Besondere Herausforderung: minimale Aufbauhöhe bei maximaler Wärmeleistung.",
+  },
+  {
+    title: "Gewerbehalle Garching",
+    type: "Industrieboden München",
+    area: "650 m² Hartstoffestrich",
+    duration: "4 Tage Ausführung",
+    description: "Hochbelastbarer Industrieboden für einen Logistikbetrieb. Gabelstaplertauglich, staubfrei versiegelt, mit 15 Jahren Belastungsgarantie.",
   },
 ];
 
@@ -781,8 +810,133 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Case Studies Section */}
+      <section id="referenzen" className="py-8 bg-accent">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+          <div className="text-center mb-8">
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Referenzen</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Aktuelle <strong>Estrich-Projekte in München</strong></h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
+              Von <strong className="text-foreground">Estrich Neubau München</strong> bis <strong className="text-foreground">Estrich Sanierung München</strong>: 
+              Sehen Sie, wie wir <Link href="/leistungen/zementestrich" className="text-primary hover:underline"><strong>Zementestrich</strong></Link> und{" "}
+              <Link href="/leistungen/fliessestrich" className="text-primary hover:underline"><strong>Fließestrich</strong></Link> für unsere Kunden realisieren.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {caseStudies.map((study, index) => (
+              <Card key={index} className="overflow-visible" data-testid={`card-case-study-${index}`}>
+                <CardHeader className="pb-3">
+                  <Badge variant="secondary" className="w-fit mb-2 text-xs">{study.type}</Badge>
+                  <CardTitle className="text-lg">{study.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-1">
+                      <Ruler className="w-4 h-4" />
+                      <span>{study.area}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Clock className="w-4 h-4" />
+                      <span>{study.duration}</span>
+                    </div>
+                  </div>
+                  <p className="text-sm leading-relaxed">{study.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <p className="text-muted-foreground mb-4">
+              <strong className="text-foreground">Ihr Projekt könnte das nächste sein.</strong> Ob <Link href="/leistungen/zementestrich" className="text-primary hover:underline">Zementestrich München</Link>, 
+              <Link href="/leistungen/fliessestrich" className="text-primary hover:underline"> Fließestrich München</Link> oder{" "}
+              <Link href="/leistungen/sanierung" className="text-primary hover:underline">Estrichsanierung</Link> – wir beraten Sie kostenlos.
+            </p>
+            <Link href="/angebot">
+              <Button size="lg" data-testid="button-case-studies-cta">
+                Kostenloses Angebot anfordern
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Estrich-Ratgeber Section - SEO Content */}
+      <section className="py-8">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 tracking-tight">
+                <strong>Estrich München</strong> – Ihr Ratgeber für den perfekten Boden
+              </h2>
+              <div className="prose prose-sm max-w-none text-muted-foreground space-y-4">
+                <p>
+                  <strong className="text-foreground">Estrich ist mehr als nur eine Bodenschicht</strong> – er ist das Fundament für jeden Bodenbelag. 
+                  Als erfahrener <strong className="text-foreground">Estrichleger München</strong> wissen wir: Die richtige Estrichart entscheidet über 
+                  Langlebigkeit, Wärmeleitfähigkeit und Belastbarkeit Ihres Bodens.
+                </p>
+                <p>
+                  <strong className="text-foreground">Zementestrich</strong> ist der Klassiker im deutschen Hausbau. Robust, wirtschaftlich und vielseitig einsetzbar – 
+                  vom Keller bis zum Dachboden. Die <Link href="/preise" className="text-primary hover:underline">Estrich Kosten München</Link> für Zementestrich 
+                  starten bei 32€/m² und bieten das beste Preis-Leistungs-Verhältnis für <strong className="text-foreground">Estrich Neubau München</strong>.
+                </p>
+                <p>
+                  <strong className="text-foreground">Fließestrich (Calciumsulfat)</strong> überzeugt durch selbstnivellierende Eigenschaften und eignet sich ideal 
+                  für Fußbodenheizungen. Die bessere Wärmeleitfähigkeit bedeutet schnelleres Aufheizen und niedrigere Heizkosten. 
+                  Besonders bei <strong className="text-foreground">Estrich Sanierung München</strong> in Altbauten mit nachträglicher Fußbodenheizung ist 
+                  Fließestrich oft die optimale Wahl.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-4 tracking-tight">Warum Kunden uns als <strong>Estrichleger München</strong> wählen</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <strong className="text-foreground">Meisterbetrieb mit Erfahrung:</strong>
+                    <p className="text-sm text-muted-foreground">30+ Jahre Erfahrung als Estrichleger in München. Über 2.500 Projekte erfolgreich abgeschlossen.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <strong className="text-foreground">Festpreis ohne Überraschungen:</strong>
+                    <p className="text-sm text-muted-foreground">Transparente Estrich Kosten München. Der Preis im Angebot ist der Endpreis – garantiert.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <strong className="text-foreground">Neubau & Sanierung:</strong>
+                    <p className="text-sm text-muted-foreground">Ob Estrich Neubau München oder Estrich Sanierung München – wir liefern für jeden Bedarf.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <strong className="text-foreground">Alle Estricharten:</strong>
+                    <p className="text-sm text-muted-foreground">Zementestrich, Fließestrich, Heizestrich, Schnellestrich, Industrieböden – alles aus einer Hand.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-6">
+                <Link href="/rechner">
+                  <Button variant="outline" data-testid="button-ratgeber-rechner">
+                    Estrich Kosten berechnen
+                    <ChevronRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Service Areas */}
-      <section className="py-8 bg-accent">
+      <section className="py-8 bg-muted/30">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Vorteil: Lokale Nähe</p>
