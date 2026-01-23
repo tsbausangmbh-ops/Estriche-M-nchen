@@ -37,7 +37,7 @@ export function BusinessInfoCard() {
         </div>
 
         <div className="pt-2 border-t">
-          <p className="text-[8px] text-muted-foreground leading-relaxed">
+          <p style={{fontSize: '7px'}} className="text-muted-foreground leading-relaxed">
             <strong>Rechtlicher Hinweis:</strong> Der jeweilige Vertragspartner wird im Angebot und Auftrag ausdrücklich benannt. 
             USt-ID: DE356852204
           </p>
