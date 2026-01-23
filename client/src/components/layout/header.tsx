@@ -32,7 +32,7 @@ export function Header() {
 
   return (
     <>
-      <div className="bg-foreground text-background py-1 text-center" style={{fontSize: '8px'}}>
+      <div className="bg-foreground text-background py-1 text-center" style={{fontSize: '11px'}}>
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           Professionelle und fachgerechte Ausführung durch unser Netzwerk an qualifizierten Meisterbetrieben
         </div>
