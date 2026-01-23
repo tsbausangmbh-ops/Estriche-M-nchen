@@ -91,10 +91,11 @@ export function Header() {
               </Link>
             </div>
 
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav className="hidden md:flex items-center gap-0.5 text-sm">
               <Link href="/">
                 <Button 
                   variant="ghost" 
+                  size="sm"
                   data-testid="nav-home"
                   className={isHomePage ? "bg-accent" : ""}
                 >
@@ -103,9 +104,9 @@ export function Header() {
               </Link>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" data-testid="nav-leistungen">
+                  <Button variant="ghost" size="sm" data-testid="nav-leistungen">
                     Leistungen
-                    <ChevronDown className="ml-1 h-4 w-4" />
+                    <ChevronDown className="ml-1 h-3 w-3" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="start" className="w-56">
@@ -122,6 +123,7 @@ export function Header() {
               <Link href="/ablauf">
                 <Button 
                   variant="ghost" 
+                  size="sm"
                   data-testid="nav-ablauf"
                 >
                   Ablauf
@@ -130,51 +132,47 @@ export function Header() {
               <Link href="/preise">
                 <Button 
                   variant="ghost" 
+                  size="sm"
                   data-testid="nav-preise"
                 >
-                  Estrich Preise
+                  Preise
                 </Button>
               </Link>
               <Link href="/rechner">
                 <Button 
+                  size="sm"
                   data-testid="nav-rechner"
                 >
-                  Kostenloser Budgetrechner
+                  Rechner
                 </Button>
               </Link>
               <Link href="/faq">
                 <Button 
                   variant="ghost" 
+                  size="sm"
                   data-testid="nav-faq"
                 >
                   FAQ
                 </Button>
               </Link>
-              <Link href="/ratgeber">
-                <Button 
-                  variant="ghost" 
-                  data-testid="nav-ratgeber"
-                >
-                  Ratgeber
-                </Button>
-              </Link>
               <Link href="/ueber-uns">
                 <Button 
                   variant="ghost" 
+                  size="sm"
                   data-testid="nav-ueber-uns"
                 >
                   Über uns
                 </Button>
               </Link>
               <Link href="/kontakt">
-                <Button data-testid="nav-kontakt">
+                <Button size="sm" data-testid="nav-kontakt">
                   Kontakt
                 </Button>
               </Link>
               <ThemeToggle />
             </nav>
 
-            <div className="flex items-center gap-2 lg:hidden">
+            <div className="flex items-center gap-2 md:hidden">
               <ThemeToggle />
               <Button
                 variant="ghost"
@@ -190,7 +188,7 @@ export function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t bg-background">
+          <div className="md:hidden border-t bg-background">
             <div className="px-4 py-4 space-y-2">
               <Link href="/" onClick={() => setMobileMenuOpen(false)}>
                 <Button 
