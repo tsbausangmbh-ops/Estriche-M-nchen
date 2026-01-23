@@ -311,8 +311,8 @@ const servicesData: Record<string, PageSEO> = {
 
 const pagesSEO: Record<string, PageSEO> = {
   home: {
-    title: "Estrich München - Ihr Meisterbetrieb für Estricharbeiten | 30+ Jahre Erfahrung",
-    metaDescription: "Estrich verlegen lassen in München vom Meisterbetrieb. Zementestrich, Fußbodenheizung nachrüsten, Industrieböden. 30+ Jahre Erfahrung, Festpreisgarantie. Jetzt beraten!",
+    title: "Estrich München | Zement- & Fließestrich | Festpreis",
+    metaDescription: "Estricharbeiten in München ✔ Zementestrich, Fließestrich & Industrieestrich ✔ Schnell & sauber ✔ Jetzt Angebot sichern!",
     mainKeyword: "Estrich München",
     longTailKeywords: [
       "Estrich München",
