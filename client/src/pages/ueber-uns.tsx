@@ -267,7 +267,7 @@ export default function UeberUns() {
             </h2>
           </div>
 
-          <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
+          <div className="prose max-w-none text-muted-foreground space-y-4">
               <p>
                 1994 stand Mustafa Sakar in seinem eigenen Neubau – und der <strong>Estrichleger</strong> war zum dritten Mal nicht erschienen. 
                 Der Fliesenleger musste unverrichteter Dinge wieder abziehen. Frustration, Zeit und Geld verloren.
