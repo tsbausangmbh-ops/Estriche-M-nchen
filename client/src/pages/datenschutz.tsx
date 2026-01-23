@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Shield, CheckCircle2, Phone, Users, ChevronRight } from "lucide-react";
+import { BusinessInfoCard } from "@/components/business-info-card";
 import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.png";
 
 export default function Datenschutz() {
@@ -373,6 +374,12 @@ export default function Datenschutz() {
               </div>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      <section className="pb-12">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+          <BusinessInfoCard />
         </div>
       </section>
 

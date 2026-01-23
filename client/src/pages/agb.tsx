@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Scale, CheckCircle2, Phone, Users, Shield, ChevronRight } from "lucide-react";
+import { BusinessInfoCard } from "@/components/business-info-card";
 import heroImage from "@assets/generated_images/two_workers_pouring_screed_blue.png";
 
 export default function AGB() {
@@ -529,6 +530,12 @@ export default function AGB() {
               </div>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      <section className="pb-12">
+        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+          <BusinessInfoCard />
         </div>
       </section>
 

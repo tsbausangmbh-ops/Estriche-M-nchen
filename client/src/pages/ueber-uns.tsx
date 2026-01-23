@@ -23,6 +23,7 @@ import {
   Zap
 } from "lucide-react";
 import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.png";
+import { BusinessInfoCard } from "@/components/business-info-card";
 
 const milestones = [
   { year: "1994", title: "Gründung", description: "Start als kleiner Familienbetrieb in München mit einer klaren Vision: Handwerk, dem man vertrauen kann." },
@@ -484,16 +485,7 @@ export default function UeberUns() {
 
       <section className="py-6">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
-          <Card className="border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20">
-            <CardContent className="p-4">
-              <p className="font-semibold text-sm mb-2">Hinweis zur Leistungserbringung</p>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                Die angebotenen Leistungen werden durch rechtlich selbstständige Einzelgewerbebetriebe erbracht. 
-                Der jeweilige Vertragspartner wird im Angebot und Auftrag ausdrücklich benannt. 
-                Eine gemeinschaftliche Haftung mehrerer Gewerbebetriebe besteht nicht.
-              </p>
-            </CardContent>
-          </Card>
+          <BusinessInfoCard />
         </div>
       </section>
 

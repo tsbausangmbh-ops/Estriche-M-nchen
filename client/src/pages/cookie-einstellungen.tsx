@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Link } from "wouter";
 import { Cookie, Shield, BarChart3, Sparkles, CheckCircle2, Phone, Users, ChevronRight, Settings } from "lucide-react";
+import { BusinessInfoCard } from "@/components/business-info-card";
 import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.png";
 
 const COOKIE_CONSENT_KEY = "estrich-cookie-consent";
@@ -431,20 +432,10 @@ export default function CookieEinstellungen() {
             </CardContent>
           </Card>
 
-          <Card>
-            <CardContent className="p-6 space-y-6">
-              <div>
-                <h2 className="text-xl font-bold mb-3">Kontakt</h2>
-                <p className="text-muted-foreground">
-                  Bei Fragen zu unserer Cookie-Richtlinie können Sie uns jederzeit kontaktieren:<br /><br />
-                  Mustafa Sakar - Estriche München<br />
-                  Hardenbergstr. 4<br />
-                  80992 München<br /><br />
-                  E-Mail: <a href="mailto:info@estriche-muenchen.de" className="text-primary underline hover:no-underline">info@estriche-muenchen.de</a><br />
-                  Telefon: <a href="tel:+4989444438872" className="text-primary underline hover:no-underline">089 444438872</a>
-                </p>
-              </div>
+          <BusinessInfoCard />
 
+          <Card className="mt-6">
+            <CardContent className="p-6">
               <div className="pt-4 border-t">
                 <p className="text-sm text-muted-foreground">
                   Stand: Januar 2026<br />

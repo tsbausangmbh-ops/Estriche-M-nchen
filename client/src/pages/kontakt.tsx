@@ -30,6 +30,7 @@ import { Footer } from "@/components/layout/footer";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { Phone, Mail, MapPin, Clock, ChevronRight, CheckCircle2, MessageSquare, Users, Shield } from "lucide-react";
+import { BusinessInfoCard } from "@/components/business-info-card";
 import { Link } from "wouter";
 import heroImage from "@assets/generated_images/workers_milling_and_pipes_blue.png";
 
@@ -358,16 +359,9 @@ export default function Kontakt() {
                 </CardContent>
               </Card>
 
-              <Card className="mt-6 border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20">
-                <CardContent className="p-4">
-                  <p className="font-semibold text-sm mb-2">Hinweis zur Leistungserbringung</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    Die angebotenen Leistungen werden durch rechtlich selbstständige Einzelgewerbebetriebe erbracht. 
-                    Der jeweilige Vertragspartner wird im Angebot und Auftrag ausdrücklich benannt. 
-                    Eine gemeinschaftliche Haftung mehrerer Gewerbebetriebe besteht nicht.
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="mt-6">
+                <BusinessInfoCard />
+              </div>
 
               <Card className="mt-6 overflow-hidden">
                 <CardContent className="p-0">
