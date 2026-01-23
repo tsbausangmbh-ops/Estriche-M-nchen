@@ -3,7 +3,7 @@ import logoImage from "@assets/Logo_Universal_1768216877638.png";
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background py-8" data-testid="footer">
+    <footer className="bg-red-600 text-background py-8" data-testid="footer">
       <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-8 gap-y-6">
           <div className="col-span-2 md:col-span-1 lg:col-span-1" data-testid="footer-brand">
