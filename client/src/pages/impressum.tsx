@@ -5,16 +5,16 @@ import { Footer } from "@/components/layout/footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { FileText, CheckCircle2, Phone, Users, Shield, ChevronRight } from "lucide-react";
+import { FileText, CheckCircle2, Phone, Users, Shield, ChevronRight, Building2 } from "lucide-react";
 import heroImage from "@assets/generated_images/workers_checking_level_blue.png";
 
 export default function Impressum() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Impressum | Estriche München | Mustafa Sakar</title>
-        <meta name="description" content="Impressum von Estriche München – Estrichleger Meisterbetrieb. Inhaber: Mustafa Sakar, Hardenbergstr. 4, 80992 München. ☎ 089 444438872. Angaben gemäß § 5 TMG." />
-        <meta name="keywords" content="Impressum Estriche München, Estrichleger Kontakt, Mustafa Sakar München, Estrich Firma Impressum, Handwerker Impressum Bayern" />
+        <title>Impressum | Estriche München | Mustafa Sakar & Ali Kemal Kurt</title>
+        <meta name="description" content="Impressum von Estriche München – Estrichleger Meisterbetrieb. Inhaber: Mustafa Sakar & Ali Kemal Kurt. ☎ 089 444438872. Angaben gemäß § 5 TMG." />
+        <meta name="keywords" content="Impressum Estriche München, Estrichleger Kontakt, Mustafa Sakar München, Ali Kemal Kurt München, Estrich Firma Impressum" />
         <link rel="canonical" href="https://estriche-muenchen.de/impressum" />
       </Helmet>
       <Header />
@@ -90,122 +90,157 @@ export default function Impressum() {
       <section className="py-12">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <Card className="mb-6">
-            <CardContent className="p-6 space-y-6">
+            <CardContent className="p-6 space-y-8">
               <div>
                 <h2 className="text-xl font-bold mb-3">Angaben gemäß § 5 TMG</h2>
-                <p className="text-muted-foreground">
-                  Mustafa Sakar<br />
-                  Estriche München<br />
-                  Hardenbergstr. 4<br />
-                  80992 München<br />
-                  Deutschland
+                <p className="text-sm text-muted-foreground mb-4">
+                  Die Website Estriche München wird gemeinschaftlich betrieben von zwei rechtlich selbstständigen Einzelgewerben:
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="p-4 border rounded-lg">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Building2 className="w-5 h-5 text-primary" />
+                    <h3 className="font-bold text-sm">Gewerbebetrieb 1</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Name:</strong> Mustafa Sakar<br />
+                    <strong>Rechtsform:</strong> Einzelunternehmen<br />
+                    <strong>Firmenauftritt:</strong> Estriche München<br /><br />
+                    <strong>Anschrift:</strong><br />
+                    Hardenbergstr. 4<br />
+                    80992 München<br />
+                    Deutschland<br /><br />
+                    <strong>Telefon:</strong> 089 444438872<br />
+                    <strong>E-Mail:</strong> info@estriche-muenchen.de<br /><br />
+                    <strong>Tätigkeitsbereich:</strong><br />
+                    Bauleitung, Projektsteuerung, Kundenberatung, Koordination der Gewerke, Angebots- und Auftragsabwicklung
+                  </p>
+                </div>
+
+                <div className="p-4 border rounded-lg">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Building2 className="w-5 h-5 text-primary" />
+                    <h3 className="font-bold text-sm">Gewerbebetrieb 2</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Name:</strong> Ali Kemal Kurt<br />
+                    <strong>Rechtsform:</strong> Einzelunternehmen<br />
+                    <strong>Firmenauftritt:</strong> Estriche München<br /><br />
+                    <strong>Anschrift:</strong><br />
+                    Zielstattstr. 9<br />
+                    81379 München<br />
+                    Deutschland<br /><br />
+                    <strong>Telefon:</strong> 0152 122 740 43<br />
+                    <strong>E-Mail:</strong> info@komplettsanierungen-haus-wohnung.de<br /><br />
+                    <strong>Tätigkeitsbereich:</strong><br />
+                    Ausführende Bau-, Sanierungs- und Renovierungsleistungen sowie handwerkliche Tätigkeiten
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-bold mb-3">Umsatzsteuer-ID</h2>
+                <p className="text-sm text-muted-foreground">
+                  Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
+                  <strong>DE356852204</strong>
                 </p>
               </div>
 
               <div>
-                <h2 className="text-xl font-bold mb-3">Kontakt</h2>
-                <p className="text-muted-foreground">
-                  Telefon: 089 444438872<br />
-                  E-Mail: info@estriche-muenchen.de
+                <h2 className="text-xl font-bold mb-3">Rechtlicher Hinweis zur Gewerbetrennung</h2>
+                <p className="text-sm text-muted-foreground">
+                  Die genannten Gewerbebetriebe sind rechtlich, wirtschaftlich und steuerlich eigenständig.<br /><br />
+                  Der jeweilige Vertragspartner, Rechnungssteller und Leistungserbringer wird im Angebot, Auftrag und auf der Rechnung eindeutig benannt.<br /><br />
+                  <strong>Es besteht keine gemeinsame Haftung.</strong>
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-bold mb-3">Vertragspartner je Auftrag</h2>
+                <p className="text-sm text-muted-foreground">
+                  Vertragspartner dieses Angebots ist der im Angebot namentlich genannte Gewerbebetrieb.<br /><br />
+                  Rechnungsstellung, Gewährleistung und Haftung erfolgen ausschließlich über den jeweiligen Vertragspartner.<br /><br />
+                  Weitere Leistungen können durch rechtlich selbstständige Partnerbetriebe ausgeführt werden.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-bold mb-3">Verantwortlich für den Inhalt gemäß § 18 MStV</h2>
+                <p className="text-sm text-muted-foreground">
+                  Mustafa Sakar<br />
+                  Hardenbergstr. 4, 80992 München<br /><br />
+                  Ali Kemal Kurt<br />
+                  Zielstattstr. 9, 81379 München
                 </p>
               </div>
 
               <div>
                 <h2 className="text-xl font-bold mb-3">Berufsbezeichnung und berufsrechtliche Regelungen</h2>
-                <p className="text-muted-foreground">
-                  Berufsbezeichnung: Estrichleger / Bauunternehmen<br />
-                  Zuständige Kammer: Handwerkskammer für München und Oberbayern<br />
-                  Verliehen in: Deutschland<br />
-                  Ausführende Firma: Hüseyin Türker (Estrich T.H. UG)
+                <p className="text-sm text-muted-foreground">
+                  <strong>Berufsbezeichnung:</strong> Generalübernehmer<br />
+                  <strong>Zuständige Kammer:</strong> Handwerkskammer für München und Oberbayern<br /><br />
+                  Es gelten folgende berufsrechtliche Regelungen: Handwerksordnung (HwO)<br />
+                  Regelungen einsehbar unter: <a href="https://www.gesetze-im-internet.de/hwo/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">www.gesetze-im-internet.de/hwo/</a><br /><br />
+                  <strong>Wichtiger Hinweis:</strong> Alle meisterpflichtigen Gewerke werden durch unser Partnernetzwerk ausgeführt, die als eingetragene Meisterfirmen in der Handwerkskammer gelistet sind.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-xl font-bold mb-3">Partnernetzwerk</h2>
-                <p className="text-muted-foreground">
-                  Die Ausführung aller Estricharbeiten erfolgt durch unser Netzwerk qualifizierter 
-                  Meisterbetriebe und Fachfirmen. Estriche München vermittelt und koordiniert diese 
-                  Leistungen. Unsere Partnerbetriebe arbeiten nach höchsten Qualitätsstandards und 
-                  sind für die fachgerechte Ausführung verantwortlich.
+                <p className="text-sm text-muted-foreground">
+                  Wir arbeiten mit rechtlich selbstständigen Einzelgewerbebetrieben und ausgewählten Partnerfirmen.<br /><br />
+                  Der jeweilige Vertragspartner wird im Angebot und in der Rechnung eindeutig ausgewiesen. Sämtliche meisterpflichtigen Gewerke (u.a. Elektro, Sanitär, Heizung) werden durch unser Partnernetzwerk ausgeführt. Hierbei handelt es sich ausnahmslos um eingetragene Meisterfirmen der Handwerkskammer München.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-xl font-bold mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-                <p className="text-muted-foreground">
-                  Mustafa Sakar<br />
-                  Hardenbergstr. 4<br />
-                  80992 München
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-xl font-bold mb-3">EU-Streitschlichtung</h2>
-                <p className="text-muted-foreground">
-                  Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
-                  <a href="https://consumer-redress.ec.europa.eu/index_de" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1">
-                    https://consumer-redress.ec.europa.eu/index_de
-                  </a>
-                  <br /><br />
-                  Unsere E-Mail-Adresse finden Sie oben im Impressum.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-xl font-bold mb-3">Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
-                <p className="text-muted-foreground">
-                  Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer 
-                  Verbraucherschlichtungsstelle teilzunehmen.
+                <h2 className="text-xl font-bold mb-3">Außergerichtliche Streitschlichtung (Handwerk)</h2>
+                <p className="text-sm text-muted-foreground">
+                  Hinweis gemäß § 36 VSBG (Verbraucherstreitbeilegungsgesetz) für Handwerksbetriebe:<br /><br />
+                  Wir sind bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.<br /><br />
+                  <strong>Zuständige Schlichtungsstelle:</strong><br />
+                  Schlichtungsstelle für den Bereich Handwerk<br />
+                  Bayerische Handwerkskammern / ZDH<br />
+                  Geschäftsstelle: Max-Joseph-Straße 4, 80333 München<br />
+                  Website: <a href="https://www.zdh.de/fachbereiche/recht/schlichtung/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">www.zdh.de/fachbereiche/recht/schlichtung/</a><br /><br />
+                  <em>Hinweis: Die EU-Online-Streitbeilegungsplattform (OS) wurde gemäß Verordnung (EU) 2024/3228 zum 20. Juli 2025 eingestellt.</em>
                 </p>
               </div>
 
               <div>
                 <h2 className="text-xl font-bold mb-3">Haftung für Inhalte</h2>
-                <p className="text-muted-foreground">
-                  Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den 
-                  allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht 
-                  verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen 
-                  zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
-                  <br /><br />
-                  Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen 
-                  Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt 
-                  der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden 
-                  Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+                <p className="text-sm text-muted-foreground">
+                  Als Diensteanbieter sind wir gemäß § 7 Abs.1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-xl font-bold mb-3">Haftung für Links</h2>
-                <p className="text-muted-foreground">
-                  Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. 
-                  Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der 
-                  verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
-                  <br /><br />
-                  Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. 
-                  Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche 
-                  Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht 
-                  zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+                <p className="text-sm text-muted-foreground">
+                  Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-xl font-bold mb-3">Urheberrecht</h2>
-                <p className="text-muted-foreground">
-                  Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen 
-                  Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der 
-                  Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-                  <br /><br />
-                  Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. 
-                  Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte 
-                  Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem 
-                  auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei 
-                  Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+                <p className="text-sm text-muted-foreground">
+                  Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-bold mb-3">KI-Hinweis gemäß EU AI Act (Art. 50)</h2>
+                <p className="text-sm text-muted-foreground">
+                  <strong>Transparenzhinweis:</strong> Estriche München setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.<br /><br />
+                  <em>Rechtsgrundlage: Verordnung (EU) 2024/1689 (EU AI Act), Art. 22 DSGVO</em>
                 </p>
               </div>
 
               <div className="pt-4 border-t">
-                <p className="text-sm text-muted-foreground">
-                  Stand: Januar 2026
+                <p className="text-xs text-muted-foreground">
+                  Stand: Januar 2026 – Angaben gemäß den aktuellen Anforderungen für Handwerksbetriebe ab Februar 2025.
                 </p>
               </div>
             </CardContent>
