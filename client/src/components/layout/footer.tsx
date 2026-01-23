@@ -120,7 +120,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-background/20 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-background/60">
+          <p className="text-xs text-background/50">
             © {new Date().getFullYear()}{" "}
             <Link href="/" className="hover:text-background transition-colors">Estriche München</Link>. 
             Alle Rechte vorbehalten. | Website by{" "}
@@ -128,7 +128,7 @@ export function Footer() {
             {" "}und{" "}
             <a href="https://kshwmont.com" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">KSHWmont d.o.o.</a>
           </p>
-          <div className="flex flex-wrap gap-6 text-sm text-background/60">
+          <div className="flex flex-wrap gap-4 text-xs text-background/50">
             <Link href="/impressum" className="hover:text-background transition-colors" data-testid="link-impressum">
               Impressum
             </Link>
