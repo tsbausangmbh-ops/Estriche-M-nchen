@@ -4,34 +4,34 @@ import logoImage from "@assets/Logo_Universal_1768216877638.png";
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background py-12" data-testid="footer">
+    <footer className="bg-foreground text-background py-8" data-testid="footer">
       <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
-        <div className="grid md:grid-cols-5 gap-8">
+        <div className="grid md:grid-cols-5 gap-6">
           <div className="md:col-span-2" data-testid="footer-brand">
-            <Link href="/" className="flex items-center gap-3 mb-4">
+            <Link href="/" className="flex items-center gap-2 mb-3">
               <img 
                 src={logoImage} 
                 alt="Estriche München Logo" 
-                className="h-10 w-auto rounded-md"
-                width="40"
-                height="40"
+                className="h-8 w-auto rounded-md"
+                width="32"
+                height="32"
                 loading="lazy"
                 decoding="async"
               />
               <div>
-                <div className="font-bold text-lg">Estriche München</div>
-                <div className="text-xs text-background/70">Estrich • Bodenaufbau • Sanierung</div>
+                <div className="font-bold text-sm">Estriche München</div>
+                <div className="text-[10px] text-background/60">Estrich • Bodenaufbau • Sanierung</div>
               </div>
             </Link>
-            <p className="text-background/70 text-sm max-w-md" data-testid="text-footer-description">
+            <p className="text-background/60 text-xs max-w-md" data-testid="text-footer-description">
               Ihr zuverlässiger Partner für professionelle Estricharbeiten in München und Umgebung. 
               Termintreu, sauber und fachgerecht.
             </p>
           </div>
 
           <div data-testid="footer-services">
-            <h4 className="font-semibold mb-4">Estrichleger München – Leistungen</h4>
-            <ul className="space-y-2 text-sm text-background/70">
+            <h4 className="font-semibold text-xs mb-3">Estrichleger München – Leistungen</h4>
+            <ul className="space-y-1.5 text-xs text-background/60">
               <li>
                 <Link href="/" className="hover:text-background transition-colors font-medium">
                   Estrich München
@@ -76,8 +76,8 @@ export function Footer() {
           </div>
 
           <div data-testid="footer-info">
-            <h4 className="font-semibold mb-4">Estrich Kosten & Beratung</h4>
-            <ul className="space-y-2 text-sm text-background/70">
+            <h4 className="font-semibold text-xs mb-3">Estrich Kosten & Beratung</h4>
+            <ul className="space-y-1.5 text-xs text-background/60">
               <li>
                 <Link href="/preise" className="hover:text-background transition-colors font-medium">Estrich Kosten München pro m²</Link>
               </li>
@@ -103,8 +103,8 @@ export function Footer() {
           </div>
 
           <div data-testid="footer-contact">
-            <h4 className="font-semibold mb-4">Kontakt</h4>
-            <ul className="space-y-2 text-sm text-background/70">
+            <h4 className="font-semibold text-xs mb-3">Kontakt</h4>
+            <ul className="space-y-1.5 text-xs text-background/60">
               <li data-testid="text-footer-phone">
                 <a href="tel:+4989444438872" className="hover:text-background transition-colors">089 444438872</a>
               </li>
