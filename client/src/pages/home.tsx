@@ -361,6 +361,15 @@ export default function Home() {
         <meta property="og:image:height" content="630" />
         <meta name="twitter:image" content="https://estriche-muenchen.de/og-image.png" />
         <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Estriche München",
+            "alternateName": ["Estriche Muenchen", "Estrichleger München"],
+            "url": "https://estriche-muenchen.de"
+          })}
+        </script>
+        <script type="application/ld+json">
           {JSON.stringify(generateLocalBusinessSchema("https://estriche-muenchen.de/logo.png", "https://estriche-muenchen.de/og-image.png"))}
         </script>
         <script type="application/ld+json">
