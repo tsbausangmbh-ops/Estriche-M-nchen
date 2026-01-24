@@ -148,7 +148,7 @@ export default function Ablauf() {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Estrich verlegen Ablauf München | 7 Schritte | Estrichleger Prozess | Estriche München</title>
-        <meta name="description" content="Estrich verlegen Ablauf München: In 7 Schritten zum perfekten Boden. Von kostenloser Beratung bis Abnahme – Festpreis in 48h, Meisterbetrieb mit 30+ Jahren Erfahrung. So läuft Ihr Estrich-Projekt transparent ab." />
+        <meta name="description" content="Estrich verlegen Ablauf München: In 7 Schritten zum perfekten Boden. Von kostenloser Beratung bis Abnahme – Festpreis in 48h, Fachbetrieb mit 30+ Jahren Erfahrung. So läuft Ihr Estrich-Projekt transparent ab." />
         <meta name="keywords" content="Estrich Ablauf München, Estrich verlegen Ablauf, Estrich Projekt Schritte, Estrich Beratung kostenlos, Estrich Terminplanung, Estricharbeiten Ablauf" />
         <link rel="canonical" href="https://estriche-muenchen.de/ablauf" />
         <meta property="og:title" content="Ablauf Estricharbeiten München | 7 Schritte" />

@@ -340,22 +340,22 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Estriche München | Estrichleger Meisterbetrieb | Zement- & Fließestrich | Festpreis 2026</title>
-        <meta name="description" content="Estriche München – Ihr Estrichleger Meisterbetrieb: Zementestrich ab 32€/m², Fließestrich, Heizestrich & Industrieestrich. 30+ Jahre Erfahrung, Festpreis-Garantie, 5 Jahre Gewährleistung. Jetzt kostenloses Angebot sichern!" />
+        <title>Estriche München | Estrichleger Fachbetrieb | Zement- & Fließestrich | Festpreis 2026</title>
+        <meta name="description" content="Estriche München – Ihr Estrichleger mit 30+ Jahren Erfahrung: Zementestrich ab 32€/m², Fließestrich, Heizestrich & Industrieestrich. Festpreis-Garantie, 5 Jahre Gewährleistung. Jetzt kostenloses Angebot sichern!" />
         <meta name="keywords" content="Estriche München, Estrichleger München, Zementestrich München, Fließestrich München, Heizestrich München, Industrieboden München, Fußbodenheizung nachrüsten, Estrichsanierung München, Estrich Kosten pro qm, Schnellestrich München" />
         <meta name="geo.region" content="DE-BY" />
         <meta name="geo.placename" content="München" />
         <meta name="geo.position" content="48.1779;11.5193" />
         <meta name="ICBM" content="48.1779, 11.5193" />
         <link rel="canonical" href="https://estriche-muenchen.de/" />
-        <meta property="og:title" content="Estriche München | Estrichleger Meisterbetrieb | Zement- & Fließestrich | Festpreis 2026" />
-        <meta property="og:description" content="Estriche München – Ihr Estrichleger Meisterbetrieb: Zementestrich ab 32€/m², Fließestrich, Heizestrich & Industrieestrich. 30+ Jahre Erfahrung, Festpreis-Garantie. Jetzt Angebot sichern!" />
+        <meta property="og:title" content="Estriche München | Estrichleger Fachbetrieb | Zement- & Fließestrich | Festpreis 2026" />
+        <meta property="og:description" content="Estriche München – Ihr Estrichleger mit 30+ Jahren Erfahrung: Zementestrich ab 32€/m², Fließestrich, Heizestrich & Industrieestrich. Festpreis-Garantie. Jetzt Angebot sichern!" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://estriche-muenchen.de/" />
         <meta property="og:locale" content="de_DE" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Estriche München | Estrichleger Meisterbetrieb | Zement- & Fließestrich | Festpreis 2026" />
-        <meta name="twitter:description" content="Estriche München – Ihr Estrichleger Meisterbetrieb: Zementestrich ab 32€/m², Fließestrich, Heizestrich & Industrieestrich. 30+ Jahre Erfahrung, Festpreis-Garantie. Jetzt Angebot sichern!" />
+        <meta name="twitter:title" content="Estriche München | Estrichleger Fachbetrieb | Zement- & Fließestrich | Festpreis 2026" />
+        <meta name="twitter:description" content="Estriche München – Ihr Estrichleger mit 30+ Jahren Erfahrung: Zementestrich ab 32€/m², Fließestrich, Heizestrich & Industrieestrich. Festpreis-Garantie. Jetzt Angebot sichern!" />
         <meta property="og:image" content="https://estriche-muenchen.de/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />

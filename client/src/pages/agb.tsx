@@ -14,7 +14,7 @@ export default function AGB() {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>AGB Estrichleger München | Geschäftsbedingungen | Estriche München Bauvertrag</title>
-        <meta name="description" content="AGB Estriche München: Allgemeine Geschäftsbedingungen für Estricharbeiten gemäß BGB Bauvertragsrecht (§§ 650a–650o). Estrichleger Meisterbetrieb München – faire Vertragsbedingungen, Gewährleistung & Zahlungsmodalitäten." />
+        <meta name="description" content="AGB Estriche München: Allgemeine Geschäftsbedingungen für Estricharbeiten gemäß BGB Bauvertragsrecht (§§ 650a–650o). Estrichleger Fachbetrieb München – faire Vertragsbedingungen, Gewährleistung & Zahlungsmodalitäten." />
         <meta name="keywords" content="AGB Estriche München, Allgemeine Geschäftsbedingungen Estrichleger, Bauvertrag München, Estrichvertrag AGB, Handwerker AGB Bayern" />
         <link rel="canonical" href="https://estriche-muenchen.de/agb" />
       </Helmet>
