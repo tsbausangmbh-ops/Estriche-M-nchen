@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
+import { getWeeklyScarcityNumber } from "@/lib/utils";
 import { generateBreadcrumbSchema, generateLocalBusinessSchema } from "@/lib/seo-schemas";
 import { 
   ChevronRight, 
@@ -128,6 +129,9 @@ export default function UeberUns() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
           <div className="max-w-3xl">
+            <Badge variant="outline" className="text-sm border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide animate-pulse mb-4">
+              ACHTUNG: Nur noch {getWeeklyScarcityNumber()} freie Termine diese Woche
+            </Badge>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center">
                 <Building2 className="w-6 h-6 text-white" />
