@@ -175,7 +175,7 @@ export const services: Service[] = [
       "Festpreis – was wir anbieten, gilt",
       "Pünktlichkeitsgarantie oder 100€ Gutschrift"
     ],
-    urgency: "Aktuell haben wir noch 3 freie Termine im Januar. Sichern Sie sich jetzt Ihren Wunschtermin, bevor die Auftragsbücher voll sind.",
+    urgency: "Hohe Nachfrage – sichern Sie sich jetzt Ihren Wunschtermin, bevor die Auftragsbücher voll sind.",
     image: serviceImage1,
     price: "25-45",
     galleryImages: [

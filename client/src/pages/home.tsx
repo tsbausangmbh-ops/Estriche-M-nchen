@@ -384,7 +384,7 @@ export default function Home() {
             {/* Hero Content */}
             <div className="lg:col-span-3 space-y-8">
               <Badge variant="outline" className="text-sm border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide animate-pulse">
-                ACHTUNG: Nur noch 2 freie Termine diese Woche
+                ACHTUNG: Nur noch {getWeeklyScarcityNumber(1)} freie Termine diese Woche
               </Badge>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] text-primary-foreground">
                 <strong>Estrich München</strong> – Schluss mit Baustellen-Chaos. <span className="text-primary">Endlich Ruhe im Kopf.</span>
