@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
+import { getWeeklyScarcityNumber } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChevronRight, HelpCircle, Shield, Zap, Award, CheckCircle2, Phone, Users } from "lucide-react";
@@ -229,7 +230,7 @@ export default function FAQ() {
             </div>
             <div className="bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-lg px-4 py-2 mb-6 inline-block">
               <span className="text-white text-sm font-medium">
-                <strong>Tipp:</strong> Nach dem Lesen – nur noch 2 Termine diese Woche für kostenlose Beratung
+                <strong>Tipp:</strong> Nach dem Lesen – nur noch {getWeeklyScarcityNumber(4)} Termine diese Woche für kostenlose Beratung
               </span>
             </div>
 

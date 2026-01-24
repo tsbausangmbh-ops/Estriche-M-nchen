@@ -1,5 +1,6 @@
 import { useParams, Link } from "wouter";
 import { Helmet } from "react-helmet-async";
+import { getWeeklyScarcityNumber } from "@/lib/utils";
 import { getServiceById, services } from "@/lib/services-data";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -521,7 +522,7 @@ export default function ServiceDetail() {
             {service.urgency}
           </p>
           <p className="text-sm text-muted-foreground mb-4">
-            <strong>Diese Woche nur noch 2 freie Termine</strong> für Ihre Region verfügbar.
+            <strong>Diese Woche nur noch {getWeeklyScarcityNumber(5)} freie Termine</strong> für Ihre Region verfügbar.
           </p>
           <Link href="/angebot">
             <Button data-testid="button-urgency-cta">
