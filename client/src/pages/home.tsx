@@ -340,21 +340,21 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Estrich München | Zement- & Fließestrich | Festpreis</title>
+        <title>Estriche München | Zement- & Fließestrich | Festpreis</title>
         <meta name="description" content="Estricharbeiten in München ✔ Zementestrich, Fließestrich & Industrieestrich ✔ Schnell & sauber ✔ Jetzt Angebot sichern!" />
-        <meta name="keywords" content="Estrich München, Estrichleger München, Zementestrich München, Fließestrich München, Heizestrich München, Industrieboden München, Fußbodenheizung nachrüsten, Estrichsanierung München, Estrich Kosten pro qm, Schnellestrich München" />
+        <meta name="keywords" content="Estriche München, Estrichleger München, Zementestrich München, Fließestrich München, Heizestrich München, Industrieboden München, Fußbodenheizung nachrüsten, Estrichsanierung München, Estrich Kosten pro qm, Schnellestrich München" />
         <meta name="geo.region" content="DE-BY" />
         <meta name="geo.placename" content="München" />
         <meta name="geo.position" content="48.1779;11.5193" />
         <meta name="ICBM" content="48.1779, 11.5193" />
         <link rel="canonical" href="https://estriche-muenchen.de/" />
-        <meta property="og:title" content="Estrich München | Zement- & Fließestrich | Festpreis" />
+        <meta property="og:title" content="Estriche München | Zement- & Fließestrich | Festpreis" />
         <meta property="og:description" content="Estricharbeiten in München ✔ Zementestrich, Fließestrich & Industrieestrich ✔ Schnell & sauber ✔ Jetzt Angebot sichern!" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://estriche-muenchen.de/" />
         <meta property="og:locale" content="de_DE" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Estrich München | Zement- & Fließestrich | Festpreis" />
+        <meta name="twitter:title" content="Estriche München | Zement- & Fließestrich | Festpreis" />
         <meta name="twitter:description" content="Estricharbeiten in München ✔ Zementestrich, Fließestrich & Industrieestrich ✔ Schnell & sauber ✔ Jetzt Angebot sichern!" />
         <meta property="og:image" content="https://estriche-muenchen.de/og-image.png" />
         <meta property="og:image:width" content="1200" />

@@ -171,11 +171,11 @@ export default function FAQ() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Häufige Fragen (FAQ) | Estrich München | Beratung & Antworten</title>
-        <meta name="description" content="Estrich FAQ München: Antworten zu Trocknungszeit, Kosten pro m², Materialien, Fußbodenheizung. 25+ Fragen vom Meisterbetrieb beantwortet." />
+        <title>Häufige Fragen (FAQ) | Estriche München | Beratung & Antworten</title>
+        <meta name="description" content="Estriche München FAQ: Antworten zu Trocknungszeit, Kosten pro m², Materialien, Fußbodenheizung. 25+ Fragen vom Meisterbetrieb beantwortet." />
         <meta name="keywords" content="Estrich FAQ, Estrich Fragen Antworten, Estrich Trocknungszeit, Estrich Kosten Fragen, Zementestrich FAQ, Fließestrich Fragen, Fußbodenheizung Estrich, Estrich trocknen wie lange, Estrich belegen wann" />
         <link rel="canonical" href="https://estriche-muenchen.de/faq" />
-        <meta property="og:title" content="Häufige Fragen (FAQ) | Estrich München" />
+        <meta property="og:title" content="Häufige Fragen (FAQ) | Estriche München" />
         <meta property="og:description" content="Expertenantworten auf Ihre Fragen zu Estricharbeiten in München." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://estriche-muenchen.de/faq" />
