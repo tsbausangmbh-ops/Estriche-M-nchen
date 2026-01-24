@@ -986,8 +986,8 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
                       <div className="space-y-4">
                         <div className="text-center py-4 bg-primary/5 rounded-lg">
                           <p className="text-sm text-muted-foreground mb-1">Preisrahmen (ca.)</p>
-                          <p className="text-3xl font-bold text-primary" data-testid="text-price-range">
-                            {result.min.toLocaleString('de-DE')} – {result.max.toLocaleString('de-DE')} €
+                          <p className="text-2xl sm:text-3xl font-bold text-primary whitespace-nowrap" data-testid="text-price-range">
+                            {result.min.toLocaleString('de-DE')} – {result.max.toLocaleString('de-DE')}&nbsp;€
                           </p>
                           <p className="text-xs text-muted-foreground mt-1">netto zzgl. MwSt.</p>
                         </div>
@@ -995,17 +995,17 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
                         <div className="space-y-2">
                           <p className="text-sm font-medium">Kostenaufstellung:</p>
                           {result.breakdown.map((item, index) => (
-                            <div key={index} className="flex justify-between text-sm">
+                            <div key={index} className="flex justify-between gap-2 text-sm">
                               <span className="text-muted-foreground">{item.label}</span>
-                              <span className={item.amount < 0 ? 'text-green-600 dark:text-green-400' : ''}>
-                                {item.info || `${item.amount.toLocaleString('de-DE')} €`}
+                              <span className={`whitespace-nowrap flex-shrink-0 ${item.amount < 0 ? 'text-green-600 dark:text-green-400' : ''}`}>
+                                {item.info || `${item.amount.toLocaleString('de-DE')}\u00A0€`}
                               </span>
                             </div>
                           ))}
                           <div className="border-t pt-2 mt-2">
-                            <div className="flex justify-between font-medium">
+                            <div className="flex justify-between gap-2 font-medium">
                               <span>Zwischensumme</span>
-                              <span>{result.subtotal?.toLocaleString('de-DE')} €</span>
+                              <span className="whitespace-nowrap flex-shrink-0">{result.subtotal?.toLocaleString('de-DE')}&nbsp;€</span>
                             </div>
                           </div>
                         </div>
