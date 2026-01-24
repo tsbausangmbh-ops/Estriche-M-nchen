@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useMutation } from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
+import { getWeeklyScarcityNumber } from "@/lib/utils";
 import jsPDF from "jspdf";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -620,6 +621,9 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
           <div className="max-w-3xl">
+            <Badge variant="outline" className="text-sm border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide animate-pulse mb-4">
+              ACHTUNG: Nur noch {getWeeklyScarcityNumber(6)} freie Termine diese Woche
+            </Badge>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center">
                 <Calculator className="w-6 h-6 text-white" />
