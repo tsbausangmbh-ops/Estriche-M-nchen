@@ -101,8 +101,8 @@ export default function CookieEinstellungen() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Cookie-Einstellungen verwalten | Estriche München Fachbetrieb | DSGVO & TDDDG konform 2026</title>
-        <meta name="description" content="Cookie-Richtlinie Estriche München: Verwalten Sie Ihre Cookie-Einstellungen gemäß DSGVO und TDDDG. Transparente Datenschutz-Informationen!" />
+        <title>Cookies-Einstellungen verwalten | Estriche München Fachbetrieb | DSGVO TDDDG konform 2026</title>
+        <meta name="description" content="Cookie-Richtlinie Estriche München: Verwalten Sie Ihre Cookie-Einstellungen gemäß DSGVO und TDDDG. Transparente Datenschutz-Informationen Fachbetrieb" />
         <meta name="keywords" content="Cookie Richtlinie Estrich, Cookies Estrichleger München, TDDDG Handwerker Website, Tracking Baufirma Bayern, Cookie Einstellungen Bauunternehmen" />
         <link rel="canonical" href="https://estriche-muenchen.de/cookie-einstellungen" />
       </Helmet>

@@ -136,8 +136,8 @@ export default function Kontakt() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Kontakt Estrichleger München | Kostenlose Beratung | Estriche München Fachbetrieb ☎ Anrufen</title>
-        <meta name="description" content="Estrichleger München kontaktieren: Kostenlose Vor-Ort-Beratung, Festpreis in 24h. ☎ 089 444438872 Mo-Fr 08:00-16:30. Fachbetrieb 30+ Jahre Erfahrung!" />
+        <title>Kontakt Estrichleger München | Kostenlose Beratung | Estriche München Fachbetrieb 2026</title>
+        <meta name="description" content="Estrichleger München kontaktieren: Kostenlose Vor-Ort-Beratung, Festpreis in 24h. ☎ 089 444438872 Mo-Fr 08:00-16:30. Fachbetrieb 30+ Jahre Erfahrung 2026!" />
         <meta name="keywords" content="Estriche München Kontakt, Estrichleger anrufen, Estrich Angebot München, kostenlose Beratung Estrich, Estrich Telefon, Estrich Termin buchen, Estricharbeiten anfragen" />
         <meta name="geo.region" content="DE-BY" />
         <meta name="geo.placename" content="München" />

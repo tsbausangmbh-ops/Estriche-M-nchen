@@ -12,8 +12,8 @@ export default function Impressum() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Impressum Estrichleger München | Estriche München Fachbetrieb | Kontaktdaten & Firmenangaben</title>
-        <meta name="description" content="Impressum Estriche München: Inhaber Mustafa Sakar & Ali Kemal Kurt, Hardenbergstr. 4, 80992 München. ☎ 089 444438872. Angaben gemäß § 5 TMG!" />
+        <title>Impressum Estrichleger München | Estriche München Fachbetrieb | Kontakt Firmenangaben</title>
+        <meta name="description" content="Impressum Estriche München: Inhaber Mustafa Sakar & Ali Kemal Kurt, Hardenbergstr. 4, 80992 München. ☎ 089 444438872. Angaben gemäß § 5 TMG Fachbetrieb" />
         <meta name="keywords" content="Impressum Estriche München, Estrichleger Kontakt, Mustafa Sakar München, Ali Kemal Kurt München, Estrich Firma Impressum" />
         <link rel="canonical" href="https://estriche-muenchen.de/impressum" />
       </Helmet>

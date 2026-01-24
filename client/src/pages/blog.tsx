@@ -35,8 +35,8 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Estrich Ratgeber München 2026 | Tipps vom Estrichleger Profi | Estriche München Fachwissen Blog</title>
-        <meta name="description" content="Estrich Ratgeber München 2026: Expertenwissen zu Zementestrich, Fließestrich, Heizestrich & Fußbodenheizung. Praxistipps vom Profi für Sie!" />
+        <title>Estrich Ratgeber München 2026 | Tipps vom Estrichleger | Estriche München Fachwissen</title>
+        <meta name="description" content="Estrich Ratgeber München 2026: Expertenwissen zu Zementestrich, Fließestrich, Heizestrich & Fußbodenheizung. Praxistipps vom Fachbetrieb für Ihr Projekt" />
         <meta name="keywords" content="Estrich Ratgeber, Estrich Tipps, Estrich Wissen, Zementestrich Infos, Fließestrich Guide, Estrich Trocknungszeit, Fußbodenheizung Tipps" />
         <link rel="canonical" href="https://estriche-muenchen.de/ratgeber" />
       </Helmet>

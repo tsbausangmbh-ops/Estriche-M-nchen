@@ -11,7 +11,7 @@ interface PageSEO {
 const servicesData: Record<string, PageSEO> = {
   fliessestrich: {
     title: "Fließestrich München - Selbstnivellierender Calciumsulfatestrich | Estrich München",
-    metaDescription: "Fließestrich verlegen in München. Calciumsulfat-Fließestrich (CAF) perfekt für Fußbodenheizung. Meisterbetrieb mit Festpreisgarantie. Jetzt beraten lassen!",
+    metaDescription: "Fließestrich verlegen in München. Calciumsulfat-Fließestrich (CAF) perfekt für Fußbodenheizung. Fachbetrieb mit Festpreisgarantie. Jetzt beraten lassen!",
     mainKeyword: "Fließestrich München",
     longTailKeywords: [
       "Calciumsulfat-Fließestrich München",
@@ -23,7 +23,7 @@ const servicesData: Record<string, PageSEO> = {
       "Fließestrich Trocknungszeit",
       "Fließestrich vs Zementestrich"
     ],
-    h1: "Fließestrich München - Calciumsulfat-Fließestrich vom Meister",
+    h1: "Fließestrich München - Calciumsulfat-Fließestrich vom Fachbetrieb",
     sections: [
       {
         h2: "Fließestrich verlegen - Perfekt eben ohne Nacharbeit",
@@ -48,7 +48,7 @@ const servicesData: Record<string, PageSEO> = {
   },
   heizestrich: {
     title: "Heizestrich München - Estrich für Fußbodenheizung | Estrich München",
-    metaDescription: "Heizestrich für Fußbodenheizung in München verlegen lassen. Optimale Wärmeübertragung, schnellere Aufheizzeit. Meisterbetrieb mit Festpreisgarantie!",
+    metaDescription: "Heizestrich für Fußbodenheizung in München verlegen lassen. Optimale Wärmeübertragung, schnellere Aufheizzeit. Fachbetrieb mit Festpreisgarantie!",
     mainKeyword: "Heizestrich München",
     longTailKeywords: [
       "Estrich Fußbodenheizung München",
@@ -84,8 +84,8 @@ const servicesData: Record<string, PageSEO> = {
     ]
   },
   zementestrich: {
-    title: "Zementestrich München - Professionelle Estrichverlegung vom Meister | Estrich München",
-    metaDescription: "Zementestrich verlegen lassen in München. Meisterbetrieb mit 30+ Jahren Erfahrung, Festpreisgarantie, DIN-konforme Ausführung. Jetzt kostenlose Beratung!",
+    title: "Zementestrich München - Professionelle Estrichverlegung vom Fachbetrieb | Estrich München",
+    metaDescription: "Zementestrich verlegen lassen in München. Fachbetrieb mit 30+ Jahren Erfahrung, Festpreisgarantie, DIN-konforme Ausführung. Jetzt kostenlose Beratung!",
     mainKeyword: "Zementestrich München",
     longTailKeywords: [
       "Zementestrich verlegen lassen München",
@@ -97,10 +97,10 @@ const servicesData: Record<string, PageSEO> = {
       "Zementestrich Fließestrich Unterschied",
       "Estrich DIN 18560 München"
     ],
-    h1: "Zementestrich München - Professionelle Estrichverlegung vom Meisterbetrieb",
+    h1: "Zementestrich München - Professionelle Estrichverlegung vom Fachbetrieb",
     sections: [
       {
-        h2: "Zementestrich verlegen lassen - Ihr Meisterbetrieb in München",
+        h2: "Zementestrich verlegen lassen - Ihr Fachbetrieb in München",
         h3s: ["CT-Estrich nach DIN 18560", "Estrich für Fußbodenheizung"],
         content: `Als erfahrener Estrichleger in München bieten wir professionelle Zementestrich-Verlegung für Neubau und Sanierung. Mit über 30 Jahren Erfahrung und 2.500+ erfolgreich abgeschlossenen Projekten garantieren wir höchste Qualität nach DIN 18560. Unsere Estrich Kosten pro qm sind transparent und verbindlich - Sie erhalten einen Festpreis ohne versteckte Nachforderungen. Ob CT-Estrich für den klassischen Neubau oder spezieller Heizestrich für Ihre Fußbodenheizung - wir liefern perfekte Ergebnisse.`
       },
@@ -208,7 +208,7 @@ const servicesData: Record<string, PageSEO> = {
       "KfW Förderung Bodendämmung",
       "Schallschutz Estrich DIN 4109"
     ],
-    h1: "Wärmedämmung Boden München - Professionelle Estrichdämmung vom Meister",
+    h1: "Wärmedämmung Boden München - Professionelle Estrichdämmung vom Fachbetrieb",
     sections: [
       {
         h2: "Estrichdämmung verlegen - Wärme- und Schallschutz kombiniert",
@@ -322,14 +322,14 @@ const pagesSEO: Record<string, PageSEO> = {
       "Estrich Kosten München",
       "Estrich Neubau München",
       "Estrich Sanierung München",
-      "Estrichleger Meisterbetrieb München"
+      "Estrichleger Fachbetrieb München"
     ],
-    h1: "Estrich München - Ihr Estrichleger Meisterbetrieb für perfekte Böden",
+    h1: "Estrich München - Ihr Estrichleger Fachbetrieb für perfekte Böden",
     sections: [
       {
-        h2: "Estrichleger München - Meisterbetrieb mit 30+ Jahren Erfahrung",
+        h2: "Estrichleger München - Fachbetrieb mit 30+ Jahren Erfahrung",
         h3s: ["Zementestrich München ab 32€/m²", "Fließestrich München für Fußbodenheizung", "Estrich Neubau und Estrich Sanierung München"],
-        content: `Sie suchen einen zuverlässigen Estrichleger in München? Als Estrichleger Meisterbetrieb München liefern wir professionelle Estricharbeiten in ganz München und Umgebung. Mit über 30 Jahren Erfahrung und mehr als 2.500 erfolgreich abgeschlossenen Projekten sind wir Ihr verlässlicher Partner für Zementestrich München, Fließestrich München und Heizestrich München.`
+        content: `Sie suchen einen zuverlässigen Estrichleger in München? Als Estrichleger Fachbetrieb München liefern wir professionelle Estricharbeiten in ganz München und Umgebung. Mit über 30 Jahren Erfahrung und mehr als 2.500 erfolgreich abgeschlossenen Projekten sind wir Ihr verlässlicher Partner für Zementestrich München, Fließestrich München und Heizestrich München.`
       },
       {
         h2: "Estrich München - Alle Leistungen aus einer Hand",
@@ -342,14 +342,14 @@ const pagesSEO: Record<string, PageSEO> = {
         content: `Was kostet Estrich in München? Estrich Kosten München: Zementestrich 32-45€/m², Fließestrich 38-52€/m², Heizestrich 42-55€/m², Schnellestrich 48-65€/m². Ob Estrich Neubau München oder Estrich Sanierung München - Sie erhalten verbindliche Festpreise ohne versteckte Kosten. Rufen Sie jetzt an: 089 444438872.`
       },
       {
-        h2: "Estrichleger Meisterbetrieb München - Ihre Vorteile",
+        h2: "Estrichleger Fachbetrieb München - Ihre Vorteile",
         h3s: ["Festpreisgarantie München", "5 Jahre Gewährleistung", "Termingarantie oder 100€"],
-        content: `Als Estrichleger Meisterbetrieb München arbeiten wir nach DIN 18560 mit Festpreisgarantie. Bei Terminverzug erhalten Sie 100€ Gutschrift. Estrich München mit 5 Jahren Gewährleistung. Unser Servicegebiet: München, Starnberg, Freising, Dachau, Erding, Ebersberg, Fürstenfeldbruck.`
+        content: `Als Estrichleger Fachbetrieb München arbeiten wir nach DIN 18560 mit Festpreisgarantie. Bei Terminverzug erhalten Sie 100€ Gutschrift. Estrich München mit 5 Jahren Gewährleistung. Unser Servicegebiet: München, Starnberg, Freising, Dachau, Erding, Ebersberg, Fürstenfeldbruck.`
       }
     ],
     faqs: [
       { q: "Was kostet Estrich verlegen in München?", a: "Estrich Kosten München: Zementestrich ab 32€/m², Fließestrich ab 38€/m², Heizestrich ab 42€/m². Verbindliche Festpreise nach Vor-Ort-Besichtigung." },
-      { q: "Welcher Estrichleger in München ist empfehlenswert?", a: "Als Estrichleger Meisterbetrieb München mit 30+ Jahren Erfahrung und 282 Google-Bewertungen bieten wir höchste Qualität mit Festpreisgarantie." },
+      { q: "Welcher Estrichleger in München ist empfehlenswert?", a: "Als Estrichleger Fachbetrieb München mit 30+ Jahren Erfahrung und 282 Google-Bewertungen bieten wir höchste Qualität mit Festpreisgarantie." },
       { q: "Macht ihr auch Estrich Sanierung München?", a: "Ja, Estrich Sanierung München gehört zu unseren Kernleistungen. Altbausanierung, Rissreparatur, Estrichausbesserung - alles aus einer Hand." }
     ]
   },
@@ -488,7 +488,7 @@ const pagesSEO: Record<string, PageSEO> = {
   },
   kontakt: {
     title: "Kontakt Estrich München - Jetzt kostenlose Beratung anfordern | Estrich München",
-    metaDescription: "Kontaktieren Sie Estrich München: Telefon 089 / 444 43 887 2, kostenlose Vor-Ort-Beratung, schnelle Terminvergabe. Ihr Meisterbetrieb in München!",
+    metaDescription: "Kontaktieren Sie Estrich München: Telefon 089 / 444 43 887 2, kostenlose Vor-Ort-Beratung, schnelle Terminvergabe. Ihr Fachbetrieb in München!",
     mainKeyword: "Kontakt Estrich München",
     longTailKeywords: [
       "Estrichleger München kontaktieren",
@@ -524,7 +524,7 @@ const pagesSEO: Record<string, PageSEO> = {
   },
   faq: {
     title: "FAQ Estrich München - Häufige Fragen zu Estricharbeiten | Estrich München",
-    metaDescription: "Alle Fragen zu Estrich beantwortet: Kosten, Trocknungszeit, Estricharten, Fußbodenheizung, Sanierung. Expertenwissen von Ihrem Münchner Meisterbetrieb!",
+    metaDescription: "Alle Fragen zu Estrich beantwortet: Kosten, Trocknungszeit, Estricharten, Fußbodenheizung, Sanierung. Expertenwissen von Ihrem Münchner Fachbetrieb!",
     mainKeyword: "FAQ Estrich München",
     longTailKeywords: [
       "Estrich Fragen und Antworten",
@@ -561,9 +561,9 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   ueberuns: {
-    title: "Über uns - Estrich München Meisterbetrieb seit 1994 | Estrich München",
-    metaDescription: "Lernen Sie Estrich München kennen: Meisterbetrieb seit 1994, 30+ Jahre Erfahrung, 2.500+ Projekte. Familie Sakar - Ihr Partner für perfekte Böden!",
-    mainKeyword: "Estrich München Meisterbetrieb",
+    title: "Über uns - Estrich München Fachbetrieb seit 1994 | Estrich München",
+    metaDescription: "Lernen Sie Estrich München kennen: Fachbetrieb seit 1994, 30+ Jahre Erfahrung, 2.500+ Projekte. Familie Sakar - Ihr Partner für perfekte Böden!",
+    mainKeyword: "Estrich München Fachbetrieb",
     longTailKeywords: [
       "Estrichfirma München Geschichte",
       "Estrichleger München Team",
@@ -574,11 +574,11 @@ const pagesSEO: Record<string, PageSEO> = {
       "Qualität Estrich München",
       "Zertifizierter Estrichleger München"
     ],
-    h1: "Über uns - Ihr Münchner Meisterbetrieb seit 1994",
+    h1: "Über uns - Ihr Münchner Fachbetrieb seit 1994",
     sections: [
       {
         h2: "30 Jahre Handwerkskunst und Leidenschaft",
-        h3s: ["Gründung 1994 aus Überzeugung", "Meisterbetrieb mit Tradition"],
+        h3s: ["Gründung 1994 aus Überzeugung", "Fachbetrieb mit Tradition"],
         content: `1994 gründete Mustafa Sakar Estriche München aus einer einfachen Überzeugung: Bauherren verdienen Handwerker, auf die sie sich verlassen können. Nach einer frustrierenden Erfahrung mit unzuverlässigen Estrichlegern beschloss er, es selbst besser zu machen.`
       },
       {
@@ -599,7 +599,7 @@ const pagesSEO: Record<string, PageSEO> = {
     faqs: [
       { q: "Seit wann gibt es Estrich München?", a: "Estrich München wurde 1994 von Mustafa Sakar gegründet und ist seit über 30 Jahren im Großraum München tätig." },
       { q: "Wie viele Mitarbeiter hat Estrich München?", a: "Unser Team besteht aus 12 erfahrenen Facharbeitern plus Meister und Büro-Team." },
-      { q: "Ist Estrich München ein Meisterbetrieb?", a: "Ja, Estrich München ist ein eingetragener Meisterbetrieb nach Handwerksordnung." }
+      { q: "Ist Estrich München ein Fachbetrieb?", a: "Ja, Estrich München ist ein eingetragener Fachbetrieb nach Handwerksordnung." }
     ]
   },
   angebot: {
@@ -954,13 +954,13 @@ function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
       </nav>
     </section>
     <section>
-      <h4>Estrichleger Meisterbetrieb München</h4>
+      <h4>Estrichleger Fachbetrieb München</h4>
       <nav aria-label="Informationen">
         <a href="/preise" title="Estrich Preise München">Estrich Preise München</a>
         <a href="/rechner" title="Estrich Kosten berechnen">Estrich Kosten berechnen</a>
         <a href="/ablauf" title="Estrich verlegen Ablauf">Estrich verlegen Ablauf</a>
         <a href="/faq" title="Estrich FAQ München">Estrich FAQ München</a>
-        <a href="/ueber-uns" title="Estrichleger Meisterbetrieb München">Estrichleger Meisterbetrieb München</a>
+        <a href="/ueber-uns" title="Estrichleger Fachbetrieb München">Estrichleger Fachbetrieb München</a>
         <a href="/angebot" title="Kostenloses Angebot">Kostenloses Angebot</a>
       </nav>
     </section>
