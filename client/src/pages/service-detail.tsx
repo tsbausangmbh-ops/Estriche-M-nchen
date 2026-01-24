@@ -522,7 +522,7 @@ export default function ServiceDetail() {
             {service.urgency}
           </p>
           <p className="text-sm text-muted-foreground mb-4">
-            <strong>Diese Woche nur noch {getWeeklyScarcityNumber(5)} freie Termine</strong> für Ihre Region verfügbar.
+            <strong>Diese Woche nur noch {getWeeklyScarcityNumber()} freie Termine</strong> für Ihre Region verfügbar.
           </p>
           <Link href="/angebot">
             <Button data-testid="button-urgency-cta">

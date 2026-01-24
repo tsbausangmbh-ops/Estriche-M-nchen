@@ -230,7 +230,7 @@ export default function FAQ() {
             </div>
             <div className="bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-lg px-4 py-2 mb-6 inline-block">
               <span className="text-white text-sm font-medium">
-                <strong>Tipp:</strong> Nach dem Lesen – nur noch {getWeeklyScarcityNumber(4)} Termine diese Woche für kostenlose Beratung
+                <strong>Tipp:</strong> Nach dem Lesen – nur noch {getWeeklyScarcityNumber()} Termine diese Woche für kostenlose Beratung
               </span>
             </div>
 

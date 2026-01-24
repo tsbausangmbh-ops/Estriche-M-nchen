@@ -622,7 +622,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
           <div className="max-w-3xl">
             <Badge variant="outline" className="text-sm border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide animate-pulse mb-4">
-              ACHTUNG: Nur noch {getWeeklyScarcityNumber(6)} freie Termine diese Woche
+              ACHTUNG: Nur noch {getWeeklyScarcityNumber()} freie Termine diese Woche
             </Badge>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center">
