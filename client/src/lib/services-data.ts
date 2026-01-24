@@ -191,7 +191,7 @@ export const services: Service[] = [
     whyUs: [
       "Über 15 Jahre Erfahrung mit mehr als 1.200 erfolgreich abgeschlossenen Projekten in München und Umgebung",
       "Eigener Fuhrpark mit Mischfahrzeugen für gleichbleibende Materialqualität direkt auf Ihrer Baustelle",
-      "Meisterbetrieb mit regelmäßigen Schulungen zu den neuesten Verlegetechniken und Materialien",
+      "Fachbetrieb mit regelmäßigen Schulungen zu den neuesten Verlegetechniken und Materialien",
       "Transparente Festpreise nach kostenloser Vor-Ort-Besichtigung – keine versteckten Kosten",
       "Koordination mit anderen Gewerken: Wir stimmen uns mit Ihrem Architekt, Bauleiter und den Folgegewerken ab",
       "Saubere Baustelle garantiert: Wir hinterlassen Ihren Raum so, wie wir ihn vorgefunden haben"

@@ -18,7 +18,7 @@ const sitemapRoutes = [
   { url: "/leistungen/waermedaemmung", priority: 0.9, changefreq: "monthly", title: "Wärmedämmung Estrich München" },
   { url: "/leistungen/sanierung", priority: 0.9, changefreq: "monthly", title: "Estrichsanierung München" },
   { url: "/leistungen/schnellestrich", priority: 0.9, changefreq: "monthly", title: "Schnellestrich München" },
-  { url: "/ueber-uns", priority: 0.7, changefreq: "monthly", title: "Über uns - Estrichleger Meisterbetrieb" },
+  { url: "/ueber-uns", priority: 0.7, changefreq: "monthly", title: "Über uns - Estrichleger Fachbetrieb" },
   { url: "/angebot", priority: 0.8, changefreq: "weekly", title: "Estrich Angebot München" },
   { url: "/kontakt", priority: 0.8, changefreq: "monthly", title: "Kontakt Estrich München" },
   { url: "/preise", priority: 0.8, changefreq: "monthly", title: "Estrich Preise München" },

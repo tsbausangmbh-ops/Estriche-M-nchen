@@ -101,9 +101,9 @@ export default function UeberUns() {
       <Helmet>
         <title>Estrichleger München Fachbetrieb | 30+ Jahre Erfahrung | Estriche München Team & Experten 2026</title>
         <meta name="description" content="Estrichleger München seit 1994: Inhaber Mustafa Sakar, 2.500+ Projekte, 282+ zufriedene Kunden. Festpreis-Garantie & 5 Jahre Gewährleistung!" />
-        <meta name="keywords" content="Estrichleger München, Estrich Meisterbetrieb München, Estrich Firma München, Mustafa Sakar Estrich, Estrich Team München, Estrich Fachbetrieb, Estrichleger Erfahrung, Estrich Gewährleistung" />
+        <meta name="keywords" content="Estrichleger München, Estrich Fachbetrieb München, Estrich Firma München, Mustafa Sakar Estrich, Estrich Team München, Estrich Profi, Estrichleger Erfahrung, Estrich Gewährleistung" />
         <link rel="canonical" href="https://estriche-muenchen.de/ueber-uns" />
-        <meta property="og:title" content="Über uns | Estrich Meisterbetrieb München" />
+        <meta property="og:title" content="Über uns | Estrich Fachbetrieb München mit 30+ Jahren Erfahrung" />
         <meta property="og:description" content="30+ Jahre Erfahrung, 2.500+ Projekte – lernen Sie unser Team kennen." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://estriche-muenchen.de/ueber-uns" />
@@ -142,7 +142,7 @@ export default function UeberUns() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              <strong>Estrich Meisterbetrieb München</strong> – Von Stress zu Sorgenfreiheit
+              <strong>Estrich Fachbetrieb München</strong> – Von Stress zu Sorgenfreiheit
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">
@@ -152,7 +152,7 @@ export default function UeberUns() {
             </p>
 
             <div className="flex flex-wrap gap-3 mb-8">
-              {["30+ Jahre Erfahrung", "Meisterbetrieb", "München & Umgebung", "2.500+ Projekte"].map((feature, index) => (
+              {["30+ Jahre Erfahrung", "Fachbetrieb", "München & Umgebung", "2.500+ Projekte"].map((feature, index) => (
                 <div key={index} className="flex items-center gap-2 text-sm text-white/90">
                   <CheckCircle2 className="w-4 h-4 text-primary" />
                   <span>{feature}</span>
@@ -246,7 +246,7 @@ export default function UeberUns() {
                   <Award className="w-6 h-6 text-primary" />
                 </div>
                 <p className="font-bold mb-1">30+ Jahre Erfahrung</p>
-                <p className="text-sm text-muted-foreground">Meisterbetrieb seit 1994.</p>
+                <p className="text-sm text-muted-foreground">Fachbetrieb seit 1994.</p>
               </CardContent>
             </Card>
             <Card className="text-center">
@@ -488,7 +488,7 @@ export default function UeberUns() {
               <CardContent className="p-6">
                 <h3 className="font-bold mb-2">Warum Estriche München wählen?</h3>
                 <p className="text-sm text-muted-foreground">
-                  30+ Jahre Erfahrung, Meisterbetrieb, Festpreis-Garantie, 5 Jahre Gewährleistung und 100€ bei Verspätung. 
+                  30+ Jahre Erfahrung, Fachbetrieb, Festpreis-Garantie, 5 Jahre Gewährleistung und 100€ bei Verspätung. 
                   Als <strong>Estrichleger München</strong> kennen wir die lokalen Gegebenheiten und arbeiten mit regionalen Partnern.
                 </p>
               </CardContent>

@@ -156,7 +156,7 @@ export default function Blog() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-sm mb-1">30+ Jahre Erfahrung</h3>
-                  <p className="text-xs text-muted-foreground">Meisterbetrieb mit regionalem Know-how.</p>
+                  <p className="text-xs text-muted-foreground">Fachbetrieb mit regionalem Know-how.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 p-4 bg-card rounded-lg border">

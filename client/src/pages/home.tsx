@@ -150,9 +150,9 @@ const faqItems = [
   },
   {
     question: "Welcher Estrichleger in München ist empfehlenswert?",
-    answer: "Als Estrichleger Meisterbetrieb München mit über 30 Jahren Erfahrung und 282 Google-Bewertungen (4,9 Sterne) bieten wir höchste Qualität mit Festpreis-Garantie. Wir sind Ihr zuverlässiger Estrichleger München für Zementestrich, Fließestrich, Heizestrich und Industrieböden – von Altstadt-Lehel bis Trudering-Riem.",
+    answer: "Als Estrichleger Fachbetrieb München mit über 30 Jahren Erfahrung und 282 Google-Bewertungen (4,9 Sterne) bieten wir höchste Qualität mit Festpreis-Garantie. Wir sind Ihr zuverlässiger Estrichleger München für Zementestrich, Fließestrich, Heizestrich und Industrieböden – von Altstadt-Lehel bis Trudering-Riem.",
     link: "/ueber-uns",
-    linkText: "Mehr über unseren Meisterbetrieb",
+    linkText: "Mehr über unseren Fachbetrieb",
   },
   {
     question: "Was ist besser: Zementestrich oder Fließestrich?",
@@ -180,7 +180,7 @@ const faqItems = [
   },
   {
     question: "Welche Garantien bieten Sie?",
-    answer: "5 Jahre Gewährleistung auf alle Estricharbeiten (gesetzlich nur 4 Jahre!), Festpreis-Garantie ohne Nachforderungen, 100€ Gutschrift bei Verspätung durch uns. Als Estrichleger Meisterbetrieb München arbeiten wir ausschließlich nach DIN 18560 (Estriche im Bauwesen) und DIN 18202 (Toleranzen im Hochbau) – höchste Qualitätsstandards garantiert. Unser Betrieb ist bei der Handwerkskammer München eingetragen.",
+    answer: "5 Jahre Gewährleistung auf alle Estricharbeiten (gesetzlich nur 4 Jahre!), Festpreis-Garantie ohne Nachforderungen, 100€ Gutschrift bei Verspätung durch uns. Als Estrichleger Fachbetrieb München arbeiten wir ausschließlich nach DIN 18560 (Estriche im Bauwesen) und DIN 18202 (Toleranzen im Hochbau) – höchste Qualitätsstandards garantiert. Unser Betrieb ist bei der Handwerkskammer München eingetragen.",
     link: "/faq",
     linkText: "Alle Fragen & Antworten",
   },
@@ -472,7 +472,7 @@ export default function Home() {
                 Rechnungen, die explodieren. <strong className="text-primary-foreground">Das frustriert. Das kostet Nerven. Und das muss nicht sein.</strong>
               </p>
               <p className="text-lg text-primary-foreground max-w-xl leading-relaxed">
-                Als <strong className="text-primary-foreground">Estrichleger Meisterbetrieb in München</strong> mit über 2.500 zufriedenen Kunden liefern wir <strong className="text-primary-foreground">Zementestrich</strong>, <strong className="text-primary-foreground">Fließestrich</strong> und <strong className="text-primary-foreground">Heizestrich</strong> – 
+                Als <strong className="text-primary-foreground">Estrichleger Fachbetrieb in München</strong> mit über 2.500 zufriedenen Kunden liefern wir <strong className="text-primary-foreground">Zementestrich</strong>, <strong className="text-primary-foreground">Fließestrich</strong> und <strong className="text-primary-foreground">Heizestrich</strong> – 
                 pünktlich, zum garantierten Festpreis. <strong className="text-primary-foreground">Stellen Sie sich vor:</strong> Ihr Boden ist fertig, der Bodenleger nickt anerkennend, 
                 und Sie können endlich einziehen. <strong className="text-primary-foreground">Dieses Gefühl der Erleichterung – das liefern wir mit.</strong>
               </p>
@@ -791,7 +791,7 @@ export default function Home() {
                   <div className="relative h-52 overflow-hidden rounded-t-lg">
                     <img 
                       src={service.image} 
-                      alt={`${service.title} München - Estricharbeiten vom Meisterbetrieb`}
+                      alt={`${service.title} München - Estricharbeiten vom Fachbetrieb`}
                       loading="lazy"
                       decoding="async"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -987,7 +987,7 @@ export default function Home() {
               <strong>Estrich-Fachwissen</strong> – DIN-Normen & technische Spezifikationen
             </h2>
             <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
-              Als <strong className="text-foreground">Estrichleger Meisterbetrieb München</strong> arbeiten wir ausschließlich nach 
+              Als <strong className="text-foreground">Estrichleger Fachbetrieb München</strong> arbeiten wir ausschließlich nach 
               <strong className="text-foreground"> DIN 18560</strong> (Estriche im Bauwesen) und <strong className="text-foreground">DIN 18202</strong> (Toleranzen im Hochbau). 
               Hier finden Sie die wichtigsten technischen Daten für Ihre Planung.
             </p>
@@ -1022,7 +1022,7 @@ export default function Home() {
 
           <div className="bg-card border rounded-lg p-6">
             <h3 className="text-xl font-bold mb-4">
-              <strong>Estriche München</strong> – Qualitätsstandards unseres Meisterbetriebs
+              <strong>Estriche München</strong> – Qualitätsstandards unseres Fachbetriebs
             </h3>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="space-y-2">
@@ -1174,7 +1174,7 @@ export default function Home() {
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <strong className="text-foreground">Meisterbetrieb mit Erfahrung:</strong>
+                    <strong className="text-foreground">Fachbetrieb mit Erfahrung:</strong>
                     <p className="text-sm text-muted-foreground">30+ Jahre Erfahrung als Estrichleger in München. Über 2.500 Projekte erfolgreich abgeschlossen.</p>
                   </div>
                 </div>

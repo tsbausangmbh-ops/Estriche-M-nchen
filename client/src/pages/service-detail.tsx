@@ -38,7 +38,7 @@ export default function ServiceDetail() {
       <Helmet>
         <title>{service.title} München | {service.heroTagline} | Estriche München</title>
         <meta name="description" content={`${service.title} in München: ${service.description.substring(0, 150)}... Jetzt kostenlos beraten lassen!`} />
-        <meta name="keywords" content={`${service.title} München, ${service.title} verlegen lassen, ${service.title} Kosten pro qm, ${service.title} Meisterbetrieb`} />
+        <meta name="keywords" content={`${service.title} München, ${service.title} verlegen lassen, ${service.title} Kosten pro qm, ${service.title} Fachbetrieb`} />
         <meta name="geo.region" content="DE-BY" />
         <meta name="geo.placename" content="München" />
         <link rel="canonical" href={`https://estriche-muenchen.de/leistungen/${service.id}`} />
@@ -546,7 +546,7 @@ export default function ServiceDetail() {
                   <div className="relative h-32 overflow-hidden">
                     <img 
                       src={otherService.image} 
-                      alt={`${otherService.title} München - Estricharbeiten vom Meisterbetrieb`}
+                      alt={`${otherService.title} München - Estricharbeiten vom Fachbetrieb`}
                       loading="lazy"
                       decoding="async"
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"

@@ -46,7 +46,7 @@ export default function Impressum() {
             </p>
 
             <div className="flex flex-wrap gap-3 mb-8">
-              {["Meisterbetrieb", "30+ Jahre Erfahrung", "München & Umgebung", "Qualitätsgarantie"].map((feature, index) => (
+              {["Fachbetrieb", "30+ Jahre Erfahrung", "München & Umgebung", "Qualitätsgarantie"].map((feature, index) => (
                 <div key={index} className="flex items-center gap-2 text-sm text-white/90">
                   <CheckCircle2 className="w-4 h-4 text-primary" />
                   <span>{feature}</span>

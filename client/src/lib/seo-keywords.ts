@@ -78,7 +78,7 @@ export const keywordLinks: Record<string, string> = {
 export const pageSEO: Record<string, PageSEO> = {
   home: {
     slug: "/",
-    h1: "Estriche München – Ihr Meisterbetrieb für perfekte Böden",
+    h1: "Estriche München – Ihr Fachbetrieb für perfekte Böden mit 30+ Jahren Erfahrung",
     hauptKeyword: "Estriche München",
     subKeywords: [
       "Estrichleger München",
@@ -86,7 +86,7 @@ export const pageSEO: Record<string, PageSEO> = {
       "Zementestrich München",
       "Fließestrich München",
       "Heizestrich München",
-      "Estrich Meisterbetrieb",
+      "Estrich Fachbetrieb",
       "Estrich Festpreis"
     ],
     longTailKeywords: [
@@ -235,7 +235,7 @@ export const pageSEO: Record<string, PageSEO> = {
   ueberUns: {
     slug: "/ueber-uns",
     h1: "Über uns – 30 Jahre Estrich-Erfahrung in München",
-    hauptKeyword: "Estrich Meisterbetrieb München",
+    hauptKeyword: "Estrich Fachbetrieb München",
     subKeywords: [
       "Estrich Firma München",
       "Estrichleger Erfahrung",
@@ -247,7 +247,7 @@ export const pageSEO: Record<string, PageSEO> = {
     ],
     longTailKeywords: [
       "erfahrener Estrichleger München seit 1994",
-      "Estrich Meisterbetrieb mit Referenzen München",
+      "Estrich Fachbetrieb mit Referenzen München",
       "Estrich Firma mit Festpreis-Garantie",
       "Estrichleger München Bewertungen",
       "familiengeführter Estrich Betrieb München",
