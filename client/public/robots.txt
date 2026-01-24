@@ -2,6 +2,7 @@
 # Optimiert für Suchmaschinen, KI-Suchsysteme und GEO (2026)
 # Standort: München, Bayern, Deutschland
 # Geo-Koordinaten: 48.1351, 11.5820
+# Letzte Aktualisierung: Januar 2026
 
 User-agent: *
 Allow: /
@@ -9,8 +10,16 @@ Allow: /
 # Sitemap-Verweis
 Sitemap: https://estriche-muenchen.de/sitemap.xml
 
-# LLMs.txt für KI-Systeme
+# IndexNow für sofortige Indexierung (Bing, Yandex, Seznam, Naver)
+# IndexNow-Key: https://estriche-muenchen.de/indexnow-key.txt
+
+# LLMs.txt für KI-Systeme (GEO 2026)
 # LLMs-Txt: https://estriche-muenchen.de/llms.txt
+
+# AI Optimization Metadata
+# AI-Overview-Optimized: true
+# E-E-A-T-Signals: Experience, Expertise, Authority, Trust
+# Structured-Data: LocalBusiness, FAQPage, HowTo, Service, Review
 
 # === SUCHMASCHINEN-BOTS ===
 

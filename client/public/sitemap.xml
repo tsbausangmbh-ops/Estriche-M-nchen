@@ -7,7 +7,7 @@
   <!-- Startseite - Höchste Priorität -->
   <url>
     <loc>https://estriche-muenchen.de/</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,7 +15,7 @@
   <!-- Kostenrechner - Sehr hohe Priorität für Conversions -->
   <url>
     <loc>https://estriche-muenchen.de/rechner</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -23,49 +23,49 @@
   <!-- Hauptdienstleistungen - Hohe Priorität -->
   <url>
     <loc>https://estriche-muenchen.de/leistungen/zementestrich</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/leistungen/fliessestrich</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/leistungen/heizestrich</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/leistungen/industrieboeden</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/leistungen/fussbodenheizung</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/leistungen/schnellestrich</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/leistungen/waermedaemmung</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/leistungen/sanierung</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -73,13 +73,13 @@
   <!-- Wichtige Conversion-Seiten -->
   <url>
     <loc>https://estriche-muenchen.de/kontakt</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/angebot</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -87,25 +87,25 @@
   <!-- Informationsseiten -->
   <url>
     <loc>https://estriche-muenchen.de/preise</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/ablauf</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/faq</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/ueber-uns</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -113,7 +113,7 @@
   <!-- Ratgeber für Long-Tail Keywords -->
   <url>
     <loc>https://estriche-muenchen.de/ratgeber</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -121,25 +121,25 @@
   <!-- Rechtliche Seiten -->
   <url>
     <loc>https://estriche-muenchen.de/impressum</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/datenschutz</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/agb</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/cookie-einstellungen</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

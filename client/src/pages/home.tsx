@@ -365,8 +365,77 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "WebSite",
             "name": "Estriche München",
-            "alternateName": ["Estriche Muenchen", "Estrichleger München"],
-            "url": "https://estriche-muenchen.de"
+            "alternateName": ["Estriche Muenchen", "Estrichleger München", "Estrich München"],
+            "url": "https://estriche-muenchen.de",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://estriche-muenchen.de/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Estriche München",
+              "url": "https://estriche-muenchen.de"
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://estriche-muenchen.de/#organization",
+            "name": "Estriche München",
+            "alternateName": "Mustafa Sakar - Estriche München",
+            "url": "https://estriche-muenchen.de",
+            "logo": "https://estriche-muenchen.de/logo.png",
+            "foundingDate": "1994",
+            "founder": {
+              "@type": "Person",
+              "name": "Mustafa Sakar",
+              "jobTitle": "Geschäftsführer"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Hardenbergstr. 4",
+              "addressLocality": "München",
+              "postalCode": "80992",
+              "addressRegion": "Bayern",
+              "addressCountry": "DE"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+49-89-444438872",
+              "contactType": "customer service",
+              "availableLanguage": ["German"],
+              "areaServed": "DE-BY"
+            },
+            "knowsAbout": [
+              "Zementestrich",
+              "Fließestrich",
+              "Heizestrich",
+              "Schnellestrich",
+              "Industrieestrich",
+              "Fußbodenheizung nachrüsten",
+              "Estrichsanierung",
+              "DIN 18560"
+            ],
+            "slogan": "Festpreis-Garantie. Termingarantie. 5 Jahre Gewährleistung."
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "speakable": {
+              "@type": "SpeakableSpecification",
+              "cssSelector": ["h1", ".hero-text", ".key-benefits", ".price-info"]
+            },
+            "name": "Estriche München - Estrichleger Fachbetrieb",
+            "description": "Zementestrich ab 32€/m², Fließestrich ab 42€/m². 30+ Jahre Erfahrung, Festpreis-Garantie.",
+            "mainEntity": {
+              "@type": "LocalBusiness",
+              "name": "Estriche München"
+            }
           })}
         </script>
         <script type="application/ld+json">
