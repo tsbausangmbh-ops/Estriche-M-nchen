@@ -13,7 +13,7 @@ export interface PageSEO {
 // Interne Verlinkungen für Keywords
 export const keywordLinks: Record<string, string> = {
   // Hauptkeywords -> Seiten
-  "Estrich München": "/",
+  "Estriche München": "/",
   "Estrichleger München": "/",
   "Estrich verlegen München": "/",
   
@@ -78,8 +78,8 @@ export const keywordLinks: Record<string, string> = {
 export const pageSEO: Record<string, PageSEO> = {
   home: {
     slug: "/",
-    h1: "Estrich München – Ihr Meisterbetrieb für perfekte Böden",
-    hauptKeyword: "Estrich München",
+    h1: "Estriche München – Ihr Meisterbetrieb für perfekte Böden",
+    hauptKeyword: "Estriche München",
     subKeywords: [
       "Estrichleger München",
       "Estrich verlegen lassen",

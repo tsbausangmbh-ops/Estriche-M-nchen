@@ -15,7 +15,7 @@ export default function AGB() {
       <Helmet>
         <title>AGB | Allgemeine Geschäftsbedingungen | Estriche München</title>
         <meta name="description" content="Allgemeine Geschäftsbedingungen von Estriche München für Estrich- und Bodenarbeiten gemäß BGB Bauvertragsrecht (§§ 650a–650o BGB)." />
-        <meta name="keywords" content="AGB Estrich München, Allgemeine Geschäftsbedingungen Estrichleger, Bauvertrag München, Estrichvertrag AGB, Handwerker AGB Bayern" />
+        <meta name="keywords" content="AGB Estriche München, Allgemeine Geschäftsbedingungen Estrichleger, Bauvertrag München, Estrichvertrag AGB, Handwerker AGB Bayern" />
         <link rel="canonical" href="https://estriche-muenchen.de/agb" />
       </Helmet>
       <Header />

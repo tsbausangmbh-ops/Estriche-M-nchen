@@ -351,7 +351,7 @@ export default function UeberUns() {
               <p>
                 <strong>Wir versprechen nur, was wir halten können. Und dann liefern wir mehr.</strong> Wenn wir Montag 
                 8 Uhr sagen, stehen wir 7:45 Uhr vor Ihrer Tür. Der genannte Preis ist der Endpreis. Bei Terminverzug 
-                durch uns: 100 Euro Gutschrift. Das gilt für jeden <strong>Estrich München</strong> Auftrag.
+                durch uns: 100 Euro Gutschrift. Das gilt für jeden <strong>Estriche München</strong> Auftrag.
               </p>
 
               <p>

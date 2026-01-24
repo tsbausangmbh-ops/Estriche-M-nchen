@@ -252,7 +252,7 @@ export function generateProductSchema(product: {
 
 export const seoKeywords = {
   primary: [
-    "Estrich München",
+    "Estriche München",
     "Estrichleger München",
     "Estricharbeiten München",
     "Estrich verlegen München"
@@ -279,7 +279,7 @@ export const seoKeywords = {
     "Schnellestrich belegreif 24 Stunden",
     "Estrich Festpreis Angebot München"
   ],
-  local: munichDistricts.map(d => `Estrich München ${d}`)
+  local: munichDistricts.map(d => `Estriche München ${d}`)
 };
 
 export function generateProfessionalServiceSchema() {
@@ -288,7 +288,7 @@ export function generateProfessionalServiceSchema() {
     "@type": "ProfessionalService",
     "@id": `${businessInfo.url}/#professionalservice`,
     "name": businessInfo.name,
-    "alternateName": ["Estrich München", "Estrichleger München", "Estriche München"],
+    "alternateName": ["Estriche München", "Estrichleger München"],
     "description": "Professionelle Estricharbeiten in München und Umgebung. Zementestrich, Fließestrich, Heizestrich, Industrieböden vom Meisterbetrieb mit 30+ Jahren Erfahrung.",
     "url": businessInfo.url,
     "telephone": businessInfo.telephone,

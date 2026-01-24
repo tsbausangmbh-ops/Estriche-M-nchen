@@ -387,7 +387,7 @@ export default function Home() {
                 ACHTUNG: Nur noch {getWeeklyScarcityNumber()} freie Termine diese Woche
               </Badge>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] text-primary-foreground">
-                <strong>Estrich München</strong> – Schluss mit Baustellen-Chaos. <span className="text-primary">Endlich Ruhe im Kopf.</span>
+                <strong>Estriche München</strong> – Schluss mit Baustellen-Chaos. <span className="text-primary">Endlich Ruhe im Kopf.</span>
               </h1>
               <p className="text-lg text-primary-foreground/80 max-w-xl leading-relaxed">
                 <strong className="text-primary-foreground">Kennen Sie das?</strong> Handwerker, die nicht erscheinen. Termine, die platzen. 
@@ -944,7 +944,7 @@ export default function Home() {
 
           <div className="bg-card border rounded-lg p-6">
             <h3 className="text-xl font-bold mb-4">
-              <strong>Estrich München</strong> – Qualitätsstandards unseres Meisterbetriebs
+              <strong>Estriche München</strong> – Qualitätsstandards unseres Meisterbetriebs
             </h3>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="space-y-2">
@@ -1069,7 +1069,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 tracking-tight">
-                <strong>Estrich München</strong> – Ihr Ratgeber für den perfekten Boden
+                <strong>Estriche München</strong> – Ihr Ratgeber für den perfekten Boden
               </h2>
               <div className="prose prose-sm max-w-none text-muted-foreground space-y-4">
                 <p>

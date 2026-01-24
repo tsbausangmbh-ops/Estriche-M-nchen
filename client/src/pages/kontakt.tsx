@@ -377,7 +377,7 @@ export default function Kontakt() {
                   <div className="p-4 border-b">
                     <h3 className="font-bold flex items-center gap-2">
                       <MapPin className="w-4 h-4 text-primary" />
-                      <strong>Estrich München</strong> – Unser Standort
+                      <strong>Estriche München</strong> – Unser Standort
                     </h3>
                     <p className="text-sm text-muted-foreground mt-1">
                       Hardenbergstr. 4, 80992 München

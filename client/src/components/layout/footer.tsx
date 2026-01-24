@@ -34,7 +34,7 @@ export function Footer() {
           <div data-testid="footer-services">
             <h4 className="font-semibold text-background/80 mb-2" style={{fontSize: '11px'}}>Leistungen</h4>
             <ul className="space-y-1 text-background/50" style={{fontSize: '11px'}}>
-              <li><Link href="/" className="footer-link">Estrich München</Link></li>
+              <li><Link href="/" className="footer-link">Estriche München</Link></li>
               <li><Link href="/leistungen/zementestrich" className="footer-link">Zementestrich</Link></li>
               <li><Link href="/leistungen/fliessestrich" className="footer-link">Fließestrich</Link></li>
               <li><Link href="/leistungen/heizestrich" className="footer-link">Heizestrich</Link></li>

@@ -325,7 +325,7 @@ export default function ServiceDetail() {
         <div className="px-4 sm:px-20 lg:px-48">
           <div className="flex items-center gap-3 mb-3">
             <ThumbsUp className="w-6 h-6 text-primary" />
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Warum Estrich München?</h2>
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Warum Estriche München?</h2>
           </div>
           <p className="text-muted-foreground mb-8 max-w-2xl">
             Was uns von anderen Estrichlegern unterscheidet – Sehen Sie unsere <Link href="/preise" className="text-primary hover:underline"><strong>Estrich Preise</strong></Link>.

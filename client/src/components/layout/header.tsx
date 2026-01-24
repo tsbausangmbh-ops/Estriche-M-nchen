@@ -94,7 +94,7 @@ export function Header() {
                   data-testid="nav-home"
                   className={isHomePage ? "bg-accent" : ""}
                 >
-                  Estrich München
+                  Estriche München
                 </Button>
               </Link>
               <DropdownMenu>
@@ -191,7 +191,7 @@ export function Header() {
                   className={`w-full justify-start ${isHomePage ? "bg-accent" : ""}`}
                   data-testid="mobile-nav-home"
                 >
-                  Estrich München
+                  Estriche München
                 </Button>
               </Link>
               <div className="text-sm font-medium text-muted-foreground px-3 py-2">Leistungen</div>

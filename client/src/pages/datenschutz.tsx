@@ -15,7 +15,7 @@ export default function Datenschutz() {
       <Helmet>
         <title>Datenschutzerklärung | Estriche München | DSGVO-konform</title>
         <meta name="description" content="Datenschutzerklärung von Estriche München gemäß DSGVO und TDDDG. Informationen zur Verarbeitung Ihrer personenbezogenen Daten." />
-        <meta name="keywords" content="Datenschutz Estrich München, DSGVO Estrichleger, Datenschutzerklärung Handwerker, Privatsphäre Baufirma Bayern, DSGVO konform Bauunternehmen" />
+        <meta name="keywords" content="Datenschutz Estriche München, DSGVO Estrichleger, Datenschutzerklärung Handwerker, Privatsphäre Baufirma Bayern, DSGVO konform Bauunternehmen" />
         <link rel="canonical" href="https://estriche-muenchen.de/datenschutz" />
       </Helmet>
       <Header />

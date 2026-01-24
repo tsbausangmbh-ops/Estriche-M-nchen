@@ -167,7 +167,7 @@ export const services: Service[] = [
     testimonial: {
       name: "Familie Huber",
       location: "München-Bogenhausen",
-      text: "Wir hatten bei anderen Firmen schlechte Erfahrungen gemacht. Estrich München hat alles anders gemacht: pünktlich, sauber, und der Boden ist perfekt eben. Unser Parkettleger war begeistert!",
+      text: "Wir hatten bei anderen Firmen schlechte Erfahrungen gemacht. Estriche München hat alles anders gemacht: pünktlich, sauber, und der Boden ist perfekt eben. Unser Parkettleger war begeistert!",
       project: "Neubau Einfamilienhaus, 180 m²"
     },
     guarantees: [
@@ -359,7 +359,7 @@ export const services: Service[] = [
     testimonial: {
       name: "Martina & Klaus Schmidt",
       location: "München-Sendling",
-      text: "Wir dachten, Fußbodenheizung nachrüsten wäre unmöglich in unserer Altbauwohnung. Estrich München hat es in 3 Tagen geschafft – wir konnten die ganze Zeit wohnen bleiben. Jetzt genießen wir jeden Morgen warme Füße!",
+      text: "Wir dachten, Fußbodenheizung nachrüsten wäre unmöglich in unserer Altbauwohnung. Estriche München hat es in 3 Tagen geschafft – wir konnten die ganze Zeit wohnen bleiben. Jetzt genießen wir jeden Morgen warme Füße!",
       project: "Altbau-Nachrüstung, 85 m²"
     },
     guarantees: [
@@ -553,7 +553,7 @@ export const services: Service[] = [
     testimonial: {
       name: "Hausverwaltung Immobilien GmbH",
       location: "München-Maxvorstadt",
-      text: "In einer unserer Mietwohnungen gab es massive Estrichprobleme. Andere Firmen wollten komplett erneuern – Kosten: über 15.000€. Estrich München hat es für einen Bruchteil repariert. Nach 2 Jahren: Keinerlei Probleme.",
+      text: "In einer unserer Mietwohnungen gab es massive Estrichprobleme. Andere Firmen wollten komplett erneuern – Kosten: über 15.000€. Estriche München hat es für einen Bruchteil repariert. Nach 2 Jahren: Keinerlei Probleme.",
       project: "Estrichsanierung Altbau, 72 m²"
     },
     guarantees: [
@@ -649,7 +649,7 @@ export const services: Service[] = [
     testimonial: {
       name: "Bauträger Alpenhäuser GmbH",
       location: "Starnberg",
-      text: "Bei unserem Projekt hing alles am Zeitplan. Mit dem Schnellestrich von Estrich München konnten wir 2 Wochen früher mit den Bodenarbeiten beginnen. Das hat uns nicht nur Geld gespart, sondern auch zufriedenere Käufer gebracht.",
+      text: "Bei unserem Projekt hing alles am Zeitplan. Mit dem Schnellestrich von Estriche München konnten wir 2 Wochen früher mit den Bodenarbeiten beginnen. Das hat uns nicht nur Geld gespart, sondern auch zufriedenere Käufer gebracht.",
       project: "Mehrfamilienhaus-Neubau, 12 Einheiten"
     },
     guarantees: [

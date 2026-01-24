@@ -118,7 +118,7 @@ export default function Blog() {
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">
-                Warum Sie bei Estrich München richtig sind
+                Warum Sie bei Estriche München richtig sind
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 <strong className="text-foreground">Stellen Sie sich vor:</strong> Ihr Estrich wird 
