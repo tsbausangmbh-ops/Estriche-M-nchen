@@ -494,8 +494,8 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Estrich Kostenrechner München 2026 | Preis pro m² sofort berechnen</title>
-        <meta name="description" content="Estrich Kosten München 2026 berechnen: Zementestrich ab 32€/m², Fließestrich ab 42€/m². Kostenloser Rechner mit Festpreis-Garantie." />
+        <title>Estrich Kosten pro m² München 2026 | Kostenrechner | Estriche München Preise berechnen</title>
+        <meta name="description" content="Estrich Kosten pro m² München 2026 sofort berechnen: Zementestrich ab 32€/m², Fließestrich ab 42€/m², Schnellestrich ab 48€/m². Kostenloser Estrich-Rechner mit Festpreis-Garantie vom Meisterbetrieb." />
         <meta name="keywords" content="Estrich Kostenrechner, Estrich Preis pro m2, Estrich Kosten München, Zementestrich Kosten, Fließestrich Preis, Estrich verlegen Kosten, Estriche München Preis, Estrich Kalkulator, Estrich Budget, Schnellestrich Kosten" />
         <link rel="canonical" href="https://estriche-muenchen.de/rechner" />
         
