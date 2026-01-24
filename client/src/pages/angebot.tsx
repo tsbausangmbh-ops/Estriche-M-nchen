@@ -188,21 +188,26 @@ export default function Angebot() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              Ihr Festpreis-Angebot in 24 Stunden
+              <strong>Schluss mit dem Preisrätsel</strong> – Festpreis in 24h
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">
-              Beschreiben Sie Ihr Projekt – und wir erstellen Ihnen ein verbindliches Angebot, 
-              auf das Sie sich verlassen können. Kostenlos und ohne Verpflichtung.
+              <strong>Wie lange wollen Sie noch im Dunkeln tappen?</strong> Beschreiben Sie Ihr Projekt – und Sie wissen morgen, 
+              was es kostet. <strong>Verbindlich. Ohne böse Überraschungen. Ohne Risiko.</strong>
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-8">
+            <div className="flex flex-wrap gap-3 mb-6">
               {["Antwort in 24h", "100% Festpreis", "Kostenlos & unverbindlich", "Persönliche Beratung"].map((feature, index) => (
                 <div key={index} className="flex items-center gap-2 text-sm text-white/90">
                   <CheckCircle2 className="w-4 h-4 text-primary" />
                   <span>{feature}</span>
                 </div>
               ))}
+            </div>
+            <div className="bg-red-600/20 backdrop-blur-sm border border-red-500/30 rounded-lg px-4 py-2 mb-6 inline-block">
+              <span className="text-red-200 text-sm font-medium">
+                <strong>Diese Woche:</strong> Nur noch 2 freie Termine für kostenlose Vor-Ort-Beratung
+              </span>
             </div>
 
             <div className="flex flex-wrap gap-3 mb-8">
@@ -242,10 +247,10 @@ export default function Angebot() {
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center max-w-3xl mx-auto mb-6">
             <h2 className="text-xl sm:text-2xl font-extrabold mb-3 tracking-tight">
-              Was ist Ihre größte Herausforderung?
+              <strong>Was hält Sie nachts wach?</strong> Wir kennen diese Sorgen.
             </h2>
             <p className="text-muted-foreground text-sm">
-              Wählen Sie, was auf Sie zutrifft – wir haben die passende Lösung:
+              <strong className="text-foreground">Wählen Sie Ihr größtes Problem</strong> – und sehen Sie, wie wir es lösen:
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-5xl mx-auto mb-6">
@@ -283,12 +288,12 @@ export default function Angebot() {
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <Card className="shadow-lg border-primary/20" data-testid="card-angebot-form">
             <CardHeader className="text-center pb-6">
-              <div className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-md w-fit mx-auto mb-3">
-                Antwort innerhalb von 24 Stunden garantiert
+              <div className="bg-green-600 text-primary-foreground text-xs font-semibold px-3 py-1 rounded-md w-fit mx-auto mb-3">
+                Persönliche Antwort garantiert in unter 24h
               </div>
-              <CardTitle className="text-2xl">Jetzt Ihr kostenloses Angebot anfordern</CardTitle>
+              <CardTitle className="text-2xl">Schluss mit der Ungewissheit – jetzt Klarheit schaffen</CardTitle>
               <p className="text-muted-foreground">
-                Füllen Sie das Formular aus – je genauer Ihre Angaben, desto präziser Ihr Angebot.
+                <strong className="text-foreground">2 Minuten ausfüllen</strong> – und morgen wissen Sie, was Ihr Projekt kostet. <strong className="text-foreground">Keine Überraschungen. Versprochen.</strong>
               </p>
             </CardHeader>
             <CardContent>

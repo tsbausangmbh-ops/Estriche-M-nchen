@@ -213,21 +213,26 @@ export default function Preise() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              <strong>Estrich Preise München</strong> – Faire Kosten pro m²
+              <strong>Estrich Preise München</strong> – Was andere verschweigen
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">
-              Bei uns wissen Sie vorher, was es kostet. Alle Preise sind Richtwerte für München und Umgebung. 
-              Nach der kostenlosen Besichtigung erhalten Sie ein verbindliches Festpreis-Angebot.
+              <strong>Kennen Sie das?</strong> Der Handwerker nennt einen Preis – und am Ende zahlen Sie 40% mehr. 
+              <strong>Bei uns nicht.</strong> Hier sehen Sie transparent, was Estrich wirklich kostet. <strong>Keine Spielchen. Keine Nachforderungen.</strong>
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-8">
+            <div className="flex flex-wrap gap-3 mb-6">
               {["Keine versteckten Kosten", "Festpreis-Garantie", "Kostenlose Beratung", "Faire Konditionen"].map((feature, index) => (
                 <div key={index} className="flex items-center gap-2 text-sm text-white/90">
                   <CheckCircle2 className="w-4 h-4 text-primary" />
                   <span>{feature}</span>
                 </div>
               ))}
+            </div>
+            <div className="bg-amber-600/20 backdrop-blur-sm border border-amber-500/30 rounded-lg px-4 py-2 mb-6 inline-block">
+              <span className="text-amber-200 text-sm font-medium">
+                <strong>Preisgarantie:</strong> Aktuelle Preise nur noch bis Monatsende gültig
+              </span>
             </div>
 
             <div className="flex flex-wrap gap-3 mb-8">
@@ -267,8 +272,9 @@ export default function Preise() {
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center mb-6">
             <h2 className="text-xl sm:text-2xl font-extrabold mb-3 tracking-tight">
-              <strong>Estrich Kosten</strong> berechnen – Welches Problem möchten Sie lösen?
+              <strong>Estrich Kosten</strong> – Was hält Sie wirklich zurück?
             </h2>
+            <p className="text-muted-foreground text-sm"><strong className="text-foreground">Diese Ängste hören wir täglich</strong> – und so nehmen wir sie Ihnen:</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {[

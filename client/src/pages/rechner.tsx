@@ -630,12 +630,12 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              <strong>Estrich Kosten berechnen</strong> – Kostenrechner München
+              <strong>Estrich Kosten berechnen</strong> – In 60 Sekunden wissen Sie mehr
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">
-              Berechnen Sie unverbindlich die ungefähren <strong>Estrich Kosten pro m²</strong> für Ihr Projekt. 
-              Für ein verbindliches <strong>Festpreis-Angebot</strong> kontaktieren Sie uns – kostenlos und ohne Verpflichtung.
+              <strong>Schluss mit dem Rätselraten!</strong> Berechnen Sie jetzt Ihre <strong>Estrich Kosten pro m²</strong> – 
+              und wissen Sie endlich, was Ihr Projekt kostet. <strong>Kostenlos. Unverbindlich. Sofort.</strong>
             </p>
 
             <div className="flex flex-wrap gap-3 mb-8">
@@ -1399,25 +1399,24 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
               <strong>Das ist unser Versprechen.</strong>
             </p>
 
-            <p className="text-xl font-bold text-foreground mt-8 mb-4">Der nächste Schritt</p>
+            <p className="text-xl font-bold text-foreground mt-8 mb-4"><strong>Jetzt sind Sie am Zug</strong> – Wie lange wollen Sie noch warten?</p>
 
             <p>
-              Sie haben jetzt eine Orientierung, was Ihr Projekt ungefähr kosten könnte. Der Rechner hat 
-              seinen Zweck erfüllt. Wenn Sie es genau wissen möchten – und wenn Sie einen Partner suchen, 
-              der zu seinem Wort steht – dann sprechen Sie mit uns.
+              Sie haben jetzt eine Orientierung. <strong>Aber wissen Sie, was wirklich passiert, wenn Sie warten?</strong> 
+              Die Baupreise steigen. Die Termine werden knapper. Und Ihr Projekt verzögert sich weiter.
             </p>
 
             <p>
-              Ein Anruf, eine E-Mail, ein Formular – mehr braucht es nicht. Wir melden uns schnell zurück, 
-              vereinbaren einen Termin nach Ihrem Zeitplan, und schon bald halten Sie ein Angebot in der 
-              Hand, auf das Sie sich verlassen können.
+              <strong>Ein Anruf. 5 Minuten. Dann wissen Sie Bescheid.</strong> Wir melden uns noch heute zurück – 
+              und Sie halten bald ein Angebot in der Hand, auf das Sie sich verlassen können. 
+              <strong>Die Frage ist nur: Wann entscheiden Sie sich, den ersten Schritt zu machen?</strong>
             </p>
           </div>
 
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
             <Link href="/angebot">
               <Button size="lg" data-testid="button-nlp-cta">
-                Jetzt verbindliches Angebot anfordern
+                Jetzt Festpreis sichern – bevor die Preise steigen
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>

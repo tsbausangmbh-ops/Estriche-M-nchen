@@ -109,13 +109,15 @@ export default function ServiceDetail() {
             <div className="flex flex-wrap gap-3 mb-8">
               <Link href="/angebot">
                 <Button size="lg" data-testid="button-hero-cta">
-                  Kostenloses Angebot
+                  Jetzt Festpreis sichern
                   <ChevronRight className="ml-1 h-4 w-4" />
                 </Button>
               </Link>
-              <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" data-testid="button-hero-call">
-                <Phone className="mr-2 h-4 w-4" />
-                089 444438872
+              <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-800" data-testid="button-hero-call" asChild>
+                <a href="tel:+4989444438872">
+                  <Phone className="mr-2 h-4 w-4" />
+                  089 444438872
+                </a>
               </Button>
             </div>
 
@@ -515,12 +517,15 @@ export default function ServiceDetail() {
 
       <section className="py-8 bg-destructive/5 border-y border-destructive/10">
         <div className="px-4 sm:px-20 lg:px-48 text-center">
-          <p className="text-destructive font-medium mb-4">
+          <p className="text-destructive font-medium mb-2">
             {service.urgency}
+          </p>
+          <p className="text-sm text-muted-foreground mb-4">
+            <strong>Diese Woche nur noch 2 freie Termine</strong> für Ihre Region verfügbar.
           </p>
           <Link href="/angebot">
             <Button data-testid="button-urgency-cta">
-              Jetzt Termin sichern
+              Letzten Termin sichern – bevor es zu spät ist
               <ChevronRight className="ml-1 h-4 w-4" />
             </Button>
           </Link>
@@ -560,24 +565,27 @@ export default function ServiceDetail() {
       <section className="py-6 bg-foreground text-primary-foreground">
         <div className="px-4 sm:px-20 lg:px-48 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-sky-300">
-            Bereit für Ihren neuen Boden?
+            Bereit, den ersten Schritt zu machen?
           </h2>
           <p className="text-sky-200 mb-6">
-            <Link href="/kontakt" className="underline hover:no-underline"><strong>Kostenlose Beratung</strong></Link>, verbindliches Festpreis-Angebot, saubere Arbeit.
+            <strong>Schluss mit dem Warten.</strong> <Link href="/kontakt" className="underline hover:no-underline"><strong>Kostenlose Beratung</strong></Link> + Festpreis-Garantie + 100€ bei Verspätung.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link href="/angebot">
               <Button size="lg" variant="secondary" data-testid="button-footer-cta">
-                Angebot anfordern
+                Jetzt mein Angebot holen
                 <ChevronRight className="ml-1 h-4 w-4" />
               </Button>
             </Link>
             <Button 
               size="lg" 
               className="bg-zinc-900 text-white hover:bg-zinc-800"
+              asChild
             >
-              <Phone className="mr-2 h-4 w-4" />
-              Anrufen
+              <a href="tel:+4989444438872">
+                <Phone className="mr-2 h-4 w-4" />
+                089 444438872
+              </a>
             </Button>
           </div>
         </div>

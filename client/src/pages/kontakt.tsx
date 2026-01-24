@@ -178,21 +178,26 @@ export default function Kontakt() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              <strong>Estrichleger München kontaktieren</strong> – Sprechen Sie mit uns
+              <strong>Estrichleger München kontaktieren</strong> – Schluss mit der Ungewissheit
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">
-              Erzählen Sie uns von Ihrem <strong>Estrich-Projekt</strong>. Wir beraten Sie kostenlos und erstellen Ihnen 
-              ein verbindliches <strong>Festpreis-Angebot</strong> – ohne Verpflichtung.
+              <strong>Jeder Tag Warten kostet Sie Zeit und Nerven.</strong> Erzählen Sie uns von Ihrem <strong>Estrich-Projekt</strong> – und Sie wissen innerhalb von 24h, 
+              was es kostet. <strong>Kein Rätselraten. Kein Risiko. Nur Klarheit.</strong>
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-8">
+            <div className="flex flex-wrap gap-3 mb-6">
               {["Kostenlose Beratung", "Antwort in 24h", "Festpreis-Garantie", "Vor-Ort-Besichtigung"].map((feature, index) => (
                 <div key={index} className="flex items-center gap-2 text-sm text-white/90">
                   <CheckCircle2 className="w-4 h-4 text-primary" />
                   <span>{feature}</span>
                 </div>
               ))}
+            </div>
+            <div className="bg-red-600/20 backdrop-blur-sm border border-red-500/30 rounded-lg px-4 py-2 mb-6 inline-block">
+              <span className="text-red-200 text-sm font-medium">
+                <strong>Achtung:</strong> Nur noch 2 freie Beratungstermine diese Woche in München
+              </span>
             </div>
 
             <div className="flex flex-wrap gap-3 mb-8">
@@ -232,10 +237,10 @@ export default function Kontakt() {
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
           <div className="text-center max-w-3xl mx-auto mb-8">
             <h2 className="text-2xl sm:text-3xl font-extrabold mb-4 tracking-tight">
-              <strong>Estrich-Beratung</strong> – Erkennen Sie sich wieder?
+              <strong>Estrich-Beratung</strong> – Kommt Ihnen das bekannt vor?
             </h2>
             <p className="text-muted-foreground">
-              Viele unserer Kunden kommen mit genau diesen Herausforderungen zu uns:
+              <strong className="text-foreground">So ging es 90% unserer Kunden</strong> – bevor sie uns gefunden haben:
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
@@ -257,7 +262,7 @@ export default function Kontakt() {
           </div>
           <div className="text-center mt-6">
             <p className="text-muted-foreground">
-              <strong className="text-foreground">Dann sind Sie bei uns richtig.</strong> Erzählen Sie uns Ihr Problem – wir finden die Lösung. Lesen Sie auch unser <Link href="/faq" className="text-primary hover:underline"><strong>FAQ</strong></Link> oder berechnen Sie Ihre <Link href="/rechner" className="text-primary hover:underline"><strong>Estrich Kosten</strong></Link>.
+              <strong className="text-foreground">Wenn Sie sich wiedererkennen – dann sind Sie hier richtig.</strong> Ein Anruf genügt, und Sie wissen, woran Sie sind. <strong className="text-foreground">Die Frage ist nur: Wie lange wollen Sie noch warten?</strong>
             </p>
           </div>
         </div>
@@ -392,12 +397,12 @@ export default function Kontakt() {
 
             <Card className="shadow-lg border-primary/20" data-testid="card-contact-form">
               <CardHeader>
-                <div className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-md w-fit mb-2">
-                  Antwort innerhalb von 24 Stunden
+                <div className="bg-green-600 text-primary-foreground text-xs font-semibold px-3 py-1 rounded-md w-fit mb-2">
+                  Persönliche Antwort in unter 24h
                 </div>
-                <CardTitle>Kontaktformular</CardTitle>
+                <CardTitle>Ihr erster Schritt zur Lösung</CardTitle>
                 <p className="text-sm text-muted-foreground">
-                  Füllen Sie das Formular aus – wir melden uns schnellstmöglich bei Ihnen.
+                  <strong className="text-foreground">60 Sekunden ausfüllen</strong> – und das Warten hat ein Ende. <strong className="text-foreground">Wir melden uns, bevor Sie es erwarten.</strong>
                 </p>
               </CardHeader>
               <CardContent>

@@ -211,21 +211,26 @@ export default function FAQ() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              <strong>Estrich FAQ</strong> – {totalQuestions} Antworten auf Ihre Fragen
+              <strong>Estrich FAQ</strong> – Die Antworten, die andere verschweigen
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">
-              Hier finden Sie ausführliche Antworten auf die häufigsten Fragen rund um <strong>Estrich</strong>, 
-              <strong>Fußbodenheizung</strong>, <strong>Estrich Kosten</strong> und unseren Ablauf. Falls Ihre Frage nicht dabei ist – fragen Sie uns!
+              <strong>Unsicher? Das verstehen wir.</strong> Hier finden Sie ehrliche Antworten auf {totalQuestions} Fragen, 
+              die uns Kunden täglich stellen – <strong>bevor</strong> sie uns vertrauen. <strong>Lesen Sie, was andere vor Ihnen wissen wollten.</strong>
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-8">
+            <div className="flex flex-wrap gap-3 mb-6">
               {["Expertenberatung", "Schnelle Antworten", "Kostenlose Hilfe", "Praxiswissen"].map((feature, index) => (
                 <div key={index} className="flex items-center gap-2 text-sm text-white/90">
                   <CheckCircle2 className="w-4 h-4 text-primary" />
                   <span>{feature}</span>
                 </div>
               ))}
+            </div>
+            <div className="bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-lg px-4 py-2 mb-6 inline-block">
+              <span className="text-white text-sm font-medium">
+                <strong>Tipp:</strong> Nach dem Lesen – nur noch 2 Termine diese Woche für kostenlose Beratung
+              </span>
             </div>
 
             <div className="flex flex-wrap gap-3 mb-8">
@@ -364,11 +369,11 @@ export default function FAQ() {
       <section className="py-8 bg-accent">
         <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 text-center">
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">
-            Ihre Frage war nicht dabei?
+            <strong>Immer noch unsicher?</strong> Das ist völlig normal.
           </h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Kein Problem! Kontaktieren Sie uns, und wir beantworten Ihre Frage persönlich – 
-            schnell, kompetent und unverbindlich.
+            <strong className="text-foreground">Ein Anruf dauert 5 Minuten.</strong> Danach wissen Sie, ob wir der richtige Partner für Sie sind. 
+            <strong className="text-foreground">Kein Verkaufsgespräch. Nur ehrliche Antworten.</strong>
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/angebot">
