@@ -398,6 +398,12 @@ export default function Home() {
                 und Sie können endlich einziehen. <strong className="text-primary-foreground">Dieses Gefühl der Erleichterung – das liefern wir mit.</strong>
               </p>
 
+              <div className="bg-red-600/20 backdrop-blur-sm border border-red-500/30 rounded-lg px-4 py-2 mt-4 inline-block">
+                <span className="text-red-200 text-sm font-medium">
+                  <strong>Achtung:</strong> Diese Woche nur noch 2 freie Termine für München – Festpreis-Garantie sichern!
+                </span>
+              </div>
+
               <div className="flex flex-wrap gap-4 pt-2">
                 <Link href="/angebot">
                   <Button 
