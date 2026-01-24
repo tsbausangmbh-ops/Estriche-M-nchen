@@ -174,7 +174,7 @@ export default function Preise() {
         <meta name="geo.placename" content="München" />
         <link rel="canonical" href="https://estriche-muenchen.de/preise" />
         <meta property="og:title" content="Estrich Preise München | Transparente Kosten" />
-        <meta property="og:description" content="Faire Estrich-Preise in München. Zementestrich ab 25€/m², Festpreis-Garantie ohne versteckte Kosten." />
+        <meta property="og:description" content="Faire Estrich-Preise in München. Zementestrich ab 32€/m², Festpreis-Garantie ohne versteckte Kosten." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://estriche-muenchen.de/preise" />
         <meta property="og:locale" content="de_DE" />
@@ -189,7 +189,7 @@ export default function Preise() {
         <script type="application/ld+json">
           {JSON.stringify(generateWebPageSchema({
             title: "Estrich Preise München",
-            description: "Transparente Estrich-Preise in München. Zementestrich ab 25€/m², Fließestrich ab 28€/m².",
+            description: "Transparente Estrich-Preise in München. Zementestrich ab 32€/m², Fließestrich ab 42€/m².",
             url: "https://estriche-muenchen.de/preise"
           }))}
         </script>
