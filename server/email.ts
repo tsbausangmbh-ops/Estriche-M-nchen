@@ -25,14 +25,20 @@ function createTransporter() {
     return null;
   }
 
+  const secure = port === 465;
+  
   return nodemailer.createTransport({
     host,
     port,
-    secure: port === 465,
+    secure,
     auth: { user, pass },
-    tls: {
-      rejectUnauthorized: false
-    }
+    ...(port === 587 && {
+      requireTLS: true,
+      tls: {
+        ciphers: 'SSLv3',
+        rejectUnauthorized: false
+      }
+    })
   });
 }
 
