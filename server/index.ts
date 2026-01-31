@@ -11,7 +11,7 @@ const httpServer = createServer(app);
 // Enable gzip/brotli compression for all responses
 app.use(compression());
 
-// Security & Performance Headers
+// Security & Performance Headers (Google 2026 Optimized)
 app.use((req, res, next) => {
   // Cache fingerprinted assets (with hash in filename) aggressively
   if (req.path.match(/\.[a-f0-9]{8,}\.(js|css)$/)) {
@@ -25,6 +25,13 @@ app.use((req, res, next) => {
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('X-Frame-Options', 'SAMEORIGIN');
   res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  
+  // Google 2026 Core Web Vitals hints
+  if (req.path === '/' || req.path.startsWith('/leistungen')) {
+    res.setHeader('Accept-CH', 'Sec-CH-Prefers-Color-Scheme, Sec-CH-Prefers-Reduced-Motion, Viewport-Width, DPR');
+    res.setHeader('Critical-CH', 'Sec-CH-Prefers-Color-Scheme');
+  }
+  
   next();
 });
 

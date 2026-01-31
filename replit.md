@@ -43,13 +43,28 @@ The backend serves three purposes:
 2. Static file serving for the built frontend
 3. SEO bot detection with static content serving
 
-### SEO Bot Detection
-The server includes a middleware (`server/seo-bot-middleware.ts`) that detects search engine crawlers (Google, Bing, etc.) and serves static, SEO-optimized HTML instead of the SPA. This ensures proper indexing without requiring external prerender services.
+### Hybrid Rendering (Google 2026 Optimized)
+The server implements a Hybrid Rendering strategy optimized for Google 2026 standards, combining client-side React with server-side pre-rendered content for crawlers.
 
-- **Bot Detection:** User-agent based detection for major search engines
-- **Static Content:** Pre-generated HTML with full meta tags, Open Graph, and JSON-LD structured data
-- **Service Pages:** Each service has dedicated SEO content in `server/seo-static-content.ts`
-- **No External Dependencies:** Works without Prerender.io or similar services
+**Bot Detection & SSR (`server/seo-bot-middleware.ts`):**
+- Comprehensive bot detection for 70+ crawlers including AI/LLM bots
+- Google Family: Googlebot, Google-Extended, Google-InspectionTool
+- AI Crawlers: GPTBot, ClaudeBot, PerplexityBot, Cohere-AI, Amazonbot
+- Microsoft/Copilot: Bingbot, BingPreview, MicrosoftPreview
+- SEO Tools: SEMrushBot, AhrefsBot, Screaming Frog
+
+**Google 2026 Headers:**
+- `X-SSR-Rendered: true` for crawler identification
+- `X-Robots-Tag: index, follow, max-image-preview:large`
+- `Cache-Control: stale-while-revalidate` for edge caching
+- `Accept-CH` Client Hints for Core Web Vitals
+- `Link` preload/preconnect for performance
+
+**Speculation Rules (Prerendering):**
+- High-priority pages prerended: zementestrich, fussbodenheizung, kontakt, preise
+- Secondary pages prefetched: industrieboeden, waermedaemmung, sanierung
+
+**Static Content:** Pre-generated HTML with full meta tags, Open Graph, JSON-LD structured data in `server/seo-static-content.ts`
 
 ### Data Storage
 - **Schema Definition:** Drizzle ORM with PostgreSQL dialect

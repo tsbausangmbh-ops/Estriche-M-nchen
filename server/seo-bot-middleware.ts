@@ -1,16 +1,43 @@
 import { Request, Response, NextFunction } from "express";
 import { generateStaticSEOContent } from "./seo-static-content";
 
+// Google 2026 optimized bot list - includes all major search engines and AI crawlers
 const BOT_USER_AGENTS = [
+  // Google Family (2026 priority)
   'googlebot',
   'google-inspectiontool',
   'googleweblight',
   'storebot-google',
   'adsbot-google',
   'mediapartners-google',
+  'google-extended',
+  'googleother',
+  'google-safety',
+  // AI/LLM Crawlers (SGE, Copilot, ChatGPT, Perplexity - 2026 critical)
+  'gptbot',
+  'chatgpt-user',
+  'oai-searchbot',
+  'claudebot',
+  'claude-web',
+  'anthropic-ai',
+  'perplexitybot',
+  'perplexity-user',
+  'cohere-ai',
+  'meta-externalagent',
+  'bytespider',
+  'ccbot',
+  'diffbot',
+  'youbot',
+  'you.com',
+  'amazonbot',
+  'qwantbot',
+  'applebot-extended',
+  // Microsoft/Bing (Copilot)
   'bingbot',
   'bingpreview',
   'msnbot',
+  'microsoftpreview',
+  // Other Search Engines
   'slurp',
   'duckduckbot',
   'baiduspider',
@@ -18,6 +45,7 @@ const BOT_USER_AGENTS = [
   'yandexmobilebot',
   'sogou',
   'exabot',
+  // Social Media
   'facebot',
   'facebookexternalhit',
   'ia_archiver',
@@ -25,6 +53,7 @@ const BOT_USER_AGENTS = [
   'twitterbot',
   'pinterest',
   'pinterestbot',
+  // SEO Tools
   'semrushbot',
   'ahrefsbot',
   'mj12bot',
@@ -32,6 +61,7 @@ const BOT_USER_AGENTS = [
   'petalbot',
   'screaming frog',
   'rogerbot',
+  // Other Important
   'applebot',
   'discordbot',
   'telegrambot',
@@ -41,12 +71,15 @@ const BOT_USER_AGENTS = [
   'yeti',
   'seznambot',
   'archive.org_bot',
+  // Testing/Rendering
   'headlesschrome',
   'phantomjs',
   'prerender',
   'lighthouse',
   'chrome-lighthouse',
   'pagespeed',
+  'gtmetrix',
+  'webpagetest',
 ];
 
 const HEADLESS_SIGNALS = [
@@ -168,10 +201,22 @@ export function seoBotMiddleware(req: Request, res: Response, next: NextFunction
     
     logBotRequest(userAgent || '', req.path, wasCached);
     
+    // Google 2026 SSR Headers
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
-    res.setHeader('X-Robots-Tag', 'index, follow');
-    res.setHeader('Cache-Control', 'public, max-age=3600');
+    res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
+    res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
     res.setHeader('X-SSR-Cache', wasCached ? 'HIT' : 'MISS');
+    res.setHeader('X-SSR-Rendered', 'true');
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('Vary', 'User-Agent');
+    
+    // Core Web Vitals & Prerender hints
+    res.setHeader('Link', [
+      '</logo.png>; rel=preload; as=image',
+      '<https://fonts.googleapis.com>; rel=preconnect',
+      '<https://fonts.gstatic.com>; rel=preconnect; crossorigin'
+    ].join(', '));
+    
     return res.send(cachedHTML);
   }
   

@@ -302,6 +302,26 @@
     }
     </script>
 
+    <!-- Google 2026: Speculation Rules for Prerendering (Targeted) -->
+    <script type="speculationrules">
+    {
+      "prerender": [
+        {
+          "source": "list",
+          "urls": ["/leistungen/zementestrich", "/leistungen/fussbodenheizung", "/kontakt", "/preise"],
+          "eagerness": "moderate"
+        }
+      ],
+      "prefetch": [
+        {
+          "source": "list",
+          "urls": ["/leistungen/industrieboeden", "/leistungen/waermedaemmung", "/leistungen/sanierung", "/leistungen/schnellestrich", "/rechner", "/ueber-uns"],
+          "eagerness": "conservative"
+        }
+      ]
+    }
+    </script>
+
     <!-- HowTo Schema for Featured Snippets -->
     <script type="application/ld+json">
     {
