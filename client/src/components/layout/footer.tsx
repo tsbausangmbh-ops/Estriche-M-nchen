@@ -17,7 +17,7 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-2 mb-2">
               <img 
                 src={logoImage} 
-                alt="Estriche München Logo" 
+                alt="Estriche München Logo - Estrichleger Fachbetrieb Zementestrich Fließestrich Bayern" 
                 className="h-5 w-auto rounded-sm"
               />
               <div>
