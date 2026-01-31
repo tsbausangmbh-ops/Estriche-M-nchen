@@ -73,7 +73,7 @@ export function Header() {
               <Link href="/" className="flex items-center gap-3" data-testid="link-logo">
                 <img 
                   src={logoImage} 
-                  alt="Estriche München Logo - Estrichleger Fachbetrieb Zementestrich Fließestrich seit 1995" 
+                  alt="Estriche München Logo - Estrichleger Fachbetrieb Schwabing Bogenhausen Pasing Sendling seit 1995" 
                   className="h-10 w-auto rounded-md"
                   width="48"
                   height="48"

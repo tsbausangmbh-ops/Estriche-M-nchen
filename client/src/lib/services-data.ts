@@ -179,9 +179,9 @@ export const services: Service[] = [
     image: serviceImage1,
     price: "25-45",
     galleryImages: [
-      { src: galleryCementPour, alt: "Zementestrich verlegen München Fachbetrieb - Estrichleger bei professioneller Verlegung DIN 18560", caption: "Unsere Facharbeiter beim fachgerechten Einbringen des Zementestrichs" },
-      { src: galleryQuality, alt: "Estrich Ebenheitsprüfung München Laser-Nivellierung - Qualitätskontrolle nach DIN 18202", caption: "Präzise Ebenheitsmessung mit modernster Laser-Technik" },
-      { src: galleryLiving, alt: "Fertiger Estrichboden München Wohnzimmer - perfekte Grundlage für Parkett Fliesen Vinyl", caption: "Das Ergebnis: Ein Boden, der jeden Belag perfekt trägt" }
+      { src: galleryCementPour, alt: "Zementestrich verlegen München Schwabing Bogenhausen Pasing - Estrichleger Fachbetrieb DIN 18560", caption: "Unsere Facharbeiter beim fachgerechten Einbringen des Zementestrichs" },
+      { src: galleryQuality, alt: "Estrich Ebenheitsprüfung München Sendling Laim Haidhausen - Laser-Nivellierung DIN 18202", caption: "Präzise Ebenheitsmessung mit modernster Laser-Technik" },
+      { src: galleryLiving, alt: "Fertiger Estrichboden München Neuhausen Maxvorstadt - Grundlage Parkett Fliesen Vinyl", caption: "Das Ergebnis: Ein Boden, der jeden Belag perfekt trägt" }
     ],
     projectExamples: [
       { title: "Neubau Einfamilienhaus", location: "München-Solln", area: "185 m²", duration: "2 Tage", description: "Kompletter Fließestrich für Wohnbereich mit Fußbodenheizung. Belegreife nach 4 Wochen, anschließend Eichenparkett verlegt." },
@@ -275,9 +275,9 @@ export const services: Service[] = [
     image: serviceImage2,
     price: "45-95",
     galleryImages: [
-      { src: galleryIndustrialCoating, alt: "Industrieboden Epoxid-Beschichtung München - professionelle Bodenbeschichtung Gewerbeflächen", caption: "Facharbeiter bei der Epoxid-Beschichtung" },
-      { src: galleryIndustrial, alt: "Industrieboden München Produktionshalle - nahtlose Kunststoffbeschichtung befahrbar", caption: "Nahtlose Beschichtung in einer Produktionshalle" },
-      { src: galleryLiving, alt: "Sichtestrich München Loft geschliffen poliert - Designboden Wohnbereich modern", caption: "Geschliffener Sichtestrich im modernen Loft-Design" }
+      { src: galleryIndustrialCoating, alt: "Industrieboden Epoxid-Beschichtung München Moosach Garching Ismaning - Gewerbeflächen Fachbetrieb", caption: "Facharbeiter bei der Epoxid-Beschichtung" },
+      { src: galleryIndustrial, alt: "Industrieboden München Freimann Milbertshofen - nahtlose Kunststoffbeschichtung befahrbar", caption: "Nahtlose Beschichtung in einer Produktionshalle" },
+      { src: galleryLiving, alt: "Sichtestrich München Schwabing Maxvorstadt Lehel - Loft geschliffen poliert Designboden", caption: "Geschliffener Sichtestrich im modernen Loft-Design" }
     ],
     projectExamples: [
       { title: "Autohaus Showroom", location: "Unterschleißheim", area: "1.200 m²", duration: "2 Wochen", description: "Hochglanz-Sichtestrich mit Anti-Rutsch-Versiegelung. Befahrbar mit Fahrzeugen bis 3,5t, repräsentativ genug für Premium-Marken." },
@@ -371,9 +371,9 @@ export const services: Service[] = [
     image: serviceImage3,
     price: "45-75",
     galleryImages: [
-      { src: galleryHeatingPipes, alt: "Fußbodenheizung nachrüsten München - Heizungsrohre einfräsen Altbau ohne Abriss", caption: "Präzise Verlegung der Heizungsrohre im Schlangenverband" },
-      { src: galleryHeating, alt: "Fußbodenheizung verlegen München Fachbetrieb - Rohrverlegung in Dämmschicht DIN EN 1264", caption: "Fachgerechte Rohrverlegung in der Dämmschicht" },
-      { src: galleryLiving, alt: "Fußbodenheizung München fertig - warme Füße Energieeffizienz Wärmepumpe kompatibel", caption: "Das Ergebnis: Angenehme Wärme von unten" }
+      { src: galleryHeatingPipes, alt: "Fußbodenheizung nachrüsten München Pasing Sendling Trudering - Altbau ohne Abriss Fachbetrieb", caption: "Präzise Verlegung der Heizungsrohre im Schlangenverband" },
+      { src: galleryHeating, alt: "Fußbodenheizung verlegen München Bogenhausen Haidhausen - Rohrverlegung DIN EN 1264", caption: "Fachgerechte Rohrverlegung in der Dämmschicht" },
+      { src: galleryLiving, alt: "Fußbodenheizung München Solln Hadern Gräfelfing - Wärmepumpe kompatibel Energieeffizienz", caption: "Das Ergebnis: Angenehme Wärme von unten" }
     ],
     projectExamples: [
       { title: "Altbau-Nachrüstung", location: "München-Haidhausen", area: "92 m²", duration: "3 Tage", description: "Komplette Fußbodenheizung in bewohnter Altbauwohnung. Bewohner konnten während der Arbeiten in der Wohnung bleiben." },
@@ -468,9 +468,9 @@ export const services: Service[] = [
     image: serviceImage4,
     price: "18-45",
     galleryImages: [
-      { src: galleryInsulationWork, alt: "Wärmedämmung Estrich München verlegen - Trittschalldämmung EPS XPS Fachbetrieb GEG", caption: "Unsere Facharbeiter bei der fachgerechten Dämmung" },
-      { src: galleryInsulation, alt: "Bodendämmung München Dämmplatten professionell - Energieeffizienz KfW Förderung", caption: "Professionelle Verlegung hochwertiger Dämmplatten" },
-      { src: galleryBeforeAfter, alt: "Estrichdämmung München vorher nachher - Heizkosten sparen 30 Prozent Energieberatung", caption: "Deutliche Verbesserung der Energieeffizienz" }
+      { src: galleryInsulationWork, alt: "Wärmedämmung Estrich München Neuhausen Laim Berg am Laim - Trittschalldämmung GEG Fachbetrieb", caption: "Unsere Facharbeiter bei der fachgerechten Dämmung" },
+      { src: galleryInsulation, alt: "Bodendämmung München Aubing Pasing Allach - Dämmplatten KfW Förderung professionell", caption: "Professionelle Verlegung hochwertiger Dämmplatten" },
+      { src: galleryBeforeAfter, alt: "Estrichdämmung München Schwabing Bogenhausen - Heizkosten sparen 30% Energieberatung", caption: "Deutliche Verbesserung der Energieeffizienz" }
     ],
     projectExamples: [
       { title: "Kellerdeckendämmung", location: "Grünwald", area: "85 m²", duration: "2 Tage", description: "80 mm XPS-Dämmung unter dem Erdgeschoss. Energieeinsparung von 28% bereits im ersten Winter messbar." },
@@ -565,9 +565,9 @@ export const services: Service[] = [
     image: serviceImage5,
     price: "35-85",
     galleryImages: [
-      { src: galleryRenovation, alt: "Estrichsanierung München vorher nachher - Risse reparieren Hohlstellen verfüllen Fachbetrieb", caption: "Dramatische Transformation: Von gerissen zu makellos" },
-      { src: galleryBeforeAfter, alt: "Estrich Reparatur München professionell - Schadensanalyse Rissinjection Epoxidharz", caption: "Professionelle Schadensanalyse und Reparatur" },
-      { src: galleryQuality, alt: "Estrich Sanierung Qualitätsprüfung München - CM-Messung Restfeuchte dokumentiert", caption: "Prüfung des sanierten Estrichs" }
+      { src: galleryRenovation, alt: "Estrichsanierung München Sendling Haidhausen Giesing - Risse reparieren Hohlstellen Fachbetrieb", caption: "Dramatische Transformation: Von gerissen zu makellos" },
+      { src: galleryBeforeAfter, alt: "Estrich Reparatur München Schwabing Maxvorstadt Lehel - Rissinjection Epoxidharz professionell", caption: "Professionelle Schadensanalyse und Reparatur" },
+      { src: galleryQuality, alt: "Estrich Sanierung München Bogenhausen Trudering Riem - CM-Messung Restfeuchte dokumentiert", caption: "Prüfung des sanierten Estrichs" }
     ],
     projectExamples: [
       { title: "Wasserschaden-Sanierung", location: "Bogenhausen", area: "45 m²", duration: "1 Woche", description: "Technische Trocknung nach Rohrbruch, anschließend Hohlstellen-Verpressung. Versicherungsschaden dokumentiert und reguliert." },
@@ -661,9 +661,9 @@ export const services: Service[] = [
     image: serviceImage6,
     price: "35-55",
     galleryImages: [
-      { src: galleryQuickScreed, alt: "Schnellestrich München belegreif 24h - Rapid-Estrich Zeitdruck Renovierung Fachbetrieb", caption: "Rapid-Estrich wird professionell eingebracht" },
-      { src: galleryCementPour, alt: "Schnellestrich verlegen München professionell - schnell trocknender Estrich 1-3 Tage", caption: "Präzises Einbringen des Schnellestrichs" },
-      { src: galleryQuality, alt: "Estrich CM-Messung Belegreife München dokumentiert - Restfeuchte Protokoll Festpreis", caption: "Dokumentierte CM-Messung für garantierte Belegreife" }
+      { src: galleryQuickScreed, alt: "Schnellestrich München Schwabing Pasing Laim - belegreif 24h Rapid-Estrich Fachbetrieb", caption: "Rapid-Estrich wird professionell eingebracht" },
+      { src: galleryCementPour, alt: "Schnellestrich verlegen München Sendling Moosach Feldmoching - 1-3 Tage trocken professionell", caption: "Präzises Einbringen des Schnellestrichs" },
+      { src: galleryQuality, alt: "Estrich CM-Messung München Bogenhausen Haidhausen - Belegreife dokumentiert Festpreis", caption: "Dokumentierte CM-Messung für garantierte Belegreife" }
     ],
     projectExamples: [
       { title: "Ladenbau Neueröffnung", location: "Maximilianstraße", area: "180 m²", duration: "1 Tag", description: "1-Tages-Estrich für Boutique-Neueröffnung. Begehbar nach 6 Stunden, Bodenbelag am nächsten Tag." },
