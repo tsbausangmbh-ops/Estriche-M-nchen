@@ -6,7 +6,22 @@ interface PageSEO {
   h1: string;
   sections: { h2: string; h3s?: string[]; content: string }[];
   faqs?: { q: string; a: string }[];
+  projectExamples?: { title: string; location: string; area: string; description: string }[];
 }
+
+// Münchner Stadtteile für lokale SEO
+const MUENCHNER_STADTTEILE = [
+  "Altstadt-Lehel", "Ludwigsvorstadt-Isarvorstadt", "Maxvorstadt", "Schwabing-West",
+  "Au-Haidhausen", "Sendling", "Sendling-Westpark", "Schwanthalerhöhe", "Neuhausen-Nymphenburg",
+  "Moosach", "Milbertshofen-Am Hart", "Schwabing-Freimann", "Bogenhausen", "Berg am Laim",
+  "Trudering-Riem", "Ramersdorf-Perlach", "Obergiesing-Fasangarten", "Untergiesing-Harlaching",
+  "Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln", "Hadern", "Pasing-Obermenzing",
+  "Aubing-Lochhausen-Langwied", "Allach-Untermenzing", "Feldmoching-Hasenbergl", "Laim"
+];
+
+const BELIEBTE_STADTTEILE = ["Schwabing", "Bogenhausen", "Haidhausen", "Sendling", "Pasing", "Laim", "Neuhausen", "Maxvorstadt", "Trudering", "Moosach"];
+
+const UMLAND_STAEDTE = ["Starnberg", "Freising", "Dachau", "Erding", "Ebersberg", "Fürstenfeldbruck", "Garching", "Unterschleißheim", "Germering", "Grünwald"];
 
 const servicesData: Record<string, PageSEO> = {
   fliessestrich: {
@@ -85,7 +100,7 @@ const servicesData: Record<string, PageSEO> = {
   },
   zementestrich: {
     title: "Zementestrich München - Professionelle Estrichverlegung vom Fachbetrieb | Estrich München",
-    metaDescription: "Zementestrich verlegen lassen in München. Fachbetrieb mit 30+ Jahren Erfahrung, Festpreisgarantie, DIN-konforme Ausführung. Jetzt kostenlose Beratung!",
+    metaDescription: "Zementestrich verlegen lassen in München Schwabing, Bogenhausen, Pasing, Sendling. Fachbetrieb mit 30+ Jahren Erfahrung, Festpreisgarantie, DIN 18560. Jetzt kostenlose Beratung!",
     mainKeyword: "Zementestrich München",
     longTailKeywords: [
       "Zementestrich verlegen lassen München",
@@ -95,34 +110,54 @@ const servicesData: Record<string, PageSEO> = {
       "CT-Estrich verlegen Neubau",
       "Estrich für Fußbodenheizung München",
       "Zementestrich Fließestrich Unterschied",
-      "Estrich DIN 18560 München"
+      "Estrich DIN 18560 München",
+      "Zementestrich Schwabing Bogenhausen",
+      "Estrichleger Pasing Sendling Laim",
+      "Zementestrich Neubau Altbau München"
     ],
     h1: "Zementestrich München - Professionelle Estrichverlegung vom Fachbetrieb",
     sections: [
       {
         h2: "Zementestrich verlegen lassen - Ihr Fachbetrieb in München",
-        h3s: ["CT-Estrich nach DIN 18560", "Estrich für Fußbodenheizung"],
-        content: `Als erfahrener Estrichleger in München bieten wir professionelle Zementestrich-Verlegung für Neubau und Sanierung. Mit über 30 Jahren Erfahrung und 2.500+ erfolgreich abgeschlossenen Projekten garantieren wir höchste Qualität nach DIN 18560. Unsere Estrich Kosten pro qm sind transparent und verbindlich - Sie erhalten einen Festpreis ohne versteckte Nachforderungen. Ob CT-Estrich für den klassischen Neubau oder spezieller Heizestrich für Ihre Fußbodenheizung - wir liefern perfekte Ergebnisse.`
+        h3s: ["CT-Estrich nach DIN 18560", "Estrich für Fußbodenheizung", "Zementestrich in allen Münchner Stadtteilen"],
+        content: `Als erfahrener Estrichleger in München bieten wir professionelle Zementestrich-Verlegung für Neubau und Sanierung. Mit über 30 Jahren Erfahrung und 2.500+ erfolgreich abgeschlossenen Projekten garantieren wir höchste Qualität nach DIN 18560. Unsere Estrich Kosten pro qm sind transparent und verbindlich - Sie erhalten einen Festpreis ohne versteckte Nachforderungen. Ob CT-Estrich für den klassischen Neubau oder spezieller Heizestrich für Ihre Fußbodenheizung - wir liefern perfekte Ergebnisse in ganz München: Schwabing, Bogenhausen, Pasing, Sendling, Laim, Haidhausen, Neuhausen, Maxvorstadt, Trudering und Moosach.`
       },
       {
         h2: "Zementestrich Trocknungszeit und Belegreife",
-        h3s: ["Wann ist Zementestrich begehbar?", "CM-Messung für Belegreife"],
+        h3s: ["Wann ist Zementestrich begehbar?", "CM-Messung für Belegreife", "Dokumentation für Bodenleger"],
         content: `Die Zementestrich Trocknungszeit beträgt als Faustregel 1 Tag pro Millimeter Estrichstärke. Ein 50 mm starker Zementestrich braucht etwa 50 Tage bis zur Belegreife. Wir führen professionelle CM-Messungen durch und dokumentieren die Ergebnisse für Ihren Bodenleger. Bei Zeitdruck bieten wir auch Schnellestrich-Lösungen an.`
       },
       {
         h2: "Zementestrich vs. Fließestrich - Der Unterschied",
-        content: `Zementestrich (CT) wird konventionell eingebracht und abgezogen, während Calciumsulfat-Fließestrich (CAF) selbstnivellierend ist. Fließestrich hat bessere Wärmeleitfähigkeit für Fußbodenheizungen, Zementestrich ist feuchtigkeitsbeständiger. Wir beraten Sie, welche Lösung für Ihr Projekt optimal ist.`
+        h3s: ["Vorteile Zementestrich", "Vorteile Fließestrich", "Welcher Estrich für welches Projekt?"],
+        content: `Zementestrich (CT) wird konventionell eingebracht und abgezogen, während Calciumsulfat-Fließestrich (CAF) selbstnivellierend ist. Fließestrich hat bessere Wärmeleitfähigkeit für Fußbodenheizungen, Zementestrich ist feuchtigkeitsbeständiger und für Nassräume geeignet. Wir beraten Sie, welche Lösung für Ihr Projekt optimal ist.`
+      },
+      {
+        h2: "Zementestrich Kosten München - Transparente Preise",
+        h3s: ["Zementestrich ab 32€/m²", "Neubau-Rabatt 5€/m²", "Festpreisgarantie"],
+        content: `Zementestrich kostet in München zwischen 32-45€/m² netto zzgl. MwSt. Bei Neubauprojekten erhalten Sie 5€/m² Rabatt. Die Preise gelten für alle Münchner Stadtteile ohne Aufpreis: Schwabing-West, Bogenhausen, Au-Haidhausen, Sendling, Laim, Pasing-Obermenzing, Neuhausen-Nymphenburg, Maxvorstadt, Trudering-Riem und Moosach.`
+      },
+      {
+        h2: "Zementestrich in Münchner Stadtteilen",
+        content: `Wir verlegen Zementestrich in allen 25 Münchner Stadtbezirken: Altstadt-Lehel, Ludwigsvorstadt-Isarvorstadt, Maxvorstadt, Schwabing-West, Au-Haidhausen, Sendling, Schwanthalerhöhe, Neuhausen-Nymphenburg, Moosach, Bogenhausen, Trudering-Riem, Pasing-Obermenzing, Laim und mehr. Keine Anfahrtskosten im Stadtgebiet!`
       }
+    ],
+    projectExamples: [
+      { title: "Neubau Einfamilienhaus", location: "München-Pasing", area: "185 m²", description: "Zementestrich C25 mit Fußbodenheizung nach DIN 18560. Belegreif nach 6 Wochen, anschließend Eichenparkett verlegt." },
+      { title: "Altbausanierung Jugendstil", location: "München-Schwabing", area: "120 m²", description: "Estrich-Sanierung im denkmalgeschützten Altbau. Höhenausgleich 35mm, Trittschalldämmung nach DIN 4109." },
+      { title: "Mehrfamilienhaus Neubau", location: "München-Bogenhausen", area: "480 m²", description: "6 Wohneinheiten mit Fußbodenheizung. Zementestrich C30, Funktionsheizen nach DIN EN 1264 dokumentiert." }
     ],
     faqs: [
       { q: "Wie lange muss Zementestrich trocknen?", a: "Als Faustregel gilt: 1 Tag pro Millimeter Estrichstärke. Ein 50 mm starker Zementestrich braucht etwa 50 Tage bis zur Belegreife." },
       { q: "Was kostet Zementestrich pro qm in München?", a: "Die Kosten liegen zwischen 32-45 €/m² netto zzgl. MwSt., abhängig von Fläche und Anforderungen. Wir erstellen verbindliche Festpreise." },
-      { q: "Ist Zementestrich für Fußbodenheizung geeignet?", a: "Ja, Zementestrich eignet sich hervorragend für Fußbodenheizungen. Als Heizestrich wird er mit speziellen Zusätzen verarbeitet." }
+      { q: "Ist Zementestrich für Fußbodenheizung geeignet?", a: "Ja, Zementestrich eignet sich hervorragend für Fußbodenheizungen. Als Heizestrich wird er mit speziellen Zusätzen verarbeitet." },
+      { q: "In welchen Stadtteilen verlegt ihr Zementestrich?", a: "Wir verlegen Zementestrich in ganz München: Schwabing, Bogenhausen, Haidhausen, Sendling, Pasing, Laim, Neuhausen, Maxvorstadt, Trudering, Moosach und alle anderen Stadtteile." },
+      { q: "Wie schnell könnt ihr starten?", a: "In der Regel innerhalb von 1-2 Wochen nach Auftragserteilung. Bei dringendem Bedarf auch kurzfristiger - rufen Sie uns an: 089 444438872." }
     ]
   },
   industrieboeden: {
     title: "Industrieböden München - Belastbare Hallenböden & Sichtestrich | Estrich München",
-    metaDescription: "Industrieböden und Sichtestrich in München. Hartstoffestrich, Epoxidbeschichtung, geschliffener Betonboden. 10 Jahre Garantie. Jetzt beraten lassen!",
+    metaDescription: "Industrieböden und Sichtestrich in München, Garching, Unterschleißheim, Freising. Hartstoffestrich, Epoxidbeschichtung, geschliffener Betonboden. 10 Jahre Garantie. Jetzt beraten lassen!",
     mainKeyword: "Industrieböden München",
     longTailKeywords: [
       "Industrieboden verlegen München",
@@ -132,34 +167,48 @@ const servicesData: Record<string, PageSEO> = {
       "Betonboden schleifen München",
       "Industrieboden Kosten pro qm",
       "Garagenboden Beschichtung München",
-      "Hallenboden sanieren München"
+      "Hallenboden sanieren München",
+      "Industrieboden Garching Unterschleißheim",
+      "Sichtestrich Schwabing Maxvorstadt Loft",
+      "Gewerbeboden München Nord Freimann"
     ],
     h1: "Industrieböden München - Hochbelastbare Böden für Gewerbe und Industrie",
     sections: [
       {
         h2: "Industrieboden verlegen - Lösungen für extreme Anforderungen",
-        h3s: ["Hartstoffestrich für Produktionshallen", "Epoxidbeschichtung für Chemiebeständigkeit"],
-        content: `Unsere Industrieböden erreichen Druckfestigkeiten von C30 bis C50 und sind für Gabelstaplerverkehr, schwere Maschinen und aggressive Chemikalien ausgelegt. Von Hartstoffestrich für Produktionshallen über chemikalienbeständige Epoxidbeschichtung bis hin zu rutschfesten Beschichtungen - wir realisieren Ihr Projekt nach DIN EN 13892.`
+        h3s: ["Hartstoffestrich für Produktionshallen", "Epoxidbeschichtung für Chemiebeständigkeit", "Industrieböden im Münchner Umland"],
+        content: `Unsere Industrieböden erreichen Druckfestigkeiten von C30 bis C50 und sind für Gabelstaplerverkehr, schwere Maschinen und aggressive Chemikalien ausgelegt. Von Hartstoffestrich für Produktionshallen über chemikalienbeständige Epoxidbeschichtung bis hin zu rutschfesten Beschichtungen - wir realisieren Ihr Projekt nach DIN EN 13892. Besonders aktiv in Garching, Unterschleißheim, Freising, Dachau und dem gesamten Münchner Norden.`
       },
       {
         h2: "Sichtestrich geschliffen - Ästhetik trifft Funktionalität",
-        h3s: ["Polierter Betonboden für Showrooms", "Terrazzo-Optik für moderne Architektur"],
-        content: `Geschliffener Sichtestrich verbindet industriellen Charme mit höchster Belastbarkeit. Ideal für Showrooms, Lofts, Restaurants und moderne Büros. Wir schleifen und polieren Betonböden auf Hochglanz und versiegeln sie dauerhaft. Die Kosten für Sichtestrich liegen bei 65-120 €/m² je nach Schliffgrad.`
+        h3s: ["Polierter Betonboden für Showrooms", "Terrazzo-Optik für moderne Architektur", "Sichtestrich in Schwabing und Maxvorstadt"],
+        content: `Geschliffener Sichtestrich verbindet industriellen Charme mit höchster Belastbarkeit. Ideal für Showrooms, Lofts, Restaurants und moderne Büros. Besonders beliebt in Schwabing, Maxvorstadt, Haidhausen und anderen trendigen Münchner Stadtteilen. Wir schleifen und polieren Betonböden auf Hochglanz und versiegeln sie dauerhaft. Die Kosten für Sichtestrich liegen bei 65-120 €/m² je nach Schliffgrad.`
       },
       {
         h2: "Garagenboden und Hallenboden Beschichtung",
+        h3s: ["Garagenboden München", "Hallenboden-Sanierung", "Ausführung am Wochenende"],
         content: `Professionelle Garagenboden Beschichtung schützt vor Öl, Benzin und Streusalz. Unsere Hallenboden-Sanierung bringt verschlissene Industrieböden wieder in Topzustand. Ausführung auch nachts und am Wochenende möglich, um Ihren Betrieb nicht zu stören.`
+      },
+      {
+        h2: "Industrieböden in München und Umland",
+        content: `Wir verlegen Industrieböden in ganz München und Umland: Industriegebiete in Moosach, Freimann, Milbertshofen, Garching, Unterschleißheim, Freising, Dachau, Fürstenfeldbruck und Germering. Ob Produktionshalle, Lagerhalle, Werkstatt oder Showroom - wir finden die passende Lösung.`
       }
+    ],
+    projectExamples: [
+      { title: "Autohaus Showroom", location: "Unterschleißheim", area: "1.200 m²", description: "Hochglanz-Sichtestrich mit Anti-Rutsch-Versiegelung. Befahrbar mit Fahrzeugen bis 3,5t." },
+      { title: "Brauerei Lagerhalle", location: "Freising", area: "2.800 m²", description: "Säurebeständiger Industrieboden für Getränkeproduktion. HACCP-konform." },
+      { title: "Loft-Umbau", location: "München-Schwabing", area: "180 m²", description: "Geschliffener Sichtestrich für Wohn-Loft. Hochglanzpolitur mit Fußbodenheizung." }
     ],
     faqs: [
       { q: "Wie lange hält ein Industrieboden?", a: "Bei fachgerechter Ausführung halten Industrieböden 15-25 Jahre oder länger, je nach Belastung." },
       { q: "Was kostet ein Industrieboden pro qm?", a: "Je nach Ausführung zwischen 45-120 €/m² netto. Hartstoffestrich ab 45 €/m², Epoxidbeschichtung ab 65 €/m²." },
-      { q: "Kann Sichtestrich mit Fußbodenheizung kombiniert werden?", a: "Ja, Sichtestrich eignet sich hervorragend für Fußbodenheizungen und leitet Wärme sehr gut." }
+      { q: "Kann Sichtestrich mit Fußbodenheizung kombiniert werden?", a: "Ja, Sichtestrich eignet sich hervorragend für Fußbodenheizungen und leitet Wärme sehr gut." },
+      { q: "Wo verlegt ihr Industrieböden?", a: "In ganz München und Umland: Garching, Unterschleißheim, Freising, Dachau, Fürstenfeldbruck und weitere Gewerbegebiete." }
     ]
   },
   fussbodenheizung: {
     title: "Fußbodenheizung nachrüsten München - Einfräsen ohne Umbau | Estrich München",
-    metaDescription: "Fußbodenheizung nachträglich einfräsen in München. Installation in bewohnten Räumen, nur 2-4 Tage. 500+ Nachrüstungen. Jetzt beraten lassen!",
+    metaDescription: "Fußbodenheizung nachträglich einfräsen in München Schwabing, Haidhausen, Bogenhausen, Sendling. Installation in bewohnten Räumen, nur 2-4 Tage. 500+ Nachrüstungen. Jetzt beraten lassen!",
     mainKeyword: "Fußbodenheizung nachrüsten München",
     longTailKeywords: [
       "Fußbodenheizung einfräsen München",
@@ -169,29 +218,44 @@ const servicesData: Record<string, PageSEO> = {
       "Fußbodenheizung ohne Estrich entfernen",
       "Altbau Fußbodenheizung nachrüsten München",
       "Fräsverfahren Fußbodenheizung",
-      "Fußbodenheizung in bewohntem Haus einbauen"
+      "Fußbodenheizung in bewohntem Haus einbauen",
+      "Fußbodenheizung Schwabing Haidhausen",
+      "Fußbodenheizung nachrüsten Bogenhausen Sendling",
+      "Fußbodenheizung Altbau München Pasing Laim"
     ],
     h1: "Fußbodenheizung nachrüsten München - Einfräsen in bestehenden Estrich",
     sections: [
       {
         h2: "Fußbodenheizung einfräsen - Nachrüstung ohne großen Umbau",
-        h3s: ["Heizungsrohre direkt in Estrich fräsen", "Staubarme Installation mit Absaugung"],
-        content: `Mit unserer speziellen Frästechnik können wir Heizungsrohre direkt in Ihren bestehenden Estrich einbringen - ohne den alten Boden zu entfernen. Über 500 erfolgreiche Nachrüstungen in Münchner Altbauten beweisen unsere Kompetenz. Die Installation dauert nur 2-4 Tage für eine durchschnittliche Wohnung.`
+        h3s: ["Heizungsrohre direkt in Estrich fräsen", "Staubarme Installation mit Absaugung", "Alle Münchner Stadtteile"],
+        content: `Mit unserer speziellen Frästechnik können wir Heizungsrohre direkt in Ihren bestehenden Estrich einbringen - ohne den alten Boden zu entfernen. Über 500 erfolgreiche Nachrüstungen in Münchner Altbauten beweisen unsere Kompetenz. Die Installation dauert nur 2-4 Tage für eine durchschnittliche Wohnung. Wir arbeiten in ganz München: Schwabing, Haidhausen, Bogenhausen, Sendling, Pasing, Laim, Neuhausen, Maxvorstadt, Trudering und Moosach.`
       },
       {
         h2: "Fußbodenheizung nachträglich einbauen im Altbau",
-        h3s: ["Installation in bewohnten Räumen möglich", "Minimale Aufbauhöhe von nur 15 mm"],
-        content: `Fußbodenheizung nachträglich einbauen war noch nie so einfach. Unser Fräsverfahren ermöglicht die Installation in bewohnten Räumen - Sie müssen nicht ausziehen. Die Vergussmasse ist nach 24 Stunden begehbar, die Heizung nach 7 Tagen betriebsbereit.`
+        h3s: ["Installation in bewohnten Räumen möglich", "Minimale Aufbauhöhe von nur 15 mm", "Wärmepumpe kompatibel"],
+        content: `Fußbodenheizung nachträglich einbauen war noch nie so einfach. Unser Fräsverfahren ermöglicht die Installation in bewohnten Räumen - Sie müssen nicht ausziehen. Die Vergussmasse ist nach 24 Stunden begehbar, die Heizung nach 7 Tagen betriebsbereit. Ideal für Altbauten in Schwabing-West, Haidhausen, Bogenhausen und anderen beliebten Münchner Stadtteilen.`
       },
       {
         h2: "Fußbodenheizung nachrüsten Kosten transparent kalkuliert",
-        content: `Die Kosten für Fußbodenheizung nachrüsten liegen bei 45-75 €/m² netto zzgl. MwSt., inklusive Material, Fräsung und Verguss. Im Vergleich zum kompletten Neuaufbau sparen Sie 30-50% der Kosten und vermeiden wochenlangen Baulärm.`
+        h3s: ["45-75€/m² inklusive Material", "30-50% günstiger als Neuaufbau", "Förderung durch BAFA möglich"],
+        content: `Die Kosten für Fußbodenheizung nachrüsten liegen bei 45-75 €/m² netto zzgl. MwSt., inklusive Material, Fräsung und Verguss. Im Vergleich zum kompletten Neuaufbau sparen Sie 30-50% der Kosten und vermeiden wochenlangen Baulärm. Bei Kombination mit Wärmepumpe sind BAFA-Förderungen möglich.`
+      },
+      {
+        h2: "Fußbodenheizung in Münchner Altbauten",
+        content: `Besonders gefragt ist die Fußbodenheizung-Nachrüstung in den Altbau-Stadtteilen: Schwabing-West mit Jugendstil-Wohnungen, Au-Haidhausen mit Gründerzeit-Häusern, Bogenhausen mit Villen und Maxvorstadt mit historischen Gebäuden. Wir kennen die Besonderheiten Münchner Altbauten und finden für jede Situation die passende Lösung.`
       }
+    ],
+    projectExamples: [
+      { title: "Altbau-Nachrüstung Jugendstil", location: "München-Schwabing", area: "92 m²", description: "Fußbodenheizung in bewohnter Altbauwohnung. Fräsung ohne Auszug, Vergussmasse nach 24h begehbar. Wärmepumpe-Anschluss inklusive." },
+      { title: "Gründerzeit-Wohnung", location: "München-Haidhausen", area: "78 m²", description: "Nachrüstung in 3-Zimmer-Wohnung. Besonderheit: Holzbalkendecke erforderte Gewichtsoptimierung. Erfolgreiche Umsetzung in 3 Tagen." },
+      { title: "Einfamilienhaus Komplett", location: "München-Pasing", area: "145 m²", description: "Erdgeschoss komplett mit Fußbodenheizung nachgerüstet. Anschluss an bestehende Wärmepumpe, Vorlauftemperatur optimiert." }
     ],
     faqs: [
       { q: "Kann jeder Estrich gefräst werden?", a: "Fast jeder. Zementestrich, Anhydritestrich und Gussasphalt eignen sich hervorragend für das Fräsverfahren." },
       { q: "Wie lange dauert die Nachrüstung einer Fußbodenheizung?", a: "Für eine durchschnittliche Wohnung (80-100 m²) benötigen wir 2-4 Arbeitstage." },
-      { q: "Ist eine nachgerüstete Fußbodenheizung genauso effizient?", a: "Ja, gefräste Systeme erreichen die gleiche Effizienz wie Fußbodenheizungen im Neubau." }
+      { q: "Ist eine nachgerüstete Fußbodenheizung genauso effizient?", a: "Ja, gefräste Systeme erreichen die gleiche Effizienz wie Fußbodenheizungen im Neubau." },
+      { q: "In welchen Münchner Stadtteilen rüstet ihr Fußbodenheizungen nach?", a: "Wir arbeiten in ganz München: Schwabing, Haidhausen, Bogenhausen, Sendling, Pasing, Laim, Neuhausen, Maxvorstadt, Trudering, Moosach und alle anderen Stadtteile." },
+      { q: "Kann ich während der Installation wohnen bleiben?", a: "Ja, bei unserem Fräsverfahren können Sie in der Wohnung bleiben. Die Arbeiten sind staubarm und der Verguss nach 24h begehbar." }
     ]
   },
   waermedaemmung: {
@@ -311,8 +375,8 @@ const servicesData: Record<string, PageSEO> = {
 
 const pagesSEO: Record<string, PageSEO> = {
   home: {
-    title: "Estrich München | Zement- & Fließestrich | Festpreis",
-    metaDescription: "Estricharbeiten in München ✔ Zementestrich, Fließestrich & Industrieestrich ✔ Schnell & sauber ✔ Jetzt Angebot sichern!",
+    title: "Estrich München | Zement- & Fließestrich | Festpreis | Fachbetrieb",
+    metaDescription: "Estricharbeiten in München Schwabing, Bogenhausen, Pasing, Sendling, Haidhausen ✔ Zementestrich ab 32€/m² ✔ Fließestrich ✔ Fachbetrieb mit 30+ Jahren Erfahrung ✔ Jetzt Angebot sichern!",
     mainKeyword: "Estrich München",
     longTailKeywords: [
       "Estrich München",
@@ -322,35 +386,56 @@ const pagesSEO: Record<string, PageSEO> = {
       "Estrich Kosten München",
       "Estrich Neubau München",
       "Estrich Sanierung München",
-      "Estrichleger Fachbetrieb München"
+      "Estrichleger Fachbetrieb München",
+      "Estrich Schwabing Bogenhausen",
+      "Estrichleger Pasing Sendling Laim",
+      "Estrich Haidhausen Neuhausen Maxvorstadt"
     ],
     h1: "Estrich München - Ihr Estrichleger Fachbetrieb für perfekte Böden",
     sections: [
       {
         h2: "Estrichleger München - Fachbetrieb mit 30+ Jahren Erfahrung",
-        h3s: ["Zementestrich München ab 32€/m²", "Fließestrich München für Fußbodenheizung", "Estrich Neubau und Estrich Sanierung München"],
-        content: `Sie suchen einen zuverlässigen Estrichleger in München? Als Estrichleger Fachbetrieb München liefern wir professionelle Estricharbeiten in ganz München und Umgebung. Mit über 30 Jahren Erfahrung und mehr als 2.500 erfolgreich abgeschlossenen Projekten sind wir Ihr verlässlicher Partner für Zementestrich München, Fließestrich München und Heizestrich München.`
+        h3s: ["Zementestrich München ab 32€/m²", "Fließestrich München für Fußbodenheizung", "Estrich Neubau und Estrich Sanierung München", "Alle Münchner Stadtteile"],
+        content: `Sie suchen einen zuverlässigen Estrichleger in München? Als Estrichleger Fachbetrieb München liefern wir professionelle Estricharbeiten in ganz München und Umgebung. Mit über 30 Jahren Erfahrung und mehr als 2.500 erfolgreich abgeschlossenen Projekten sind wir Ihr verlässlicher Partner für Zementestrich München, Fließestrich München und Heizestrich München. Wir arbeiten in allen Stadtteilen: Schwabing, Bogenhausen, Haidhausen, Sendling, Pasing, Laim, Neuhausen, Maxvorstadt, Trudering und Moosach.`
       },
       {
         h2: "Estrich München - Alle Leistungen aus einer Hand",
-        h3s: ["Zementestrich München", "Fließestrich München", "Estrichsanierung München"],
-        content: `Unsere Estrich-Leistungen in München: Zementestrich München ab 32€/m², Fließestrich München ab 38€/m², Heizestrich München für Fußbodenheizung, Industrieböden München für Gewerbe, Schnellestrich München bei Termindruck, Estrichsanierung München für Altbauten. Alle Estrich Kosten München transparent und als Festpreis.`
+        h3s: ["Zementestrich München", "Fließestrich München", "Fußbodenheizung nachrüsten", "Industrieböden und Sichtestrich"],
+        content: `Unsere Estrich-Leistungen in München: Zementestrich München ab 32€/m², Fließestrich München ab 38€/m², Heizestrich München für Fußbodenheizung, Fußbodenheizung nachrüsten durch Einfräsen, Industrieböden München für Gewerbe, Sichtestrich geschliffen für moderne Architektur, Schnellestrich München bei Termindruck, Estrichsanierung München für Altbauten. Alle Estrich Kosten München transparent und als Festpreis.`
       },
       {
         h2: "Estrich Kosten München - Transparente Preise pro m²",
-        h3s: ["Estrich Neubau München ab 32€/m²", "Estrich Sanierung München ab 25€/m²"],
-        content: `Was kostet Estrich in München? Estrich Kosten München: Zementestrich 32-45€/m², Fließestrich 38-52€/m², Heizestrich 42-55€/m², Schnellestrich 48-65€/m². Ob Estrich Neubau München oder Estrich Sanierung München - Sie erhalten verbindliche Festpreise ohne versteckte Kosten. Rufen Sie jetzt an: 089 444438872.`
+        h3s: ["Estrich Neubau München ab 32€/m²", "Estrich Sanierung München ab 25€/m²", "Neubau-Rabatt 5€/m²"],
+        content: `Was kostet Estrich in München? Estrich Kosten München: Zementestrich 32-45€/m², Fließestrich 38-52€/m², Heizestrich 42-55€/m², Schnellestrich 48-65€/m². Ob Estrich Neubau München oder Estrich Sanierung München - Sie erhalten verbindliche Festpreise ohne versteckte Kosten. Bei Neubauprojekten erhalten Sie 5€/m² Rabatt. Rufen Sie jetzt an: 089 444438872.`
       },
       {
         h2: "Estrichleger Fachbetrieb München - Ihre Vorteile",
         h3s: ["Festpreisgarantie München", "5 Jahre Gewährleistung", "Termingarantie oder 100€"],
-        content: `Als Estrichleger Fachbetrieb München arbeiten wir nach DIN 18560 mit Festpreisgarantie. Bei Terminverzug erhalten Sie 100€ Gutschrift. Estrich München mit 5 Jahren Gewährleistung. Unser Servicegebiet: München, Starnberg, Freising, Dachau, Erding, Ebersberg, Fürstenfeldbruck.`
+        content: `Als Estrichleger Fachbetrieb München arbeiten wir nach DIN 18560 mit Festpreisgarantie. Bei Terminverzug erhalten Sie 100€ Gutschrift. Estrich München mit 5 Jahren Gewährleistung. Qualitätsarbeit in allen Münchner Stadtteilen.`
+      },
+      {
+        h2: "Estrich in allen Münchner Stadtteilen",
+        h3s: ["Schwabing & Bogenhausen", "Haidhausen & Sendling", "Pasing & Laim", "Neuhausen & Maxvorstadt"],
+        content: `Wir verlegen Estrich in allen 25 Münchner Stadtbezirken: Altstadt-Lehel, Ludwigsvorstadt-Isarvorstadt, Maxvorstadt, Schwabing-West, Au-Haidhausen, Sendling, Sendling-Westpark, Schwanthalerhöhe, Neuhausen-Nymphenburg, Moosach, Milbertshofen-Am Hart, Schwabing-Freimann, Bogenhausen, Berg am Laim, Trudering-Riem, Ramersdorf-Perlach, Obergiesing-Fasangarten, Untergiesing-Harlaching, Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln, Hadern, Pasing-Obermenzing, Aubing-Lochhausen-Langwied, Allach-Untermenzing, Feldmoching-Hasenbergl, Laim. Keine Anfahrtskosten im Stadtgebiet München!`
+      },
+      {
+        h2: "Estrich im Münchner Umland",
+        content: `Unser Servicegebiet umfasst neben München auch das gesamte Umland bis 30 km Radius: Starnberg, Freising, Dachau, Erding, Ebersberg, Fürstenfeldbruck, Garching, Unterschleißheim, Germering, Grünwald, Pullach, Unterhaching, Ottobrunn, Haar und viele weitere Gemeinden. Faire Anfahrtskosten von 55€ pauschal für das Umland.`
       }
+    ],
+    projectExamples: [
+      { title: "Neubau Einfamilienhaus", location: "München-Pasing", area: "185 m²", description: "Kompletter Bodenaufbau mit 100mm EPS-Dämmung und 65mm Zementestrich nach DIN 18560. Belegreif nach 6 Wochen." },
+      { title: "Altbausanierung Jugendstil", location: "München-Schwabing", area: "120 m²", description: "Estrichsanierung in 1920er Jugendstil-Altbau mit nachträglicher Fußbodenheizung. Nur 45mm Aufbauhöhe." },
+      { title: "Mehrfamilienhaus Neubau", location: "München-Bogenhausen", area: "480 m²", description: "6 Wohneinheiten mit Fußbodenheizung. Normgerechtes Aufheizprotokoll nach DIN EN 1264." },
+      { title: "Fußbodenheizung Nachrüstung", location: "München-Haidhausen", area: "92 m²", description: "Fußbodenheizung einfräsen in bewohnter Altbauwohnung. Installation ohne Auszug in 3 Tagen." }
     ],
     faqs: [
       { q: "Was kostet Estrich verlegen in München?", a: "Estrich Kosten München: Zementestrich ab 32€/m², Fließestrich ab 38€/m², Heizestrich ab 42€/m². Verbindliche Festpreise nach Vor-Ort-Besichtigung." },
       { q: "Welcher Estrichleger in München ist empfehlenswert?", a: "Als Estrichleger Fachbetrieb München mit 30+ Jahren Erfahrung und 282 Google-Bewertungen bieten wir höchste Qualität mit Festpreisgarantie." },
-      { q: "Macht ihr auch Estrich Sanierung München?", a: "Ja, Estrich Sanierung München gehört zu unseren Kernleistungen. Altbausanierung, Rissreparatur, Estrichausbesserung - alles aus einer Hand." }
+      { q: "Macht ihr auch Estrich Sanierung München?", a: "Ja, Estrich Sanierung München gehört zu unseren Kernleistungen. Altbausanierung, Rissreparatur, Estrichausbesserung - alles aus einer Hand." },
+      { q: "In welchen Münchner Stadtteilen arbeitet ihr?", a: "Wir arbeiten in allen 25 Münchner Stadtbezirken: Schwabing, Bogenhausen, Haidhausen, Sendling, Pasing, Laim, Neuhausen, Maxvorstadt, Trudering, Moosach und alle anderen. Keine Anfahrtskosten im Stadtgebiet!" },
+      { q: "Wie schnell könnt ihr starten?", a: "In der Regel innerhalb von 1-2 Wochen nach Auftragserteilung. Bei dringendem Bedarf auch kurzfristiger - rufen Sie uns an: 089 444438872." },
+      { q: "Bietet ihr auch Fußbodenheizung nachrüsten an?", a: "Ja, wir fräsen Fußbodenheizungen nachträglich in bestehenden Estrich ein. 500+ erfolgreiche Nachrüstungen in Münchner Altbauten, 2-4 Tage Installationszeit." }
     ]
   },
   ablauf: {
@@ -770,6 +855,19 @@ function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
     </section>
   ` : '';
 
+  const projectExamplesHTML = page.projectExamples ? `
+    <section>
+      <h2>Referenzprojekte in München</h2>
+      ${page.projectExamples.map(project => `
+        <article itemscope itemtype="https://schema.org/CreativeWork">
+          <h3 itemprop="name">${project.title} - ${project.location}</h3>
+          <p><strong>Fläche:</strong> ${project.area}</p>
+          <p itemprop="description">${project.description}</p>
+        </article>
+      `).join('\n')}
+    </section>
+  ` : '';
+
   const keywordsContent = page.longTailKeywords.join(', ');
 
   return `<!DOCTYPE html>
@@ -823,12 +921,25 @@ function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
     },
     "areaServed": [
       {"@type": "City", "name": "München"},
+      {"@type": "AdministrativeArea", "name": "München-Schwabing"},
+      {"@type": "AdministrativeArea", "name": "München-Bogenhausen"},
+      {"@type": "AdministrativeArea", "name": "München-Haidhausen"},
+      {"@type": "AdministrativeArea", "name": "München-Sendling"},
+      {"@type": "AdministrativeArea", "name": "München-Pasing"},
+      {"@type": "AdministrativeArea", "name": "München-Laim"},
+      {"@type": "AdministrativeArea", "name": "München-Neuhausen"},
+      {"@type": "AdministrativeArea", "name": "München-Maxvorstadt"},
+      {"@type": "AdministrativeArea", "name": "München-Trudering"},
+      {"@type": "AdministrativeArea", "name": "München-Moosach"},
       {"@type": "City", "name": "Starnberg"},
       {"@type": "City", "name": "Freising"},
       {"@type": "City", "name": "Dachau"},
       {"@type": "City", "name": "Erding"},
       {"@type": "City", "name": "Ebersberg"},
-      {"@type": "City", "name": "Fürstenfeldbruck"}
+      {"@type": "City", "name": "Fürstenfeldbruck"},
+      {"@type": "City", "name": "Garching"},
+      {"@type": "City", "name": "Unterschleißheim"},
+      {"@type": "City", "name": "Grünwald"}
     ],
     "priceRange": "€€",
     "openingHoursSpecification": [
@@ -930,6 +1041,7 @@ function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
     <article>
       <h1>${page.h1}</h1>
       ${sectionsHTML}
+      ${projectExamplesHTML}
       ${faqsHTML}
       <section>
         <h2>Jetzt kostenlos beraten lassen</h2>
@@ -964,8 +1076,13 @@ function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
         <a href="/angebot" title="Kostenloses Angebot">Kostenloses Angebot</a>
       </nav>
     </section>
+    <section>
+      <h4>Estrichleger in Münchner Stadtteilen</h4>
+      <p>Wir verlegen Estrich in allen Münchner Stadtteilen: Schwabing, Bogenhausen, Haidhausen, Sendling, Pasing, Laim, Neuhausen, Maxvorstadt, Trudering, Moosach, Altstadt-Lehel, Berg am Laim, Ramersdorf-Perlach, Milbertshofen, Feldmoching, Aubing, Allach, Hadern, Solln und das gesamte Umland.</p>
+    </section>
     <p>© 2026 Mustafa Sakar - Estriche München - Ihr Fachbetrieb für Estricharbeiten</p>
-    <p>Telefon: <a href="tel:+4989444438872">089 / 444 43 887 2</a> | München und Umgebung</p>
+    <p>Telefon: <a href="tel:+4989444438872">089 / 444 43 887 2</a> | Hardenbergstr. 4, 80992 München</p>
+    <p>Servicegebiet: München, Starnberg, Freising, Dachau, Erding, Fürstenfeldbruck, Garching, Grünwald</p>
     <nav aria-label="Rechtliches">
       <a href="/impressum" title="Impressum">Impressum</a>
       <a href="/datenschutz" title="Datenschutzerklärung">Datenschutz</a>
