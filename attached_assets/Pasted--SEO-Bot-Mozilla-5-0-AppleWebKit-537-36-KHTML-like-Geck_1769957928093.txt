@@ -1,0 +1,100 @@
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: /rechner | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: true
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: /rechner | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: python-requests/2.32.5... | Path: / | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0... | Path: / | Cached: true
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 (Linux; Android 5.1; Lenovo TAB 2 A8-50LC) Apple... | Path: / | Cached: true
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatibl... | Path: / | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: /rechner | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/... | Path: /rechner | Cached: true
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: true
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0... | Path: / | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: /rechner | Cached: false
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: true
+[SEO] Bot requests in last minute: 2
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: /preise | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: /rechner | Cached: true
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 (X11; Linux x86_64)... | Path: /.git/config | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0... | Path: / | Cached: true
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: /rechner | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) Ap... | Path: /leistungen/waermedaemmung | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) Ap... | Path: /kontakt | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0... | Path: / | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: /rechner | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: /rechner | Cached: true
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: false
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: true
+[SEO] Bot requests in last minute: 2
+[SEO] Bot: Mozilla/5.0 (compatible; CMS-Checker/1.0; +https://example.c... | Path: / | Cached: true
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: /rechner | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: true
+[SEO] Bot: meta-externalagent/1.1 (+https://developers.facebook.com/doc... | Path: /preise | Cached: false
+[SEO] Bot requests in last minute: 2
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: true
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.c... | Path: /leistungen/industrieboeden | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: /preise | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: /leistungen/fussbodenheizung | Cached: false
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: false
+[SEO] Bot requests in last minute: 2
+[SEO] Bot: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/... | Path: /leistungen/fussbodenheizung | Cached: true
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatibl... | Path: / | Cached: true
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: true
+[SEO] Bot requests in last minute: 3
+[SEO] Bot: okhttp/5.3.0... | Path: / | Cached: true
+[SEO] Bot: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, l... | Path: / | Cached: true
+[SEO] Bot requests in last minute: 2
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: /rechner | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: /rechner | Cached: true
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: false
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0... | Path: / | Cached: true
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: / | Cached: true
+[SEO] Bot requests in last minute: 1
+[SEO] Bot: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatib... | Path: /rechner | Cached: false
