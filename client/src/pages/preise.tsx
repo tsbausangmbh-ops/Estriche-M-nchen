@@ -178,8 +178,8 @@ export default function Preise() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://estriche-muenchen.de/preise" />
         <meta property="og:locale" content="de_DE" />
-        <meta property="og:image" content="https://estriche-muenchen.de/og-image.png" />
-        <meta name="twitter:image" content="https://estriche-muenchen.de/og-image.png" />
+        <meta property="og:image" content="https://estriche-muenchen.de/og-image.jpg" />
+        <meta name="twitter:image" content="https://estriche-muenchen.de/og-image.jpg" />
         <script type="application/ld+json">
           {JSON.stringify(generateBreadcrumbSchema([
             { name: "Startseite", url: "https://estriche-muenchen.de/" },

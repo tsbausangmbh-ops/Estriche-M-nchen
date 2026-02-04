@@ -47,8 +47,8 @@ export default function ServiceDetail() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://estriche-muenchen.de/leistungen/${service.id}`} />
         <meta property="og:locale" content="de_DE" />
-        <meta property="og:image" content="https://estriche-muenchen.de/og-image.png" />
-        <meta name="twitter:image" content="https://estriche-muenchen.de/og-image.png" />
+        <meta property="og:image" content="https://estriche-muenchen.de/og-image.jpg" />
+        <meta name="twitter:image" content="https://estriche-muenchen.de/og-image.jpg" />
         <script type="application/ld+json">
           {JSON.stringify(generateServiceSchema({
             name: `${service.title} München`,

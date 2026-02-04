@@ -356,10 +356,10 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Estriche München | Estrichleger Fachbetrieb | Zementestrich Fließestrich | Festpreis 2026" />
         <meta name="twitter:description" content="Estriche München – Estrichleger mit 30+ Jahren Erfahrung: Zementestrich ab 32€/m², Fließestrich ab 42€/m². Festpreis-Garantie & 5 Jahre Gewährleistung" />
-        <meta property="og:image" content="https://estriche-muenchen.de/og-image.png" />
+        <meta property="og:image" content="https://estriche-muenchen.de/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta name="twitter:image" content="https://estriche-muenchen.de/og-image.png" />
+        <meta name="twitter:image" content="https://estriche-muenchen.de/og-image.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -439,7 +439,7 @@ export default function Home() {
           })}
         </script>
         <script type="application/ld+json">
-          {JSON.stringify(generateLocalBusinessSchema("https://estriche-muenchen.de/logo.png", "https://estriche-muenchen.de/og-image.png"))}
+          {JSON.stringify(generateLocalBusinessSchema("https://estriche-muenchen.de/logo.png", "https://estriche-muenchen.de/og-image.jpg"))}
         </script>
         <script type="application/ld+json">
           {JSON.stringify(generateFAQSchema(faqItems.map(f => ({ question: f.question, answer: f.answer }))))}
