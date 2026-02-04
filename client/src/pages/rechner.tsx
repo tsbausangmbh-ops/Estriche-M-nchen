@@ -51,7 +51,7 @@ import {
   Users,
   Shield
 } from "lucide-react";
-import heroImage from "@assets/generated_images/worker_calculating_costs_on_tablet.png";
+import heroImage from "@assets/generated_images/worker_calculating_costs_on_tablet.jpg";
 
 const budgetContactSchema = z.object({
   firstName: z.string().min(2, "Vorname muss mindestens 2 Zeichen lang sein"),

@@ -9,7 +9,7 @@ import { Switch } from "@/components/ui/switch";
 import { Link } from "wouter";
 import { Cookie, Shield, BarChart3, Sparkles, CheckCircle2, Phone, Users, ChevronRight, Settings } from "lucide-react";
 import { BusinessInfoCard } from "@/components/business-info-card";
-import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.png";
+import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.jpg";
 
 const COOKIE_CONSENT_KEY = "estrich-cookie-consent";
 const COOKIE_CONSENT_VERSION = "1.0";

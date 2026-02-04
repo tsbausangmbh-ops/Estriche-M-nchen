@@ -23,7 +23,7 @@ import {
   ThumbsUp,
   Zap
 } from "lucide-react";
-import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.png";
+import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.jpg";
 import { BusinessInfoCard } from "@/components/business-info-card";
 
 const milestones = [

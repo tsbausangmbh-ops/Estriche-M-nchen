@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Shield, CheckCircle2, Phone, Users, ChevronRight } from "lucide-react";
 import { BusinessInfoCard } from "@/components/business-info-card";
-import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.png";
+import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.jpg";
 
 export default function Datenschutz() {
   return (

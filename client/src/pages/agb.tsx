@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Scale, CheckCircle2, Phone, Users, Shield, ChevronRight } from "lucide-react";
 import { BusinessInfoCard } from "@/components/business-info-card";
-import heroImage from "@assets/generated_images/two_workers_pouring_screed_blue.png";
+import heroImage from "@assets/generated_images/two_workers_pouring_screed_blue.jpg";
 
 export default function AGB() {
   return (

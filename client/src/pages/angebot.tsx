@@ -31,7 +31,7 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { CheckCircle2, Clock, Shield, Award, FileText, ChevronRight, Phone, Users } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/generated_images/workers_pouring_cement_screed.png";
+import heroImage from "@assets/generated_images/workers_pouring_cement_screed.jpg";
 
 const angebotFormSchema = z.object({
   firstName: z.string().min(2, "Vorname muss mindestens 2 Zeichen lang sein"),

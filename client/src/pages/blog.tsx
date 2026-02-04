@@ -9,7 +9,7 @@ import { Footer } from "@/components/layout/footer";
 import { Link } from "wouter";
 import { ChevronRight, Clock, Calendar, BookOpen, CheckCircle2, Shield, Award, Zap, Phone, Users } from "lucide-react";
 import { blogArticles } from "@/lib/blog-data";
-import heroImage from "@assets/generated_images/workers_pouring_cement_screed.png";
+import heroImage from "@assets/generated_images/workers_pouring_cement_screed.jpg";
 
 const categories = [
   { id: "alle", label: "Alle Artikel" },

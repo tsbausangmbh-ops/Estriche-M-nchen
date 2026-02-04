@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { FileText, CheckCircle2, Phone, Users, Shield, ChevronRight, Building2 } from "lucide-react";
-import heroImage from "@assets/generated_images/workers_checking_level_blue.png";
+import heroImage from "@assets/generated_images/workers_checking_level_blue.jpg";
 
 export default function Impressum() {
   return (

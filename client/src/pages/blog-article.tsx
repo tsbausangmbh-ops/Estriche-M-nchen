@@ -6,7 +6,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ChevronRight, ChevronLeft, Clock, Calendar, BookOpen, Lightbulb, CheckCircle2 } from "lucide-react";
 import { getArticleBySlug, blogArticles } from "@/lib/blog-data";
-import heroImage from "@assets/generated_images/worker_leveling_cement_screed.png";
+import heroImage from "@assets/generated_images/worker_leveling_cement_screed.jpg";
 
 export default function BlogArticle() {
   const { slug } = useParams<{ slug: string }>();

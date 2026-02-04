@@ -4,7 +4,7 @@ import { Home, Phone, Wrench, Info, Calculator, FileText, ChevronRight } from "l
 import { Link } from "wouter";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import heroImage from "@assets/generated_images/worker_grinding_screed_floor.png";
+import heroImage from "@assets/generated_images/worker_grinding_screed_floor.jpg";
 
 export default function NotFound() {
   const pages = [

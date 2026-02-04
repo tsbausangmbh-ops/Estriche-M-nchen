@@ -49,7 +49,7 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { services } from "@/lib/services-data";
 import { Link } from "wouter";
-import heroImage from "@assets/generated_images/worker_grinding_screed_floor.png";
+import heroImage from "@assets/generated_images/worker_grinding_screed_floor.jpg";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { 

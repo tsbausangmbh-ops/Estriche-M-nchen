@@ -33,7 +33,7 @@ import { apiRequest } from "@/lib/queryClient";
 import { Phone, Mail, MapPin, Clock, ChevronRight, CheckCircle2, MessageSquare, Users, Shield } from "lucide-react";
 import { BusinessInfoCard } from "@/components/business-info-card";
 import { Link } from "wouter";
-import heroImage from "@assets/generated_images/workers_milling_and_pipes_blue.png";
+import heroImage from "@assets/generated_images/workers_milling_and_pipes_blue.jpg";
 
 const estrichTypes = [
   { value: "zementestrich", label: "Zementestrich (CT)" },

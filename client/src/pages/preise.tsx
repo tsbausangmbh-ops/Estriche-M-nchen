@@ -8,7 +8,7 @@ import { CheckCircle2, ChevronRight, Info, Layers, Building2, Thermometer, Shiel
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Link } from "wouter";
-import heroImage from "@assets/generated_images/two_workers_pouring_screed_blue.png";
+import heroImage from "@assets/generated_images/two_workers_pouring_screed_blue.jpg";
 
 const priceCategories = [
   {
