@@ -74,9 +74,9 @@ export function Header() {
                 <img 
                   src={logoImage} 
                   alt="Estriche München Logo - Estrichleger Fachbetrieb Schwabing Bogenhausen Pasing Sendling seit 1995" 
-                  className="h-10 w-auto rounded-md"
-                  width="48"
-                  height="48"
+                  className="h-12 w-auto rounded-md"
+                  width="56"
+                  height="56"
                   {...{ fetchpriority: "high" } as any}
                 />
                 <div className="hidden sm:block">
