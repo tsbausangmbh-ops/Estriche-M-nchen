@@ -18,7 +18,7 @@ export function Footer() {
               <img 
                 src={logoImage} 
                 alt="Estriche München Logo - Estrichleger Fachbetrieb Schwabing Bogenhausen Haidhausen Laim Bayern" 
-                className="h-14 w-auto rounded-sm"
+                className="h-10 w-auto rounded-sm"
               />
               <div>
                 <span className="block font-bold" style={{fontSize: '12px'}}>Estriche München</span>
