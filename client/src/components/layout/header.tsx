@@ -86,7 +86,7 @@ export function Header() {
               </Link>
             </div>
 
-            <nav className="hidden min-[1020px]:flex items-center gap-0.5 text-sm">
+            <nav className="hidden min-[1100px]:flex items-center gap-0.5 text-sm">
               <Link href="/">
                 <Button 
                   variant="ghost" 
@@ -167,7 +167,7 @@ export function Header() {
               <ThemeToggle />
             </nav>
 
-            <div className="flex items-center gap-2 min-[1020px]:hidden">
+            <div className="flex items-center gap-2 min-[1100px]:hidden">
               <ThemeToggle />
               <Button
                 variant="ghost"
@@ -183,7 +183,7 @@ export function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="min-[1020px]:hidden border-t bg-background">
+          <div className="min-[1100px]:hidden border-t bg-background">
             <div className="px-4 py-4 space-y-2">
               <Link href="/" onClick={() => setMobileMenuOpen(false)}>
                 <Button 
