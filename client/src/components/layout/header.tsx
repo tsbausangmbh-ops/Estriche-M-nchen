@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { MapPin, Clock, Menu, X, ChevronDown, ArrowLeft } from "lucide-react";
 import { services } from "@/lib/services-data";
-import logoImage from "@assets/Logo_Universal_1768216877638.png";
+import logoImage from "@assets/Estriche_München_Logo_1770191249487.png";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

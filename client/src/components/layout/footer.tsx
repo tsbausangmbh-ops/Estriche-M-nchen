@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import logoImage from "@assets/Logo_Universal_1768216877638.png";
+import logoImage from "@assets/Estriche_München_Logo_1770191249487.png";
 
 export function Footer() {
   return (
