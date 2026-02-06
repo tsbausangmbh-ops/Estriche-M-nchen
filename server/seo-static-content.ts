@@ -813,6 +813,28 @@ const pagesSEO: Record<string, PageSEO> = {
       }
     ]
   },
+  barrierefreiheit: {
+    title: "Barrierefreiheit | Erklärung zur Barrierefreiheit | Estriche München BFSG 2025",
+    metaDescription: "Erklärung zur Barrierefreiheit von Estriche München gemäß BFSG & BITV 2.0. Wir arbeiten kontinuierlich an der barrierefreien Gestaltung unserer Website.",
+    mainKeyword: "Barrierefreiheit Estriche München",
+    longTailKeywords: ["BFSG Handwerker München", "BITV 2.0 Estrichleger", "WCAG 2.2 Bauunternehmen", "barrierefreie Website"],
+    h1: "Erklärung zur Barrierefreiheit",
+    sections: [
+      {
+        h2: "Stand der Konformität",
+        content: `Diese Website ist teilweise konform mit der BITV 2.0 und den WCAG 2.2 auf Konformitätsstufe AA. Wir arbeiten kontinuierlich daran, die Barrierefreiheit unserer Website zu verbessern.`
+      },
+      {
+        h2: "Umgesetzte Maßnahmen",
+        h3s: ["Semantische Struktur", "Navigation & Bedienung", "Darstellung & Lesbarkeit", "Medien & Inhalte"],
+        content: `Estriche München hat folgende Maßnahmen ergriffen: Korrekte Überschriftenhierarchie, semantische HTML5-Elemente, vollständige Tastaturnavigation, sichtbare Fokusanzeige, ARIA-Labels, ausreichende Farbkontraste, responsive Design, Alternativtexte für Bilder, beschriftete Formularfelder.`
+      },
+      {
+        h2: "Feedback & Kontakt",
+        content: `Wenn Sie auf Barrieren stoßen, kontaktieren Sie uns: E-Mail info@estriche-muenchen.de, Telefon 089 444438872, Hardenbergstr. 4, 80992 München. Wir bemühen uns, Ihre Anfrage innerhalb von 14 Tagen zu beantworten.`
+      }
+    ]
+  },
   ratgeber: {
     title: "Estrich Ratgeber München - Tipps & Wissen vom Experten | Estriche München",
     metaDescription: "Estrich Ratgeber: Expertenwissen zu Estricharten, Trocknungszeiten, Kosten und Tipps. Alles was Sie über Estrich wissen müssen.",
@@ -1095,6 +1117,7 @@ function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
       <a href="/impressum" title="Impressum">Impressum</a>
       <a href="/datenschutz" title="Datenschutzerklärung">Datenschutz</a>
       <a href="/agb" title="AGB">AGB</a>
+      <a href="/barrierefreiheit" title="Barrierefreiheit">Barrierefreiheit</a>
     </nav>
     <section>
       <h4>Hinweis zum Vertragsabschluss</h4>
@@ -1136,6 +1159,7 @@ function generatePage(pageId: string): string {
     datenschutz: '/datenschutz',
     agb: '/agb',
     cookieeinstellungen: '/cookie-einstellungen',
+    barrierefreiheit: '/barrierefreiheit',
     ratgeber: '/ratgeber'
   };
   
@@ -1164,6 +1188,7 @@ export function generateStaticSEOContent(path: string): string {
     '/datenschutz': 'datenschutz',
     '/agb': 'agb',
     '/cookie-einstellungen': 'cookieeinstellungen',
+    '/barrierefreiheit': 'barrierefreiheit',
     '/ratgeber': 'ratgeber'
   };
   

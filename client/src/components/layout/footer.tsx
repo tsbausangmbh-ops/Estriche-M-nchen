@@ -76,6 +76,7 @@ export function Footer() {
               <li><Link href="/impressum" className="footer-link">Impressum</Link></li>
               <li><Link href="/datenschutz" className="footer-link">Datenschutz</Link></li>
               <li><Link href="/agb" className="footer-link">AGB</Link></li>
+              <li><Link href="/barrierefreiheit" className="footer-link">Barrierefreiheit</Link></li>
               <li><Link href="/cookie-einstellungen" className="footer-link">Cookie-Einstellungen</Link></li>
             </ul>
           </div>
