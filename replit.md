@@ -13,7 +13,10 @@ This is a professional B2C/B2B service website for Estrich München, a flooring 
 
 ## User Preferences
 
-Preferred communication style: Simple, everyday language.
+Preferred communication style: Simple, everyday language. Always communicate in German.
+- **Terminology rule**: "Fachbetrieb" in marketing; "Meisterbrief"/"Meisterfirma" only for credentials
+- **Legal disclaimer**: "Hinweis zum Vertragsabschluss" im Footer - kein verbindliches Angebot, kein Vertragsabschluss über Website, keine Online-Zahlung
+- **"kontaktformulare" kleingeschrieben** per Kundenwunsch
 
 ## System Architecture
 

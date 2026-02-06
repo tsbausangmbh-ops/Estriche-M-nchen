@@ -81,8 +81,21 @@ export function Footer() {
           </div>
         </div>
 
+        <div className="border-t border-background/10 mt-4 pt-3">
+          <div className="mb-3">
+            <h4 className="font-semibold text-background/80 mb-1" style={{fontSize: '10px'}}>Hinweis zum Vertragsabschluss</h4>
+            <p className="text-background/40" style={{fontSize: '9px', lineHeight: '1.4' }}>
+              Die auf dieser Website dargestellten Inhalte, Leistungen und Informationen stellen kein verbindliches Angebot im rechtlichen Sinne dar.
+              Ein Vertragsabschluss über diese Website findet nicht statt.
+              Anfragen über kontaktformulare, E-Mail oder Telefon dienen ausschließlich der unverbindlichen Kontaktaufnahme und der Vorbereitung einer individuellen Angebotserstellung.
+              Ein Vertrag kommt erst nach persönlicher Abstimmung, Besichtigung vor Ort und ausdrücklicher Annahme eines schriftlichen Angebots zustande.
+              Es erfolgt keine kostenpflichtige Bestellung, keine Buchung und keine Online-Zahlung über diese Website.
+            </p>
+          </div>
+        </div>
+
         {/* Copyright */}
-        <div className="border-t border-background/10 mt-4 pt-3 text-center">
+        <div className="border-t border-background/10 pt-3 text-center">
           <p className="text-background/40" style={{fontSize: '9px'}}>
             © {new Date().getFullYear()} Estriche München · Alle Rechte vorbehalten · Website by{" "}
             <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="footer-link">Extrucon GmbH</a>

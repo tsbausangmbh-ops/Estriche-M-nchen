@@ -1088,6 +1088,10 @@ function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
       <a href="/datenschutz" title="Datenschutzerklärung">Datenschutz</a>
       <a href="/agb" title="AGB">AGB</a>
     </nav>
+    <section>
+      <h4>Hinweis zum Vertragsabschluss</h4>
+      <p>Die auf dieser Website dargestellten Inhalte, Leistungen und Informationen stellen kein verbindliches Angebot im rechtlichen Sinne dar. Ein Vertragsabschluss über diese Website findet nicht statt. Anfragen über kontaktformulare, E-Mail oder Telefon dienen ausschließlich der unverbindlichen Kontaktaufnahme und der Vorbereitung einer individuellen Angebotserstellung. Ein Vertrag kommt erst nach persönlicher Abstimmung, Besichtigung vor Ort und ausdrücklicher Annahme eines schriftlichen Angebots zustande. Es erfolgt keine kostenpflichtige Bestellung, keine Buchung und keine Online-Zahlung über diese Website.</p>
+    </section>
   </footer>
 </body>
 </html>`;
