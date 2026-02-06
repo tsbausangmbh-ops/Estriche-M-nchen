@@ -21,6 +21,7 @@ Preferred communication style: Simple, everyday language. Always communicate in 
 - **Accessibility**: Hero-Hintergrundbilder auf allen Seiten mit role="img" und keyword-reichen aria-label Attributen
 - **Structured Data Konsolidierung**: Globale Schemas (ProfessionalService, Review, OfferCatalog, LocalBusiness, FAQPage, HowTo, BreadcrumbList, WebSite) nur in index.html; seitenspezifische Schemas (Breadcrumb, WebPage) in den jeweiligen Page-Komponenten via react-helmet-async
 - **Sitemap**: 25 Routen inkl. cookie-einstellungen und barrierefreiheit
+- **Mobile Optimization**: Globale `.page-container` CSS-Klasse (px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32) auf allen Seiten; responsive Typografie h1 `text-2xl sm:text-4xl lg:text-5xl xl:text-6xl`, h2 `text-xl sm:text-3xl lg:text-4xl`; Sticky Mobile CTA-Bar (z-40) mit Anruf + Angebot-Button; Cookie-Banner über CTA-Bar positioniert (bottom-14 auf Mobile); CTA-Button-Texte verkürzt auf Mobile; Preistabelle letzte Spalte auf Mobile ausgeblendet
 
 ## System Architecture
 
