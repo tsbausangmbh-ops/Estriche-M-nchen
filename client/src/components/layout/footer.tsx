@@ -82,7 +82,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-background/10 mt-4 pt-3">
-          <div className="mb-3">
+          <div className="mb-3" data-testid="footer-legal-disclaimer">
             <h4 className="font-semibold text-background/80 mb-1" style={{fontSize: '10px'}}>Hinweis zum Vertragsabschluss</h4>
             <p className="text-background/40" style={{fontSize: '9px', lineHeight: '1.4' }}>
               Die auf dieser Website dargestellten Inhalte, Leistungen und Informationen stellen kein verbindliches Angebot im rechtlichen Sinne dar.
