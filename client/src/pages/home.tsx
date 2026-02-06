@@ -340,23 +340,23 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Estriche München | Estrichleger Fachbetrieb | Zementestrich & Fließestrich Festpreis 2026</title>
-        <meta name="description" content="Estriche München – Estrichleger mit 30+ Jahren Erfahrung: Zementestrich ab 32€/m², Fließestrich ab 42€/m². Festpreis-Garantie & 5 Jahre Gewährleistung" />
-        <meta name="keywords" content="Estriche München, Estrichleger München, Zementestrich München, Fließestrich München, Heizestrich München, Industrieboden München, Fußbodenheizung nachrüsten, Estrichsanierung München, Estrich Kosten pro qm, Schnellestrich München" />
+        <title>Estrichleger München | Zementestrich & Fließestrich verlegen | Fachbetrieb seit 1994</title>
+        <meta name="description" content="Estrichleger München – Fachbetrieb für Estricharbeiten: Zementestrich ab 32€/m², Fließestrich, Heizestrich verlegen. 30+ Jahre Erfahrung, Festpreis-Garantie ✓" />
+        <meta name="keywords" content="Estrichleger München, Estrich verlegen München, Zementestrich München, Fließestrich München, Heizestrich München, Estricharbeiten München, Estrich Fachbetrieb München, Estrich Kosten pro m², Estrich Festpreis" />
         <meta name="geo.region" content="DE-BY" />
         <meta name="geo.placename" content="München" />
         <meta name="geo.position" content="48.1779;11.5193" />
         <meta name="ICBM" content="48.1779, 11.5193" />
         <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/" />
-        <meta property="og:title" content="Estriche München | Estrichleger Fachbetrieb | Zementestrich Fließestrich | Festpreis 2026" />
-        <meta property="og:description" content="Estriche München – Estrichleger mit 30+ Jahren Erfahrung: Zementestrich ab 32€/m², Fließestrich ab 42€/m². Festpreis-Garantie & 5 Jahre Gewährleistung" />
+        <meta property="og:title" content="Estrichleger München | Zementestrich & Fließestrich verlegen | Fachbetrieb" />
+        <meta property="og:description" content="Estrichleger München – Fachbetrieb für Estricharbeiten: Zementestrich ab 32€/m², Fließestrich, Heizestrich verlegen. 30+ Jahre Erfahrung, Festpreis-Garantie ✓" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://estriche-muenchen.de/" />
         <meta property="og:locale" content="de_DE" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Estriche München | Estrichleger Fachbetrieb | Zementestrich Fließestrich | Festpreis 2026" />
-        <meta name="twitter:description" content="Estriche München – Estrichleger mit 30+ Jahren Erfahrung: Zementestrich ab 32€/m², Fließestrich ab 42€/m². Festpreis-Garantie & 5 Jahre Gewährleistung" />
+        <meta name="twitter:title" content="Estrichleger München | Zementestrich & Fließestrich verlegen | Fachbetrieb" />
+        <meta name="twitter:description" content="Estrichleger München – Fachbetrieb für Estricharbeiten: Zementestrich ab 32€/m², Fließestrich, Heizestrich verlegen. 30+ Jahre Erfahrung, Festpreis-Garantie ✓" />
         <meta property="og:image" content="https://estriche-muenchen.de/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -466,7 +466,7 @@ export default function Home() {
                 ACHTUNG: Nur noch {getWeeklyScarcityNumber()} freie Termine diese Woche
               </Badge>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] text-primary-foreground">
-                <strong>Estriche München</strong> – Schluss mit Baustellen-Chaos. <span className="text-primary">Endlich Ruhe im Kopf.</span>
+                <strong>Estrichleger München</strong> – Zementestrich, Fließestrich & Estricharbeiten vom <span className="text-primary">Fachbetrieb</span>
               </h1>
               <p className="text-lg text-primary-foreground/80 max-w-xl leading-relaxed">
                 <strong className="text-primary-foreground">Kennen Sie das?</strong> Handwerker, die nicht erscheinen. Termine, die platzen. 

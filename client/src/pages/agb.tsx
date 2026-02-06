@@ -13,9 +13,9 @@ export default function AGB() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>AGB Estrichleger München | Allgemeine Geschäftsbedingungen | Estriche München Vertrag</title>
-        <meta name="description" content="AGB Estriche München: Geschäftsbedingungen für Estricharbeiten gemäß BGB Bauvertragsrecht §§ 650a–650o. Faire Vertragsbedingungen vom Fachbetrieb 2026" />
-        <meta name="keywords" content="AGB Estriche München, Allgemeine Geschäftsbedingungen Estrichleger, Bauvertrag München, Estrichvertrag AGB, Handwerker AGB Bayern" />
+        <title>AGB Estrichleger München | Geschäftsbedingungen für Estricharbeiten & Gewährleistung</title>
+        <meta name="description" content="AGB Estrichleger München: Allgemeine Geschäftsbedingungen für Estricharbeiten gemäß BGB Bauvertragsrecht. Faire Vertragsbedingungen & 5 Jahre Gewährleistung" />
+        <meta name="keywords" content="AGB Estrichleger München, Geschäftsbedingungen Estricharbeiten, Estrich Vertrag, Gewährleistung Estrich, Bauvertrag München, Estrich Fachbetrieb AGB" />
         <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/agb" />
       </Helmet>
@@ -40,7 +40,7 @@ export default function AGB() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              Allgemeine Geschäftsbedingungen
+              <strong>AGB Estrichleger München</strong> – Geschäftsbedingungen für Estricharbeiten
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">

@@ -375,8 +375,8 @@ const servicesData: Record<string, PageSEO> = {
 
 const pagesSEO: Record<string, PageSEO> = {
   home: {
-    title: "Estrich München | Zement- & Fließestrich | Festpreis | Fachbetrieb",
-    metaDescription: "Estricharbeiten in München Schwabing, Bogenhausen, Pasing, Sendling, Haidhausen ✔ Zementestrich ab 32€/m² ✔ Fließestrich ✔ Fachbetrieb mit 30+ Jahren Erfahrung ✔ Jetzt Angebot sichern!",
+    title: "Estrichleger München | Zementestrich & Fließestrich verlegen | Fachbetrieb seit 1994",
+    metaDescription: "Estrichleger München – Fachbetrieb für Estricharbeiten: Zementestrich ab 32€/m², Fließestrich, Heizestrich verlegen. 30+ Jahre Erfahrung, Festpreis-Garantie ✓",
     mainKeyword: "Estrich München",
     longTailKeywords: [
       "Estrich München",
@@ -391,7 +391,7 @@ const pagesSEO: Record<string, PageSEO> = {
       "Estrichleger Pasing Sendling Laim",
       "Estrich Haidhausen Neuhausen Maxvorstadt"
     ],
-    h1: "Estrich München - Ihr Estrichleger Fachbetrieb für perfekte Böden",
+    h1: "Estrichleger München – Zementestrich, Fließestrich & Estricharbeiten vom Fachbetrieb",
     sections: [
       {
         h2: "Estrichleger München - Fachbetrieb mit 30+ Jahren Erfahrung",
@@ -439,8 +439,8 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   ablauf: {
-    title: "Ablauf Estrichverlegung München - Von Anfrage bis Fertigstellung | Estrich München",
-    metaDescription: "So läuft Ihre Estrichverlegung ab: Kostenlose Beratung, verbindliches Angebot, professionelle Ausführung. 5 Schritte zum perfekten Boden. Jetzt informieren!",
+    title: "Estrich verlegen Ablauf München | Estrichverlegung in 7 Schritten | Fachbetrieb",
+    metaDescription: "Estrich verlegen Ablauf München: Estrichverlegung in 7 Schritten von Beratung bis Abnahme. Kostenlose Planung, Festpreis & Termingarantie vom Estrichleger Fachbetrieb",
     mainKeyword: "Ablauf Estrichverlegung",
     longTailKeywords: [
       "Estrichverlegung Schritt für Schritt",
@@ -452,7 +452,7 @@ const pagesSEO: Record<string, PageSEO> = {
       "Estrich Vor-Ort-Beratung kostenlos",
       "Estrich Angebot einholen München"
     ],
-    h1: "Ablauf Estrichverlegung - Von der Anfrage bis zum perfekten Boden",
+    h1: "Estrich verlegen Ablauf München – Estrichverlegung in 7 Schritten zum perfekten Boden",
     sections: [
       {
         h2: "Schritt 1: Kostenlose Vor-Ort-Beratung und Aufmaß",
@@ -485,8 +485,8 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   preise: {
-    title: "Estrich Preise München - Kosten pro m² transparent | Estrich München",
-    metaDescription: "Estrich Kosten transparent: Zementestrich ab 32 €/m², Fließestrich ab 38 €/m², Schnellestrich ab 48 €/m². Alle Preise netto. Jetzt Budget berechnen!",
+    title: "Estrich Preise München 2026 | Kosten pro m² | Zementestrich ab 32€ Festpreis",
+    metaDescription: "Estrich Preise München 2026: Zementestrich ab 32€/m², Fließestrich ab 42€/m², Heizestrich ab 45€/m². Transparente Estrich Kosten pro m² mit Festpreis vom Fachbetrieb",
     mainKeyword: "Estrich Preise München",
     longTailKeywords: [
       "Estrich Kosten pro qm München",
@@ -498,7 +498,7 @@ const pagesSEO: Record<string, PageSEO> = {
       "Estrich Festpreis Angebot München",
       "Günstig Estrich verlegen München"
     ],
-    h1: "Estrich Preise München - Transparente Kosten pro Quadratmeter",
+    h1: "Estrich Preise München – Transparente Kosten pro m² mit Festpreis-Garantie",
     sections: [
       {
         h2: "Estrich Kosten pro m² - Übersicht aller Estricharten",
@@ -526,8 +526,8 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   rechner: {
-    title: "Estrich Kostenrechner München 2025 | Preis pro m² sofort berechnen",
-    metaDescription: "Estrich Kosten München sofort berechnen: Zementestrich ab 32€/m², Fließestrich ab 42€/m². Kostenloser Online-Rechner mit Festpreis-Garantie. Jetzt Budget kalkulieren!",
+    title: "Estrich Kostenrechner München 2026 | Estrich Kosten pro m² online berechnen",
+    metaDescription: "Estrich Kostenrechner München: Estrich Kosten pro m² online berechnen. Zementestrich ab 32€/m², Fließestrich ab 42€/m². Kostenloser Estrich Preisrechner mit Festpreis",
     mainKeyword: "Estrich Kostenrechner München",
     longTailKeywords: [
       "estrich kosten rechner",
@@ -539,9 +539,9 @@ const pagesSEO: Record<string, PageSEO> = {
       "estrich münchen preis pro qm",
       "estrich kalkulator online kostenlos",
       "was kostet estrich pro quadratmeter",
-      "estrich preisrechner 2025"
+      "estrich preisrechner 2026"
     ],
-    h1: "Estrich Kostenrechner München 2025 - Preis pro m² sofort berechnen",
+    h1: "Estrich Kostenrechner München – Estrich Kosten pro m² sofort berechnen",
     sections: [
       {
         h2: "Estrich Kosten pro m² sofort berechnen - Kostenloser Online-Rechner",
@@ -554,9 +554,9 @@ const pagesSEO: Record<string, PageSEO> = {
         content: `Der Estrich Preisrechner ist einfach zu bedienen: Geben Sie Ihre Fläche in Quadratmetern ein, wählen Sie die gewünschte Estrichart (Zementestrich, Fließestrich, Heizestrich oder Schnellestrich) und fügen Sie optionale Zusatzleistungen wie Trittschalldämmung, Wärmedämmung oder Fußbodenheizung hinzu. Der Rechner zeigt Ihnen sofort den geschätzten Gesamtpreis - transparent aufgeschlüsselt nach Position.`
       },
       {
-        h2: "Was kostet Estrich verlegen in München 2025?",
+        h2: "Was kostet Estrich verlegen in München 2026?",
         h3s: ["Aktuelle Estrich Preise pro m²", "Faktoren die den Preis beeinflussen"],
-        content: `Die Estrich Kosten in München 2025 liegen zwischen 32-65€ pro m² je nach Estrichart. Faktoren die den Preis beeinflussen: Estrichstärke (45-85mm), Stockwerk (EG bis 4.OG), Projektart (Neubau oder Sanierung), Trocknungszeit und gewählte Zusatzleistungen. Bei Neubau erhalten Sie 5€/m² Rabatt. Größere Flächen ab 100m² reduzieren den Preis pro m² zusätzlich.`
+        content: `Die Estrich Kosten in München 2026 liegen zwischen 32-65€ pro m² je nach Estrichart. Faktoren die den Preis beeinflussen: Estrichstärke (45-85mm), Stockwerk (EG bis 4.OG), Projektart (Neubau oder Sanierung), Trocknungszeit und gewählte Zusatzleistungen. Bei Neubau erhalten Sie 5€/m² Rabatt. Größere Flächen ab 100m² reduzieren den Preis pro m² zusätzlich.`
       },
       {
         h2: "Vom Kostenrechner zum verbindlichen Festpreis-Angebot",
@@ -567,13 +567,13 @@ const pagesSEO: Record<string, PageSEO> = {
       { q: "Was kostet Estrich pro m² in München?", a: "Estrich kostet in München zwischen 25-65€ pro m² je nach Art: Zementestrich ab 32€/m², Fließestrich ab 42€/m², Schnellestrich ab 48€/m². Der genaue Preis hängt von Stärke, Stockwerk und Zusatzleistungen ab." },
       { q: "Wie berechne ich meine Estrich-Kosten?", a: "Mit unserem kostenlosen Online-Rechner: Geben Sie Ihre Fläche in m² ein, wählen Sie Estrichart und Stärke, und erhalten Sie sofort eine unverbindliche Kosteneinschätzung mit Festpreis-Option." },
       { q: "Ist der Estrich-Kostenrechner kostenlos?", a: "Ja, unser Estrich-Kostenrechner ist 100% kostenlos und unverbindlich. Sie erhalten sofort eine Budgeteinschätzung ohne Registrierung." },
-      { q: "Wie genau ist der Estrich Kostenrechner?", a: "Der Rechner liefert realistische Richtwerte basierend auf aktuellen München-Preisen 2025. Das verbindliche Angebot erstellen wir nach Vor-Ort-Besichtigung - meist liegt es nahe am Rechner-Ergebnis." },
+      { q: "Wie genau ist der Estrich Kostenrechner?", a: "Der Rechner liefert realistische Richtwerte basierend auf aktuellen München-Preisen 2026. Das verbindliche Angebot erstellen wir nach Vor-Ort-Besichtigung - meist liegt es nahe am Rechner-Ergebnis." },
       { q: "Welche Kosten sind im Estrich-Preis enthalten?", a: "Material, fachgerechte Verlegung, Anfahrt München (55€ pauschal), Baustelleneinrichtung und Endreinigung. Dämmung, Fußbodenheizung und Express-Trocknung werden separat kalkuliert." }
     ]
   },
   kontakt: {
-    title: "Kontakt Estrich München - Jetzt kostenlose Beratung anfordern | Estrich München",
-    metaDescription: "Kontaktieren Sie Estrich München: Telefon 089 / 444 43 887 2, kostenlose Vor-Ort-Beratung, schnelle Terminvergabe. Ihr Fachbetrieb in München!",
+    title: "Estrichleger München kontaktieren | Kostenlose Beratung & Angebot anfordern",
+    metaDescription: "Estrichleger München kontaktieren: Kostenlose Vor-Ort-Beratung, Estrich Angebot in 24h. ☎ 089 444438872. Fachbetrieb für Zementestrich & Fließestrich anfragen!",
     mainKeyword: "Kontakt Estrich München",
     longTailKeywords: [
       "Estrichleger München kontaktieren",
@@ -585,7 +585,7 @@ const pagesSEO: Record<string, PageSEO> = {
       "Estrich Anfrage München",
       "Estrich Vor-Ort-Termin buchen"
     ],
-    h1: "Kontakt - Jetzt kostenlose Beratung anfordern",
+    h1: "Estrichleger München kontaktieren – Kostenlose Beratung & Estrich Angebot anfordern",
     sections: [
       {
         h2: "So erreichen Sie uns",
@@ -608,8 +608,8 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   faq: {
-    title: "FAQ Estrich München - Häufige Fragen zu Estricharbeiten | Estrich München",
-    metaDescription: "Alle Fragen zu Estrich beantwortet: Kosten, Trocknungszeit, Estricharten, Fußbodenheizung, Sanierung. Expertenwissen von Ihrem Münchner Fachbetrieb!",
+    title: "Estrich FAQ München 2026 | Häufige Fragen zu Kosten, Trocknungszeit & Estricharten",
+    metaDescription: "Estrich FAQ München: Häufige Fragen zu Estrich Kosten pro m², Trocknungszeit, Estricharten & Fußbodenheizung. 25+ Experten-Antworten vom Estrichleger Fachbetrieb",
     mainKeyword: "FAQ Estrich München",
     longTailKeywords: [
       "Estrich Fragen und Antworten",
@@ -621,7 +621,7 @@ const pagesSEO: Record<string, PageSEO> = {
       "Estrich Experte erklärt",
       "Estrich Lexikon Begriffe"
     ],
-    h1: "FAQ - Häufige Fragen zu Estrich und Estricharbeiten",
+    h1: "Estrich FAQ München – Häufige Fragen zu Kosten, Trocknungszeit & Estricharten",
     sections: [
       {
         h2: "Allgemeine Fragen zu Estrich",
@@ -646,8 +646,8 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   ueberuns: {
-    title: "Über uns - Estrich München Fachbetrieb seit 1994 | Estrich München",
-    metaDescription: "Lernen Sie Estrich München kennen: Fachbetrieb seit 1994, 30+ Jahre Erfahrung, 2.500+ Projekte. Familie Sakar - Ihr Partner für perfekte Böden!",
+    title: "Estrichleger München Fachbetrieb | 30+ Jahre Erfahrung | Estricharbeiten Experten",
+    metaDescription: "Estrichleger München Fachbetrieb seit 1994: 2.500+ Projekte, 282+ zufriedene Kunden. Estricharbeiten mit Festpreis-Garantie & 5 Jahre Gewährleistung vom Experten",
     mainKeyword: "Estrich München Fachbetrieb",
     longTailKeywords: [
       "Estrichfirma München Geschichte",
@@ -659,7 +659,7 @@ const pagesSEO: Record<string, PageSEO> = {
       "Qualität Estrich München",
       "Zertifizierter Estrichleger München"
     ],
-    h1: "Über uns - Ihr Münchner Fachbetrieb seit 1994",
+    h1: "Estrichleger München Fachbetrieb – 30+ Jahre Erfahrung für perfekte Estricharbeiten",
     sections: [
       {
         h2: "30 Jahre Handwerkskunst und Leidenschaft",
@@ -688,8 +688,8 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   angebot: {
-    title: "Kostenloses Angebot anfordern - Estrich München | Estrich München",
-    metaDescription: "Jetzt kostenloses Estrich-Angebot anfordern. Verbindlicher Festpreis nach Vor-Ort-Besichtigung. Keine versteckten Kosten. Schnelle Terminvergabe!",
+    title: "Estrich Angebot München kostenlos | Kostenvoranschlag & Festpreis in 24h",
+    metaDescription: "Estrich Angebot München kostenlos anfordern: Kostenvoranschlag mit Festpreis in 24h. Zementestrich ab 32€/m², Fließestrich ab 42€/m². Vor-Ort-Beratung vom Fachbetrieb",
     mainKeyword: "Estrich Angebot anfordern",
     longTailKeywords: [
       "Estrich Kostenvoranschlag München",
@@ -701,7 +701,7 @@ const pagesSEO: Record<string, PageSEO> = {
       "Unverbindliches Estrich Angebot",
       "Estrich Vor-Ort-Besichtigung buchen"
     ],
-    h1: "Kostenloses Angebot anfordern - Ihr Projekt, unser Festpreis",
+    h1: "Estrich Angebot München – Kostenloser Kostenvoranschlag mit Festpreis in 24h",
     sections: [
       {
         h2: "Jetzt unverbindlich anfragen",
@@ -725,11 +725,11 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   impressum: {
-    title: "Impressum | Mustafa Sakar - Estriche München",
-    metaDescription: "Impressum von Estriche München. Angaben gemäß § 5 TMG. Mustafa Sakar, Hardenbergstr. 4, 80992 München. Kontakt: info@estriche-muenchen.de",
+    title: "Impressum Estrichleger München | Estriche München Firmenkontakt & Angaben § 5 TMG",
+    metaDescription: "Impressum Estrichleger München: Mustafa Sakar, Hardenbergstr. 4, 80992 München. ☎ 089 444438872. Angaben gemäß § 5 TMG für Estriche München Fachbetrieb",
     mainKeyword: "Impressum Estrich München",
     longTailKeywords: ["Estrich München Kontakt", "Estrichleger München Adresse", "Estriche München Inhaber"],
-    h1: "Impressum",
+    h1: "Impressum Estrichleger München – Estriche München Firmenkontakt",
     sections: [
       {
         h2: "Angaben gemäß § 5 TMG",
@@ -750,11 +750,11 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   datenschutz: {
-    title: "Datenschutzerklärung | Estriche München | DSGVO-konform",
-    metaDescription: "Datenschutzerklärung von Estriche München gemäß DSGVO und EU AI Act. Informationen zur Verarbeitung Ihrer personenbezogenen Daten.",
+    title: "Datenschutz Estrichleger München | DSGVO & TDDDG konforme Datenschutzerklärung",
+    metaDescription: "Datenschutzerklärung Estrichleger München: DSGVO & TDDDG konforme Datenverarbeitung. Ihre Daten sind sicher beim Estrich Fachbetrieb Estriche München",
     mainKeyword: "Datenschutz Estrich München",
     longTailKeywords: ["DSGVO Estrich München", "Datenschutzerklärung Handwerker", "Cookies Estrich Website"],
-    h1: "Datenschutzerklärung",
+    h1: "Datenschutzerklärung Estrichleger München – DSGVO & TDDDG konform",
     sections: [
       {
         h2: "Datenschutz auf einen Blick",
@@ -771,11 +771,11 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   agb: {
-    title: "AGB | Allgemeine Geschäftsbedingungen | Estriche München",
-    metaDescription: "Allgemeine Geschäftsbedingungen von Estriche München. Regelungen zu Auftragserteilung, Gewährleistung und Zahlungsbedingungen.",
+    title: "AGB Estrichleger München | Geschäftsbedingungen für Estricharbeiten & Gewährleistung",
+    metaDescription: "AGB Estrichleger München: Allgemeine Geschäftsbedingungen für Estricharbeiten gemäß BGB Bauvertragsrecht. Faire Vertragsbedingungen & 5 Jahre Gewährleistung",
     mainKeyword: "AGB Estrich München",
     longTailKeywords: ["Geschäftsbedingungen Estrichleger", "Gewährleistung Estrich", "Zahlungsbedingungen Handwerker"],
-    h1: "Allgemeine Geschäftsbedingungen",
+    h1: "AGB Estrichleger München – Geschäftsbedingungen für Estricharbeiten",
     sections: [
       {
         h2: "Geltungsbereich",
@@ -796,11 +796,11 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   cookieeinstellungen: {
-    title: "Cookie-Einstellungen | Estriche München | Datenschutz",
-    metaDescription: "Verwalten Sie Ihre Cookie-Einstellungen für Estriche München. Passen Sie Ihre Datenschutz-Präferenzen an.",
+    title: "Cookie-Einstellungen Estriche München | Datenschutz nach DSGVO & TDDDG verwalten",
+    metaDescription: "Cookie-Einstellungen Estriche München: Verwalten Sie Ihre Cookie-Präferenzen gemäß DSGVO und TDDDG. Transparente Datenschutz-Einstellungen vom Fachbetrieb",
     mainKeyword: "Cookie Einstellungen Estrich München",
     longTailKeywords: ["Cookie Präferenzen", "Datenschutz Einstellungen", "Cookie Verwaltung"],
-    h1: "Cookie-Einstellungen",
+    h1: "Cookie-Einstellungen Estriche München – Datenschutz nach DSGVO verwalten",
     sections: [
       {
         h2: "Cookie-Präferenzen verwalten",
@@ -814,11 +814,11 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   barrierefreiheit: {
-    title: "Barrierefreiheit | Erklärung zur Barrierefreiheit | Estriche München BFSG 2025",
-    metaDescription: "Erklärung zur Barrierefreiheit von Estriche München gemäß BFSG & BITV 2.0. Wir arbeiten kontinuierlich an der barrierefreien Gestaltung unserer Website.",
+    title: "Barrierefreiheit Estriche München | BFSG & BITV 2.0 Erklärung | WCAG 2.2 konform",
+    metaDescription: "Barrierefreiheit Estriche München: Erklärung zur Barrierefreiheit gemäß BFSG, BITV 2.0 & WCAG 2.2. Barrierefreie Website vom Estrichleger Fachbetrieb",
     mainKeyword: "Barrierefreiheit Estriche München",
     longTailKeywords: ["BFSG Handwerker München", "BITV 2.0 Estrichleger", "WCAG 2.2 Bauunternehmen", "barrierefreie Website"],
-    h1: "Erklärung zur Barrierefreiheit",
+    h1: "Barrierefreiheit Estriche München – Erklärung gemäß BFSG & BITV 2.0",
     sections: [
       {
         h2: "Stand der Konformität",
@@ -836,11 +836,11 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   ratgeber: {
-    title: "Estrich Ratgeber München - Tipps & Wissen vom Experten | Estriche München",
-    metaDescription: "Estrich Ratgeber: Expertenwissen zu Estricharten, Trocknungszeiten, Kosten und Tipps. Alles was Sie über Estrich wissen müssen.",
+    title: "Estrich Ratgeber München 2026 | Tipps & Fachwissen vom Estrichleger Experten",
+    metaDescription: "Estrich Ratgeber München: Fachwissen und Tipps zu Zementestrich, Fließestrich, Heizestrich & Fußbodenheizung. Expertenwissen vom Estrichleger Fachbetrieb",
     mainKeyword: "Estrich Ratgeber",
     longTailKeywords: ["Estrich Tipps", "Estrich Wissen", "Estrich Beratung", "Estrich FAQ"],
-    h1: "Estrich Ratgeber - Expertenwissen für Ihr Projekt",
+    h1: "Estrich Ratgeber München – Fachwissen & Tipps vom Estrichleger Experten",
     sections: [
       {
         h2: "Alles über Estrich",

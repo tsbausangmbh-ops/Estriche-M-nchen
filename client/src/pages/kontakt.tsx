@@ -136,9 +136,9 @@ export default function Kontakt() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Kontakt Estrichleger München | Kostenlose Beratung | Estriche München Fachbetrieb 2026</title>
-        <meta name="description" content="Estrichleger München kontaktieren: Kostenlose Vor-Ort-Beratung, Festpreis in 24h. ☎ 089 444438872 Mo-Fr 08:00-16:30. Fachbetrieb 30+ Jahre Erfahrung 2026!" />
-        <meta name="keywords" content="Estriche München Kontakt, Estrichleger anrufen, Estrich Angebot München, kostenlose Beratung Estrich, Estrich Telefon, Estrich Termin buchen, Estricharbeiten anfragen" />
+        <title>Estrichleger München kontaktieren | Kostenlose Beratung & Angebot anfordern</title>
+        <meta name="description" content="Estrichleger München kontaktieren: Kostenlose Vor-Ort-Beratung, Estrich Angebot in 24h. ☎ 089 444438872. Fachbetrieb für Zementestrich & Fließestrich anfragen!" />
+        <meta name="keywords" content="Estrichleger München kontaktieren, Estrich Beratung kostenlos, Estrich Angebot anfordern München, Estrich Vor-Ort-Beratung, Estrich Termin München, Estricharbeiten anfragen" />
         <meta name="geo.region" content="DE-BY" />
         <meta name="geo.placename" content="München" />
         <link rel="preload" as="image" href={heroImage} type="image/webp" />
@@ -183,7 +183,7 @@ export default function Kontakt() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              <strong>Estrichleger München kontaktieren</strong> – Schluss mit der Ungewissheit
+              <strong>Estrichleger München kontaktieren</strong> – Kostenlose Beratung & Estrich Angebot anfordern
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">

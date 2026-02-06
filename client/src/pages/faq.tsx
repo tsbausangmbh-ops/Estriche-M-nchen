@@ -171,9 +171,9 @@ export default function FAQ() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Estrich FAQ München | Häufige Fragen Estrichleger beantwortet | Fachbetrieb Ratgeber</title>
-        <meta name="description" content="Estrich FAQ München: Wie lange trocknet Estrich? Was kostet Estrich pro m²? Welcher Estrich für Fußbodenheizung? 25+ Experten-Antworten vom Fachbetrieb 2026" />
-        <meta name="keywords" content="Estrich FAQ, Estrich Fragen Antworten, Estrich Trocknungszeit, Estrich Kosten Fragen, Zementestrich FAQ, Fließestrich Fragen, Fußbodenheizung Estrich, Estrich trocknen wie lange, Estrich belegen wann" />
+        <title>Estrich FAQ München 2026 | Häufige Fragen zu Kosten, Trocknungszeit & Estricharten</title>
+        <meta name="description" content="Estrich FAQ München: Häufige Fragen zu Estrich Kosten pro m², Trocknungszeit, Estricharten & Fußbodenheizung. 25+ Experten-Antworten vom Estrichleger Fachbetrieb" />
+        <meta name="keywords" content="Estrich FAQ München, Estrich Fragen Antworten, Estrich Trocknungszeit, Estrich Kosten pro m², Estricharten Vergleich, Fußbodenheizung Estrich, Estrich Ratgeber, Estrichleger Fachbetrieb" />
         <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/faq" />
         <meta property="og:title" content="Häufige Fragen (FAQ) | Estriche München" />
@@ -213,7 +213,7 @@ export default function FAQ() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              <strong>Estrich FAQ</strong> – Die Antworten, die andere verschweigen
+              <strong>Estrich FAQ München</strong> – Häufige Fragen zu Kosten, Trocknungszeit & Estricharten
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">

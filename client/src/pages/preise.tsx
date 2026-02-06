@@ -167,9 +167,9 @@ export default function Preise() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Estrich Preise München 2026 | Kosten pro m² transparent | Estrichleger Festpreis 2026</title>
-        <meta name="description" content="Estrich Preise München 2026: Zementestrich ab 32€/m², Fließestrich ab 42€/m², Schnellestrich ab 48€/m², Heizestrich ab 45€/m². Transparente Festpreise" />
-        <meta name="keywords" content="Estrich Preise München, Estrich Kosten pro qm, Zementestrich Preis München, Fließestrich Kosten, Heizestrich Preise, Estrich verlegen Kosten, Schnellestrich Preis, Industrieboden Kosten, Estrich Preisliste 2026" />
+        <title>Estrich Preise München 2026 | Kosten pro m² | Zementestrich ab 32€ Festpreis</title>
+        <meta name="description" content="Estrich Preise München 2026: Zementestrich ab 32€/m², Fließestrich ab 42€/m², Heizestrich ab 45€/m². Transparente Estrich Kosten pro m² mit Festpreis vom Fachbetrieb" />
+        <meta name="keywords" content="Estrich Preise München, Estrich Kosten pro m², Zementestrich Preis, Fließestrich Kosten München, Heizestrich Preise, Estrich Festpreis, Estrich verlegen Kosten, Estrich Preisliste 2026" />
         <meta name="geo.region" content="DE-BY" />
         <meta name="geo.placename" content="München" />
         <link rel="preload" as="image" href={heroImage} type="image/webp" />
@@ -218,7 +218,7 @@ export default function Preise() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              <strong>Estrich Preise München</strong> – Was andere verschweigen
+              <strong>Estrich Preise München</strong> – Transparente Kosten pro m² mit Festpreis-Garantie
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">

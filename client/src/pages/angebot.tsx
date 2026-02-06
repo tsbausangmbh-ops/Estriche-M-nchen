@@ -164,9 +164,9 @@ export default function Angebot() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Estrich Angebot München kostenlos | Festpreis in 24h | Estriche München Fachbetrieb 2026</title>
-        <meta name="description" content="Estrich Angebot München kostenlos: Festpreis in 24h, keine versteckten Kosten. Zementestrich ab 32€/m², Fließestrich ab 42€/m². Fachbetrieb jetzt anfragen" />
-        <meta name="keywords" content="Estrich Angebot München, Estrich Kostenvoranschlag, Estrich Festpreis, Estrichleger Angebot kostenlos, Estrich Beratung München, Estrich anfragen" />
+        <title>Estrich Angebot München kostenlos | Kostenvoranschlag & Festpreis in 24h</title>
+        <meta name="description" content="Estrich Angebot München kostenlos anfordern: Kostenvoranschlag mit Festpreis in 24h. Zementestrich ab 32€/m², Fließestrich ab 42€/m². Vor-Ort-Beratung vom Fachbetrieb" />
+        <meta name="keywords" content="Estrich Angebot München, Estrich Kostenvoranschlag kostenlos, Estrich Festpreis, Estrich Vor-Ort-Beratung, Estrichleger Angebot, Estrich anfragen München" />
         <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/angebot" />
       </Helmet>
@@ -190,7 +190,7 @@ export default function Angebot() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              <strong>Schluss mit dem Preisrätsel</strong> – Festpreis in 24h
+              <strong>Estrich Angebot München</strong> – Kostenloser Kostenvoranschlag mit Festpreis in 24h
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">

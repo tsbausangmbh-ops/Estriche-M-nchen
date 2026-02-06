@@ -13,9 +13,9 @@ export default function Datenschutz() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Datenschutz Estrichleger München | Estriche München | DSGVO & TDDDG konform Fachbetrieb!</title>
-        <meta name="description" content="Datenschutzerklärung Estriche München: DSGVO & TDDDG konforme Datenverarbeitung. Estrichleger Fachbetrieb – Ihre Daten sind bei uns sicher! Stand 2026" />
-        <meta name="keywords" content="Datenschutz Estriche München, DSGVO Estrichleger, Datenschutzerklärung Handwerker, Privatsphäre Baufirma Bayern, DSGVO konform Bauunternehmen" />
+        <title>Datenschutz Estrichleger München | DSGVO & TDDDG konforme Datenschutzerklärung</title>
+        <meta name="description" content="Datenschutzerklärung Estrichleger München: DSGVO & TDDDG konforme Datenverarbeitung. Ihre Daten sind sicher beim Estrich Fachbetrieb Estriche München" />
+        <meta name="keywords" content="Datenschutz Estrichleger München, DSGVO Estrich, Datenschutzerklärung Handwerker, TDDDG konform, Datenschutz Fachbetrieb München" />
         <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/datenschutz" />
       </Helmet>
@@ -40,7 +40,7 @@ export default function Datenschutz() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              Datenschutzerklärung
+              <strong>Datenschutzerklärung</strong> Estrichleger München – DSGVO & TDDDG konform
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">

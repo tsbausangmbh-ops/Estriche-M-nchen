@@ -147,9 +147,9 @@ export default function Ablauf() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Estrich verlegen Ablauf München 2026 | 7 Schritte zum perfekten Boden | Fachbetrieb</title>
-        <meta name="description" content="Estrich verlegen Ablauf München: In 7 Schritten zum perfekten Boden. Kostenlose Beratung bis Abnahme – Festpreis in 48h, 30+ Jahre Erfahrung Fachbetrieb" />
-        <meta name="keywords" content="Estrich Ablauf München, Estrich verlegen Ablauf, Estrich Projekt Schritte, Estrich Beratung kostenlos, Estrich Terminplanung, Estricharbeiten Ablauf" />
+        <title>Estrich verlegen Ablauf München | Estrichverlegung in 7 Schritten | Fachbetrieb</title>
+        <meta name="description" content="Estrich verlegen Ablauf München: Estrichverlegung in 7 Schritten von Beratung bis Abnahme. Kostenlose Planung, Festpreis & Termingarantie vom Estrichleger Fachbetrieb" />
+        <meta name="keywords" content="Estrich verlegen Ablauf München, Estrichverlegung Schritte, Estrich Bauablauf, Estrich Planung, Estrich Termingarantie, Estricharbeiten Ablauf Fachbetrieb" />
         <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/ablauf" />
         <meta property="og:title" content="Ablauf Estricharbeiten München | 7 Schritte" />
@@ -199,7 +199,7 @@ export default function Ablauf() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              <strong>Estrich verlegen</strong> Ablauf – In 7 Schritten zum perfekten Boden
+              <strong>Estrich verlegen Ablauf München</strong> – Estrichverlegung in 7 Schritten zum perfekten Boden
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">

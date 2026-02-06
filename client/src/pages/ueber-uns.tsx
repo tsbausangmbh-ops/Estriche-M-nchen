@@ -99,9 +99,9 @@ export default function UeberUns() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Estrichleger München Fachbetrieb | 30+ Jahre Erfahrung | Estriche München Experten 2026!</title>
-        <meta name="description" content="Estrichleger München seit 1994: Inhaber Mustafa Sakar, 2.500+ Projekte, 282+ zufriedene Kunden. Festpreis-Garantie & 5 Jahre Gewährleistung! Fachbetrieb" />
-        <meta name="keywords" content="Estrichleger München, Estrich Fachbetrieb München, Estrich Firma München, Mustafa Sakar Estrich, Estrich Team München, Estrich Profi, Estrichleger Erfahrung, Estrich Gewährleistung" />
+        <title>Estrichleger München Fachbetrieb | 30+ Jahre Erfahrung | Estricharbeiten Experten</title>
+        <meta name="description" content="Estrichleger München Fachbetrieb seit 1994: 2.500+ Projekte, 282+ zufriedene Kunden. Estricharbeiten mit Festpreis-Garantie & 5 Jahre Gewährleistung vom Experten" />
+        <meta name="keywords" content="Estrichleger München Fachbetrieb, Estrich Firma München, Estricharbeiten Experten, Estrich Erfahrung 30 Jahre, Estrich Gewährleistung, Estrich Meisterbetrieb München" />
         <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/ueber-uns" />
         <meta property="og:title" content="Über uns | Estrich Fachbetrieb München mit 30+ Jahren Erfahrung" />
@@ -143,7 +143,7 @@ export default function UeberUns() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              <strong>Estrich Fachbetrieb München</strong> – Von Stress zu Sorgenfreiheit
+              <strong>Estrichleger München Fachbetrieb</strong> – 30+ Jahre Erfahrung für perfekte Estricharbeiten
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">

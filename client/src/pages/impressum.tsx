@@ -12,9 +12,9 @@ export default function Impressum() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Impressum Estrichleger München | Estriche München Fachbetrieb | Kontakt Firmenangaben</title>
-        <meta name="description" content="Impressum Estriche München: Inhaber Mustafa Sakar & Ali Kemal Kurt, Hardenbergstr. 4, 80992 München. ☎ 089 444438872. Angaben gemäß § 5 TMG Fachbetrieb" />
-        <meta name="keywords" content="Impressum Estriche München, Estrichleger Kontakt, Mustafa Sakar München, Ali Kemal Kurt München, Estrich Firma Impressum" />
+        <title>Impressum Estrichleger München | Estriche München Firmenkontakt & Angaben § 5 TMG</title>
+        <meta name="description" content="Impressum Estrichleger München: Mustafa Sakar, Hardenbergstr. 4, 80992 München. ☎ 089 444438872. Angaben gemäß § 5 TMG für Estriche München Fachbetrieb" />
+        <meta name="keywords" content="Impressum Estrichleger München, Estriche München Kontakt, Estrich Firma München Angaben, Mustafa Sakar Estrich, § 5 TMG Impressum" />
         <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/impressum" />
       </Helmet>
@@ -39,7 +39,7 @@ export default function Impressum() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              Impressum
+              <strong>Impressum</strong> Estrichleger München – Estriche München Firmenkontakt
             </h1>
             
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">

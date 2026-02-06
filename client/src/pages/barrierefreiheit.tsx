@@ -13,9 +13,9 @@ export default function Barrierefreiheit() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Barrierefreiheit | Erklärung zur Barrierefreiheit | Estriche München BFSG 2025</title>
-        <meta name="description" content="Erklärung zur Barrierefreiheit von Estriche München gemäß BFSG & BITV 2.0. Wir arbeiten kontinuierlich an der barrierefreien Gestaltung unserer Website." />
-        <meta name="keywords" content="Barrierefreiheit Estriche München, BFSG Handwerker, BITV 2.0 konform, WCAG 2.2, barrierefreie Website Estrichleger" />
+        <title>Barrierefreiheit Estriche München | BFSG & BITV 2.0 Erklärung | WCAG 2.2 konform</title>
+        <meta name="description" content="Barrierefreiheit Estriche München: Erklärung zur Barrierefreiheit gemäß BFSG, BITV 2.0 & WCAG 2.2. Barrierefreie Website vom Estrichleger Fachbetrieb" />
+        <meta name="keywords" content="Barrierefreiheit Estriche München, BFSG Erklärung, BITV 2.0 konform, WCAG 2.2, barrierefreie Website Estrichleger, Fachbetrieb Barrierefreiheit" />
         <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/barrierefreiheit" />
       </Helmet>
@@ -40,7 +40,7 @@ export default function Barrierefreiheit() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
-              Erklärung zur Barrierefreiheit
+              <strong>Barrierefreiheit</strong> Estriche München – Erklärung gemäß BFSG & BITV 2.0
             </h1>
 
             <p className="text-lg text-white/80 leading-relaxed mb-6 max-w-2xl">
