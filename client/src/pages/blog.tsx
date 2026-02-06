@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { getWeeklyScarcityNumber } from "@/lib/utils";
+import { generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/seo-schemas";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -40,12 +41,37 @@ export default function Blog() {
         <meta name="keywords" content="Estrich Ratgeber München, Estrich Tipps, Estrich Fachwissen, Zementestrich Wissen, Fließestrich Guide, Estrichleger Experten, Fußbodenheizung Ratgeber" />
         <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/ratgeber" />
+        <meta property="og:title" content="Estrich Ratgeber München 2026 | Tipps & Fachwissen" />
+        <meta property="og:description" content="Estrich Ratgeber München: Fachwissen und Tipps zu Zementestrich, Fließestrich, Heizestrich & Fußbodenheizung. Expertenwissen vom Estrichleger Fachbetrieb" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://estriche-muenchen.de/ratgeber" />
+        <meta property="og:locale" content="de_DE" />
+        <meta property="og:image" content="https://estriche-muenchen.de/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Estrich Ratgeber München | Fachwissen & Tipps" />
+        <meta name="twitter:description" content="Estrich Ratgeber: Fachwissen und Tipps zu Estricharbeiten in München vom Fachbetrieb." />
+        <meta name="twitter:image" content="https://estriche-muenchen.de/og-image.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify(generateBreadcrumbSchema([
+            { name: "Startseite", url: "https://estriche-muenchen.de/" },
+            { name: "Estrich Ratgeber", url: "https://estriche-muenchen.de/ratgeber" }
+          ]))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(generateWebPageSchema({
+            title: "Estrich Ratgeber München",
+            description: "Fachwissen und Tipps zu Zementestrich, Fließestrich, Heizestrich & Fußbodenheizung vom Estrichleger Fachbetrieb.",
+            url: "https://estriche-muenchen.de/ratgeber"
+          }))}
+        </script>
       </Helmet>
       <Header />
       
       <section className="relative py-6 lg:py-8 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          role="img"
+          aria-label="Estrich Blog München – Ratgeber und Tipps vom Estrichleger Fachbetrieb"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />

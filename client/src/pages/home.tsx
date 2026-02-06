@@ -455,6 +455,8 @@ export default function Home() {
       <section id="hero" className="relative py-10 lg:py-14 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          role="img"
+          aria-label="Estrichleger München – Professionelle Estrichverlegung Zementestrich und Fließestrich vom Fachbetrieb"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />

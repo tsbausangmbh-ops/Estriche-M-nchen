@@ -4,6 +4,7 @@ import { z } from "zod";
 import { useMutation } from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
 import { getWeeklyScarcityNumber } from "@/lib/utils";
+import { generateBreadcrumbSchema, generateWebPageSchema } from "@/lib/seo-schemas";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -169,12 +170,37 @@ export default function Angebot() {
         <meta name="keywords" content="Estrich Angebot München, Estrich Kostenvoranschlag kostenlos, Estrich Festpreis, Estrich Vor-Ort-Beratung, Estrichleger Angebot, Estrich anfragen München" />
         <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/angebot" />
+        <meta property="og:title" content="Estrich Angebot München kostenlos | Festpreis in 24h" />
+        <meta property="og:description" content="Estrich Angebot München kostenlos anfordern: Kostenvoranschlag mit Festpreis in 24h. Vor-Ort-Beratung vom Fachbetrieb." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://estriche-muenchen.de/angebot" />
+        <meta property="og:locale" content="de_DE" />
+        <meta property="og:image" content="https://estriche-muenchen.de/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Estrich Angebot München | Kostenvoranschlag kostenlos" />
+        <meta name="twitter:description" content="Estrich Angebot München kostenlos anfordern. Festpreis in 24h vom Estrichleger Fachbetrieb." />
+        <meta name="twitter:image" content="https://estriche-muenchen.de/og-image.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify(generateBreadcrumbSchema([
+            { name: "Startseite", url: "https://estriche-muenchen.de/" },
+            { name: "Estrich Angebot", url: "https://estriche-muenchen.de/angebot" }
+          ]))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(generateWebPageSchema({
+            title: "Estrich Angebot München",
+            description: "Kostenloser Kostenvoranschlag mit Festpreis in 24h. Zementestrich ab 32€/m², Fließestrich ab 42€/m².",
+            url: "https://estriche-muenchen.de/angebot"
+          }))}
+        </script>
       </Helmet>
       <Header />
       
       <section className="relative py-6 lg:py-8 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          role="img"
+          aria-label="Estrich Angebot München – Kostenloses Festpreis-Angebot für Estricharbeiten anfordern"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />

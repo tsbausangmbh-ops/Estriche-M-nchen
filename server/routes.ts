@@ -29,6 +29,8 @@ const sitemapRoutes = [
   { url: "/impressum", priority: 0.3, changefreq: "yearly", title: "Impressum" },
   { url: "/datenschutz", priority: 0.3, changefreq: "yearly", title: "Datenschutz" },
   { url: "/agb", priority: 0.3, changefreq: "yearly", title: "AGB" },
+  { url: "/cookie-einstellungen", priority: 0.2, changefreq: "yearly", title: "Cookie-Einstellungen" },
+  { url: "/barrierefreiheit", priority: 0.2, changefreq: "yearly", title: "Barrierefreiheit" },
 ];
 
 export async function registerRoutes(

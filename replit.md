@@ -18,6 +18,9 @@ Preferred communication style: Simple, everyday language. Always communicate in 
 - **Legal disclaimer**: "Hinweis zum Vertragsabschluss" im Footer - kein verbindliches Angebot, kein Vertragsabschluss über Website, keine Online-Zahlung
 - **"kontaktformulare" kleingeschrieben** per Kundenwunsch
 - **Image Optimization**: Alle Bilder in WebP-Format (44% kleiner), Preload-Links für Hero-Bilder auf allen Seiten, width/height Attribute für CLS-Prävention, Logo von PNG 38KB auf WebP 5.5KB
+- **Accessibility**: Hero-Hintergrundbilder auf allen Seiten mit role="img" und keyword-reichen aria-label Attributen
+- **Structured Data Konsolidierung**: Globale Schemas (ProfessionalService, Review, OfferCatalog, LocalBusiness, FAQPage, HowTo, BreadcrumbList, WebSite) nur in index.html; seitenspezifische Schemas (Breadcrumb, WebPage) in den jeweiligen Page-Komponenten via react-helmet-async
+- **Sitemap**: 25 Routen inkl. cookie-einstellungen und barrierefreiheit
 
 ## System Architecture
 
