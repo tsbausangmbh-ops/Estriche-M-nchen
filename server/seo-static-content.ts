@@ -742,6 +742,10 @@ const pagesSEO: Record<string, PageSEO> = {
       {
         h2: "Streitschlichtung",
         content: `Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.`
+      },
+      {
+        h2: "Hinweis zum Vertragsabschluss",
+        content: `Die auf dieser Website dargestellten Inhalte, Leistungen und Informationen stellen kein verbindliches Angebot im rechtlichen Sinne dar. Ein Vertragsabschluss über diese Website findet nicht statt. Anfragen über kontaktformulare, E-Mail oder Telefon dienen ausschließlich der unverbindlichen Kontaktaufnahme und der Vorbereitung einer individuellen Angebotserstellung. Ein Vertrag kommt erst nach persönlicher Abstimmung, Besichtigung vor Ort und ausdrücklicher Annahme eines schriftlichen Angebots zustande. Es erfolgt keine kostenpflichtige Bestellung, keine Buchung und keine Online-Zahlung über diese Website.`
       }
     ]
   },
@@ -784,6 +788,10 @@ const pagesSEO: Record<string, PageSEO> = {
       {
         h2: "Zahlungsbedingungen",
         content: `Die Zahlung erfolgt nach Fertigstellung und Abnahme der Arbeiten. Bei größeren Projekten können Abschlagszahlungen vereinbart werden.`
+      },
+      {
+        h2: "Hinweis zum Vertragsabschluss",
+        content: `Die auf dieser Website dargestellten Inhalte, Leistungen und Informationen stellen kein verbindliches Angebot im rechtlichen Sinne dar. Ein Vertragsabschluss über diese Website findet nicht statt. Anfragen über kontaktformulare, E-Mail oder Telefon dienen ausschließlich der unverbindlichen Kontaktaufnahme und der Vorbereitung einer individuellen Angebotserstellung. Ein Vertrag kommt erst nach persönlicher Abstimmung, Besichtigung vor Ort und ausdrücklicher Annahme eines schriftlichen Angebots zustande. Es erfolgt keine kostenpflichtige Bestellung, keine Buchung und keine Online-Zahlung über diese Website.`
       }
     ]
   },
