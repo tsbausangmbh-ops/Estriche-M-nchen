@@ -116,7 +116,7 @@ export default function CookieEinstellungen() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
         
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
+        <div className="page-container relative">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center">
@@ -127,7 +127,7 @@ export default function CookieEinstellungen() {
               </Badge>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
               <strong>Cookie-Einstellungen</strong> Estriche München – Datenschutz nach DSGVO verwalten
             </h1>
             
@@ -179,7 +179,7 @@ export default function CookieEinstellungen() {
       </section>
 
       <section className="py-6">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           {saved && (
             <div className="mb-6 p-4 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 rounded-lg flex items-center gap-3">
               <CheckCircle2 className="w-5 h-5 text-green-600 dark:text-green-400" />

@@ -204,7 +204,7 @@ export default function Angebot() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
+        <div className="page-container relative">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center">
@@ -215,7 +215,7 @@ export default function Angebot() {
               </Badge>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
               <strong>Estrich Angebot München</strong> – Kostenloser Kostenvoranschlag mit Festpreis in 24h
             </h1>
             
@@ -272,7 +272,7 @@ export default function Angebot() {
       </section>
 
       <section className="py-8 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center max-w-3xl mx-auto mb-6">
             <h2 className="text-xl sm:text-2xl font-extrabold mb-3 tracking-tight">
               <strong>Was hält Sie nachts wach?</strong> Wir kennen diese Sorgen.
@@ -313,7 +313,7 @@ export default function Angebot() {
       </section>
 
       <section className="py-8">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <Card className="shadow-lg border-primary/20" data-testid="card-angebot-form">
             <CardHeader className="text-center pb-6">
               <div className="bg-green-600 text-primary-foreground text-xs font-semibold px-3 py-1 rounded-md w-fit mx-auto mb-3">

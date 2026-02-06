@@ -130,7 +130,7 @@ export default function UeberUns() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
+        <div className="page-container relative">
           <div className="max-w-3xl">
             <Badge variant="outline" className="text-sm border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide animate-pulse mb-4">
               ACHTUNG: Nur noch {getWeeklyScarcityNumber()} freie Termine diese Woche
@@ -144,7 +144,7 @@ export default function UeberUns() {
               </Badge>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
               <strong>Estrichleger München Fachbetrieb</strong> – 30+ Jahre Erfahrung für perfekte Estricharbeiten
             </h1>
             
@@ -197,7 +197,7 @@ export default function UeberUns() {
       </section>
 
       <section className="py-8 bg-foreground">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-16">
             <div className="text-center">
               <div className="text-3xl font-bold text-primary">30+</div>
@@ -223,7 +223,7 @@ export default function UeberUns() {
       </section>
 
       <section className="py-8 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="grid md:grid-cols-4 gap-6">
             <Card className="text-center">
               <CardContent className="pt-6 pb-5">
@@ -266,10 +266,10 @@ export default function UeberUns() {
       </section>
 
       <section className="py-6">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unsere Geschichte</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-4">
               <strong>Estrich Firma München</strong> – Wie alles begann
             </h2>
           </div>
@@ -373,10 +373,10 @@ export default function UeberUns() {
       </section>
 
       <section className="py-6 bg-muted/30">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Praxisbeispiele</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-4">
               <strong>Estrich Projekte München</strong> – Fallbeispiele
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -434,10 +434,10 @@ export default function UeberUns() {
       </section>
 
       <section className="py-6">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Häufige Fragen</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-4">
               FAQ – <strong>Estrichleger München</strong>
             </h2>
           </div>
@@ -515,10 +515,10 @@ export default function UeberUns() {
       </section>
 
       <section className="py-6 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Mehrwert</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-4">
               <strong>Estrich verlegen lassen</strong> – Was Sie durch uns gewinnen
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
@@ -550,10 +550,10 @@ export default function UeberUns() {
       </section>
 
       <section className="py-6">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Meilensteine</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-4">
               <strong>Estrich Fachbetrieb</strong> – 30 Jahre aus München
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
@@ -577,11 +577,11 @@ export default function UeberUns() {
       </section>
 
       <section className="py-6 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Warum wir?</p>
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-6">
+              <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-6">
                 <strong>Estrichleger München</strong> – Warum Bauherren uns vertrauen
               </h2>
               <div className="space-y-6">
@@ -634,10 +634,10 @@ export default function UeberUns() {
       </section>
 
       <section className="py-6">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Unsere Werte</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-4">
               <strong>Estrich-Fachmann</strong> – Das treibt uns an
             </h2>
           </div>
@@ -673,13 +673,13 @@ export default function UeberUns() {
       </section>
 
       <section className="py-6">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <BusinessInfoCard />
         </div>
       </section>
 
       <section className="py-6 bg-foreground text-primary-foreground">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 text-center">
+        <div className="page-container text-center">
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-4">
             Bereit für einen Boden, der hält was wir versprechen?
           </h2>

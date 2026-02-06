@@ -9,7 +9,7 @@ export function Footer() {
           color: #60a5fa !important;
         }
       `}</style>
-      <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+      <div className="page-container">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
           
           {/* Brand */}

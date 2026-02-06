@@ -28,7 +28,7 @@ export default function Barrierefreiheit() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
 
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
+        <div className="page-container relative">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center">
@@ -39,7 +39,7 @@ export default function Barrierefreiheit() {
               </Badge>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
               <strong>Barrierefreiheit</strong> Estriche München – Erklärung gemäß BFSG & BITV 2.0
             </h1>
 
@@ -91,7 +91,7 @@ export default function Barrierefreiheit() {
       </section>
 
       <section className="py-6">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <Card className="mb-6">
             <CardContent className="p-6 space-y-8">
 
@@ -308,7 +308,7 @@ export default function Barrierefreiheit() {
       </section>
 
       <section className="pb-6">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <BusinessInfoCard />
         </div>
       </section>

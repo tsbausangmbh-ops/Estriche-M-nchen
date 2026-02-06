@@ -186,7 +186,7 @@ export default function Ablauf() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
+        <div className="page-container relative">
           <div className="max-w-3xl">
             <Badge variant="outline" className="text-sm border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide animate-pulse mb-4">
               ACHTUNG: Nur noch {getWeeklyScarcityNumber()} freie Termine diese Woche
@@ -200,7 +200,7 @@ export default function Ablauf() {
               </Badge>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
               <strong>Estrich verlegen Ablauf München</strong> – Estrichverlegung in 7 Schritten zum perfekten Boden
             </h1>
             
@@ -252,10 +252,10 @@ export default function Ablauf() {
       </section>
 
       <section className="py-6 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Weg zum perfekten Boden</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-4">
               <strong>Estrich Ablauf</strong> – Warum Klarheit Ihnen Stress erspart
             </h2>
           </div>
@@ -333,7 +333,7 @@ export default function Ablauf() {
       </section>
 
       <section className="py-8">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="space-y-8">
             {processSteps.map((step, index) => (
               <div key={index} className="relative" data-testid={`process-step-${index}`}>
@@ -380,7 +380,7 @@ export default function Ablauf() {
       </section>
 
       <section className="py-8 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4"><strong>Estrich Garantie</strong> – Unsere Sicherheit für Sie</h2>
             <p className="text-muted-foreground">
@@ -408,7 +408,7 @@ export default function Ablauf() {
       </section>
 
       <section className="py-6 bg-foreground text-primary-foreground">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 text-center">
+        <div className="page-container text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Bereit, den ersten Schritt zu machen?
           </h2>
@@ -417,7 +417,8 @@ export default function Ablauf() {
           </p>
           <Link href="/angebot">
             <Button size="lg" variant="secondary" data-testid="button-ablauf-footer-cta">
-              Kostenloses Angebot anfordern
+              <span className="sm:hidden">Angebot anfordern</span>
+              <span className="hidden sm:inline">Kostenloses Angebot anfordern</span>
               <ChevronRight className="ml-1 h-4 w-4" />
             </Button>
           </Link>

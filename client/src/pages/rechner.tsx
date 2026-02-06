@@ -622,7 +622,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
+        <div className="page-container relative">
           <div className="max-w-3xl">
             <Badge variant="outline" className="text-sm border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide animate-pulse mb-4">
               ACHTUNG: Nur noch {getWeeklyScarcityNumber()} freie Termine diese Woche
@@ -636,7 +636,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
               </Badge>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
               <strong>Estrich Kostenrechner München</strong> – Estrich Kosten pro m² sofort berechnen
             </h1>
             
@@ -688,7 +688,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
       </section>
 
       <section className="py-8 bg-muted/30">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-6">
             <h2 className="text-xl sm:text-2xl font-extrabold mb-3 tracking-tight">
               <strong>Estrich Preise</strong> – Warum Kunden hier berechnen
@@ -712,10 +712,10 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
       </section>
 
       <section className="py-6 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Budgetrechner</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-4">
               <strong>Was kostet Estrich?</strong> – Wissen Sie vorher Bescheid
             </h2>
           </div>
@@ -766,7 +766,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
       </section>
 
       <section className="py-8">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="grid lg:grid-cols-5 gap-8">
             <div className="lg:col-span-3 space-y-6">
               <Card>
@@ -1308,7 +1308,8 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
                     <div className="space-y-2">
                       <Link href="/angebot">
                         <Button variant="secondary" className="w-full" data-testid="button-request-quote">
-                          Kostenloses Angebot anfordern
+                          <span className="sm:hidden">Angebot anfordern</span>
+                          <span className="hidden sm:inline">Kostenloses Angebot anfordern</span>
                           <ChevronRight className="ml-2 h-4 w-4" />
                         </Button>
                       </Link>
@@ -1340,10 +1341,10 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
       </section>
 
       <section className="py-6 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Kostenrechner</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-4">
               <strong>Estrich Preis pro m²</strong> – Warum nur ein Richtwert?
             </h2>
           </div>
@@ -1438,7 +1439,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
       </section>
 
       <section className="py-6">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <Card className="border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20">
             <CardContent className="p-4">
               <p className="font-semibold text-sm mb-2">Hinweis zur Leistungserbringung</p>

@@ -205,7 +205,7 @@ export default function Preise() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
+        <div className="page-container relative">
           <div className="max-w-3xl">
             <Badge variant="outline" className="text-sm border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide animate-pulse mb-4">
               ACHTUNG: Nur noch {getWeeklyScarcityNumber()} freie Termine diese Woche
@@ -219,7 +219,7 @@ export default function Preise() {
               </Badge>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
               <strong>Estrich Preise München</strong> – Transparente Kosten pro m² mit Festpreis-Garantie
             </h1>
             
@@ -276,7 +276,7 @@ export default function Preise() {
       </section>
 
       <section className="py-8 bg-muted/30 border-b">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-6">
             <h2 className="text-xl sm:text-2xl font-extrabold mb-3 tracking-tight">
               <strong>Estrich Kosten</strong> – Was hält Sie wirklich zurück?
@@ -302,10 +302,10 @@ export default function Preise() {
       </section>
 
       <section className="py-6 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Preistransparenz</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-4">
               <strong>Estrich Festpreis</strong> – Warum Sie keine bösen Überraschungen erleben
             </h2>
           </div>
@@ -369,7 +369,7 @@ export default function Preise() {
       </section>
 
       <section className="py-8 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-2">Preisvergleich</p>
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">
@@ -382,48 +382,48 @@ export default function Preise() {
             <table className="w-full bg-background rounded-lg overflow-hidden text-sm" data-testid="price-comparison-table">
               <thead className="bg-muted">
                 <tr>
-                  <th className="px-4 py-3 text-left font-semibold">Estrichart</th>
-                  <th className="px-4 py-3 text-left font-semibold">Preis pro m²</th>
-                  <th className="px-4 py-3 text-left font-semibold">Trocknungszeit</th>
-                  <th className="px-4 py-3 text-left font-semibold">Empfohlen für</th>
+                  <th className="px-3 sm:px-4 py-3 text-left font-semibold">Estrichart</th>
+                  <th className="px-3 sm:px-4 py-3 text-left font-semibold">Preis/m²</th>
+                  <th className="px-3 sm:px-4 py-3 text-left font-semibold">Trocknung</th>
+                  <th className="px-3 sm:px-4 py-3 text-left font-semibold hidden sm:table-cell">Empfohlen für</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-border">
                 <tr>
-                  <td className="px-4 py-3 font-medium">Zementestrich (CT)</td>
-                  <td className="px-4 py-3 text-primary font-semibold">25–35 €</td>
-                  <td className="px-4 py-3">28–42 Tage</td>
-                  <td className="px-4 py-3 text-muted-foreground">Wohnbau, Keller, Feuchträume</td>
+                  <td className="px-3 sm:px-4 py-3 font-medium">Zementestrich (CT)</td>
+                  <td className="px-3 sm:px-4 py-3 text-primary font-semibold">25–35 €</td>
+                  <td className="px-3 sm:px-4 py-3">28–42 Tage</td>
+                  <td className="px-3 sm:px-4 py-3 text-muted-foreground hidden sm:table-cell">Wohnbau, Keller, Feuchträume</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-3 font-medium">Fließestrich (CA)</td>
-                  <td className="px-4 py-3 text-primary font-semibold">28–40 €</td>
-                  <td className="px-4 py-3">21–35 Tage</td>
-                  <td className="px-4 py-3 text-muted-foreground">Fußbodenheizung, große Flächen</td>
+                  <td className="px-3 sm:px-4 py-3 font-medium">Fließestrich (CA)</td>
+                  <td className="px-3 sm:px-4 py-3 text-primary font-semibold">28–40 €</td>
+                  <td className="px-3 sm:px-4 py-3">21–35 Tage</td>
+                  <td className="px-3 sm:px-4 py-3 text-muted-foreground hidden sm:table-cell">Fußbodenheizung, große Flächen</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-3 font-medium">Heizestrich</td>
-                  <td className="px-4 py-3 text-primary font-semibold">35–50 €</td>
-                  <td className="px-4 py-3">21–35 Tage</td>
-                  <td className="px-4 py-3 text-muted-foreground">Neubau mit Fußbodenheizung</td>
+                  <td className="px-3 sm:px-4 py-3 font-medium">Heizestrich</td>
+                  <td className="px-3 sm:px-4 py-3 text-primary font-semibold">35–50 €</td>
+                  <td className="px-3 sm:px-4 py-3">21–35 Tage</td>
+                  <td className="px-3 sm:px-4 py-3 text-muted-foreground hidden sm:table-cell">Neubau mit Fußbodenheizung</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-3 font-medium">Schnellestrich</td>
-                  <td className="px-4 py-3 text-primary font-semibold">40–55 €</td>
-                  <td className="px-4 py-3">1–7 Tage</td>
-                  <td className="px-4 py-3 text-muted-foreground">Renovierung, Zeitdruck</td>
+                  <td className="px-3 sm:px-4 py-3 font-medium">Schnellestrich</td>
+                  <td className="px-3 sm:px-4 py-3 text-primary font-semibold">40–55 €</td>
+                  <td className="px-3 sm:px-4 py-3">1–7 Tage</td>
+                  <td className="px-3 sm:px-4 py-3 text-muted-foreground hidden sm:table-cell">Renovierung, Zeitdruck</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-3 font-medium">Industrieestrich</td>
-                  <td className="px-4 py-3 text-primary font-semibold">45–80 €</td>
-                  <td className="px-4 py-3">14–28 Tage</td>
-                  <td className="px-4 py-3 text-muted-foreground">Gewerbe, Hallen, Garagen</td>
+                  <td className="px-3 sm:px-4 py-3 font-medium">Industrieestrich</td>
+                  <td className="px-3 sm:px-4 py-3 text-primary font-semibold">45–80 €</td>
+                  <td className="px-3 sm:px-4 py-3">14–28 Tage</td>
+                  <td className="px-3 sm:px-4 py-3 text-muted-foreground hidden sm:table-cell">Gewerbe, Hallen, Garagen</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-3 font-medium">Sichtestrich</td>
-                  <td className="px-4 py-3 text-primary font-semibold">65–120 €</td>
-                  <td className="px-4 py-3">28–42 Tage</td>
-                  <td className="px-4 py-3 text-muted-foreground">Lofts, Showrooms, Design</td>
+                  <td className="px-3 sm:px-4 py-3 font-medium">Sichtestrich</td>
+                  <td className="px-3 sm:px-4 py-3 text-primary font-semibold">65–120 €</td>
+                  <td className="px-3 sm:px-4 py-3">28–42 Tage</td>
+                  <td className="px-3 sm:px-4 py-3 text-muted-foreground hidden sm:table-cell">Lofts, Showrooms, Design</td>
                 </tr>
               </tbody>
             </table>
@@ -436,7 +436,7 @@ export default function Preise() {
       </section>
 
       <section className="py-8">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="grid lg:grid-cols-2 gap-6">
             {priceCategories.map((category, index) => (
               <Card key={index} className="overflow-hidden" data-testid={`price-card-${index}`}>
@@ -498,7 +498,7 @@ export default function Preise() {
       </section>
 
       <section className="py-8">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
             <h3 className="text-2xl font-extrabold tracking-tight mb-6 text-center">
               Zusätzliche <strong>Estrich-Leistungen</strong> & Service
             </h3>
@@ -520,7 +520,7 @@ export default function Preise() {
       </section>
 
       <section className="py-8">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
             <h3 className="text-2xl font-extrabold tracking-tight mb-6 text-center">
               So funktioniert unser <strong>Estrich Festpreis-Angebot</strong>
             </h3>
@@ -551,7 +551,7 @@ export default function Preise() {
       </section>
 
       <section className="py-6 bg-foreground text-primary-foreground">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 text-center">
+        <div className="page-container text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Jetzt Ihr persönliches <strong>Estrich Angebot</strong> anfordern
           </h2>
@@ -561,7 +561,8 @@ export default function Preise() {
           </p>
           <Link href="/angebot">
             <Button size="lg" variant="secondary" data-testid="button-preise-footer-cta">
-              Kostenloses Angebot anfordern
+              <span className="sm:hidden">Angebot anfordern</span>
+              <span className="hidden sm:inline">Kostenloses Angebot anfordern</span>
               <ChevronRight className="ml-1 h-4 w-4" />
             </Button>
           </Link>

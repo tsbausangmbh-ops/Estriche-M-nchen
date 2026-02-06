@@ -30,10 +30,10 @@ export default function NotFound() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
         
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
+        <div className="page-container relative">
           <div className="grid lg:grid-cols-5 gap-12 items-start">
             <div className="lg:col-span-3 space-y-6">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] text-primary-foreground">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-[1.05] text-primary-foreground">
                 <span className="text-primary">404</span> – Seite nicht gefunden
               </h1>
               <p className="text-lg text-primary-foreground/80 max-w-xl leading-relaxed">

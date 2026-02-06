@@ -237,6 +237,11 @@
   }
 }
 
+/* Global responsive page container */
+.page-container {
+  @apply w-full mx-auto px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32;
+}
+
 /* Footer Link Hover - Blau */
 footer a:hover,
 footer a:focus {

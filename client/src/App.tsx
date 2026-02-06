@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
 import { CookieConsent } from "@/components/cookie-consent";
+import { MobileCTABar } from "@/components/mobile-cta-bar";
 import Home from "@/pages/home";
 
 const ServiceDetail = lazy(() => import("@/pages/service-detail"));
@@ -79,7 +80,10 @@ function App() {
           <TooltipProvider>
             <ScrollToTop />
             <Toaster />
-            <Router />
+            <div className="pb-14 md:pb-0">
+              <Router />
+            </div>
+            <MobileCTABar />
             <CookieConsent />
           </TooltipProvider>
         </QueryClientProvider>

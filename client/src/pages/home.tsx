@@ -452,7 +452,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section id="hero" className="relative py-10 lg:py-14 overflow-hidden">
+      <section id="hero" className="relative py-6 sm:py-10 lg:py-14 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           role="img"
@@ -460,40 +460,41 @@ export default function Home() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
+        <div className="page-container relative">
           <div className="grid lg:grid-cols-5 gap-12 items-start">
             {/* Hero Content */}
-            <div className="lg:col-span-3 space-y-8">
-              <Badge variant="outline" className="text-sm border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide animate-pulse">
-                ACHTUNG: Nur noch {getWeeklyScarcityNumber()} freie Termine diese Woche
+            <div className="lg:col-span-3 space-y-4 sm:space-y-8">
+              <Badge variant="outline" className="text-xs sm:text-sm border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide animate-pulse">
+                <span className="sm:hidden">Nur noch {getWeeklyScarcityNumber()} freie Termine</span>
+                <span className="hidden sm:inline">ACHTUNG: Nur noch {getWeeklyScarcityNumber()} freie Termine diese Woche</span>
               </Badge>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] text-primary-foreground">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-[1.1] text-primary-foreground">
                 <strong>Estrichleger München</strong> – Zementestrich, Fließestrich & Estricharbeiten vom <span className="text-primary">Fachbetrieb</span>
               </h1>
-              <p className="text-lg text-primary-foreground/80 max-w-xl leading-relaxed">
+              <p className="text-sm sm:text-lg text-primary-foreground/80 max-w-xl leading-relaxed">
                 <strong className="text-primary-foreground">Kennen Sie das?</strong> Handwerker, die nicht erscheinen. Termine, die platzen. 
-                Rechnungen, die explodieren. <strong className="text-primary-foreground">Das frustriert. Das kostet Nerven. Und das muss nicht sein.</strong>
+                Rechnungen, die explodieren. <strong className="text-primary-foreground">Das muss nicht sein.</strong>
               </p>
-              <p className="text-lg text-primary-foreground max-w-xl leading-relaxed">
+              <p className="hidden sm:block text-lg text-primary-foreground max-w-xl leading-relaxed">
                 Als <strong className="text-primary-foreground">Estrichleger Fachbetrieb in München</strong> mit über 2.500 zufriedenen Kunden liefern wir <strong className="text-primary-foreground">Zementestrich</strong>, <strong className="text-primary-foreground">Fließestrich</strong> und <strong className="text-primary-foreground">Heizestrich</strong> – 
-                pünktlich, zum garantierten Festpreis. <strong className="text-primary-foreground">Stellen Sie sich vor:</strong> Ihr Boden ist fertig, der Bodenleger nickt anerkennend, 
-                und Sie können endlich einziehen. <strong className="text-primary-foreground">Dieses Gefühl der Erleichterung – das liefern wir mit.</strong>
+                pünktlich, zum garantierten Festpreis. <strong className="text-primary-foreground">Dieses Gefühl der Erleichterung – das liefern wir mit.</strong>
               </p>
 
-              <div className="bg-red-600/20 backdrop-blur-sm border border-red-500/30 rounded-lg px-4 py-2 mt-4 inline-block">
+              <div className="hidden sm:inline-block bg-red-600/20 backdrop-blur-sm border border-red-500/30 rounded-lg px-4 py-2 mt-4">
                 <span className="text-red-200 text-sm font-medium">
                   <strong>Achtung:</strong> Diese Woche nur noch {getWeeklyScarcityNumber()} freie Termine für München – Festpreis-Garantie sichern!
                 </span>
               </div>
 
-              <div className="flex flex-wrap gap-4 pt-2">
+              <div className="flex flex-wrap gap-3 pt-2">
                 <Link href="/angebot">
                   <Button 
                     size="lg" 
                     data-testid="button-hero-cta"
                   >
-                    Jetzt Termin sichern – bevor es zu spät ist
-                    <ChevronRight className="ml-2 h-4 w-4" />
+                    <span className="sm:hidden">Jetzt Termin sichern</span>
+                    <span className="hidden sm:inline">Jetzt Termin sichern – bevor es zu spät ist</span>
+                    <ChevronRight className="ml-1 h-4 w-4" />
                   </Button>
                 </Link>
                 <Button 
@@ -504,13 +505,13 @@ export default function Home() {
                 >
                   <a href="tel:+4989444438872">
                     <Phone className="mr-2 h-4 w-4" />
-                    089 444438872
+                    <span className="sm:hidden">Anrufen</span>
+                    <span className="hidden sm:inline">089 444438872</span>
                   </a>
                 </Button>
               </div>
 
-              {/* Trust Row - Pain Points Solved */}
-              <div className="flex flex-wrap gap-6 pt-8" data-testid="hero-trust-row">
+              <div className="flex flex-wrap gap-4 sm:gap-6 pt-4 sm:pt-8" data-testid="hero-trust-row">
                 <div className="flex items-center gap-2" data-testid="trust-item-0">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
                   <span className="text-sm font-medium text-primary-foreground" data-testid="text-trust-title-0">100€ Entschädigung bei Verspätung</span>
@@ -745,7 +746,7 @@ export default function Home() {
 
       {/* Statistics Banner - Social Proof */}
       <div className="bg-foreground py-8">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-16">
             <div className="text-center" data-testid="stat-laufende">
               <div className="text-3xl font-bold text-primary">15+</div>
@@ -772,10 +773,10 @@ export default function Home() {
 
       {/* Services Section */}
       <section id="leistungen" className="py-6 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Die richtige Lösung für Ihr Projekt</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight"><strong>Estrich-Leistungen München</strong> – Welcher Boden passt zu Ihnen?</h2>
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold mb-4 tracking-tight"><strong>Estrich-Leistungen München</strong> – Welcher Boden passt zu Ihnen?</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               Von <Link href="/leistungen/zementestrich" className="text-primary hover:underline"><strong>Zementestrich München</strong></Link> über{" "}
               <Link href="/leistungen/fliessestrich" className="text-primary hover:underline"><strong>Fließestrich München</strong></Link> bis{" "}
@@ -844,10 +845,10 @@ export default function Home() {
 
       {/* Process Section */}
       <section id="ablauf" className="py-6">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">In 4 Schritten zum Traumboden</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">So einfach geht's – <strong>Estrich verlegen in München</strong></h2>
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold mb-4 tracking-tight">So einfach geht's – <strong>Estrich verlegen in München</strong></h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               <strong className="text-foreground">Kein Stress. Keine Überraschungen. Keine schlaflosen Nächte.</strong> Als erfahrener <strong className="text-foreground">Estrichleger München</strong> nehmen wir Ihnen die Last ab – Sie lehnen sich zurück.
             </p>
@@ -878,10 +879,10 @@ export default function Home() {
 
       {/* Pricing Section */}
       <section id="preise" className="py-6 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ehrliche Preise – keine bösen Überraschungen</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight"><strong>Estrich Kosten München</strong> – Was andere verschweigen, sagen wir Ihnen vorher</h2>
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold mb-4 tracking-tight"><strong>Estrich Kosten München</strong> – Was andere verschweigen, sagen wir Ihnen vorher</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               <strong className="text-foreground">Kennen Sie das?</strong> Die Rechnung kommt – und ist plötzlich 40% höher als das Angebot. <strong className="text-foreground">Bei uns nicht.</strong> Der Preis im Angebot ist der Preis, den Sie zahlen. Punkt.
             </p>
@@ -927,10 +928,10 @@ export default function Home() {
 
       {/* FAQ Section */}
       <section id="faq" className="py-6">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihre Fragen – unsere ehrlichen Antworten</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Das fragen uns 9 von 10 Kunden – <strong>bevor sie uns vertrauen</strong></h2>
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold mb-4 tracking-tight">Das fragen uns 9 von 10 Kunden – <strong>bevor sie uns vertrauen</strong></h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               <strong className="text-foreground">Skepsis ist gesund.</strong> Wir verstehen das. Lesen Sie, was andere Kunden gefragt haben – und warum sie heute sagen: <strong className="text-foreground">"Endlich ein Handwerker, dem ich vertrauen kann."</strong>
             </p>
@@ -985,10 +986,10 @@ export default function Home() {
 
       {/* Technical Specifications Section - Deep Content */}
       <section id="estrich-wissen" className="py-8 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Fachwissen</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold mb-4 tracking-tight">
               <strong>Estrich-Fachwissen</strong> – DIN-Normen & technische Spezifikationen
             </h2>
             <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
@@ -1090,10 +1091,10 @@ export default function Home() {
 
       {/* Case Studies Section */}
       <section id="referenzen" className="py-8 bg-muted/30">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Referenzen</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Aktuelle <strong>Estrich-Projekte in München</strong></h2>
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold mb-4 tracking-tight">Aktuelle <strong>Estrich-Projekte in München</strong></h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               Von <strong className="text-foreground">Estrich Neubau München</strong> bis <strong className="text-foreground">Estrich Sanierung München</strong>: 
               Sehen Sie, wie wir <Link href="/leistungen/zementestrich" className="text-primary hover:underline"><strong>Zementestrich</strong></Link> und{" "}
@@ -1138,7 +1139,8 @@ export default function Home() {
             </p>
             <Link href="/angebot">
               <Button size="lg" data-testid="button-case-studies-cta">
-                Kostenloses Angebot anfordern
+                <span className="sm:hidden">Angebot anfordern</span>
+                <span className="hidden sm:inline">Kostenloses Angebot anfordern</span>
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
@@ -1148,7 +1150,7 @@ export default function Home() {
 
       {/* Estrich-Ratgeber Section - SEO Content */}
       <section className="py-8">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 tracking-tight">
@@ -1220,10 +1222,10 @@ export default function Home() {
 
       {/* Service Areas */}
       <section className="py-8 bg-muted/30">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Ihr Vorteil: Lokale Nähe</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight"><strong>Estrichleger München</strong> – In Ihrer Nachbarschaft vor Ort</h2>
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold mb-4 tracking-tight"><strong>Estrichleger München</strong> – In Ihrer Nachbarschaft vor Ort</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
               Keine langen Anfahrtswege, keine Verzögerungen. <strong className="text-foreground">Wir kennen München</strong> – und sind schneller bei Ihnen, als Sie denken. Erfahren Sie mehr <Link href="/ueber-uns" className="text-primary hover:underline"><strong>über unser Team</strong></Link>.
             </p>
@@ -1271,10 +1273,10 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="kontakt" className="py-6 bg-muted/30">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight"><strong>Estrich Angebot</strong> anfordern – Ihr erster Schritt aus dem Baustellen-Chaos</h2>
+              <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold mb-4 tracking-tight"><strong>Estrich Angebot</strong> anfordern – Ihr erster Schritt aus dem Baustellen-Chaos</h2>
               <p className="text-muted-foreground mb-8">
                 <strong className="text-foreground">Jeder Tag, den Sie warten, kostet Sie:</strong> Zeit, Nerven, und möglicherweise Geld. 
                 Machen Sie jetzt den ersten Schritt – in 60 Sekunden. <strong className="text-foreground">100% kostenlos. 0% Risiko. 100% Klarheit.</strong>

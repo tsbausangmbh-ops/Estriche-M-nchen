@@ -75,7 +75,7 @@ export default function Blog() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
+        <div className="page-container relative">
           <div className="max-w-3xl">
             <Badge variant="outline" className="text-sm border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground font-medium tracking-wide animate-pulse mb-4">
               ACHTUNG: Nur noch {getWeeklyScarcityNumber()} freie Termine diese Woche
@@ -89,7 +89,7 @@ export default function Blog() {
               </Badge>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
               <strong>Estrich Ratgeber München</strong> – Fachwissen & Tipps vom Estrichleger Experten
             </h1>
             
@@ -141,7 +141,7 @@ export default function Blog() {
       </section>
 
       <section className="py-8 bg-accent border-b">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">
@@ -200,7 +200,8 @@ export default function Blog() {
           <div className="mt-6 text-center">
             <Link href="/angebot">
               <Button size="lg" data-testid="button-ratgeber-benefits-cta">
-                Jetzt kostenloses Angebot anfordern
+                <span className="sm:hidden">Angebot anfordern</span>
+                <span className="hidden sm:inline">Jetzt kostenloses Angebot anfordern</span>
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
@@ -209,7 +210,7 @@ export default function Blog() {
       </section>
 
       <section className="py-8">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="flex flex-wrap gap-2 mb-8">
             {categories.map((category) => (
               <Badge 
@@ -277,7 +278,7 @@ export default function Blog() {
       </section>
 
       <section className="py-8 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 text-center">
+        <div className="page-container text-center">
           <h2 className="text-2xl font-extrabold tracking-tight mb-4">
             Haben Sie eine Frage zu Ihrem Projekt?
           </h2>
@@ -286,7 +287,8 @@ export default function Blog() {
           </p>
           <Link href="/angebot">
             <Button size="lg" data-testid="button-blog-cta">
-              Kostenlose Beratung anfordern
+              <span className="sm:hidden">Beratung anfordern</span>
+              <span className="hidden sm:inline">Kostenlose Beratung anfordern</span>
               <ChevronRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>

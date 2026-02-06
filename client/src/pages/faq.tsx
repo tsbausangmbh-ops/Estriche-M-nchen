@@ -203,7 +203,7 @@ export default function FAQ() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 relative">
+        <div className="page-container relative">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center">
@@ -214,7 +214,7 @@ export default function FAQ() {
               </Badge>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4 text-white">
               <strong>Estrich FAQ München</strong> – Häufige Fragen zu Kosten, Trocknungszeit & Estricharten
             </h1>
             
@@ -271,7 +271,7 @@ export default function FAQ() {
       </section>
 
       <section className="py-8 bg-accent border-b">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">
@@ -338,7 +338,7 @@ export default function FAQ() {
       </section>
 
       <section className="py-8">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="grid md:grid-cols-2 gap-6">
             {faqCategories.map((category, categoryIndex) => (
               <div key={categoryIndex} data-testid={`faq-category-${categoryIndex}`}>
@@ -371,7 +371,7 @@ export default function FAQ() {
       </section>
 
       <section className="py-8 bg-accent">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 text-center">
+        <div className="page-container text-center">
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-4">
             <strong>Immer noch unsicher?</strong> Das ist völlig normal.
           </h2>

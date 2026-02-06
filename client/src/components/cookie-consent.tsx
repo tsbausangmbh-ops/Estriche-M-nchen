@@ -113,20 +113,21 @@ export function CookieConsent({ onPreferencesChange }: CookieConsentProps) {
   return (
     <>
       {showBanner && !showSettings && (
-        <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-background/95 backdrop-blur-sm border-t shadow-lg" data-testid="cookie-banner">
+        <div className="fixed bottom-14 md:bottom-0 left-0 right-0 z-50 p-3 sm:p-4 bg-background/95 backdrop-blur-sm border-t shadow-lg" data-testid="cookie-banner">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Cookie className="w-5 h-5 text-primary" />
+            <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 items-start lg:items-center justify-between">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Cookie className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                 </div>
                 <div className="space-y-1">
-                  <h3 className="font-semibold text-sm">Cookie-Einstellungen</h3>
-                  <p className="text-sm text-muted-foreground max-w-2xl">
-                    Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten. 
+                  <h3 className="font-semibold text-xs sm:text-sm">Cookie-Einstellungen</h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground max-w-2xl">
+                    <span className="hidden sm:inline">Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten. 
                     Einige Cookies sind für den Betrieb der Website unerlässlich, während andere uns helfen, 
                     die Website zu verbessern und Ihnen personalisierte Inhalte anzuzeigen. 
-                    Weitere Informationen finden Sie in unserer{" "}
+                    Weitere Informationen finden Sie in unserer </span>
+                    <span className="sm:hidden">Wir nutzen Cookies zur Verbesserung der Website. Mehr in unserer </span>
                     <Link href="/datenschutz" className="text-primary underline hover:no-underline">
                       Datenschutzerklärung
                     </Link>.

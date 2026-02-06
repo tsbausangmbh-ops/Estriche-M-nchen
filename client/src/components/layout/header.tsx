@@ -33,7 +33,7 @@ export function Header() {
   return (
     <>
       <div className="bg-foreground text-background py-1.5 text-xs">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48 flex flex-wrap items-center justify-between gap-2">
+        <div className="page-container flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-4 flex-wrap">
             <Badge variant="secondary" className="bg-background/10 text-background border-0">
               <MapPin className="w-3 h-3 mr-1" />
@@ -55,7 +55,7 @@ export function Header() {
       </div>
 
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b">
-        <div className="w-full mx-auto px-4 sm:px-20 lg:px-48">
+        <div className="page-container">
           <div className="flex items-center justify-between h-14">
             <div className="flex items-center gap-2">
               {!isHomePage && (
