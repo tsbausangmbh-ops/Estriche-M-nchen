@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/accordion";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.jpg";
+import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.webp";
 import { generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo-schemas";
 
 const faqCategories = [
@@ -174,6 +174,7 @@ export default function FAQ() {
         <title>Estrich FAQ München | Häufige Fragen Estrichleger beantwortet | Fachbetrieb Ratgeber</title>
         <meta name="description" content="Estrich FAQ München: Wie lange trocknet Estrich? Was kostet Estrich pro m²? Welcher Estrich für Fußbodenheizung? 25+ Experten-Antworten vom Fachbetrieb 2026" />
         <meta name="keywords" content="Estrich FAQ, Estrich Fragen Antworten, Estrich Trocknungszeit, Estrich Kosten Fragen, Zementestrich FAQ, Fließestrich Fragen, Fußbodenheizung Estrich, Estrich trocknen wie lange, Estrich belegen wann" />
+        <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/faq" />
         <meta property="og:title" content="Häufige Fragen (FAQ) | Estriche München" />
         <meta property="og:description" content="Expertenantworten auf Ihre Fragen zu Estricharbeiten in München." />

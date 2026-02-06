@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Scale, CheckCircle2, Phone, Users, Shield, ChevronRight } from "lucide-react";
 import { BusinessInfoCard } from "@/components/business-info-card";
-import heroImage from "@assets/generated_images/two_workers_pouring_screed_blue.jpg";
+import heroImage from "@assets/generated_images/two_workers_pouring_screed_blue.webp";
 
 export default function AGB() {
   return (
@@ -16,6 +16,7 @@ export default function AGB() {
         <title>AGB Estrichleger München | Allgemeine Geschäftsbedingungen | Estriche München Vertrag</title>
         <meta name="description" content="AGB Estriche München: Geschäftsbedingungen für Estricharbeiten gemäß BGB Bauvertragsrecht §§ 650a–650o. Faire Vertragsbedingungen vom Fachbetrieb 2026" />
         <meta name="keywords" content="AGB Estriche München, Allgemeine Geschäftsbedingungen Estrichleger, Bauvertrag München, Estrichvertrag AGB, Handwerker AGB Bayern" />
+        <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/agb" />
       </Helmet>
       <Header />

@@ -7,24 +7,24 @@ import {
   Building2,
   LucideIcon
 } from "lucide-react";
-import serviceImage1 from "@assets/generated_images/three_workers_laying_screed_blue.jpg";
-import serviceImage2 from "@assets/generated_images/polished_industrial_floor_warehouse.jpg";
-import serviceImage3 from "@assets/generated_images/workers_milling_and_pipes_blue.jpg";
-import serviceImage4 from "@assets/generated_images/three_workers_insulation_blue.jpg";
-import serviceImage5 from "@assets/generated_images/worker_repairing_cracks_blue.jpg";
-import serviceImage6 from "@assets/generated_images/two_workers_pouring_screed_blue.jpg";
-import galleryQuality from "@assets/generated_images/workers_checking_level_blue.jpg";
-import galleryBeforeAfter from "@assets/generated_images/before_after_floor_renovation.jpg";
-import galleryHeating from "@assets/generated_images/heating_pipes_install_blue.jpg";
-import galleryLiving from "@assets/generated_images/modern_living_room_polished_floor.jpg";
-import galleryIndustrial from "@assets/generated_images/industrial_coating_work_blue.jpg";
-import galleryInsulation from "@assets/generated_images/floor_insulation_install_blue.jpg";
-import galleryCementPour from "@assets/generated_images/three_workers_laying_screed_blue.jpg";
-import galleryIndustrialCoating from "@assets/generated_images/industrial_floor_coating_blue_polos.jpg";
-import galleryHeatingPipes from "@assets/generated_images/heating_pipes_install_blue.jpg";
-import galleryInsulationWork from "@assets/generated_images/floor_insulation_install_blue.jpg";
-import galleryRenovation from "@assets/generated_images/worker_repairing_cracks_blue.jpg";
-import galleryQuickScreed from "@assets/generated_images/quick_screed_apply_blue.jpg";
+import serviceImage1 from "@assets/generated_images/three_workers_laying_screed_blue.webp";
+import serviceImage2 from "@assets/generated_images/polished_industrial_floor_warehouse.webp";
+import serviceImage3 from "@assets/generated_images/workers_milling_and_pipes_blue.webp";
+import serviceImage4 from "@assets/generated_images/three_workers_insulation_blue.webp";
+import serviceImage5 from "@assets/generated_images/worker_repairing_cracks_blue.webp";
+import serviceImage6 from "@assets/generated_images/two_workers_pouring_screed_blue.webp";
+import galleryQuality from "@assets/generated_images/workers_checking_level_blue.webp";
+import galleryBeforeAfter from "@assets/generated_images/before_after_floor_renovation.webp";
+import galleryHeating from "@assets/generated_images/heating_pipes_install_blue.webp";
+import galleryLiving from "@assets/generated_images/modern_living_room_polished_floor.webp";
+import galleryIndustrial from "@assets/generated_images/industrial_coating_work_blue.webp";
+import galleryInsulation from "@assets/generated_images/floor_insulation_install_blue.webp";
+import galleryCementPour from "@assets/generated_images/three_workers_laying_screed_blue.webp";
+import galleryIndustrialCoating from "@assets/generated_images/industrial_floor_coating_blue_polos.webp";
+import galleryHeatingPipes from "@assets/generated_images/heating_pipes_install_blue.webp";
+import galleryInsulationWork from "@assets/generated_images/floor_insulation_install_blue.webp";
+import galleryRenovation from "@assets/generated_images/worker_repairing_cracks_blue.webp";
+import galleryQuickScreed from "@assets/generated_images/quick_screed_apply_blue.webp";
 
 export interface Testimonial {
   name: string;

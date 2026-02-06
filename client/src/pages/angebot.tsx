@@ -31,7 +31,7 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { CheckCircle2, Clock, Shield, Award, FileText, ChevronRight, Phone, Users } from "lucide-react";
 import { Link } from "wouter";
-import heroImage from "@assets/generated_images/workers_pouring_cement_screed.jpg";
+import heroImage from "@assets/generated_images/workers_pouring_cement_screed.webp";
 
 const angebotFormSchema = z.object({
   firstName: z.string().min(2, "Vorname muss mindestens 2 Zeichen lang sein"),
@@ -167,6 +167,7 @@ export default function Angebot() {
         <title>Estrich Angebot München kostenlos | Festpreis in 24h | Estriche München Fachbetrieb 2026</title>
         <meta name="description" content="Estrich Angebot München kostenlos: Festpreis in 24h, keine versteckten Kosten. Zementestrich ab 32€/m², Fließestrich ab 42€/m². Fachbetrieb jetzt anfragen" />
         <meta name="keywords" content="Estrich Angebot München, Estrich Kostenvoranschlag, Estrich Festpreis, Estrichleger Angebot kostenlos, Estrich Beratung München, Estrich anfragen" />
+        <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/angebot" />
       </Helmet>
       <Header />

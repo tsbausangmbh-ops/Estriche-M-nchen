@@ -49,7 +49,7 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { services } from "@/lib/services-data";
 import { Link } from "wouter";
-import heroImage from "@assets/generated_images/worker_grinding_screed_floor.jpg";
+import heroImage from "@assets/generated_images/worker_grinding_screed_floor.webp";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { 
@@ -347,6 +347,7 @@ export default function Home() {
         <meta name="geo.placename" content="München" />
         <meta name="geo.position" content="48.1779;11.5193" />
         <meta name="ICBM" content="48.1779, 11.5193" />
+        <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/" />
         <meta property="og:title" content="Estriche München | Estrichleger Fachbetrieb | Zementestrich Fließestrich | Festpreis 2026" />
         <meta property="og:description" content="Estriche München – Estrichleger mit 30+ Jahren Erfahrung: Zementestrich ab 32€/m², Fließestrich ab 42€/m². Festpreis-Garantie & 5 Jahre Gewährleistung" />
@@ -794,6 +795,8 @@ export default function Home() {
                       alt={`${service.title} München - Estricharbeiten vom Fachbetrieb`}
                       loading="lazy"
                       decoding="async"
+                      width="600"
+                      height="420"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/20 to-transparent" />

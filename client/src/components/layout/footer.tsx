@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import logoImage from "@assets/Estriche_München_Logo_1770192134778.png";
+import logoImage from "@assets/Estriche_München_Logo_1770192134778.webp";
 
 export function Footer() {
   return (
@@ -19,6 +19,10 @@ export function Footer() {
                 src={logoImage} 
                 alt="Estriche München Logo - Estrichleger Fachbetrieb Schwabing Bogenhausen Haidhausen Laim Bayern" 
                 className="h-10 w-auto rounded-sm"
+                width="49"
+                height="40"
+                loading="lazy"
+                decoding="async"
               />
               <div>
                 <span className="block font-bold" style={{fontSize: '12px'}}>Estriche München</span>

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Accessibility, CheckCircle2, Phone, Users, Shield, ChevronRight, AlertTriangle, Mail, Info } from "lucide-react";
 import { BusinessInfoCard } from "@/components/business-info-card";
-import heroImage from "@assets/generated_images/workers_checking_level_blue.jpg";
+import heroImage from "@assets/generated_images/workers_checking_level_blue.webp";
 
 export default function Barrierefreiheit() {
   return (
@@ -16,6 +16,7 @@ export default function Barrierefreiheit() {
         <title>Barrierefreiheit | Erklärung zur Barrierefreiheit | Estriche München BFSG 2025</title>
         <meta name="description" content="Erklärung zur Barrierefreiheit von Estriche München gemäß BFSG & BITV 2.0. Wir arbeiten kontinuierlich an der barrierefreien Gestaltung unserer Website." />
         <meta name="keywords" content="Barrierefreiheit Estriche München, BFSG Handwerker, BITV 2.0 konform, WCAG 2.2, barrierefreie Website Estrichleger" />
+        <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/barrierefreiheit" />
       </Helmet>
       <Header />

@@ -9,7 +9,7 @@ import { Footer } from "@/components/layout/footer";
 import { Link } from "wouter";
 import { ChevronRight, Clock, Calendar, BookOpen, CheckCircle2, Shield, Award, Zap, Phone, Users } from "lucide-react";
 import { blogArticles } from "@/lib/blog-data";
-import heroImage from "@assets/generated_images/workers_pouring_cement_screed.jpg";
+import heroImage from "@assets/generated_images/workers_pouring_cement_screed.webp";
 
 const categories = [
   { id: "alle", label: "Alle Artikel" },
@@ -38,6 +38,7 @@ export default function Blog() {
         <title>Estrich Ratgeber München 2026 | Tipps vom Estrichleger | Estriche München Fachwissen</title>
         <meta name="description" content="Estrich Ratgeber München 2026: Expertenwissen zu Zementestrich, Fließestrich, Heizestrich & Fußbodenheizung. Praxistipps vom Fachbetrieb für Ihr Projekt" />
         <meta name="keywords" content="Estrich Ratgeber, Estrich Tipps, Estrich Wissen, Zementestrich Infos, Fließestrich Guide, Estrich Trocknungszeit, Fußbodenheizung Tipps" />
+        <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/ratgeber" />
       </Helmet>
       <Header />

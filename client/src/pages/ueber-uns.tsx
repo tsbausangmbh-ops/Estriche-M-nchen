@@ -23,7 +23,7 @@ import {
   ThumbsUp,
   Zap
 } from "lucide-react";
-import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.jpg";
+import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.webp";
 import { BusinessInfoCard } from "@/components/business-info-card";
 
 const milestones = [
@@ -102,6 +102,7 @@ export default function UeberUns() {
         <title>Estrichleger München Fachbetrieb | 30+ Jahre Erfahrung | Estriche München Experten 2026!</title>
         <meta name="description" content="Estrichleger München seit 1994: Inhaber Mustafa Sakar, 2.500+ Projekte, 282+ zufriedene Kunden. Festpreis-Garantie & 5 Jahre Gewährleistung! Fachbetrieb" />
         <meta name="keywords" content="Estrichleger München, Estrich Fachbetrieb München, Estrich Firma München, Mustafa Sakar Estrich, Estrich Team München, Estrich Profi, Estrichleger Erfahrung, Estrich Gewährleistung" />
+        <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/ueber-uns" />
         <meta property="og:title" content="Über uns | Estrich Fachbetrieb München mit 30+ Jahren Erfahrung" />
         <meta property="og:description" content="30+ Jahre Erfahrung, 2.500+ Projekte – lernen Sie unser Team kennen." />

@@ -1,4 +1,5 @@
 import { useParams, Link } from "wouter";
+import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -6,7 +7,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ChevronRight, ChevronLeft, Clock, Calendar, BookOpen, Lightbulb, CheckCircle2 } from "lucide-react";
 import { getArticleBySlug, blogArticles } from "@/lib/blog-data";
-import heroImage from "@assets/generated_images/worker_leveling_cement_screed.jpg";
+import heroImage from "@assets/generated_images/worker_leveling_cement_screed.webp";
 
 export default function BlogArticle() {
   const { slug } = useParams<{ slug: string }>();
@@ -38,6 +39,9 @@ export default function BlogArticle() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <link rel="preload" as="image" href={heroImage} type="image/webp" />
+      </Helmet>
       <Header />
       
       <section className="relative py-6 lg:py-8 overflow-hidden">

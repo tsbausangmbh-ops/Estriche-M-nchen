@@ -17,6 +17,7 @@ Preferred communication style: Simple, everyday language. Always communicate in 
 - **Terminology rule**: "Fachbetrieb" in marketing; "Meisterbrief"/"Meisterfirma" only for credentials
 - **Legal disclaimer**: "Hinweis zum Vertragsabschluss" im Footer - kein verbindliches Angebot, kein Vertragsabschluss über Website, keine Online-Zahlung
 - **"kontaktformulare" kleingeschrieben** per Kundenwunsch
+- **Image Optimization**: Alle Bilder in WebP-Format (44% kleiner), Preload-Links für Hero-Bilder auf allen Seiten, width/height Attribute für CLS-Prävention, Logo von PNG 38KB auf WebP 5.5KB
 
 ## System Architecture
 

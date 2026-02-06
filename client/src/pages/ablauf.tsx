@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, ChevronRight, Phone, Clock, Calendar, FileText, Truck, Users, Ruler, Shield, ThumbsUp } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import heroImage from "@assets/generated_images/workers_checking_level_blue.jpg";
+import heroImage from "@assets/generated_images/workers_checking_level_blue.webp";
 
 const processSteps = [
   {
@@ -150,6 +150,7 @@ export default function Ablauf() {
         <title>Estrich verlegen Ablauf München 2026 | 7 Schritte zum perfekten Boden | Fachbetrieb</title>
         <meta name="description" content="Estrich verlegen Ablauf München: In 7 Schritten zum perfekten Boden. Kostenlose Beratung bis Abnahme – Festpreis in 48h, 30+ Jahre Erfahrung Fachbetrieb" />
         <meta name="keywords" content="Estrich Ablauf München, Estrich verlegen Ablauf, Estrich Projekt Schritte, Estrich Beratung kostenlos, Estrich Terminplanung, Estricharbeiten Ablauf" />
+        <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/ablauf" />
         <meta property="og:title" content="Ablauf Estricharbeiten München | 7 Schritte" />
         <meta property="og:description" content="Transparenter Projektablauf: Von Anfrage bis Abnahme in 7 Schritten." />

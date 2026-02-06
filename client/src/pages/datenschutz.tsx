@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Shield, CheckCircle2, Phone, Users, ChevronRight } from "lucide-react";
 import { BusinessInfoCard } from "@/components/business-info-card";
-import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.jpg";
+import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.webp";
 
 export default function Datenschutz() {
   return (
@@ -16,6 +16,7 @@ export default function Datenschutz() {
         <title>Datenschutz Estrichleger München | Estriche München | DSGVO & TDDDG konform Fachbetrieb!</title>
         <meta name="description" content="Datenschutzerklärung Estriche München: DSGVO & TDDDG konforme Datenverarbeitung. Estrichleger Fachbetrieb – Ihre Daten sind bei uns sicher! Stand 2026" />
         <meta name="keywords" content="Datenschutz Estriche München, DSGVO Estrichleger, Datenschutzerklärung Handwerker, Privatsphäre Baufirma Bayern, DSGVO konform Bauunternehmen" />
+        <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/datenschutz" />
       </Helmet>
       <Header />

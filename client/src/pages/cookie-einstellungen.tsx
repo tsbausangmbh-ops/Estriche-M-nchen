@@ -9,7 +9,7 @@ import { Switch } from "@/components/ui/switch";
 import { Link } from "wouter";
 import { Cookie, Shield, BarChart3, Sparkles, CheckCircle2, Phone, Users, ChevronRight, Settings } from "lucide-react";
 import { BusinessInfoCard } from "@/components/business-info-card";
-import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.jpg";
+import heroImage from "@assets/generated_images/three_workers_laying_screed_blue.webp";
 
 const COOKIE_CONSENT_KEY = "estrich-cookie-consent";
 const COOKIE_CONSENT_VERSION = "1.0";
@@ -104,6 +104,7 @@ export default function CookieEinstellungen() {
         <title>Cookies-Einstellungen verwalten | Estriche München Fachbetrieb | DSGVO TDDDG konform 2026</title>
         <meta name="description" content="Cookie-Richtlinie Estriche München: Verwalten Sie Ihre Cookie-Einstellungen gemäß DSGVO und TDDDG. Transparente Datenschutz-Informationen Fachbetrieb" />
         <meta name="keywords" content="Cookie Richtlinie Estrich, Cookies Estrichleger München, TDDDG Handwerker Website, Tracking Baufirma Bayern, Cookie Einstellungen Bauunternehmen" />
+        <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/cookie-einstellungen" />
       </Helmet>
       <Header />

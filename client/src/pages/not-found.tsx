@@ -1,10 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet-async";
 import { Home, Phone, Wrench, Info, Calculator, FileText, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import heroImage from "@assets/generated_images/worker_grinding_screed_floor.jpg";
+import heroImage from "@assets/generated_images/worker_grinding_screed_floor.webp";
 
 export default function NotFound() {
   const pages = [
@@ -18,6 +19,9 @@ export default function NotFound() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <link rel="preload" as="image" href={heroImage} type="image/webp" />
+      </Helmet>
       <Header />
       <main className="flex-1 relative py-10 lg:py-14 overflow-hidden">
         <div 

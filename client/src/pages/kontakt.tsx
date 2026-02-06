@@ -33,7 +33,7 @@ import { apiRequest } from "@/lib/queryClient";
 import { Phone, Mail, MapPin, Clock, ChevronRight, CheckCircle2, MessageSquare, Users, Shield } from "lucide-react";
 import { BusinessInfoCard } from "@/components/business-info-card";
 import { Link } from "wouter";
-import heroImage from "@assets/generated_images/workers_milling_and_pipes_blue.jpg";
+import heroImage from "@assets/generated_images/workers_milling_and_pipes_blue.webp";
 
 const estrichTypes = [
   { value: "zementestrich", label: "Zementestrich (CT)" },
@@ -141,6 +141,7 @@ export default function Kontakt() {
         <meta name="keywords" content="Estriche München Kontakt, Estrichleger anrufen, Estrich Angebot München, kostenlose Beratung Estrich, Estrich Telefon, Estrich Termin buchen, Estricharbeiten anfragen" />
         <meta name="geo.region" content="DE-BY" />
         <meta name="geo.placename" content="München" />
+        <link rel="preload" as="image" href={heroImage} type="image/webp" />
         <link rel="canonical" href="https://estriche-muenchen.de/kontakt" />
         <meta property="og:title" content="Kontakt | Estriche München" />
         <meta property="og:description" content="Kostenlose Beratung für Ihr Estrich-Projekt. Festpreis-Angebot innerhalb 24h." />
