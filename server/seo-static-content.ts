@@ -25,7 +25,7 @@ const UMLAND_STAEDTE = ["Starnberg", "Freising", "Dachau", "Erding", "Ebersberg"
 
 const servicesData: Record<string, PageSEO> = {
   fliessestrich: {
-    title: "Fließestrich München - Selbstnivellierender Calciumsulfatestrich | Estrich München",
+    title: "Fließestrich München | CAF-Estrich vom Fachbetrieb",
     metaDescription: "Fließestrich verlegen in München. Calciumsulfat-Fließestrich (CAF) perfekt für Fußbodenheizung. Fachbetrieb mit Festpreisgarantie. Jetzt beraten lassen!",
     mainKeyword: "Fließestrich München",
     longTailKeywords: [
@@ -62,7 +62,7 @@ const servicesData: Record<string, PageSEO> = {
     ]
   },
   heizestrich: {
-    title: "Heizestrich München - Estrich für Fußbodenheizung | Estrich München",
+    title: "Heizestrich München | Estrich für Fußbodenheizung",
     metaDescription: "Heizestrich für Fußbodenheizung in München verlegen lassen. Optimale Wärmeübertragung, schnellere Aufheizzeit. Fachbetrieb mit Festpreisgarantie!",
     mainKeyword: "Heizestrich München",
     longTailKeywords: [
@@ -99,8 +99,8 @@ const servicesData: Record<string, PageSEO> = {
     ]
   },
   zementestrich: {
-    title: "Zementestrich München - Professionelle Estrichverlegung vom Fachbetrieb | Estrich München",
-    metaDescription: "Zementestrich verlegen lassen in München Schwabing, Bogenhausen, Pasing, Sendling. Fachbetrieb mit 30+ Jahren Erfahrung, Festpreisgarantie, DIN 18560. Jetzt kostenlose Beratung!",
+    title: "Zementestrich München | Estrichverlegung vom Fachbetrieb",
+    metaDescription: "Zementestrich verlegen lassen in München. Fachbetrieb mit 30+ Jahren Erfahrung, Festpreisgarantie, DIN 18560. Jetzt kostenlose Beratung!",
     mainKeyword: "Zementestrich München",
     longTailKeywords: [
       "Zementestrich verlegen lassen München",
@@ -156,8 +156,8 @@ const servicesData: Record<string, PageSEO> = {
     ]
   },
   industrieboeden: {
-    title: "Industrieböden München - Belastbare Hallenböden & Sichtestrich | Estrich München",
-    metaDescription: "Industrieböden und Sichtestrich in München, Garching, Unterschleißheim, Freising. Hartstoffestrich, Epoxidbeschichtung, geschliffener Betonboden. 10 Jahre Garantie. Jetzt beraten lassen!",
+    title: "Industrieböden München | Hallenböden & Sichtestrich",
+    metaDescription: "Industrieböden in München: Hartstoffestrich, Epoxidbeschichtung, geschliffener Betonboden & Sichtestrich. 10 Jahre Garantie. Jetzt beraten!",
     mainKeyword: "Industrieböden München",
     longTailKeywords: [
       "Industrieboden verlegen München",
@@ -207,8 +207,8 @@ const servicesData: Record<string, PageSEO> = {
     ]
   },
   fussbodenheizung: {
-    title: "Fußbodenheizung nachrüsten München - Einfräsen ohne Umbau | Estrich München",
-    metaDescription: "Fußbodenheizung nachträglich einfräsen in München Schwabing, Haidhausen, Bogenhausen, Sendling. Installation in bewohnten Räumen, nur 2-4 Tage. 500+ Nachrüstungen. Jetzt beraten lassen!",
+    title: "Fußbodenheizung nachrüsten München | Einfräsen",
+    metaDescription: "Fußbodenheizung nachträglich einfräsen in München. Installation in bewohnten Räumen, nur 2-4 Tage. 500+ Nachrüstungen. Jetzt beraten!",
     mainKeyword: "Fußbodenheizung nachrüsten München",
     longTailKeywords: [
       "Fußbodenheizung einfräsen München",
@@ -259,7 +259,7 @@ const servicesData: Record<string, PageSEO> = {
     ]
   },
   waermedaemmung: {
-    title: "Wärmedämmung Boden München - Estrichdämmung & Trittschall | Estrich München",
+    title: "Wärmedämmung Boden München | Dämmung & Trittschall",
     metaDescription: "Professionelle Bodendämmung und Trittschalldämmung in München. KfW/BAFA-Förderung möglich. Bis 30% Heizkosten sparen. Kostenlose Beratung!",
     mainKeyword: "Wärmedämmung Boden München",
     longTailKeywords: [
@@ -296,7 +296,7 @@ const servicesData: Record<string, PageSEO> = {
     ]
   },
   sanierung: {
-    title: "Estrichsanierung München - Risse reparieren & Wasserschaden | Estrich München",
+    title: "Estrichsanierung München | Risse & Wasserschaden",
     metaDescription: "Estrichsanierung in München: Rissinjection, Hohlstellen verpresse, Wasserschaden-Trocknung. 24h-Notfall-Service. Kostenlose Schadensanalyse!",
     mainKeyword: "Estrichsanierung München",
     longTailKeywords: [
@@ -334,7 +334,7 @@ const servicesData: Record<string, PageSEO> = {
     ]
   },
   schnellestrich: {
-    title: "Schnellestrich München - Belegreif in 1-5 Tagen | Estrich München",
+    title: "Schnellestrich München | Belegreif in 1-5 Tagen",
     metaDescription: "Schnellestrich in München: Belegreif in 1-5 Tagen statt 4-8 Wochen. Termindruck? Wir liefern! Garantierte Belegreife. Jetzt Termin sichern!",
     mainKeyword: "Schnellestrich München",
     longTailKeywords: [
@@ -372,8 +372,8 @@ const servicesData: Record<string, PageSEO> = {
     ]
   },
   sichtestrich: {
-    title: "Sichtestrich München - Geschliffener Betonboden & Designestrich | Estrich München",
-    metaDescription: "Sichtestrich München: Geschliffener Betonboden, polierter Estrich & Designestrich ab 65€/m². Fachbetrieb für Lofts, Showrooms & moderne Architektur. Jetzt beraten lassen!",
+    title: "Sichtestrich München | Geschliffener Designestrich",
+    metaDescription: "Sichtestrich München: Geschliffener Betonboden & Designestrich ab 65€/m². Fachbetrieb für Lofts, Showrooms & moderne Architektur. Jetzt beraten lassen!",
     mainKeyword: "Sichtestrich München",
     longTailKeywords: [
       "Sichtestrich schleifen München",
@@ -414,11 +414,10 @@ const servicesData: Record<string, PageSEO> = {
 
 const pagesSEO: Record<string, PageSEO> = {
   home: {
-    title: "Estrichleger München | Zementestrich & Fließestrich verlegen | Fachbetrieb seit 1994",
+    title: "Estrichleger München | Fachbetrieb seit 1994",
     metaDescription: "Estrichleger München – Fachbetrieb für Estricharbeiten: Zementestrich ab 32€/m², Fließestrich, Heizestrich verlegen. 30+ Jahre Erfahrung, Festpreis-Garantie ✓",
     mainKeyword: "Estrich München",
     longTailKeywords: [
-      "Estrich München",
       "Estrichleger München",
       "Zementestrich München",
       "Fließestrich München",
@@ -478,7 +477,7 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   ablauf: {
-    title: "Estrich verlegen Ablauf München | Estrichverlegung in 7 Schritten | Fachbetrieb",
+    title: "Estrich verlegen Ablauf München | 7 Schritte",
     metaDescription: "Estrich verlegen Ablauf München: Estrichverlegung in 7 Schritten von Beratung bis Abnahme. Kostenlose Planung, Festpreis & Termingarantie vom Estrichleger Fachbetrieb",
     mainKeyword: "Ablauf Estrichverlegung",
     longTailKeywords: [
@@ -524,7 +523,7 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   preise: {
-    title: "Estrich Preise München 2026 | Kosten pro m² | Zementestrich ab 32€ Festpreis",
+    title: "Estrich Preise München 2026 | Kosten pro m² ab 32€",
     metaDescription: "Estrich Preise München 2026: Zementestrich ab 32€/m², Fließestrich ab 42€/m², Heizestrich ab 45€/m². Transparente Estrich Kosten pro m² mit Festpreis vom Fachbetrieb",
     mainKeyword: "Estrich Preise München",
     longTailKeywords: [
@@ -565,7 +564,7 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   rechner: {
-    title: "Estrich Kostenrechner München 2026 | Estrich Kosten pro m² online berechnen",
+    title: "Estrich Kostenrechner München 2026 | Kosten pro m²",
     metaDescription: "Estrich Kostenrechner München: Estrich Kosten pro m² online berechnen. Zementestrich ab 32€/m², Fließestrich ab 42€/m². Kostenloser Estrich Preisrechner mit Festpreis",
     mainKeyword: "Estrich Kostenrechner München",
     longTailKeywords: [
@@ -611,7 +610,7 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   kontakt: {
-    title: "Estrichleger München kontaktieren | Kostenlose Beratung & Angebot anfordern",
+    title: "Estrichleger München kontaktieren | Beratung gratis",
     metaDescription: "Estrichleger München kontaktieren: Kostenlose Vor-Ort-Beratung, Estrich Angebot in 24h. ☎ 089 444438872. Fachbetrieb für Zementestrich & Fließestrich anfragen!",
     mainKeyword: "Kontakt Estrich München",
     longTailKeywords: [
@@ -647,7 +646,7 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   faq: {
-    title: "Estrich FAQ München 2026 | Häufige Fragen zu Kosten, Trocknungszeit & Estricharten",
+    title: "Estrich FAQ München 2026 | Kosten & Trocknungszeit",
     metaDescription: "Estrich FAQ München: Häufige Fragen zu Estrich Kosten pro m², Trocknungszeit, Estricharten & Fußbodenheizung. 25+ Experten-Antworten vom Estrichleger Fachbetrieb",
     mainKeyword: "FAQ Estrich München",
     longTailKeywords: [
@@ -685,7 +684,7 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   ueberuns: {
-    title: "Estrichleger München Fachbetrieb | 30+ Jahre Erfahrung | Estricharbeiten Experten",
+    title: "Estrichleger München | Fachbetrieb 30+ Jahre",
     metaDescription: "Estrichleger München Fachbetrieb seit 1994: 2.500+ Projekte, 282+ zufriedene Kunden. Estricharbeiten mit Festpreis-Garantie & 5 Jahre Gewährleistung vom Experten",
     mainKeyword: "Estrich München Fachbetrieb",
     longTailKeywords: [
@@ -727,7 +726,7 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   angebot: {
-    title: "Estrich Angebot München kostenlos | Kostenvoranschlag & Festpreis in 24h",
+    title: "Estrich Angebot München kostenlos | Festpreis 24h",
     metaDescription: "Estrich Angebot München kostenlos anfordern: Kostenvoranschlag mit Festpreis in 24h. Zementestrich ab 32€/m², Fließestrich ab 42€/m². Vor-Ort-Beratung vom Fachbetrieb",
     mainKeyword: "Estrich Angebot anfordern",
     longTailKeywords: [
@@ -764,7 +763,7 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   impressum: {
-    title: "Impressum Estrichleger München | Estriche München Firmenkontakt & Angaben § 5 TMG",
+    title: "Impressum | Estriche München Firmenkontakt § 5 TMG",
     metaDescription: "Impressum Estrichleger München: Mustafa Sakar, Hardenbergstr. 4, 80992 München. ☎ 089 444438872. Angaben gemäß § 5 TMG für Estriche München Fachbetrieb",
     mainKeyword: "Impressum Estrich München",
     longTailKeywords: ["Estrich München Kontakt", "Estrichleger München Adresse", "Estriche München Inhaber"],
@@ -789,7 +788,7 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   datenschutz: {
-    title: "Datenschutz Estrichleger München | DSGVO & TDDDG konforme Datenschutzerklärung",
+    title: "Datenschutz | Estriche München DSGVO & TDDDG",
     metaDescription: "Datenschutzerklärung Estrichleger München: DSGVO & TDDDG konforme Datenverarbeitung. Ihre Daten sind sicher beim Estrich Fachbetrieb Estriche München",
     mainKeyword: "Datenschutz Estrich München",
     longTailKeywords: ["DSGVO Estrich München", "Datenschutzerklärung Handwerker", "Cookies Estrich Website"],
@@ -810,7 +809,7 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   agb: {
-    title: "AGB Estrichleger München | Geschäftsbedingungen für Estricharbeiten & Gewährleistung",
+    title: "AGB Estrichleger München | Geschäftsbedingungen",
     metaDescription: "AGB Estrichleger München: Allgemeine Geschäftsbedingungen für Estricharbeiten gemäß BGB Bauvertragsrecht. Faire Vertragsbedingungen & 5 Jahre Gewährleistung",
     mainKeyword: "AGB Estrich München",
     longTailKeywords: ["Geschäftsbedingungen Estrichleger", "Gewährleistung Estrich", "Zahlungsbedingungen Handwerker"],
@@ -835,7 +834,7 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   cookieeinstellungen: {
-    title: "Cookie-Einstellungen Estriche München | Datenschutz nach DSGVO & TDDDG verwalten",
+    title: "Cookie-Einstellungen | Estriche München DSGVO",
     metaDescription: "Cookie-Einstellungen Estriche München: Verwalten Sie Ihre Cookie-Präferenzen gemäß DSGVO und TDDDG. Transparente Datenschutz-Einstellungen vom Fachbetrieb",
     mainKeyword: "Cookie Einstellungen Estrich München",
     longTailKeywords: ["Cookie Präferenzen", "Datenschutz Einstellungen", "Cookie Verwaltung"],
@@ -853,7 +852,7 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   barrierefreiheit: {
-    title: "Barrierefreiheit Estriche München | BFSG & BITV 2.0 Erklärung | WCAG 2.2 konform",
+    title: "Barrierefreiheit | Estriche München BFSG & WCAG",
     metaDescription: "Barrierefreiheit Estriche München: Erklärung zur Barrierefreiheit gemäß BFSG, BITV 2.0 & WCAG 2.2. Barrierefreie Website vom Estrichleger Fachbetrieb",
     mainKeyword: "Barrierefreiheit Estriche München",
     longTailKeywords: ["BFSG Handwerker München", "BITV 2.0 Estrichleger", "WCAG 2.2 Bauunternehmen", "barrierefreie Website"],
@@ -875,7 +874,7 @@ const pagesSEO: Record<string, PageSEO> = {
     ]
   },
   ratgeber: {
-    title: "Estrich Ratgeber München 2026 | Tipps & Fachwissen vom Estrichleger Experten",
+    title: "Estrich Ratgeber München 2026 | Tipps vom Experten",
     metaDescription: "Estrich Ratgeber München: Fachwissen und Tipps zu Zementestrich, Fließestrich, Heizestrich & Fußbodenheizung. Expertenwissen vom Estrichleger Fachbetrieb",
     mainKeyword: "Estrich Ratgeber",
     longTailKeywords: ["Estrich Tipps", "Estrich Wissen", "Estrich Beratung", "Estrich FAQ"],
@@ -949,6 +948,8 @@ function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
   <meta name="keywords" content="${page.mainKeyword}, ${keywordsContent}">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="${canonicalUrl}">
+  <link rel="alternate" hreflang="de" href="${canonicalUrl}">
+  <link rel="alternate" hreflang="x-default" href="${canonicalUrl}">
   
   <meta property="og:title" content="${page.title}">
   <meta property="og:description" content="${page.metaDescription}">
@@ -1167,10 +1168,10 @@ function generateBaseHTML(page: PageSEO, canonicalPath: string): string {
 </html>`;
 }
 
-function generateServicePage(serviceId: string): string {
+function generateServicePage(serviceId: string): string | null {
   const service = servicesData[serviceId];
   if (!service) {
-    return generateHomePage();
+    return null;
   }
   return generateBaseHTML(service, `/leistungen/${serviceId}`);
 }
@@ -1205,7 +1206,7 @@ function generatePage(pageId: string): string {
   return generateBaseHTML(page, pathMap[pageId] || '/');
 }
 
-export function generateStaticSEOContent(path: string): string {
+export function generateStaticSEOContent(path: string): string | null {
   if (path === '/' || path === '') {
     return generateHomePage();
   }
@@ -1236,5 +1237,5 @@ export function generateStaticSEOContent(path: string): string {
     return generatePage(pageId);
   }
   
-  return generateHomePage();
+  return null;
 }

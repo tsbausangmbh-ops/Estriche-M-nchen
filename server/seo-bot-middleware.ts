@@ -196,7 +196,30 @@ export function seoBotMiddleware(req: Request, res: Response, next: NextFunction
     const wasCached = !!cachedHTML;
     
     if (!cachedHTML) {
-      cachedHTML = generateStaticSEOContent(req.path);
+      const generated = generateStaticSEOContent(req.path);
+      if (!generated) {
+        logBotRequest(userAgent || '', req.path, false);
+        res.setHeader('Content-Type', 'text/html; charset=utf-8');
+        res.setHeader('X-Robots-Tag', 'noindex, nofollow');
+        res.setHeader('X-SSR-Rendered', 'true');
+        res.setHeader('X-Content-Type-Options', 'nosniff');
+        res.status(404).send(`<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seite nicht gefunden | Estriche München</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://estriche-muenchen.de/">
+</head>
+<body>
+  <h1>Seite nicht gefunden</h1>
+  <p>Die angeforderte Seite existiert nicht. Besuchen Sie unsere <a href="/">Startseite</a> oder kontaktieren Sie uns unter <a href="tel:+4989444438872">089 / 444 43 887 2</a>.</p>
+</body>
+</html>`);
+        return;
+      }
+      cachedHTML = generated;
       setCachedHTML(req.path, cachedHTML);
     }
     
@@ -213,7 +236,7 @@ export function seoBotMiddleware(req: Request, res: Response, next: NextFunction
     
     // Core Web Vitals & Prerender hints
     res.setHeader('Link', [
-      '</logo.png>; rel=preload; as=image',
+      '</logo.webp>; rel=preload; as=image; type=image/webp',
       '<https://fonts.googleapis.com>; rel=preconnect',
       '<https://fonts.gstatic.com>; rel=preconnect; crossorigin'
     ].join(', '));
