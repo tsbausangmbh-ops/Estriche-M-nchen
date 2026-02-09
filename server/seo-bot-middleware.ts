@@ -227,7 +227,7 @@ export function seoBotMiddleware(req: Request, res: Response, next: NextFunction
     
     // Google 2026 SSR Headers
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
-    res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1');
+    res.setHeader('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
     res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
     res.setHeader('X-SSR-Cache', wasCached ? 'HIT' : 'MISS');
     res.setHeader('X-SSR-Rendered', 'true');
