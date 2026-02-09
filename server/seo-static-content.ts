@@ -370,6 +370,45 @@ const servicesData: Record<string, PageSEO> = {
       { q: "Ist Schnellestrich genauso belastbar?", a: "Ja, Schnellestrich erreicht die gleiche Endfestigkeit wie konventioneller Estrich. Nur die Trocknungszeit ist verkürzt." },
       { q: "Eignet sich Schnellestrich für Fußbodenheizung?", a: "Ja, alle unsere Schnellestrich-Systeme sind für Fußbodenheizung geeignet und freigegeben." }
     ]
+  },
+  sichtestrich: {
+    title: "Sichtestrich München - Geschliffener Betonboden & Designestrich | Estrich München",
+    metaDescription: "Sichtestrich München: Geschliffener Betonboden, polierter Estrich & Designestrich ab 65€/m². Fachbetrieb für Lofts, Showrooms & moderne Architektur. Jetzt beraten lassen!",
+    mainKeyword: "Sichtestrich München",
+    longTailKeywords: [
+      "Sichtestrich schleifen München",
+      "Geschliffener Betonboden München",
+      "Designestrich verlegen lassen",
+      "Polierter Estrich Kosten München",
+      "Sichtestrich für Fußbodenheizung",
+      "Terrazzo Estrich München",
+      "Sichtestrich Loft München",
+      "Betonboden geschliffen Kosten pro qm",
+      "Sichtestrich Schwabing Maxvorstadt Haidhausen"
+    ],
+    h1: "Sichtestrich München - Geschliffener Betonboden & Designestrich vom Fachbetrieb",
+    sections: [
+      {
+        h2: "Sichtestrich - Wenn der Boden zum Design-Element wird",
+        h3s: ["Geschliffener Betonboden für moderne Räume", "Polierter Estrich als Endboden"],
+        content: `Sichtestrich ist kein gewöhnlicher Estrich - er ist der fertige Boden. Geschliffen, poliert und versiegelt wird der Estrich selbst zur Oberfläche. Besonders beliebt in Lofts, Showrooms, Restaurants, Büros und modernen Wohnungen in München. Wir verlegen und schleifen Sichtestrich in allen Münchner Stadtteilen: Schwabing, Maxvorstadt, Haidhausen, Bogenhausen, Sendling und Umgebung.`
+      },
+      {
+        h2: "Sichtestrich Kosten München - Was kostet geschliffener Beton?",
+        h3s: ["Ab 65€/m² für Standard-Schliff", "Hochglanz-Politur ab 90€/m²"],
+        content: `Die Kosten für Sichtestrich in München liegen zwischen 65-120 €/m² je nach Schliffgrad und Versiegelung. Standard-Schliff ab 65€/m², Feinschliff ab 80€/m², Hochglanz-Politur ab 90€/m². Terrazzo-Optik und Spezialeffekte ab 100€/m². Im Vergleich zu hochwertigem Naturstein oder Designfliesen ist Sichtestrich eine wirtschaftliche Alternative mit einzigartigem Charakter.`
+      },
+      {
+        h2: "Sichtestrich-Varianten für Ihr Projekt",
+        h3s: ["Zement-Sichtestrich geschliffen", "Terrazzo-Optik mit Zuschlägen", "Farbiger Designestrich"],
+        content: `Wir bieten verschiedene Sichtestrich-Varianten: Klassisch geschliffener Zementestrich in natürlichem Betongrau, Terrazzo-Optik mit farbigen Zuschlägen aus Marmor oder Granit, eingefärbter Designestrich in Wunschfarben, und Mikrozement-Beschichtung für bestehende Böden. Alle Varianten sind mit Fußbodenheizung kombinierbar und extrem pflegeleicht.`
+      }
+    ],
+    faqs: [
+      { q: "Kann Sichtestrich mit Fußbodenheizung kombiniert werden?", a: "Ja, Sichtestrich eignet sich hervorragend für Fußbodenheizungen und leitet Wärme sehr effizient weiter." },
+      { q: "Wie pflegt man Sichtestrich?", a: "Sichtestrich ist extrem pflegeleicht. Regelmäßiges Wischen mit pH-neutralem Reiniger genügt. Die Versiegelung schützt vor Flecken und Abrieb." },
+      { q: "Ist Sichtestrich auch für Wohnräume geeignet?", a: "Absolut. Sichtestrich schafft eine warme, moderne Atmosphäre und ist in Münchner Lofts und Altbauwohnungen sehr beliebt." }
+    ]
   }
 };
 
