@@ -9,6 +9,7 @@ const BOT_USER_AGENTS = [
   'googleweblight',
   'storebot-google',
   'adsbot-google',
+  'apis-google',
   'mediapartners-google',
   'google-extended',
   'googleother',
