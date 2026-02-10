@@ -19,7 +19,8 @@ import {
   Zap,
   Handshake,
   Droplets,
-  ShowerHead
+  ShowerHead,
+  Globe
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -818,13 +819,13 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover-elevate" data-testid="card-partner-estriche">
+            <Card className="text-center hover-elevate" data-testid="card-partner-extrucon">
               <CardContent className="pt-6 pb-5">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Ruler className="w-6 h-6 text-primary" />
+                  <Globe className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-bold text-base mb-1">Extrucon GmbH</h3>
-                <p className="text-sm text-muted-foreground">Estricharbeiten & Bodenaufbau</p>
+                <p className="text-sm text-muted-foreground">Webdesign & Digitalagentur</p>
               </CardContent>
             </Card>
 
