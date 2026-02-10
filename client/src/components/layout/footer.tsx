@@ -10,7 +10,7 @@ export function Footer() {
         }
       `}</style>
       <div className="page-container">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
           
           {/* Brand */}
           <div className="col-span-2 md:col-span-1" data-testid="footer-brand">
@@ -70,6 +70,19 @@ export function Footer() {
               <li><a href="mailto:info@estriche-muenchen.de" className="footer-link">info@estriche-muenchen.de</a></li>
               <li><a href="https://maps.google.com/?q=Hardenbergstr.+4,+80992+München" target="_blank" rel="noopener noreferrer" className="footer-link">Hardenbergstr. 4, 80992 München</a></li>
               <li>Mo–Fr: 08:00–16:30</li>
+            </ul>
+          </div>
+
+          {/* Partnernetzwerk */}
+          <div data-testid="footer-partners">
+            <h4 className="font-semibold text-background/80 mb-2" style={{fontSize: '11px'}}>Partnernetzwerk</h4>
+            <ul className="space-y-1 text-background/50" style={{fontSize: '11px'}}>
+              <li><a href="https://089-sanierer.de" target="_blank" rel="noopener noreferrer" className="footer-link">089-Sanierer</a></li>
+              <li><a href="https://kshw-muenchen.de" target="_blank" rel="noopener noreferrer" className="footer-link">KSHW München</a></li>
+              <li><a href="https://089dach.de" target="_blank" rel="noopener noreferrer" className="footer-link">089Dach GmbH</a></li>
+              <li><a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="footer-link">Extrucon GmbH</a></li>
+              <li><a href="https://sanitär-muenchen.de" target="_blank" rel="noopener noreferrer" className="footer-link">Sanitär München</a></li>
+              <li><a href="https://aquapro24.de" target="_blank" rel="noopener noreferrer" className="footer-link">Aquapro24</a></li>
             </ul>
           </div>
 
