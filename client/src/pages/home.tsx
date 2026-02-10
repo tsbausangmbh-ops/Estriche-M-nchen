@@ -861,65 +861,77 @@ export default function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="text-center hover-elevate" data-testid="card-partner-089sanierer">
-              <CardContent className="pt-6 pb-5">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Building2 className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-bold text-base mb-1">089-Sanierer</h3>
-                <p className="text-sm text-muted-foreground">Innenausbau & Komplettsanierung</p>
-              </CardContent>
-            </Card>
+            <a href="https://089-sanierer.de" target="_blank" rel="noopener noreferrer">
+              <Card className="text-center hover-elevate cursor-pointer h-full" data-testid="card-partner-089sanierer">
+                <CardContent className="pt-6 pb-5">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <Building2 className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-bold text-base mb-1">089-Sanierer</h3>
+                  <p className="text-sm text-muted-foreground">Innenausbau & Komplettsanierung</p>
+                </CardContent>
+              </Card>
+            </a>
 
-            <Card className="text-center hover-elevate" data-testid="card-partner-kshw">
-              <CardContent className="pt-6 pb-5">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Wrench className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-bold text-base mb-1">KSHW München</h3>
-                <p className="text-sm text-muted-foreground">Innenausbau & Komplettsanierung</p>
-              </CardContent>
-            </Card>
+            <a href="https://kshw-muenchen.de" target="_blank" rel="noopener noreferrer">
+              <Card className="text-center hover-elevate cursor-pointer h-full" data-testid="card-partner-kshw">
+                <CardContent className="pt-6 pb-5">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <Wrench className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-bold text-base mb-1">KSHW München</h3>
+                  <p className="text-sm text-muted-foreground">Innenausbau & Komplettsanierung</p>
+                </CardContent>
+              </Card>
+            </a>
 
-            <Card className="text-center hover-elevate" data-testid="card-partner-089dach">
-              <CardContent className="pt-6 pb-5">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-bold text-base mb-1">089Dach GmbH</h3>
-                <p className="text-sm text-muted-foreground">Dachdecker- & Spenglerarbeiten</p>
-              </CardContent>
-            </Card>
+            <a href="https://089dach.de" target="_blank" rel="noopener noreferrer">
+              <Card className="text-center hover-elevate cursor-pointer h-full" data-testid="card-partner-089dach">
+                <CardContent className="pt-6 pb-5">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-bold text-base mb-1">089Dach GmbH</h3>
+                  <p className="text-sm text-muted-foreground">Dachdecker- & Spenglerarbeiten</p>
+                </CardContent>
+              </Card>
+            </a>
 
-            <Card className="text-center hover-elevate" data-testid="card-partner-extrucon">
-              <CardContent className="pt-6 pb-5">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Globe className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-bold text-base mb-1">Extrucon GmbH</h3>
-                <p className="text-sm text-muted-foreground">Webdesign & Digitalagentur</p>
-              </CardContent>
-            </Card>
+            <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer">
+              <Card className="text-center hover-elevate cursor-pointer h-full" data-testid="card-partner-extrucon">
+                <CardContent className="pt-6 pb-5">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <Globe className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-bold text-base mb-1">Extrucon GmbH</h3>
+                  <p className="text-sm text-muted-foreground">Webdesign & Digitalagentur</p>
+                </CardContent>
+              </Card>
+            </a>
 
-            <Card className="text-center hover-elevate" data-testid="card-partner-sanitaer">
-              <CardContent className="pt-6 pb-5">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <ShowerHead className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-bold text-base mb-1">Sanitär München</h3>
-                <p className="text-sm text-muted-foreground">Sanitär & Badinstallation</p>
-              </CardContent>
-            </Card>
+            <a href="https://sanitär-muenchen.de" target="_blank" rel="noopener noreferrer">
+              <Card className="text-center hover-elevate cursor-pointer h-full" data-testid="card-partner-sanitaer">
+                <CardContent className="pt-6 pb-5">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <ShowerHead className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-bold text-base mb-1">Sanitär München</h3>
+                  <p className="text-sm text-muted-foreground">Sanitär & Badinstallation</p>
+                </CardContent>
+              </Card>
+            </a>
 
-            <Card className="text-center hover-elevate" data-testid="card-partner-aquapro">
-              <CardContent className="pt-6 pb-5">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Droplets className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-bold text-base mb-1">Aquapro24</h3>
-                <p className="text-sm text-muted-foreground">Sanitär, Heizung & Klima</p>
-              </CardContent>
-            </Card>
+            <a href="https://aquapro24.de" target="_blank" rel="noopener noreferrer">
+              <Card className="text-center hover-elevate cursor-pointer h-full" data-testid="card-partner-aquapro">
+                <CardContent className="pt-6 pb-5">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <Droplets className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-bold text-base mb-1">Aquapro24</h3>
+                  <p className="text-sm text-muted-foreground">Sanitär, Heizung & Klima</p>
+                </CardContent>
+              </Card>
+            </a>
           </div>
 
           <div className="text-center mt-6">
