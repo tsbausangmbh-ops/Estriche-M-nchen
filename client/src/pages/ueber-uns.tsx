@@ -123,11 +123,14 @@ export default function UeberUns() {
       <Header />
       
       <section className="relative py-6 lg:py-8 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          role="img"
-          aria-label="Estrichleger München Fachbetrieb – 30 Jahre Erfahrung für Estricharbeiten"
-          style={{ backgroundImage: `url(${heroImage})` }}
+        <img
+          src={heroImage}
+          alt="Estrichleger München Fachbetrieb – 30 Jahre Erfahrung für Estricharbeiten"
+          width="1920"
+          height="1080"
+          fetchPriority="high"
+          decoding="sync"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
         <div className="page-container relative">

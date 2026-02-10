@@ -74,11 +74,14 @@ export default function ServiceDetail() {
       <Header />
 
       <section className="relative py-6 lg:py-8 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          role="img"
-          aria-label={`${service.title} München – Professionelle Estricharbeiten vom Fachbetrieb`}
-          style={{ backgroundImage: `url(${service.image})` }}
+        <img
+          src={service.image}
+          alt={`${service.title} München – Professionelle Estricharbeiten vom Fachbetrieb`}
+          width="1920"
+          height="1080"
+          fetchPriority="high"
+          decoding="sync"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
         
@@ -367,7 +370,8 @@ export default function ServiceDetail() {
                     decoding="async"
                     width="600"
                     height="420"
-                    className="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105"
+                    onLoad={(e) => e.currentTarget.classList.add('loaded')}
+                    className="w-full aspect-[4/3] object-cover transition-all duration-300 group-hover:scale-105"
                   />
                 </div>
                 <p className="text-sm text-muted-foreground text-center">{image.caption}</p>
@@ -556,7 +560,8 @@ export default function ServiceDetail() {
                       decoding="async"
                       width="600"
                       height="420"
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      onLoad={(e) => e.currentTarget.classList.add('loaded')}
+                      className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105"
                     />
                   </div>
                   <CardContent className="p-4">

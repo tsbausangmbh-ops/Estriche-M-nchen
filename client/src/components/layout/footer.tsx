@@ -23,6 +23,7 @@ export function Footer() {
                 height="40"
                 loading="lazy"
                 decoding="async"
+                onLoad={(e) => e.currentTarget.classList.add('loaded')}
               />
               <div>
                 <span className="block font-bold" style={{fontSize: '12px'}}>Estriche München</span>

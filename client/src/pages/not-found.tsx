@@ -24,9 +24,14 @@ export default function NotFound() {
       </Helmet>
       <Header />
       <main className="flex-1 relative py-10 lg:py-14 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroImage})` }}
+        <img
+          src={heroImage}
+          alt="404 Seite nicht gefunden – Estriche München"
+          width="1920"
+          height="1080"
+          fetchPriority="high"
+          decoding="sync"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
         

@@ -457,11 +457,14 @@ export default function Home() {
 
       {/* Hero Section */}
       <section id="hero" className="relative py-6 sm:py-10 lg:py-14 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          role="img"
-          aria-label="Estrichleger München – Professionelle Estrichverlegung Zementestrich und Fließestrich vom Fachbetrieb"
-          style={{ backgroundImage: `url(${heroImage})` }}
+        <img
+          src={heroImage}
+          alt="Estrichleger München – Professionelle Estrichverlegung Zementestrich und Fließestrich vom Fachbetrieb"
+          width="1920"
+          height="1080"
+          fetchPriority="high"
+          decoding="sync"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 dark:from-black/70 dark:via-black/55 dark:to-black/35" />
         <div className="page-container relative">
@@ -804,7 +807,8 @@ export default function Home() {
                       decoding="async"
                       width="600"
                       height="420"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      onLoad={(e) => e.currentTarget.classList.add('loaded')}
+                      className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/20 to-transparent" />
                     <div className="absolute bottom-4 left-4">
