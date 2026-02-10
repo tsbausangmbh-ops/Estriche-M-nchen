@@ -775,6 +775,78 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Services Section */}
+      <section id="leistungen" className="py-6 bg-accent">
+        <div className="page-container">
+          <div className="text-center mb-8">
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Die richtige Lösung für Ihr Projekt</p>
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold mb-4 tracking-tight"><strong>Estrich-Leistungen München</strong> – Welcher Boden passt zu Ihnen?</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
+              Von <Link href="/leistungen/zementestrich" className="text-primary hover:underline"><strong>Zementestrich München</strong></Link> über{" "}
+              <Link href="/leistungen/fliessestrich" className="text-primary hover:underline"><strong>Fließestrich München</strong></Link> bis{" "}
+              <Link href="/leistungen/heizestrich" className="text-primary hover:underline"><strong>Heizestrich München</strong></Link>:{" "}
+              <strong className="text-foreground">Über 2.500 zufriedene Kunden</strong> haben uns bereits ihr Vertrauen geschenkt. <strong className="text-foreground">Sie könnten der nächste sein.</strong>
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Link key={service.id} href={`/leistungen/${service.id}`}>
+                <Card 
+                  className="overflow-visible group cursor-pointer hover-elevate h-full"
+                  data-testid={`card-service-${index}`}
+                >
+                  <div className="relative h-52 overflow-hidden rounded-t-lg">
+                    <img 
+                      src={service.image} 
+                      alt={`${service.title} München - Estricharbeiten vom Fachbetrieb`}
+                      loading="lazy"
+                      decoding="async"
+                      width="600"
+                      height="420"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/20 to-transparent" />
+                    <div className="absolute bottom-4 left-4">
+                      <div className="w-12 h-12 rounded-lg bg-primary/90 backdrop-blur-sm flex items-center justify-center shadow-lg">
+                        <service.icon className="w-6 h-6 text-primary-foreground" />
+                      </div>
+                    </div>
+                  </div>
+                  <CardHeader className="pb-3 pt-5">
+                    <CardTitle className="text-lg" data-testid={`text-service-title-${index}`}>{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4 pt-0">
+                    <p className="text-sm text-muted-foreground italic">{service.problem}</p>
+                    <p className="text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                    <ul className="space-y-2 pt-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center gap-2 text-sm">
+                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-6">
+            <p className="text-muted-foreground mb-4"><strong className="text-foreground">Nicht sicher, welcher Estrich der richtige ist?</strong> Wir beraten Sie ehrlich – und empfehlen nur, was Sie wirklich brauchen. Kein Upselling.</p>
+            <Link href="/angebot">
+              <Button size="lg" data-testid="button-services-cta">
+                Kostenlose Beratung – Jetzt Termin sichern
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Partner-Netzwerk Section */}
       <section className="py-8">
         <div className="page-container">
@@ -855,78 +927,6 @@ export default function Home() {
               <Handshake className="w-4 h-4 text-primary" />
               <span>Koordinierte Abwicklung von Ausbau, Haustechnik & energetischer Sanierung im Raum München</span>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="leistungen" className="py-6 bg-accent">
-        <div className="page-container">
-          <div className="text-center mb-8">
-            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Die richtige Lösung für Ihr Projekt</p>
-            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold mb-4 tracking-tight"><strong>Estrich-Leistungen München</strong> – Welcher Boden passt zu Ihnen?</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-              Von <Link href="/leistungen/zementestrich" className="text-primary hover:underline"><strong>Zementestrich München</strong></Link> über{" "}
-              <Link href="/leistungen/fliessestrich" className="text-primary hover:underline"><strong>Fließestrich München</strong></Link> bis{" "}
-              <Link href="/leistungen/heizestrich" className="text-primary hover:underline"><strong>Heizestrich München</strong></Link>:{" "}
-              <strong className="text-foreground">Über 2.500 zufriedene Kunden</strong> haben uns bereits ihr Vertrauen geschenkt. <strong className="text-foreground">Sie könnten der nächste sein.</strong>
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Link key={service.id} href={`/leistungen/${service.id}`}>
-                <Card 
-                  className="overflow-visible group cursor-pointer hover-elevate h-full"
-                  data-testid={`card-service-${index}`}
-                >
-                  <div className="relative h-52 overflow-hidden rounded-t-lg">
-                    <img 
-                      src={service.image} 
-                      alt={`${service.title} München - Estricharbeiten vom Fachbetrieb`}
-                      loading="lazy"
-                      decoding="async"
-                      width="600"
-                      height="420"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/20 to-transparent" />
-                    <div className="absolute bottom-4 left-4">
-                      <div className="w-12 h-12 rounded-lg bg-primary/90 backdrop-blur-sm flex items-center justify-center shadow-lg">
-                        <service.icon className="w-6 h-6 text-primary-foreground" />
-                      </div>
-                    </div>
-                  </div>
-                  <CardHeader className="pb-3 pt-5">
-                    <CardTitle className="text-lg" data-testid={`text-service-title-${index}`}>{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4 pt-0">
-                    <p className="text-sm text-muted-foreground italic">{service.problem}</p>
-                    <p className="text-sm leading-relaxed">
-                      {service.description}
-                    </p>
-                    <ul className="space-y-2 pt-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center gap-2 text-sm">
-                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center mt-6">
-            <p className="text-muted-foreground mb-4"><strong className="text-foreground">Nicht sicher, welcher Estrich der richtige ist?</strong> Wir beraten Sie ehrlich – und empfehlen nur, was Sie wirklich brauchen. Kein Upselling.</p>
-            <Link href="/angebot">
-              <Button size="lg" data-testid="button-services-cta">
-                Kostenlose Beratung – Jetzt Termin sichern
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
