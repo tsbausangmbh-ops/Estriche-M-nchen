@@ -78,7 +78,7 @@ export function Footer() {
             <h4 className="font-semibold text-background/80 mb-2" style={{fontSize: '11px'}}>Partnernetzwerk</h4>
             <ul className="space-y-1 text-background/50" style={{fontSize: '11px'}}>
               <li><a href="https://089-sanierer.de" target="_blank" rel="noopener noreferrer" className="footer-link">089-Sanierer</a></li>
-              <li><a href="https://kshw-muenchen.de" target="_blank" rel="noopener noreferrer" className="footer-link">KSHW München</a></li>
+              <li><a href="https://komplettsanierungen-haus-wohnung.de" target="_blank" rel="noopener noreferrer" className="footer-link">KSHW München</a></li>
               <li><a href="https://089dach.de" target="_blank" rel="noopener noreferrer" className="footer-link">089Dach GmbH</a></li>
               <li><a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="footer-link">Extrucon GmbH</a></li>
               <li><a href="https://sanitär-muenchen.de" target="_blank" rel="noopener noreferrer" className="footer-link">Sanitär München</a></li>

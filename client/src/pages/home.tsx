@@ -873,7 +873,7 @@ export default function Home() {
               </Card>
             </a>
 
-            <a href="https://kshw-muenchen.de" target="_blank" rel="noopener noreferrer">
+            <a href="https://komplettsanierungen-haus-wohnung.de" target="_blank" rel="noopener noreferrer">
               <Card className="text-center hover-elevate cursor-pointer h-full" data-testid="card-partner-kshw">
                 <CardContent className="pt-6 pb-5">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
