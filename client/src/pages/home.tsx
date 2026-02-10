@@ -16,7 +16,10 @@ import {
   Wrench,
   Shield,
   Thermometer,
-  Zap
+  Zap,
+  Handshake,
+  Droplets,
+  ShowerHead
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -770,6 +773,90 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Partner-Netzwerk Section */}
+      <section className="py-8">
+        <div className="page-container">
+          <div className="text-center mb-8">
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Starkes Netzwerk, reibungslose Projekte</p>
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold mb-4 tracking-tight">
+              Unser <strong>Partnernetzwerk</strong> in München
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
+              Wir arbeiten mit geprüften Fachbetrieben aus Sanitär, Heizung, Klima und Elektro zusammen – für effiziente Abläufe aus einer Hand.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="text-center hover-elevate" data-testid="card-partner-089sanierer">
+              <CardContent className="pt-6 pb-5">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <Building2 className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-bold text-base mb-1">089-Sanierer</h3>
+                <p className="text-sm text-muted-foreground">Innenausbau & Komplettsanierung</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover-elevate" data-testid="card-partner-kshw">
+              <CardContent className="pt-6 pb-5">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <Wrench className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-bold text-base mb-1">KSHW München</h3>
+                <p className="text-sm text-muted-foreground">Innenausbau & Komplettsanierung</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover-elevate" data-testid="card-partner-089dach">
+              <CardContent className="pt-6 pb-5">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-bold text-base mb-1">089Dach GmbH</h3>
+                <p className="text-sm text-muted-foreground">Dachdecker- & Spenglerarbeiten</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover-elevate" data-testid="card-partner-estriche">
+              <CardContent className="pt-6 pb-5">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <Ruler className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-bold text-base mb-1">Estriche München</h3>
+                <p className="text-sm text-muted-foreground">Estricharbeiten & Bodenaufbau</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover-elevate" data-testid="card-partner-sanitaer">
+              <CardContent className="pt-6 pb-5">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <ShowerHead className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-bold text-base mb-1">Sanitär München</h3>
+                <p className="text-sm text-muted-foreground">Sanitär & Badinstallation</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover-elevate" data-testid="card-partner-aquapro">
+              <CardContent className="pt-6 pb-5">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <Droplets className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-bold text-base mb-1">Aquapro24</h3>
+                <p className="text-sm text-muted-foreground">Sanitär, Heizung & Klima</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-6">
+            <div className="inline-flex items-center gap-2 text-muted-foreground text-sm">
+              <Handshake className="w-4 h-4 text-primary" />
+              <span>Koordinierte Abwicklung von Ausbau, Haustechnik & energetischer Sanierung im Raum München</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Services Section */}
       <section id="leistungen" className="py-6 bg-accent">
