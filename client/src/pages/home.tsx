@@ -879,7 +879,7 @@ export default function Home() {
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
                     <Wrench className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="font-bold text-base mb-1">KSHW München</h3>
+                  <h3 className="font-bold text-base mb-1">komplettsanierungen-haus-wohnung.de</h3>
                   <p className="text-sm text-muted-foreground">Innenausbau & Komplettsanierung</p>
                 </CardContent>
               </Card>
