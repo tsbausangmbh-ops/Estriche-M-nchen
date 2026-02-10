@@ -823,7 +823,7 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
                   <Ruler className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="font-bold text-base mb-1">Estriche München</h3>
+                <h3 className="font-bold text-base mb-1">Extrucon GmbH</h3>
                 <p className="text-sm text-muted-foreground">Estricharbeiten & Bodenaufbau</p>
               </CardContent>
             </Card>
