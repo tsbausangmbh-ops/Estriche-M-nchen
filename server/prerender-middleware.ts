@@ -170,24 +170,32 @@ async function handleCrawler(req: Request, res: Response, next: NextFunction): P
 </html>`);
 }
 
-function generateHeadInjection(path: string): string | null {
+const injectionCache = new Map<string, { head: string | null; body: string | null }>();
+
+function generateInjections(path: string): { head: string | null; body: string | null } {
+  const cached = injectionCache.get(path);
+  if (cached) return cached;
   const ssrHtml = generateStaticSEOContent(path);
-  if (!ssrHtml) return null;
+  if (!ssrHtml) return { head: null, body: null };
 
-  const parts: string[] = [];
-
+  const headParts: string[] = [];
   const jsonLd = extractJsonLd(ssrHtml);
-  if (jsonLd) parts.push(jsonLd);
-
+  if (jsonLd) headParts.push(jsonLd);
   const metaTags = extractMetaTags(ssrHtml);
-  if (metaTags) parts.push(metaTags);
+  if (metaTags) headParts.push(metaTags);
+  const head = headParts.length > 0 ? `\n  <!-- SSR-Injection -->\n  ${headParts.join('\n  ')}\n  <!-- /SSR-Injection -->` : null;
 
-  return parts.length > 0 ? `\n  <!-- SSR-Injection -->\n  ${parts.join('\n  ')}\n  <!-- /SSR-Injection -->` : null;
+  const bodyMatch = ssrHtml.match(/<body[^>]*>([\s\S]*?)<\/body>/);
+  const body = bodyMatch && bodyMatch[1] ? `<!-- SSR-Body -->${bodyMatch[1].trim()}<!-- /SSR-Body -->` : null;
+
+  const result = { head, body };
+  injectionCache.set(path, result);
+  return result;
 }
 
 function handleNormalVisitor(req: Request, res: Response, next: NextFunction): void {
-  const injection = generateHeadInjection(req.path);
-  if (!injection) {
+  const { head: headInjection, body: bodyInjection } = generateInjections(req.path);
+  if (!headInjection && !bodyInjection) {
     return next();
   }
 
@@ -199,20 +207,33 @@ function handleNormalVisitor(req: Request, res: Response, next: NextFunction): v
 
   function injectIntoHtml(chunk: any): any {
     if (injected) return chunk;
-    if (typeof chunk === 'string' && chunk.includes('</head>')) {
-      injected = true;
-      res.setHeader('X-SSR-Injection', 'true');
-      return chunk.replace('</head>', `${injection}\n</head>`);
+    let str: string;
+    const isBuffer = Buffer.isBuffer(chunk);
+
+    if (typeof chunk === 'string') {
+      str = chunk;
+    } else if (isBuffer) {
+      str = chunk.toString('utf-8');
+    } else {
+      return chunk;
     }
-    if (Buffer.isBuffer(chunk)) {
-      const str = chunk.toString('utf-8');
-      if (str.includes('</head>')) {
-        injected = true;
-        res.setHeader('X-SSR-Injection', 'true');
-        return Buffer.from(str.replace('</head>', `${injection}\n</head>`), 'utf-8');
-      }
+
+    if (!str.includes('</head>') && !str.includes('<div id="root">')) {
+      return chunk;
     }
-    return chunk;
+
+    injected = true;
+    res.setHeader('X-SSR-Injection', 'true');
+
+    if (headInjection && str.includes('</head>')) {
+      str = str.replace('</head>', `${headInjection}\n</head>`);
+    }
+
+    if (bodyInjection && str.includes('<div id="root"></div>')) {
+      str = str.replace('<div id="root"></div>', `<div id="root">${bodyInjection}</div>`);
+    }
+
+    return isBuffer ? Buffer.from(str, 'utf-8') : str;
   }
 
   res.send = function (body: any): Response {

@@ -52,10 +52,15 @@ The backend serves three purposes:
 3. SEO bot detection with static content serving
 
 ### Hybrid Rendering (Google 2026 Optimized)
-The server implements a Hybrid Rendering strategy optimized for Google 2026 standards, combining client-side React with server-side pre-rendered content for crawlers.
+The server implements a Unified SSR Middleware strategy (`server/prerender-middleware.ts`) optimized for Google 2026 standards, combining client-side React with server-side pre-rendered content.
 
-**Bot Detection & SSR (`server/seo-bot-middleware.ts`):**
-- Comprehensive bot detection for 70+ crawlers including AI/LLM bots
+**Unified SSR Middleware (`server/prerender-middleware.ts`):**
+- **Crawler-Pfad:** Bot-Erkennung → Prerender.io API (5s Timeout) → HTML-Validierung (JSON-LD Check) → Anreicherung falls nötig → Fallback auf eigene SSR
+- **Besucher-Pfad:** Head-Injection (Meta-Tags, JSON-LD) + Body-Injection (Navigation, H1, Texte, Footer) in `<div id="root">`. React überschreibt den Inhalt beim Mounten.
+- **In-Memory-Cache:** Generierte Injections werden pro Pfad gecacht für Performance
+- **Ergebnis:** `view-source` zeigt für alle Besucher vollen semantischen HTML-Inhalt (nicht nur leeres `<div id="root"></div>`)
+
+**Bot Detection (70+ Crawler):**
 - Google Family: Googlebot, Google-Extended, Google-InspectionTool
 - AI Crawlers: GPTBot, ClaudeBot, PerplexityBot, Cohere-AI, Amazonbot
 - Microsoft/Copilot: Bingbot, BingPreview, MicrosoftPreview
