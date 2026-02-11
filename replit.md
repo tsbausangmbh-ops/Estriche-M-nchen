@@ -77,6 +77,7 @@ The server implements a Hybrid Rendering strategy optimized for Google 2026 stan
 - Prerender.io liefert immer als erster HTML aus → eigene SSR nur als Fallback für Bots die prerender.io nicht abfängt
 - Konfiguration: protocol=https, host=estriche-muenchen.de, /api/ blacklisted
 - Token via `PRERENDER_TOKEN` Secret
+- **Auto-Recache:** Bei jedem Deploy/Neustart werden alle 21 Seiten automatisch über die Prerender.io Recache-API erneuert (`server/prerender-recache.ts`)
 
 **Static Content:** Pre-generated HTML with full meta tags, Open Graph, JSON-LD structured data in `server/seo-static-content.ts`
 

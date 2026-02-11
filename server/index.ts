@@ -5,6 +5,7 @@ import { createServer } from "http";
 import { seoBotMiddleware } from "./seo-bot-middleware";
 import compression from "compression";
 import prerenderNode from "prerender-node";
+import { recachePrerenderPages } from "./prerender-recache";
 
 const app = express();
 const httpServer = createServer(app);
@@ -135,6 +136,9 @@ app.use(seoBotMiddleware);
     },
     () => {
       log(`serving on port ${port}`);
+
+      // Prerender.io Cache bei jedem Deploy/Neustart automatisch erneuern
+      recachePrerenderPages();
     },
   );
 })();
