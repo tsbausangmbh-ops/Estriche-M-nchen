@@ -72,6 +72,12 @@ The server implements a Hybrid Rendering strategy optimized for Google 2026 stan
 - High-priority pages prerended: zementestrich, fussbodenheizung, kontakt, preise
 - Secondary pages prefetched: industrieboeden, waermedaemmung, sanierung
 
+**Prerender.io Fallback:**
+- `prerender-node` Middleware nach eigener SSR-Middleware eingebunden
+- Eigene SSR fängt 70+ bekannte Bots ab → prerender.io übernimmt unbekannte Crawler
+- Konfiguration: protocol=https, host=estriche-muenchen.de, /api/ blacklisted
+- Token via `PRERENDER_TOKEN` Secret
+
 **Static Content:** Pre-generated HTML with full meta tags, Open Graph, JSON-LD structured data in `server/seo-static-content.ts`
 
 ### Data Storage
