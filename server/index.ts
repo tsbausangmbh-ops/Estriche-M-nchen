@@ -2,11 +2,9 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
-import { createRequire } from "module";
 import { seoBotMiddleware } from "./seo-bot-middleware";
 import compression from "compression";
-
-const require = createRequire(import.meta.url);
+import prerenderNode from "prerender-node";
 
 const app = express();
 const httpServer = createServer(app);
@@ -95,7 +93,6 @@ app.use(seoBotMiddleware);
 
 // Prerender.io as fallback for bots not caught by our SSR middleware
 if (process.env.PRERENDER_TOKEN) {
-  const prerenderNode = require('prerender-node');
   app.use(prerenderNode
     .set('prerenderToken', process.env.PRERENDER_TOKEN)
     .set('protocol', 'https')
