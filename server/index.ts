@@ -89,17 +89,17 @@ app.use((req, res, next) => {
   next();
 });
 
-// 1. Eigene SSR-Middleware: liefert vorgerendertes HTML für bekannte Bots
+// 1. Eigene SSR-Middleware: liefert vorgerendertes HTML für alle bekannten Bots
 app.use(seoBotMiddleware);
 
-// 2. Prerender.io: übernimmt immer als zusätzliche Absicherung
+// 2. Prerender.io: immer aktiv – cached und liefert HTML auf allen Seiten inkl. Startseite
 app.use(prerenderNode
   .set('prerenderToken', process.env.PRERENDER_TOKEN || '')
   .set('protocol', 'https')
   .set('host', 'estriche-muenchen.de')
   .blacklisted(['^/api/'])
 );
-console.log('[Prerender.io] Middleware active - always on');
+console.log('[Prerender.io] Middleware active - always on, all pages including homepage');
 
 (async () => {
   await registerRoutes(httpServer, app);
