@@ -89,20 +89,17 @@ app.use((req, res, next) => {
   next();
 });
 
+// 1. Eigene SSR-Middleware: liefert vorgerendertes HTML für bekannte Bots
 app.use(seoBotMiddleware);
 
-// Prerender.io as fallback for bots not caught by our SSR middleware
-if (process.env.PRERENDER_TOKEN) {
-  app.use(prerenderNode
-    .set('prerenderToken', process.env.PRERENDER_TOKEN)
-    .set('protocol', 'https')
-    .set('host', 'estriche-muenchen.de')
-    .blacklisted(['^/api/'])
-  );
-  console.log('[Prerender.io] Middleware active as SSR fallback');
-} else {
-  console.log('[Prerender.io] No PRERENDER_TOKEN set - running without prerender.io fallback');
-}
+// 2. Prerender.io: übernimmt immer als zusätzliche Absicherung
+app.use(prerenderNode
+  .set('prerenderToken', process.env.PRERENDER_TOKEN || '')
+  .set('protocol', 'https')
+  .set('host', 'estriche-muenchen.de')
+  .blacklisted(['^/api/'])
+);
+console.log('[Prerender.io] Middleware active - always on');
 
 (async () => {
   await registerRoutes(httpServer, app);
