@@ -90,6 +90,20 @@ app.use((req, res, next) => {
 
 app.use(seoBotMiddleware);
 
+// Prerender.io as fallback for bots not caught by our SSR middleware
+if (process.env.PRERENDER_TOKEN) {
+  const prerenderNode = require('prerender-node');
+  app.use(prerenderNode
+    .set('prerenderToken', process.env.PRERENDER_TOKEN)
+    .set('protocol', 'https')
+    .set('host', 'estriche-muenchen.de')
+    .blacklisted(['^/api/'])
+  );
+  console.log('[Prerender.io] Middleware active as SSR fallback');
+} else {
+  console.log('[Prerender.io] No PRERENDER_TOKEN set - running without prerender.io fallback');
+}
+
 (async () => {
   await registerRoutes(httpServer, app);
 
