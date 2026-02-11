@@ -128,7 +128,7 @@ export default function UeberUns() {
           alt="Estrichleger München Fachbetrieb – 30 Jahre Erfahrung für Estricharbeiten"
           width="1920"
           height="1080"
-          fetchPriority="high"
+          fetchpriority="high"
           decoding="sync"
           className="absolute inset-0 w-full h-full object-cover"
         />

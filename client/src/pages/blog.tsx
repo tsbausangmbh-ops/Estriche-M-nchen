@@ -73,7 +73,7 @@ export default function Blog() {
           alt="Estrich Blog München – Ratgeber und Tipps vom Estrichleger Fachbetrieb"
           width="1920"
           height="1080"
-          fetchPriority="high"
+          fetchpriority="high"
           decoding="sync"
           className="absolute inset-0 w-full h-full object-cover"
         />

@@ -2,8 +2,11 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
+import { createRequire } from "module";
 import { seoBotMiddleware } from "./seo-bot-middleware";
 import compression from "compression";
+
+const require = createRequire(import.meta.url);
 
 const app = express();
 const httpServer = createServer(app);

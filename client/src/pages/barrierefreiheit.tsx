@@ -27,7 +27,7 @@ export default function Barrierefreiheit() {
           alt="Barrierefreiheit Estriche München – Erklärung zur digitalen Barrierefreiheit"
           width="1920"
           height="1080"
-          fetchPriority="high"
+          fetchpriority="high"
           decoding="sync"
           className="absolute inset-0 w-full h-full object-cover"
         />
