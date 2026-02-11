@@ -2,9 +2,8 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
-import { seoBotMiddleware } from "./seo-bot-middleware";
 import compression from "compression";
-import prerenderNode from "prerender-node";
+import { unifiedSSRMiddleware } from "./prerender-middleware";
 import { recachePrerenderPages } from "./prerender-recache";
 
 const app = express();
@@ -90,17 +89,11 @@ app.use((req, res, next) => {
   next();
 });
 
-// 1. Prerender.io: immer als erster – liefert HTML auf allen Seiten inkl. Startseite
-app.use(prerenderNode
-  .set('prerenderToken', process.env.PRERENDER_TOKEN || '')
-  .set('protocol', 'https')
-  .set('host', 'estriche-muenchen.de')
-  .blacklisted(['^/api/'])
-);
-console.log('[Prerender.io] Middleware active - always first, all pages');
-
-// 2. Eigene SSR-Middleware: Fallback für Bots die prerender.io nicht abfängt
-app.use(seoBotMiddleware);
+// Unified SSR Middleware:
+// Crawler → Prerender.io zuerst → Validierung → Anreicherung → Fallback SSR
+// Normale Besucher → Meta-Tags + JSON-LD Injection in HTML
+app.use(unifiedSSRMiddleware);
+console.log('[SSR] Unified Middleware active: Prerender.io first + SSR fallback + visitor injection');
 
 (async () => {
   await registerRoutes(httpServer, app);
