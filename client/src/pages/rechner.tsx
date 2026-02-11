@@ -620,7 +620,7 @@ Hinweis: Diese Berechnung dient nur zur Orientierung. Der tatsächliche Preis wi
           alt="Estrich Kostenrechner München – Estrich Kosten pro m² online berechnen"
           width="1920"
           height="1080"
-          fetchpriority="high"
+          {...{ fetchpriority: "high" } as any}
           decoding="sync"
           className="absolute inset-0 w-full h-full object-cover"
         />

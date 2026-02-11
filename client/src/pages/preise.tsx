@@ -203,7 +203,7 @@ export default function Preise() {
           alt="Estrich Preise München – Transparente Kosten pro m² mit Festpreis-Garantie"
           width="1920"
           height="1080"
-          fetchpriority="high"
+          {...{ fetchpriority: "high" } as any}
           decoding="sync"
           className="absolute inset-0 w-full h-full object-cover"
         />

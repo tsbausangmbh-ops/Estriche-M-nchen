@@ -79,7 +79,7 @@ export default function ServiceDetail() {
           alt={`${service.title} München – Professionelle Estricharbeiten vom Fachbetrieb`}
           width="1920"
           height="1080"
-          fetchpriority="high"
+          {...{ fetchpriority: "high" } as any}
           decoding="sync"
           className="absolute inset-0 w-full h-full object-cover"
         />

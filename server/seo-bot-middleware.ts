@@ -181,15 +181,14 @@ export function seoBotMiddleware(req: Request, res: Response, next: NextFunction
     return next();
   }
   
-  if (req.path.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|map|json|xml|txt)$/)) {
+  if (req.path.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|map|json|xml|txt|webp|avif|mp4|webm|pdf)$/)) {
     return next();
   }
   
   const isBotUA = isBot(userAgent);
   const isHeadlessUA = isHeadless(userAgent);
-  const hasNoAcceptLanguage = !req.headers['accept-language'];
   
-  const shouldServeStatic = isBotUA || isHeadlessUA || (hasNoAcceptLanguage && !userAgent?.includes('curl'));
+  const shouldServeStatic = isBotUA || isHeadlessUA;
   
   if (shouldServeStatic) {
     let cachedHTML = getCachedHTML(req.path);

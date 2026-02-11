@@ -184,7 +184,7 @@ export default function Ablauf() {
           alt="Estrich verlegen Ablauf München – Estrichverlegung in 7 Schritten"
           width="1920"
           height="1080"
-          fetchpriority="high"
+          {...{ fetchpriority: "high" } as any}
           decoding="sync"
           className="absolute inset-0 w-full h-full object-cover"
         />

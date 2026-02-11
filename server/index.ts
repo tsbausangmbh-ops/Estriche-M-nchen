@@ -19,7 +19,7 @@ app.use((req, res, next) => {
     res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
   } 
   // Cache other static assets with shorter duration (1 week)
-  else if (req.path.match(/\.(png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|webp)$/)) {
+  else if (req.path.match(/\.(png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|webp|avif|mp4|webm|pdf)$/)) {
     res.setHeader('Cache-Control', 'public, max-age=604800, stale-while-revalidate=86400');
   }
   // Security headers

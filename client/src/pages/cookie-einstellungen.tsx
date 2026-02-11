@@ -115,7 +115,7 @@ export default function CookieEinstellungen() {
           alt="Cookie-Einstellungen Estriche München – Datenschutz und Cookie-Verwaltung"
           width="1920"
           height="1080"
-          fetchpriority="high"
+          {...{ fetchpriority: "high" } as any}
           decoding="sync"
           className="absolute inset-0 w-full h-full object-cover"
         />
