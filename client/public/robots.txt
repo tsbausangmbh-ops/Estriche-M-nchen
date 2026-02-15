@@ -1,29 +1,20 @@
 # robots.txt für estriche-muenchen.de
-# Optimiert für Suchmaschinen, KI-Suchsysteme und GEO (2026)
-# Standort: München, Bayern, Deutschland
-# Geo-Koordinaten: 48.1351, 11.5820
-# Letzte Aktualisierung: Januar 2026
+# Alle Suchmaschinen & KI-Suchbots erlaubt, alle Seiten indexiert
+# Nur KI-Training-Bots blockiert
+# Letzte Aktualisierung: Februar 2026
 
+# === STANDARD: Alle Bots erlaubt ===
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /assets/*.map
+Disallow: /.well-known/
 
-# Sitemap-Verweis
 Sitemap: https://estriche-muenchen.de/sitemap.xml
 
-# IndexNow für sofortige Indexierung (Bing, Yandex, Seznam, Naver)
-# IndexNow-Key: https://estriche-muenchen.de/indexnow-key.txt
+# === SUCHMASCHINEN – Volle Priorität ===
 
-# LLMs.txt für KI-Systeme (GEO 2026)
-# LLMs-Txt: https://estriche-muenchen.de/llms.txt
-
-# AI Optimization Metadata
-# AI-Overview-Optimized: true
-# E-E-A-T-Signals: Experience, Expertise, Authority, Trust
-# Structured-Data: LocalBusiness, FAQPage, HowTo, Service, Review
-
-# === SUCHMASCHINEN-BOTS ===
-
-# Googlebot - Volle Priorität
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
@@ -37,15 +28,12 @@ Allow: /
 User-agent: Googlebot-Video
 Allow: /
 
-# Google AI/SGE (Search Generative Experience)
 User-agent: Google-Extended
 Allow: /
 
-# Google Gemini
 User-agent: Gemini
 Allow: /
 
-# Bingbot
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
@@ -53,21 +41,24 @@ Crawl-delay: 1
 User-agent: msnbot
 Allow: /
 
-# Yandex (für internationale Sichtbarkeit)
 User-agent: Yandex
 Allow: /
 
-# Baidu
 User-agent: Baiduspider
 Allow: /
 
-# DuckDuckGo
 User-agent: DuckDuckBot
 Allow: /
 
-# === KI-SUCHMASCHINEN (GEO 2026) ===
+User-agent: Applebot
+Allow: /
+Crawl-delay: 1
 
-# ChatGPT / OpenAI
+User-agent: AppleBot-Extended
+Allow: /
+
+# === KI-SUCHMASCHINEN (erlaubt – Suche & Antworten) ===
+
 User-agent: GPTBot
 Allow: /
 
@@ -77,14 +68,12 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-# Perplexity AI
 User-agent: PerplexityBot
 Allow: /
 
 User-agent: Perplexity-User
 Allow: /
 
-# Claude / Anthropic
 User-agent: anthropic-ai
 Allow: /
 
@@ -94,51 +83,57 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-# Meta AI / Llama
-User-agent: FacebookBot
-Allow: /
-
 User-agent: Meta-ExternalAgent
 Allow: /
 
 User-agent: Meta-ExternalFetcher
 Allow: /
 
-# Microsoft Copilot
+User-agent: FacebookBot
+Allow: /
+
 User-agent: Copilot
 Allow: /
 
 User-agent: CopilotChat
 Allow: /
 
-# Cohere AI
 User-agent: cohere-ai
 Allow: /
 
-# YouBot (You.com)
 User-agent: YouBot
 Allow: /
 
-# Apple Intelligence / Siri
-User-agent: Applebot
-Allow: /
-Crawl-delay: 1
-
-User-agent: AppleBot-Extended
-Allow: /
-
-# Mistral AI
 User-agent: MistralBot
 Allow: /
 
-# xAI / Grok
 User-agent: Grok
 Allow: /
 
 User-agent: xAI-Grok
 Allow: /
 
-# === SOCIAL MEDIA BOTS ===
+# === SEO-TOOLS (erlaubt – Analyse & Monitoring) ===
+
+User-agent: SemrushBot
+Allow: /
+
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: MJ12bot
+Allow: /
+
+User-agent: DotBot
+Allow: /
+
+User-agent: Screaming Frog SEO Spider
+Allow: /
+
+User-agent: rogerbot
+Allow: /
+
+# === SOCIAL MEDIA BOTS (erlaubt) ===
 
 User-agent: Twitterbot
 Allow: /
@@ -149,13 +144,25 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
-User-agent: Pinterest
+User-agent: facebookexternalhit
 Allow: /
 
 User-agent: Slackbot
 Allow: /
 
-# === ERLAUBE WICHTIGE RESSOURCEN ===
+User-agent: Discordbot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: Pinterestbot
+Allow: /
+
+User-agent: Redditbot
+Allow: /
+
+# === ERLAUBTE RESSOURCEN ===
 
 Allow: /assets/*.js
 Allow: /assets/*.css
@@ -166,14 +173,8 @@ Allow: /assets/*.svg
 Allow: /llms.txt
 Allow: /sitemap.xml
 
-# === BLOCKIERUNGEN ===
-
-Disallow: /api/
-Disallow: /*.json$
-Disallow: /assets/*.map
-Disallow: /.well-known/
-
-# === SCRAPER BLOCKIEREN ===
+# === NUR KI-TRAINING-BOTS BLOCKIERT ===
+# Diese Bots crawlen ausschließlich zum Trainieren von KI-Modellen
 
 User-agent: CCBot
 Disallow: /
@@ -181,22 +182,23 @@ Disallow: /
 User-agent: Bytespider
 Disallow: /
 
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
-
 User-agent: Scrapy
 Disallow: /
 
-# === GEO-INFORMATIONEN ===
-# Einzugsgebiet: München und Umgebung (50km Radius)
-# Stadtteile: Schwabing, Bogenhausen, Trudering, Pasing, Sendling, Laim, Neuhausen
-# Umliegende Städte: Dachau, Freising, Erding, Starnberg, Fürstenfeldbruck, Germering
+User-agent: img2dataset
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /

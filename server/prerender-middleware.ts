@@ -23,12 +23,12 @@ const BOT_USER_AGENTS = [
   'screaming frog', 'rogerbot',
   'applebot', 'discordbot', 'telegrambot', 'whatsapp', 'slackbot',
   'redditbot', 'yeti', 'seznambot', 'archive.org_bot',
-  'headlesschrome', 'phantomjs', 'prerender', 'lighthouse',
+  'phantomjs',
   'chrome-lighthouse', 'pagespeed', 'gtmetrix', 'webpagetest',
 ];
 
 const HEADLESS_SIGNALS = [
-  'headlesschrome', 'phantomjs', 'puppeteer', 'playwright', 'selenium', 'webdriver',
+  'phantomjs', 'puppeteer', 'playwright', 'selenium', 'webdriver',
 ];
 
 const STATIC_EXT = /\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|map|json|xml|txt|webp|avif|mp4|webm|pdf)$/;
@@ -92,7 +92,10 @@ function enrichHtmlWithSSR(prerenderHtml: string, ssrHtml: string): string {
 
 async function fetchFromPrerender(path: string): Promise<string | null> {
   const token = process.env.PRERENDER_TOKEN;
-  if (!token) return null;
+  if (!token) {
+    console.log('[Prerender] Kein PRERENDER_TOKEN gesetzt');
+    return null;
+  }
 
   const url = `${SITE_BASE}${path}`;
 
@@ -105,13 +108,26 @@ async function fetchFromPrerender(path: string): Promise<string | null> {
         'X-Prerender-Token': token,
         'User-Agent': 'Mozilla/5.0 (compatible; PrerenderFetch/1.0)',
       },
+      redirect: 'manual',
       signal: controller.signal,
     });
     clearTimeout(timeout);
 
     if (response.ok) {
-      return await response.text();
+      const html = await response.text();
+      if (html && html.length > 500) {
+        console.log(`[Prerender] Cache HIT für ${path} (${html.length} bytes)`);
+        return html;
+      }
+      console.log(`[Prerender] Cache HIT aber zu kurz für ${path} (${html.length} bytes)`);
+      return null;
     }
+
+    if (response.status === 307 || response.status === 301 || response.status === 302) {
+      console.log(`[Prerender] Cache MISS (${response.status} Redirect) für ${path} – Seite noch nicht gecacht`);
+      return null;
+    }
+
     console.log(`[Prerender] API ${response.status} für ${path}`);
     return null;
   } catch (error) {
