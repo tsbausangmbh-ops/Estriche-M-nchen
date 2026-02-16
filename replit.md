@@ -5,11 +5,15 @@
 This is a professional B2C/B2B service website for Estrich München, a flooring (screed) installation company serving Munich and surrounding areas. The application is built as a single-page marketing website with a contact form for lead generation. The design follows professional German craftsmanship aesthetics inspired by Stripe and Linear, emphasizing trust, clarity, and technical competence.
 
 **Key Features:**
-- Single-page landing site with sections for services, process, pricing, and FAQ
+- Multi-page website with 76+ SEO-optimized pages
+- 8 service pages (Zementestrich, Fließestrich, Heizestrich, Fußbodenheizung, Industrieböden, Schnellestrich, Wärmedämmung, Sanierung)
+- 25 Munich district pages (`/muenchen/[stadtteil-slug]`) for local SEO
+- 29 blog/ratgeber articles targeting long-tail keywords
 - Contact form with form validation for customer inquiries
 - Responsive design optimized for mobile and desktop
 - Light/dark theme support
 - German language content targeting local Munich market
+- Sitemap with 76 URLs, Prerender.io recache for all pages
 
 ## User Preferences
 
