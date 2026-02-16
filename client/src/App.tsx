@@ -25,6 +25,7 @@ const Angebot = lazy(() => import("@/pages/angebot"));
 const Rechner = lazy(() => import("@/pages/rechner"));
 const CookieEinstellungen = lazy(() => import("@/pages/cookie-einstellungen"));
 const Barrierefreiheit = lazy(() => import("@/pages/barrierefreiheit"));
+const District = lazy(() => import("@/pages/district"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 function ScrollToTop() {
@@ -65,6 +66,7 @@ function Router() {
         <Route path="/rechner" component={Rechner} />
         <Route path="/cookie-einstellungen" component={CookieEinstellungen} />
         <Route path="/barrierefreiheit" component={Barrierefreiheit} />
+        <Route path="/muenchen/:slug" component={District} />
         <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
       </Switch>

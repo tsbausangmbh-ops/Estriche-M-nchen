@@ -7,7 +7,7 @@
   <!-- Startseite - Höchste Priorität -->
   <url>
     <loc>https://estriche-muenchen.de/</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,7 +15,7 @@
   <!-- Kostenrechner - Sehr hohe Priorität für Conversions -->
   <url>
     <loc>https://estriche-muenchen.de/rechner</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -23,49 +23,49 @@
   <!-- Hauptdienstleistungen - Hohe Priorität -->
   <url>
     <loc>https://estriche-muenchen.de/leistungen/zementestrich</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/leistungen/fliessestrich</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/leistungen/heizestrich</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/leistungen/industrieboeden</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/leistungen/fussbodenheizung</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/leistungen/schnellestrich</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/leistungen/waermedaemmung</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/leistungen/sanierung</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -73,13 +73,13 @@
   <!-- Wichtige Conversion-Seiten -->
   <url>
     <loc>https://estriche-muenchen.de/kontakt</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/angebot</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -87,65 +87,393 @@
   <!-- Informationsseiten -->
   <url>
     <loc>https://estriche-muenchen.de/preise</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/ablauf</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/faq</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/ueber-uns</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
-  <!-- Ratgeber für Long-Tail Keywords -->
+  <!-- Ratgeber Übersicht -->
   <url>
     <loc>https://estriche-muenchen.de/ratgeber</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Ratgeber Artikel - Long-Tail Keywords -->
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/estrich-trocknungszeit-richtig-berechnen</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/fussbodenheizung-estrich-was-beachten</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/estrich-sanierung-wann-notwendig</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/industrieboden-anforderungen-gewerbe</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/schnellestrich-vorteile-einsatzgebiete</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/waermedaemmung-estrich-energiesparen</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/zementestrich-oder-fliessestrich</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/estrich-kosten-berechnen-preisfaktoren</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/fehler-estricharbeiten-vermeiden</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/estrich-aufbau-schichten-erklaert</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/estrich-schleifen-polieren-anleitung</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/estrich-grundierung-wann-notwendig</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/schwimmender-estrich-vorteile-aufbau</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/estrich-dicke-berechnen-empfehlung</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/estrich-feuchtigkeit-messen-cm-methode</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/aufheizprotokoll-fussbodenheizung-anleitung</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/estrich-daemmung-pflicht-geg-2026</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/estrich-gefaelle-bad-dusche</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/estrich-risse-ursachen-reparatur</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/estrich-altbau-sanierung-tipps</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/sichtestrich-kosten-vorteile-nachteile</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/gussasphaltestrich-einsatzgebiete</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/estrich-garage-belastbar-beschichtung</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/trittschalldaemmung-estrich-din4109</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/estrich-nachbesserung-maengel-rechte</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/estrich-neubau-planung-zeitplan</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/waermepumpe-fussbodenheizung-estrich</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/estrich-keller-feuchtigkeit-abdichtung</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/ratgeber/epoxidharz-beschichtung-industrieboden</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <!-- Münchner Stadtteile - Lokale SEO -->
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/altstadt-lehel</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/ludwigsvorstadt-isarvorstadt</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/maxvorstadt</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/schwabing-west</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/au-haidhausen</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/sendling</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/sendling-westpark</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/schwanthalerhoehe</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/neuhausen-nymphenburg</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/moosach</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/milbertshofen-am-hart</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/schwabing-freimann</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/bogenhausen</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/berg-am-laim</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/trudering-riem</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/ramersdorf-perlach</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/obergiesing-fasangarten</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/untergiesing-harlaching</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/thalkirchen-obersendling-forstenried-fuerstenried-solln</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/hadern</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/pasing-obermenzing</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/aubing-lochhausen-langwied</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/allach-untermenzing</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/feldmoching-hasenbergl</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://estriche-muenchen.de/muenchen/laim</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <!-- Rechtliche Seiten -->
   <url>
     <loc>https://estriche-muenchen.de/impressum</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/datenschutz</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/agb</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/cookie-einstellungen</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://estriche-muenchen.de/barrierefreiheit</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

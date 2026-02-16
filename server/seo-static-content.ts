@@ -1206,6 +1206,254 @@ function generatePage(pageId: string): string {
   return generateBaseHTML(page, pathMap[pageId] || '/');
 }
 
+// Münchner Stadtteile für Stadtteil-Seiten
+const districtPages: Record<string, { name: string; bezirk: number; description: string; highlights: string[] }> = {
+  'altstadt-lehel': { name: 'Altstadt-Lehel', bezirk: 1, description: 'Estrichleger im Herzen Münchens. Denkmalschutz-Sanierungen, Altbau-Estrich und Fußbodenheizung nachrüsten in historischen Gebäuden rund um Marienplatz und Maximilianstraße.', highlights: ['Denkmalschutz-Sanierungen', 'Altbau-Estrich mit Höhenausgleich', 'Fußbodenheizung nachrüsten'] },
+  'ludwigsvorstadt-isarvorstadt': { name: 'Ludwigsvorstadt-Isarvorstadt', bezirk: 2, description: 'Estrich verlegen von Theresienwiese bis Gärtnerplatzviertel. Gründerzeit-Altbau Sanierung, Gastronomieböden und Trittschalldämmung.', highlights: ['Gründerzeit-Altbau Sanierung', 'Gastronomieböden', 'Trittschalldämmung'] },
+  'maxvorstadt': { name: 'Maxvorstadt', bezirk: 3, description: 'Sichtestrich für Galerien und Ateliers, Büroestrich für Start-ups. Estrichleger im Universitätsviertel mit Pinakotheken und TU München.', highlights: ['Sichtestrich für Galerien', 'Büroestrich Start-ups', 'Uni-Gebäude Sanierung'] },
+  'schwabing-west': { name: 'Schwabing-West', bezirk: 4, description: 'Premium-Estrich in Schwabings eleganten Altbauwohnungen und hochwertigen Neubauten. Fußbodenheizungs-Nachrüstung in Jugendstil-Wohnungen.', highlights: ['Jugendstil-Fußbodenheizung', 'Premium-Neubauestrich', 'Schallschutz'] },
+  'au-haidhausen': { name: 'Au-Haidhausen', bezirk: 5, description: 'Gründerzeit-Sanierung im Franzosenviertel, Loft-Umbauten mit Sichtestrich. Estrichleger für charmante Altbauten und moderne Lofts.', highlights: ['Gründerzeit-Sanierung', 'Loft-Sichtestrich', 'Fußbodenheizung Altbau'] },
+  'sendling': { name: 'Sendling', bezirk: 6, description: 'Estrich in Sendling: Von Altbauwohnungen bis moderne Reihenhäuser. Altbau-Trittschalldämmung und Neubauprojekte am Südpark.', highlights: ['Altbau-Trittschalldämmung', 'Neubauprojekte Südpark', 'Gewerbeboden'] },
+  'sendling-westpark': { name: 'Sendling-Westpark', bezirk: 7, description: 'Estrichsanierung in 70er/80er Wohnanlagen rund um den Westpark. Energetische Bodendämmung und Fußbodenheizung nachrüsten.', highlights: ['70er/80er Sanierung', 'Energetische Dämmung', 'Fußbodenheizung'] },
+  'schwanthalerhoehe': { name: 'Schwanthalerhöhe', bezirk: 8, description: 'Loft-Umbauten mit Sichtestrich, Gewerbeestrich und moderne Wohnkomplexe an der Theresienhöhe und im Westend.', highlights: ['Loft-Umbauten', 'Gewerbeestrich', 'Wohnkomplexe'] },
+  'neuhausen-nymphenburg': { name: 'Neuhausen-Nymphenburg', bezirk: 9, description: 'Villen-Sanierung in Nymphenburg, Premium-Estrich am Rotkreuzplatz. Fließestrich mit Fußbodenheizung für anspruchsvolle Kunden.', highlights: ['Villen-Sanierung', 'Premium-Heizestrich', 'Altbau Neuhausen'] },
+  'moosach': { name: 'Moosach', bezirk: 10, description: 'Neubaugebiet Luitpoldkaserne, Gewerbeestrich und Bestandssanierung. Estrichleger für Moosachs wachsende Wohnviertel.', highlights: ['Neubaugebiet Luitpoldkaserne', 'Gewerbeestrich', 'Bestandssanierung'] },
+  'milbertshofen-am-hart': { name: 'Milbertshofen-Am Hart', bezirk: 11, description: 'Industrieböden rund um BMW und Allianz Arena. Gewerbeestrich und Wohnestrich im Olympiadorf.', highlights: ['Industrieböden BMW-Umfeld', 'Gewerbeestrich', 'Wohnestrich Olympiadorf'] },
+  'schwabing-freimann': { name: 'Schwabing-Freimann', bezirk: 12, description: 'Neubaugebiet Bayernkaserne und Altbau-Sanierung in Schwabing. Estrich vom Großprojekt bis zur Jugendstil-Wohnung.', highlights: ['Bayernkaserne Neubau', 'Altbau Schwabing', 'Gewerbepark Freimann'] },
+  'bogenhausen': { name: 'Bogenhausen', bezirk: 13, description: 'Premium-Estrich für Villen im Herzogpark und Luxuswohnungen an der Prinzregentenstraße. Münchens nobelster Bezirk.', highlights: ['Villen Herzogpark', 'Premium-Sichtestrich', 'Luxuswohnungen'] },
+  'berg-am-laim': { name: 'Berg am Laim', bezirk: 14, description: 'Neubaugebiet Werksviertel-Mitte und Bestandssanierung. Fließestrich für neue Wohnquartiere am Ostbahnhof.', highlights: ['Werksviertel-Mitte', 'Bestandssanierung', 'Gewerbeestrich'] },
+  'trudering-riem': { name: 'Trudering-Riem', bezirk: 15, description: 'Einfamilienhaus-Estrich in Trudering, Neubauten Messestadt Riem und Gewerbeböden rund um die Neue Messe München.', highlights: ['Einfamilienhaus-Estrich', 'Messestadt Neubauten', 'Gewerbeböden Messe'] },
+  'ramersdorf-perlach': { name: 'Ramersdorf-Perlach', bezirk: 16, description: 'Großsanierung Neuperlach-Wohnblöcke und Neubaugebiet Zamilapark. Estricharbeiten im einwohnerstärksten Bezirk Münchens.', highlights: ['Großsanierung Neuperlach', 'Neubaugebiet Zamilapark', 'Eigentümergemeinschaften'] },
+  'obergiesing-fasangarten': { name: 'Obergiesing-Fasangarten', bezirk: 17, description: 'Altbausanierung in Giesing und neue Wohnprojekte am Candidplatz. Fußbodenheizung nachrüsten und Estrichsanierung.', highlights: ['Altbausanierung Giesing', 'Wohnbauprojekte', 'Fußbodenheizung nachrüsten'] },
+  'untergiesing-harlaching': { name: 'Untergiesing-Harlaching', bezirk: 18, description: 'Villen-Estrich in Harlaching, Altbau-Sanierung Untergiesing. Zwischen Isar und Tierpark Hellabrunn.', highlights: ['Villen Harlaching', 'Altbau Untergiesing', 'Energetische Dämmung'] },
+  'thalkirchen-obersendling-forstenried-fuerstenried-solln': { name: 'Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln', bezirk: 19, description: 'Premium-Villen in Solln, Siemens-Campus Gewerbeböden und Einfamilienhäuser in Forstenried.', highlights: ['Villen Solln', 'Siemens-Campus', 'Einfamilienhäuser Forstenried'] },
+  'hadern': { name: 'Hadern', bezirk: 20, description: 'Einfamilienhaus-Estrich und Klinikum-Umfeld Gewerbeböden. Estrichsanierung in Wohnanlagen am Haderner Stern.', highlights: ['Einfamilienhaus-Estrich', 'Klinikum Gewerbeböden', 'Wohnanlagen-Sanierung'] },
+  'pasing-obermenzing': { name: 'Pasing-Obermenzing', bezirk: 21, description: 'Villen-Estrich in Obermenzing, Neubauprojekte am Pasinger Bahnhof. Premium-Heizestrich und Gewerbeestrich.', highlights: ['Villen Obermenzing', 'Neubauten Pasing', 'Gewerbeestrich'] },
+  'aubing-lochhausen-langwied': { name: 'Aubing-Lochhausen-Langwied', bezirk: 22, description: 'Freiham Großprojekt – eines der größten Neubauprojekte Bayerns. Estrich in Serie für neue Wohnanlagen.', highlights: ['Freiham Großprojekt', 'Neubau-Estrich', 'Einfamilienhäuser Aubing'] },
+  'allach-untermenzing': { name: 'Allach-Untermenzing', bezirk: 23, description: 'Einfamilienhaus-Estrich und Industrieböden im MAN-Umfeld. Dörflicher Charme am Stadtrand.', highlights: ['Einfamilienhaus-Estrich', 'Industrieböden MAN', 'Bestandssanierung'] },
+  'feldmoching-hasenbergl': { name: 'Feldmoching-Hasenbergl', bezirk: 24, description: 'Neubaugebiet Feldmoching-Nord und Großsanierung Hasenbergl. Estrich in großem Maßstab.', highlights: ['Neubaugebiet Feldmoching', 'Großsanierung Hasenbergl', 'Gewerbeestrich'] },
+  'laim': { name: 'Laim', bezirk: 25, description: 'Altbau-Estrich und Neubauprojekte Landsberger Straße. Kompaktes Wohnviertel mit vielfältigen Estrichprojekten.', highlights: ['Altbau-Estrich', 'Neubauten Landsberger Straße', 'Trittschalldämmung'] }
+};
+
+function generateDistrictPage(slug: string): string | null {
+  const district = districtPages[slug];
+  if (!district) return null;
+
+  const baseUrl = 'https://estriche-muenchen.de';
+  const path = `/muenchen/${slug}`;
+  const highlightsHTML = district.highlights.map(h => `<li>${h}</li>`).join('\n        ');
+
+  return `<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estrichleger ${district.name} | Estrich verlegen in München-${district.name}</title>
+  <meta name="description" content="Estrichleger in München-${district.name}: Zementestrich, Fließestrich, Fußbodenheizung & Sanierung vom Fachbetrieb. Festpreisgarantie. Jetzt beraten lassen!">
+  <meta name="keywords" content="Estrichleger ${district.name}, Estrich ${district.name} München, Estrich verlegen ${district.name}, Fußbodenheizung ${district.name}, Estrichsanierung ${district.name}">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="geo.region" content="DE-BY">
+  <meta name="geo.placename" content="München ${district.name}">
+  <link rel="canonical" href="${baseUrl}${path}">
+  <meta property="og:title" content="Estrichleger ${district.name} | Estriche München">
+  <meta property="og:description" content="Estrich verlegen in München-${district.name}. Fachbetrieb mit Festpreisgarantie.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="${baseUrl}${path}">
+  <meta property="og:locale" content="de_DE">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Estrichverlegung ${district.name}",
+    "description": "${district.description.replace(/"/g, '\\"')}",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Estriche München",
+      "telephone": "+49 89 444438872",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hardenbergstr. 4",
+        "addressLocality": "München",
+        "postalCode": "80992",
+        "addressCountry": "DE"
+      }
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "München-${district.name}"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Startseite", "item": "${baseUrl}"},
+      {"@type": "ListItem", "position": 2, "name": "München Stadtteile", "item": "${baseUrl}/muenchen"},
+      {"@type": "ListItem", "position": 3, "name": "${district.name}", "item": "${baseUrl}${path}"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <nav aria-label="Hauptnavigation">
+      <a href="/">Estrich München</a>
+      <a href="/leistungen/zementestrich">Zementestrich</a>
+      <a href="/leistungen/fussbodenheizung">Fußbodenheizung</a>
+      <a href="/preise">Preise</a>
+      <a href="/kontakt">Kontakt</a>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h1>Estrichleger ${district.name} – Ihr Fachbetrieb in München</h1>
+      <p>${district.description}</p>
+      <section>
+        <h2>Estrich verlegen in ${district.name}</h2>
+        <ul>
+        ${highlightsHTML}
+        </ul>
+      </section>
+      <section>
+        <h2>Unsere Leistungen in ${district.name}</h2>
+        <ul>
+          <li><a href="/leistungen/zementestrich">Zementestrich ${district.name}</a> – ab 32€/m²</li>
+          <li><a href="/leistungen/fliessestrich">Fließestrich ${district.name}</a> – ab 38€/m²</li>
+          <li><a href="/leistungen/fussbodenheizung">Fußbodenheizung nachrüsten ${district.name}</a> – ab 45€/m²</li>
+          <li><a href="/leistungen/sanierung">Estrichsanierung ${district.name}</a> – ab 25€/m²</li>
+          <li><a href="/leistungen/industrieboeden">Industrieböden ${district.name}</a> – ab 45€/m²</li>
+          <li><a href="/leistungen/waermedaemmung">Wärmedämmung ${district.name}</a> – ab 15€/m²</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Jetzt kostenlos beraten lassen</h2>
+        <p>Telefon: <a href="tel:+4989444438872">089 / 444 43 887 2</a></p>
+        <p><a href="/angebot">Kostenloses Angebot für ${district.name} anfordern</a></p>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <p>© 2026 Mustafa Sakar - Estriche München - Fachbetrieb für Estricharbeiten</p>
+    <p>Hardenbergstr. 4, 80992 München | <a href="tel:+4989444438872">089 / 444 43 887 2</a></p>
+  </footer>
+</body>
+</html>`;
+}
+
+// Blog-Artikel SSR content
+const blogArticleSEO: Record<string, { title: string; description: string }> = {
+  'estrich-trocknungszeit-richtig-berechnen': { title: 'Estrich Trocknungszeit richtig berechnen', description: 'Wie lange muss Estrich trocknen? Die wichtigsten Faktoren und Richtwerte für eine sichere Bodenverlegung.' },
+  'fussbodenheizung-estrich-was-beachten': { title: 'Fußbodenheizung und Estrich: Was Sie beachten müssen', description: 'Die richtige Estrichart, Aufheizprotokoll und häufige Fehler bei Heizestrich vermeiden.' },
+  'estrich-sanierung-wann-notwendig': { title: 'Estrichsanierung: Wann ist sie notwendig?', description: 'Risse, Hohlstellen, Wasserschaden – wann Sie Ihren Estrich sanieren sollten.' },
+  'industrieboden-anforderungen-gewerbe': { title: 'Industrieboden: Anforderungen im Gewerbe', description: 'Anforderungen an Industrieböden für Produktion, Lager und Showrooms.' },
+  'schnellestrich-vorteile-einsatzgebiete': { title: 'Schnellestrich: Vorteile und Einsatzgebiete', description: 'Schnellestrich für termingebundene Projekte – begehbar in wenigen Stunden.' },
+  'waermedaemmung-estrich-energiesparen': { title: 'Wärmedämmung unter Estrich: Energie sparen', description: 'Wie Bodendämmung Heizkosten senkt und welche Förderungen es gibt.' },
+  'zementestrich-oder-fliessestrich': { title: 'Zementestrich oder Fließestrich?', description: 'Der große Vergleich: Vor- und Nachteile beider Estricharten.' },
+  'estrich-kosten-berechnen-preisfaktoren': { title: 'Estrich Kosten berechnen: Alle Preisfaktoren', description: 'Was Estrich pro m² kostet und welche Faktoren den Preis beeinflussen.' },
+  'fehler-estricharbeiten-vermeiden': { title: 'Häufige Fehler bei Estricharbeiten vermeiden', description: 'Die 10 häufigsten Fehler beim Estrich verlegen und wie Sie sie vermeiden.' },
+  'estrich-aufbau-schichten-erklaert': { title: 'Estrich Aufbau: Schichten und Materialien erklärt', description: 'Der komplette Bodenaufbau erklärt: Von der Rohdecke bis zum fertigen Estrich.' },
+  'estrich-schleifen-polieren-anleitung': { title: 'Estrich schleifen und polieren: Anleitung & Kosten', description: 'So wird aus rohem Estrich ein glänzender Sichtestrich. Kosten und Verfahren.' },
+  'estrich-grundierung-wann-notwendig': { title: 'Estrich Grundierung: Wann ist sie notwendig?', description: 'Wann Estrich grundiert werden muss und welche Grundierung die richtige ist.' },
+  'schwimmender-estrich-vorteile-aufbau': { title: 'Schwimmender Estrich: Vorteile und Aufbau', description: 'Warum schwimmender Estrich Standard ist und wie er aufgebaut wird.' },
+  'estrich-dicke-berechnen-empfehlung': { title: 'Estrich Dicke berechnen: Empfehlungen nach DIN', description: 'Die richtige Estrichdicke nach DIN 18560 für Ihr Projekt.' },
+  'estrich-feuchtigkeit-messen-cm-methode': { title: 'Estrich Feuchtigkeit messen: Die CM-Methode', description: 'CM-Messung erklärt: So prüfen Sie die Belegreife Ihres Estrichs.' },
+  'aufheizprotokoll-fussbodenheizung-anleitung': { title: 'Aufheizprotokoll Fußbodenheizung: Anleitung', description: 'Schritt-für-Schritt Anleitung zum Funktionsheizen nach DIN EN 1264.' },
+  'estrich-daemmung-pflicht-geg-2026': { title: 'Estrichdämmung Pflicht: Was das GEG 2026 fordert', description: 'Aktuelle GEG-Anforderungen für Bodendämmung bei Neubau und Sanierung.' },
+  'estrich-gefaelle-bad-dusche': { title: 'Estrich Gefälle Bad & Dusche richtig planen', description: 'Das richtige Gefälle im Nassbereich: Normen, Maße und Ausführung.' },
+  'estrich-risse-ursachen-reparatur': { title: 'Estrich Risse: Ursachen und Reparaturmethoden', description: 'Warum Estrich reißt und wie Risse professionell repariert werden.' },
+  'estrich-altbau-sanierung-tipps': { title: 'Estrich im Altbau sanieren: Praktische Tipps', description: 'Besonderheiten bei der Estrichsanierung in Münchner Altbauten.' },
+  'sichtestrich-kosten-vorteile-nachteile': { title: 'Sichtestrich: Kosten, Vorteile & Nachteile', description: 'Alles über Sichtestrich als Bodenbelag: Kosten, Pflege und Eignung.' },
+  'gussasphaltestrich-einsatzgebiete': { title: 'Gussasphaltestrich: Einsatzgebiete und Vorteile', description: 'Gussasphalt als Estrichlösung: Wo er eingesetzt wird und was er kostet.' },
+  'estrich-garage-belastbar-beschichtung': { title: 'Estrich in der Garage: Belastbar & beschichtet', description: 'Der richtige Garagenboden: Estricharten, Beschichtungen und Kosten.' },
+  'trittschalldaemmung-estrich-din4109': { title: 'Trittschalldämmung unter Estrich nach DIN 4109', description: 'Trittschallschutz richtig planen: Normen, Materialien und Aufbau.' },
+  'estrich-nachbesserung-maengel-rechte': { title: 'Estrich Nachbesserung: Mängel und Ihre Rechte', description: 'Ihre Rechte bei Estrichmängeln: Gewährleistung, Nachbesserung und Schadensersatz.' },
+  'estrich-neubau-planung-zeitplan': { title: 'Estrich im Neubau: Planung und Zeitplan', description: 'So planen Sie Estricharbeiten im Neubau: Zeitpunkt, Dauer und Koordination.' },
+  'waermepumpe-fussbodenheizung-estrich': { title: 'Wärmepumpe & Fußbodenheizung: Welcher Estrich?', description: 'Der optimale Estrich für Wärmepumpen mit Fußbodenheizung.' },
+  'estrich-keller-feuchtigkeit-abdichtung': { title: 'Estrich im Keller: Feuchtigkeit und Abdichtung', description: 'Estrich im Kellerbereich: Feuchtigkeitsschutz, Abdichtung und Materialwahl.' },
+  'epoxidharz-beschichtung-industrieboden': { title: 'Epoxidharz Beschichtung für Industrieböden', description: 'Epoxidharzbeschichtung: Vorteile, Kosten und Anwendungen für Gewerbeböden.' }
+};
+
+function generateBlogArticlePage(slug: string): string | null {
+  const article = blogArticleSEO[slug];
+  if (!article) return null;
+
+  const baseUrl = 'https://estriche-muenchen.de';
+  const path = `/ratgeber/${slug}`;
+
+  return `<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${article.title} | Estrich Ratgeber München</title>
+  <meta name="description" content="${article.description}">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="${baseUrl}${path}">
+  <meta property="og:title" content="${article.title} | Estrich Ratgeber München">
+  <meta property="og:description" content="${article.description}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="${baseUrl}${path}">
+  <meta property="og:locale" content="de_DE">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "${article.title}",
+    "description": "${article.description}",
+    "url": "${baseUrl}${path}",
+    "author": {
+      "@type": "Organization",
+      "name": "Estriche München"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Estriche München",
+      "url": "${baseUrl}"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Startseite", "item": "${baseUrl}"},
+      {"@type": "ListItem", "position": 2, "name": "Estrich Ratgeber", "item": "${baseUrl}/ratgeber"},
+      {"@type": "ListItem", "position": 3, "name": "${article.title}", "item": "${baseUrl}${path}"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <nav aria-label="Hauptnavigation">
+      <a href="/">Estrich München</a>
+      <a href="/ratgeber">Ratgeber</a>
+      <a href="/leistungen/zementestrich">Zementestrich</a>
+      <a href="/preise">Preise</a>
+      <a href="/kontakt">Kontakt</a>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h1>${article.title}</h1>
+      <p>${article.description}</p>
+      <section>
+        <h2>Jetzt kostenlos beraten lassen</h2>
+        <p>Telefon: <a href="tel:+4989444438872">089 / 444 43 887 2</a></p>
+        <p><a href="/angebot">Kostenloses Angebot anfordern</a></p>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <p>© 2026 Mustafa Sakar - Estriche München - Fachbetrieb für Estricharbeiten</p>
+  </footer>
+</body>
+</html>`;
+}
+
 export function generateStaticSEOContent(path: string): string | null {
   if (path === '/' || path === '') {
     return generateHomePage();
@@ -1214,6 +1462,16 @@ export function generateStaticSEOContent(path: string): string | null {
   const serviceMatch = path.match(/^\/leistungen\/([a-z-]+)/);
   if (serviceMatch) {
     return generateServicePage(serviceMatch[1]);
+  }
+
+  const districtMatch = path.match(/^\/muenchen\/([a-z-]+)/);
+  if (districtMatch) {
+    return generateDistrictPage(districtMatch[1]);
+  }
+
+  const blogMatch = path.match(/^\/ratgeber\/([a-z0-9-]+)/);
+  if (blogMatch) {
+    return generateBlogArticlePage(blogMatch[1]);
   }
   
   const pageMap: Record<string, string> = {
